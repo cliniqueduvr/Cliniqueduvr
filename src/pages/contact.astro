@@ -1,0 +1,168 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID || 'f/YOUR_FORM_ID';
+const mapsLat = import.meta.env.VITE_MAPS_LATITUDE || '45.4215';
+const mapsLng = import.meta.env.VITE_MAPS_LONGITUDE || '-75.6812';
+---
+
+<Layout title="Contact | Clinique du VR" description="Contactez Clinique du VR au (581) 337-3366 pour l'entretien, la reparation et l'esthetique.">
+  <Header />
+
+  <main>
+    <section class="contact-container">
+      <div class="container contact-layout">
+        <div class="contact-form-section">
+          <h1>Contactez-Nous</h1>
+          <form action={`https://formspree.io/${formspreeId}`} method="POST">
+            <div class="form-group">
+              <label for="name">Nom Complet *</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Téléphone</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+            <div class="form-group">
+              <label for="subject">Sujet *</label>
+              <input type="text" id="subject" name="subject" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            <button type="submit" class="btn">Envoyer</button>
+          </form>
+        </div>
+
+        <div class="contact-info-section">
+          <h2>Informations de Contact</h2>
+
+          <div class="info-block">
+            <h3>Téléphone</h3>
+            <p><a href="tel:+15813373366">(581) 337-3366</a></p>
+          </div>
+
+          <div class="info-block">
+            <h3>Email</h3>
+            <p><a href="mailto:info@demosolution.ca">info@demosolution.ca</a></p>
+          </div>
+
+          <div class="info-block">
+            <h3>Localisation</h3>
+            <p>Gatineau - Ottawa, Québec<br>Région de la Capitale Nationale<br>Desservons aussi: Laurentides, Outaouais</p>
+          </div>
+
+          <div class="info-block">
+            <h3>Certification RBQ</h3>
+            <p><strong>RBQ:</strong> 5824-9764-01<br>
+            <strong>Professionnels depuis 2013</strong></p>
+          </div>
+
+          <div class="info-block">
+            <h3>Services</h3>
+            <p>Désamiantage • Moisissure • Tests Amiante • Tests Air • Démolition Sélective • Inspection VR</p>
+          </div>
+
+          <div class="info-block cta">
+            <p>Demandez votre <strong>soumission gratuite</strong> par téléphone ou formulaire.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section">
+      <iframe
+        title="Clinique du VR - Location in Gatineau, Quebec"
+        src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2817.3548916305567!2d${mapsLng}!3d${mapsLat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0503f7c8b7d7%3A0x1234!2sGatineau%2C%20QC!5e0!3m2!1sfr!2sca!4v1234567890`}
+        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .contact-container {
+    padding: 4rem 0;
+    background: white;
+  }
+
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .contact-form-section h1 {
+    margin-bottom: 2rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--brand-ink);
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--brand-green);
+    box-shadow: 0 0 0 3px rgba(61, 152, 47, 0.12);
+  }
+
+  .contact-info-section h2 {
+    margin-bottom: 2rem;
+  }
+
+  .info-block {
+    margin-bottom: 2rem;
+  }
+
+  .info-block h3 {
+    color: var(--brand-navy);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .info-block.cta {
+    background: var(--brand-surface);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--brand-green);
+    margin-top: 3rem;
+  }
+
+  .map-section {
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    .contact-layout {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>

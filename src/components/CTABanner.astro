@@ -1,0 +1,96 @@
+---
+export interface Props {
+  heading?: string;
+  subheading?: string;
+  phoneNumber?: string;
+}
+
+const {
+  heading = "Demandez votre soumission gratuite",
+  subheading = "Inspection et devis sans obligation",
+  phoneNumber = "(581) 337-3366"
+} = Astro.props as Props;
+---
+
+<section class="cta-banner">
+  <div class="container cta-content">
+    <h2>{heading}</h2>
+    <p>{subheading}</p>
+    <a href={`tel:+15813373366`} class="cta-button">
+      <i class="fas fa-phone"></i> {phoneNumber}
+    </a>
+  </div>
+</section>
+
+<style>
+  .cta-banner {
+    background: var(--brand-green);
+    padding: 3rem 1.5rem;
+    text-align: center;
+    color: white;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .cta-content h2 {
+    font-size: 2rem;
+    margin: 0 0 0.5rem 0;
+    color: white;
+  }
+
+  .cta-content p {
+    font-size: 1.1rem;
+    margin: 0 0 1.5rem 0;
+    color: #ffffff;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background: var(--brand-gold);
+    color: var(--brand-navy-dark);
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--brand-gold);
+  }
+
+  .cta-button:hover {
+    background: #e1c317;
+    color: var(--brand-navy-dark);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .cta-button i {
+    margin-right: 8px;
+  }
+
+  @media (max-width: 768px) {
+    .cta-banner {
+      padding: 2rem 1rem;
+    }
+
+    .cta-content h2 {
+      font-size: 1.5rem;
+    }
+
+    .cta-content p {
+      font-size: 1rem;
+    }
+
+    .cta-button {
+      padding: 10px 24px;
+      font-size: 1rem;
+    }
+  }
+</style>

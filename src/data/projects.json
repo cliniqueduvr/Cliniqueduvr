@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Désamiantage Résidentiel",
+    "location": "Gatineau",
+    "category": "Amiante",
+    "beforeImage": "/images/project-1-before.jpg",
+    "afterImage": "/images/project-1-after.jpg",
+    "beforeAlt": "Before: Asbestos-contaminated flooring in residential home requiring professional remediation",
+    "afterAlt": "After: Clean, sealed floor restored to safe occupancy standard with professional remediation completed",
+    "description": "Retrait professionnel d'amiante dans une maison résidentielle. Confinement sécuritaire, pression négative, et élimination conforme. Propriété restaurée à la norme de sécurité."
+  },
+  {
+    "id": 2,
+    "title": "Décontamination Moisissure",
+    "location": "Ottawa",
+    "category": "Moisissure",
+    "beforeImage": "/images/project-2-before.jpg",
+    "afterImage": "/images/project-2-after.jpg",
+    "beforeAlt": "Before: Widespread mold contamination in commercial building requiring complete remediation",
+    "afterAlt": "After: Building-wide mold remediation completed with restored air quality and sealed surfaces",
+    "description": "Décontamination moisissure complète d'un immeuble commercial. Confinement, traitement, et restauration de la qualité de l'air. Bâtiment sain et conforme."
+  },
+  {
+    "id": 3,
+    "title": "Inspection et Tests Amiante",
+    "location": "Ottawa",
+    "category": "Tests",
+    "beforeImage": "/images/project-3-before.jpg",
+    "afterImage": "/images/project-3-after.jpg",
+    "beforeAlt": "Before: Property inspection for asbestos characterization and air quality testing",
+    "afterAlt": "After: Comprehensive testing completed with certified lab results and professional recommendations",
+    "description": "Inspection complète et caractérisation des matériaux. Tests de qualité d'air et analyses en laboratoire certifié. Rapport détaillé avec plan d'action."
+  },
+  {
+    "id": 4,
+    "title": "Démolition Sélective",
+    "location": "Gatineau",
+    "category": "Démolition",
+    "beforeImage": "/images/project-4-before.jpg",
+    "afterImage": "/images/project-4-after.jpg",
+    "beforeAlt": "Before: Building scheduled for selective demolition with material recovery in progress",
+    "afterAlt": "After: Selective demolition completed with safe material removal and site preparation",
+    "description": "Démolition sélective en environnement de pression négative. Récupération et recyclage des matériaux. Nettoyage et préparation du site."
+  },
+  {
+    "id": 5,
+    "title": "Restauration Post-Décontamination",
+    "location": "Gatineau",
+    "category": "Restauration",
+    "beforeImage": "/images/project-5-before.jpg",
+    "afterImage": "/images/project-5-after.jpg",
+    "beforeAlt": "Before: Property after decontamination awaiting restoration and return to occupancy",
+    "afterAlt": "After: Complete property restoration with finished surfaces ready for safe occupancy",
+    "description": "Restauration complète de la propriété après décontamination. Réparation des surfaces, finitions, et nettoyage final. Prête à l'occupation."
+  },
+  {
+    "id": 6,
+    "title": "Inspection Pré-Achat Complète",
+    "location": "Ottawa",
+    "category": "Inspection",
+    "beforeImage": "/images/project-6-before.jpg",
+    "afterImage": "/images/project-6-after.jpg",
+    "beforeAlt": "Before: Pre-purchase property inspection identifying contamination issues and concerns",
+    "afterAlt": "After: Complete inspection report with certified results and professional remediation recommendations",
+    "description": "Inspection pré-achat complète incluant tests amiante, moisissure, et qualité de l'air. Rapport détaillé pour décision d'achat éclairée."
+  }
+]

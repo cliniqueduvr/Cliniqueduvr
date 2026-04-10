@@ -1,0 +1,110 @@
+---
+export interface Props {
+  id: number;
+  title: string;
+  icon: string;
+  description: string;
+  details: string;
+}
+
+const { id, title, icon, description, details } = Astro.props as Props;
+const bgColor = id % 2 === 0 ? 'bg-light' : 'bg-dark';
+---
+
+<section class={`service-block ${bgColor}`}>
+  <div class="container">
+    <div class="service-content">
+      <div class="service-icon">
+        <i class={icon}></i>
+      </div>
+      <div class="service-text">
+        <h3>{title}</h3>
+        <p class="tagline">{description}</p>
+        <p class="details">{details}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .service-block {
+    padding: 3rem 1.5rem;
+  }
+
+  .service-block.bg-light {
+    background: var(--brand-surface);
+  }
+
+  .service-block.bg-dark {
+    background: var(--brand-navy-dark);
+    color: white;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .service-content {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  .service-icon {
+    font-size: 3rem;
+    color: var(--brand-green);
+  }
+
+  .service-block.bg-dark .service-icon {
+    color: var(--brand-gold);
+  }
+
+  .service-text h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+    color: var(--brand-navy);
+  }
+
+  .service-block.bg-dark .service-text h3 {
+    color: var(--brand-gold);
+  }
+
+  .tagline {
+    margin: 0.25rem 0 1rem 0;
+    font-weight: 600;
+    color: var(--brand-muted);
+    font-size: 0.95rem;
+  }
+
+  .service-block.bg-dark .tagline {
+    color: #ddd;
+  }
+
+  .details {
+    margin: 0;
+    line-height: 1.7;
+    color: var(--brand-ink);
+    font-size: 0.95rem;
+  }
+
+  .service-block.bg-dark .details {
+    color: #ccc;
+  }
+
+  @media (max-width: 768px) {
+    .service-content {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .service-icon {
+      font-size: 2.5rem;
+    }
+
+    .service-text h3 {
+      font-size: 1.25rem;
+    }
+  }
+</style>

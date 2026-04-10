@@ -1,0 +1,102 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="fr-CA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style is:global>
+      :root {
+        --brand-navy: #1f3a5f;
+        --brand-navy-dark: #17304f;
+        --brand-green: #3a8d2f;
+        --brand-green-dark: #2f7426;
+        --brand-gold: #f2d21b;
+        --brand-ink: #2b2b2b;
+        --brand-muted: #5f6872;
+        --brand-surface: #f4f6f8;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Lato', sans-serif;
+        line-height: 1.6;
+        color: var(--brand-ink);
+        background: white;
+      }
+
+      h1, h2, h3 {
+        font-family: 'Oswald', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+      }
+
+      h2 {
+        font-size: 2rem;
+        color: var(--brand-navy);
+      }
+
+      h3 {
+        font-size: 1.3rem;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      a {
+        color: var(--brand-navy);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      button, .btn {
+        background: var(--brand-navy);
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background 0.3s;
+      }
+
+      button:hover, .btn:hover {
+        background: var(--brand-navy-dark);
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

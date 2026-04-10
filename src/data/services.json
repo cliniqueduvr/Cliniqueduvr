@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Décontamination d'Amiante & Plomb",
+    "icon": "fas fa-layer-group",
+    "description": "Professional removal and remediation",
+    "details": "Retrait sécuritaire de matériaux contenant de l'amiante et plomb selon les normes CNESST (S-2.1, R.4) et Ontario Reg. 278/05. Inspection complète, confinement sécuritaire, pression négative, et élimination conforme des matériaux contaminés. Projets résidentiels, commerciaux et institutionnels."
+  },
+  {
+    "id": 2,
+    "title": "Élimination de la Moisissure",
+    "icon": "fas fa-cloud",
+    "description": "Mold remediation and prevention",
+    "details": "Inspection professionnelle, identification de la source, confinement sécuritaire, et décontamination complète selon les normes en vigueur. Restauration de la qualité de l'air intérieur. Recommandations de prévention pour éviter la récurrence."
+  },
+  {
+    "id": 3,
+    "title": "Tests d'Amiante",
+    "icon": "fas fa-flask",
+    "description": "Certified laboratory analysis",
+    "details": "Prélèvement professionnel et analyse en laboratoire certifié des matériaux suspects contenant de l'amiante. Résultats certifiés avec rapport détaillé et recommandations. Turnaround rapide (24-48 heures)."
+  },
+  {
+    "id": 4,
+    "title": "Tests d'Air Amiante",
+    "icon": "fas fa-wind",
+    "description": "Air quality and safety assessment",
+    "details": "Échantillonnage professionnel de l'air intérieur et analyse en laboratoire pour détecter les fibres d'amiante. Évaluation de la sécurité respiratoire. Tests avant, pendant, et après les travaux de décontamination."
+  },
+  {
+    "id": 5,
+    "title": "Test de Moisissure",
+    "icon": "fas fa-flask",
+    "description": "Mold spore analysis and testing",
+    "details": "Analyse des spores de moisissures en laboratoire pour identifier la contamination et évaluer la qualité de l'air. Rapport professionnel avec recommandations de traitement et prévention."
+  },
+  {
+    "id": 6,
+    "title": "Inspection et Réparation VR",
+    "icon": "fas fa-van",
+    "description": "RV/caravan maintenance and restoration",
+    "details": "Inspection complète des infiltrations d'eau, remplacement des joints, réparation des membranes de toit (TPO/EPDM), et restauration intérieure/extérieure professionnelle. Nettoyage en profondeur et finition de qualité (remise à neuf)."
+  }
+]

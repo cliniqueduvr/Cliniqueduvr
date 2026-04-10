@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import CTABanner from '../components/CTABanner.astro';
+import services from '../data/services.json';
+---
+
+<Layout title="Services | Clinique du VR" description="Services d'entretien, de reparation et d'esthetique pour VR a Gatineau-Ottawa">
+  <Header />
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Nos Spécialités</h1>
+        <p>Solutions complètes en décontamination et prévention</p>
+      </div>
+    </section>
+
+    {services.map((service) => (
+      <ServiceCard
+        id={service.id}
+        title={service.title}
+        icon={service.icon}
+        description={service.description}
+        details={service.details}
+      />
+    ))}
+
+    <CTABanner
+      heading="Prêt à Commencer?"
+      subheading="Contactez-nous pour une soumission gratuite et confidentielle."
+    />
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&h=400&fit=crop');
+    background-size: cover;
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+  }
+
+  .page-header p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #edf5d8;
+  }
+
+  @media (max-width: 768px) {
+    .page-header {
+      padding: 3rem 1.5rem;
+    }
+
+    .page-header h1 {
+      font-size: 2rem;
+    }
+
+    .page-header p {
+      font-size: 1rem;
+    }
+  }
+</style>

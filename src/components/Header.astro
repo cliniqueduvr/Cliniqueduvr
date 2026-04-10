@@ -1,0 +1,152 @@
+---
+const navItems = [
+  { label: 'Accueil', href: '/' },
+  { label: 'Services', href: '/services/' },
+  { label: 'Réalisations', href: '/realisations/' },
+  { label: 'À Propos', href: '/#about' },
+  { label: 'Contact', href: '/contact/' }
+];
+---
+
+<header class="header">
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <a href="tel:+15813373366">(581) 337-3366</a>
+        <span class="divider">|</span>
+        <span>RBQ: 5824-9764-01</span>
+      </div>
+      <div class="topbar-right">
+        <a href="https://www.facebook.com/profile.php?id=61588265661776" target="_blank" rel="noopener" title="Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <div class="container navbar-inner">
+      <a href="/" class="logo">
+        <img src="/clinique-du-vr-brand.jpg" alt="Clinique du VR" />
+      </a>
+      <ul class="nav-menu">
+        {navItems.map(item => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+      <button class="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .topbar {
+    background: var(--brand-navy);
+    color: white;
+    padding: 0.75rem 0;
+    font-size: 0.9rem;
+  }
+
+  .topbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .topbar-left {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .topbar-left a, .topbar-left span {
+    color: white;
+  }
+
+  .divider {
+    color: rgba(255, 255, 255, 0.35);
+  }
+
+  .topbar-right a {
+    color: white;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+  }
+
+  .navbar {
+    background: white;
+    padding: 1rem 0;
+  }
+
+  .navbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 64px;
+    width: auto;
+    display: block;
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+
+  .nav-menu a {
+    color: var(--brand-ink);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+
+  .nav-menu a:hover {
+    color: var(--brand-green);
+    text-decoration: none;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 0.5rem;
+    padding: 0;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--brand-navy);
+  }
+
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+    }
+    .hamburger {
+      display: flex;
+    }
+  }
+</style>

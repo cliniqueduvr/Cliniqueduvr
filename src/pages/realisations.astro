@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import CTABanner from '../components/CTABanner.astro';
+import projects from '../data/projects.json';
+---
+
+<Layout title="Réalisations | Clinique du VR" description="Realisations et interventions sur VR. Avant-apres et travaux effectues.">
+  <Header />
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Nos Réalisations</h1>
+        <p>Projets de décontamination et désamiantage réussis</p>
+      </div>
+    </section>
+
+    <section class="realisations-section">
+      <div class="container">
+        <div class="projects-grid">
+          {projects.map((project) => (
+            <ProjectCard
+              id={project.id}
+              title={project.title}
+              location={project.location}
+              category={project.category}
+              beforeImage={project.beforeImage}
+              afterImage={project.afterImage}
+              beforeAlt={project.beforeAlt}
+              afterAlt={project.afterAlt}
+              description={project.description}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <CTABanner
+      heading="Nous Pouvons Aider Votre Propriété Aussi"
+      subheading="Chaque projet est unique. Contactez-nous pour une évaluation gratuite."
+      phoneNumber="(581) 337-3366"
+    />
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&h=400&fit=crop');
+    background-size: cover;
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+  }
+
+  .page-header p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #edf5d8;
+  }
+
+  .realisations-section {
+    padding: 4rem 0;
+    background: white;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .page-header {
+      padding: 3rem 1.5rem;
+    }
+
+    .page-header h1 {
+      font-size: 2rem;
+    }
+
+    .page-header p {
+      font-size: 1rem;
+    }
+
+    .realisations-section {
+      padding: 2rem 0;
+    }
+
+    .projects-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+</style>
