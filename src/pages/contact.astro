@@ -6,6 +6,7 @@ import Footer from '../components/Footer.astro';
 const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID || 'f/YOUR_FORM_ID';
 const mapsLat = import.meta.env.VITE_MAPS_LATITUDE || '45.4215';
 const mapsLng = import.meta.env.VITE_MAPS_LONGITUDE || '-75.6812';
+const squareBookingUrl = 'https://app.squareup.com/appointments/book/lgocu4o42jy5zu/LGZ9VNRVZ6XXM/start';
 ---
 
 <Layout title="Contact | Clinique du VR" description="Contactez Clinique du VR au (581) 337-3366 pour l'entretien, la reparation et l'esthetique.">
@@ -46,7 +47,10 @@ const mapsLng = import.meta.env.VITE_MAPS_LONGITUDE || '-75.6812';
 
           <div class="info-block">
             <h3>Téléphone</h3>
-            <p><a href="tel:+15813373366">(581) 337-3366</a></p>
+            <div class="phone-actions">
+              <a href="tel:+15813373366" class="phone-link">(581) 337-3366</a>
+              <a href={squareBookingUrl} target="_blank" rel="noopener" class="square-button">Rendez-vous Square</a>
+            </div>
           </div>
 
           <div class="info-block">
@@ -157,6 +161,36 @@ const mapsLng = import.meta.env.VITE_MAPS_LONGITUDE || '-75.6812';
   .map-section {
     width: 100%;
     margin-top: 3rem;
+  }
+
+  .phone-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  .phone-link {
+    font-weight: 700;
+  }
+
+  .square-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--brand-gold);
+    color: var(--brand-navy-dark);
+    border: 2px solid var(--brand-gold);
+    border-radius: 999px;
+    padding: 0.55rem 1rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+
+  .square-button:hover {
+    text-decoration: none;
+    background: #e1c317;
+    border-color: #e1c317;
   }
 
   @media (max-width: 768px) {

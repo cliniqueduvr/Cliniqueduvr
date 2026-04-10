@@ -1,4 +1,6 @@
 ---
+const squareBookingUrl = 'https://app.squareup.com/appointments/book/lgocu4o42jy5zu/LGZ9VNRVZ6XXM/start';
+
 const navItems = [
   { label: 'Accueil', href: '/' },
   { label: 'Services', href: '/services/' },
@@ -13,6 +15,7 @@ const navItems = [
     <div class="container topbar-inner">
       <div class="topbar-left">
         <a href="tel:+15813373366">(581) 337-3366</a>
+        <a href={squareBookingUrl} target="_blank" rel="noopener" class="square-link">Prendre rendez-vous</a>
         <span class="divider">|</span>
         <span>RBQ: 5824-9764-01</span>
       </div>
@@ -67,11 +70,22 @@ const navItems = [
 
   .topbar-left {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
   }
 
   .topbar-left a, .topbar-left span {
     color: white;
+  }
+
+  .square-link {
+    color: var(--brand-gold) !important;
+    font-weight: 700;
+  }
+
+  .square-link:hover {
+    text-decoration: none;
+    opacity: 0.9;
   }
 
   .divider {
