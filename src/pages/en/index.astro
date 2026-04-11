@@ -1,0 +1,133 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID || 'f/YOUR_FORM_ID';
+const squareBookingUrl = 'https://app.squareup.com/appointments/book/lgocu4o42jy5zu/LGZ9VNRVZ6XXM/start';
+
+const meta = {
+  title: 'Clinique du VR | Maintenance, repair and detailing',
+  description: 'Clinique du VR offers RV maintenance, repair and detailing with practical service and clear communication.'
+};
+---
+
+<Layout title={meta.title} description={meta.description}>
+  <Header lang="en" />
+
+  <main>
+    <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/clinique-du-vr-brand.jpg'); background-size: contain; background-repeat: no-repeat; background-color: var(--brand-navy);">
+      <div class="hero-content">
+        <img class="hero-logo" src="/clinique-du-vr-brand.jpg" alt="Clinique du VR" />
+        <p class="hero-tagline">Maintenance - repair - detailing</p>
+      </div>
+    </section>
+
+    <section id="about" class="intro-section">
+      <div class="container intro-grid">
+        <div class="intro-card">
+          <div class="card-icon">
+            <i class="fas fa-building"></i>
+          </div>
+          <h2>Why Choose Clinique du VR?</h2>
+          <p><strong>Specialized and attentive service</strong> for RV maintenance, repair and detailing. Speed, transparency, regulatory compliance and careful execution from start to finish.</p>
+        </div>
+
+        <div class="intro-card">
+          <div class="card-icon">
+            <i class="fas fa-wrench"></i>
+          </div>
+          <h2>Our Services</h2>
+          <p><strong>Preventive maintenance</strong> • <strong>Mechanical and cosmetic repairs</strong> • <strong>RV inspections</strong> • <strong>Refresh work</strong> • <strong>Cleaning and detailing</strong> • <strong>Custom interventions</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-overview">
+      <div class="container">
+        <h2>Our Specialties</h2>
+        <div class="services-grid">
+          <a href="/en/services/" class="service-item"><i class="fas fa-screwdriver-wrench"></i><span>Maintenance</span></a>
+          <a href="/en/services/" class="service-item"><i class="fas fa-gears"></i><span>Repair</span></a>
+          <a href="/en/services/" class="service-item"><i class="fas fa-magnifying-glass"></i><span>Inspection</span></a>
+          <a href="/en/services/" class="service-item"><i class="fas fa-spray-can-sparkles"></i><span>Detailing</span></a>
+          <a href="/en/services/" class="service-item"><i class="fas fa-water"></i><span>Leak review</span></a>
+          <a href="/en/services/" class="service-item"><i class="fas fa-van-shuttle"></i><span>RV service</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner">
+      <div class="container cta-content">
+        <h2>Request your free estimate</h2>
+        <p>Inspection and estimate with no obligation</p>
+        <div class="cta-actions">
+          <a href="tel:+15813373366" class="cta-button"><i class="fas fa-phone"></i> (581) 337-3366</a>
+          <a href={squareBookingUrl} target="_blank" rel="noopener" class="square-button"><i class="fas fa-calendar-check"></i> Book now</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container contact-grid">
+        <div class="contact-form-wrapper">
+          <h2>Contact Us</h2>
+          <form action={`https://formspree.io/${formspreeId}`} method="POST">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Your email" required />
+            <input type="text" name="subject" placeholder="Subject" required />
+            <textarea name="message" placeholder="Your message" rows="5" required></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <p><strong>Phone:</strong> <a href="tel:+15813373366">(581) 337-3366</a></p>
+          <p><strong>Square:</strong> <a href={squareBookingUrl} target="_blank" rel="noopener">Book now</a></p>
+          <p><strong>Email:</strong> <a href="mailto:info@demosolution.ca">info@demosolution.ca</a></p>
+          <p><strong>Address:</strong> 11 rue de Granby, Unit 18, Gatineau, QC</p>
+          <p><strong>Service area:</strong> Gatineau, Ottawa, Laurentides, Outaouais, Quebec and Ontario</p>
+          <p><strong>RBQ:</strong> 5824-9764-01 | <strong>Since:</strong> 2013</p>
+          <p class="cta-text">Free and confidential estimate. Call us or send us a message.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang="en" />
+</Layout>
+
+<style>
+  .hero { height: 500px; display: flex; align-items: center; justify-content: center; text-align: center; color: white; }
+  .hero-logo { width: min(760px, 92vw); height: auto; display: block; margin: 0 auto 1.5rem; filter: drop-shadow(0 18px 35px rgba(0, 0, 0, 0.25)); }
+  .hero-tagline { font-size: 1.5rem; letter-spacing: 2px; }
+  .intro-section { padding: 4rem 0; background: white; }
+  .intro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; }
+  .intro-card { text-align: center; }
+  .card-icon { font-size: 3rem; color: var(--brand-green); margin-bottom: 1rem; }
+  .services-overview { padding: 4rem 0; background: var(--brand-surface); }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; margin-top: 2rem; }
+  .service-item { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; padding: 2rem; background: white; border-radius: 8px; transition: all 0.3s; border: 2px solid transparent; }
+  .service-item:hover { border-color: var(--brand-green); transform: translateY(-4px); box-shadow: 0 8px 16px rgba(0,0,0,0.1); }
+  .service-item i { font-size: 2.5rem; color: var(--brand-navy); }
+  .contact-section { padding: 4rem 0; background: var(--brand-navy); color: white; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .contact-form-wrapper h2 { color: white; margin-bottom: 1.5rem; }
+  .contact-form-wrapper form { display: flex; flex-direction: column; gap: 1rem; }
+  .contact-form-wrapper input, .contact-form-wrapper textarea { padding: 12px; border: none; border-radius: 4px; font-family: inherit; }
+  .contact-info h3 { color: var(--brand-gold); margin-bottom: 1rem; }
+  .contact-info p { margin-bottom: 0.75rem; }
+  .cta-text { margin-top: 1.5rem; font-style: italic; color: #d9e6d1; }
+  .cta-banner { background: var(--brand-green); padding: 3rem 1.5rem; text-align: center; color: white; }
+  .cta-content { max-width: 720px; margin: 0 auto; }
+  .cta-content h2 { font-size: 2rem; margin-bottom: 0.5rem; color: white; }
+  .cta-content p { font-size: 1.1rem; margin-bottom: 1.5rem; color: #ffffff; }
+  .cta-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.85rem; }
+  .cta-button { display: inline-block; background: var(--brand-gold); color: var(--brand-navy-dark); padding: 12px 28px; border-radius: 50px; font-weight: 600; text-decoration: none; font-size: 1.1rem; transition: all 0.3s ease; border: 2px solid var(--brand-gold); }
+  .cta-button:hover { background: #e1c317; color: var(--brand-navy-dark); }
+  .square-button { display: inline-block; background: transparent; color: white; padding: 12px 28px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 1.05rem; transition: all 0.3s ease; border: 2px solid rgba(255, 255, 255, 0.75); }
+  .square-button:hover { text-decoration: none; background: rgba(255,255,255,0.12); border-color: white; }
+  .cta-button i, .square-button i { margin-right: 8px; }
+  @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+</style>

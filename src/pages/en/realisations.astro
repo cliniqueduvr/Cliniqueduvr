@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import projects from '../../data/projects-en.json';
+---
+
+<Layout title="Projects | Clinique du VR" description="Recent RV service projects, before-and-after work and completed interventions.">
+  <Header lang="en" />
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Our Projects</h1>
+        <p>Examples of workshop interventions and before-and-after results</p>
+      </div>
+    </section>
+
+    <section class="realisations-section">
+      <div class="container">
+        <div class="projects-grid">
+          {projects.map((project) => (
+            <ProjectCard
+              id={project.id}
+              title={project.title}
+              location={project.location}
+              category={project.category}
+              beforeImage={project.beforeImage}
+              afterImage={project.afterImage}
+              beforeAlt={project.beforeAlt}
+              afterAlt={project.afterAlt}
+              description={project.description}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <CTABanner
+      lang="en"
+      heading="We can help your RV too"
+      subheading="Every project is different. Contact us for a practical review."
+      phoneNumber="(581) 337-3366"
+      squareLabel="Book now"
+    />
+  </main>
+
+  <Footer lang="en" />
+</Layout>
+
+<style>
+  .page-header { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/clinique-du-vr-brand.jpg'); background-size: cover; background-position: center; color: white; padding: 4rem 0; text-align: center; }
+  .page-header h1 { color: white; margin-bottom: 0.5rem; font-size: 2.5rem; }
+  .page-header p { margin: 0; font-size: 1.1rem; color: #ffffff; }
+  .realisations-section { padding: 4rem 0; background: white; }
+  .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+  @media (max-width: 768px) { .page-header { padding: 3rem 1.5rem; } .page-header h1 { font-size: 2rem; } .page-header p { font-size: 1rem; } .realisations-section { padding: 2rem 0; } .projects-grid { grid-template-columns: 1fr; gap: 1.5rem; } }
+</style>

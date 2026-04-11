@@ -1,0 +1,111 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID || 'f/YOUR_FORM_ID';
+const squareBookingUrl = 'https://app.squareup.com/appointments/book/lgocu4o42jy5zu/LGZ9VNRVZ6XXM/start';
+const mapAddress = encodeURIComponent('11 rue de Granby, Unité 18, Gatineau, QC');
+---
+
+<Layout title="Contact | Clinique du VR" description="Contact Clinique du VR for maintenance, repair and detailing services.">
+  <Header lang="en" />
+
+  <main>
+    <section class="contact-container">
+      <div class="container contact-layout">
+        <div class="contact-form-section">
+          <h1>Contact Us</h1>
+          <form action={`https://formspree.io/${formspreeId}`} method="POST">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <input type="text" id="subject" name="subject" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send</button>
+          </form>
+        </div>
+
+        <div class="contact-info-section">
+          <h2>Contact Information</h2>
+
+          <div class="info-block">
+            <h3>Phone</h3>
+            <div class="phone-actions">
+              <a href="tel:+15813373366" class="phone-link">(581) 337-3366</a>
+              <a href={squareBookingUrl} target="_blank" rel="noopener" class="square-button">Book now</a>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <h3>Email</h3>
+            <p><a href="mailto:info@demosolution.ca">info@demosolution.ca</a></p>
+          </div>
+
+          <div class="info-block">
+            <h3>Location</h3>
+            <p>11 rue de Granby, Unit 18, Gatineau, QC<br>Service area: Gatineau, Ottawa, Laurentides, Outaouais, Quebec and Ontario</p>
+          </div>
+
+          <div class="info-block">
+            <h3>Business Identity</h3>
+            <p><strong>RBQ:</strong> 5824-9764-01<br><strong>Since:</strong> 2013</p>
+          </div>
+
+          <div class="info-block">
+            <h3>Key Values</h3>
+            <p>Speed • Transparency • Regulatory compliance • Certified professionals</p>
+          </div>
+
+          <div class="info-block cta">
+            <p>Request your <strong>free estimate</strong> by phone, Square booking, or contact form.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section">
+      <iframe
+        title="Clinique du VR - 11 rue de Granby, Unit 18, Gatineau, QC"
+        src={`https://www.google.com/maps?q=${mapAddress}&output=embed`}
+        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+  </main>
+
+  <Footer lang="en" />
+</Layout>
+
+<style>
+  .contact-container { padding: 4rem 0; background: white; }
+  .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+  .contact-form-section h1 { margin-bottom: 2rem; }
+  .form-group { display: flex; flex-direction: column; margin-bottom: 1.5rem; }
+  .form-group label { font-weight: 600; margin-bottom: 0.5rem; color: var(--brand-ink); }
+  .form-group input, .form-group textarea { padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; font-size: 1rem; }
+  .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--brand-green); box-shadow: 0 0 0 3px rgba(61, 152, 47, 0.12); }
+  .contact-info-section h2 { margin-bottom: 2rem; }
+  .info-block { margin-bottom: 2rem; }
+  .info-block h3 { color: var(--brand-navy); margin-bottom: 0.5rem; font-size: 1rem; }
+  .info-block.cta { background: var(--brand-surface); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--brand-green); margin-top: 3rem; }
+  .map-section { width: 100%; margin-top: 3rem; }
+  .phone-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+  .phone-link { font-weight: 700; }
+  .square-button { display: inline-flex; align-items: center; justify-content: center; background: var(--brand-gold); color: var(--brand-navy-dark); border: 2px solid var(--brand-gold); border-radius: 999px; padding: 0.55rem 1rem; font-weight: 700; font-size: 0.95rem; }
+  .square-button:hover { text-decoration: none; background: #e1c317; border-color: #e1c317; }
+  @media (max-width: 768px) { .contact-layout { grid-template-columns: 1fr; gap: 2rem; } }
+</style>

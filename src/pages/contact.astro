@@ -4,9 +4,8 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID || 'f/YOUR_FORM_ID';
-const mapsLat = import.meta.env.VITE_MAPS_LATITUDE || '45.4215';
-const mapsLng = import.meta.env.VITE_MAPS_LONGITUDE || '-75.6812';
 const squareBookingUrl = 'https://app.squareup.com/appointments/book/lgocu4o42jy5zu/LGZ9VNRVZ6XXM/start';
+const mapAddress = encodeURIComponent('11 rue de Granby, Unité 18, Gatineau, QC');
 ---
 
 <Layout title="Contact | Clinique du VR" description="Contactez Clinique du VR au (581) 337-3366 pour l'entretien, la reparation et l'esthetique.">
@@ -60,18 +59,18 @@ const squareBookingUrl = 'https://app.squareup.com/appointments/book/lgocu4o42jy
 
           <div class="info-block">
             <h3>Localisation</h3>
-            <p>Gatineau - Ottawa, Québec<br>Région de la Capitale Nationale<br>Desservons aussi: Laurentides, Outaouais</p>
+            <p>11 rue de Granby, Unite 18, Gatineau, QC<br>Service: Gatineau, Ottawa, Laurentides, Outaouais, Quebec et Ontario</p>
           </div>
 
           <div class="info-block">
-            <h3>Certification RBQ</h3>
+            <h3>Identite d'entreprise</h3>
             <p><strong>RBQ:</strong> 5824-9764-01<br>
             <strong>Professionnels depuis 2013</strong></p>
           </div>
 
           <div class="info-block">
-            <h3>Services</h3>
-            <p>Désamiantage • Moisissure • Tests Amiante • Tests Air • Démolition Sélective • Inspection VR</p>
+            <h3>Valeurs cles</h3>
+            <p>Rapidite • Transparence • Conformite reglementaire • Professionnels certifies</p>
           </div>
 
           <div class="info-block cta">
@@ -83,8 +82,8 @@ const squareBookingUrl = 'https://app.squareup.com/appointments/book/lgocu4o42jy
 
     <section class="map-section">
       <iframe
-        title="Clinique du VR - Location in Gatineau, Quebec"
-        src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2817.3548916305567!2d${mapsLng}!3d${mapsLat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0503f7c8b7d7%3A0x1234!2sGatineau%2C%20QC!5e0!3m2!1sfr!2sca!4v1234567890`}
+        title="Clinique du VR - 11 rue de Granby, Unite 18, Gatineau, QC"
+        src={`https://www.google.com/maps?q=${mapAddress}&output=embed`}
         width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
   </main>

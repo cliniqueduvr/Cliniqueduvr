@@ -1,13 +1,26 @@
 ---
-const squareBookingUrl = 'https://app.squareup.com/appointments/book/lgocu4o42jy5zu/LGZ9VNRVZ6XXM/start';
+export interface Props {
+  lang?: 'fr' | 'en';
+}
 
-const navItems = [
-  { label: 'Accueil', href: '/' },
-  { label: 'Services', href: '/services/' },
-  { label: 'Réalisations', href: '/realisations/' },
-  { label: 'À Propos', href: '/#about' },
-  { label: 'Contact', href: '/contact/' }
-];
+const squareBookingUrl = 'https://app.squareup.com/appointments/book/lgocu4o42jy5zu/LGZ9VNRVZ6XXM/start';
+const { lang = 'fr' } = Astro.props as Props;
+const isEnglish = lang === 'en';
+const navItems = isEnglish
+  ? [
+      { label: 'Home', href: '/en/' },
+      { label: 'Services', href: '/en/services/' },
+      { label: 'Projects', href: '/en/realisations/' },
+      { label: 'About', href: '/en/#about' },
+      { label: 'Contact', href: '/en/contact/' }
+    ]
+  : [
+      { label: 'Accueil', href: '/' },
+      { label: 'Services', href: '/services/' },
+      { label: 'Réalisations', href: '/realisations/' },
+      { label: 'À Propos', href: '/#about' },
+      { label: 'Contact', href: '/contact/' }
+    ];
 ---
 
 <header class="header">
@@ -15,11 +28,15 @@ const navItems = [
     <div class="container topbar-inner">
       <div class="topbar-left">
         <a href="tel:+15813373366">(581) 337-3366</a>
-        <a href={squareBookingUrl} target="_blank" rel="noopener" class="square-link">Prendre rendez-vous</a>
+        <a href={squareBookingUrl} target="_blank" rel="noopener" class="square-link">{isEnglish ? 'Book now' : 'Prendre rendez-vous'}</a>
         <span class="divider">|</span>
         <span>RBQ: 5824-9764-01</span>
       </div>
       <div class="topbar-right">
+        <div class="lang-switch">
+          <a href="/" class:list={['lang-pill', !isEnglish && 'active']}>FR</a>
+          <a href="/en/" class:list={['lang-pill', isEnglish && 'active']}>EN</a>
+        </div>
         <a href="https://www.facebook.com/profile.php?id=61588265661776" target="_blank" rel="noopener" title="Facebook">
           <i class="fab fa-facebook"></i>
         </a>
@@ -96,6 +113,31 @@ const navItems = [
     color: white;
     font-size: 1.2rem;
     margin-left: 1rem;
+  }
+
+  .lang-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .lang-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.3rem;
+    padding: 0.25rem 0.55rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.35);
+    font-size: 0.8rem !important;
+    font-weight: 700;
+    margin-left: 0 !important;
+  }
+
+  .lang-pill.active {
+    background: var(--brand-gold);
+    color: var(--brand-navy-dark) !important;
+    border-color: var(--brand-gold);
   }
 
   .navbar {

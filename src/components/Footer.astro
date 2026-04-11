@@ -1,33 +1,39 @@
 ---
+export interface Props {
+  lang?: 'fr' | 'en';
+}
+
 const squareBookingUrl = 'https://app.squareup.com/appointments/book/lgocu4o42jy5zu/LGZ9VNRVZ6XXM/start';
+const { lang = 'fr' } = Astro.props as Props;
+const isEnglish = lang === 'en';
 ---
 
 <footer class="footer">
   <div class="container footer-content">
     <div class="footer-col">
       <img class="footer-brand" src="/clinique-du-vr-brand.jpg" alt="Clinique du VR" />
-      <p>Entretien, reparation et esthetique de VR avec une approche claire, soignee et orientee service.</p>
+      <p>{isEnglish ? 'RV maintenance, repair and detailing with a clear, careful and service-oriented approach.' : 'Entretien, reparation et esthetique de VR avec une approche claire, soignee et orientee service.'}</p>
     </div>
     <div class="footer-col">
-      <h4>Contact</h4>
+      <h4>{isEnglish ? 'Contact' : 'Contact'}</h4>
       <p>
-        <strong>Téléphone:</strong> <a href="tel:+15813373366">(581) 337-3366</a><br>
-        <strong>Square:</strong> <a href={squareBookingUrl} target="_blank" rel="noopener">Prendre rendez-vous</a><br>
+        <strong>{isEnglish ? 'Phone:' : 'Téléphone:'}</strong> <a href="tel:+15813373366">(581) 337-3366</a><br>
+        <strong>Square:</strong> <a href={squareBookingUrl} target="_blank" rel="noopener">{isEnglish ? 'Book now' : 'Prendre rendez-vous'}</a><br>
         <strong>Email:</strong> <a href="mailto:info@demosolution.ca">info@demosolution.ca</a><br>
         <strong>RBQ:</strong> 5824-9764-01
       </p>
     </div>
     <div class="footer-col">
-      <h4>Services</h4>
+      <h4>{isEnglish ? 'Services' : 'Services'}</h4>
       <ul>
-        <li><a href="/services/">Désamiantage</a></li>
-        <li><a href="/services/">Moisissure</a></li>
-        <li><a href="/services/">Tests Amiante</a></li>
-        <li><a href="/services/">Démolition Sélective</a></li>
+        <li><a href={isEnglish ? '/en/services/' : '/services/'}>{isEnglish ? 'Maintenance' : 'Entretien'}</a></li>
+        <li><a href={isEnglish ? '/en/services/' : '/services/'}>{isEnglish ? 'Repair' : 'Reparation'}</a></li>
+        <li><a href={isEnglish ? '/en/services/' : '/services/'}>{isEnglish ? 'Inspection' : 'Inspection'}</a></li>
+        <li><a href={isEnglish ? '/en/services/' : '/services/'}>{isEnglish ? 'RV Detailing' : 'Esthetique VR'}</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Nous Suivre</h4>
+      <h4>{isEnglish ? 'Follow Us' : 'Nous Suivre'}</h4>
       <a href="https://www.facebook.com/profile.php?id=61588265661776" target="_blank" rel="noopener">
         <i class="fab fa-facebook"></i> Facebook
       </a>
@@ -35,7 +41,7 @@ const squareBookingUrl = 'https://app.squareup.com/appointments/book/lgocu4o42jy
   </div>
   <div class="footer-bottom">
     <div class="container">
-      <p>&copy; 2026 Clinique du VR. Tous droits réservés. | <a href="/privacy/">Politique de confidentialité</a></p>
+      <p>&copy; 2026 Clinique du VR. {isEnglish ? 'All rights reserved.' : 'Tous droits réservés.'}</p>
     </div>
   </div>
 </footer>

@@ -3,22 +3,32 @@ export interface Props {
   heading?: string;
   subheading?: string;
   phoneNumber?: string;
+  lang?: 'fr' | 'en';
+  squareLabel?: string;
 }
 
 const {
   heading = "Demandez votre soumission gratuite",
   subheading = "Inspection et devis sans obligation",
-  phoneNumber = "(581) 337-3366"
+  phoneNumber = "(581) 337-3366",
+  lang = 'fr',
+  squareLabel = lang === 'fr' ? 'Reserve maintenant' : 'Book now'
 } = Astro.props as Props;
+const squareBookingUrl = 'https://app.squareup.com/appointments/book/lgocu4o42jy5zu/LGZ9VNRVZ6XXM/start';
 ---
 
 <section class="cta-banner">
   <div class="container cta-content">
     <h2>{heading}</h2>
     <p>{subheading}</p>
-    <a href={`tel:+15813373366`} class="cta-button">
-      <i class="fas fa-phone"></i> {phoneNumber}
-    </a>
+    <div class="cta-actions">
+      <a href={`tel:+15813373366`} class="cta-button">
+        <i class="fas fa-phone"></i> {phoneNumber}
+      </a>
+      <a href={squareBookingUrl} target="_blank" rel="noopener" class="square-button">
+        <i class="fas fa-calendar-check"></i> {squareLabel}
+      </a>
+    </div>
   </div>
 </section>
 
@@ -72,6 +82,36 @@ const {
   }
 
   .cta-button i {
+    margin-right: 8px;
+  }
+
+  .cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.85rem;
+  }
+
+  .square-button {
+    display: inline-block;
+    background: transparent;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.75);
+  }
+
+  .square-button:hover {
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.12);
+    border-color: white;
+  }
+
+  .square-button i {
     margin-right: 8px;
   }
 
