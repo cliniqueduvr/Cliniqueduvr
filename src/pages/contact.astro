@@ -8,7 +8,7 @@ const squareBookingUrl = 'https://app.squareup.com/appointments/book/lgocu4o42jy
 const mapAddress = encodeURIComponent('11 rue de Granby, Unité 18, Gatineau, QC');
 ---
 
-<Layout title="Contact | Clinique du VR" description="Contactez Clinique du VR au (581) 337-3366 pour l'entretien, la reparation et l'esthetique.">
+<Layout title="Contact Clinique du VR | Soumission, Rendez-vous et Atelier Gatineau-Ottawa" description="Contactez Clinique du VR a Gatineau-Ottawa pour une soumission, un rendez-vous ou une demande d'inspection, entretien ou reparation.">
   <Header />
 
   <main>
@@ -16,6 +16,7 @@ const mapAddress = encodeURIComponent('11 rue de Granby, Unité 18, Gatineau, QC
       <div class="container contact-layout">
         <div class="contact-form-section">
           <h1>Contactez-Nous</h1>
+          <p class="intro-copy">Vous pouvez nous joindre pour une inspection de VR, un entretien, une reparation de fuite d'eau, un probleme de toiture, un service esthetique ou une question avant achat et vente. Plus votre message est precis, plus le retour sera utile.</p>
           <form action={`https://formspree.io/${formspreeId}`} method="POST">
             <div class="form-group">
               <label for="name">Nom Complet *</label>
@@ -80,6 +81,19 @@ const mapAddress = encodeURIComponent('11 rue de Granby, Unité 18, Gatineau, QC
       </div>
     </section>
 
+    <section class="contact-seo">
+      <div class="container seo-columns">
+        <div>
+          <h2>Atelier VR a Gatineau-Ottawa</h2>
+          <p>Clinique du VR dessert Gatineau, Ottawa, l'Outaouais et les environs pour les demandes de service reliees aux VR, roulottes et caravanes. Le formulaire et la prise de rendez-vous Square servent autant aux demandes simples qu'aux dossiers plus complexes.</p>
+        </div>
+        <div>
+          <h2>Avant de nous ecrire</h2>
+          <p>Si vous avez des photos, des signes d'infiltration, des details sur la toiture, les joints, les appareils 12V ou propane, mentionnez-les dans votre message. Cela aide a orienter plus rapidement vers une inspection, un entretien ou une reparation ciblee.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="map-section">
       <iframe
         title="Clinique du VR - 11 rue de Granby, Unite 18, Gatineau, QC"
@@ -105,6 +119,11 @@ const mapAddress = encodeURIComponent('11 rue de Granby, Unité 18, Gatineau, QC
 
   .contact-form-section h1 {
     margin-bottom: 2rem;
+  }
+
+  .intro-copy {
+    margin: -1rem 0 1.5rem;
+    color: var(--brand-muted);
   }
 
   .form-group {
@@ -160,6 +179,22 @@ const mapAddress = encodeURIComponent('11 rue de Granby, Unité 18, Gatineau, QC
   .map-section {
     width: 100%;
     margin-top: 3rem;
+  }
+
+  .contact-seo {
+    padding: 0 0 4rem;
+    background: white;
+  }
+
+  .seo-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .seo-columns p {
+    margin-top: 0.75rem;
+    color: var(--brand-muted);
   }
 
   .phone-actions {

@@ -1,0 +1,80 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Privacy Policy | Clinique du VR" description="Clinique du VR privacy policy for contact requests, appointments and customer communications.">
+  <Header lang="en" />
+
+  <main>
+    <section class="policy-hero">
+      <div class="container">
+        <h1>Privacy Policy</h1>
+        <p>Clinique du VR protects the information shared through the contact form, phone calls and booking requests.</p>
+      </div>
+    </section>
+
+    <section class="policy-body">
+      <div class="container policy-grid">
+        <article class="policy-card">
+          <h2>Information we collect</h2>
+          <p>When you contact us, we may collect your name, email address, phone number, details about your RV and any information needed to understand your service request.</p>
+        </article>
+
+        <article class="policy-card">
+          <h2>How the information is used</h2>
+          <p>This information is used to reply to your request, plan an appointment, prepare an estimate or follow up on an inspection, maintenance or repair file.</p>
+        </article>
+
+        <article class="policy-card">
+          <h2>Sharing and retention</h2>
+          <p>We do not sell personal information. Data is kept only as needed to manage communications and service-related follow-up for your file.</p>
+        </article>
+
+        <article class="policy-card">
+          <h2>Questions</h2>
+          <p>For privacy questions or requests related to your information, email <a href="mailto:info@demosolution.ca">info@demosolution.ca</a> or call <a href="tel:+15813373366">(581) 337-3366</a>.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang="en" />
+</Layout>
+
+<style>
+  .policy-hero {
+    padding: 4rem 0 2rem;
+    background: linear-gradient(135deg, var(--brand-navy-dark) 0%, #1f476d 100%);
+    color: white;
+  }
+
+  .policy-hero h1 {
+    color: white;
+    margin-bottom: 0.75rem;
+  }
+
+  .policy-body {
+    padding: 3rem 0 4rem;
+    background: #f4f6f8;
+  }
+
+  .policy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .policy-card {
+    background: white;
+    border-radius: 18px;
+    padding: 1.5rem;
+    box-shadow: 0 14px 28px rgba(20, 36, 55, 0.08);
+  }
+
+  .policy-card h2 {
+    margin-bottom: 0.75rem;
+    font-size: 1.45rem;
+  }
+</style>

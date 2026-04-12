@@ -1,0 +1,20 @@
+# Clinique du VR
+
+Clinique du VR is an RV service workshop serving Gatineau-Ottawa.
+
+Primary pages:
+- https://www.demosolution.ca/
+- https://www.demosolution.ca/services/
+- https://www.demosolution.ca/services/inspection/
+- https://www.demosolution.ca/services/entretien/
+- https://www.demosolution.ca/services/reparation/
+- https://www.demosolution.ca/services/esthetique/
+- https://www.demosolution.ca/services/vente-achat/
+- https://www.demosolution.ca/realisations/
+- https://www.demosolution.ca/contact/
+
+English pages:
+- https://www.demosolution.ca/en/
+- https://www.demosolution.ca/en/services/
+- https://www.demosolution.ca/en/realisations/
+- https://www.demosolution.ca/en/contact/

@@ -26,10 +26,11 @@ const isEnglish = lang === 'en';
     <div class="footer-col">
       <h4>{isEnglish ? 'Services' : 'Services'}</h4>
       <ul>
-        <li><a href={isEnglish ? '/en/services/' : '/services/'}>{isEnglish ? 'Maintenance' : 'Entretien'}</a></li>
-        <li><a href={isEnglish ? '/en/services/' : '/services/'}>{isEnglish ? 'Repair' : 'Reparation'}</a></li>
-        <li><a href={isEnglish ? '/en/services/' : '/services/'}>{isEnglish ? 'Inspection' : 'Inspection'}</a></li>
-        <li><a href={isEnglish ? '/en/services/' : '/services/'}>{isEnglish ? 'RV Detailing' : 'Esthetique VR'}</a></li>
+        <li><a href={isEnglish ? '/en/services/' : '/services/inspection/'}>{isEnglish ? 'Inspection' : 'Inspection'}</a></li>
+        <li><a href={isEnglish ? '/en/services/' : '/services/entretien/'}>{isEnglish ? 'Maintenance' : 'Entretien'}</a></li>
+        <li><a href={isEnglish ? '/en/services/' : '/services/reparation/'}>{isEnglish ? 'Repair' : 'Reparation'}</a></li>
+        <li><a href={isEnglish ? '/en/services/' : '/services/esthetique/'}>{isEnglish ? 'RV Detailing' : 'Esthetique VR'}</a></li>
+        <li><a href={isEnglish ? '/en/services/' : '/services/vente-achat/'}>{isEnglish ? 'Buying & Selling' : 'Vente et achat'}</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -37,6 +38,9 @@ const isEnglish = lang === 'en';
       <a href="https://www.facebook.com/profile.php?id=61588265661776" target="_blank" rel="noopener">
         <i class="fab fa-facebook"></i> Facebook
       </a>
+      <p class="footer-legal">
+        <a href={isEnglish ? '/en/privacy/' : '/privacy/'}>{isEnglish ? 'Privacy Policy' : 'Politique de confidentialite'}</a>
+      </p>
     </div>
   </div>
   <div class="footer-bottom">
@@ -79,6 +83,10 @@ const isEnglish = lang === 'en';
 
   .footer-col a {
     color: white;
+  }
+
+  .footer-legal {
+    margin-top: 1rem;
   }
 
   .footer-col ul {

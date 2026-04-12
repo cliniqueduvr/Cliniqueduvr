@@ -1,0 +1,80 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Politique de confidentialite | Clinique du VR" description="Politique de confidentialite de Clinique du VR pour les demandes de soumission, rendez-vous et communications clients.">
+  <Header />
+
+  <main>
+    <section class="policy-hero">
+      <div class="container">
+        <h1>Politique de confidentialite</h1>
+        <p>Clinique du VR protege les renseignements partages via le formulaire de contact, le telephone et la prise de rendez-vous.</p>
+      </div>
+    </section>
+
+    <section class="policy-body">
+      <div class="container policy-grid">
+        <article class="policy-card">
+          <h2>Renseignements recueillis</h2>
+          <p>Lorsque vous nous contactez, nous pouvons recueillir votre nom, votre courriel, votre numero de telephone, des details sur votre VR et toute information utile a votre demande de service.</p>
+        </article>
+
+        <article class="policy-card">
+          <h2>Utilisation des renseignements</h2>
+          <p>Ces informations servent a repondre a votre demande, planifier un rendez-vous, preparer une soumission ou assurer le suivi d'un dossier de service, d'inspection ou de reparation.</p>
+        </article>
+
+        <article class="policy-card">
+          <h2>Partage et conservation</h2>
+          <p>Nous ne vendons pas vos renseignements personnels. Les donnees sont conservees uniquement pour la gestion des communications et des services relies a votre dossier.</p>
+        </article>
+
+        <article class="policy-card">
+          <h2>Questions</h2>
+          <p>Pour toute question liee a la confidentialite ou a vos renseignements, ecrivez a <a href="mailto:info@demosolution.ca">info@demosolution.ca</a> ou appelez au <a href="tel:+15813373366">(581) 337-3366</a>.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .policy-hero {
+    padding: 4rem 0 2rem;
+    background: linear-gradient(135deg, var(--brand-navy-dark) 0%, #1f476d 100%);
+    color: white;
+  }
+
+  .policy-hero h1 {
+    color: white;
+    margin-bottom: 0.75rem;
+  }
+
+  .policy-body {
+    padding: 3rem 0 4rem;
+    background: #f4f6f8;
+  }
+
+  .policy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .policy-card {
+    background: white;
+    border-radius: 18px;
+    padding: 1.5rem;
+    box-shadow: 0 14px 28px rgba(20, 36, 55, 0.08);
+  }
+
+  .policy-card h2 {
+    margin-bottom: 0.75rem;
+    font-size: 1.45rem;
+  }
+</style>

@@ -7,7 +7,7 @@ import CTABanner from '../components/CTABanner.astro';
 import projects from '../data/projects.json';
 ---
 
-<Layout title="Réalisations | Clinique du VR" description="Realisations et interventions sur VR. Avant-apres et travaux effectues.">
+<Layout title="Realisations VR | Avant-Apres, Reparations et Remise a Niveau" description="Realisations et interventions sur VR a Gatineau-Ottawa. Avant-apres, reparation et remise a niveau.">
   <Header />
 
   <main>
@@ -20,6 +20,10 @@ import projects from '../data/projects.json';
 
     <section class="realisations-section">
       <div class="container">
+        <div class="section-intro">
+          <h2>Avant-apres et interventions reelles</h2>
+          <p>Ces realisations montrent des exemples de travaux effectues sur des VR, roulottes et caravanes: infiltration d'eau, remise en etat, correction visuelle et amelioration de l'etat general. Cette section renforce la preuve de travail tout en couvrant les recherches liees aux reparations VR a Gatineau-Ottawa.</p>
+        </div>
         <div class="projects-grid">
           {projects.map((project) => (
             <ProjectCard
@@ -34,6 +38,19 @@ import projects from '../data/projects.json';
               description={project.description}
             />
           ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="seo-copy">
+      <div class="container seo-columns">
+        <div>
+          <h2>Pourquoi ces projets comptent</h2>
+          <p>Un avant-apres aide a comprendre le type de probleme traite, la nature des dommages observes et le niveau de remise en etat possible selon le vehicule. C'est aussi une bonne facon de montrer la difference entre entretien, reparation et restauration plus complete.</p>
+        </div>
+        <div>
+          <h2>Travaux frequents en atelier</h2>
+          <p>Parmi les demandes les plus courantes, on retrouve les fuites d'eau, les joints fatigues, la toiture, les dommages interieurs, la presentation avant vente et la remise a niveau apres infiltration. Si votre situation ressemble a l'un de ces cas, nous pouvons vous orienter vers le bon service.</p>
         </div>
       </div>
     </section>
@@ -74,10 +91,36 @@ import projects from '../data/projects.json';
     background: white;
   }
 
+  .section-intro {
+    max-width: 850px;
+    margin-bottom: 2rem;
+  }
+
+  .section-intro p {
+    margin-top: 0.75rem;
+    color: var(--brand-muted);
+  }
+
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
+  }
+
+  .seo-copy {
+    padding: 0 0 4rem;
+    background: white;
+  }
+
+  .seo-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .seo-columns p {
+    margin-top: 0.75rem;
+    color: var(--brand-muted);
   }
 
   @media (max-width: 768px) {

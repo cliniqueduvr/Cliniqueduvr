@@ -2,36 +2,55 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import ServiceCard from '../../components/ServiceCard.astro';
 import CTABanner from '../../components/CTABanner.astro';
-import services from '../../data/services-en.json';
+import { servicePagesEn } from '../../data/servicePagesEn';
 ---
 
-<Layout title="Services | Clinique du VR" description="RV maintenance, repair and detailing services in Gatineau-Ottawa">
+<Layout title="RV Services in Gatineau-Ottawa | Maintenance, Repair and Detailing" description="RV services in Gatineau-Ottawa: inspection, maintenance, repair, detailing, and buying selling support.">
   <Header lang="en" />
 
   <main>
     <section class="page-header">
       <div class="container">
+        <p class="eyebrow">One page per service</p>
         <h1>Our Services</h1>
-        <p>Practical solutions for RV upkeep, repairs and detailing</p>
+        <p>Inspection, maintenance, repair, detailing and buying selling support for RVs, trailers and caravans.</p>
       </div>
     </section>
 
-    {services.map((service) => (
-      <ServiceCard
-        id={service.id}
-        title={service.title}
-        icon={service.icon}
-        description={service.description}
-        details={service.details}
-      />
-    ))}
+    <section class="services-grid-section">
+      <div class="container services-grid">
+        {servicePagesEn.map((service) => (
+          <a class="service-card" href={`/en/services/${service.slug}/`}>
+            <div class="icon-wrap">
+              <i class={service.icon}></i>
+            </div>
+            <p class="card-eyebrow">{service.eyebrow}</p>
+            <h2>{service.navLabel}</h2>
+            <p>{service.lead}</p>
+            <span>View service page</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="seo-copy">
+      <div class="container seo-columns">
+        <div>
+          <h2>Clearer service pages for stronger search intent</h2>
+          <p>Each service now has its own page so the site can better match local RV searches tied to Gatineau-Ottawa. This structure helps both visitors and search engines understand the difference between inspection, maintenance, repair, detailing and buying or selling support.</p>
+        </div>
+        <div>
+          <h2>What the workshop covers</h2>
+          <p>Common requests include water leaks, roof issues, seals, propane and electrical systems, interior restoration, pre-sale presentation and pre-purchase inspections. The goal is to keep the pages simple while still improving keyword depth and local relevance.</p>
+        </div>
+      </div>
+    </section>
 
     <CTABanner
       lang="en"
-      heading="Ready to get started?"
-      subheading="Contact us for a free and confidential estimate."
+      heading="Need help with a specific RV issue?"
+      subheading="Choose the service that matches your situation or contact us and we will point you in the right direction."
       squareLabel="Book now"
     />
   </main>
@@ -40,8 +59,128 @@ import services from '../../data/services-en.json';
 </Layout>
 
 <style>
-  .page-header { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/clinique-du-vr-brand.jpg'); background-size: cover; background-position: center; color: white; padding: 4rem 0; text-align: center; }
-  .page-header h1 { color: white; margin-bottom: 0.5rem; font-size: 2.5rem; }
-  .page-header p { margin: 0; font-size: 1.1rem; color: #ffffff; }
-  @media (max-width: 768px) { .page-header { padding: 3rem 1.5rem; } .page-header h1 { font-size: 2rem; } .page-header p { font-size: 1rem; } }
+  .page-header {
+    background:
+      radial-gradient(circle at top left, rgba(242, 210, 27, 0.18), transparent 25%),
+      linear-gradient(135deg, var(--brand-navy-dark) 0%, #1f476d 62%, #204f32 100%);
+    color: white;
+    padding: 4.5rem 0;
+    text-align: center;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    margin-bottom: 1rem;
+    padding: 0.45rem 0.85rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.12);
+    color: var(--brand-gold);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .page-header h1 {
+    color: white;
+    margin-bottom: 0.75rem;
+    font-size: 3rem;
+  }
+
+  .page-header p:last-child {
+    margin: 0 auto;
+    max-width: 55ch;
+    font-size: 1.08rem;
+    color: #edf5d8;
+  }
+
+  .services-grid-section {
+    padding: 4rem 0;
+    background: linear-gradient(180deg, white 0%, #f3f5f8 100%);
+  }
+
+  .seo-copy {
+    padding: 0 0 4rem;
+    background: #f3f5f8;
+  }
+
+  .seo-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .seo-columns p {
+    margin-top: 0.75rem;
+    color: var(--brand-muted);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    display: grid;
+    gap: 0.9rem;
+    padding: 1.6rem;
+    border-radius: 22px;
+    background: white;
+    box-shadow: 0 18px 34px rgba(21, 38, 58, 0.08);
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .service-card:hover {
+    text-decoration: none;
+    transform: translateY(-4px);
+    box-shadow: 0 24px 44px rgba(21, 38, 58, 0.14);
+  }
+
+  .icon-wrap {
+    width: 3.5rem;
+    height: 3.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background: linear-gradient(135deg, var(--brand-green), #57af49);
+    color: white;
+    font-size: 1.25rem;
+  }
+
+  .card-eyebrow {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--brand-green-dark);
+    font-weight: 700;
+  }
+
+  .service-card h2 {
+    font-size: 1.55rem;
+    line-height: 1.1;
+    color: var(--brand-navy);
+  }
+
+  .service-card p {
+    color: var(--brand-muted);
+    margin: 0;
+  }
+
+  .service-card span {
+    color: var(--brand-navy);
+    font-weight: 700;
+  }
+
+  @media (max-width: 768px) {
+    .page-header {
+      padding: 3.4rem 0;
+    }
+
+    .page-header h1 {
+      font-size: 2.2rem;
+    }
+  }
 </style>

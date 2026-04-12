@@ -7,7 +7,7 @@ import CTABanner from '../../components/CTABanner.astro';
 import projects from '../../data/projects-en.json';
 ---
 
-<Layout title="Projects | Clinique du VR" description="Recent RV service projects, before-and-after work and completed interventions.">
+<Layout title="RV Projects | Before and After Repairs and Restoration" description="Recent RV projects in Gatineau-Ottawa including before and after repair work, restoration and refresh service.">
   <Header lang="en" />
 
   <main>
@@ -20,6 +20,10 @@ import projects from '../../data/projects-en.json';
 
     <section class="realisations-section">
       <div class="container">
+        <div class="section-intro">
+          <h2>Before and after examples from real RV work</h2>
+          <p>These projects show real workshop interventions on RVs, trailers and caravans, including water damage correction, refresh work, visual improvement and broader condition recovery. This section adds proof of work while also supporting searches related to RV repair in Gatineau-Ottawa.</p>
+        </div>
         <div class="projects-grid">
           {projects.map((project) => (
             <ProjectCard
@@ -34,6 +38,19 @@ import projects from '../../data/projects-en.json';
               description={project.description}
             />
           ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="seo-copy">
+      <div class="container seo-columns">
+        <div>
+          <h2>Why these examples matter</h2>
+          <p>A before and after comparison helps explain the type of issue being handled, the visible damage involved and the level of restoration possible depending on the vehicle. It also helps distinguish maintenance from deeper repair or restoration work.</p>
+        </div>
+        <div>
+          <h2>Common workshop requests</h2>
+          <p>Frequent requests include water leaks, aging seals, roof concerns, interior damage, pre-sale cleanup and post-infiltration restoration. If your RV matches one of these patterns, we can direct you to the right service path.</p>
         </div>
       </div>
     </section>
@@ -55,6 +72,11 @@ import projects from '../../data/projects-en.json';
   .page-header h1 { color: white; margin-bottom: 0.5rem; font-size: 2.5rem; }
   .page-header p { margin: 0; font-size: 1.1rem; color: #ffffff; }
   .realisations-section { padding: 4rem 0; background: white; }
+  .section-intro { max-width: 850px; margin-bottom: 2rem; }
+  .section-intro p { margin-top: 0.75rem; color: var(--brand-muted); }
   .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+  .seo-copy { padding: 0 0 4rem; background: white; }
+  .seo-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+  .seo-columns p { margin-top: 0.75rem; color: var(--brand-muted); }
   @media (max-width: 768px) { .page-header { padding: 3rem 1.5rem; } .page-header h1 { font-size: 2rem; } .page-header p { font-size: 1rem; } .realisations-section { padding: 2rem 0; } .projects-grid { grid-template-columns: 1fr; gap: 1.5rem; } }
 </style>

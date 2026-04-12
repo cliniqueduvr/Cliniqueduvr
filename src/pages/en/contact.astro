@@ -8,7 +8,7 @@ const squareBookingUrl = 'https://app.squareup.com/appointments/book/lgocu4o42jy
 const mapAddress = encodeURIComponent('11 rue de Granby, Unité 18, Gatineau, QC');
 ---
 
-<Layout title="Contact | Clinique du VR" description="Contact Clinique du VR for maintenance, repair and detailing services.">
+<Layout title="Contact Clinique du VR | Estimate, Booking and Gatineau-Ottawa Workshop" description="Contact Clinique du VR in Gatineau-Ottawa for an estimate, appointment or RV inspection, maintenance and repair request.">
   <Header lang="en" />
 
   <main>
@@ -16,6 +16,7 @@ const mapAddress = encodeURIComponent('11 rue de Granby, Unité 18, Gatineau, QC
       <div class="container contact-layout">
         <div class="contact-form-section">
           <h1>Contact Us</h1>
+          <p class="intro-copy">You can contact us for an RV inspection, maintenance request, water leak issue, roof concern, detailing service or support before buying or selling. The more specific the message, the more useful the first reply will be.</p>
           <form action={`https://formspree.io/${formspreeId}`} method="POST">
             <div class="form-group">
               <label for="name">Full Name *</label>
@@ -79,6 +80,19 @@ const mapAddress = encodeURIComponent('11 rue de Granby, Unité 18, Gatineau, QC
       </div>
     </section>
 
+    <section class="contact-seo">
+      <div class="container seo-columns">
+        <div>
+          <h2>RV workshop in Gatineau-Ottawa</h2>
+          <p>Clinique du VR serves Gatineau, Ottawa, Outaouais and nearby areas for RV, trailer and caravan service requests. The contact form and Square booking link can both be used for quick questions as well as larger service files.</p>
+        </div>
+        <div>
+          <h2>Before you send a message</h2>
+          <p>If you have photos, signs of water intrusion, roof concerns, seal issues or notes about propane and electrical systems, include them in your message. That helps us direct the request faster toward inspection, maintenance or repair.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="map-section">
       <iframe
         title="Clinique du VR - 11 rue de Granby, Unit 18, Gatineau, QC"
@@ -94,6 +108,7 @@ const mapAddress = encodeURIComponent('11 rue de Granby, Unité 18, Gatineau, QC
   .contact-container { padding: 4rem 0; background: white; }
   .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
   .contact-form-section h1 { margin-bottom: 2rem; }
+  .intro-copy { margin: -1rem 0 1.5rem; color: var(--brand-muted); }
   .form-group { display: flex; flex-direction: column; margin-bottom: 1.5rem; }
   .form-group label { font-weight: 600; margin-bottom: 0.5rem; color: var(--brand-ink); }
   .form-group input, .form-group textarea { padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; font-size: 1rem; }
@@ -103,6 +118,9 @@ const mapAddress = encodeURIComponent('11 rue de Granby, Unité 18, Gatineau, QC
   .info-block h3 { color: var(--brand-navy); margin-bottom: 0.5rem; font-size: 1rem; }
   .info-block.cta { background: var(--brand-surface); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--brand-green); margin-top: 3rem; }
   .map-section { width: 100%; margin-top: 3rem; }
+  .contact-seo { padding: 0 0 4rem; background: white; }
+  .seo-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+  .seo-columns p { margin-top: 0.75rem; color: var(--brand-muted); }
   .phone-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
   .phone-link { font-weight: 700; }
   .square-button { display: inline-flex; align-items: center; justify-content: center; background: var(--brand-gold); color: var(--brand-navy-dark); border: 2px solid var(--brand-gold); border-radius: 999px; padding: 0.55rem 1rem; font-weight: 700; font-size: 0.95rem; }

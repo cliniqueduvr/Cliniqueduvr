@@ -7,8 +7,8 @@ const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID || 'f/YOUR_FORM_ID';
 const squareBookingUrl = 'https://app.squareup.com/appointments/book/lgocu4o42jy5zu/LGZ9VNRVZ6XXM/start';
 
 const meta = {
-  title: 'Clinique du VR | Entretien, reparation et esthetique',
-  description: 'Clinique du VR offre entretien, reparation et esthetique avec un service professionnel et une prise en charge complete.'
+  title: 'Clinique du VR | Inspection, entretien et reparation VR a Gatineau-Ottawa',
+  description: 'Clinique du VR offre inspection, entretien, reparation, esthetique et accompagnement vente achat pour VR a Gatineau-Ottawa.'
 };
 ---
 
@@ -50,30 +50,39 @@ const meta = {
       <div class="container">
         <h2>Nos Spécialités</h2>
         <div class="services-grid">
-          <a href="/services/" class="service-item">
-            <i class="fas fa-layer-group"></i>
-            <span>Entretien</span>
-          </a>
-          <a href="/services/" class="service-item">
-            <i class="fas fa-cloud"></i>
-            <span>Reparation</span>
-          </a>
-          <a href="/services/" class="service-item">
-            <i class="fas fa-flask"></i>
+          <a href="/services/inspection/" class="service-item">
+            <i class="fas fa-clipboard-check"></i>
             <span>Inspection</span>
           </a>
-          <a href="/services/" class="service-item">
-            <i class="fas fa-hammer"></i>
-            <span>Service atelier</span>
+          <a href="/services/entretien/" class="service-item">
+            <i class="fas fa-screwdriver-wrench"></i>
+            <span>Entretien</span>
           </a>
-          <a href="/services/" class="service-item">
-            <i class="fas fa-wind"></i>
+          <a href="/services/reparation/" class="service-item">
+            <i class="fas fa-toolbox"></i>
+            <span>Reparation</span>
+          </a>
+          <a href="/services/esthetique/" class="service-item">
+            <i class="fas fa-sparkles"></i>
             <span>Esthetique</span>
           </a>
-          <a href="/services/" class="service-item">
-            <i class="fas fa-van"></i>
-            <span>VR & Caravanes</span>
+          <a href="/services/vente-achat/" class="service-item">
+            <i class="fas fa-van-shuttle"></i>
+            <span>Vente et achat</span>
           </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="seo-copy">
+      <div class="container seo-grid">
+        <div>
+          <h2>Service VR a Gatineau-Ottawa</h2>
+          <p>Clinique du VR accompagne les proprietaires de VR, roulottes et caravanes pour les besoins les plus frequents: inspection avant achat, entretien preventif, reparation de fuite d'eau, toiture, remise en etat et esthetique. Notre atelier a Gatineau dessert aussi Ottawa, l'Outaouais, les Laurentides ainsi que plusieurs clients au Quebec et en Ontario.</p>
+        </div>
+        <div>
+          <h2>Une approche utile avant les travaux</h2>
+          <p>Quand un vehicule presente des signes d'usure, d'infiltration ou de deterioration visuelle, il faut d'abord clarifier l'etat reel du VR. C'est pourquoi nos pages de services sont separees: inspection, entretien, reparation, esthetique et vente achat. Chaque page sert a expliquer le cadre du service et a mieux cibler les recherches locales.</p>
         </div>
       </div>
     </section>
@@ -174,6 +183,22 @@ const meta = {
   .services-overview {
     padding: 4rem 0;
     background: var(--brand-surface);
+  }
+
+  .seo-copy {
+    padding: 4rem 0;
+    background: white;
+  }
+
+  .seo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .seo-grid p {
+    margin-top: 0.75rem;
+    color: var(--brand-muted);
   }
 
   .services-grid {

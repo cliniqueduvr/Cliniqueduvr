@@ -7,8 +7,8 @@ const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID || 'f/YOUR_FORM_ID';
 const squareBookingUrl = 'https://app.squareup.com/appointments/book/lgocu4o42jy5zu/LGZ9VNRVZ6XXM/start';
 
 const meta = {
-  title: 'Clinique du VR | Maintenance, repair and detailing',
-  description: 'Clinique du VR offers RV maintenance, repair and detailing with practical service and clear communication.'
+  title: 'Clinique du VR | RV inspection, maintenance and repair in Gatineau-Ottawa',
+  description: 'Clinique du VR offers RV inspection, maintenance, repair, detailing and buying selling support in Gatineau-Ottawa.'
 };
 ---
 
@@ -47,12 +47,24 @@ const meta = {
       <div class="container">
         <h2>Our Specialties</h2>
         <div class="services-grid">
-          <a href="/en/services/" class="service-item"><i class="fas fa-screwdriver-wrench"></i><span>Maintenance</span></a>
-          <a href="/en/services/" class="service-item"><i class="fas fa-gears"></i><span>Repair</span></a>
-          <a href="/en/services/" class="service-item"><i class="fas fa-magnifying-glass"></i><span>Inspection</span></a>
-          <a href="/en/services/" class="service-item"><i class="fas fa-spray-can-sparkles"></i><span>Detailing</span></a>
-          <a href="/en/services/" class="service-item"><i class="fas fa-water"></i><span>Leak review</span></a>
-          <a href="/en/services/" class="service-item"><i class="fas fa-van-shuttle"></i><span>RV service</span></a>
+          <a href="/en/services/inspection/" class="service-item"><i class="fas fa-clipboard-check"></i><span>Inspection</span></a>
+          <a href="/en/services/maintenance/" class="service-item"><i class="fas fa-screwdriver-wrench"></i><span>Maintenance</span></a>
+          <a href="/en/services/repair/" class="service-item"><i class="fas fa-toolbox"></i><span>Repair</span></a>
+          <a href="/en/services/detailing/" class="service-item"><i class="fas fa-sparkles"></i><span>Detailing</span></a>
+          <a href="/en/services/buying-selling/" class="service-item"><i class="fas fa-van-shuttle"></i><span>Buying and Selling</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="seo-copy">
+      <div class="container seo-grid">
+        <div>
+          <h2>RV service in Gatineau-Ottawa</h2>
+          <p>Clinique du VR supports RV, trailer and caravan owners with common service needs such as pre-purchase inspection, preventive maintenance, water leak repair, roof work, refresh work and detailing. The workshop is based in Gatineau and also serves Ottawa, Outaouais, Laurentides, Quebec and Ontario clients.</p>
+        </div>
+        <div>
+          <h2>A clearer service structure</h2>
+          <p>When an RV shows signs of wear, water intrusion or visible deterioration, the first step is to clarify the real condition of the vehicle. That is why the site now separates inspection, maintenance, repair, detailing and buying selling support into dedicated pages with stronger local search coverage.</p>
         </div>
       </div>
     </section>
@@ -107,6 +119,9 @@ const meta = {
   .intro-card { text-align: center; }
   .card-icon { font-size: 3rem; color: var(--brand-green); margin-bottom: 1rem; }
   .services-overview { padding: 4rem 0; background: var(--brand-surface); }
+  .seo-copy { padding: 4rem 0; background: white; }
+  .seo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+  .seo-grid p { margin-top: 0.75rem; color: var(--brand-muted); }
   .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; margin-top: 2rem; }
   .service-item { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; padding: 2rem; background: white; border-radius: 8px; transition: all 0.3s; border: 2px solid transparent; }
   .service-item:hover { border-color: var(--brand-green); transform: translateY(-4px); box-shadow: 0 8px 16px rgba(0,0,0,0.1); }
