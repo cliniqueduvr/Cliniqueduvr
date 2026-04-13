@@ -1,112 +1,155 @@
 media:
-  input: public/images
-  output: /images
+  - name: project_images
+    label: Project Images
+    input: public/images
+    output: /images
+    categories: [image]
+    rename: true
+
+settings:
+  hide: true
+  content:
+    merge: true
+  commit:
+    templates:
+      create: "content: create {path}"
+      update: "content: update {path}"
+      delete: "content: delete {path}"
+      rename: "content: rename {oldPath} to {newPath}"
 
 content:
-  - name: services
-    label: Services (FR)
+  - name: services_fr
+    label: Services FR
     type: file
     path: src/data/services.json
     fields:
-      - name: id
-        label: ID
-        type: number
-      - name: title
-        label: Titre
-        type: string
-      - name: icon
-        label: Icone (classe FontAwesome)
-        type: string
-      - name: description
-        label: Description courte
-        type: string
-      - name: details
-        label: Details complets
-        type: text
+      - name: items
+        label: Services
+        type: object
+        list: true
+        fields:
+          - name: id
+            label: ID
+            type: number
+          - name: title
+            label: Titre
+            type: string
+          - name: icon
+            label: Icône Font Awesome
+            type: string
+          - name: description
+            label: Description courte
+            type: text
+          - name: details
+            label: Description détaillée
+            type: text
 
   - name: services_en
-    label: Services (EN)
+    label: Services EN
     type: file
     path: src/data/services-en.json
     fields:
-      - name: id
-        label: ID
-        type: number
-      - name: title
-        label: Title
-        type: string
-      - name: icon
-        label: Icon (FontAwesome class)
-        type: string
-      - name: description
-        label: Short description
-        type: string
-      - name: details
-        label: Full details
-        type: text
+      - name: items
+        label: Services
+        type: object
+        list: true
+        fields:
+          - name: id
+            label: ID
+            type: number
+          - name: title
+            label: Title
+            type: string
+          - name: icon
+            label: Font Awesome icon
+            type: string
+          - name: description
+            label: Short description
+            type: text
+          - name: details
+            label: Detailed description
+            type: text
 
-  - name: projects
-    label: Realisations (FR)
+  - name: projects_fr
+    label: Projects FR
     type: file
     path: src/data/projects.json
     fields:
-      - name: id
-        label: ID
-        type: number
-      - name: title
-        label: Titre
-        type: string
-      - name: location
-        label: Localisation
-        type: string
-      - name: category
-        label: Categorie
-        type: string
-      - name: beforeImage
-        label: Image Avant
-        type: image
-      - name: afterImage
-        label: Image Apres
-        type: image
-      - name: beforeAlt
-        label: Texte alternatif Avant
-        type: string
-      - name: afterAlt
-        label: Texte alternatif Apres
-        type: string
-      - name: description
-        label: Description
-        type: text
+      - name: items
+        label: Réalisations
+        type: object
+        list: true
+        fields:
+          - name: id
+            label: ID
+            type: number
+          - name: title
+            label: Titre
+            type: string
+          - name: location
+            label: Ville
+            type: string
+          - name: category
+            label: Catégorie
+            type: string
+          - name: beforeImage
+            label: Image avant
+            type: image
+            options:
+              media: project_images
+          - name: afterImage
+            label: Image après
+            type: image
+            options:
+              media: project_images
+          - name: beforeAlt
+            label: Alt image avant
+            type: text
+          - name: afterAlt
+            label: Alt image après
+            type: text
+          - name: description
+            label: Description
+            type: text
 
   - name: projects_en
-    label: Realisations (EN)
+    label: Projects EN
     type: file
     path: src/data/projects-en.json
     fields:
-      - name: id
-        label: ID
-        type: number
-      - name: title
-        label: Title
-        type: string
-      - name: location
-        label: Location
-        type: string
-      - name: category
-        label: Category
-        type: string
-      - name: beforeImage
-        label: Before Image
-        type: image
-      - name: afterImage
-        label: After Image
-        type: image
-      - name: beforeAlt
-        label: Before Alt Text
-        type: string
-      - name: afterAlt
-        label: After Alt Text
-        type: string
-      - name: description
-        label: Description
-        type: text
+      - name: items
+        label: Projects
+        type: object
+        list: true
+        fields:
+          - name: id
+            label: ID
+            type: number
+          - name: title
+            label: Title
+            type: string
+          - name: location
+            label: Location
+            type: string
+          - name: category
+            label: Category
+            type: string
+          - name: beforeImage
+            label: Before image
+            type: image
+            options:
+              media: project_images
+          - name: afterImage
+            label: After image
+            type: image
+            options:
+              media: project_images
+          - name: beforeAlt
+            label: Before image alt
+            type: text
+          - name: afterAlt
+            label: After image alt
+            type: text
+          - name: description
+            label: Description
+            type: text
