@@ -2,9 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { buildLocalBusinessSchema } from '../lib/seo';
 
-const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID || 'f/YOUR_FORM_ID';
+const rawFormspreeId = import.meta.env.PUBLIC_FORMSPREE_ID || '';
+const isFormConfigured = Boolean(rawFormspreeId && rawFormspreeId.startsWith('f/'));
+const formAction = isFormConfigured ? `https://formspree.io/f/${rawFormspreeId}` : undefined;
 const squareBookingUrl = 'https://app.squareup.com/appointments/book/lgocu4o42jy5zu/LGZ9VNRVZ6XXM/start';
+const schemas = [buildLocalBusinessSchema()];
 
 const meta = {
   title: 'Clinique du VR | Inspection, entretien et reparation VR a Gatineau-Ottawa',
@@ -12,15 +16,15 @@ const meta = {
 };
 ---
 
-<Layout title={meta.title} description={meta.description}>
+<Layout title={meta.title} description={meta.description} canonicalPath="/" frPath="/" enPath="/en/" schemas={schemas}>
   <Header />
 
   <main>
-    <!-- HERO SECTION -->
-    <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://www.demosolution.ca/images/Decontamination-bosco.jpg?w=1200&h=600&fit=crop');">
+    <section class="hero">
       <div class="hero-content">
-        <img class="hero-logo" src="/clinique-du-vr-brand.jpg" alt="Clinique du VR" />
-        <p class="hero-tagline">Entretien - reparation - esthetique</p>
+        <img class="hero-logo" src="/clinique-du-vr-brand.jpg" alt="Logo Clinique du VR — Entretien, reparation et esthetique de vehicules recreatifs" />
+        <h1>Clinique du VR — Entretien, reparation et esthetique de VR a Gatineau-Ottawa</h1>
+        <p class="hero-tagline">Inspection • entretien • reparation • esthetique</p>
       </div>
     </section>
 
@@ -63,7 +67,7 @@ const meta = {
             <span>Reparation</span>
           </a>
           <a href="/services/esthetique/" class="service-item">
-            <i class="fas fa-sparkles"></i>
+            <i class="fas fa-spray-can-sparkles"></i>
             <span>Esthetique</span>
           </a>
           <a href="/services/vente-achat/" class="service-item">
@@ -82,7 +86,7 @@ const meta = {
         </div>
         <div>
           <h2>Une approche utile avant les travaux</h2>
-          <p>Quand un vehicule presente des signes d'usure, d'infiltration ou de deterioration visuelle, il faut d'abord clarifier l'etat reel du VR. C'est pourquoi nos pages de services sont separees: inspection, entretien, reparation, esthetique et vente achat. Chaque page sert a expliquer le cadre du service et a mieux cibler les recherches locales.</p>
+          <p>Quand un vehicule presente des signes d usure, d infiltration ou de deterioration visuelle, il faut d abord clarifier l etat reel du VR. Nous vous aidons ensuite a choisir entre une inspection, un entretien, une reparation, un service esthetique ou une preparation avant vente selon ce qui est le plus utile.</p>
         </div>
       </div>
     </section>
@@ -108,12 +112,16 @@ const meta = {
       <div class="container contact-grid">
         <div class="contact-form-wrapper">
           <h2>Contactez-Nous</h2>
-          <form action={`https://formspree.io/${formspreeId}`} method="POST">
+          <!-- TODO: Replace with actual Formspree form ID -->
+          {!isFormConfigured && (
+            <p class="form-note">Le formulaire de contact n est pas encore configure en production. Utilisez le telephone ou la prise de rendez-vous Square en attendant.</p>
+          )}
+          <form action={formAction} method="POST">
             <input type="text" name="name" placeholder="Votre nom" required />
             <input type="email" name="email" placeholder="Votre email" required />
             <input type="text" name="subject" placeholder="Sujet" required />
             <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
-            <button type="submit">Envoyer</button>
+            <button type="submit" disabled={!isFormConfigured}>Envoyer</button>
           </form>
         </div>
 
@@ -129,6 +137,26 @@ const meta = {
         </div>
       </div>
     </section>
+
+    <section class="reviews-section">
+      <div class="container">
+        <h2>Avis Google</h2>
+        <div class="reviews-grid">
+          <article class="review-card">
+            <p class="review-text">"Cédric était à l’heure, a tout expliqué clairement et les résultats ont suivi comme promis. Deux pouces en l’air."</p>
+            <p class="review-author">Jesse Brook</p>
+          </article>
+          <article class="review-card">
+            <p class="review-text">"Service professionnel et courtois."</p>
+            <p class="review-author">Stéphane Desgagné</p>
+          </article>
+          <article class="review-card">
+            <p class="review-text">"Compagnie efficace, facile de communiquer avec eux. Travail professionnel, que du positif."</p>
+            <p class="review-author">Philippe Albert</p>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
 
   <Footer />
@@ -136,27 +164,42 @@ const meta = {
 
 <style>
   .hero {
-    height: 500px;
+    min-height: 640px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-size: cover;
-    background-position: center;
+    background:
+      radial-gradient(circle at top left, rgba(242, 210, 27, 0.16), transparent 28%),
+      linear-gradient(135deg, var(--brand-navy-dark) 0%, #1f476d 62%, #214f33 100%);
     text-align: center;
     color: white;
+    padding: 5.5rem 1.5rem 4.5rem;
   }
 
   .hero-logo {
-    width: min(760px, 92vw);
+    width: min(760px, 88vw);
     height: auto;
     display: block;
-    margin: 0 auto 1.5rem;
+    margin: 0 auto 2rem;
     filter: drop-shadow(0 18px 35px rgba(0, 0, 0, 0.25));
   }
 
   .hero-tagline {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     letter-spacing: 2px;
+    margin-top: 1rem;
+    line-height: 1.5;
+  }
+
+  .hero-content h1 {
+    color: white;
+    max-width: 16ch;
+    margin: 0 auto;
+    line-height: 1.12;
+  }
+
+  .hero-content {
+    width: min(980px, 100%);
   }
 
   .intro-section {
@@ -254,6 +297,11 @@ const meta = {
     gap: 1rem;
   }
 
+  .form-note {
+    margin-bottom: 1rem;
+    color: #d9e6d1;
+  }
+
   .contact-form-wrapper input,
   .contact-form-wrapper textarea {
     padding: 12px;
@@ -275,6 +323,35 @@ const meta = {
     margin-top: 1.5rem;
     font-style: italic;
     color: #d9e6d1;
+  }
+
+  .reviews-section {
+    padding: 4rem 0;
+    background: #f4f6f8;
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .review-card {
+    background: white;
+    border-radius: 18px;
+    padding: 1.5rem;
+    box-shadow: 0 14px 28px rgba(20, 36, 55, 0.08);
+  }
+
+  .review-text {
+    color: var(--brand-ink);
+    font-weight: 600;
+  }
+
+  .review-author {
+    margin-top: 1rem;
+    color: var(--brand-muted);
   }
 
   .cta-banner {
@@ -354,9 +431,27 @@ const meta = {
   }
 
   @media (max-width: 768px) {
-    .hero-content h1 {
-      font-size: 2.5rem;
+    .hero {
+      min-height: 720px;
+      padding: 6rem 1.25rem 5rem;
+      align-items: flex-start;
     }
+
+    .hero-logo {
+      width: min(620px, 92vw);
+      margin: 0 auto 2.25rem;
+    }
+
+    .hero-content h1 {
+      font-size: 2.2rem;
+      max-width: 12ch;
+    }
+
+    .hero-tagline {
+      font-size: 1.05rem;
+      margin-top: 1.15rem;
+    }
+
     .contact-grid {
       grid-template-columns: 1fr;
     }

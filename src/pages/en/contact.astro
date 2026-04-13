@@ -2,13 +2,20 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import { buildBreadcrumbSchema } from '../../lib/seo';
 
-const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID || 'f/YOUR_FORM_ID';
+const rawFormspreeId = import.meta.env.PUBLIC_FORMSPREE_ID || '';
+const isFormConfigured = Boolean(rawFormspreeId && rawFormspreeId.startsWith('f/'));
+const formAction = isFormConfigured ? `https://formspree.io/f/${rawFormspreeId}` : undefined;
 const squareBookingUrl = 'https://app.squareup.com/appointments/book/lgocu4o42jy5zu/LGZ9VNRVZ6XXM/start';
 const mapAddress = encodeURIComponent('11 rue de Granby, Unité 18, Gatineau, QC');
+const breadcrumbs = buildBreadcrumbSchema([
+  { name: 'Home', path: '/en/' },
+  { name: 'Contact' }
+]);
 ---
 
-<Layout title="Contact Clinique du VR | Estimate, Booking and Gatineau-Ottawa Workshop" description="Contact Clinique du VR in Gatineau-Ottawa for an estimate, appointment or RV inspection, maintenance and repair request.">
+<Layout title="Contact Clinique du VR | Estimate, Booking and Gatineau-Ottawa Workshop" description="Contact Clinique du VR in Gatineau-Ottawa for an estimate, appointment or RV inspection, maintenance and repair request." lang="en-CA" canonicalPath="/en/contact/" frPath="/contact/" enPath="/en/contact/" schemas={[breadcrumbs]}>
   <Header lang="en" />
 
   <main>
@@ -17,7 +24,11 @@ const mapAddress = encodeURIComponent('11 rue de Granby, Unité 18, Gatineau, QC
         <div class="contact-form-section">
           <h1>Contact Us</h1>
           <p class="intro-copy">You can contact us for an RV inspection, maintenance request, water leak issue, roof concern, detailing service or support before buying or selling. The more specific the message, the more useful the first reply will be.</p>
-          <form action={`https://formspree.io/${formspreeId}`} method="POST">
+          <!-- TODO: Replace with actual Formspree form ID -->
+          {!isFormConfigured && (
+            <p class="intro-copy">The form will be activated once the real Formspree ID is configured. Until then, please call us or use Square booking.</p>
+          )}
+          <form action={formAction} method="POST">
             <div class="form-group">
               <label for="name">Full Name *</label>
               <input type="text" id="name" name="name" required />
@@ -38,7 +49,7 @@ const mapAddress = encodeURIComponent('11 rue de Granby, Unité 18, Gatineau, QC
               <label for="message">Message *</label>
               <textarea id="message" name="message" rows="6" required></textarea>
             </div>
-            <button type="submit" class="btn">Send</button>
+            <button type="submit" class="btn" disabled={!isFormConfigured}>Send</button>
           </form>
         </div>
 

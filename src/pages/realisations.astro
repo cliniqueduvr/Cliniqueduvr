@@ -5,9 +5,14 @@ import Footer from '../components/Footer.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import CTABanner from '../components/CTABanner.astro';
 import projects from '../data/projects.json';
+import { buildBreadcrumbSchema } from '../lib/seo';
+const breadcrumbs = buildBreadcrumbSchema([
+  { name: 'Accueil', path: '/' },
+  { name: 'Realisations' }
+]);
 ---
 
-<Layout title="Realisations VR | Avant-Apres, Reparations et Remise a Niveau" description="Realisations et interventions sur VR a Gatineau-Ottawa. Avant-apres, reparation et remise a niveau.">
+<Layout title="Realisations VR | Avant-Apres, Reparations et Remise a Niveau" description="Realisations et interventions sur VR a Gatineau-Ottawa. Avant-apres, reparation et remise a niveau." canonicalPath="/realisations/" frPath="/realisations/" enPath="/en/realisations/" schemas={[breadcrumbs]}>
   <Header />
 
   <main>

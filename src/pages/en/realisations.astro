@@ -5,9 +5,14 @@ import Footer from '../../components/Footer.astro';
 import ProjectCard from '../../components/ProjectCard.astro';
 import CTABanner from '../../components/CTABanner.astro';
 import projects from '../../data/projects-en.json';
+import { buildBreadcrumbSchema } from '../../lib/seo';
+const breadcrumbs = buildBreadcrumbSchema([
+  { name: 'Home', path: '/en/' },
+  { name: 'Projects' }
+]);
 ---
 
-<Layout title="RV Projects | Before and After Repairs and Restoration" description="Recent RV projects in Gatineau-Ottawa including before and after repair work, restoration and refresh service.">
+<Layout title="RV Projects | Before and After Repairs and Restoration" description="Recent RV projects in Gatineau-Ottawa including before and after repair work, restoration and refresh service." lang="en-CA" canonicalPath="/en/realisations/" frPath="/realisations/" enPath="/en/realisations/" schemas={[breadcrumbs]}>
   <Header lang="en" />
 
   <main>

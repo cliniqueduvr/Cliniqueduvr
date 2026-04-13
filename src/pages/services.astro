@@ -4,15 +4,20 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CTABanner from '../components/CTABanner.astro';
 import { servicePages } from '../data/servicePages';
+import { buildBreadcrumbSchema } from '../lib/seo';
+const breadcrumbs = buildBreadcrumbSchema([
+  { name: 'Accueil', path: '/' },
+  { name: 'Services' }
+]);
 ---
 
-<Layout title="Services VR a Gatineau-Ottawa | Entretien, Reparation et Esthetique" description="Services de VR a Gatineau-Ottawa: inspection, entretien, reparation, esthetique et vente achat.">
+<Layout title="Services VR a Gatineau-Ottawa | Entretien, Reparation et Esthetique" description="Services de VR a Gatineau-Ottawa: inspection, entretien, reparation, esthetique et vente achat." canonicalPath="/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs]}>
   <Header />
 
   <main>
     <section class="page-header">
       <div class="container">
-        <p class="eyebrow">Une page par service</p>
+        <p class="eyebrow">Pour chaque besoin de votre VR</p>
         <h1>Nos Services</h1>
         <p>Inspection, entretien, reparation, esthetique et vente achat pour VR, roulottes et caravanes.</p>
       </div>
@@ -28,7 +33,7 @@ import { servicePages } from '../data/servicePages';
             <p class="card-eyebrow">{service.eyebrow}</p>
             <h2>{service.navLabel}</h2>
             <p>{service.lead}</p>
-            <span>Voir la page service</span>
+            <span>En savoir plus</span>
           </a>
         ))}
       </div>
@@ -37,12 +42,12 @@ import { servicePages } from '../data/servicePages';
     <section class="seo-copy">
       <div class="container seo-columns">
         <div>
-          <h2>Des pages de services plus claires</h2>
-          <p>Chaque service dispose maintenant de sa propre page afin de mieux couvrir les recherches locales liees au VR a Gatineau-Ottawa. Cette structure aide autant l'utilisateur qu'un moteur de recherche a comprendre la difference entre une inspection, un entretien, une reparation, un service esthetique ou un accompagnement avant achat et vente.</p>
+          <h2>Un service adapte a votre situation</h2>
+          <p>Que vous soyez en preparation avant la saison, en evaluation avant achat ou en pleine reparation, nous vous orientons vers le bon service selon l etat du vehicule et l urgence de la situation. L objectif est de vous faire gagner du temps et d eviter les mauvaises surprises.</p>
         </div>
         <div>
           <h2>Ce que nous couvrons</h2>
-          <p>Nos interventions touchent les infiltrations d'eau, la toiture, les joints, les composantes electriques et propane, la remise en etat interieure, la presentation du vehicule ainsi que les inspections avant transaction. Le but est de donner un cadre simple, sans surcharger les pages, tout en gardant une bonne base SEO.</p>
+          <p>Nos interventions touchent les infiltrations d eau, la toiture, les joints, les composantes electriques et propane, la remise en etat interieure, la presentation du vehicule ainsi que les inspections avant transaction. Si vous n etes pas certain du bon service, contactez-nous et nous vous guiderons.</p>
         </div>
       </div>
     </section>

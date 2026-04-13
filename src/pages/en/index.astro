@@ -2,9 +2,13 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import { buildLocalBusinessSchema } from '../../lib/seo';
 
-const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID || 'f/YOUR_FORM_ID';
+const rawFormspreeId = import.meta.env.PUBLIC_FORMSPREE_ID || '';
+const isFormConfigured = Boolean(rawFormspreeId && rawFormspreeId.startsWith('f/'));
+const formAction = isFormConfigured ? `https://formspree.io/f/${rawFormspreeId}` : undefined;
 const squareBookingUrl = 'https://app.squareup.com/appointments/book/lgocu4o42jy5zu/LGZ9VNRVZ6XXM/start';
+const schemas = [buildLocalBusinessSchema()];
 
 const meta = {
   title: 'Clinique du VR | RV inspection, maintenance and repair in Gatineau-Ottawa',
@@ -12,14 +16,15 @@ const meta = {
 };
 ---
 
-<Layout title={meta.title} description={meta.description}>
+<Layout title={meta.title} description={meta.description} lang="en-CA" canonicalPath="/en/" frPath="/" enPath="/en/" schemas={schemas}>
   <Header lang="en" />
 
   <main>
-    <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/clinique-du-vr-brand.jpg'); background-size: contain; background-repeat: no-repeat; background-color: var(--brand-navy);">
+    <section class="hero">
       <div class="hero-content">
-        <img class="hero-logo" src="/clinique-du-vr-brand.jpg" alt="Clinique du VR" />
-        <p class="hero-tagline">Maintenance - repair - detailing</p>
+        <img class="hero-logo" src="/clinique-du-vr-brand.jpg" alt="Clinique du VR logo — RV maintenance, repair and detailing" />
+        <h1>Clinique du VR — RV inspection, maintenance and repair in Gatineau-Ottawa</h1>
+        <p class="hero-tagline">Inspection • maintenance • repair • detailing</p>
       </div>
     </section>
 
@@ -50,7 +55,7 @@ const meta = {
           <a href="/en/services/inspection/" class="service-item"><i class="fas fa-clipboard-check"></i><span>Inspection</span></a>
           <a href="/en/services/maintenance/" class="service-item"><i class="fas fa-screwdriver-wrench"></i><span>Maintenance</span></a>
           <a href="/en/services/repair/" class="service-item"><i class="fas fa-toolbox"></i><span>Repair</span></a>
-          <a href="/en/services/detailing/" class="service-item"><i class="fas fa-sparkles"></i><span>Detailing</span></a>
+          <a href="/en/services/detailing/" class="service-item"><i class="fas fa-spray-can-sparkles"></i><span>Detailing</span></a>
           <a href="/en/services/buying-selling/" class="service-item"><i class="fas fa-van-shuttle"></i><span>Buying and Selling</span></a>
         </div>
       </div>
@@ -64,7 +69,7 @@ const meta = {
         </div>
         <div>
           <h2>A clearer service structure</h2>
-          <p>When an RV shows signs of wear, water intrusion or visible deterioration, the first step is to clarify the real condition of the vehicle. That is why the site now separates inspection, maintenance, repair, detailing and buying selling support into dedicated pages with stronger local search coverage.</p>
+          <p>When an RV shows signs of wear, water intrusion or visible deterioration, the first step is to understand the real condition of the vehicle. From there, we help guide you toward inspection, maintenance, repair, detailing or buying and selling support based on what is actually needed.</p>
         </div>
       </div>
     </section>
@@ -84,12 +89,16 @@ const meta = {
       <div class="container contact-grid">
         <div class="contact-form-wrapper">
           <h2>Contact Us</h2>
-          <form action={`https://formspree.io/${formspreeId}`} method="POST">
+          <!-- TODO: Replace with actual Formspree form ID -->
+          {!isFormConfigured && (
+            <p class="form-note">The contact form is not configured in production yet. Please use the phone number or Square booking link for now.</p>
+          )}
+          <form action={formAction} method="POST">
             <input type="text" name="name" placeholder="Your name" required />
             <input type="email" name="email" placeholder="Your email" required />
             <input type="text" name="subject" placeholder="Subject" required />
             <textarea name="message" placeholder="Your message" rows="5" required></textarea>
-            <button type="submit">Send</button>
+            <button type="submit" disabled={!isFormConfigured}>Send</button>
           </form>
         </div>
 
@@ -105,15 +114,37 @@ const meta = {
         </div>
       </div>
     </section>
+
+    <section class="reviews-section">
+      <div class="container">
+        <h2>Google Reviews</h2>
+        <div class="reviews-grid">
+          <article class="review-card">
+            <p class="review-text">"Cedric was on time, explained everything clearly and delivered the results the next day as promised."</p>
+            <p class="review-author">Jesse Brook</p>
+          </article>
+          <article class="review-card">
+            <p class="review-text">"Professional and courteous service."</p>
+            <p class="review-author">Stephane Desgagne</p>
+          </article>
+          <article class="review-card">
+            <p class="review-text">"Efficient company, easy to communicate with, and professional work from start to finish."</p>
+            <p class="review-author">Philippe Albert</p>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
 
   <Footer lang="en" />
 </Layout>
 
 <style>
-  .hero { height: 500px; display: flex; align-items: center; justify-content: center; text-align: center; color: white; }
-  .hero-logo { width: min(760px, 92vw); height: auto; display: block; margin: 0 auto 1.5rem; filter: drop-shadow(0 18px 35px rgba(0, 0, 0, 0.25)); }
-  .hero-tagline { font-size: 1.5rem; letter-spacing: 2px; }
+  .hero { min-height: 640px; display: flex; align-items: center; justify-content: center; text-align: center; color: white; background: radial-gradient(circle at top left, rgba(242, 210, 27, 0.16), transparent 28%), linear-gradient(135deg, var(--brand-navy-dark) 0%, #1f476d 62%, #214f33 100%); padding: 5.5rem 1.5rem 4.5rem; }
+  .hero-logo { width: min(760px, 88vw); height: auto; display: block; margin: 0 auto 2rem; filter: drop-shadow(0 18px 35px rgba(0, 0, 0, 0.25)); }
+  .hero-content { width: min(980px, 100%); }
+  .hero-content h1 { color: white; max-width: 16ch; margin: 0 auto; line-height: 1.12; }
+  .hero-tagline { font-size: 1.2rem; letter-spacing: 2px; margin-top: 1rem; line-height: 1.5; }
   .intro-section { padding: 4rem 0; background: white; }
   .intro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; }
   .intro-card { text-align: center; }
@@ -130,10 +161,16 @@ const meta = {
   .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
   .contact-form-wrapper h2 { color: white; margin-bottom: 1.5rem; }
   .contact-form-wrapper form { display: flex; flex-direction: column; gap: 1rem; }
+  .form-note { margin-bottom: 1rem; color: #d9e6d1; }
   .contact-form-wrapper input, .contact-form-wrapper textarea { padding: 12px; border: none; border-radius: 4px; font-family: inherit; }
   .contact-info h3 { color: var(--brand-gold); margin-bottom: 1rem; }
   .contact-info p { margin-bottom: 0.75rem; }
   .cta-text { margin-top: 1.5rem; font-style: italic; color: #d9e6d1; }
+  .reviews-section { padding: 4rem 0; background: #f4f6f8; }
+  .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+  .review-card { background: white; border-radius: 18px; padding: 1.5rem; box-shadow: 0 14px 28px rgba(20, 36, 55, 0.08); }
+  .review-text { color: var(--brand-ink); font-weight: 600; }
+  .review-author { margin-top: 1rem; color: var(--brand-muted); }
   .cta-banner { background: var(--brand-green); padding: 3rem 1.5rem; text-align: center; color: white; }
   .cta-content { max-width: 720px; margin: 0 auto; }
   .cta-content h2 { font-size: 2rem; margin-bottom: 0.5rem; color: white; }
@@ -144,5 +181,11 @@ const meta = {
   .square-button { display: inline-block; background: transparent; color: white; padding: 12px 28px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 1.05rem; transition: all 0.3s ease; border: 2px solid rgba(255, 255, 255, 0.75); }
   .square-button:hover { text-decoration: none; background: rgba(255,255,255,0.12); border-color: white; }
   .cta-button i, .square-button i { margin-right: 8px; }
-  @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 768px) {
+    .hero { min-height: 720px; padding: 6rem 1.25rem 5rem; align-items: flex-start; }
+    .hero-logo { width: min(620px, 92vw); margin: 0 auto 2.25rem; }
+    .hero-content h1 { font-size: 2.2rem; max-width: 12ch; }
+    .hero-tagline { font-size: 1.05rem; margin-top: 1.15rem; }
+    .contact-grid { grid-template-columns: 1fr; }
+  }
 </style>

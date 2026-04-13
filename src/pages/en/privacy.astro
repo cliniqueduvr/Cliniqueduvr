@@ -2,9 +2,14 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import { buildBreadcrumbSchema } from '../../lib/seo';
+const breadcrumbs = buildBreadcrumbSchema([
+  { name: 'Home', path: '/en/' },
+  { name: 'Privacy Policy' }
+]);
 ---
 
-<Layout title="Privacy Policy | Clinique du VR" description="Clinique du VR privacy policy for contact requests, appointments and customer communications.">
+<Layout title="Privacy Policy | Clinique du VR" description="Clinique du VR privacy policy for contact requests, appointments and customer communications." lang="en-CA" canonicalPath="/en/privacy/" frPath="/privacy/" enPath="/en/privacy/" schemas={[breadcrumbs]}>
   <Header lang="en" />
 
   <main>

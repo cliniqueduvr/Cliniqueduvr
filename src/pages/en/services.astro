@@ -4,15 +4,20 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import CTABanner from '../../components/CTABanner.astro';
 import { servicePagesEn } from '../../data/servicePagesEn';
+import { buildBreadcrumbSchema } from '../../lib/seo';
+const breadcrumbs = buildBreadcrumbSchema([
+  { name: 'Home', path: '/en/' },
+  { name: 'Services' }
+]);
 ---
 
-<Layout title="RV Services in Gatineau-Ottawa | Maintenance, Repair and Detailing" description="RV services in Gatineau-Ottawa: inspection, maintenance, repair, detailing, and buying selling support.">
+<Layout title="RV Services in Gatineau-Ottawa | Maintenance, Repair and Detailing" description="RV services in Gatineau-Ottawa: inspection, maintenance, repair, detailing, and buying selling support." lang="en-CA" canonicalPath="/en/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs]}>
   <Header lang="en" />
 
   <main>
     <section class="page-header">
       <div class="container">
-        <p class="eyebrow">One page per service</p>
+        <p class="eyebrow">For every RV situation</p>
         <h1>Our Services</h1>
         <p>Inspection, maintenance, repair, detailing and buying selling support for RVs, trailers and caravans.</p>
       </div>
@@ -28,7 +33,7 @@ import { servicePagesEn } from '../../data/servicePagesEn';
             <p class="card-eyebrow">{service.eyebrow}</p>
             <h2>{service.navLabel}</h2>
             <p>{service.lead}</p>
-            <span>View service page</span>
+            <span>Learn more</span>
           </a>
         ))}
       </div>
@@ -37,12 +42,12 @@ import { servicePagesEn } from '../../data/servicePagesEn';
     <section class="seo-copy">
       <div class="container seo-columns">
         <div>
-          <h2>Clearer service pages for stronger search intent</h2>
-          <p>Each service now has its own page so the site can better match local RV searches tied to Gatineau-Ottawa. This structure helps both visitors and search engines understand the difference between inspection, maintenance, repair, detailing and buying or selling support.</p>
+          <h2>The right service for the condition of your RV</h2>
+          <p>Whether you are getting ready for the season, reviewing a vehicle before purchase or dealing with an active repair issue, we can point you toward the right service based on the actual condition of the RV and the urgency of the situation.</p>
         </div>
         <div>
           <h2>What the workshop covers</h2>
-          <p>Common requests include water leaks, roof issues, seals, propane and electrical systems, interior restoration, pre-sale presentation and pre-purchase inspections. The goal is to keep the pages simple while still improving keyword depth and local relevance.</p>
+          <p>Common requests include water leaks, roof issues, seals, propane and electrical systems, interior restoration, pre-sale presentation and pre-purchase inspections. If you are unsure which service fits best, contact us and we will guide you.</p>
         </div>
       </div>
     </section>

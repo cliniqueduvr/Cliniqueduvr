@@ -2,22 +2,61 @@
 interface Props {
   title: string;
   description: string;
+  lang?: 'fr-CA' | 'en-CA';
+  canonicalPath?: string;
+  frPath?: string;
+  enPath?: string;
+  schemas?: object[];
+  ogType?: 'website' | 'article';
 }
 
-const { title, description } = Astro.props;
+import { absoluteUrl, BRAND_IMAGE } from '../lib/seo';
+
+const {
+  title,
+  description,
+  lang = 'fr-CA',
+  canonicalPath = Astro.url.pathname,
+  frPath,
+  enPath,
+  schemas = [],
+  ogType = 'website'
+} = Astro.props as Props;
+
+const canonicalUrl = absoluteUrl(canonicalPath);
+const ogLocale = lang === 'fr-CA' ? 'fr_CA' : 'en_CA';
+const alternateFr = frPath ? absoluteUrl(frPath) : undefined;
+const alternateEn = enPath ? absoluteUrl(enPath) : undefined;
 ---
 
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <title>{title}</title>
+    <link rel="canonical" href={canonicalUrl} />
+    {alternateFr && <link rel="alternate" hreflang="fr-CA" href={alternateFr} />}
+    {alternateEn && <link rel="alternate" hreflang="en-CA" href={alternateEn} />}
+    {alternateFr && <link rel="alternate" hreflang="x-default" href={alternateFr} />}
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={BRAND_IMAGE} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:locale" content={ogLocale} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={BRAND_IMAGE} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    {schemas.map((schema) => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))}
     <style is:global>
       :root {
         --brand-navy: #1f3a5f;

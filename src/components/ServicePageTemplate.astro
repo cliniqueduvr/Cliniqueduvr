@@ -21,7 +21,8 @@ const serviceHref = (slug: string) => isEnglish ? `/en/services/${slug}/` : `/se
     <div class="container hero-grid">
       <div class="hero-copy">
         <p class="eyebrow">{service.eyebrow}</p>
-        <h1>{service.title}</h1>
+        <h1>{service.h1}</h1>
+        <p class="opening">{service.opening}</p>
         <p class="lead">{service.lead}</p>
         <p class="intro">{service.intro}</p>
 
@@ -36,8 +37,8 @@ const serviceHref = (slug: string) => isEnglish ? `/en/services/${slug}/` : `/se
         <div class="hero-icon">
           <i class={service.icon}></i>
         </div>
-        <h2>{isEnglish ? 'Clear service frame' : 'Intervention claire'}</h2>
-        <p>{isEnglish ? 'A short, structured service page that is easy to scale for local SEO.' : 'Une page service courte, structurée et facile à décliner pour le référencement local.'}</p>
+        <h2>{isEnglish ? 'Need a practical starting point?' : 'Besoin d un point de depart clair?'}</h2>
+        <p>{isEnglish ? 'We can help you understand the situation, choose the right service and decide on the next useful step for your RV.' : 'On peut vous aider a comprendre la situation, choisir le bon service et decider de la prochaine etape utile pour votre VR.'}</p>
         <a class="hero-link" href={contactHref}>{isEnglish ? 'Talk to us about your RV' : 'Parler de votre VR'}</a>
       </aside>
     </div>
@@ -48,6 +49,7 @@ const serviceHref = (slug: string) => isEnglish ? `/en/services/${slug}/` : `/se
       <article class="service-main">
         <section class="content-card">
           <h2>{service.includedTitle}</h2>
+          <p class="section-copy">{service.detailIntro}</p>
           <ul>
             {service.included.map((item) => (
               <li>{item}</li>
@@ -66,11 +68,37 @@ const serviceHref = (slug: string) => isEnglish ? `/en/services/${slug}/` : `/se
 
         <section class="content-card">
           <h2>{isEnglish ? 'How we work' : 'Notre façon de travailler'}</h2>
+          <p class="section-copy">{service.processIntro}</p>
           <ol>
             {service.process.map((item) => (
               <li>{item}</li>
             ))}
           </ol>
+        </section>
+
+        <section class="content-card alt">
+          <h2>{service.whyChooseTitle}</h2>
+          <p class="section-copy">{service.whyChooseIntro}</p>
+          <div class="why-choose-grid">
+            {service.whyChoose.map((item) => (
+              <article class="why-card">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="content-card faq-section">
+          <h2>{service.faqTitle}</h2>
+          <div class="faq-list">
+            {service.faqs.map((item) => (
+              <article class="faq-item">
+                <h3>{item.question}</h3>
+                <p>{item.answer}</p>
+              </article>
+            ))}
+          </div>
         </section>
       </article>
 
@@ -153,6 +181,13 @@ const serviceHref = (slug: string) => isEnglish ? `/en/services/${slug}/` : `/se
     max-width: 60ch;
   }
 
+  .opening {
+    max-width: 64ch;
+    font-size: 1.08rem;
+    color: #dbe4ee;
+    margin-bottom: 1rem;
+  }
+
   .intro {
     margin-top: 1rem;
     max-width: 62ch;
@@ -172,10 +207,11 @@ const serviceHref = (slug: string) => isEnglish ? `/en/services/${slug}/` : `/se
     min-height: 44px;
     padding: 0.75rem 1rem;
     border-radius: 14px;
-    background: rgba(255, 255, 255, 0.09);
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    color: white;
+    background: var(--brand-gold);
+    border: 1px solid var(--brand-gold);
+    color: var(--brand-navy-dark);
     font-weight: 700;
+    box-shadow: 0 10px 18px rgba(14, 31, 49, 0.14);
   }
 
   .hero-card {
@@ -272,9 +308,52 @@ const serviceHref = (slug: string) => isEnglish ? `/en/services/${slug}/` : `/se
     color: var(--brand-ink);
   }
 
+  .section-copy {
+    margin-bottom: 1rem;
+    color: var(--brand-muted);
+  }
+
   .content-card li::marker {
     color: var(--brand-green);
     font-weight: 700;
+  }
+
+  .why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+
+  .why-card {
+    background: var(--brand-surface);
+    border-radius: 16px;
+    padding: 1rem;
+  }
+
+  .why-card h3,
+  .faq-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .why-card p,
+  .faq-item p {
+    color: var(--brand-muted);
+  }
+
+  .faq-list {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .faq-item {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(31, 58, 95, 0.08);
+  }
+
+  .faq-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
   }
 
   .sticky {

@@ -11,14 +11,14 @@ const navItems = isEnglish
       { label: 'Home', href: '/en/' },
       { label: 'Services', href: '/en/services/' },
       { label: 'Projects', href: '/en/realisations/' },
-      { label: 'About', href: '/en/#about' },
+      { label: 'About', href: '/en/about/' },
       { label: 'Contact', href: '/en/contact/' }
     ]
   : [
       { label: 'Accueil', href: '/' },
       { label: 'Services', href: '/services/' },
       { label: 'Réalisations', href: '/realisations/' },
-      { label: 'À Propos', href: '/#about' },
+      { label: 'À Propos', href: '/about/' },
       { label: 'Contact', href: '/contact/' }
     ];
 ---
@@ -47,7 +47,7 @@ const navItems = isEnglish
   <nav class="navbar">
     <div class="container navbar-inner">
       <a href="/" class="logo">
-        <img src="/clinique-du-vr-brand.jpg" alt="Clinique du VR" />
+        <img src="/clinique-du-vr-brand.jpg" alt={isEnglish ? 'Clinique du VR — RV service in Gatineau-Ottawa' : 'Clinique du VR — Service de VR a Gatineau-Ottawa'} />
       </a>
       <ul class="nav-menu">
         {navItems.map(item => (
