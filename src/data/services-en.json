@@ -1,4 +1,5 @@
-[
+{
+  "items": [
   {
     "id": 1,
     "title": "RV Maintenance",
@@ -41,4 +42,5 @@
     "description": "Flexible service for RV owners",
     "details": "Custom interventions for motorhomes, trailers, and caravans with practical service adapted to your actual needs."
   }
-]
+  ]
+}

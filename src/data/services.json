@@ -1,4 +1,5 @@
-[
+{
+  "items": [
   {
     "id": 1,
     "title": "Inspection Complete VR",
@@ -41,4 +42,5 @@
     "description": "Entretien, correction et restauration",
     "details": "Service global pour VR, roulottes et caravanes. Diagnostic, entretien preventif, reparations ciblees et restauration complete avec une communication claire a chaque etape."
   }
-]
+  ]
+}

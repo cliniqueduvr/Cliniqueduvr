@@ -27,6 +27,7 @@ const canonicalUrl = absoluteUrl(canonicalPath);
 const ogLocale = lang === 'fr-CA' ? 'fr_CA' : 'en_CA';
 const alternateFr = frPath ? absoluteUrl(frPath) : undefined;
 const alternateEn = enPath ? absoluteUrl(enPath) : undefined;
+const isEnglish = lang === 'en-CA';
 ---
 
 <!DOCTYPE html>
@@ -82,6 +83,10 @@ const alternateEn = enPath ? absoluteUrl(enPath) : undefined;
         background: white;
       }
 
+      .mobile-action-bar {
+        display: none;
+      }
+
       h1, h2, h3 {
         font-family: 'Oswald', sans-serif;
         font-weight: 700;
@@ -133,9 +138,66 @@ const alternateEn = enPath ? absoluteUrl(enPath) : undefined;
         background: var(--brand-navy-dark);
         text-decoration: none;
       }
+
+      @media (max-width: 768px) {
+        body {
+          padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+        }
+
+        .mobile-action-bar {
+          position: fixed;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 120;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          background: rgba(255, 255, 255, 0.96);
+          backdrop-filter: blur(10px);
+          box-shadow: 0 -12px 30px rgba(18, 39, 61, 0.18);
+          padding-bottom: env(safe-area-inset-bottom, 0px);
+        }
+
+        .mobile-action {
+          min-height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-size: 1.2rem;
+        }
+
+        .mobile-action:hover {
+          text-decoration: none;
+        }
+
+        .mobile-action-email {
+          background: #cb5a46;
+        }
+
+        .mobile-action-phone {
+          background: #5fcf83;
+        }
+      }
     </style>
   </head>
   <body>
     <slot />
+    <div class="mobile-action-bar" aria-label={isEnglish ? 'Quick contact actions' : 'Actions de contact rapide'}>
+      <a
+        class="mobile-action mobile-action-email"
+        href="mailto:info@demosolution.ca"
+        aria-label={isEnglish ? 'Send an email' : 'Envoyer un courriel'}
+      >
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+      </a>
+      <a
+        class="mobile-action mobile-action-phone"
+        href="tel:+15813373366"
+        aria-label={isEnglish ? 'Call now' : 'Appeler maintenant'}
+      >
+        <i class="fas fa-phone" aria-hidden="true"></i>
+      </a>
+    </div>
   </body>
 </html>

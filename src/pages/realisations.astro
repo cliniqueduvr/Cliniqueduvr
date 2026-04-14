@@ -4,7 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import CTABanner from '../components/CTABanner.astro';
-import projects from '../data/projects.json';
+import projectsData from '../data/projects.json';
 import { buildBreadcrumbSchema } from '../lib/seo';
 const breadcrumbs = buildBreadcrumbSchema([
   { name: 'Accueil', path: '/' },
@@ -30,7 +30,7 @@ const breadcrumbs = buildBreadcrumbSchema([
           <p>Ces realisations montrent des exemples de travaux effectues sur des VR, roulottes et caravanes: infiltration d'eau, remise en etat, correction visuelle et amelioration de l'etat general. Cette section renforce la preuve de travail tout en couvrant les recherches liees aux reparations VR a Gatineau-Ottawa.</p>
         </div>
         <div class="projects-grid">
-          {projects.map((project) => (
+          {projectsData.items.map((project) => (
             <ProjectCard
               id={project.id}
               title={project.title}

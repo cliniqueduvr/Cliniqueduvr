@@ -1,68 +1,70 @@
-[
-  {
-    "id": 1,
-    "title": "Exterior Refresh Project",
-    "location": "Gatineau",
-    "category": "Aesthetics",
-    "beforeImage": "/images/project-1-before.jpg",
-    "afterImage": "/images/project-1-after.jpg",
-    "beforeAlt": "Before service on an RV exterior",
-    "afterAlt": "After service with improved finish and presentation",
-    "description": "Exterior cleanup and finish improvement completed to restore a cleaner, more polished overall appearance."
-  },
-  {
-    "id": 2,
-    "title": "Interior Condition Recovery",
-    "location": "Ottawa",
-    "category": "Repair",
-    "beforeImage": "/images/project-2-before.jpg",
-    "afterImage": "/images/project-2-after.jpg",
-    "beforeAlt": "Before service showing condition issues inside the unit",
-    "afterAlt": "After service with improved interior condition",
-    "description": "Targeted work carried out to restore interior usability and improve the presentation of the space."
-  },
-  {
-    "id": 3,
-    "title": "Inspection and Assessment",
-    "location": "Ottawa",
-    "category": "Inspection",
-    "beforeImage": "/images/project-3-before.jpg",
-    "afterImage": "/images/project-3-after.jpg",
-    "beforeAlt": "Before assessment of an RV requiring inspection",
-    "afterAlt": "After inspection with documented findings and next steps",
-    "description": "Full inspection process with clear findings, practical recommendations, and a documented service direction."
-  },
-  {
-    "id": 4,
-    "title": "Workshop Service Intervention",
-    "location": "Gatineau",
-    "category": "Workshop",
-    "beforeImage": "/images/project-4-before.jpg",
-    "afterImage": "/images/project-4-after.jpg",
-    "beforeAlt": "Before workshop service on a unit",
-    "afterAlt": "After workshop intervention and preparation",
-    "description": "Structured workshop intervention completed with practical repairs and improved readiness for use."
-  },
-  {
-    "id": 5,
-    "title": "Post-Service Finish Upgrade",
-    "location": "Gatineau",
-    "category": "Finish",
-    "beforeImage": "/images/project-5-before.jpg",
-    "afterImage": "/images/project-5-after.jpg",
-    "beforeAlt": "Before finishing and detailing work",
-    "afterAlt": "After finishing work with a cleaner visual result",
-    "description": "Final appearance work and detailing completed to deliver a sharper, cleaner finished result."
-  },
-  {
-    "id": 6,
-    "title": "Pre-Purchase RV Review",
-    "location": "Ottawa",
-    "category": "Review",
-    "beforeImage": "/images/project-6-before.jpg",
-    "afterImage": "/images/project-6-after.jpg",
-    "beforeAlt": "Before a pre-purchase RV review",
-    "afterAlt": "After review with a clear service summary",
-    "description": "Pre-purchase review carried out to help the owner understand condition, issues, and service priorities."
-  }
-]
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "Exterior Refresh Project",
+      "location": "Gatineau",
+      "category": "Aesthetics",
+      "beforeImage": "/images/project-1-before.jpg",
+      "afterImage": "/images/project-1-after.jpg",
+      "beforeAlt": "Before service on an RV exterior",
+      "afterAlt": "After service with improved finish and presentation",
+      "description": "Exterior cleanup and finish improvement completed to restore a cleaner, more polished overall appearance."
+    },
+    {
+      "id": 2,
+      "title": "Interior Condition Recovery",
+      "location": "Ottawa",
+      "category": "Repair",
+      "beforeImage": "/images/project-2-before.jpg",
+      "afterImage": "/images/project-2-after.jpg",
+      "beforeAlt": "Before service showing condition issues inside the unit",
+      "afterAlt": "After service with improved interior condition",
+      "description": "Targeted work carried out to restore interior usability and improve the presentation of the space."
+    },
+    {
+      "id": 3,
+      "title": "Inspection and Assessment",
+      "location": "Ottawa",
+      "category": "Inspection",
+      "beforeImage": "/images/project-3-before.jpg",
+      "afterImage": "/images/project-3-after.jpg",
+      "beforeAlt": "Before assessment of an RV requiring inspection",
+      "afterAlt": "After inspection with documented findings and next steps",
+      "description": "Full inspection process with clear findings, practical recommendations, and a documented service direction."
+    },
+    {
+      "id": 4,
+      "title": "Workshop Service Intervention",
+      "location": "Gatineau",
+      "category": "Workshop",
+      "beforeImage": "/images/project-4-before.jpg",
+      "afterImage": "/images/project-4-after.jpg",
+      "beforeAlt": "Before workshop service on a unit",
+      "afterAlt": "After workshop intervention and preparation",
+      "description": "Structured workshop intervention completed with practical repairs and improved readiness for use."
+    },
+    {
+      "id": 5,
+      "title": "Post-Service Finish Upgrade",
+      "location": "Gatineau",
+      "category": "Finish",
+      "beforeImage": "/images/project-5-before.jpg",
+      "afterImage": "/images/project-5-after.jpg",
+      "beforeAlt": "Before finishing and detailing work",
+      "afterAlt": "After finishing work with a cleaner visual result",
+      "description": "Final appearance work and detailing completed to deliver a sharper, cleaner finished result."
+    },
+    {
+      "id": 6,
+      "title": "Pre-Purchase RV Review",
+      "location": "Ottawa",
+      "category": "Review",
+      "beforeImage": "/images/project-6-before.jpg",
+      "afterImage": "/images/project-6-after.jpg",
+      "beforeAlt": "Before a pre-purchase RV review",
+      "afterAlt": "After review with a clear service summary",
+      "description": "Pre-purchase review carried out to help the owner understand condition, issues, and service priorities."
+    }
+  ]
+}
