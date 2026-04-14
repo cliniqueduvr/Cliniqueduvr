@@ -1,5 +1,6 @@
 ---
 import siteSettings from '../data/site-settings.json';
+import CookieConsent from '../components/CookieConsent.astro';
 
 interface Props {
   title: string;
@@ -30,6 +31,8 @@ const ogLocale = lang === 'fr-CA' ? 'fr_CA' : 'en_CA';
 const alternateFr = frPath ? absoluteUrl(frPath) : undefined;
 const alternateEn = enPath ? absoluteUrl(enPath) : undefined;
 const isEnglish = lang === 'en-CA';
+const googleAdsId = siteSettings.googleAdsId?.trim() || '';
+const hasGoogleAds = googleAdsId.length > 0;
 ---
 
 <!DOCTYPE html>
@@ -53,6 +56,40 @@ const isEnglish = lang === 'en-CA';
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={BRAND_IMAGE} />
+    {hasGoogleAds && (
+      <script is:inline define:vars={{ googleAdsId }}>
+        (() => {
+          const storageKey = 'cliniqueduvr-cookie-consent';
+          const scriptId = 'google-ads-gtag';
+
+          function loadGoogleAds() {
+            if (!googleAdsId || document.getElementById(scriptId)) return;
+
+            const externalScript = document.createElement('script');
+            externalScript.id = scriptId;
+            externalScript.async = true;
+            externalScript.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(googleAdsId)}`;
+            document.head.appendChild(externalScript);
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = window.gtag || gtag;
+            gtag('js', new Date());
+            gtag('config', googleAdsId);
+          }
+
+          try {
+            if (window.localStorage.getItem(storageKey) === 'accepted') {
+              loadGoogleAds();
+            } else {
+              window.addEventListener('cliniqueduvr:cookie-consent-accepted', loadGoogleAds, { once: true });
+            }
+          } catch {
+            window.addEventListener('cliniqueduvr:cookie-consent-accepted', loadGoogleAds, { once: true });
+          }
+        })();
+      </script>
+    )}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet" />
@@ -185,6 +222,7 @@ const isEnglish = lang === 'en-CA';
   </head>
   <body>
     <slot />
+    <CookieConsent lang={isEnglish ? 'en' : 'fr'} hasGoogleAds={hasGoogleAds} />
     <div class="mobile-action-bar" aria-label={isEnglish ? 'Quick contact actions' : 'Actions de contact rapide'}>
       <a
         class="mobile-action mobile-action-email"
