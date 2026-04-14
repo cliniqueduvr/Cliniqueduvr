@@ -58,7 +58,7 @@ export function buildLocalBusinessSchema({
     '@type': 'AutoRepair',
     '@id': `${SITE_URL}/#clinique-du-vr`,
     name: 'Clinique du VR',
-    description: 'Entretien, reparation et esthetique de VR a Gatineau-Ottawa',
+    description: 'Entretien, réparation et esthétique de VR à Gatineau-Ottawa',
     telephone,
     email,
     url: SITE_URL,
@@ -101,8 +101,8 @@ export function buildLocalBusinessSchema({
       itemListElement: [
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Inspection de VR' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Entretien de VR' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Reparation de VR' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Esthetique de VR' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Réparation de VR' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Esthétique de VR' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Vente et achat de VR' } }
       ]
     }

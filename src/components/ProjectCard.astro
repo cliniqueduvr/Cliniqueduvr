@@ -9,20 +9,22 @@ export interface Props {
   beforeAlt: string;
   afterAlt: string;
   description: string;
+  lang?: 'fr' | 'en';
 }
 
-const { id, title, location, category, beforeImage, afterImage, beforeAlt, afterAlt, description } = Astro.props as Props;
+const { id, title, location, category, beforeImage, afterImage, beforeAlt, afterAlt, description, lang = 'fr' } = Astro.props as Props;
+const isEnglish = lang === 'en';
 ---
 
 <article class="project-card">
   <div class="project-images">
     <figure class="before-image">
       <img src={beforeImage} alt={beforeAlt} loading="lazy" />
-      <figcaption>Avant</figcaption>
+      <figcaption>{isEnglish ? 'Before' : 'Avant'}</figcaption>
     </figure>
     <figure class="after-image">
       <img src={afterImage} alt={afterAlt} loading="lazy" />
-      <figcaption>Après</figcaption>
+      <figcaption>{isEnglish ? 'After' : 'Après'}</figcaption>
     </figure>
   </div>
 

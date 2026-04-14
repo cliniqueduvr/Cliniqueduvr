@@ -8,26 +8,26 @@ import projectsData from '../data/projects.json';
 import { buildBreadcrumbSchema } from '../lib/seo';
 const breadcrumbs = buildBreadcrumbSchema([
   { name: 'Accueil', path: '/' },
-  { name: 'Realisations' }
+  { name: 'Réalisations' }
 ]);
 ---
 
-<Layout title="Realisations VR | Avant-Apres, Reparations et Remise a Niveau" description="Realisations et interventions sur VR a Gatineau-Ottawa. Avant-apres, reparation et remise a niveau." canonicalPath="/realisations/" frPath="/realisations/" enPath="/en/realisations/" schemas={[breadcrumbs]}>
+<Layout title="Réalisations VR | Avant-après, réparations et remise à niveau" description="Réalisations et interventions sur VR à Gatineau-Ottawa. Avant-après, réparation et remise à niveau." canonicalPath="/realisations/" frPath="/realisations/" enPath="/en/realisations/" schemas={[breadcrumbs]}>
   <Header />
 
   <main>
     <section class="page-header">
       <div class="container">
         <h1>Nos Réalisations</h1>
-        <p>Exemples d'interventions completes sur VR a Gatineau, Ottawa et les environs</p>
+        <p>Exemples d'interventions complètes sur VR à Gatineau, Ottawa et les environs</p>
       </div>
     </section>
 
     <section class="realisations-section">
       <div class="container">
         <div class="section-intro">
-          <h2>Avant-apres et interventions reelles</h2>
-          <p>Ces realisations montrent des exemples de travaux effectues sur des VR, roulottes et caravanes: infiltration d'eau, remise en etat, correction visuelle et amelioration de l'etat general. Cette section renforce la preuve de travail tout en couvrant les recherches liees aux reparations VR a Gatineau-Ottawa.</p>
+          <h2>Avant-après et interventions réelles</h2>
+          <p>Ces réalisations montrent des exemples de travaux effectués sur des VR, roulottes et caravanes: infiltration d'eau, remise en état, correction visuelle et amélioration de l'état général. Cette section renforce la preuve de travail tout en couvrant les recherches liées aux réparations VR à Gatineau-Ottawa.</p>
         </div>
         <div class="projects-grid">
           {projectsData.items.map((project) => (
@@ -51,18 +51,18 @@ const breadcrumbs = buildBreadcrumbSchema([
       <div class="container seo-columns">
         <div>
           <h2>Pourquoi ces projets comptent</h2>
-          <p>Un avant-apres aide a comprendre le type de probleme traite, la nature des dommages observes et le niveau de remise en etat possible selon le vehicule. C'est aussi une bonne facon de montrer la difference entre entretien, reparation et restauration plus complete.</p>
+          <p>Un avant-après aide à comprendre le type de problème traité, la nature des dommages observés et le niveau de remise en état possible selon le véhicule. C'est aussi une bonne façon de montrer la différence entre entretien, réparation et restauration plus complète.</p>
         </div>
         <div>
-          <h2>Travaux frequents en atelier</h2>
-          <p>Parmi les demandes les plus courantes, on retrouve les fuites d'eau, les joints fatigues, la toiture, les dommages interieurs, la presentation avant vente et la remise a niveau apres infiltration. Si votre situation ressemble a l'un de ces cas, nous pouvons vous orienter vers le bon service.</p>
+          <h2>Travaux fréquents en atelier</h2>
+          <p>Parmi les demandes les plus courantes, on retrouve les fuites d'eau, les joints fatigués, la toiture, les dommages intérieurs, la présentation avant vente et la remise à niveau après infiltration. Si votre situation ressemble à l'un de ces cas, nous pouvons vous orienter vers le bon service.</p>
         </div>
       </div>
     </section>
 
     <CTABanner
-      heading="Nous Pouvons Aider Votre VR Aussi"
-      subheading="Chaque intervention est differente. Contactez-nous pour une soumission gratuite."
+      heading="Nous pouvons aider votre VR aussi"
+      subheading="Chaque intervention est différente. Contactez-nous pour une soumission gratuite."
       phoneNumber="(581) 337-3366"
     />
   </main>

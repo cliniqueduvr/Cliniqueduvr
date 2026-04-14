@@ -25,7 +25,7 @@
       { "href": "/en/services/maintenance/", "icon": "fas fa-screwdriver-wrench", "label": "Maintenance" },
       { "href": "/en/services/repair/", "icon": "fas fa-toolbox", "label": "Repair" },
       { "href": "/en/services/detailing/", "icon": "fas fa-spray-can-sparkles", "label": "Detailing" },
-      { "href": "/en/services/buying-selling/", "icon": "fas fa-van-shuttle", "label": "Buying and Selling" }
+      { "href": "/en/sales/", "icon": "", "label": "Sales" }
     ]
   },
   "seoSections": [

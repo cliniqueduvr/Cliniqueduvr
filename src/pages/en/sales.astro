@@ -1,0 +1,27 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import SalesPageTemplate from '../../components/SalesPageTemplate.astro';
+import salesPage from '../../data/sales-page-en.json';
+import { buildBreadcrumbSchema } from '../../lib/seo';
+
+const breadcrumbs = buildBreadcrumbSchema([
+  { name: salesPage.breadcrumbs.home, path: '/en/' },
+  { name: salesPage.breadcrumbs.current }
+]);
+---
+
+<Layout
+  title={salesPage.metaTitle}
+  description={salesPage.metaDescription}
+  lang="en-CA"
+  canonicalPath="/en/sales/"
+  frPath="/vente/"
+  enPath="/en/sales/"
+  schemas={[breadcrumbs]}
+>
+  <Header lang="en" />
+  <SalesPageTemplate data={salesPage} lang="en" />
+  <Footer lang="en" />
+</Layout>

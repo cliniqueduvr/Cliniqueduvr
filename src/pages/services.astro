@@ -7,13 +7,14 @@ import servicePagesData from '../data/service-pages.json';
 import type { ServicePage } from '../data/service-page-types';
 import { buildBreadcrumbSchema } from '../lib/seo';
 const servicePages = servicePagesData.items as ServicePage[];
+const visibleServicePages = servicePages.filter((service) => service.slug !== 'vente-achat');
 const breadcrumbs = buildBreadcrumbSchema([
   { name: 'Accueil', path: '/' },
   { name: 'Services' }
 ]);
 ---
 
-<Layout title="Services VR a Gatineau-Ottawa | Entretien, Reparation et Esthetique" description="Services de VR a Gatineau-Ottawa: inspection, entretien, reparation, esthetique et vente achat." canonicalPath="/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs]}>
+<Layout title="Services VR à Gatineau-Ottawa | Entretien, réparation et esthétique" description="Services de VR à Gatineau-Ottawa: inspection, entretien, réparation, esthétique et vente." canonicalPath="/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs]}>
   <Header />
 
   <main>
@@ -21,17 +22,14 @@ const breadcrumbs = buildBreadcrumbSchema([
       <div class="container">
         <p class="eyebrow">Pour chaque besoin de votre VR</p>
         <h1>Nos Services</h1>
-        <p>Inspection, entretien, reparation, esthetique et vente achat pour VR, roulottes et caravanes.</p>
+        <p>Inspection, entretien, réparation et esthétique pour VR, roulottes et caravanes.</p>
       </div>
     </section>
 
     <section class="services-grid-section">
       <div class="container services-grid">
-        {servicePages.map((service) => (
+        {visibleServicePages.map((service) => (
           <a class="service-card" href={`/services/${service.slug}/`}>
-            <div class="icon-wrap">
-              <i class={service.icon}></i>
-            </div>
             <p class="card-eyebrow">{service.eyebrow}</p>
             <h2>{service.navLabel}</h2>
             <p>{service.lead}</p>
@@ -44,12 +42,12 @@ const breadcrumbs = buildBreadcrumbSchema([
     <section class="seo-copy">
       <div class="container seo-columns">
         <div>
-          <h2>Un service adapte a votre situation</h2>
-          <p>Que vous soyez en preparation avant la saison, en evaluation avant achat ou en pleine reparation, nous vous orientons vers le bon service selon l etat du vehicule et l urgence de la situation. L objectif est de vous faire gagner du temps et d eviter les mauvaises surprises.</p>
+          <h2>Un service adapté à votre situation</h2>
+          <p>Que vous soyez en préparation avant la saison, en évaluation avant achat ou en pleine réparation, nous vous orientons vers le bon service selon l'état du véhicule et l'urgence de la situation. L'objectif est de vous faire gagner du temps et d'éviter les mauvaises surprises.</p>
         </div>
         <div>
           <h2>Ce que nous couvrons</h2>
-          <p>Nos interventions touchent les infiltrations d eau, la toiture, les joints, les composantes electriques et propane, la remise en etat interieure, la presentation du vehicule ainsi que les inspections avant transaction. Si vous n etes pas certain du bon service, contactez-nous et nous vous guiderons.</p>
+          <p>Nos interventions touchent les infiltrations d'eau, la toiture, les joints, les composantes électriques et propane, la remise en état intérieure, la présentation du véhicule ainsi que les inspections avant transaction. Si vous n'êtes pas certain du bon service, contactez-nous et nous vous guiderons.</p>
         </div>
       </div>
     </section>
@@ -141,18 +139,6 @@ const breadcrumbs = buildBreadcrumbSchema([
     text-decoration: none;
     transform: translateY(-4px);
     box-shadow: 0 24px 44px rgba(21, 38, 58, 0.14);
-  }
-
-  .icon-wrap {
-    width: 3.5rem;
-    height: 3.5rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 18px;
-    background: linear-gradient(135deg, var(--brand-green), #57af49);
-    color: white;
-    font-size: 1.25rem;
   }
 
   .card-eyebrow {

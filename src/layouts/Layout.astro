@@ -222,7 +222,7 @@ const hasGoogleAds = googleAdsId.length > 0;
   </head>
   <body>
     <slot />
-    <CookieConsent lang={isEnglish ? 'en' : 'fr'} hasGoogleAds={hasGoogleAds} />
+    {hasGoogleAds && <CookieConsent lang={isEnglish ? 'en' : 'fr'} hasGoogleAds={hasGoogleAds} />}
     <div class="mobile-action-bar" aria-label={isEnglish ? 'Quick contact actions' : 'Actions de contact rapide'}>
       <a
         class="mobile-action mobile-action-email"

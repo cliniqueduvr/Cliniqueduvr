@@ -1007,3 +1007,287 @@ content:
           - name: body
             label: Body
             type: text
+
+  - name: sales_fr
+    label: Sales FR
+    type: file
+    path: src/data/sales-page.json
+    fields:
+      - name: metaTitle
+        label: Meta title
+        type: string
+      - name: metaDescription
+        label: Meta description
+        type: text
+      - name: hero
+        label: Hero
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: body
+            label: Body
+            type: text
+      - name: intro
+        label: Intro
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: body
+            label: Body
+            type: text
+      - name: listTitle
+        label: List title
+        type: string
+      - name: expandLabel
+        label: Expand label
+        type: string
+      - name: collapseLabel
+        label: Collapse label
+        type: string
+      - name: specsTitle
+        label: Specs title
+        type: string
+      - name: descriptionTitle
+        label: Description title
+        type: string
+      - name: optionsTitle
+        label: Options title
+        type: string
+      - name: emptyState
+        label: Empty state
+        type: text
+      - name: contactCard
+        label: Contact card
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: body
+            label: Body
+            type: text
+          - name: phoneLabel
+            label: Phone label
+            type: string
+          - name: emailLabel
+            label: Email label
+            type: string
+          - name: squareLabel
+            label: Square label
+            type: string
+      - name: items
+        label: Sale items
+        type: object
+        list: true
+        fields:
+          - name: id
+            label: ID
+            type: string
+          - name: title
+            label: Title
+            type: string
+          - name: price
+            label: Price
+            type: string
+          - name: summary
+            label: Summary
+            type: text
+          - name: status
+            label: Status
+            type: string
+          - name: type
+            label: Type
+            type: string
+          - name: category
+            label: Category
+            type: string
+          - name: description
+            label: Description
+            type: text
+            list: true
+          - name: specs
+            label: Specifications
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: Label
+                type: string
+              - name: value
+                label: Value
+                type: string
+          - name: options
+            label: Options
+            type: string
+            list: true
+          - name: image1
+            label: Photo 1
+            type: image
+            options:
+              media: project_images
+          - name: image2
+            label: Photo 2
+            type: image
+            options:
+              media: project_images
+          - name: image3
+            label: Photo 3
+            type: image
+            options:
+              media: project_images
+          - name: image4
+            label: Photo 4
+            type: image
+            options:
+              media: project_images
+          - name: image5
+            label: Photo 5
+            type: image
+            options:
+              media: project_images
+
+  - name: sales_en
+    label: Sales EN
+    type: file
+    path: src/data/sales-page-en.json
+    fields:
+      - name: metaTitle
+        label: Meta title
+        type: string
+      - name: metaDescription
+        label: Meta description
+        type: text
+      - name: hero
+        label: Hero
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: body
+            label: Body
+            type: text
+      - name: intro
+        label: Intro
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: body
+            label: Body
+            type: text
+      - name: listTitle
+        label: List title
+        type: string
+      - name: expandLabel
+        label: Expand label
+        type: string
+      - name: collapseLabel
+        label: Collapse label
+        type: string
+      - name: specsTitle
+        label: Specs title
+        type: string
+      - name: descriptionTitle
+        label: Description title
+        type: string
+      - name: optionsTitle
+        label: Options title
+        type: string
+      - name: emptyState
+        label: Empty state
+        type: text
+      - name: contactCard
+        label: Contact card
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: body
+            label: Body
+            type: text
+          - name: phoneLabel
+            label: Phone label
+            type: string
+          - name: emailLabel
+            label: Email label
+            type: string
+          - name: squareLabel
+            label: Square label
+            type: string
+      - name: items
+        label: Sale items
+        type: object
+        list: true
+        fields:
+          - name: id
+            label: ID
+            type: string
+          - name: title
+            label: Title
+            type: string
+          - name: price
+            label: Price
+            type: string
+          - name: summary
+            label: Summary
+            type: text
+          - name: status
+            label: Status
+            type: string
+          - name: type
+            label: Type
+            type: string
+          - name: category
+            label: Category
+            type: string
+          - name: description
+            label: Description
+            type: text
+            list: true
+          - name: specs
+            label: Specifications
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: Label
+                type: string
+              - name: value
+                label: Value
+                type: string
+          - name: options
+            label: Options
+            type: string
+            list: true
+          - name: image1
+            label: Photo 1
+            type: image
+            options:
+              media: project_images
+          - name: image2
+            label: Photo 2
+            type: image
+            options:
+              media: project_images
+          - name: image3
+            label: Photo 3
+            type: image
+            options:
+              media: project_images
+          - name: image4
+            label: Photo 4
+            type: image
+            options:
+              media: project_images
+          - name: image5
+            label: Photo 5
+            type: image
+            options:
+              media: project_images

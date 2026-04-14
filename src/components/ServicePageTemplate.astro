@@ -10,7 +10,7 @@ interface Props {
 }
 
 const { service, allServices, lang = 'fr' } = Astro.props as Props;
-const otherServices = allServices.filter((item) => item.slug !== service.slug);
+const otherServices = allServices.filter((item) => item.slug !== service.slug && item.slug !== 'vente-achat' && item.slug !== 'buying-selling');
 const isEnglish = lang === 'en';
 const contactHref = isEnglish ? '/en/contact/' : '/contact/';
 const serviceHref = (slug: string) => isEnglish ? `/en/services/${slug}/` : `/services/${slug}/`;
@@ -37,8 +37,8 @@ const serviceHref = (slug: string) => isEnglish ? `/en/services/${slug}/` : `/se
         <div class="hero-icon">
           <i class={service.icon}></i>
         </div>
-        <h2>{isEnglish ? 'Need a practical starting point?' : 'Besoin d un point de depart clair?'}</h2>
-        <p>{isEnglish ? 'We can help you understand the situation, choose the right service and decide on the next useful step for your RV.' : 'On peut vous aider a comprendre la situation, choisir le bon service et decider de la prochaine etape utile pour votre VR.'}</p>
+        <h2>{isEnglish ? 'Need a practical starting point?' : 'Besoin d’un point de départ clair?'}</h2>
+        <p>{isEnglish ? 'We can help you understand the situation, choose the right service and decide on the next useful step for your RV.' : 'On peut vous aider à comprendre la situation, à choisir le bon service et à décider de la prochaine étape utile pour votre VR.'}</p>
         <a class="hero-link" href={contactHref}>{isEnglish ? 'Talk to us about your RV' : 'Parler de votre VR'}</a>
       </aside>
     </div>
@@ -129,7 +129,7 @@ const serviceHref = (slug: string) => isEnglish ? `/en/services/${slug}/` : `/se
     lang={lang}
     heading={isEnglish ? `Need help with ${service.navLabel.toLowerCase()}?` : `Besoin d'un service de ${service.navLabel.toLowerCase()}?`}
     subheading={isEnglish ? 'Tell us about your vehicle and your situation. We will point you in the right direction.' : 'Décrivez votre véhicule et votre besoin. On vous revient avec une direction claire.'}
-    squareLabel={isEnglish ? 'Book now' : 'Reserve maintenant'}
+    squareLabel={isEnglish ? 'Book now' : 'Réserver maintenant'}
   />
 </main>
 

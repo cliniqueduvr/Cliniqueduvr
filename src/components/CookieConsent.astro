@@ -18,23 +18,23 @@ const privacyHref = isEnglish ? '/en/privacy/' : '/privacy/';
 >
   <div class="cookie-consent__inner">
     <div class="cookie-consent__copy">
-      <strong>{isEnglish ? 'Privacy and cookies' : 'Confidentialite et temoins'}</strong>
+      <strong>{isEnglish ? 'Privacy and cookies' : 'Confidentialité et témoins'}</strong>
       <p>
         {hasGoogleAds
           ? isEnglish
             ? 'This site uses essential technologies and Google Ads measurement tools after consent. Your choice is stored locally so the banner does not reappear on every visit.'
-            : 'Ce site utilise des technologies essentielles et les outils de mesure Google Ads apres consentement. Votre choix est conserve localement pour ne pas afficher l avis a chaque visite.'
+            : 'Ce site utilise des technologies essentielles et les outils de mesure Google Ads après consentement. Votre choix est conservé localement pour ne pas afficher l’avis à chaque visite.'
           : isEnglish
             ? 'This site only uses essential technologies needed for basic operation and to remember your consent choice. No advertising or analytics cookies are active at this time.'
-            : 'Ce site utilise seulement les technologies essentielles au bon fonctionnement et pour memoriser votre choix de consentement. Aucun temoin publicitaire ou d analyse n est actif pour le moment.'}
+            : 'Ce site utilise seulement les technologies essentielles au bon fonctionnement et pour mémoriser votre choix de consentement. Aucun témoin publicitaire ou d’analyse n’est actif pour le moment.'}
       </p>
     </div>
     <div class="cookie-consent__actions">
       <a href={privacyHref} class="cookie-consent__link">
-        {isEnglish ? 'Privacy policy' : 'Politique de confidentialite'}
+        {isEnglish ? 'Privacy policy' : 'Politique de confidentialité'}
       </a>
       <button type="button" class="cookie-consent__button" data-cookie-accept>
-        {isEnglish ? 'Understood' : 'J ai compris'}
+        {isEnglish ? 'Understood' : 'J’ai compris'}
       </button>
     </div>
   </div>

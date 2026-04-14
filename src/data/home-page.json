@@ -1,53 +1,53 @@
 {
-  "metaTitle": "Clinique du VR | Inspection, entretien et reparation VR a Gatineau-Ottawa",
-  "metaDescription": "Clinique du VR offre inspection, entretien, reparation, esthetique et accompagnement vente achat pour VR a Gatineau-Ottawa.",
+  "metaTitle": "Clinique du VR | Inspection, entretien et réparation VR à Gatineau-Ottawa",
+  "metaDescription": "Clinique du VR offre l'inspection, l'entretien, la réparation, l'esthétique et la vente de VR à Gatineau-Ottawa.",
   "hero": {
-    "logoAlt": "Logo Clinique du VR — Entretien, reparation et esthetique de vehicules recreatifs",
-    "title": "Clinique du VR — Entretien, reparation et esthetique de VR a Gatineau-Ottawa",
-    "tagline": "Votre spécialiste en infiltration d’eau en Outaouais"
+    "logoAlt": "Logo Clinique du VR — Entretien, réparation et esthétique de véhicules récréatifs",
+    "title": "Votre spécialiste en infiltration d’eau en Outaouais",
+    "tagline": ""
   },
   "introCard": {
     "icon": "fas fa-building",
     "heading": "Pourquoi Choisir Clinique du VR?",
-    "body": "<strong>Service specialise et attentif</strong> pour l'entretien, la reparation et l'esthetique de VR. Rapidite, transparence, conformite reglementaire et execution soignee du debut a la fin."
+    "body": "<strong>Service spécialisé et attentif</strong> pour l'entretien, la réparation et l'esthétique de VR. Rapidité, transparence, conformité réglementaire et exécution soignée du début à la fin."
   },
   "servicesOverview": {
     "title": "Nos Spécialités",
     "items": [
       { "href": "/services/inspection/", "icon": "fas fa-clipboard-check", "label": "Inspection" },
       { "href": "/services/entretien/", "icon": "fas fa-screwdriver-wrench", "label": "Entretien" },
-      { "href": "/services/reparation/", "icon": "fas fa-toolbox", "label": "Reparation" },
-      { "href": "/services/esthetique/", "icon": "fas fa-spray-can-sparkles", "label": "Esthetique" },
-      { "href": "/services/vente-achat/", "icon": "fas fa-van-shuttle", "label": "Vente et achat" }
+      { "href": "/services/reparation/", "icon": "fas fa-toolbox", "label": "Réparation" },
+      { "href": "/services/esthetique/", "icon": "fas fa-spray-can-sparkles", "label": "Esthétique" },
+      { "href": "/vente/", "icon": "", "label": "Vente" }
     ]
   },
   "seoSections": [
     {
       "heading": "Service VR a Gatineau-Ottawa",
-      "body": "Clinique du VR accompagne les proprietaires de VR, roulottes et caravanes pour les besoins les plus frequents: inspection avant achat, entretien preventif, reparation de fuite d'eau, toiture, remise en etat et esthetique. Notre atelier a Gatineau dessert aussi Ottawa, l'Outaouais, les Laurentides ainsi que plusieurs clients au Quebec et en Ontario."
+      "body": "Clinique du VR accompagne les propriétaires de VR, roulottes et caravanes pour les besoins les plus fréquents: inspection avant achat, entretien préventif, réparation de fuite d'eau, toiture, remise en état et esthétique. Notre atelier à Gatineau dessert aussi Ottawa, l'Outaouais, les Laurentides ainsi que plusieurs clients au Québec et en Ontario."
     },
     {
       "heading": "Une approche utile avant les travaux",
-      "body": "Quand un vehicule presente des signes d usure, d infiltration ou de deterioration visuelle, il faut d abord clarifier l etat reel du VR. Nous vous aidons ensuite a choisir entre une inspection, un entretien, une reparation, un service esthetique ou une preparation avant vente selon ce qui est le plus utile."
+      "body": "Quand un véhicule présente des signes d'usure, d'infiltration ou de détérioration visuelle, il faut d'abord clarifier l'état réel du VR. Nous vous aidons ensuite à choisir entre une inspection, un entretien, une réparation, un service esthétique ou une préparation avant vente selon ce qui est le plus utile."
     }
   ],
   "cta": {
     "heading": "Demandez votre soumission gratuite",
     "subheading": "Inspection et devis sans obligation",
-    "squareLabel": "Reserve maintenant"
+    "squareLabel": "Réserver maintenant"
   },
   "contactForm": {
     "heading": "Contactez-Nous",
-    "unconfiguredNote": "Le formulaire de contact n est pas encore configure en production. Utilisez le telephone ou la prise de rendez-vous Square en attendant.",
+    "unconfiguredNote": "Le formulaire de contact n'est pas disponible pour le moment. Utilisez le téléphone ou la prise de rendez-vous Square en attendant.",
     "namePlaceholder": "Votre nom",
-    "emailPlaceholder": "Votre email",
+    "emailPlaceholder": "Votre courriel",
     "subjectPlaceholder": "Sujet",
     "messagePlaceholder": "Votre message",
     "submitLabel": "Envoyer"
   },
   "contactPanel": {
-    "heading": "Informations de Contact",
-    "squareLabel": "Reserve maintenant",
+    "heading": "Informations de contact",
+    "squareLabel": "Réserver maintenant",
     "ctaText": "Devis gratuit et confidentiel. Appelez-nous ou remplissez le formulaire."
   },
   "reviews": {

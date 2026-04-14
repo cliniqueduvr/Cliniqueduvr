@@ -7,6 +7,7 @@ import servicePagesData from '../../data/service-pages-en.json';
 import type { ServicePage } from '../../data/service-page-types';
 import { buildBreadcrumbSchema } from '../../lib/seo';
 const servicePagesEn = servicePagesData.items as ServicePage[];
+const visibleServicePagesEn = servicePagesEn.filter((service) => service.slug !== 'buying-selling');
 const breadcrumbs = buildBreadcrumbSchema([
   { name: 'Home', path: '/en/' },
   { name: 'Services' }
@@ -27,11 +28,8 @@ const breadcrumbs = buildBreadcrumbSchema([
 
     <section class="services-grid-section">
       <div class="container services-grid">
-        {servicePagesEn.map((service) => (
+        {visibleServicePagesEn.map((service) => (
           <a class="service-card" href={`/en/services/${service.slug}/`}>
-            <div class="icon-wrap">
-              <i class={service.icon}></i>
-            </div>
             <p class="card-eyebrow">{service.eyebrow}</p>
             <h2>{service.navLabel}</h2>
             <p>{service.lead}</p>
@@ -143,18 +141,6 @@ const breadcrumbs = buildBreadcrumbSchema([
     text-decoration: none;
     transform: translateY(-4px);
     box-shadow: 0 24px 44px rgba(21, 38, 58, 0.14);
-  }
-
-  .icon-wrap {
-    width: 3.5rem;
-    height: 3.5rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 18px;
-    background: linear-gradient(135deg, var(--brand-green), #57af49);
-    color: white;
-    font-size: 1.25rem;
   }
 
   .card-eyebrow {

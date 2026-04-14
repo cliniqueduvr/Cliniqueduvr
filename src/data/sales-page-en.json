@@ -1,0 +1,97 @@
+{
+  "metaTitle": "RV Sales | Clinique du VR",
+  "metaDescription": "RVs for sale at Clinique du VR in Gatineau-Ottawa. Browse available units, prices and photos.",
+  "breadcrumbs": {
+    "home": "Home",
+    "current": "Sales"
+  },
+  "hero": {
+    "title": "RV Sales",
+    "body": "Browse available units, listed prices and photos for each vehicle. This page is updated from the CMS as vehicles are added for sale."
+  },
+  "intro": {
+    "title": "Available units",
+    "body": "Each listing can include up to five photos, a price, a description and a status. If no photos are added yet, the listing can stay visible and be completed later in the CMS."
+  },
+  "listTitle": "Inventory",
+  "expandLabel": "View full listing",
+  "collapseLabel": "Hide listing",
+  "specsTitle": "Specifications",
+  "descriptionTitle": "Description",
+  "optionsTitle": "Options",
+  "emptyState": "No units are listed right now. Check back soon or contact us directly for current availability.",
+  "contactCard": {
+    "title": "Questions about a unit?",
+    "body": "Call, email or book a time with us to get more information about a vehicle for sale.",
+    "phoneLabel": "Call now",
+    "emailLabel": "Send an email",
+    "squareLabel": "Book now"
+  },
+  "items": [
+    {
+      "id": "BU25080A",
+      "title": "Jayco JAY FLIGHT 225MLS 2024",
+      "price": "$53,999",
+      "summary": "Pre-owned inventory / Recreational vehicle Jayco JAY FLIGHT 225MLS 2024.",
+      "status": "Pre-owned",
+      "type": "Recreational vehicle",
+      "category": "Travel trailer",
+      "description": [
+        "Jayco Jay Flight SLX 2024 – Model 225MLS. Comfort, reliability and room for your adventures.",
+        "The Jayco Jay Flight SLX 225MLS 2024 is a versatile travel trailer designed to offer a strong balance of residential comfort, build quality and towing ease. It is ideal for couples or small families thanks to its smart layout and warm interior feel.",
+        "From the moment you step inside, the living area feels bright and functional. The seating is comfortable for relaxing after a day outdoors, and the large windows bring in plenty of natural light.",
+        "The central kitchen is fully equipped for camping needs, with generous storage, practical work surfaces and modern appliances that make meal preparation easy.",
+        "The closed front bedroom provides true privacy, a comfortable bed, integrated storage and a calm place to rest after a day of travel or exploration.",
+        "The bathroom is complete and practical, with shower, toilet and sink for both weekend getaways and longer stays.",
+        "Like other Jayco trailers, the Jay Flight SLX 225MLS benefits from solid construction, effective insulation and durable materials designed for the road and changing seasons. The layout is also simple and intuitive for both new and experienced campers.",
+        "Why choose the Jay Flight SLX 225MLS 2024? Spacious and functional layout, warm modern interior design, reliable durable construction, ideal for couples or small families, and strong value in its category."
+      ],
+      "specs": [
+        { "label": "Condition", "value": "Pre-owned" },
+        { "label": "Manufacturer", "value": "Jayco" },
+        { "label": "Model", "value": "JAY FLIGHT" },
+        { "label": "Sub-model", "value": "225MLS" },
+        { "label": "Year", "value": "2024" },
+        { "label": "Type", "value": "Recreational vehicle" },
+        { "label": "Category", "value": "Travel trailer" },
+        { "label": "Inventory #", "value": "BU25080A" },
+        { "label": "VIN", "value": "1UJBC0BM5R17G0167" },
+        { "label": "Weight", "value": "5300 lbs" },
+        { "label": "Length", "value": "22.5 ft" },
+        { "label": "Sleeps", "value": "3" },
+        { "label": "Slide-outs", "value": "1" },
+        { "label": "Bunk beds", "value": "No" },
+        { "label": "Location", "value": "Sales and rentals" },
+        { "label": "Exterior finish", "value": "Aluminum" },
+        { "label": "Interior colour", "value": "Grey" },
+        { "label": "Passengers", "value": "3" }
+      ],
+      "options": [
+        "Air conditioning",
+        "Propane tanks",
+        "Heating",
+        "Bedspread",
+        "30 amp power cord",
+        "Queen bed",
+        "Solid aluminum step",
+        "Microwave",
+        "Spare tire",
+        "USB charging port",
+        "Backup camera prep",
+        "12-volt refrigerator",
+        "Fresh water tank",
+        "Hot water tank",
+        "Grey water tank",
+        "Black water tank",
+        "Electric stabilizers",
+        "Rigid roof",
+        "Roof ladder",
+        "LED lighting"
+      ],
+      "image1": "/uploads/sales/2024-jayco-jay-flight-0.webp",
+      "image2": "/uploads/sales/2024-jayco-jay-flight-1.webp",
+      "image3": "/uploads/sales/2024-jayco-jay-flight-2.webp",
+      "image4": "/uploads/sales/2024-jayco-jay-flight-3.webp"
+    }
+  ]
+}

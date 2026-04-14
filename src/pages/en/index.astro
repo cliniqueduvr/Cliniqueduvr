@@ -6,9 +6,9 @@ import { buildLocalBusinessSchema } from '../../lib/seo';
 import siteSettings from '../../data/site-settings.json';
 import homePage from '../../data/home-page-en.json';
 
-const rawFormspreeId = import.meta.env.PUBLIC_FORMSPREE_ID || '';
-const isFormConfigured = Boolean(rawFormspreeId && rawFormspreeId.startsWith('f/'));
-const formAction = isFormConfigured ? `https://formspree.io/f/${rawFormspreeId}` : undefined;
+const isFormConfigured = Boolean(siteSettings.email?.trim());
+const formAction = isFormConfigured ? `https://formsubmit.co/${siteSettings.email}` : undefined;
+const successUrl = 'https://www.cliniqueduvr.ca/en/contact/?sent=1';
 const schemas = [buildLocalBusinessSchema({
   telephone: siteSettings.phone.href,
   email: siteSettings.email,
@@ -52,7 +52,7 @@ const meta = {
         <h2>{homePage.servicesOverview.title}</h2>
         <div class="services-grid">
           {homePage.servicesOverview.items.map((item) => (
-            <a href={item.href} class="service-item"><i class={item.icon}></i><span>{item.label}</span></a>
+            <a href={item.href} class="service-item">{item.icon && <i class={item.icon}></i>}<span>{item.label}</span></a>
           ))}
         </div>
       </div>
@@ -84,11 +84,14 @@ const meta = {
       <div class="container contact-grid">
         <div class="contact-form-wrapper">
           <h2>{homePage.contactForm.heading}</h2>
-          <!-- TODO: Replace with actual Formspree form ID -->
           {!isFormConfigured && (
             <p class="form-note">{homePage.contactForm.unconfiguredNote}</p>
           )}
           <form action={formAction} method="POST">
+            <input type="hidden" name="_next" value={successUrl} />
+            <input type="hidden" name="_subject" value="New message from Clinique du VR website form" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" class="sr-only" tabindex="-1" autocomplete="off" />
             <input type="text" name="name" placeholder={homePage.contactForm.namePlaceholder} required />
             <input type="email" name="email" placeholder={homePage.contactForm.emailPlaceholder} required />
             <input type="text" name="subject" placeholder={homePage.contactForm.subjectPlaceholder} required />
@@ -170,6 +173,7 @@ const meta = {
   .square-button { display: inline-block; background: transparent; color: white; padding: 12px 28px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 1.05rem; transition: all 0.3s ease; border: 2px solid rgba(255, 255, 255, 0.75); }
   .square-button:hover { text-decoration: none; background: rgba(255,255,255,0.12); border-color: white; }
   .cta-button i, .square-button i { margin-right: 8px; }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
   @media (max-width: 768px) {
     .hero { min-height: 720px; padding: 6rem 1.25rem 5rem; align-items: flex-start; }
     .hero-logo { width: min(620px, 92vw); margin: 0 auto 2.25rem; }

@@ -1,34 +1,34 @@
 {
-  "metaTitle": "Politique de confidentialite | Clinique du VR",
-  "metaDescription": "Politique de confidentialite de Clinique du VR pour les demandes de soumission, rendez-vous et communications clients.",
+  "metaTitle": "Politique de confidentialité | Clinique du VR",
+  "metaDescription": "Politique de confidentialité de Clinique du VR pour les demandes de soumission, les rendez-vous et les communications clients.",
   "breadcrumbs": {
     "home": "Accueil",
-    "current": "Politique de confidentialite"
+    "current": "Politique de confidentialité"
   },
   "hero": {
-    "title": "Politique de confidentialite",
-    "body": "Clinique du VR protege les renseignements partages via le formulaire de contact, le telephone et la prise de rendez-vous."
+    "title": "Politique de confidentialité",
+    "body": "Clinique du VR protège les renseignements partagés volontairement par courriel, téléphone, formulaire de contact ou prise de rendez-vous."
   },
   "sections": [
     {
       "heading": "Renseignements recueillis",
-      "body": "Lorsque vous nous contactez, nous pouvons recueillir votre nom, votre courriel, votre numero de telephone, des details sur votre VR et toute information utile a votre demande de service."
+      "body": "Lorsque vous nous contactez, nous pouvons recueillir votre nom, votre courriel, votre numéro de téléphone, des détails sur votre VR et toute information utile à votre demande de service."
     },
     {
       "heading": "Utilisation des renseignements",
-      "body": "Ces informations servent a repondre a votre demande, planifier un rendez-vous, preparer une soumission ou assurer le suivi d'un dossier de service, d'inspection ou de reparation."
+      "body": "Ces informations servent à répondre à votre demande, à planifier un rendez-vous, à préparer une soumission ou à assurer le suivi d'un dossier de service, d'inspection ou de réparation."
     },
     {
-      "heading": "Partage et conservation",
-      "body": "Nous ne vendons pas vos renseignements personnels. Les donnees sont conservees uniquement pour la gestion des communications et des services relies a votre dossier."
+      "heading": "Conformité et conservation",
+      "body": "Le site est conçu pour soutenir une gestion sobre des renseignements personnels et pour respecter les exigences applicables de la Loi 25 au Québec. Nous ne vendons pas vos renseignements personnels et nous utilisons seulement les informations nécessaires au traitement de votre demande."
     },
     {
-      "heading": "Temoins et consentement",
-      "body": "Le site utilise seulement les technologies essentielles a son fonctionnement de base et pour memoriser le choix de consentement affiche dans l avis de confidentialite. Aucun témoin publicitaire ou d analyse n est actif pour le moment."
+      "heading": "Témoins, suivi et navigation",
+      "body": "Le site n'utilise pas Google Ads, Google Analytics ni d'autres outils de suivi publicitaire ou analytique. Aucun témoin publicitaire n'est déposé et aucune information de navigation n'est conservée pour profiler l'usager."
     },
     {
       "heading": "Questions",
-      "body": "Pour toute question liee a la confidentialite ou a vos renseignements, ecrivez a info@cliniqueduvr.ca ou appelez au (581) 337-3366."
+      "body": "Pour toute question liée à la confidentialité ou à vos renseignements, écrivez à info@cliniqueduvr.ca ou appelez au (581) 337-3366."
     }
   ]
 }

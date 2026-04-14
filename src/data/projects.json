@@ -2,69 +2,69 @@
   "items": [
     {
       "id": 1,
-      "title": "Refection de Toit VR",
+      "title": "Réfection de toit VR",
       "location": "Gatineau",
       "category": "Toiture",
       "beforeImage": "/images/project-1-before.jpg",
       "afterImage": "/images/project-1-after.jpg",
-      "beforeAlt": "Avant: toit de VR use avec joints fatigues et infiltration d'eau visible",
-      "afterAlt": "Apres: toit etanche remis en etat avec joints refaits et finition propre",
-      "description": "Inspection complete de la toiture, reprise des joints critiques et remise en etancheite pour eliminer les infiltrations et prolonger la duree de vie du VR."
+      "beforeAlt": "Avant: toit de VR usé avec joints fatigués et infiltration d'eau visible",
+      "afterAlt": "Après: toit étanche remis en état avec joints refaits et finition propre",
+      "description": "Inspection complète de la toiture, reprise des joints critiques et remise en étanchéité pour éliminer les infiltrations et prolonger la durée de vie du VR."
     },
     {
       "id": 2,
-      "title": "Reparation Interieure Apres Infiltration",
+      "title": "Réparation intérieure après infiltration",
       "location": "Ottawa",
-      "category": "Interieur",
+      "category": "Intérieur",
       "beforeImage": "/images/project-2-before.jpg",
       "afterImage": "/images/project-2-after.jpg",
-      "beforeAlt": "Avant: interieur de VR endommage par l'eau avec panneaux et finition touches",
-      "afterAlt": "Apres: interieur restaure avec surfaces propres et finition uniforme",
-      "description": "Reparation des surfaces endommagees, remplacement des sections compromises et remise en etat de l'interieur pour retrouver un espace propre, solide et fonctionnel."
+      "beforeAlt": "Avant: intérieur de VR endommagé par l'eau avec panneaux et finition touchés",
+      "afterAlt": "Après: intérieur restauré avec surfaces propres et finition uniforme",
+      "description": "Réparation des surfaces endommagées, remplacement des sections compromises et remise en état de l'intérieur pour retrouver un espace propre, solide et fonctionnel."
     },
     {
       "id": 3,
-      "title": "Inspection Preventive Avant Saison",
+      "title": "Inspection préventive avant saison",
       "location": "Ottawa",
       "category": "Inspection",
       "beforeImage": "/images/project-3-before.jpg",
       "afterImage": "/images/project-3-after.jpg",
-      "beforeAlt": "Avant: VR en entreposage necessitant une verification complete avant remise en service",
-      "afterAlt": "Apres: rapport d'inspection avec priorites claires et interventions recommandees",
-      "description": "Verification de la toiture, des joints, des ouvertures, des traces d'humidite et des composantes visibles afin de prevenir les mauvaises surprises au debut de la saison."
+      "beforeAlt": "Avant: VR en entreposage nécessitant une vérification complète avant remise en service",
+      "afterAlt": "Après: rapport d'inspection avec priorités claires et interventions recommandées",
+      "description": "Vérification de la toiture, des joints, des ouvertures, des traces d'humidité et des composantes visibles afin de prévenir les mauvaises surprises au début de la saison."
     },
     {
       "id": 4,
-      "title": "Remplacement de Scellants Exterieurs",
+      "title": "Remplacement de scellants extérieurs",
       "location": "Gatineau",
-      "category": "Etancheite",
+      "category": "Étanchéité",
       "beforeImage": "/images/project-4-before.jpg",
       "afterImage": "/images/project-4-after.jpg",
-      "beforeAlt": "Avant: joints exterieurs fissures autour des ouvertures et accessoires",
-      "afterAlt": "Apres: nouveaux scellants installes avec finition uniforme et etanche",
-      "description": "Retrait des anciens scellants, preparation des surfaces et application de nouveaux produits pour proteger les points sensibles contre l'eau et les variations climatiques."
+      "beforeAlt": "Avant: joints extérieurs fissurés autour des ouvertures et accessoires",
+      "afterAlt": "Après: nouveaux scellants installés avec finition uniforme et étanche",
+      "description": "Retrait des anciens scellants, préparation des surfaces et application de nouveaux produits pour protéger les points sensibles contre l'eau et les variations climatiques."
     },
     {
       "id": 5,
-      "title": "Remise a neuf Complete",
+      "title": "Remise à neuf complète",
       "location": "Gatineau",
       "category": "Restauration",
       "beforeImage": "/images/project-5-before.jpg",
       "afterImage": "/images/project-5-after.jpg",
-      "beforeAlt": "Avant: VR fatigue visuellement avant travaux de restauration et nettoyage",
-      "afterAlt": "Apres: VR propre, rafraichi et pret pour la route ou la vente",
+      "beforeAlt": "Avant: VR fatigué visuellement avant travaux de restauration et nettoyage",
+      "afterAlt": "Après: VR propre, rafraîchi et prêt pour la route ou la vente",
       "description": "Intervention combinee de reparation, nettoyage et finition pour redonner au VR une apparence soignée et une meilleure valeur d'usage ou de revente."
     },
     {
       "id": 6,
-      "title": "Diagnostic Avant Achat",
+      "title": "Diagnostic avant achat",
       "location": "Ottawa",
       "category": "Inspection",
       "beforeImage": "/images/project-6-before.jpg",
       "afterImage": "/images/project-6-after.jpg",
-      "beforeAlt": "Avant: VR a evaluer avant transaction ou achat usage",
-      "afterAlt": "Apres: bilan clair des points forts, correctifs requis et priorites budgetaires",
-      "description": "Inspection orientee achat pour mieux comprendre l'etat reel du VR, les travaux a prevoir et les risques a corriger avant de conclure une transaction."
+      "beforeAlt": "Avant: VR à évaluer avant transaction ou achat d'occasion",
+      "afterAlt": "Après: bilan clair des points forts, correctifs requis et priorités budgétaires",
+      "description": "Inspection orientée achat pour mieux comprendre l'état réel du VR, les travaux à prévoir et les risques à corriger avant de conclure une transaction."
     }
   ]
 }

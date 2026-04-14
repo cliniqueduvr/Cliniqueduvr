@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Privacy Policy",
-    "body": "Clinique du VR protects the information shared through the contact form, phone calls and booking requests."
+    "body": "Clinique du VR protects the information voluntarily shared through email, phone calls, the contact form and booking requests."
   },
   "sections": [
     {
@@ -19,12 +19,12 @@
       "body": "This information is used to reply to your request, plan an appointment, prepare an estimate or follow up on an inspection, maintenance or repair file."
     },
     {
-      "heading": "Sharing and retention",
-      "body": "We do not sell personal information. Data is kept only as needed to manage communications and service-related follow-up for your file."
+      "heading": "Compliance and retention",
+      "body": "The site is designed to support a minimal approach to personal information handling and to align with applicable Quebec Law 25 requirements. We do not sell personal information and only use the information needed to process your request."
     },
     {
-      "heading": "Cookies and consent",
-      "body": "The site only uses technologies essential for basic operation and to remember the consent choice shown in the privacy notice. No advertising or analytics cookies are active at this time."
+      "heading": "Cookies, tracking and navigation",
+      "body": "The site does not use Google Ads, Google Analytics or other advertising or analytics trackers. No advertising cookies are placed and no browsing information is retained to profile users."
     },
     {
       "heading": "Questions",

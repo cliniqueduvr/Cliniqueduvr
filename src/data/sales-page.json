@@ -1,0 +1,97 @@
+{
+  "metaTitle": "Vente de VR | Clinique du VR",
+  "metaDescription": "VR à vendre chez Clinique du VR à Gatineau-Ottawa. Consultez les unités disponibles, les prix et les photos.",
+  "breadcrumbs": {
+    "home": "Accueil",
+    "current": "Vente"
+  },
+  "hero": {
+    "title": "Vente de VR",
+    "body": "Consultez les unités disponibles, les prix affichés et les photos de chaque véhicule. Cette page est mise à jour dans le CMS au fur et à mesure des véhicules en vente."
+  },
+  "intro": {
+    "title": "Unités disponibles",
+    "body": ""
+  },
+  "listTitle": "Inventaire",
+  "expandLabel": "Voir la fiche complète",
+  "collapseLabel": "Masquer la fiche",
+  "specsTitle": "Spécifications",
+  "descriptionTitle": "Description",
+  "optionsTitle": "Options",
+  "emptyState": "Aucune unité n'est affichée pour le moment. Revenez bientôt ou contactez-nous directement pour connaître les véhicules disponibles.",
+  "contactCard": {
+    "title": "Questions sur une unité?",
+    "body": "Appelez-nous, écrivez-nous ou prenez rendez-vous pour obtenir plus d'information sur un véhicule en vente.",
+    "phoneLabel": "Appeler maintenant",
+    "emailLabel": "Écrire par courriel",
+    "squareLabel": "Prendre rendez-vous"
+  },
+  "items": [
+    {
+      "id": "BU25080A",
+      "title": "Jayco JAY FLIGHT 225MLS 2024",
+      "price": "53 999 $",
+      "summary": "Inventaire occasion / Véhicule récréatif Jayco JAY FLIGHT 225MLS 2024.",
+      "status": "Occasion",
+      "type": "Véhicule récréatif",
+      "category": "Caravane de voyage",
+      "description": [
+        "Jayco Jay Flight SLX 2024 – Modèle 225MLS. Confort, fiabilité et espace pour vos aventures.",
+        "La Jayco Jay Flight SLX 225MLS 2024 est une roulotte de voyage polyvalente, conçue pour offrir un parfait équilibre entre confort résidentiel, qualité de fabrication et facilité de remorquage. Idéale pour les couples ou les petites familles, elle se distingue par son aménagement intelligent et son ambiance chaleureuse.",
+        "Dès l’entrée, vous serez charmé par un espace de vie lumineux et fonctionnel. Le salon propose des assises confortables, parfaites pour se détendre après une journée à l’extérieur. La grande fenestration laisse entrer beaucoup de lumière naturelle, créant une atmosphère conviviale et aérée.",
+        "La cuisine centrale est entièrement équipée pour répondre à tous vos besoins en camping : rangement abondant, surfaces de travail pratiques et appareils modernes vous permettent de préparer vos repas avec plaisir, comme à la maison.",
+        "La chambre avant fermée offre une véritable intimité, avec un lit confortable, des espaces de rangement bien intégrés et une ambiance propice au repos. C’est un espace idéal pour récupérer après une journée d’exploration.",
+        "La salle de bain est bien aménagée et fonctionnelle, avec douche, toilette et lavabo, vous offrant tout le confort nécessaire, que ce soit pour les escapades de fin de semaine ou les séjours prolongés.",
+        "Comme toutes les roulottes Jayco, la Jay Flight SLX 225MLS bénéficie d’une construction robuste, d’une isolation efficace et de matériaux durables conçus pour résister aux routes et aux saisons. Sa conception vise également une utilisation simple et intuitive, parfaite autant pour les campeurs débutants que les plus expérimentés.",
+        "Pourquoi choisir la Jay Flight SLX 225MLS 2024 ? Aménagement spacieux et fonctionnel, design intérieur moderne et chaleureux, construction fiable et durable, idéale pour les couples ou petites familles, et excellente valeur pour sa catégorie."
+      ],
+      "specs": [
+        { "label": "Condition", "value": "Occasion" },
+        { "label": "Manufacturier", "value": "Jayco" },
+        { "label": "Modèle", "value": "JAY FLIGHT" },
+        { "label": "Sous-modèle", "value": "225MLS" },
+        { "label": "Année", "value": "2024" },
+        { "label": "Type", "value": "Véhicule récréatif" },
+        { "label": "Catégorie", "value": "Caravane de voyage" },
+        { "label": "# inventaire", "value": "BU25080A" },
+        { "label": "NIV", "value": "1UJBC0BM5R17G0167" },
+        { "label": "Poids", "value": "5300 lbs" },
+        { "label": "Longueur", "value": "22.5 ft" },
+        { "label": "Places à coucher", "value": "3" },
+        { "label": "Nombre d'extensions", "value": "1" },
+        { "label": "Lits superposés", "value": "Non" },
+        { "label": "Localisation", "value": "Ventes et location" },
+        { "label": "Revêtement extérieur", "value": "Aluminium" },
+        { "label": "Couleur intérieure", "value": "gris" },
+        { "label": "Nombre de passagers", "value": "3" }
+      ],
+      "options": [
+        "Air climatisé",
+        "Bonbonnes de propane",
+        "Chauffage",
+        "Couvre-lit",
+        "Fil électrique 30 ampères",
+        "Lit grandeur Queen",
+        "Marchepied en aluminium solide",
+        "Micro-ondes",
+        "Pneu de secours",
+        "Port de chargement USB",
+        "Préparation pour caméra de recul",
+        "Réfrigérateur aux 12 volts",
+        "Réservoir d'eau claire",
+        "Réservoir d'eau chaude",
+        "Réservoir d'eau grise",
+        "Réservoir d'eau noire",
+        "Stabilisateurs électriques",
+        "Toit rigide",
+        "Échelle de toit",
+        "Éclairage au DEL"
+      ],
+      "image1": "/uploads/sales/2024-jayco-jay-flight-0.webp",
+      "image2": "/uploads/sales/2024-jayco-jay-flight-1.webp",
+      "image3": "/uploads/sales/2024-jayco-jay-flight-2.webp",
+      "image4": "/uploads/sales/2024-jayco-jay-flight-3.webp"
+    }
+  ]
+}
