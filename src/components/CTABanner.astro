@@ -1,4 +1,6 @@
 ---
+import siteSettings from '../data/site-settings.json';
+
 export interface Props {
   heading?: string;
   subheading?: string;
@@ -10,11 +12,10 @@ export interface Props {
 const {
   heading = "Demandez votre soumission gratuite",
   subheading = "Inspection et devis sans obligation",
-  phoneNumber = "(581) 337-3366",
+  phoneNumber = siteSettings.phone.display,
   lang = 'fr',
   squareLabel = lang === 'fr' ? 'Reserve maintenant' : 'Book now'
 } = Astro.props as Props;
-const squareBookingUrl = 'https://app.squareup.com/appointments/book/lgocu4o42jy5zu/LGZ9VNRVZ6XXM/start';
 ---
 
 <section class="cta-banner">
@@ -22,10 +23,10 @@ const squareBookingUrl = 'https://app.squareup.com/appointments/book/lgocu4o42jy
     <h2>{heading}</h2>
     <p>{subheading}</p>
     <div class="cta-actions">
-      <a href={`tel:+15813373366`} class="cta-button">
+      <a href={`tel:${siteSettings.phone.href}`} class="cta-button">
         <i class="fas fa-phone"></i> {phoneNumber}
       </a>
-      <a href={squareBookingUrl} target="_blank" rel="noopener" class="square-button">
+      <a href={siteSettings.squareBookingUrl} target="_blank" rel="noopener" class="square-button">
         <i class="fas fa-calendar-check"></i> {squareLabel}
       </a>
     </div>

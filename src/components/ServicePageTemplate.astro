@@ -1,11 +1,11 @@
 ---
 import CTABanner from './CTABanner.astro';
-import type { ServicePage } from '../data/servicePages';
-import type { ServicePageEn } from '../data/servicePagesEn';
+import siteSettings from '../data/site-settings.json';
+import type { ServicePage } from '../data/service-page-types';
 
 interface Props {
-  service: ServicePage | ServicePageEn;
-  allServices: Array<ServicePage | ServicePageEn>;
+  service: ServicePage;
+  allServices: ServicePage[];
   lang?: 'fr' | 'en';
 }
 
@@ -106,7 +106,7 @@ const serviceHref = (slug: string) => isEnglish ? `/en/services/${slug}/` : `/se
         <div class="side-card sticky">
           <h3>{isEnglish ? 'Need a quick opinion?' : "Besoin d'un avis rapide?"}</h3>
           <p>{isEnglish ? 'We can point you toward inspection, maintenance or repair based on the actual condition of the vehicle.' : "On peut vous orienter vers une inspection, un entretien ou une réparation selon l'état du véhicule."}</p>
-          <a class="side-button" href="tel:+15813373366">(581) 337-3366</a>
+          <a class="side-button" href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>
           <a class="side-link" href={contactHref}>{isEnglish ? 'Request an estimate' : 'Demander une soumission'}</a>
         </div>
 

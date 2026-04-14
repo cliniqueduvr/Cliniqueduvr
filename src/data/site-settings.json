@@ -1,0 +1,26 @@
+{
+  "brandName": "Clinique du VR",
+  "brandImage": "/clinique-du-vr-brand.jpg",
+  "phone": {
+    "display": "(581) 337-3366",
+    "href": "+15813373366"
+  },
+  "email": "info@cliniqueduvr.ca",
+  "squareBookingUrl": "https://app.squareup.com/appointments/book/lgocu4o42jy5zu/LGZ9VNRVZ6XXM/start",
+  "facebookUrl": "https://www.facebook.com/profile.php?id=61588265661776",
+  "address": {
+    "fr": "11 rue de Granby, Unite 18, Gatineau, QC",
+    "en": "11 rue de Granby, Unit 18, Gatineau, QC",
+    "mapQuery": "11 rue de Granby, Unité 18, Gatineau, QC"
+  },
+  "serviceArea": {
+    "fr": "Gatineau, Ottawa, Laurentides, Outaouais, Quebec et Ontario",
+    "en": "Gatineau, Ottawa, Laurentides, Outaouais, Quebec and Ontario"
+  },
+  "rbq": "5824-9764-01",
+  "sinceYear": "2013",
+  "footerDescription": {
+    "fr": "Entretien, reparation et esthetique de VR avec une approche claire, soignee et orientee service.",
+    "en": "RV maintenance, repair and detailing with a clear, careful and service-oriented approach."
+  }
+}

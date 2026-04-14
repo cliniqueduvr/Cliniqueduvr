@@ -10,8 +10,11 @@ This document summarizes all architectural and quality improvements made to alig
 ### 1. **Data-Driven Content** ✅
 Created centralized data files for easy maintenance and consistency:
 
-- **`src/data/services.json`** — 6 service definitions with icons, descriptions, and full details
+- **`src/data/service-pages.json`** — FR service definitions and full service-page content
+- **`src/data/service-pages-en.json`** — EN service definitions and full service-page content
 - **`src/data/projects.json`** — 6 portfolio projects with before/after image references and descriptions
+- **`src/data/site-settings.json`** — shared contact and business settings
+- **`src/data/home-page*.json`, `about-page*.json`, `contact-page*.json`, `privacy-page*.json`** — editable FR/EN page copy
 
 **Benefits:**
 - Single source of truth for content
@@ -21,11 +24,6 @@ Created centralized data files for easy maintenance and consistency:
 
 ### 2. **Reusable Components** ✅
 Created three new reusable components to eliminate code duplication:
-
-#### `src/components/ServiceCard.astro`
-- Displays individual service with icon, title, description, and details
-- Alternates between dark and light backgrounds automatically
-- Responsive design with full accessibility
 
 #### `src/components/ProjectCard.astro`
 - Displays before/after project with proper semantic HTML
@@ -42,18 +40,16 @@ Created three new reusable components to eliminate code duplication:
 - Used on multiple pages
 
 **Benefits:**
-- **Eliminated 160+ lines of duplicate markup** across language versions
+- **Eliminated duplicated content definitions** across language versions and templates
 - **Reduced 81 lines of CSS duplication** (now centralized in components)
 - **Single point of change** — CSS updates apply everywhere
 - **Consistency guaranteed** across all pages
-- **Maintainability** — Adding a new service/project is one JSON entry + automatic rendering
+- **Maintainability** — Editing services, shared business settings, and major page copy happens in JSON content files
 
 ### 3. **Refactored Pages**
 
 #### `src/pages/services.astro`
-- **Before:** 167 lines with inline services array and duplicate markup
-- **After:** 32 lines importing ServiceCard component and services.json
-- Now generates all services automatically from data file
+- Now generates all services automatically from `service-pages.json`
 - Cleaner, more maintainable code
 
 #### `src/pages/realisations.astro`
@@ -116,17 +112,21 @@ Created three new reusable components to eliminate code duplication:
 
 ## Data Structure
 
-### services.json Format
+### service-pages.json Format
 ```json
-[
-  {
-    "id": 1,
+{
+  "items": [
+    {
+      "slug": "inspection",
+      "alternateSlug": "inspection",
     "title": "Service Name",
+      "h1": "Service H1",
     "icon": "fas fa-icon-name",
-    "description": "Short description",
-    "details": "Full detailed description"
-  }
-]
+      "seoTitle": "SEO title",
+      "seoDescription": "SEO description"
+    }
+  ]
+}
 ```
 
 ### projects.json Format
@@ -161,13 +161,13 @@ Demo-Solution-Redesign/
 │   ├── components/                  ← IMPROVED
 │   │   ├── Header.astro
 │   │   ├── Footer.astro
-│   │   ├── ServiceCard.astro        ← NEW: Reusable service block
 │   │   ├── ProjectCard.astro        ← NEW: Before/after project card
 │   │   └── CTABanner.astro          ← NEW: Reusable CTA section
 │   ├── layouts/
 │   │   └── Layout.astro
 │   ├── data/                         ← NEW: Centralized content
-│   │   ├── services.json            ← NEW: Service definitions
+│   │   ├── service-pages.json       ← NEW: FR service definitions
+│   │   ├── service-pages-en.json    ← NEW: EN service definitions
 │   │   └── projects.json            ← NEW: Project definitions
 │   ├── styles/
 │   │   └── (component styles are scoped)
@@ -188,7 +188,7 @@ Demo-Solution-Redesign/
 If you want to add more content without editing Astro files:
 
 ### To Add a New Service:
-1. Edit `src/data/services.json`
+1. Edit `src/data/service-pages.json` or `src/data/service-pages-en.json`
 2. Add new object to array
 3. Save → Site automatically updates
 
@@ -222,7 +222,6 @@ No need to touch `.astro` files.
 1. **Add Real Images**
    - Place before/after photos in `src/images/`
    - Update image paths in `projects.json`
-   - Update image paths in `services.json` if needed
 
 2. **Configure Formspree**
    - Create account at formspree.io

@@ -1,0 +1,77 @@
+{
+  "metaTitle": "Clinique du VR | RV inspection, maintenance and repair in Gatineau-Ottawa",
+  "metaDescription": "Clinique du VR offers RV inspection, maintenance, repair, detailing and buying selling support in Gatineau-Ottawa.",
+  "hero": {
+    "logoAlt": "Clinique du VR logo — RV maintenance, repair and detailing",
+    "title": "Clinique du VR — RV inspection, maintenance and repair in Gatineau-Ottawa",
+    "tagline": "Your water infiltration specialist in Outaouais"
+  },
+  "introCards": [
+    {
+      "icon": "fas fa-building",
+      "heading": "Why Choose Clinique du VR?",
+      "body": "<strong>Specialized and attentive service</strong> for RV maintenance, repair and detailing. Speed, transparency, regulatory compliance and careful execution from start to finish."
+    },
+    {
+      "icon": "fas fa-wrench",
+      "heading": "Our Services",
+      "body": "<strong>Preventive maintenance</strong> • <strong>Mechanical and cosmetic repairs</strong> • <strong>RV inspections</strong> • <strong>Refresh work</strong> • <strong>Cleaning and detailing</strong> • <strong>Custom interventions</strong>"
+    }
+  ],
+  "servicesOverview": {
+    "title": "Our Specialties",
+    "items": [
+      { "href": "/en/services/inspection/", "icon": "fas fa-clipboard-check", "label": "Inspection" },
+      { "href": "/en/services/maintenance/", "icon": "fas fa-screwdriver-wrench", "label": "Maintenance" },
+      { "href": "/en/services/repair/", "icon": "fas fa-toolbox", "label": "Repair" },
+      { "href": "/en/services/detailing/", "icon": "fas fa-spray-can-sparkles", "label": "Detailing" },
+      { "href": "/en/services/buying-selling/", "icon": "fas fa-van-shuttle", "label": "Buying and Selling" }
+    ]
+  },
+  "seoSections": [
+    {
+      "heading": "RV service in Gatineau-Ottawa",
+      "body": "Clinique du VR supports RV, trailer and caravan owners with common service needs such as pre-purchase inspection, preventive maintenance, water leak repair, roof work, refresh work and detailing. The workshop is based in Gatineau and also serves Ottawa, Outaouais, Laurentides, Quebec and Ontario clients."
+    },
+    {
+      "heading": "A clearer service structure",
+      "body": "When an RV shows signs of wear, water intrusion or visible deterioration, the first step is to understand the real condition of the vehicle. From there, we help guide you toward inspection, maintenance, repair, detailing or buying and selling support based on what is actually needed."
+    }
+  ],
+  "cta": {
+    "heading": "Request your free estimate",
+    "subheading": "Inspection and estimate with no obligation",
+    "squareLabel": "Book now"
+  },
+  "contactForm": {
+    "heading": "Contact Us",
+    "unconfiguredNote": "The contact form is not configured in production yet. Please use the phone number or Square booking link for now.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Your email",
+    "subjectPlaceholder": "Subject",
+    "messagePlaceholder": "Your message",
+    "submitLabel": "Send"
+  },
+  "contactPanel": {
+    "heading": "Contact Information",
+    "squareLabel": "Book now",
+    "ctaText": "Free and confidential estimate. Call us or send us a message."
+  },
+  "reviews": {
+    "heading": "Google Reviews",
+    "items": [
+      {
+        "quote": "Cedric was on time, explained everything clearly and delivered the results the next day as promised.",
+        "author": "Jesse Brook"
+      },
+      {
+        "quote": "Professional and courteous service.",
+        "author": "Stephane Desgagne"
+      },
+      {
+        "quote": "Efficient company, easy to communicate with, and professional work from start to finish.",
+        "author": "Philippe Albert"
+      }
+    ]
+  }
+}

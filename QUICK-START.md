@@ -137,16 +137,14 @@ PUBLIC_REDESIGN_URL=https://demo.yourdomain.ca
 Edit these files to change company details:
 
 **Phone Number:**
-- `src/components/Header.astro` (line ~20)
-- `src/components/Footer.astro`
-- `.env` file
+- `src/data/site-settings.json`
 
 **Email:**
-- `src/components/Footer.astro`
-- `src/pages/contact.astro`
+- `src/data/site-settings.json`
 
-**Services:**
-- `src/data/services.json` — Edit titles, descriptions, icons
+**Service Pages:**
+- `src/data/service-pages.json` — FR service list and full service-page content
+- `src/data/service-pages-en.json` — EN service list and full service-page content
 
 **Projects:**
 - `src/data/projects.json` — Add/edit/delete projects
@@ -190,12 +188,12 @@ npm run build
 | File | Purpose | Edit When |
 |------|---------|-----------|
 | `.env` | Configuration (form ID, maps) | Updating Formspree or location |
-| `src/data/services.json` | Service descriptions | Adding/editing services |
+| `src/data/site-settings.json` | Shared phone, email, booking, address | Updating business details |
+| `src/data/service-pages.json` | FR services and service-page copy | Adding/editing FR services |
+| `src/data/service-pages-en.json` | EN services and service-page copy | Adding/editing EN services |
 | `src/data/projects.json` | Portfolio projects | Adding/editing projects |
-| `src/components/Header.astro` | Navigation & logo | Changing phone/email |
-| `src/components/Footer.astro` | Footer content & links | Updating contact info |
-| `src/pages/index.astro` | Homepage | Rare (structure is stable) |
-| `src/pages/contact.astro` | Contact page | Very rare (structure is stable) |
+| `src/data/home-page*.json` | Homepage copy | Editing homepage content |
+| `src/data/contact-page*.json` | Contact page copy | Editing contact-page content |
 
 **DON'T EDIT:** Component styles are in each `.astro` file (scoped CSS). You can customize colors here if needed.
 

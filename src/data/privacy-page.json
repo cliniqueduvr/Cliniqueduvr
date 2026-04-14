@@ -1,0 +1,30 @@
+{
+  "metaTitle": "Politique de confidentialite | Clinique du VR",
+  "metaDescription": "Politique de confidentialite de Clinique du VR pour les demandes de soumission, rendez-vous et communications clients.",
+  "breadcrumbs": {
+    "home": "Accueil",
+    "current": "Politique de confidentialite"
+  },
+  "hero": {
+    "title": "Politique de confidentialite",
+    "body": "Clinique du VR protege les renseignements partages via le formulaire de contact, le telephone et la prise de rendez-vous."
+  },
+  "sections": [
+    {
+      "heading": "Renseignements recueillis",
+      "body": "Lorsque vous nous contactez, nous pouvons recueillir votre nom, votre courriel, votre numero de telephone, des details sur votre VR et toute information utile a votre demande de service."
+    },
+    {
+      "heading": "Utilisation des renseignements",
+      "body": "Ces informations servent a repondre a votre demande, planifier un rendez-vous, preparer une soumission ou assurer le suivi d'un dossier de service, d'inspection ou de reparation."
+    },
+    {
+      "heading": "Partage et conservation",
+      "body": "Nous ne vendons pas vos renseignements personnels. Les donnees sont conservees uniquement pour la gestion des communications et des services relies a votre dossier."
+    },
+    {
+      "heading": "Questions",
+      "body": "Pour toute question liee a la confidentialite ou a vos renseignements, ecrivez a info@cliniqueduvr.ca ou appelez au (581) 337-3366."
+    }
+  ]
+}

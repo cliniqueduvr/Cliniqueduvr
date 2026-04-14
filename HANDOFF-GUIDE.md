@@ -30,12 +30,19 @@ This site is an Astro static site. The editable business content is already most
 
 Main content files:
 
-- `src/data/services.json`
-- `src/data/services-en.json`
+- `src/data/site-settings.json`
+- `src/data/home-page.json`
+- `src/data/home-page-en.json`
+- `src/data/about-page.json`
+- `src/data/about-page-en.json`
+- `src/data/contact-page.json`
+- `src/data/contact-page-en.json`
+- `src/data/privacy-page.json`
+- `src/data/privacy-page-en.json`
 - `src/data/projects.json`
 - `src/data/projects-en.json`
-- `src/data/servicePages.ts`
-- `src/data/servicePagesEn.ts`
+- `src/data/service-pages.json`
+- `src/data/service-pages-en.json`
 
 External service configuration:
 
@@ -85,10 +92,10 @@ For this project, the CMS should edit content files only, not page templates or 
 
 Good CMS target scope:
 
-- Services list
 - Projects / before-after portfolio
 - Long-form service page copy
-- Contact details if you centralize them into one config file
+- Shared contact and business details in one config file
+- Main FR/EN page copy for Home, About, Contact and Privacy
 
 Do not start by making every string editable. Start with the files that already act like content storage.
 
@@ -106,11 +113,11 @@ Why:
 Practical recommendation:
 
 - Best low-friction first step: use a Git-backed CMS and keep content in structured files
-- Best implementation target: move `servicePages.ts` and `servicePagesEn.ts` into JSON or Markdown content collections first, then wire the CMS to those files
+- Best implementation target: keep the current JSON content files as the editable layer and avoid putting business copy back into Astro templates
 
 Why this matters:
 
-`services.json` and `projects.json` are already CMS-friendly. `servicePages.ts` is less CMS-friendly because it is TypeScript data, not plain content.
+This project now keeps editable business copy in JSON content files instead of Astro templates or TypeScript data blobs.
 
 ## Suggested Content Refactor Before Adding CMS
 
@@ -122,7 +129,7 @@ Before building the admin panel, make these changes:
    - address
    - hours
    - booking URL
-2. Convert `servicePages.ts` and `servicePagesEn.ts` into JSON or Markdown-backed content.
+2. Keep service detail pages in `service-pages*.json`.
 3. Keep images in predictable folders and store only paths in content files.
 
 That reduces CMS complexity and prevents the client from accidentally editing structural code.
@@ -156,7 +163,7 @@ Do this in order:
 
 1. Transfer the production workflow to client-owned GitHub + Netlify + Formspree first
 2. Confirm deploys and form submissions work under the client's accounts
-3. Refactor `servicePages*.ts` into content files
+3. Keep the JSON content model as the editable source of truth
 4. Add a small CMS only for content editing
 
 That is the lowest-risk path. Trying to bolt on a CMS before ownership transfer increases the chance that the final setup still depends on your personal accounts.

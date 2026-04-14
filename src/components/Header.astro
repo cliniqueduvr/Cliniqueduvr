@@ -1,9 +1,10 @@
 ---
+import siteSettings from '../data/site-settings.json';
+
 export interface Props {
   lang?: 'fr' | 'en';
 }
 
-const squareBookingUrl = 'https://app.squareup.com/appointments/book/lgocu4o42jy5zu/LGZ9VNRVZ6XXM/start';
 const { lang = 'fr' } = Astro.props as Props;
 const isEnglish = lang === 'en';
 const navItems = isEnglish
@@ -27,15 +28,15 @@ const navItems = isEnglish
   <div class="topbar">
     <div class="container topbar-inner">
       <div class="topbar-left">
-        <a href="tel:+15813373366">(581) 337-3366</a>
-        <a href={squareBookingUrl} target="_blank" rel="noopener" class="square-link">{isEnglish ? 'Book now' : 'Prendre rendez-vous'}</a>
+        <a href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>
+        <a href={siteSettings.squareBookingUrl} target="_blank" rel="noopener" class="square-link">{isEnglish ? 'Book now' : 'Prendre rendez-vous'}</a>
       </div>
       <div class="topbar-right">
         <div class="lang-switch">
           <a href="/" class:list={['lang-pill', !isEnglish && 'active']}>FR</a>
           <a href="/en/" class:list={['lang-pill', isEnglish && 'active']}>EN</a>
         </div>
-        <a href="https://www.facebook.com/profile.php?id=61588265661776" target="_blank" rel="noopener" title="Facebook">
+        <a href={siteSettings.facebookUrl} target="_blank" rel="noopener" title="Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </div>
@@ -45,7 +46,7 @@ const navItems = isEnglish
   <nav class="navbar">
     <div class="container navbar-inner">
       <a href="/" class="logo">
-        <img src="/clinique-du-vr-brand.jpg" alt={isEnglish ? 'Clinique du VR — RV service in Gatineau-Ottawa' : 'Clinique du VR — Service de VR a Gatineau-Ottawa'} />
+        <img src={siteSettings.brandImage} alt={isEnglish ? 'Clinique du VR — RV service in Gatineau-Ottawa' : 'Clinique du VR — Service de VR a Gatineau-Ottawa'} />
       </a>
       <ul class="nav-menu">
         {navItems.map(item => (

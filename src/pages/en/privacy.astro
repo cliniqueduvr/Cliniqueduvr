@@ -3,44 +3,39 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { buildBreadcrumbSchema } from '../../lib/seo';
+import siteSettings from '../../data/site-settings.json';
+import privacyPage from '../../data/privacy-page-en.json';
 const breadcrumbs = buildBreadcrumbSchema([
-  { name: 'Home', path: '/en/' },
-  { name: 'Privacy Policy' }
+  { name: privacyPage.breadcrumbs.home, path: '/en/' },
+  { name: privacyPage.breadcrumbs.current }
 ]);
 ---
 
-<Layout title="Privacy Policy | Clinique du VR" description="Clinique du VR privacy policy for contact requests, appointments and customer communications." lang="en-CA" canonicalPath="/en/privacy/" frPath="/privacy/" enPath="/en/privacy/" schemas={[breadcrumbs]}>
+<Layout title={privacyPage.metaTitle} description={privacyPage.metaDescription} lang="en-CA" canonicalPath="/en/privacy/" frPath="/privacy/" enPath="/en/privacy/" schemas={[breadcrumbs]}>
   <Header lang="en" />
 
   <main>
     <section class="policy-hero">
       <div class="container">
-        <h1>Privacy Policy</h1>
-        <p>Clinique du VR protects the information shared through the contact form, phone calls and booking requests.</p>
+        <h1>{privacyPage.hero.title}</h1>
+        <p>{privacyPage.hero.body}</p>
       </div>
     </section>
 
     <section class="policy-body">
       <div class="container policy-grid">
-        <article class="policy-card">
-          <h2>Information we collect</h2>
-          <p>When you contact us, we may collect your name, email address, phone number, details about your RV and any information needed to understand your service request.</p>
-        </article>
-
-        <article class="policy-card">
-          <h2>How the information is used</h2>
-          <p>This information is used to reply to your request, plan an appointment, prepare an estimate or follow up on an inspection, maintenance or repair file.</p>
-        </article>
-
-        <article class="policy-card">
-          <h2>Sharing and retention</h2>
-          <p>We do not sell personal information. Data is kept only as needed to manage communications and service-related follow-up for your file.</p>
-        </article>
-
-        <article class="policy-card">
-          <h2>Questions</h2>
-          <p>For privacy questions or requests related to your information, email <a href="mailto:info@demosolution.ca">info@demosolution.ca</a> or call <a href="tel:+15813373366">(581) 337-3366</a>.</p>
-        </article>
+        {privacyPage.sections.map((section) => (
+          <article class="policy-card">
+            <h2>{section.heading}</h2>
+            {section.heading === 'Questions' ? (
+              <p>
+                For privacy questions or requests related to your information, email <a href={`mailto:${siteSettings.email}`}>{siteSettings.email}</a> or call <a href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>.
+              </p>
+            ) : (
+              <p>{section.body}</p>
+            )}
+          </article>
+        ))}
       </div>
     </section>
   </main>

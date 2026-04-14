@@ -44,15 +44,23 @@ export function buildFAQSchema(items: FAQItem[]) {
   };
 }
 
-export function buildLocalBusinessSchema() {
+export function buildLocalBusinessSchema({
+  telephone = '+1-581-337-3366',
+  email = 'info@cliniqueduvr.ca',
+  facebookUrl = 'https://www.facebook.com/profile.php?id=61588265661776'
+}: {
+  telephone?: string;
+  email?: string;
+  facebookUrl?: string;
+} = {}) {
   return {
     '@context': 'https://schema.org',
     '@type': 'AutoRepair',
     '@id': `${SITE_URL}/#clinique-du-vr`,
     name: 'Clinique du VR',
     description: 'Entretien, reparation et esthetique de VR a Gatineau-Ottawa',
-    telephone: '+1-581-337-3366',
-    email: 'info@demosolution.ca',
+    telephone,
+    email,
     url: SITE_URL,
     areaServed: [
       { '@type': 'City', name: 'Gatineau' },
@@ -66,9 +74,7 @@ export function buildLocalBusinessSchema() {
     },
     priceRange: '$$',
     image: BRAND_IMAGE,
-    sameAs: [
-      'https://www.facebook.com/profile.php?id=61588265661776'
-    ],
+    sameAs: [facebookUrl],
     review: [
       {
         '@type': 'Review',

@@ -1,0 +1,44 @@
+{
+  "metaTitle": "Contact Clinique du VR | Soumission, Rendez-vous et Atelier Gatineau-Ottawa",
+  "metaDescription": "Contactez Clinique du VR a Gatineau-Ottawa pour une soumission, un rendez-vous ou une demande d'inspection, entretien ou reparation.",
+  "breadcrumbs": {
+    "home": "Accueil",
+    "current": "Contact"
+  },
+  "formSection": {
+    "title": "Contactez-Nous",
+    "intro": "Vous pouvez nous joindre pour une inspection de VR, un entretien, une reparation de fuite d'eau, un probleme de toiture, un service esthetique ou une question avant achat et vente. Plus votre message est precis, plus le retour sera utile.",
+    "unconfiguredNote": "Le formulaire sera active des que le vrai Formspree sera configure. En attendant, appelez-nous ou utilisez Square.",
+    "fields": {
+      "name": "Nom Complet *",
+      "email": "Email *",
+      "phone": "Téléphone",
+      "subject": "Sujet *",
+      "message": "Message *"
+    },
+    "submitLabel": "Envoyer"
+  },
+  "infoSection": {
+    "title": "Informations de Contact",
+    "phoneTitle": "Téléphone",
+    "squareLabel": "Rendez-vous Square",
+    "emailTitle": "Email",
+    "locationTitle": "Localisation",
+    "identityTitle": "Identite d'entreprise",
+    "identityBody": "<strong>RBQ:</strong> 5824-9764-01<br><strong>Professionnels depuis 2013</strong>",
+    "valuesTitle": "Valeurs cles",
+    "valuesBody": "Rapidite • Transparence • Conformite reglementaire • Professionnels certifies",
+    "ctaBody": "Demandez votre <strong>soumission gratuite</strong> par téléphone ou formulaire."
+  },
+  "seoSections": [
+    {
+      "heading": "Atelier VR a Gatineau-Ottawa",
+      "body": "Clinique du VR dessert Gatineau, Ottawa, l'Outaouais et les environs pour les demandes de service reliees aux VR, roulottes et caravanes. Le formulaire et la prise de rendez-vous Square servent autant aux demandes simples qu'aux dossiers plus complexes."
+    },
+    {
+      "heading": "Avant de nous ecrire",
+      "body": "Si vous avez des photos, des signes d'infiltration, des details sur la toiture, les joints, les appareils 12V ou propane, mentionnez-les dans votre message. Cela aide a orienter plus rapidement vers une inspection, un entretien ou une reparation ciblee."
+    }
+  ],
+  "mapTitle": "Clinique du VR - 11 rue de Granby, Unite 18, Gatineau, QC"
+}

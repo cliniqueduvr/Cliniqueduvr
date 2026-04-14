@@ -3,90 +3,90 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { buildBreadcrumbSchema } from '../lib/seo';
+import siteSettings from '../data/site-settings.json';
+import contactPage from '../data/contact-page.json';
 
 const rawFormspreeId = import.meta.env.PUBLIC_FORMSPREE_ID || '';
 const isFormConfigured = Boolean(rawFormspreeId && rawFormspreeId.startsWith('f/'));
 const formAction = isFormConfigured ? `https://formspree.io/f/${rawFormspreeId}` : undefined;
-const squareBookingUrl = 'https://app.squareup.com/appointments/book/lgocu4o42jy5zu/LGZ9VNRVZ6XXM/start';
-const mapAddress = encodeURIComponent('11 rue de Granby, Unité 18, Gatineau, QC');
+const mapAddress = encodeURIComponent(siteSettings.address.mapQuery);
 const breadcrumbs = buildBreadcrumbSchema([
-  { name: 'Accueil', path: '/' },
-  { name: 'Contact' }
+  { name: contactPage.breadcrumbs.home, path: '/' },
+  { name: contactPage.breadcrumbs.current }
 ]);
 ---
 
-<Layout title="Contact Clinique du VR | Soumission, Rendez-vous et Atelier Gatineau-Ottawa" description="Contactez Clinique du VR a Gatineau-Ottawa pour une soumission, un rendez-vous ou une demande d'inspection, entretien ou reparation." canonicalPath="/contact/" frPath="/contact/" enPath="/en/contact/" schemas={[breadcrumbs]}>
+<Layout title={contactPage.metaTitle} description={contactPage.metaDescription} canonicalPath="/contact/" frPath="/contact/" enPath="/en/contact/" schemas={[breadcrumbs]}>
   <Header />
 
   <main>
     <section class="contact-container">
       <div class="container contact-layout">
         <div class="contact-form-section">
-          <h1>Contactez-Nous</h1>
-          <p class="intro-copy">Vous pouvez nous joindre pour une inspection de VR, un entretien, une reparation de fuite d'eau, un probleme de toiture, un service esthetique ou une question avant achat et vente. Plus votre message est precis, plus le retour sera utile.</p>
+          <h1>{contactPage.formSection.title}</h1>
+          <p class="intro-copy">{contactPage.formSection.intro}</p>
           <!-- TODO: Replace with actual Formspree form ID -->
           {!isFormConfigured && (
-            <p class="intro-copy">Le formulaire sera active des que le vrai Formspree sera configure. En attendant, appelez-nous ou utilisez Square.</p>
+            <p class="intro-copy">{contactPage.formSection.unconfiguredNote}</p>
           )}
           <form action={formAction} method="POST">
             <div class="form-group">
-              <label for="name">Nom Complet *</label>
+              <label for="name">{contactPage.formSection.fields.name}</label>
               <input type="text" id="name" name="name" required />
             </div>
             <div class="form-group">
-              <label for="email">Email *</label>
+              <label for="email">{contactPage.formSection.fields.email}</label>
               <input type="email" id="email" name="email" required />
             </div>
             <div class="form-group">
-              <label for="phone">Téléphone</label>
+              <label for="phone">{contactPage.formSection.fields.phone}</label>
               <input type="tel" id="phone" name="phone" />
             </div>
             <div class="form-group">
-              <label for="subject">Sujet *</label>
+              <label for="subject">{contactPage.formSection.fields.subject}</label>
               <input type="text" id="subject" name="subject" required />
             </div>
             <div class="form-group">
-              <label for="message">Message *</label>
+              <label for="message">{contactPage.formSection.fields.message}</label>
               <textarea id="message" name="message" rows="6" required></textarea>
             </div>
-            <button type="submit" class="btn" disabled={!isFormConfigured}>Envoyer</button>
+            <button type="submit" class="btn" disabled={!isFormConfigured}>{contactPage.formSection.submitLabel}</button>
           </form>
         </div>
 
         <div class="contact-info-section">
-          <h2>Informations de Contact</h2>
+          <h2>{contactPage.infoSection.title}</h2>
 
           <div class="info-block">
-            <h3>Téléphone</h3>
+            <h3>{contactPage.infoSection.phoneTitle}</h3>
             <div class="phone-actions">
-              <a href="tel:+15813373366" class="phone-link">(581) 337-3366</a>
-              <a href={squareBookingUrl} target="_blank" rel="noopener" class="square-button">Rendez-vous Square</a>
+              <a href={`tel:${siteSettings.phone.href}`} class="phone-link">{siteSettings.phone.display}</a>
+              <a href={siteSettings.squareBookingUrl} target="_blank" rel="noopener" class="square-button">{contactPage.infoSection.squareLabel}</a>
             </div>
           </div>
 
           <div class="info-block">
-            <h3>Email</h3>
-            <p><a href="mailto:info@demosolution.ca">info@demosolution.ca</a></p>
+            <h3>{contactPage.infoSection.emailTitle}</h3>
+            <p><a href={`mailto:${siteSettings.email}`}>{siteSettings.email}</a></p>
           </div>
 
           <div class="info-block">
-            <h3>Localisation</h3>
-            <p>11 rue de Granby, Unite 18, Gatineau, QC<br>Service: Gatineau, Ottawa, Laurentides, Outaouais, Quebec et Ontario</p>
+            <h3>{contactPage.infoSection.locationTitle}</h3>
+            <p>{siteSettings.address.fr}<br>Service: {siteSettings.serviceArea.fr}</p>
           </div>
 
           <div class="info-block">
-            <h3>Identite d'entreprise</h3>
-            <p><strong>RBQ:</strong> 5824-9764-01<br>
-            <strong>Professionnels depuis 2013</strong></p>
+            <h3>{contactPage.infoSection.identityTitle}</h3>
+            <p set:html={contactPage.infoSection.identityBody} />
           </div>
 
           <div class="info-block">
-            <h3>Valeurs cles</h3>
-            <p>Rapidite • Transparence • Conformite reglementaire • Professionnels certifies</p>
+            <h3>{contactPage.infoSection.valuesTitle}</h3>
+            <p>{contactPage.infoSection.valuesBody}</p>
           </div>
 
           <div class="info-block cta">
-            <p>Demandez votre <strong>soumission gratuite</strong> par téléphone ou formulaire.</p>
+            <p set:html={contactPage.infoSection.ctaBody} />
           </div>
         </div>
       </div>
@@ -94,20 +94,18 @@ const breadcrumbs = buildBreadcrumbSchema([
 
     <section class="contact-seo">
       <div class="container seo-columns">
-        <div>
-          <h2>Atelier VR a Gatineau-Ottawa</h2>
-          <p>Clinique du VR dessert Gatineau, Ottawa, l'Outaouais et les environs pour les demandes de service reliees aux VR, roulottes et caravanes. Le formulaire et la prise de rendez-vous Square servent autant aux demandes simples qu'aux dossiers plus complexes.</p>
-        </div>
-        <div>
-          <h2>Avant de nous ecrire</h2>
-          <p>Si vous avez des photos, des signes d'infiltration, des details sur la toiture, les joints, les appareils 12V ou propane, mentionnez-les dans votre message. Cela aide a orienter plus rapidement vers une inspection, un entretien ou une reparation ciblee.</p>
-        </div>
+        {contactPage.seoSections.map((section) => (
+          <div>
+            <h2>{section.heading}</h2>
+            <p>{section.body}</p>
+          </div>
+        ))}
       </div>
     </section>
 
     <section class="map-section">
       <iframe
-        title="Clinique du VR - 11 rue de Granby, Unite 18, Gatineau, QC"
+        title={contactPage.mapTitle}
         src={`https://www.google.com/maps?q=${mapAddress}&output=embed`}
         width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>

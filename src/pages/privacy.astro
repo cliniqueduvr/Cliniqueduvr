@@ -3,44 +3,39 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { buildBreadcrumbSchema } from '../lib/seo';
+import siteSettings from '../data/site-settings.json';
+import privacyPage from '../data/privacy-page.json';
 const breadcrumbs = buildBreadcrumbSchema([
-  { name: 'Accueil', path: '/' },
-  { name: 'Politique de confidentialite' }
+  { name: privacyPage.breadcrumbs.home, path: '/' },
+  { name: privacyPage.breadcrumbs.current }
 ]);
 ---
 
-<Layout title="Politique de confidentialite | Clinique du VR" description="Politique de confidentialite de Clinique du VR pour les demandes de soumission, rendez-vous et communications clients." canonicalPath="/privacy/" frPath="/privacy/" enPath="/en/privacy/" schemas={[breadcrumbs]}>
+<Layout title={privacyPage.metaTitle} description={privacyPage.metaDescription} canonicalPath="/privacy/" frPath="/privacy/" enPath="/en/privacy/" schemas={[breadcrumbs]}>
   <Header />
 
   <main>
     <section class="policy-hero">
       <div class="container">
-        <h1>Politique de confidentialite</h1>
-        <p>Clinique du VR protege les renseignements partages via le formulaire de contact, le telephone et la prise de rendez-vous.</p>
+        <h1>{privacyPage.hero.title}</h1>
+        <p>{privacyPage.hero.body}</p>
       </div>
     </section>
 
     <section class="policy-body">
       <div class="container policy-grid">
-        <article class="policy-card">
-          <h2>Renseignements recueillis</h2>
-          <p>Lorsque vous nous contactez, nous pouvons recueillir votre nom, votre courriel, votre numero de telephone, des details sur votre VR et toute information utile a votre demande de service.</p>
-        </article>
-
-        <article class="policy-card">
-          <h2>Utilisation des renseignements</h2>
-          <p>Ces informations servent a repondre a votre demande, planifier un rendez-vous, preparer une soumission ou assurer le suivi d'un dossier de service, d'inspection ou de reparation.</p>
-        </article>
-
-        <article class="policy-card">
-          <h2>Partage et conservation</h2>
-          <p>Nous ne vendons pas vos renseignements personnels. Les donnees sont conservees uniquement pour la gestion des communications et des services relies a votre dossier.</p>
-        </article>
-
-        <article class="policy-card">
-          <h2>Questions</h2>
-          <p>Pour toute question liee a la confidentialite ou a vos renseignements, ecrivez a <a href="mailto:info@demosolution.ca">info@demosolution.ca</a> ou appelez au <a href="tel:+15813373366">(581) 337-3366</a>.</p>
-        </article>
+        {privacyPage.sections.map((section) => (
+          <article class="policy-card">
+            <h2>{section.heading}</h2>
+            {section.heading === 'Questions' ? (
+              <p>
+                Pour toute question liee a la confidentialite ou a vos renseignements, ecrivez a <a href={`mailto:${siteSettings.email}`}>{siteSettings.email}</a> ou appelez au <a href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>.
+              </p>
+            ) : (
+              <p>{section.body}</p>
+            )}
+          </article>
+        ))}
       </div>
     </section>
   </main>

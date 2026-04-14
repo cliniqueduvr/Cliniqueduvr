@@ -3,8 +3,10 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import CTABanner from '../../components/CTABanner.astro';
-import { servicePagesEn } from '../../data/servicePagesEn';
+import servicePagesData from '../../data/service-pages-en.json';
+import type { ServicePage } from '../../data/service-page-types';
 import { buildBreadcrumbSchema } from '../../lib/seo';
+const servicePagesEn = servicePagesData.items as ServicePage[];
 const breadcrumbs = buildBreadcrumbSchema([
   { name: 'Home', path: '/en/' },
   { name: 'Services' }

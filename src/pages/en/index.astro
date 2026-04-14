@@ -3,16 +3,21 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { buildLocalBusinessSchema } from '../../lib/seo';
+import siteSettings from '../../data/site-settings.json';
+import homePage from '../../data/home-page-en.json';
 
 const rawFormspreeId = import.meta.env.PUBLIC_FORMSPREE_ID || '';
 const isFormConfigured = Boolean(rawFormspreeId && rawFormspreeId.startsWith('f/'));
 const formAction = isFormConfigured ? `https://formspree.io/f/${rawFormspreeId}` : undefined;
-const squareBookingUrl = 'https://app.squareup.com/appointments/book/lgocu4o42jy5zu/LGZ9VNRVZ6XXM/start';
-const schemas = [buildLocalBusinessSchema()];
+const schemas = [buildLocalBusinessSchema({
+  telephone: siteSettings.phone.href,
+  email: siteSettings.email,
+  facebookUrl: siteSettings.facebookUrl
+})];
 
 const meta = {
-  title: 'Clinique du VR | RV inspection, maintenance and repair in Gatineau-Ottawa',
-  description: 'Clinique du VR offers RV inspection, maintenance, repair, detailing and buying selling support in Gatineau-Ottawa.'
+  title: homePage.metaTitle,
+  description: homePage.metaDescription
 };
 ---
 
@@ -22,65 +27,55 @@ const meta = {
   <main>
     <section class="hero">
       <div class="hero-content">
-        <img class="hero-logo" src="/clinique-du-vr-brand.jpg" alt="Clinique du VR logo — RV maintenance, repair and detailing" />
-        <h1>Clinique du VR — RV inspection, maintenance and repair in Gatineau-Ottawa</h1>
-        <p class="hero-tagline">Your water infiltration specialist in Outaouais</p>
+        <img class="hero-logo" src={siteSettings.brandImage} alt={homePage.hero.logoAlt} />
+        <h1>{homePage.hero.title}</h1>
+        <p class="hero-tagline">{homePage.hero.tagline}</p>
       </div>
     </section>
 
     <section id="about" class="intro-section">
       <div class="container intro-grid">
-        <div class="intro-card">
-          <div class="card-icon">
-            <i class="fas fa-building"></i>
+        {homePage.introCards.map((card) => (
+          <div class="intro-card">
+            <div class="card-icon">
+              <i class={card.icon}></i>
+            </div>
+            <h2>{card.heading}</h2>
+            <p set:html={card.body} />
           </div>
-          <h2>Why Choose Clinique du VR?</h2>
-          <p><strong>Specialized and attentive service</strong> for RV maintenance, repair and detailing. Speed, transparency, regulatory compliance and careful execution from start to finish.</p>
-        </div>
-
-        <div class="intro-card">
-          <div class="card-icon">
-            <i class="fas fa-wrench"></i>
-          </div>
-          <h2>Our Services</h2>
-          <p><strong>Preventive maintenance</strong> • <strong>Mechanical and cosmetic repairs</strong> • <strong>RV inspections</strong> • <strong>Refresh work</strong> • <strong>Cleaning and detailing</strong> • <strong>Custom interventions</strong></p>
-        </div>
+        ))}
       </div>
     </section>
 
     <section class="services-overview">
       <div class="container">
-        <h2>Our Specialties</h2>
+        <h2>{homePage.servicesOverview.title}</h2>
         <div class="services-grid">
-          <a href="/en/services/inspection/" class="service-item"><i class="fas fa-clipboard-check"></i><span>Inspection</span></a>
-          <a href="/en/services/maintenance/" class="service-item"><i class="fas fa-screwdriver-wrench"></i><span>Maintenance</span></a>
-          <a href="/en/services/repair/" class="service-item"><i class="fas fa-toolbox"></i><span>Repair</span></a>
-          <a href="/en/services/detailing/" class="service-item"><i class="fas fa-spray-can-sparkles"></i><span>Detailing</span></a>
-          <a href="/en/services/buying-selling/" class="service-item"><i class="fas fa-van-shuttle"></i><span>Buying and Selling</span></a>
+          {homePage.servicesOverview.items.map((item) => (
+            <a href={item.href} class="service-item"><i class={item.icon}></i><span>{item.label}</span></a>
+          ))}
         </div>
       </div>
     </section>
 
     <section class="seo-copy">
       <div class="container seo-grid">
-        <div>
-          <h2>RV service in Gatineau-Ottawa</h2>
-          <p>Clinique du VR supports RV, trailer and caravan owners with common service needs such as pre-purchase inspection, preventive maintenance, water leak repair, roof work, refresh work and detailing. The workshop is based in Gatineau and also serves Ottawa, Outaouais, Laurentides, Quebec and Ontario clients.</p>
-        </div>
-        <div>
-          <h2>A clearer service structure</h2>
-          <p>When an RV shows signs of wear, water intrusion or visible deterioration, the first step is to understand the real condition of the vehicle. From there, we help guide you toward inspection, maintenance, repair, detailing or buying and selling support based on what is actually needed.</p>
-        </div>
+        {homePage.seoSections.map((section) => (
+          <div>
+            <h2>{section.heading}</h2>
+            <p>{section.body}</p>
+          </div>
+        ))}
       </div>
     </section>
 
     <section class="cta-banner">
       <div class="container cta-content">
-        <h2>Request your free estimate</h2>
-        <p>Inspection and estimate with no obligation</p>
+        <h2>{homePage.cta.heading}</h2>
+        <p>{homePage.cta.subheading}</p>
         <div class="cta-actions">
-          <a href="tel:+15813373366" class="cta-button"><i class="fas fa-phone"></i> (581) 337-3366</a>
-          <a href={squareBookingUrl} target="_blank" rel="noopener" class="square-button"><i class="fas fa-calendar-check"></i> Book now</a>
+          <a href={`tel:${siteSettings.phone.href}`} class="cta-button"><i class="fas fa-phone"></i> {siteSettings.phone.display}</a>
+          <a href={siteSettings.squareBookingUrl} target="_blank" rel="noopener" class="square-button"><i class="fas fa-calendar-check"></i> {homePage.cta.squareLabel}</a>
         </div>
       </div>
     </section>
@@ -88,49 +83,43 @@ const meta = {
     <section class="contact-section">
       <div class="container contact-grid">
         <div class="contact-form-wrapper">
-          <h2>Contact Us</h2>
+          <h2>{homePage.contactForm.heading}</h2>
           <!-- TODO: Replace with actual Formspree form ID -->
           {!isFormConfigured && (
-            <p class="form-note">The contact form is not configured in production yet. Please use the phone number or Square booking link for now.</p>
+            <p class="form-note">{homePage.contactForm.unconfiguredNote}</p>
           )}
           <form action={formAction} method="POST">
-            <input type="text" name="name" placeholder="Your name" required />
-            <input type="email" name="email" placeholder="Your email" required />
-            <input type="text" name="subject" placeholder="Subject" required />
-            <textarea name="message" placeholder="Your message" rows="5" required></textarea>
-            <button type="submit" disabled={!isFormConfigured}>Send</button>
+            <input type="text" name="name" placeholder={homePage.contactForm.namePlaceholder} required />
+            <input type="email" name="email" placeholder={homePage.contactForm.emailPlaceholder} required />
+            <input type="text" name="subject" placeholder={homePage.contactForm.subjectPlaceholder} required />
+            <textarea name="message" placeholder={homePage.contactForm.messagePlaceholder} rows="5" required></textarea>
+            <button type="submit" disabled={!isFormConfigured}>{homePage.contactForm.submitLabel}</button>
           </form>
         </div>
 
         <div class="contact-info">
-          <h3>Contact Information</h3>
-          <p><strong>Phone:</strong> <a href="tel:+15813373366">(581) 337-3366</a></p>
-          <p><strong>Square:</strong> <a href={squareBookingUrl} target="_blank" rel="noopener">Book now</a></p>
-          <p><strong>Email:</strong> <a href="mailto:info@demosolution.ca">info@demosolution.ca</a></p>
-          <p><strong>Address:</strong> 11 rue de Granby, Unit 18, Gatineau, QC</p>
-          <p><strong>Service area:</strong> Gatineau, Ottawa, Laurentides, Outaouais, Quebec and Ontario</p>
-          <p><strong>RBQ:</strong> 5824-9764-01 | <strong>Since:</strong> 2013</p>
-          <p class="cta-text">Free and confidential estimate. Call us or send us a message.</p>
+          <h3>{homePage.contactPanel.heading}</h3>
+          <p><strong>Phone:</strong> <a href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a></p>
+          <p><strong>Square:</strong> <a href={siteSettings.squareBookingUrl} target="_blank" rel="noopener">{homePage.contactPanel.squareLabel}</a></p>
+          <p><strong>Email:</strong> <a href={`mailto:${siteSettings.email}`}>{siteSettings.email}</a></p>
+          <p><strong>Address:</strong> {siteSettings.address.en}</p>
+          <p><strong>Service area:</strong> {siteSettings.serviceArea.en}</p>
+          <p><strong>RBQ:</strong> {siteSettings.rbq} | <strong>Since:</strong> {siteSettings.sinceYear}</p>
+          <p class="cta-text">{homePage.contactPanel.ctaText}</p>
         </div>
       </div>
     </section>
 
     <section class="reviews-section">
       <div class="container">
-        <h2>Google Reviews</h2>
+        <h2>{homePage.reviews.heading}</h2>
         <div class="reviews-grid">
-          <article class="review-card">
-            <p class="review-text">"Cedric was on time, explained everything clearly and delivered the results the next day as promised."</p>
-            <p class="review-author">Jesse Brook</p>
-          </article>
-          <article class="review-card">
-            <p class="review-text">"Professional and courteous service."</p>
-            <p class="review-author">Stephane Desgagne</p>
-          </article>
-          <article class="review-card">
-            <p class="review-text">"Efficient company, easy to communicate with, and professional work from start to finish."</p>
-            <p class="review-author">Philippe Albert</p>
-          </article>
+          {homePage.reviews.items.map((review) => (
+            <article class="review-card">
+              <p class="review-text">"{review.quote}"</p>
+              <p class="review-author">{review.author}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>

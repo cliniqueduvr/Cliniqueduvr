@@ -1,0 +1,30 @@
+{
+  "metaTitle": "Privacy Policy | Clinique du VR",
+  "metaDescription": "Clinique du VR privacy policy for contact requests, appointments and customer communications.",
+  "breadcrumbs": {
+    "home": "Home",
+    "current": "Privacy Policy"
+  },
+  "hero": {
+    "title": "Privacy Policy",
+    "body": "Clinique du VR protects the information shared through the contact form, phone calls and booking requests."
+  },
+  "sections": [
+    {
+      "heading": "Information we collect",
+      "body": "When you contact us, we may collect your name, email address, phone number, details about your RV and any information needed to understand your service request."
+    },
+    {
+      "heading": "How the information is used",
+      "body": "This information is used to reply to your request, plan an appointment, prepare an estimate or follow up on an inspection, maintenance or repair file."
+    },
+    {
+      "heading": "Sharing and retention",
+      "body": "We do not sell personal information. Data is kept only as needed to manage communications and service-related follow-up for your file."
+    },
+    {
+      "heading": "Questions",
+      "body": "For privacy questions or requests related to your information, email info@cliniqueduvr.ca or call (581) 337-3366."
+    }
+  ]
+}

@@ -51,11 +51,14 @@ Your Demo Solution website has been **completely redesigned and optimized** from
 
 **New Data Files:**
 
-1. **`src/data/services.json`** — 6 services
-   - Automatically renders ServiceCard components
+1. **`src/data/service-pages.json`** — FR service list and service-page content
+   - Automatically renders service listing and FR detail pages
    - Easy to add/edit/remove services without code changes
 
-2. **`src/data/projects.json`** — 6 portfolio projects
+2. **`src/data/service-pages-en.json`** — EN service list and service-page content
+   - Automatically renders service listing and EN detail pages
+
+3. **`src/data/projects.json`** — 6 portfolio projects
    - Automatically renders ProjectCard components
    - Before/after image references
    - Ready for real project images
@@ -67,13 +70,6 @@ Your Demo Solution website has been **completely redesigned and optimized** from
 - Scalable to unlimited items
 
 ### ✅ Component Library
-
-**ServiceCard.astro**
-- Renders individual service block
-- Alternates dark/light backgrounds
-- Icon + title + description + details
-- Fully responsive
-- ~60 lines reusable code
 
 **ProjectCard.astro**
 - Semantic `<figure>/<figcaption>` structure
@@ -95,7 +91,7 @@ Your Demo Solution website has been **completely redesigned and optimized** from
 | Page | Changes | Benefit |
 |------|---------|---------|
 | **index.astro** | CTA banner + environment variables | Professional, conversion-focused |
-| **services.astro** | Uses ServiceCard component from JSON | Clean, maintainable |
+| **services.astro** | Uses shared service-page JSON | Clean, maintainable |
 | **realisations.astro** | Uses ProjectCard component from JSON | Semantic HTML, scalable |
 | **contact.astro** | Environment variables, iframe title attr | Configurable, accessible |
 
@@ -117,7 +113,6 @@ Demo-Solution-Redesign/
 │   ├── components/
 │   │   ├── Header.astro              (Navigation + CTA)
 │   │   ├── Footer.astro              (Links + info)
-│   │   ├── ServiceCard.astro         ✨ NEW
 │   │   ├── ProjectCard.astro         ✨ NEW
 │   │   └── CTABanner.astro           ✨ NEW
 │   ├── pages/
@@ -128,7 +123,8 @@ Demo-Solution-Redesign/
 │   ├── layouts/
 │   │   └── Layout.astro              (Master template)
 │   ├── data/                          ✨ NEW
-│   │   ├── services.json             (6 services)
+│   │   ├── service-pages.json        (FR services)
+│   │   ├── service-pages-en.json     (EN services)
 │   │   └── projects.json             (6 projects)
 │   └── images/                        (Your before/after photos go here)
 ├── .env                               ✨ CREATED
@@ -153,7 +149,7 @@ Demo-Solution-Redesign/
 | **Green color scheme** | ✅ Complete | #2d5016, #1f3910 throughout |
 | **Professional layout** | ✅ Complete | Modern grid-based, responsive design |
 | **Real business info** | ✅ Complete | RBQ, phone, email, services, location |
-| **Service descriptions** | ✅ Complete | 6 services in `services.json` |
+| **Service descriptions** | ✅ Complete | 6 services in `service-pages.json` / `service-pages-en.json` |
 | **Contact info** | ✅ Complete | Phone, email, maps, form |
 | **SEO optimized** | ✅ Complete | Meta tags, semantic HTML, structured data ready |
 | **Mobile responsive** | ✅ Complete | Works 375px - 2560px widths |
@@ -219,13 +215,6 @@ Once the above is complete, you can:
 
 ## What Each Component Does
 
-### ServiceCard Component
-```
-Input: JSON object with id, title, icon, description, details
-Output: Dark or light background block with service info
-Usage: services.astro maps this over services.json
-```
-
 ### ProjectCard Component
 ```
 Input: JSON object with project details + image paths
@@ -270,7 +259,7 @@ Based on Astro's static generation:
 - All URLs remain the same
 - No routing changes
 - Component structure is stable
-- Can safely edit `services.json` and `projects.json` without rebuilding code
+- Can safely edit `service-pages.json`, `service-pages-en.json`, and `projects.json` without rebuilding templates
 
 ---
 
@@ -350,7 +339,7 @@ Based on Astro's static generation:
 ### File Reference
 - **Formspree integration:** `.env` file
 - **Google Maps:** `.env` file
-- **Services content:** `src/data/services.json`
+- **Services content:** `src/data/service-pages.json` and `src/data/service-pages-en.json`
 - **Projects content:** `src/data/projects.json`
 - **Business contact info:** `src/components/Header.astro`, `Footer.astro`
 - **Colors/styling:** Individual `.astro` component `<style>` blocks

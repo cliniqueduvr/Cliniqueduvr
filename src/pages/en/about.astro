@@ -3,6 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { buildBreadcrumbSchema } from '../../lib/seo';
+import siteSettings from '../../data/site-settings.json';
+import aboutPage from '../../data/about-page-en.json';
 
 const breadcrumbs = buildBreadcrumbSchema([
   { name: 'Home', path: '/en/' },
@@ -11,8 +13,8 @@ const breadcrumbs = buildBreadcrumbSchema([
 ---
 
 <Layout
-  title="About Clinique du VR | RV Workshop in Gatineau-Ottawa"
-  description="About Clinique du VR: RV workshop in Gatineau-Ottawa, operating since 2013 with RBQ credentials and regional service coverage."
+  title={aboutPage.metaTitle}
+  description={aboutPage.metaDescription}
   lang="en-CA"
   canonicalPath="/en/about/"
   frPath="/about/"
@@ -25,37 +27,24 @@ const breadcrumbs = buildBreadcrumbSchema([
     <section class="about-hero">
       <div class="container hero-grid">
         <div>
-          <h1>About Clinique du VR</h1>
-          <p>Clinique du VR is a specialized workshop focused on RV inspection, maintenance, repair and detailing in Gatineau-Ottawa. The business supports RV, trailer and caravan owners with practical guidance and service work built around clarity, condition assessment and durable results.</p>
+          <h1>{aboutPage.hero.title}</h1>
+          <p>{aboutPage.hero.body}</p>
         </div>
         <figure class="brand-card">
-          <img src="/clinique-du-vr-brand.jpg" alt="Clinique du VR — RV service in Gatineau-Ottawa" />
-          <figcaption>Clinique du VR — workshop service for recreational vehicles in Gatineau-Ottawa</figcaption>
+          <img src={siteSettings.brandImage} alt={aboutPage.hero.imageAlt} />
+          <figcaption>{aboutPage.hero.caption}</figcaption>
         </figure>
       </div>
     </section>
 
     <section class="about-body">
       <div class="container about-grid">
-        <article class="about-card">
-          <h2>Technical leadership and experience</h2>
-          <p>Clinique du VR has supported RV owners since 2013 with a practical, attentive approach focused on durable work. The workshop emphasizes clear explanations, realistic condition assessment and recommendations that match how the vehicle is actually used.</p>
-        </article>
-
-        <article class="about-card">
-          <h2>What the RBQ license means</h2>
-          <p>RBQ number 5824-9764-01 signals that the company operates within a recognized Quebec regulatory framework. For a customer, that adds trust when handing over an RV for inspection, maintenance, repair or restorative work, especially where water intrusion, structure and higher-risk service areas are involved.</p>
-        </article>
-
-        <article class="about-card">
-          <h2>Service area</h2>
-          <p>Clinique du VR serves Gatineau and Ottawa first, while also helping customers across Outaouais, Laurentides and other areas of Quebec and Ontario when the project makes sense. That regional footprint matters for pre-purchase inspections, water leak repair, seasonal maintenance and pre-sale preparation.</p>
-        </article>
-
-        <article class="about-card">
-          <h2>Workshop mission</h2>
-          <p>The mission is straightforward: help RV owners understand the actual condition of the vehicle, prioritize the right work and avoid expensive surprises. That means direct communication, practical diagnosis and recommendations that match budget, use case and season.</p>
-        </article>
+        {aboutPage.sections.map((section) => (
+          <article class="about-card">
+            <h2>{section.heading}</h2>
+            <p>{section.body}</p>
+          </article>
+        ))}
       </div>
     </section>
   </main>

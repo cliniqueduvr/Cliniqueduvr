@@ -1,0 +1,28 @@
+{
+  "metaTitle": "A propos de Clinique du VR | Atelier VR a Gatineau-Ottawa",
+  "metaDescription": "A propos de Clinique du VR: atelier VR a Gatineau-Ottawa, experience depuis 2013, permis RBQ et service regional.",
+  "hero": {
+    "title": "A propos de Clinique du VR",
+    "body": "Clinique du VR est un atelier de service specialise en inspection, entretien, reparation et esthetique de VR a Gatineau-Ottawa. L'entreprise accompagne les proprietaires de VR, roulottes et caravanes avec une approche claire, pratique et orientee vers la durabilite des travaux.",
+    "imageAlt": "Clinique du VR — Service de VR a Gatineau-Ottawa",
+    "caption": "Clinique du VR — atelier de service pour vehicules recreatifs a Gatineau-Ottawa"
+  },
+  "sections": [
+    {
+      "heading": "Direction technique et experience",
+      "body": "Clinique du VR accompagne les proprietaires de VR depuis 2013 avec une approche pratique, attentive et orientee vers la durabilite des travaux. L atelier privilegie les explications claires, la lecture concrete de l etat du vehicule et des recommandations adaptees a l usage reel du VR."
+    },
+    {
+      "heading": "Ce que signifie le permis RBQ",
+      "body": "Le numero RBQ 5824-9764-01 indique que l'entreprise opere avec un cadre reglementaire reconnu au Quebec. Pour un client, cela renforce la confiance au moment de confier un VR pour inspection, entretien, reparation ou remise en etat, surtout quand il s'agit de travaux touchant l'etancheite, la structure ou les composantes critiques."
+    },
+    {
+      "heading": "Zone de service",
+      "body": "Clinique du VR dessert Gatineau et Ottawa en priorite, tout en accompagnant aussi des clients de l'Outaouais, des Laurentides ainsi que d'autres secteurs du Quebec et de l'Ontario lorsque le dossier le justifie. Cette couverture regionale est utile pour les inspections avant achat, les reparations de fuite d'eau, l'entretien saisonnier et la preparation avant vente."
+    },
+    {
+      "heading": "Mission de l'atelier",
+      "body": "La mission est simple: aider les proprietaires de VR a comprendre l'etat reel de leur vehicule, prioriser les bons travaux et eviter les mauvaises surprises. Cela passe par une communication directe, une lecture pratique des problemes, et des recommandations qui tiennent compte du budget, de l'usage et de la saison."
+    }
+  ]
+}

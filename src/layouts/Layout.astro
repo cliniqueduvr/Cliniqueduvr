@@ -1,4 +1,6 @@
 ---
+import siteSettings from '../data/site-settings.json';
+
 interface Props {
   title: string;
   description: string;
@@ -186,14 +188,14 @@ const isEnglish = lang === 'en-CA';
     <div class="mobile-action-bar" aria-label={isEnglish ? 'Quick contact actions' : 'Actions de contact rapide'}>
       <a
         class="mobile-action mobile-action-email"
-        href="mailto:info@demosolution.ca"
+        href={`mailto:${siteSettings.email}`}
         aria-label={isEnglish ? 'Send an email' : 'Envoyer un courriel'}
       >
         <i class="fas fa-envelope" aria-hidden="true"></i>
       </a>
       <a
         class="mobile-action mobile-action-phone"
-        href="tel:+15813373366"
+        href={`tel:${siteSettings.phone.href}`}
         aria-label={isEnglish ? 'Call now' : 'Appeler maintenant'}
       >
         <i class="fas fa-phone" aria-hidden="true"></i>

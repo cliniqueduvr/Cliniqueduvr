@@ -1,9 +1,10 @@
 ---
+import siteSettings from '../data/site-settings.json';
+
 export interface Props {
   lang?: 'fr' | 'en';
 }
 
-const squareBookingUrl = 'https://app.squareup.com/appointments/book/lgocu4o42jy5zu/LGZ9VNRVZ6XXM/start';
 const { lang = 'fr' } = Astro.props as Props;
 const isEnglish = lang === 'en';
 ---
@@ -11,16 +12,16 @@ const isEnglish = lang === 'en';
 <footer class="footer">
   <div class="container footer-content">
     <div class="footer-col">
-      <img class="footer-brand" src="/clinique-du-vr-brand.jpg" alt="Clinique du VR" />
-      <p>{isEnglish ? 'RV maintenance, repair and detailing with a clear, careful and service-oriented approach.' : 'Entretien, reparation et esthetique de VR avec une approche claire, soignee et orientee service.'}</p>
+      <img class="footer-brand" src={siteSettings.brandImage} alt={siteSettings.brandName} />
+      <p>{isEnglish ? siteSettings.footerDescription.en : siteSettings.footerDescription.fr}</p>
     </div>
     <div class="footer-col">
       <h4>{isEnglish ? 'Contact' : 'Contact'}</h4>
       <p>
-        <strong>{isEnglish ? 'Phone:' : 'Téléphone:'}</strong> <a href="tel:+15813373366">(581) 337-3366</a><br>
-        <strong>Square:</strong> <a href={squareBookingUrl} target="_blank" rel="noopener">{isEnglish ? 'Book now' : 'Prendre rendez-vous'}</a><br>
-        <strong>Email:</strong> <a href="mailto:info@demosolution.ca">info@demosolution.ca</a><br>
-        <strong>RBQ:</strong> 5824-9764-01
+        <strong>{isEnglish ? 'Phone:' : 'Téléphone:'}</strong> <a href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a><br>
+        <strong>Square:</strong> <a href={siteSettings.squareBookingUrl} target="_blank" rel="noopener">{isEnglish ? 'Book now' : 'Prendre rendez-vous'}</a><br>
+        <strong>Email:</strong> <a href={`mailto:${siteSettings.email}`}>{siteSettings.email}</a><br>
+        <strong>RBQ:</strong> {siteSettings.rbq}
       </p>
     </div>
     <div class="footer-col">
@@ -35,7 +36,7 @@ const isEnglish = lang === 'en';
     </div>
     <div class="footer-col">
       <h4>{isEnglish ? 'Follow Us' : 'Nous Suivre'}</h4>
-      <a href="https://www.facebook.com/profile.php?id=61588265661776" target="_blank" rel="noopener">
+      <a href={siteSettings.facebookUrl} target="_blank" rel="noopener">
         <i class="fab fa-facebook"></i> Facebook
       </a>
       <p class="footer-legal">
@@ -45,7 +46,7 @@ const isEnglish = lang === 'en';
   </div>
   <div class="footer-bottom">
     <div class="container">
-      <p>&copy; 2026 Clinique du VR. {isEnglish ? 'All rights reserved.' : 'Tous droits réservés.'}</p>
+      <p>&copy; 2026 {siteSettings.brandName}. {isEnglish ? 'All rights reserved.' : 'Tous droits réservés.'}</p>
     </div>
   </div>
 </footer>

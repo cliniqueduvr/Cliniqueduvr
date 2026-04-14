@@ -1,0 +1,44 @@
+{
+  "metaTitle": "Contact Clinique du VR | Estimate, Booking and Gatineau-Ottawa Workshop",
+  "metaDescription": "Contact Clinique du VR in Gatineau-Ottawa for an estimate, appointment or RV inspection, maintenance and repair request.",
+  "breadcrumbs": {
+    "home": "Home",
+    "current": "Contact"
+  },
+  "formSection": {
+    "title": "Contact Us",
+    "intro": "You can contact us for an RV inspection, maintenance request, water leak issue, roof concern, detailing service or support before buying or selling. The more specific the message, the more useful the first reply will be.",
+    "unconfiguredNote": "The form will be activated once the real Formspree ID is configured. Until then, please call us or use Square booking.",
+    "fields": {
+      "name": "Full Name *",
+      "email": "Email *",
+      "phone": "Phone",
+      "subject": "Subject *",
+      "message": "Message *"
+    },
+    "submitLabel": "Send"
+  },
+  "infoSection": {
+    "title": "Contact Information",
+    "phoneTitle": "Phone",
+    "squareLabel": "Book now",
+    "emailTitle": "Email",
+    "locationTitle": "Location",
+    "identityTitle": "Business Identity",
+    "identityBody": "<strong>RBQ:</strong> 5824-9764-01<br><strong>Since:</strong> 2013",
+    "valuesTitle": "Key Values",
+    "valuesBody": "Speed • Transparency • Regulatory compliance • Certified professionals",
+    "ctaBody": "Request your <strong>free estimate</strong> by phone, Square booking, or contact form."
+  },
+  "seoSections": [
+    {
+      "heading": "RV workshop in Gatineau-Ottawa",
+      "body": "Clinique du VR serves Gatineau, Ottawa, Outaouais and nearby areas for RV, trailer and caravan service requests. The contact form and Square booking link can both be used for quick questions as well as larger service files."
+    },
+    {
+      "heading": "Before you send a message",
+      "body": "If you have photos, signs of water intrusion, roof concerns, seal issues or notes about propane and electrical systems, include them in your message. That helps us direct the request faster toward inspection, maintenance or repair."
+    }
+  ],
+  "mapTitle": "Clinique du VR - 11 rue de Granby, Unit 18, Gatineau, QC"
+}
