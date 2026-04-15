@@ -122,7 +122,7 @@ const meta = {
         <div class="contact-info">
           <h3>{homePage.contactPanel.heading}</h3>
           <p><strong>Téléphone:</strong> <a href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a></p>
-          <p><strong>Square:</strong> <a href={siteSettings.squareBookingUrl} target="_blank" rel="noopener">{homePage.contactPanel.squareLabel}</a></p>
+          <p><a href={siteSettings.squareBookingUrl} target="_blank" rel="noopener" class="contact-booking-link">{homePage.contactPanel.squareLabel}</a></p>
           <p><strong>Email:</strong> <a href={`mailto:${siteSettings.email}`}>{siteSettings.email}</a></p>
           <p><strong>Adresse:</strong> {siteSettings.address.fr}</p>
           <p><strong>Territoire desservi:</strong> {siteSettings.serviceArea.fr}</p>
@@ -321,6 +321,32 @@ const meta = {
 
   .contact-info p {
     margin-bottom: 0.75rem;
+  }
+
+  .contact-info a {
+    color: white;
+    font-weight: 700;
+  }
+
+  .contact-info a:hover {
+    color: var(--brand-gold);
+  }
+
+  .contact-info .contact-booking-link {
+    display: inline-block;
+    background: var(--brand-gold);
+    color: var(--brand-navy-dark);
+    padding: 0.7rem 1.1rem;
+    border-radius: 999px;
+    border: 2px solid var(--brand-gold);
+    text-decoration: none;
+  }
+
+  .contact-info .contact-booking-link:hover {
+    color: var(--brand-navy-dark);
+    background: #e1c317;
+    border-color: #e1c317;
+    text-decoration: none;
   }
 
   .cta-text {
