@@ -72,7 +72,7 @@ export function buildLocalBusinessSchema({
     '@type': 'AutoRepair',
     '@id': `${SITE_URL}/#clinique-du-vr`,
     name: 'Clinique du VR',
-    description: 'Entretien, réparation et esthétique de VR à Gatineau-Ottawa',
+    description: 'Inspection, entretien, réparation et infiltration d’eau de VR à Gatineau, Ottawa, Outaouais et Laurentides',
     telephone,
     email,
     url: SITE_URL,
@@ -102,7 +102,9 @@ export function buildLocalBusinessSchema({
       'Réparation de VR',
       'Infiltration d’eau de VR',
       'Toiture de VR',
-      'Esthétique de VR'
+      'Esthétique de VR',
+      'Roulotte',
+      'Caravane'
     ],
     review: [
       {
@@ -196,7 +198,12 @@ export function buildServiceSchema({
     '@type': 'Service',
     name,
     provider: { '@id': `${SITE_URL}/#clinique-du-vr` },
-    areaServed: ['Gatineau', 'Ottawa', 'Quebec', 'Ontario'],
+    areaServed: [
+      { '@type': 'City', name: 'Gatineau' },
+      { '@type': 'City', name: 'Ottawa' },
+      { '@type': 'AdministrativeArea', name: 'Outaouais' },
+      { '@type': 'AdministrativeArea', name: 'Laurentides' }
+    ],
     serviceType,
     description
   };

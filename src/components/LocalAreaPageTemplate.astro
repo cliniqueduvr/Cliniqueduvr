@@ -80,9 +80,15 @@ const isEnglish = lang === 'en';
     padding: 4.5rem 0 3.8rem;
   }
 
+  .page-header .container {
+    display: grid;
+    gap: 0.9rem;
+    align-content: start;
+  }
+
   .eyebrow {
     display: inline-flex;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
     padding: 0.45rem 0.85rem;
     border-radius: 999px;
     background: rgba(255,255,255,0.12);
@@ -95,28 +101,31 @@ const isEnglish = lang === 'en';
 
   .page-header h1 {
     color: white;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0;
     font-size: 3rem;
-    max-width: 14ch;
+    line-height: 1.05;
+    max-width: 20ch;
   }
 
   .intro {
     max-width: 62ch;
     color: #e7edf4;
     font-size: 1.08rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
   }
 
   .lead {
     max-width: 62ch;
     color: #dbe4ee;
+    margin: 0;
   }
 
   .highlight-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 0.8rem;
-    margin-top: 1.5rem;
+    max-width: 62ch;
+    margin-top: 0.4rem;
   }
 
   .highlight-grid span {
@@ -202,7 +211,8 @@ const isEnglish = lang === 'en';
 
     .page-header h1 {
       font-size: 2.2rem;
-      max-width: none;
+      line-height: 1.05;
+      max-width: 16ch;
     }
 
     .content-section,

@@ -6,12 +6,51 @@ import CTABanner from '../../components/CTABanner.astro';
 import servicePagesData from '../../data/service-pages-en.json';
 import type { ServicePage } from '../../data/service-page-types';
 import { buildBreadcrumbSchema, buildFAQSchema } from '../../lib/seo';
+
 const servicePagesEn = servicePagesData.items as ServicePage[];
 const visibleServicePagesEn = servicePagesEn.filter((service) => service.slug !== 'buying-selling');
 const serviceAreas = [
-  { name: 'Outaouais', href: '/en/areas/rv-inspection-outaouais/' },
-  { name: 'Ottawa', href: '/en/areas/rv-repair-ottawa/' },
-  { name: 'Laurentides', href: '/en/areas/trailer-water-intrusion-laurentides/' }
+  {
+    name: 'Outaouais',
+    href: '/en/areas/rv-inspection-outaouais/',
+    body: 'Inspection, pre-purchase review, and a fast read on the real condition of the RV.'
+  },
+  {
+    name: 'Ottawa',
+    href: '/en/areas/rv-repair-ottawa/',
+    body: 'Repair work tied to water intrusion, roofing, walls, floors, and visible damage.'
+  },
+  {
+    name: 'Laurentides',
+    href: '/en/areas/trailer-water-intrusion-laurentides/',
+    body: 'Trailer water intrusion, worn seals, and moisture concerns that need a clear starting point.'
+  }
+];
+const serviceGuides = [
+  {
+    title: 'Contact us',
+    body: 'Describe the issue, the vehicle, and your priority so we can direct you to the right service.',
+    href: '/en/contact/',
+    label: 'Contact the workshop'
+  },
+  {
+    title: 'Real examples',
+    body: 'Review before-and-after workshop cases to better understand what kind of help you need.',
+    href: '/en/realisations/',
+    label: 'View projects'
+  },
+  {
+    title: 'Before buying or selling',
+    body: 'If your situation involves a transaction, start with inspection to clarify the real condition of the vehicle.',
+    href: '/en/services/inspection/',
+    label: 'View inspection service'
+  },
+  {
+    title: 'Choose a service',
+    body: 'If you are not sure where to start, use our guidance page by symptom and situation.',
+    href: '/en/choose-service/',
+    label: 'View guidance page'
+  }
 ];
 const serviceFaqs = [
   {
@@ -20,12 +59,17 @@ const serviceFaqs = [
   },
   {
     question: 'Do you only work in Gatineau?',
-    answer: 'No. The workshop is in Gatineau, but we also help clients in Ottawa, Outaouais, Laurentides, and other parts of Quebec and Ontario depending on the type of request.'
+    answer: 'No. The workshop is in Gatineau, but we also help clients in Ottawa, Outaouais, and Laurentides depending on the type of request.'
   },
   {
     question: 'Do you offer both shop and mobile services?',
     answer: 'Yes, depending on the service. Some work is best handled in the shop, while other situations may also allow mobile service or travel support depending on the request.'
   }
+];
+const quickSteps = [
+  'Choose the main type of need first.',
+  'Open only the service or area that matches your situation.',
+  'Use inspection as the starting point for buying, selling, or uncertainty.'
 ];
 const breadcrumbs = buildBreadcrumbSchema([
   { name: 'Home', path: '/en/' },
@@ -33,7 +77,7 @@ const breadcrumbs = buildBreadcrumbSchema([
 ]);
 ---
 
-<Layout title="RV Services in Gatineau-Ottawa | Maintenance, Repair, and RV and Auto Detailing" description="RV services in Gatineau-Ottawa: inspection, maintenance, repair, RV and auto detailing, and buying and selling support." lang="en-CA" canonicalPath="/en/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs, buildFAQSchema(serviceFaqs)]}>
+<Layout title="RV Services in Gatineau | Maintenance, Repair, and Detailing" description="RV services in Gatineau, with support for Ottawa, Outaouais and Laurentides: inspection, maintenance, repair, RV and auto detailing, and buying and selling support." lang="en-CA" canonicalPath="/en/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs, buildFAQSchema(serviceFaqs)]}>
   <Header lang="en" />
 
   <main>
@@ -62,11 +106,37 @@ const breadcrumbs = buildBreadcrumbSchema([
       <div class="container seo-columns">
         <div>
           <h2>The right service for the condition of your RV</h2>
-          <p>Whether you are getting ready for the season, reviewing a vehicle before purchase or dealing with an active repair issue, we can point you toward the right service based on the actual condition of the RV and the urgency of the situation.</p>
+          <p>Whether you are getting ready for the season, reviewing a vehicle before purchase, or dealing with an active repair issue, we can point you toward the right service based on the actual condition of the RV and the urgency of the situation.</p>
         </div>
         <div>
           <h2>What the workshop covers</h2>
-          <p>Common requests include water leaks, roof issues, seals, propane and electrical systems, interior restoration, RV and auto detailing, pre-sale presentation and pre-purchase inspections. If you are unsure which service fits best, contact us and we will guide you.</p>
+          <p>Water leaks, roof issues, seals, propane and electrical systems, interior restoration, detailing, and inspection before a transaction.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="planning-section">
+      <div class="container planning-layout">
+        <div class="quick-steps-card">
+          <h2>Where to start</h2>
+          <div class="quick-steps-list">
+            {quickSteps.map((item) => (
+              <p>{item}</p>
+            ))}
+          </div>
+        </div>
+
+        <div class="quick-guides-card">
+          <h2>Useful shortcuts</h2>
+          <div class="guide-list">
+            {serviceGuides.map((guide) => (
+              <a class="guide-item" href={guide.href}>
+                <h3>{guide.title}</h3>
+                <p>{guide.body}</p>
+                <span>{guide.label}</span>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -75,60 +145,15 @@ const breadcrumbs = buildBreadcrumbSchema([
       <div class="container">
         <h2>Areas served</h2>
         <p class="section-intro">We receive service requests from Outaouais, Ottawa, and Laurentides depending on the type of work and the condition of the vehicle.</p>
-        <div class="info-card-grid">
+        <div class="area-grid">
           {serviceAreas.map((area) => (
-            <details class="info-card accordion-card">
-              <summary>
-                <h3>{area.name}</h3>
-              </summary>
-              <div class="accordion-content">
-                <p>Common requests include inspection, maintenance, repair, detailing, and support before a transaction.</p>
-                <a href={area.href}>View local page</a>
-              </div>
-            </details>
+            <a class="area-card" href={area.href}>
+              <h3>{area.name}</h3>
+              <p>{area.body}</p>
+              <span>View local page</span>
+            </a>
           ))}
         </div>
-      </div>
-    </section>
-
-    <section class="service-links-section">
-      <div class="container info-card-grid">
-        <details class="info-card accordion-card">
-          <summary>
-            <h2>Contact us</h2>
-          </summary>
-          <div class="accordion-content">
-            <p>Describe the issue, the vehicle, and your priority so we can direct you to the right service.</p>
-            <a href="/en/contact/">Contact the workshop</a>
-          </div>
-        </details>
-        <details class="info-card accordion-card">
-          <summary>
-            <h2>Real examples</h2>
-          </summary>
-          <div class="accordion-content">
-            <p>Review before-and-after workshop cases to better understand what kind of help you need.</p>
-            <a href="/en/realisations/">View projects</a>
-          </div>
-        </details>
-        <details class="info-card accordion-card">
-          <summary>
-            <h2>Before buying or selling</h2>
-          </summary>
-          <div class="accordion-content">
-            <p>If your situation involves a transaction, start with inspection to clarify the real condition of the vehicle.</p>
-            <a href="/en/services/inspection/">View inspection service</a>
-          </div>
-        </details>
-        <details class="info-card accordion-card">
-          <summary>
-            <h2>Choose a service</h2>
-          </summary>
-          <div class="accordion-content">
-            <p>If you are not sure where to start, use our guidance page by symptom and situation.</p>
-            <a href="/en/choose-service/">View guidance page</a>
-          </div>
-        </details>
       </div>
     </section>
 
@@ -137,7 +162,7 @@ const breadcrumbs = buildBreadcrumbSchema([
         <h2>Frequently asked questions</h2>
         <div class="faq-list">
           {serviceFaqs.map((item) => (
-            <details class="faq-item accordion-card">
+            <details class="faq-item">
               <summary>
                 <h3>{item.question}</h3>
               </summary>
@@ -201,13 +226,9 @@ const breadcrumbs = buildBreadcrumbSchema([
     background: linear-gradient(180deg, white 0%, #f3f5f8 100%);
   }
 
-  .seo-copy {
-    padding: 0 0 4rem;
-    background: #f3f5f8;
-  }
-
+  .seo-copy,
+  .planning-section,
   .service-areas-section,
-  .service-links-section,
   .service-faq-section {
     padding: 0 0 4rem;
     background: #f3f5f8;
@@ -221,7 +242,7 @@ const breadcrumbs = buildBreadcrumbSchema([
 
   .seo-columns {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
   }
 
@@ -230,110 +251,65 @@ const breadcrumbs = buildBreadcrumbSchema([
     color: var(--brand-muted);
   }
 
+  .planning-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .quick-steps-card,
+  .quick-guides-card {
+    display: grid;
+    gap: 1rem;
+    padding: 1.6rem;
+    border-radius: 22px;
+    background: white;
+    box-shadow: 0 18px 34px rgba(21, 38, 58, 0.08);
+  }
+
+  .quick-steps-list {
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .quick-steps-list p {
+    margin: 0;
+    color: var(--brand-muted);
+  }
+
+  .guide-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
   .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.5rem;
   }
 
-  .info-card-grid {
+  .service-card,
+  .guide-item,
+  .area-card {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.5rem;
+    gap: 0.85rem;
+    padding: 1.5rem;
+    border-radius: 22px;
+    background: white;
+    box-shadow: 0 18px 34px rgba(21, 38, 58, 0.08);
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
 
   .service-card {
-    display: grid;
     grid-template-rows: auto minmax(3.6rem, auto) 1fr auto;
-    gap: 0.9rem;
-    padding: 1.6rem;
-    border-radius: 22px;
-    background: white;
-    box-shadow: 0 18px 34px rgba(21, 38, 58, 0.08);
-    text-decoration: none;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
 
-  .info-card {
-    background: white;
-    border-radius: 22px;
-    padding: 1.6rem;
-    box-shadow: 0 18px 34px rgba(21, 38, 58, 0.08);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-
-  .accordion-card summary {
-    list-style: none;
-    cursor: pointer;
-  }
-
-  .accordion-card summary::-webkit-details-marker {
-    display: none;
-  }
-
-  .info-card h2,
-  .info-card h3 {
-    margin: 0;
-    color: var(--brand-navy);
-  }
-
-  .accordion-card h2,
-  .accordion-card h3 {
-    font-size: 1.3rem;
-    line-height: 1.1;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-  }
-
-  .info-card p {
-    margin: 0;
-    color: var(--brand-muted);
-  }
-
-  .accordion-content {
-    display: grid;
-    gap: 0.85rem;
-    padding-top: 1rem;
-  }
-
-  .accordion-content a {
-    color: var(--brand-navy);
-    font-weight: 700;
-    text-decoration: none;
-  }
-
-  .accordion-content a:hover {
-    text-decoration: underline;
-  }
-
-  .accordion-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 24px 44px rgba(21, 38, 58, 0.14);
-  }
-
-  .faq-list {
-    display: grid;
-    gap: 1rem;
-  }
-
-  .faq-item {
-    background: white;
-    border-radius: 22px;
-    padding: 1.6rem;
-    box-shadow: 0 18px 34px rgba(21, 38, 58, 0.08);
-  }
-
-  .faq-item h3 {
-    margin: 0;
-    color: var(--brand-navy);
-  }
-
-  .faq-item p {
-    margin: 0;
-    color: var(--brand-muted);
-  }
-
-  .service-card:hover {
+  .service-card:hover,
+  .guide-item:hover,
+  .area-card:hover {
     text-decoration: none;
     transform: translateY(-4px);
     box-shadow: 0 24px 44px rgba(21, 38, 58, 0.14);
@@ -355,15 +331,74 @@ const breadcrumbs = buildBreadcrumbSchema([
     margin: 0;
   }
 
+  .guide-item h3,
+  .area-card h3,
+  .faq-item h3 {
+    margin: 0;
+    color: var(--brand-navy);
+    font-size: 1.08rem;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
   .service-card p,
-  .card-copy {
+  .card-copy,
+  .guide-item p,
+  .area-card p,
+  .faq-item p {
     color: var(--brand-muted);
     margin: 0;
   }
 
-  .service-card span {
+  .service-card span,
+  .guide-item span,
+  .area-card span {
     color: var(--brand-navy);
     font-weight: 700;
+  }
+
+  .area-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .faq-list {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .faq-item {
+    background: white;
+    border: none;
+    border-radius: 22px;
+    padding: 1.35rem 1.5rem;
+    box-shadow: 0 18px 34px rgba(21, 38, 58, 0.08);
+  }
+
+  .faq-item summary {
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .accordion-content {
+    display: grid;
+    gap: 0.85rem;
+    padding-top: 1rem;
+  }
+
+  @media (max-width: 900px) {
+    .seo-columns,
+    .planning-layout,
+    .guide-list,
+    .area-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   @media (max-width: 768px) {
@@ -374,11 +409,6 @@ const breadcrumbs = buildBreadcrumbSchema([
 
     .page-header h1 {
       font-size: 2.2rem;
-    }
-
-    .accordion-card h2,
-    .accordion-card h3 {
-      font-size: 1.05rem;
     }
 
     .service-faq-section {

@@ -16,8 +16,8 @@
     "mapQuery": "Clinique du VR, 11 rue de Granby, Unite 18, Gatineau, Quebec"
   },
   "serviceArea": {
-    "fr": "Gatineau, Ottawa, Laurentides, Outaouais, Québec et Ontario",
-    "en": "Gatineau, Ottawa, Laurentides, Outaouais, Quebec and Ontario"
+    "fr": "Gatineau, grande région d’Ottawa, Laurentides, Outaouais",
+    "en": "Gatineau, Ottawa area, Laurentides, Outaouais"
   },
   "sinceYear": "2013",
   "footerDescription": {

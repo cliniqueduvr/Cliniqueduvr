@@ -131,7 +131,7 @@ const navItems = isEnglish
   <nav class="navbar">
     <div class="container navbar-inner">
       <a href={homeHref} class="logo">
-        <img src={siteSettings.brandImage} alt={isEnglish ? 'Clinique du VR — RV service in Gatineau-Ottawa' : 'Clinique du VR — Service de VR à Gatineau-Ottawa'} />
+        <img src={siteSettings.brandImage} alt={isEnglish ? 'Clinique du VR — RV service in Gatineau' : 'Clinique du VR — Service de VR à Gatineau'} />
       </a>
       <div class="nav-panel" id="site-nav" data-nav-panel>
         <ul class="nav-menu">
@@ -394,6 +394,15 @@ const navItems = isEnglish
     position: relative;
   }
 
+  .nav-item-with-children::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 0.8rem;
+  }
+
   .nav-menu a {
     color: var(--brand-ink);
     font-weight: 500;
@@ -412,7 +421,7 @@ const navItems = isEnglish
   .submenu {
     display: none;
     position: absolute;
-    top: calc(100% + 0.6rem);
+    top: calc(100% + 0.2rem);
     left: 0;
     min-width: 240px;
     list-style: none;
@@ -485,6 +494,10 @@ const navItems = isEnglish
   }
 
   @media (max-width: 768px) {
+    .nav-item-with-children::after {
+      display: none;
+    }
+
     .topbar {
       padding: 0.65rem 0;
     }
