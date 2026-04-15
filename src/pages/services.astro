@@ -6,12 +6,51 @@ import CTABanner from '../components/CTABanner.astro';
 import servicePagesData from '../data/service-pages.json';
 import type { ServicePage } from '../data/service-page-types';
 import { buildBreadcrumbSchema, buildFAQSchema } from '../lib/seo';
+
 const servicePages = servicePagesData.items as ServicePage[];
 const visibleServicePages = servicePages.filter((service) => service.slug !== 'vente-achat');
 const serviceAreas = [
-  { name: 'Outaouais', href: '/zones/inspection-vr-outaouais/' },
-  { name: 'Ottawa', href: '/zones/reparation-vr-ottawa/' },
-  { name: 'Laurentides', href: '/zones/infiltration-eau-roulotte-laurentides/' }
+  {
+    name: 'Outaouais',
+    href: '/zones/inspection-vr-outaouais/',
+    body: "Inspection, validation avant achat et lecture rapide de l'état réel du VR."
+  },
+  {
+    name: 'Ottawa',
+    href: '/zones/reparation-vr-ottawa/',
+    body: "Réparation liée à l'eau, à la toiture, aux murs, au plancher et aux dommages visibles."
+  },
+  {
+    name: 'Laurentides',
+    href: '/zones/infiltration-eau-roulotte-laurentides/',
+    body: "Infiltration d'eau, joints fatigués et doutes sur l'humidité d'une roulotte."
+  }
+];
+const serviceGuides = [
+  {
+    title: 'Nous contacter',
+    body: 'Décrivez le problème, le véhicule et votre priorité pour être orienté vers le bon service.',
+    href: '/contact/',
+    label: "Contacter l'atelier"
+  },
+  {
+    title: 'Cas réels',
+    body: "Consultez des exemples d'interventions avant-après pour mieux situer votre besoin.",
+    href: '/realisations/',
+    label: 'Voir les réalisations'
+  },
+  {
+    title: 'Avant achat ou vente',
+    body: "Si votre situation touche une transaction, commencez par l’inspection pour clarifier l’état réel du véhicule.",
+    href: '/services/inspection/',
+    label: "Voir le service d'inspection"
+  },
+  {
+    title: 'Choisir un service',
+    body: "Si vous n’êtes pas certain du bon point de départ, voyez notre page d’orientation par symptôme et par situation.",
+    href: '/choisir-service/',
+    label: "Voir la page d'orientation"
+  }
 ];
 const serviceFaqs = [
   {
@@ -26,6 +65,11 @@ const serviceFaqs = [
     question: 'Offrez-vous des services mobiles et en atelier?',
     answer: "Oui, selon le service demandé. Certaines interventions se font très bien en atelier, alors que d'autres peuvent aussi être offertes sur la route ou avec déplacement selon la situation."
   }
+];
+const quickSteps = [
+  "Choisissez d'abord une grande catégorie de besoin.",
+  'Ouvrez ensuite seulement le service ou la zone qui correspond à votre situation.',
+  "Utilisez l'inspection comme point de départ pour un achat, une vente ou un doute."
 ];
 const breadcrumbs = buildBreadcrumbSchema([
   { name: 'Accueil', path: '/' },
@@ -45,108 +89,93 @@ const breadcrumbs = buildBreadcrumbSchema([
       </div>
     </section>
 
-    <section class="services-grid-section">
-      <div class="container services-grid">
-        {visibleServicePages.map((service) => (
-          <a class="service-card" href={`/services/${service.slug}/`}>
-            <p class="card-eyebrow">{service.eyebrow}</p>
-            <h2 class="card-title">{service.navLabel}</h2>
-            <p class="card-copy">{service.lead}</p>
-            <span>En savoir plus</span>
-          </a>
-        ))}
-      </div>
-    </section>
+    <section class="services-content">
+      <div class="container services-layout">
+        <div class="services-main">
+          <section class="services-grid-section">
+            <div class="services-grid">
+              {visibleServicePages.map((service) => (
+                <a class="service-card" href={`/services/${service.slug}/`}>
+                  <p class="card-eyebrow">{service.eyebrow}</p>
+                  <h2 class="card-title">{service.navLabel}</h2>
+                  <p class="card-copy">{service.lead}</p>
+                  <span>En savoir plus</span>
+                </a>
+              ))}
+            </div>
+          </section>
 
-    <section class="seo-copy">
-      <div class="container seo-columns">
-        <div>
-          <h2>Un service adapté à votre situation</h2>
-          <p>Que vous soyez en préparation avant la saison, en évaluation avant achat ou en pleine réparation, nous vous orientons vers le bon service selon l'état du véhicule et l'urgence de la situation. L'objectif est de vous faire gagner du temps et d'éviter les mauvaises surprises.</p>
-        </div>
-        <div>
-          <h2>Ce que nous couvrons</h2>
-          <p>Nos interventions touchent les infiltrations d'eau, la toiture, les joints, les composantes électriques et propane, la remise en état intérieure, l'esthétique VR et auto, ainsi que les inspections avant transaction. Si vous n'êtes pas certain du bon service, contactez-nous et nous vous guiderons.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="service-areas-section">
-      <div class="container">
-        <h2>Zones desservies</h2>
-        <p class="section-intro">Nous recevons des demandes provenant de l'Outaouais, d'Ottawa et des Laurentides selon le type de service et la situation du véhicule.</p>
-        <div class="info-card-grid">
-          {serviceAreas.map((area) => (
-            <details class="info-card accordion-card">
-              <summary>
-                <h3>{area.name}</h3>
-              </summary>
-              <div class="accordion-content">
-                <p>Demandes fréquentes en inspection, entretien, réparation, esthétique ou préparation avant transaction.</p>
-                <a href={area.href}>Voir la page locale</a>
+          <section class="planning-section">
+            <div class="quick-steps-card">
+              <h2>Par où commencer</h2>
+              <div class="quick-steps-list">
+                {quickSteps.map((item) => (
+                  <p>{item}</p>
+                ))}
               </div>
-            </details>
-          ))}
-        </div>
-      </div>
-    </section>
+            </div>
+          </section>
 
-    <section class="service-links-section">
-      <div class="container info-card-grid">
-        <details class="info-card accordion-card">
-          <summary>
-            <h2>Nous contacter</h2>
-          </summary>
-          <div class="accordion-content">
-            <p>Décrivez le problème, le véhicule et votre priorité pour être orienté vers le bon service.</p>
-            <a href="/contact/">Contacter l'atelier</a>
-          </div>
-        </details>
-        <details class="info-card accordion-card">
-          <summary>
-            <h2>Cas réels</h2>
-          </summary>
-          <div class="accordion-content">
-            <p>Consultez des exemples d'interventions avant-après pour mieux situer votre besoin.</p>
-            <a href="/realisations/">Voir les réalisations</a>
-          </div>
-        </details>
-        <details class="info-card accordion-card">
-          <summary>
-            <h2>Avant achat ou vente</h2>
-          </summary>
-          <div class="accordion-content">
-            <p>Si votre situation touche une transaction, commencez par l’inspection pour clarifier l’état réel du véhicule.</p>
-            <a href="/services/inspection/">Voir le service d'inspection</a>
-          </div>
-        </details>
-        <details class="info-card accordion-card">
-          <summary>
-            <h2>Choisir un service</h2>
-          </summary>
-          <div class="accordion-content">
-            <p>Si vous n’êtes pas certain du bon point de départ, voyez notre page d’orientation par symptôme et par situation.</p>
-            <a href="/choisir-service/">Voir la page d'orientation</a>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <section class="service-faq-section">
-      <div class="container">
-        <h2>Questions fréquentes</h2>
-        <div class="faq-list">
-          {serviceFaqs.map((item) => (
-            <details class="faq-item accordion-card">
-              <summary>
-                <h3>{item.question}</h3>
-              </summary>
-              <div class="accordion-content">
-                <p>{item.answer}</p>
+          <section class="seo-copy">
+            <div class="seo-columns">
+              <div class="info-card">
+                <h2>Un service adapté à votre situation</h2>
+                <p>Que vous soyez en préparation avant la saison, en évaluation avant achat ou en pleine réparation, nous vous orientons vers le bon service selon l'état du véhicule et l'urgence de la situation.</p>
               </div>
-            </details>
-          ))}
+              <div class="info-card">
+                <h2>Ce que nous couvrons</h2>
+                <p>Infiltrations d'eau, toiture, joints, composantes électriques et propane, remise en état intérieure, esthétique et inspections avant transaction.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="service-areas-section">
+            <div class="section-header">
+              <h2>Zones desservies</h2>
+              <p class="section-intro">Nous recevons des demandes provenant de l'Outaouais, d'Ottawa et des Laurentides selon le type de service et la situation du véhicule.</p>
+            </div>
+            <div class="area-grid">
+              {serviceAreas.map((area) => (
+                <a class="area-card" href={area.href}>
+                  <h3>{area.name}</h3>
+                  <p>{area.body}</p>
+                  <span>Voir la page locale</span>
+                </a>
+              ))}
+            </div>
+          </section>
+
+          <section class="service-faq-section">
+            <h2>Questions fréquentes</h2>
+            <div class="faq-list">
+              {serviceFaqs.map((item) => (
+                <details class="faq-item">
+                  <summary>
+                    <h3>{item.question}</h3>
+                  </summary>
+                  <div class="accordion-content">
+                    <p>{item.answer}</p>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </section>
         </div>
+
+        <aside class="services-side">
+          <div class="quick-guides-card">
+            <h2>Raccourcis utiles</h2>
+            <div class="guide-list">
+              {serviceGuides.map((guide) => (
+                <a class="guide-item" href={guide.href}>
+                  <h3>{guide.title}</h3>
+                  <p>{guide.body}</p>
+                  <span>{guide.label}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -194,33 +223,53 @@ const breadcrumbs = buildBreadcrumbSchema([
     color: #e7edf4;
   }
 
-  .services-grid-section {
+  .services-content {
     padding: 4rem 0;
-    background: linear-gradient(180deg, white 0%, #f3f5f8 100%);
-  }
-
-  .seo-copy {
-    padding: 0 0 4rem;
     background: #f3f5f8;
   }
 
+  .services-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.82fr) minmax(280px, 0.72fr);
+    gap: 2.4rem;
+    align-items: start;
+  }
+
+  .services-main {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .services-side {
+    position: sticky;
+    top: 7rem;
+    align-self: start;
+  }
+
+  .services-grid-section,
+  .planning-section,
   .service-areas-section,
-  .service-links-section,
   .service-faq-section {
-    padding: 0 0 4rem;
-    background: #f3f5f8;
+    padding: 0;
   }
 
   .section-intro {
     max-width: 62ch;
     color: var(--brand-muted);
-    margin: 0.75rem 0 1.5rem;
+    margin: 0.75rem 0 0;
   }
 
   .seo-columns {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
+  }
+
+  .info-card {
+    padding: 1.75rem;
+    border-radius: 24px;
+    background: white;
+    box-shadow: 0 18px 34px rgba(21, 38, 58, 0.08);
   }
 
   .seo-columns p {
@@ -228,110 +277,86 @@ const breadcrumbs = buildBreadcrumbSchema([
     color: var(--brand-muted);
   }
 
+  .quick-steps-card,
+  .quick-guides-card {
+    display: grid;
+    gap: 1rem;
+    padding: 1.75rem;
+    border-radius: 22px;
+    background: white;
+    box-shadow: 0 18px 34px rgba(21, 38, 58, 0.08);
+  }
+
+  .quick-guides-card {
+    width: 100%;
+    max-width: 360px;
+    margin-left: 0;
+    padding: 2rem 1.75rem;
+    gap: 0.9rem;
+    background:
+      radial-gradient(circle at top left, rgba(242, 210, 27, 0.14), transparent 32%),
+      linear-gradient(180deg, #ffffff 0%, #f8fbfd 100%);
+    border: 1px solid rgba(31, 58, 95, 0.1);
+    border-radius: 28px;
+    box-shadow: 0 14px 30px rgba(21, 38, 58, 0.08);
+  }
+
+  .quick-steps-card {
+    max-width: none;
+  }
+
+  .quick-guides-card h2 {
+    max-width: 8ch;
+    margin: 0 0 0.2rem;
+    color: var(--brand-navy);
+    font-size: clamp(2rem, 3vw, 2.45rem);
+    line-height: 1.02;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .quick-steps-list {
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .quick-steps-list p {
+    margin: 0;
+    color: var(--brand-muted);
+  }
+
+  .guide-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  .info-card-grid {
+  .service-card,
+  .guide-item,
+  .area-card {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.5rem;
+    gap: 0.85rem;
+    padding: 1.5rem;
+    border-radius: 22px;
+    background: white;
+    box-shadow: 0 18px 34px rgba(21, 38, 58, 0.08);
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
 
   .service-card {
-    display: grid;
     grid-template-rows: auto minmax(3.6rem, auto) 1fr auto;
-    gap: 0.9rem;
-    padding: 1.6rem;
-    border-radius: 22px;
-    background: white;
-    box-shadow: 0 18px 34px rgba(21, 38, 58, 0.08);
-    text-decoration: none;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
 
-  .info-card {
-    background: white;
-    border-radius: 22px;
-    padding: 1.6rem;
-    box-shadow: 0 18px 34px rgba(21, 38, 58, 0.08);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-
-  .accordion-card summary {
-    list-style: none;
-    cursor: pointer;
-  }
-
-  .accordion-card summary::-webkit-details-marker {
-    display: none;
-  }
-
-  .info-card h2,
-  .info-card h3 {
-    margin: 0;
-    color: var(--brand-navy);
-  }
-
-  .accordion-card h2,
-  .accordion-card h3 {
-    font-size: 1.3rem;
-    line-height: 1.1;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-  }
-
-  .info-card p {
-    margin: 0;
-    color: var(--brand-muted);
-  }
-
-  .accordion-content {
-    display: grid;
-    gap: 0.85rem;
-    padding-top: 1rem;
-  }
-
-  .accordion-content a {
-    color: var(--brand-navy);
-    font-weight: 700;
-    text-decoration: none;
-  }
-
-  .accordion-content a:hover {
-    text-decoration: underline;
-  }
-
-  .accordion-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 24px 44px rgba(21, 38, 58, 0.14);
-  }
-
-  .faq-list {
-    display: grid;
-    gap: 1rem;
-  }
-
-  .faq-item {
-    background: white;
-    border-radius: 22px;
-    padding: 1.6rem;
-    box-shadow: 0 18px 34px rgba(21, 38, 58, 0.08);
-  }
-
-  .faq-item h3 {
-    margin: 0;
-    color: var(--brand-navy);
-  }
-
-  .faq-item p {
-    margin: 0;
-    color: var(--brand-muted);
-  }
-
-  .service-card:hover {
+  .service-card:hover,
+  .guide-item:hover,
+  .area-card:hover {
     text-decoration: none;
     transform: translateY(-4px);
     box-shadow: 0 24px 44px rgba(21, 38, 58, 0.14);
@@ -353,15 +378,132 @@ const breadcrumbs = buildBreadcrumbSchema([
     margin: 0;
   }
 
+  .guide-item h3,
+  .area-card h3,
+  .faq-item h3 {
+    margin: 0;
+    color: var(--brand-navy);
+    font-size: 1.08rem;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
   .service-card p,
-  .card-copy {
+  .card-copy,
+  .guide-item p,
+  .area-card p,
+  .faq-item p {
     color: var(--brand-muted);
     margin: 0;
   }
 
-  .service-card span {
+  .service-card span,
+  .guide-item span,
+  .area-card span {
     color: var(--brand-navy);
     font-weight: 700;
+  }
+
+  .guide-item {
+    gap: 0.55rem;
+    padding: 1.1rem 1.2rem;
+    border: 1px solid rgba(31, 58, 95, 0.1);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 6px 16px rgba(21, 38, 58, 0.04);
+    transition: border-color 0.2s ease, transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .guide-item:hover {
+    background: white;
+    border-color: rgba(58, 141, 47, 0.22);
+    box-shadow: 0 10px 22px rgba(21, 38, 58, 0.08);
+    transform: translateY(-1px);
+  }
+
+  .guide-item h3 {
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    color: var(--brand-navy);
+  }
+
+  .guide-item p {
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
+  .guide-item span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-height: 38px;
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    background: var(--brand-green);
+    color: white;
+    font-size: 0.88rem;
+    line-height: 1;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  .area-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .section-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .faq-list {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .faq-item {
+    background: white;
+    border: none;
+    border-radius: 22px;
+    padding: 1.35rem 1.5rem;
+    box-shadow: 0 18px 34px rgba(21, 38, 58, 0.08);
+  }
+
+  .faq-item summary {
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .accordion-content {
+    display: grid;
+    gap: 0.85rem;
+    padding-top: 1rem;
+  }
+
+  @media (max-width: 900px) {
+    .seo-columns,
+    .area-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .services-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .services-side {
+      display: none;
+    }
+
+    .quick-guides-card {
+      max-width: none;
+      width: auto;
+    }
   }
 
   @media (max-width: 768px) {
@@ -372,11 +514,6 @@ const breadcrumbs = buildBreadcrumbSchema([
 
     .page-header h1 {
       font-size: 2.2rem;
-    }
-
-    .accordion-card h2,
-    .accordion-card h3 {
-      font-size: 1.05rem;
     }
 
     .service-faq-section {

@@ -316,8 +316,8 @@ const isEnglish = lang === 'en';
 
   .sales-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.9fr);
-    gap: 2rem;
+    grid-template-columns: minmax(0, 1.82fr) minmax(280px, 0.72fr);
+    gap: 2.4rem;
     align-items: start;
   }
 
@@ -582,7 +582,29 @@ const isEnglish = lang === 'en';
 
   .contact-card {
     display: grid;
-    gap: 1rem;
+    gap: 0.9rem;
+    max-width: 360px;
+    margin-left: auto;
+    padding: 2rem 1.75rem;
+    border: 1px solid rgba(31, 58, 95, 0.08);
+    border-radius: 28px;
+    box-shadow: 0 10px 24px rgba(21, 38, 58, 0.06);
+  }
+
+  .contact-card h2 {
+    max-width: 10ch;
+    margin-bottom: 0.15rem;
+    color: var(--brand-navy);
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    line-height: 1.02;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .contact-card p {
+    margin: 0 0 0.35rem;
+    font-size: 1.02rem;
+    line-height: 1.75;
   }
 
   .contact-button,
@@ -590,10 +612,12 @@ const isEnglish = lang === 'en';
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
     min-height: 48px;
     border-radius: 999px;
     font-weight: 700;
     text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
   }
 
   .contact-button {
@@ -604,6 +628,7 @@ const isEnglish = lang === 'en';
   .contact-link {
     border: 1px solid rgba(31, 58, 95, 0.14);
     color: var(--brand-navy);
+    background: white;
   }
 
   .contact-square {
@@ -612,8 +637,13 @@ const isEnglish = lang === 'en';
     border: 2px solid var(--brand-gold);
   }
 
-  .contact-square:hover {
+  .contact-button:hover,
+  .contact-link:hover {
     text-decoration: none;
+    transform: translateY(-1px);
+  }
+
+  .contact-square:hover {
     background: #e1c317;
     border-color: #e1c317;
   }
@@ -634,6 +664,12 @@ const isEnglish = lang === 'en';
 
     .sales-side {
       position: static;
+    }
+
+    .contact-card {
+      max-width: none;
+      margin-left: 0;
+      padding: 1.7rem 1.4rem;
     }
 
     .sale-slide,

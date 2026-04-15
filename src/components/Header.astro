@@ -13,8 +13,10 @@ const isEnglish = lang === 'en';
 const currentPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
 const frToEnServiceSlug = new Map(servicePagesFr.items.map((service) => [service.slug, service.alternateSlug]));
 const enToFrServiceSlug = new Map(servicePagesEn.items.map((service) => [service.slug, service.alternateSlug]));
-const frToEnAreaSlug = new Map(localAreaPagesFr.map((page, index) => [page.slug, localAreaPagesEn[index]?.slug]));
-const enToFrAreaSlug = new Map(localAreaPagesEn.map((page, index) => [page.slug, localAreaPagesFr[index]?.slug]));
+const frAreaToEnSlug = new Map(localAreaPagesEn.map((page) => [page.area, page.slug]));
+const enAreaToFrSlug = new Map(localAreaPagesFr.map((page) => [page.area, page.slug]));
+const frToEnAreaSlug = new Map(localAreaPagesFr.map((page) => [page.slug, frAreaToEnSlug.get(page.area)]));
+const enToFrAreaSlug = new Map(localAreaPagesEn.map((page) => [page.slug, enAreaToFrSlug.get(page.area)]));
 
 function getAlternatePath(pathname: string, targetLang: 'fr' | 'en') {
   const normalizedPath = pathname.endsWith('/') ? pathname : `${pathname}/`;
@@ -29,7 +31,7 @@ function getAlternatePath(pathname: string, targetLang: 'fr' | 'en') {
     '/realisations/': '/en/realisations/',
     '/services/': '/en/services/',
     '/vente/': '/en/sales/',
-    '/services/vente-achat/': '/en/sales/'
+    '/services/vente-achat/': '/en/services/buying-selling/'
   };
 
   const staticEnToFr: Record<string, string> = {
@@ -42,7 +44,7 @@ function getAlternatePath(pathname: string, targetLang: 'fr' | 'en') {
     '/en/realisations/': '/realisations/',
     '/en/services/': '/services/',
     '/en/sales/': '/vente/',
-    '/en/services/buying-selling/': '/vente/'
+    '/en/services/buying-selling/': '/services/vente-achat/'
   };
 
   if (targetLang === 'en') {
