@@ -32,6 +32,12 @@ const alternateFr = frPath ? absoluteUrl(frPath) : undefined;
 const alternateEn = enPath ? absoluteUrl(enPath) : undefined;
 const isEnglish = lang === 'en-CA';
 const googleAdsId = siteSettings.googleAdsId?.trim() || '';
+const googleAdsConversions = {
+  phone: siteSettings.googleAdsConversions?.phone?.trim() || '',
+  email: siteSettings.googleAdsConversions?.email?.trim() || '',
+  booking: siteSettings.googleAdsConversions?.booking?.trim() || '',
+  form: siteSettings.googleAdsConversions?.form?.trim() || ''
+};
 const hasGoogleAds = googleAdsId.length > 0;
 ---
 
@@ -57,7 +63,7 @@ const hasGoogleAds = googleAdsId.length > 0;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={BRAND_IMAGE} />
     {hasGoogleAds && (
-      <script is:inline define:vars={{ googleAdsId }}>
+      <script is:inline define:vars={{ googleAdsId, googleAdsConversions, squareBookingUrl: siteSettings.squareBookingUrl }}>
         (() => {
           const storageKey = 'cliniqueduvr-cookie-consent';
           const scriptId = 'google-ads-gtag';
@@ -78,14 +84,71 @@ const hasGoogleAds = googleAdsId.length > 0;
             gtag('config', googleAdsId);
           }
 
+          function trackConversion(type) {
+            if (typeof window.gtag !== 'function') return;
+
+            const label = googleAdsConversions?.[type];
+            window.gtag('event', `${type}_contact`, {
+              event_category: 'engagement',
+              event_label: type
+            });
+
+            if (label) {
+              window.gtag('event', 'conversion', {
+                send_to: `${googleAdsId}/${label}`
+              });
+            }
+          }
+
+          function installTracking() {
+            if (window.__cliniqueduvrAdsTrackingInstalled) return;
+            window.__cliniqueduvrAdsTrackingInstalled = true;
+            window.cliniqueTrackConversion = trackConversion;
+
+            document.addEventListener('click', (event) => {
+              const target = event.target;
+              if (!(target instanceof Element)) return;
+              const link = target.closest('a[href]');
+              if (!(link instanceof HTMLAnchorElement)) return;
+
+              const href = link.getAttribute('href') || '';
+
+              if (href.startsWith('tel:')) {
+                trackConversion('phone');
+                return;
+              }
+
+              if (href.startsWith('mailto:')) {
+                trackConversion('email');
+                return;
+              }
+
+              if (href === squareBookingUrl) {
+                trackConversion('booking');
+              }
+            });
+
+            const url = new URL(window.location.href);
+            if (url.searchParams.get('sent') === '1' && (url.pathname === '/contact/' || url.pathname === '/en/contact/')) {
+              trackConversion('form');
+            }
+          }
+
           try {
             if (window.localStorage.getItem(storageKey) === 'accepted') {
               loadGoogleAds();
+              installTracking();
             } else {
-              window.addEventListener('cliniqueduvr:cookie-consent-accepted', loadGoogleAds, { once: true });
+              window.addEventListener('cliniqueduvr:cookie-consent-accepted', () => {
+                loadGoogleAds();
+                installTracking();
+              }, { once: true });
             }
           } catch {
-            window.addEventListener('cliniqueduvr:cookie-consent-accepted', loadGoogleAds, { once: true });
+            window.addEventListener('cliniqueduvr:cookie-consent-accepted', () => {
+              loadGoogleAds();
+              installTracking();
+            }, { once: true });
           }
         })();
       </script>
