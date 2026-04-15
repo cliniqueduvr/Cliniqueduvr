@@ -14,7 +14,7 @@ const breadcrumbs = buildBreadcrumbSchema([
 ]);
 ---
 
-<Layout title="Services VR à Gatineau-Ottawa | Entretien, réparation et esthétique" description="Services de VR à Gatineau-Ottawa: inspection, entretien, réparation, esthétique et vente." canonicalPath="/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs]}>
+<Layout title="Services VR à Gatineau-Ottawa | Entretien, réparation et esthétique VR et auto" description="Services de VR à Gatineau-Ottawa: inspection, entretien, réparation, esthétique VR et auto et vente." canonicalPath="/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs]}>
   <Header />
 
   <main>
@@ -22,7 +22,7 @@ const breadcrumbs = buildBreadcrumbSchema([
       <div class="container">
         <p class="eyebrow">Pour chaque besoin de votre VR</p>
         <h1>Nos Services</h1>
-        <p>Inspection, entretien, réparation et esthétique pour VR, roulottes et caravanes.</p>
+        <p>Inspection, entretien, réparation et esthétique VR et auto pour mieux répondre à l'état réel du véhicule.</p>
       </div>
     </section>
 
@@ -31,8 +31,8 @@ const breadcrumbs = buildBreadcrumbSchema([
         {visibleServicePages.map((service) => (
           <a class="service-card" href={`/services/${service.slug}/`}>
             <p class="card-eyebrow">{service.eyebrow}</p>
-            <h2>{service.navLabel}</h2>
-            <p>{service.lead}</p>
+            <h2 class="card-title">{service.navLabel}</h2>
+            <p class="card-copy">{service.lead}</p>
             <span>En savoir plus</span>
           </a>
         ))}
@@ -47,7 +47,7 @@ const breadcrumbs = buildBreadcrumbSchema([
         </div>
         <div>
           <h2>Ce que nous couvrons</h2>
-          <p>Nos interventions touchent les infiltrations d'eau, la toiture, les joints, les composantes électriques et propane, la remise en état intérieure, la présentation du véhicule ainsi que les inspections avant transaction. Si vous n'êtes pas certain du bon service, contactez-nous et nous vous guiderons.</p>
+          <p>Nos interventions touchent les infiltrations d'eau, la toiture, les joints, les composantes électriques et propane, la remise en état intérieure, l'esthétique VR et auto, ainsi que les inspections avant transaction. Si vous n'êtes pas certain du bon service, contactez-nous et nous vous guiderons.</p>
         </div>
       </div>
     </section>
@@ -126,6 +126,7 @@ const breadcrumbs = buildBreadcrumbSchema([
 
   .service-card {
     display: grid;
+    grid-template-rows: auto minmax(3.6rem, auto) 1fr auto;
     gap: 0.9rem;
     padding: 1.6rem;
     border-radius: 22px;
@@ -149,13 +150,16 @@ const breadcrumbs = buildBreadcrumbSchema([
     font-weight: 700;
   }
 
-  .service-card h2 {
+  .service-card h2,
+  .card-title {
     font-size: 1.55rem;
     line-height: 1.1;
     color: var(--brand-navy);
+    margin: 0;
   }
 
-  .service-card p {
+  .service-card p,
+  .card-copy {
     color: var(--brand-muted);
     margin: 0;
   }

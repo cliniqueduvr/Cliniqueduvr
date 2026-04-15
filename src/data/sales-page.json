@@ -7,11 +7,25 @@
   },
   "hero": {
     "title": "Achat, vente et location de roulottes",
-    "body": "Clinique du VR achète, vend et loue des roulottes. Consultez les unités disponibles, informez-vous sur les options en location et contactez-nous pour planifier la livraison sur le site convenu."
+    "body": "Clinique du VR propose la vente de VR usagés inspectés avec rigueur ainsi que la location de roulottes selon vos besoins. Consultez les unités disponibles, informez-vous sur les options en location et contactez-nous pour planifier la livraison sur le site convenu."
   },
   "intro": {
     "title": "Nos roulottes et services disponibles",
-    "body": "Que vous souhaitiez acheter, vendre ou louer une roulotte, nous pouvons vous accompagner à chaque étape. Nous pouvons également transporter l'unité et l'apporter directement sur le site convenu selon votre besoin."
+    "body": "Nous proposons un accompagnement simple et clair pour l'achat, la vente et la location de VR selon votre besoin.",
+    "cards": [
+      {
+        "title": "Achat de VR",
+        "body": "Nous achetons des roulottes usagées qui ont besoin de réparation, de remise en état ou de modernisation. Pour une évaluation, il faut envoyer des photos complètes, la ville, les problèmes connus et une photo de la plaque signalétique. Nous achetons à bas prix, car nous investissons ensuite pour réparer, moderniser et revendre ou louer. La roulotte doit être plaquée Québec, le frame ne doit pas être fissuré, et les demandes sans information ne seront pas traitées."
+      },
+      {
+        "title": "Vente de VR",
+        "body": "Nos roulottes en vente sont minutieusement inspectées, réparées au besoin et vérifiées pour s'assurer qu'elles sont sans infiltration d'eau. L'objectif est d'offrir une unité plus fiable, plus rassurante et mieux préparée pour la route."
+      },
+      {
+        "title": "Location de VR",
+        "body": "Que ce soit pour un week-end d'évasion ou un séjour de plusieurs semaines, nos roulottes sont prêtes à vous accompagner. Nous pouvons livrer et placer la roulotte directement sur le terrain de camping choisi partout dans un rayon de 200 km de Gatineau pour vous offrir une location plus simple, pratique et sans tracas."
+      }
+    ]
   },
   "listTitle": "Inventaire",
   "expandLabel": "Voir la fiche complète",

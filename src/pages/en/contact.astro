@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import ContactMap from '../../components/ContactMap.astro';
 import { buildBreadcrumbSchema, buildContactPageSchema, buildWebSiteSchema } from '../../lib/seo';
 import siteSettings from '../../data/site-settings.json';
 import contactPage from '../../data/contact-page-en.json';
@@ -10,7 +11,6 @@ const isFormConfigured = Boolean(siteSettings.email?.trim());
 const formAction = isFormConfigured ? `https://formsubmit.co/${siteSettings.email}` : undefined;
 const successUrl = 'https://www.cliniqueduvr.ca/en/contact/?sent=1';
 const messageSent = Astro.url.searchParams.get('sent') === '1';
-const mapAddress = encodeURIComponent(siteSettings.address.mapQuery);
 const breadcrumbs = buildBreadcrumbSchema([
   { name: contactPage.breadcrumbs.home, path: '/en/' },
   { name: contactPage.breadcrumbs.current }
@@ -41,7 +41,7 @@ const schemas = [
           {!isFormConfigured && (
             <p class="intro-copy">{contactPage.formSection.unconfiguredNote}</p>
           )}
-          <form action={formAction} method="POST">
+          <form action={formAction} method="POST" enctype="multipart/form-data">
             <input type="hidden" name="_next" value={successUrl} />
             <input type="hidden" name="_subject" value="New message from Clinique du VR website form" />
             <input type="hidden" name="_captcha" value="false" />
@@ -61,6 +61,46 @@ const schemas = [
             <div class="form-group">
               <label for="subject">{contactPage.formSection.fields.subject}</label>
               <input type="text" id="subject" name="subject" required />
+            </div>
+            <fieldset class="form-group form-fieldset">
+              <legend>{contactPage.formSection.fields.services}</legend>
+              <div class="checkbox-grid">
+                {contactPage.formSection.fields.serviceOptions.map((option, index) => (
+                  <label class="check-option" for={`service-${index}`}>
+                    <input type="checkbox" id={`service-${index}`} name="services[]" value={option} />
+                    <span>{option}</span>
+                  </label>
+                ))}
+              </div>
+            </fieldset>
+            <fieldset class="form-group form-fieldset">
+              <legend>{contactPage.formSection.fields.workType}</legend>
+              <div class="checkbox-grid checkbox-grid--two">
+                <label class="check-option" for="workshop">
+                  <input type="radio" id="workshop" name="work_type" value={contactPage.formSection.fields.workshopOption} />
+                  <span>{contactPage.formSection.fields.workshopOption}</span>
+                </label>
+                <label class="check-option" for="mobile">
+                  <input type="radio" id="mobile" name="work_type" value={contactPage.formSection.fields.mobileOption} />
+                  <span>{contactPage.formSection.fields.mobileOption}</span>
+                </label>
+              </div>
+            </fieldset>
+            <div class="form-group">
+              <label for="work-address">{contactPage.formSection.fields.workAddress}</label>
+              <input type="text" id="work-address" name="work_address" />
+            </div>
+            <div class="form-group">
+              <label for="vehicle-info">{contactPage.formSection.fields.vehicleInfo}</label>
+              <input type="text" id="vehicle-info" name="vehicle_info" />
+            </div>
+            <div class="form-group">
+              <label for="serial-number">{contactPage.formSection.fields.serialNumber}</label>
+              <input type="text" id="serial-number" name="serial_number" />
+            </div>
+            <div class="form-group">
+              <label for="attachments">{contactPage.formSection.fields.attachments}</label>
+              <input type="file" id="attachments" name="attachment" multiple accept="image/*,.pdf,.doc,.docx" />
             </div>
             <div class="form-group">
               <label for="message">{contactPage.formSection.fields.message}</label>
@@ -120,10 +160,7 @@ const schemas = [
     </section>
 
     <section class="map-section">
-      <iframe
-        title={contactPage.mapTitle}
-        src={`https://www.google.com/maps?q=${mapAddress}&output=embed`}
-        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <ContactMap title={contactPage.mapTitle} lang="en" />
     </section>
   </main>
 
@@ -138,8 +175,14 @@ const schemas = [
   .success-copy { margin: -1rem 0 1.5rem; padding: 0.9rem 1rem; border-radius: 12px; background: rgba(58, 141, 47, 0.1); color: var(--brand-green-dark); font-weight: 700; }
   .form-group { display: flex; flex-direction: column; margin-bottom: 1.5rem; }
   .form-group label { font-weight: 600; margin-bottom: 0.5rem; color: var(--brand-ink); }
+  .form-fieldset { border: 1px solid #ddd; border-radius: 8px; padding: 1rem; }
+  .form-fieldset legend { padding: 0 0.35rem; font-weight: 600; color: var(--brand-ink); }
   .form-group input, .form-group textarea { padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; font-size: 1rem; }
   .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--brand-green); box-shadow: 0 0 0 3px rgba(61, 152, 47, 0.12); }
+  .checkbox-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.75rem; }
+  .checkbox-grid--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .check-option { display: flex; align-items: center; gap: 0.55rem; margin-bottom: 0; font-weight: 400; }
+  .check-option input { width: auto; margin: 0; }
   .contact-info-section h2 { margin-bottom: 2rem; }
   .info-block { margin-bottom: 2rem; }
   .info-block h3 { color: var(--brand-navy); margin-bottom: 0.5rem; font-size: 1rem; }

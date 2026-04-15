@@ -7,11 +7,25 @@
   },
   "hero": {
     "title": "Travel Trailer Buying, Sales and Rentals",
-    "body": "Clinique du VR buys, sells and rents travel trailers. Browse available units, ask about rental options and contact us to arrange delivery to the agreed site."
+    "body": "Clinique du VR offers carefully inspected pre-owned RV sales as well as travel trailer rentals based on your needs. Browse available units, ask about rental options and contact us to arrange delivery to the agreed site."
   },
   "intro": {
     "title": "Available trailers and services",
-    "body": "Whether you want to buy, sell or rent a travel trailer, we can help at every step. We can also transport the unit and bring it directly to the agreed site based on your needs."
+    "body": "We offer straightforward support for RV buying, sales and rentals based on what you need.",
+    "cards": [
+      {
+        "title": "RV Buying",
+        "body": "We buy used trailers that need repairs, restoration or modernization. For an evaluation, you need to send complete photos, your city, known issues and a photo of the RV information plate. We buy at low prices because we then invest in repairs, updates and resale or rental preparation. The trailer must be Quebec-plated, the frame must not be cracked, and requests with no real information will not be reviewed."
+      },
+      {
+        "title": "RV Sales",
+        "body": "Our units for sale are inspected thoroughly, repaired as needed and checked to help ensure they are free from water intrusion. The goal is to offer a more reliable unit that feels more reassuring and better prepared for the road."
+      },
+      {
+        "title": "RV Rentals",
+        "body": "Whether you need a trailer for a weekend escape or a stay lasting several weeks, our units are ready to go. We can deliver and place the trailer directly at the campground you choose anywhere within a 200 km radius of Gatineau to make the rental simpler, more convenient and hassle-free."
+      }
+    ]
   },
   "listTitle": "Inventory",
   "expandLabel": "View full listing",

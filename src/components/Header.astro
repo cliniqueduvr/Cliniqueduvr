@@ -93,7 +93,7 @@ const navItems = isEnglish
   <div class="topbar">
     <div class="container topbar-inner">
       <div class="topbar-left">
-        <a href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>
+        <a href={`tel:${siteSettings.phone.href}`} class="topbar-phone">{siteSettings.phone.display}</a>
         <a href={siteSettings.squareBookingUrl} target="_blank" rel="noopener" class="square-link">{isEnglish ? 'Book now' : 'Prendre rendez-vous'}</a>
       </div>
       <div class="topbar-right">
@@ -280,6 +280,12 @@ const navItems = isEnglish
     color: white;
   }
 
+  .topbar-phone {
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+  }
+
   .square-link {
     color: var(--brand-gold) !important;
     font-weight: 700;
@@ -358,6 +364,10 @@ const navItems = isEnglish
     gap: 2rem;
   }
 
+  .nav-menu > li {
+    position: relative;
+  }
+
   .nav-menu a {
     color: var(--brand-ink);
     font-weight: 500;
@@ -369,9 +379,53 @@ const navItems = isEnglish
     display: block;
   }
 
-  .submenu-toggle,
+  .submenu-toggle {
+    display: none;
+  }
+
   .submenu {
     display: none;
+    position: absolute;
+    top: calc(100% + 0.6rem);
+    left: 0;
+    min-width: 240px;
+    list-style: none;
+    margin: 0;
+    padding: 0.6rem 0;
+    background: white;
+    border: 1px solid rgba(23, 48, 79, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 18px 34px rgba(21, 38, 58, 0.12);
+    z-index: 30;
+  }
+
+  .submenu::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 28px;
+    width: 14px;
+    height: 14px;
+    background: white;
+    border-top: 1px solid rgba(23, 48, 79, 0.08);
+    border-left: 1px solid rgba(23, 48, 79, 0.08);
+    transform: rotate(45deg);
+  }
+
+  .submenu li {
+    border-bottom: 0;
+  }
+
+  .submenu a {
+    display: block;
+    padding: 0.7rem 1rem;
+    font-size: 0.86rem;
+    white-space: nowrap;
+  }
+
+  .nav-item-with-children:hover .submenu,
+  .nav-item-with-children:focus-within .submenu {
+    display: block;
   }
 
   .nav-menu a:hover {

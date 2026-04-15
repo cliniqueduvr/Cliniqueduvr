@@ -13,6 +13,21 @@
       "name": "Full Name *",
       "email": "Email *",
       "phone": "Phone",
+      "services": "Desired service",
+      "serviceOptions": [
+        "Inspection",
+        "Maintenance",
+        "Repair",
+        "Detailing",
+        "Sales or rental"
+      ],
+      "workType": "Type of work",
+      "workshopOption": "In shop",
+      "mobileOption": "Mobile service",
+      "workAddress": "Work address",
+      "vehicleInfo": "RV make and year",
+      "serialNumber": "Serial number if available",
+      "attachments": "Attach files",
       "subject": "Subject *",
       "message": "Message *"
     },

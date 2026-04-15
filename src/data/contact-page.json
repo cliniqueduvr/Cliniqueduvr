@@ -13,6 +13,21 @@
       "name": "Nom complet *",
       "email": "Courriel *",
       "phone": "Téléphone",
+      "services": "Service désiré",
+      "serviceOptions": [
+        "Inspection",
+        "Entretien",
+        "Réparation",
+        "Esthétique",
+        "Vente ou location"
+      ],
+      "workType": "Type d'intervention",
+      "workshopOption": "En atelier",
+      "mobileOption": "Sur la route",
+      "workAddress": "Adresse des travaux",
+      "vehicleInfo": "Marque et année du VR",
+      "serialNumber": "Numéro de série (si possible)",
+      "attachments": "Joindre des fichiers",
       "subject": "Sujet *",
       "message": "Message *"
     },

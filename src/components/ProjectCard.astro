@@ -4,30 +4,14 @@ export interface Props {
   title: string;
   location: string;
   category: string;
-  beforeImage: string;
-  afterImage: string;
-  beforeAlt: string;
-  afterAlt: string;
   description: string;
   lang?: 'fr' | 'en';
 }
 
-const { id, title, location, category, beforeImage, afterImage, beforeAlt, afterAlt, description, lang = 'fr' } = Astro.props as Props;
-const isEnglish = lang === 'en';
+const { id, title, location, category, description, lang = 'fr' } = Astro.props as Props;
 ---
 
 <article class="project-card">
-  <div class="project-images">
-    <figure class="before-image">
-      <img src={beforeImage} alt={beforeAlt} loading="lazy" />
-      <figcaption>{isEnglish ? 'Before' : 'Avant'}</figcaption>
-    </figure>
-    <figure class="after-image">
-      <img src={afterImage} alt={afterAlt} loading="lazy" />
-      <figcaption>{isEnglish ? 'After' : 'Après'}</figcaption>
-    </figure>
-  </div>
-
   <div class="project-content">
     <span class="category-badge">{category}</span>
     <h3>{title}</h3>
@@ -43,54 +27,14 @@ const isEnglish = lang === 'en';
     background: white;
     border: 1px solid rgba(6, 24, 12, 0.08);
     border-radius: 1rem;
-    overflow: hidden;
     box-shadow: 0 4px 12px rgba(6, 24, 12, 0.06);
     transition: all 0.3s ease;
-    display: grid;
-    grid-template-rows: auto 1fr;
   }
 
   .project-card:hover {
     box-shadow: 0 8px 24px rgba(6, 24, 12, 0.12);
     border-color: rgba(6, 24, 12, 0.12);
     transform: translateY(-4px);
-  }
-
-  .project-images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-    background: #f4f7f4;
-  }
-
-  figure {
-    margin: 0;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-  }
-
-  figure img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  figcaption {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    background: rgba(23, 63, 105, 0.88);
-    color: white;
-    padding: 4px 12px;
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: 0.85rem;
-    z-index: 1;
   }
 
   .project-content {
@@ -141,12 +85,7 @@ const isEnglish = lang === 'en';
     flex: 1;
     font-size: 0.95rem;
   }
-
   @media (max-width: 768px) {
-    .project-images {
-      height: 200px;
-    }
-
     .project-card h3 {
       font-size: 1.1rem;
     }

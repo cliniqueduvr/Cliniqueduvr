@@ -14,7 +14,7 @@ const breadcrumbs = buildBreadcrumbSchema([
 ]);
 ---
 
-<Layout title="RV Services in Gatineau-Ottawa | Maintenance, Repair and Detailing" description="RV services in Gatineau-Ottawa: inspection, maintenance, repair, detailing, and buying selling support." lang="en-CA" canonicalPath="/en/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs]}>
+<Layout title="RV Services in Gatineau-Ottawa | Maintenance, Repair and RV and Auto Detailing" description="RV services in Gatineau-Ottawa: inspection, maintenance, repair, RV and auto detailing, and buying selling support." lang="en-CA" canonicalPath="/en/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs]}>
   <Header lang="en" />
 
   <main>
@@ -22,7 +22,7 @@ const breadcrumbs = buildBreadcrumbSchema([
       <div class="container">
         <p class="eyebrow">For every RV situation</p>
         <h1>Our Services</h1>
-        <p>Inspection, maintenance, repair, detailing and buying selling support for RVs, trailers and caravans.</p>
+        <p>Inspection, maintenance, repair, and RV and auto detailing based on the real condition of the vehicle.</p>
       </div>
     </section>
 
@@ -31,8 +31,8 @@ const breadcrumbs = buildBreadcrumbSchema([
         {visibleServicePagesEn.map((service) => (
           <a class="service-card" href={`/en/services/${service.slug}/`}>
             <p class="card-eyebrow">{service.eyebrow}</p>
-            <h2>{service.navLabel}</h2>
-            <p>{service.lead}</p>
+            <h2 class="card-title">{service.navLabel}</h2>
+            <p class="card-copy">{service.lead}</p>
             <span>Learn more</span>
           </a>
         ))}
@@ -47,7 +47,7 @@ const breadcrumbs = buildBreadcrumbSchema([
         </div>
         <div>
           <h2>What the workshop covers</h2>
-          <p>Common requests include water leaks, roof issues, seals, propane and electrical systems, interior restoration, pre-sale presentation and pre-purchase inspections. If you are unsure which service fits best, contact us and we will guide you.</p>
+          <p>Common requests include water leaks, roof issues, seals, propane and electrical systems, interior restoration, RV and auto detailing, pre-sale presentation and pre-purchase inspections. If you are unsure which service fits best, contact us and we will guide you.</p>
         </div>
       </div>
     </section>
@@ -128,6 +128,7 @@ const breadcrumbs = buildBreadcrumbSchema([
 
   .service-card {
     display: grid;
+    grid-template-rows: auto minmax(3.6rem, auto) 1fr auto;
     gap: 0.9rem;
     padding: 1.6rem;
     border-radius: 22px;
@@ -151,13 +152,16 @@ const breadcrumbs = buildBreadcrumbSchema([
     font-weight: 700;
   }
 
-  .service-card h2 {
+  .service-card h2,
+  .card-title {
     font-size: 1.55rem;
     line-height: 1.1;
     color: var(--brand-navy);
+    margin: 0;
   }
 
-  .service-card p {
+  .service-card p,
+  .card-copy {
     color: var(--brand-muted);
     margin: 0;
   }

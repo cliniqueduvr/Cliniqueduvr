@@ -21,7 +21,10 @@ const serviceHref = (slug: string) => isEnglish ? `/en/services/${slug}/` : `/se
     <div class="container hero-grid">
       <div class="hero-copy">
         <p class="eyebrow">{service.eyebrow}</p>
-        <h1 class:list={[(service.slug === 'inspection' || service.slug === 'entretien' || service.slug === 'maintenance' || service.slug === 'reparation' || service.slug === 'repair' || service.slug === 'esthetique' || service.slug === 'detailing') && 'hero-title-wide']}>{service.h1}</h1>
+        <h1 class:list={[
+          (service.slug === 'inspection' || service.slug === 'entretien' || service.slug === 'maintenance' || service.slug === 'reparation' || service.slug === 'repair' || service.slug === 'esthetique' || service.slug === 'detailing') && 'hero-title-wide',
+          service.slug === 'inspection' && 'hero-title-wider'
+        ]}>{service.h1}</h1>
         <p class="opening">{service.opening}</p>
         <p class="lead">{service.lead}</p>
         <p class="intro">{service.intro}</p>
@@ -176,6 +179,10 @@ const serviceHref = (slug: string) => isEnglish ? `/en/services/${slug}/` : `/se
 
   .hero-copy h1.hero-title-wide {
     max-width: 17ch;
+  }
+
+  .hero-copy h1.hero-title-wider {
+    max-width: 20ch;
   }
 
   .lead {
