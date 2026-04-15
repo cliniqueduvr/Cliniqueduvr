@@ -1,17 +1,17 @@
 {
-  "metaTitle": "RV Sales | Clinique du VR",
-  "metaDescription": "RVs for sale at Clinique du VR in Gatineau-Ottawa. Browse available units, prices and photos.",
+  "metaTitle": "Travel Trailer Buying, Sales and Rentals | Clinique du VR",
+  "metaDescription": "Clinique du VR buys, sells and rents travel trailers in Gatineau-Ottawa. Browse available units and ask about delivery to the agreed site.",
   "breadcrumbs": {
     "home": "Home",
-    "current": "Sales"
+    "current": "Buying, Sales and Rentals"
   },
   "hero": {
-    "title": "RV Sales",
-    "body": "Browse available units, listed prices and photos for each vehicle. This page is updated from the CMS as vehicles are added for sale."
+    "title": "Travel Trailer Buying, Sales and Rentals",
+    "body": "Clinique du VR buys, sells and rents travel trailers. Browse available units, ask about rental options and contact us to arrange delivery to the agreed site."
   },
   "intro": {
-    "title": "Available units",
-    "body": "Each listing can include up to five photos, a price, a description and a status. If no photos are added yet, the listing can stay visible and be completed later in the CMS."
+    "title": "Available trailers and services",
+    "body": "Whether you want to buy, sell or rent a travel trailer, we can help at every step. We can also transport the unit and bring it directly to the agreed site based on your needs."
   },
   "listTitle": "Inventory",
   "expandLabel": "View full listing",
@@ -19,10 +19,10 @@
   "specsTitle": "Specifications",
   "descriptionTitle": "Description",
   "optionsTitle": "Options",
-  "emptyState": "No units are listed right now. Check back soon or contact us directly for current availability.",
+  "emptyState": "No units are listed right now. Contact us directly to ask about travel trailers available for purchase, sale or rental.",
   "contactCard": {
-    "title": "Questions about a unit?",
-    "body": "Call, email or book a time with us to get more information about a vehicle for sale.",
+    "title": "Questions about a trailer?",
+    "body": "Call, email or book a time with us to get more information about our travel trailers for purchase, sale or rental. We can also arrange delivery to the agreed site.",
     "phoneLabel": "Call now",
     "emailLabel": "Send an email",
     "squareLabel": "Book now"

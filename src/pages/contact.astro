@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { buildBreadcrumbSchema } from '../lib/seo';
+import { buildBreadcrumbSchema, buildContactPageSchema, buildWebSiteSchema } from '../lib/seo';
 import siteSettings from '../data/site-settings.json';
 import contactPage from '../data/contact-page.json';
 
@@ -15,9 +15,18 @@ const breadcrumbs = buildBreadcrumbSchema([
   { name: contactPage.breadcrumbs.home, path: '/' },
   { name: contactPage.breadcrumbs.current }
 ]);
+const schemas = [
+  buildWebSiteSchema(),
+  buildContactPageSchema({
+    name: contactPage.metaTitle,
+    description: contactPage.metaDescription,
+    path: '/contact/'
+  }),
+  breadcrumbs
+];
 ---
 
-<Layout title={contactPage.metaTitle} description={contactPage.metaDescription} canonicalPath="/contact/" frPath="/contact/" enPath="/en/contact/" schemas={[breadcrumbs]}>
+<Layout title={contactPage.metaTitle} description={contactPage.metaDescription} canonicalPath="/contact/" frPath="/contact/" enPath="/en/contact/" schemas={schemas}>
   <Header />
 
   <main>

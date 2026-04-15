@@ -44,14 +44,28 @@ export function buildFAQSchema(items: FAQItem[]) {
   };
 }
 
+export function buildWebSiteSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
+    url: SITE_URL,
+    name: 'Clinique du VR',
+    inLanguage: ['fr-CA', 'en-CA'],
+    publisher: { '@id': `${SITE_URL}/#clinique-du-vr` }
+  };
+}
+
 export function buildLocalBusinessSchema({
   telephone = '+1-581-337-3366',
   email = 'info@cliniqueduvr.ca',
-  facebookUrl = 'https://www.facebook.com/profile.php?id=61588265661776'
+  facebookUrl = 'https://www.facebook.com/profile.php?id=61588265661776',
+  tiktokUrl = 'https://www.tiktok.com/@cliniqueduvr'
 }: {
   telephone?: string;
   email?: string;
   facebookUrl?: string;
+  tiktokUrl?: string;
 } = {}) {
   return {
     '@context': 'https://schema.org',
@@ -62,19 +76,34 @@ export function buildLocalBusinessSchema({
     telephone,
     email,
     url: SITE_URL,
+    inLanguage: ['fr-CA', 'en-CA'],
     areaServed: [
       { '@type': 'City', name: 'Gatineau' },
-      { '@type': 'City', name: 'Ottawa' }
+      { '@type': 'City', name: 'Ottawa' },
+      { '@type': 'AdministrativeArea', name: 'Outaouais' },
+      { '@type': 'AdministrativeArea', name: 'Laurentides' },
+      { '@type': 'AdministrativeArea', name: 'Québec' },
+      { '@type': 'AdministrativeArea', name: 'Ontario' }
     ],
     address: {
       '@type': 'PostalAddress',
+      streetAddress: '11 rue de Granby, Unité 18',
       addressLocality: 'Gatineau',
       addressRegion: 'QC',
+      postalCode: 'J8T 8R7',
       addressCountry: 'CA'
     },
     priceRange: '$$',
     image: BRAND_IMAGE,
-    sameAs: [facebookUrl],
+    sameAs: [facebookUrl, tiktokUrl],
+    knowsAbout: [
+      'Inspection de VR',
+      'Entretien de VR',
+      'Réparation de VR',
+      'Infiltration d’eau de VR',
+      'Toiture de VR',
+      'Esthétique de VR'
+    ],
     review: [
       {
         '@type': 'Review',
@@ -106,6 +135,50 @@ export function buildLocalBusinessSchema({
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Vente et achat de VR' } }
       ]
     }
+  };
+}
+
+export function buildAboutPageSchema({
+  name,
+  description,
+  path
+}: {
+  name: string;
+  description: string;
+  path: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    '@id': absoluteUrl(path),
+    url: absoluteUrl(path),
+    name,
+    description,
+    isPartOf: { '@id': `${SITE_URL}/#website` },
+    about: { '@id': `${SITE_URL}/#clinique-du-vr` },
+    inLanguage: path.startsWith('/en/') ? 'en-CA' : 'fr-CA'
+  };
+}
+
+export function buildContactPageSchema({
+  name,
+  description,
+  path
+}: {
+  name: string;
+  description: string;
+  path: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    '@id': absoluteUrl(path),
+    url: absoluteUrl(path),
+    name,
+    description,
+    isPartOf: { '@id': `${SITE_URL}/#website` },
+    about: { '@id': `${SITE_URL}/#clinique-du-vr` },
+    inLanguage: path.startsWith('/en/') ? 'en-CA' : 'fr-CA'
   };
 }
 

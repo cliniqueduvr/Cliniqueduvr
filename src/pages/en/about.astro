@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import { buildBreadcrumbSchema } from '../../lib/seo';
+import { buildAboutPageSchema, buildBreadcrumbSchema, buildWebSiteSchema } from '../../lib/seo';
 import siteSettings from '../../data/site-settings.json';
 import aboutPage from '../../data/about-page-en.json';
 
@@ -10,6 +10,15 @@ const breadcrumbs = buildBreadcrumbSchema([
   { name: 'Home', path: '/en/' },
   { name: 'About' }
 ]);
+const schemas = [
+  buildWebSiteSchema(),
+  buildAboutPageSchema({
+    name: aboutPage.metaTitle,
+    description: aboutPage.metaDescription,
+    path: '/en/about/'
+  }),
+  breadcrumbs
+];
 ---
 
 <Layout
@@ -19,7 +28,7 @@ const breadcrumbs = buildBreadcrumbSchema([
   canonicalPath="/en/about/"
   frPath="/about/"
   enPath="/en/about/"
-  schemas={[breadcrumbs]}
+  schemas={schemas}
 >
   <Header lang="en" />
 

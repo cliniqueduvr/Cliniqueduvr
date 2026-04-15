@@ -58,6 +58,18 @@ function getAlternatePath(pathname: string, targetLang: 'fr' | 'en') {
 const homeHref = isEnglish ? '/en/' : '/';
 const frHref = getAlternatePath(currentPath, 'fr');
 const enHref = getAlternatePath(currentPath, 'en');
+const isActivePath = (href: string) => {
+  if (href === '/') return currentPath === '/';
+  if (href === '/en/') return currentPath === '/en/';
+  return currentPath === href || currentPath.startsWith(href);
+};
+const serviceMenuItems = (isEnglish ? servicePagesEn.items : servicePagesFr.items)
+  .filter((service) => service.slug !== 'vente-achat' && service.slug !== 'buying-selling')
+  .map((service) => ({
+    label: service.navLabel,
+    href: isEnglish ? `/en/services/${service.slug}/` : `/services/${service.slug}/`,
+    active: currentPath === (isEnglish ? `/en/services/${service.slug}/` : `/services/${service.slug}/`)
+  }));
 const navItems = isEnglish
   ? [
       { label: 'Home', href: '/en/' },
@@ -92,6 +104,9 @@ const navItems = isEnglish
         <a href={siteSettings.facebookUrl} target="_blank" rel="noopener" title="Facebook">
           <i class="fab fa-facebook"></i>
         </a>
+        <a href={siteSettings.tiktokUrl} target="_blank" rel="noopener" title="TikTok" aria-label="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
       </div>
     </div>
   </div>
@@ -104,7 +119,53 @@ const navItems = isEnglish
       <div class="nav-panel" id="site-nav" data-nav-panel>
         <ul class="nav-menu">
           {navItems.map(item => (
-            <li><a href={item.href}>{item.label}</a></li>
+            item.href === (isEnglish ? '/en/services/' : '/services/')
+              ? (
+                <li class="nav-item-with-children">
+                  <div class="nav-link-row">
+                    <a
+                      href={item.href}
+                      class:list={[isActivePath(item.href) && 'active']}
+                      aria-current={isActivePath(item.href) ? 'page' : undefined}
+                    >
+                      {item.label}
+                    </a>
+                    <button
+                      class="submenu-toggle"
+                      type="button"
+                      aria-label={isEnglish ? 'Show services' : 'Afficher les services'}
+                      aria-expanded="false"
+                      data-submenu-toggle
+                    >
+                      <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <ul class="submenu" data-submenu>
+                    {serviceMenuItems.map((serviceItem) => (
+                      <li>
+                        <a
+                          href={serviceItem.href}
+                          class:list={[serviceItem.active && 'active']}
+                          aria-current={serviceItem.active ? 'page' : undefined}
+                        >
+                          {serviceItem.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              )
+              : (
+                <li>
+                  <a
+                    href={item.href}
+                    class:list={[isActivePath(item.href) && 'active']}
+                    aria-current={isActivePath(item.href) ? 'page' : undefined}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              )
           ))}
         </ul>
         <div class="mobile-lang-switch">
@@ -132,8 +193,18 @@ const navItems = isEnglish
     const toggle = header.querySelector('[data-nav-toggle]');
     const panel = header.querySelector('[data-nav-panel]');
     if (!(toggle instanceof HTMLButtonElement) || !(panel instanceof HTMLElement)) return;
+    const submenuToggles = Array.from(panel.querySelectorAll('[data-submenu-toggle]'));
+
+    const closeSubmenus = () => {
+      submenuToggles.forEach((submenuToggle) => {
+        if (!(submenuToggle instanceof HTMLButtonElement)) return;
+        submenuToggle.setAttribute('aria-expanded', 'false');
+        submenuToggle.closest('.nav-item-with-children')?.removeAttribute('data-submenu-open');
+      });
+    };
 
     const closeMenu = () => {
+      closeSubmenus();
       header.removeAttribute('data-menu-open');
       toggle.setAttribute('aria-expanded', 'false');
     };
@@ -147,6 +218,24 @@ const navItems = isEnglish
 
       header.setAttribute('data-menu-open', 'true');
       toggle.setAttribute('aria-expanded', 'true');
+    });
+
+    submenuToggles.forEach((submenuToggle) => {
+      if (!(submenuToggle instanceof HTMLButtonElement)) return;
+
+      submenuToggle.addEventListener('click', (event) => {
+        event.preventDefault();
+        const navItem = submenuToggle.closest('.nav-item-with-children');
+        if (!(navItem instanceof HTMLElement)) return;
+
+        const isOpen = navItem.getAttribute('data-submenu-open') === 'true';
+        closeSubmenus();
+
+        if (isOpen) return;
+
+        navItem.setAttribute('data-submenu-open', 'true');
+        submenuToggle.setAttribute('aria-expanded', 'true');
+      });
     });
 
     panel.querySelectorAll('a').forEach((link) => {
@@ -276,9 +365,23 @@ const navItems = isEnglish
     font-size: 0.9rem;
   }
 
+  .nav-link-row {
+    display: block;
+  }
+
+  .submenu-toggle,
+  .submenu {
+    display: none;
+  }
+
   .nav-menu a:hover {
     color: var(--brand-green);
     text-decoration: none;
+  }
+
+  .nav-menu a.active {
+    color: var(--brand-green);
+    font-weight: 700;
   }
 
   .mobile-lang-switch {
@@ -359,9 +462,59 @@ const navItems = isEnglish
       border-bottom: 1px solid rgba(23, 48, 79, 0.08);
     }
 
+    .nav-link-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
     .nav-menu a {
       display: block;
       padding: 0.8rem 0;
+    }
+
+    .nav-item-with-children > .nav-link-row > a {
+      flex: 1;
+    }
+
+    .submenu-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 0;
+      background: transparent;
+      color: var(--brand-navy);
+      cursor: pointer;
+      padding: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .nav-item-with-children[data-submenu-open='true'] .submenu-toggle {
+      transform: rotate(180deg);
+    }
+
+    .submenu {
+      list-style: none;
+      padding: 0 0 0.35rem 0.9rem;
+      margin: 0;
+    }
+
+    .nav-item-with-children[data-submenu-open='true'] .submenu {
+      display: block;
+    }
+
+    .submenu li {
+      border-bottom: 0;
+    }
+
+    .submenu a {
+      padding: 0.55rem 0;
+      font-size: 0.84rem;
+      text-transform: none;
+      color: var(--brand-muted);
     }
 
     .mobile-lang-switch {

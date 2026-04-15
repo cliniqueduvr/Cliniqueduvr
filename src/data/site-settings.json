@@ -7,8 +7,9 @@
   },
   "email": "info@cliniqueduvr.ca",
   "googleAdsId": "",
-  "squareBookingUrl": "https://app.squareup.com/appointments/book/lgocu4o42jy5zu/LGZ9VNRVZ6XXM/start",
+  "squareBookingUrl": "https://book.squareup.com/appointments/lgocu4o42jy5zu/location/LGZ9VNRVZ6XXM/services",
   "facebookUrl": "https://www.facebook.com/profile.php?id=61588265661776",
+  "tiktokUrl": "https://www.tiktok.com/@cliniqueduvr",
   "address": {
     "fr": "11 rue de Granby, Unité 18, Gatineau, QC",
     "en": "11 rue de Granby, Unit 18, Gatineau, QC",
@@ -18,7 +19,6 @@
     "fr": "Gatineau, Ottawa, Laurentides, Outaouais, Québec et Ontario",
     "en": "Gatineau, Ottawa, Laurentides, Outaouais, Quebec and Ontario"
   },
-  "rbq": "5824-9764-01",
   "sinceYear": "2013",
   "footerDescription": {
     "fr": "Entretien, réparation et esthétique de VR avec une approche claire, soignée et orientée service.",

@@ -7,7 +7,7 @@
     "tagline": ""
   },
   "introCard": {
-    "icon": "fas fa-building",
+    "icon": "",
     "heading": "Pourquoi Choisir Clinique du VR?",
     "body": "<strong>Service spécialisé et attentif</strong> pour l'entretien, la réparation et l'esthétique de VR. Rapidité, transparence, conformité réglementaire et exécution soignée du début à la fin."
   },
@@ -17,8 +17,7 @@
       { "href": "/services/inspection/", "icon": "fas fa-clipboard-check", "label": "Inspection" },
       { "href": "/services/entretien/", "icon": "fas fa-screwdriver-wrench", "label": "Entretien" },
       { "href": "/services/reparation/", "icon": "fas fa-toolbox", "label": "Réparation" },
-      { "href": "/services/esthetique/", "icon": "fas fa-spray-can-sparkles", "label": "Esthétique" },
-      { "href": "/vente/", "icon": "", "label": "Vente" }
+      { "href": "/services/esthetique/", "icon": "fas fa-spray-can-sparkles", "label": "Esthétique" }
     ]
   },
   "seoSections": [

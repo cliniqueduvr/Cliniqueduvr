@@ -1,17 +1,17 @@
 {
-  "metaTitle": "Vente de VR | Clinique du VR",
-  "metaDescription": "VR à vendre chez Clinique du VR à Gatineau-Ottawa. Consultez les unités disponibles, les prix et les photos.",
+  "metaTitle": "Achat, vente et location de roulottes | Clinique du VR",
+  "metaDescription": "Clinique du VR achète, vend et loue des roulottes à Gatineau-Ottawa. Consultez les unités disponibles et informez-vous sur la livraison au site convenu.",
   "breadcrumbs": {
     "home": "Accueil",
-    "current": "Vente"
+    "current": "Achat, vente et location"
   },
   "hero": {
-    "title": "Vente de VR",
-    "body": "Consultez les unités disponibles, les prix affichés et les photos de chaque véhicule. Cette page est mise à jour dans le CMS au fur et à mesure des véhicules en vente."
+    "title": "Achat, vente et location de roulottes",
+    "body": "Clinique du VR achète, vend et loue des roulottes. Consultez les unités disponibles, informez-vous sur les options en location et contactez-nous pour planifier la livraison sur le site convenu."
   },
   "intro": {
-    "title": "Unités disponibles",
-    "body": ""
+    "title": "Nos roulottes et services disponibles",
+    "body": "Que vous souhaitiez acheter, vendre ou louer une roulotte, nous pouvons vous accompagner à chaque étape. Nous pouvons également transporter l'unité et l'apporter directement sur le site convenu selon votre besoin."
   },
   "listTitle": "Inventaire",
   "expandLabel": "Voir la fiche complète",
@@ -19,10 +19,10 @@
   "specsTitle": "Spécifications",
   "descriptionTitle": "Description",
   "optionsTitle": "Options",
-  "emptyState": "Aucune unité n'est affichée pour le moment. Revenez bientôt ou contactez-nous directement pour connaître les véhicules disponibles.",
+  "emptyState": "Aucune unité n'est affichée pour le moment. Contactez-nous directement pour connaître les roulottes disponibles à l'achat, à la vente ou en location.",
   "contactCard": {
-    "title": "Questions sur une unité?",
-    "body": "Appelez-nous, écrivez-nous ou prenez rendez-vous pour obtenir plus d'information sur un véhicule en vente.",
+    "title": "Questions sur une roulotte?",
+    "body": "Appelez-nous, écrivez-nous ou prenez rendez-vous pour obtenir plus d'information sur nos roulottes à l'achat, à la vente ou en location. Nous pouvons aussi organiser la livraison sur le site convenu.",
     "phoneLabel": "Appeler maintenant",
     "emailLabel": "Écrire par courriel",
     "squareLabel": "Prendre rendez-vous"

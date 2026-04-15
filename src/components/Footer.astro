@@ -21,7 +21,7 @@ const isEnglish = lang === 'en';
         <strong>{isEnglish ? 'Phone:' : 'Téléphone:'}</strong> <a href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a><br>
         <strong>Square:</strong> <a href={siteSettings.squareBookingUrl} target="_blank" rel="noopener">{isEnglish ? 'Book now' : 'Prendre rendez-vous'}</a><br>
         <strong>Email:</strong> <a href={`mailto:${siteSettings.email}`}>{siteSettings.email}</a><br>
-        <strong>RBQ:</strong> {siteSettings.rbq}
+        <strong>{isEnglish ? 'Insurance:' : 'Assurance:'}</strong> {isEnglish ? '$2M garage and liability' : 'Garage et civile 2 millions'}
       </p>
     </div>
     <div class="footer-col">
@@ -38,6 +38,10 @@ const isEnglish = lang === 'en';
       <h4>{isEnglish ? 'Follow Us' : 'Nous Suivre'}</h4>
       <a href={siteSettings.facebookUrl} target="_blank" rel="noopener">
         <i class="fab fa-facebook"></i> Facebook
+      </a>
+      <br />
+      <a href={siteSettings.tiktokUrl} target="_blank" rel="noopener">
+        <i class="fab fa-tiktok"></i> TikTok
       </a>
       <p class="footer-legal">
         <a href={isEnglish ? '/en/privacy/' : '/privacy/'}>{isEnglish ? 'Privacy Policy' : 'Politique de confidentialité'}</a>

@@ -12,7 +12,8 @@ const successUrl = 'https://www.cliniqueduvr.ca/en/contact/?sent=1';
 const schemas = [buildLocalBusinessSchema({
   telephone: siteSettings.phone.href,
   email: siteSettings.email,
-  facebookUrl: siteSettings.facebookUrl
+  facebookUrl: siteSettings.facebookUrl,
+  tiktokUrl: siteSettings.tiktokUrl
 })];
 
 const meta = {
@@ -37,9 +38,11 @@ const meta = {
       <div class="container intro-grid">
         {homePage.introCards.map((card) => (
           <div class="intro-card">
-            <div class="card-icon">
-              <i class={card.icon}></i>
-            </div>
+            {card.icon && (
+              <div class="card-icon">
+                <i class={card.icon}></i>
+              </div>
+            )}
             <h2>{card.heading}</h2>
             <p set:html={card.body} />
           </div>
@@ -52,7 +55,7 @@ const meta = {
         <h2>{homePage.servicesOverview.title}</h2>
         <div class="services-grid">
           {homePage.servicesOverview.items.map((item) => (
-            <a href={item.href} class="service-item">{item.icon && <i class={item.icon}></i>}<span>{item.label}</span></a>
+            <a href={item.href} class:list={['service-item', !item.icon && 'service-item--no-icon']}>{item.icon && <i class={item.icon}></i>}<span>{item.label}</span></a>
           ))}
         </div>
       </div>
@@ -107,7 +110,7 @@ const meta = {
           <p><strong>Email:</strong> <a href={`mailto:${siteSettings.email}`}>{siteSettings.email}</a></p>
           <p><strong>Address:</strong> {siteSettings.address.en}</p>
           <p><strong>Service area:</strong> {siteSettings.serviceArea.en}</p>
-          <p><strong>RBQ:</strong> {siteSettings.rbq} | <strong>Since:</strong> {siteSettings.sinceYear}</p>
+          <p><strong>Insurance:</strong> $2M garage and liability | <strong>Since:</strong> {siteSettings.sinceYear}</p>
           <p class="cta-text">{homePage.contactPanel.ctaText}</p>
         </div>
       </div>
@@ -149,6 +152,7 @@ const meta = {
   .service-item { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; padding: 2rem; background: white; border-radius: 8px; transition: all 0.3s; border: 2px solid transparent; }
   .service-item:hover { border-color: var(--brand-green); transform: translateY(-4px); box-shadow: 0 8px 16px rgba(0,0,0,0.1); }
   .service-item i { font-size: 2.5rem; color: var(--brand-navy); }
+  .service-item--no-icon { gap: 0; }
   .contact-section { padding: 4rem 0; background: var(--brand-navy); color: white; }
   .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
   .contact-form-wrapper h2 { color: white; margin-bottom: 1.5rem; }

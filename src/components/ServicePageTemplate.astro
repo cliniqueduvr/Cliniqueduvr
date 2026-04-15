@@ -21,7 +21,7 @@ const serviceHref = (slug: string) => isEnglish ? `/en/services/${slug}/` : `/se
     <div class="container hero-grid">
       <div class="hero-copy">
         <p class="eyebrow">{service.eyebrow}</p>
-        <h1>{service.h1}</h1>
+        <h1 class:list={[(service.slug === 'inspection' || service.slug === 'entretien' || service.slug === 'maintenance' || service.slug === 'reparation' || service.slug === 'repair' || service.slug === 'esthetique' || service.slug === 'detailing') && 'hero-title-wide']}>{service.h1}</h1>
         <p class="opening">{service.opening}</p>
         <p class="lead">{service.lead}</p>
         <p class="intro">{service.intro}</p>
@@ -107,7 +107,7 @@ const serviceHref = (slug: string) => isEnglish ? `/en/services/${slug}/` : `/se
           <h3>{isEnglish ? 'Need a quick opinion?' : "Besoin d'un avis rapide?"}</h3>
           <p>{isEnglish ? 'We can point you toward inspection, maintenance or repair based on the actual condition of the vehicle.' : "On peut vous orienter vers une inspection, un entretien ou une réparation selon l'état du véhicule."}</p>
           <a class="side-button" href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>
-          <a class="side-link" href={contactHref}>{isEnglish ? 'Request an estimate' : 'Demander une soumission'}</a>
+          <a class="side-link" href={siteSettings.squareBookingUrl} target="_blank" rel="noopener">{isEnglish ? 'Book your appointment' : 'Prendre votre rendez-vous'}</a>
         </div>
 
         <div class="side-card">
@@ -172,6 +172,10 @@ const serviceHref = (slug: string) => isEnglish ? `/en/services/${slug}/` : `/se
     margin-bottom: 1rem;
     color: white;
     line-height: 1.05;
+  }
+
+  .hero-copy h1.hero-title-wide {
+    max-width: 17ch;
   }
 
   .lead {
@@ -429,6 +433,10 @@ const serviceHref = (slug: string) => isEnglish ? `/en/services/${slug}/` : `/se
     }
 
     .hero-copy h1 {
+      max-width: none;
+    }
+    
+    .hero-copy h1.hero-title-wide {
       max-width: none;
     }
 
