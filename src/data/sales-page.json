@@ -11,11 +11,11 @@
   },
   "intro": {
     "title": "Nos roulottes et services disponibles",
-    "body": "Nous proposons un accompagnement simple et clair pour l'achat, la vente et la location de VR selon votre besoin.",
+    "body": "Nous proposons un accompagnement simple et clair pour l'achat, la vente et la location de VR selon vos besoins.",
     "cards": [
       {
         "title": "Achat de VR",
-        "body": "Nous achetons des roulottes usagées qui ont besoin de réparation, de remise en état ou de modernisation. Pour une évaluation, il faut envoyer des photos complètes, la ville, les problèmes connus et une photo de la plaque signalétique. Nous achetons à bas prix, car nous investissons ensuite pour réparer, moderniser et revendre ou louer. La roulotte doit être plaquée Québec, le frame ne doit pas être fissuré, et les demandes sans information ne seront pas traitées."
+        "body": "Nous achetons des roulottes usagées qui ont besoin de réparation, de remise en état ou de modernisation. Pour une évaluation, il faut envoyer des photos complètes, la ville, les problèmes connus et une photo de la plaque signalétique. Nous achetons à bas prix, car nous investissons ensuite pour réparer, moderniser, puis revendre ou louer. La roulotte doit être immatriculée au Québec, le châssis ne doit pas être fissuré, et les demandes sans information ne seront pas traitées."
       },
       {
         "title": "Vente de VR",
@@ -36,10 +36,10 @@
   "emptyState": "Aucune unité n'est affichée pour le moment. Contactez-nous directement pour connaître les roulottes disponibles à l'achat, à la vente ou en location.",
   "contactCard": {
     "title": "Questions sur une roulotte?",
-    "body": "Appelez-nous, écrivez-nous ou prenez rendez-vous pour obtenir plus d'information sur nos roulottes à l'achat, à la vente ou en location. Nous pouvons aussi organiser la livraison sur le site convenu.",
+    "body": "Appelez-nous, écrivez-nous ou réservez en ligne pour obtenir plus d'informations sur nos roulottes à l'achat, à la vente ou en location. Nous pouvons aussi organiser la livraison sur le site convenu.",
     "phoneLabel": "Appeler maintenant",
     "emailLabel": "Écrire par courriel",
-    "squareLabel": "Prendre rendez-vous"
+    "squareLabel": "Réserver en ligne"
   },
   "items": [
     {

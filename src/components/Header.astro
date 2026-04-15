@@ -2,6 +2,7 @@
 import siteSettings from '../data/site-settings.json';
 import servicePagesFr from '../data/service-pages.json';
 import servicePagesEn from '../data/service-pages-en.json';
+import { localAreaPagesFr, localAreaPagesEn } from '../data/local-area-pages';
 
 export interface Props {
   lang?: 'fr' | 'en';
@@ -12,6 +13,8 @@ const isEnglish = lang === 'en';
 const currentPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
 const frToEnServiceSlug = new Map(servicePagesFr.items.map((service) => [service.slug, service.alternateSlug]));
 const enToFrServiceSlug = new Map(servicePagesEn.items.map((service) => [service.slug, service.alternateSlug]));
+const frToEnAreaSlug = new Map(localAreaPagesFr.map((page, index) => [page.slug, localAreaPagesEn[index]?.slug]));
+const enToFrAreaSlug = new Map(localAreaPagesEn.map((page, index) => [page.slug, localAreaPagesFr[index]?.slug]));
 
 function getAlternatePath(pathname: string, targetLang: 'fr' | 'en') {
   const normalizedPath = pathname.endsWith('/') ? pathname : `${pathname}/`;
@@ -19,7 +22,9 @@ function getAlternatePath(pathname: string, targetLang: 'fr' | 'en') {
   const staticFrToEn: Record<string, string> = {
     '/': '/en/',
     '/about/': '/en/about/',
+    '/choisir-service/': '/en/choose-service/',
     '/contact/': '/en/contact/',
+    '/plan-du-site/': '/en/site-map/',
     '/privacy/': '/en/privacy/',
     '/realisations/': '/en/realisations/',
     '/services/': '/en/services/',
@@ -30,7 +35,9 @@ function getAlternatePath(pathname: string, targetLang: 'fr' | 'en') {
   const staticEnToFr: Record<string, string> = {
     '/en/': '/',
     '/en/about/': '/about/',
+    '/en/choose-service/': '/choisir-service/',
     '/en/contact/': '/contact/',
+    '/en/site-map/': '/plan-du-site/',
     '/en/privacy/': '/privacy/',
     '/en/realisations/': '/realisations/',
     '/en/services/': '/services/',
@@ -44,6 +51,10 @@ function getAlternatePath(pathname: string, targetLang: 'fr' | 'en') {
       const slug = normalizedPath.replace('/services/', '').replaceAll('/', '');
       return `/en/services/${frToEnServiceSlug.get(slug) ?? slug}/`;
     }
+    if (normalizedPath.startsWith('/zones/')) {
+      const slug = normalizedPath.replace('/zones/', '').replaceAll('/', '');
+      return `/en/areas/${frToEnAreaSlug.get(slug) ?? slug}/`;
+    }
     return normalizedPath.startsWith('/en/') ? normalizedPath : `/en${normalizedPath}`;
   }
 
@@ -51,6 +62,10 @@ function getAlternatePath(pathname: string, targetLang: 'fr' | 'en') {
   if (normalizedPath.startsWith('/en/services/')) {
     const slug = normalizedPath.replace('/en/services/', '').replaceAll('/', '');
     return `/services/${enToFrServiceSlug.get(slug) ?? slug}/`;
+  }
+  if (normalizedPath.startsWith('/en/areas/')) {
+    const slug = normalizedPath.replace('/en/areas/', '').replaceAll('/', '');
+    return `/zones/${enToFrAreaSlug.get(slug) ?? slug}/`;
   }
   return normalizedPath.startsWith('/en/') ? normalizedPath.replace(/^\/en/, '') || '/' : normalizedPath;
 }
@@ -94,7 +109,7 @@ const navItems = isEnglish
     <div class="container topbar-inner">
       <div class="topbar-left">
         <a href={`tel:${siteSettings.phone.href}`} class="topbar-phone">{siteSettings.phone.display}</a>
-        <a href={siteSettings.squareBookingUrl} target="_blank" rel="noopener" class="square-link">{isEnglish ? 'Book now' : 'Prendre rendez-vous'}</a>
+        <a href={siteSettings.squareBookingUrl} target="_blank" rel="noopener" class="square-link">{isEnglish ? 'Book now' : 'Réserver en ligne'}</a>
       </div>
       <div class="topbar-right">
         <div class="lang-switch">
@@ -287,13 +302,22 @@ const navItems = isEnglish
   }
 
   .square-link {
-    color: var(--brand-gold) !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    background: var(--brand-gold);
+    color: var(--brand-navy-dark) !important;
+    border: 2px solid var(--brand-gold);
     font-weight: 700;
   }
 
   .square-link:hover {
     text-decoration: none;
-    opacity: 0.9;
+    background: #e1c317;
+    border-color: #e1c317;
   }
 
   .topbar-right a {

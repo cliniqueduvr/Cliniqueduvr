@@ -212,7 +212,7 @@ const isEnglish = lang === 'en';
           <p>{data.contactCard.body}</p>
           <a class="contact-button" href={`tel:${siteSettings.phone.href}`}>{data.contactCard.phoneLabel}</a>
           <a class="contact-link" href={`mailto:${siteSettings.email}`}>{data.contactCard.emailLabel}</a>
-          <a class="contact-link" href={siteSettings.squareBookingUrl} target="_blank" rel="noopener">{data.contactCard.squareLabel}</a>
+          <a class="contact-link contact-square" href={siteSettings.squareBookingUrl} target="_blank" rel="noopener">{data.contactCard.squareLabel}</a>
         </div>
       </aside>
     </div>
@@ -606,9 +606,26 @@ const isEnglish = lang === 'en';
     color: var(--brand-navy);
   }
 
+  .contact-square {
+    background: var(--brand-gold);
+    color: var(--brand-navy-dark);
+    border: 2px solid var(--brand-gold);
+  }
+
+  .contact-square:hover {
+    text-decoration: none;
+    background: #e1c317;
+    border-color: #e1c317;
+  }
+
   @media (max-width: 768px) {
     .sales-hero {
+      background: linear-gradient(180deg, var(--brand-navy-dark) 0%, #1f476d 100%);
       padding: 3.4rem 0 3rem;
+    }
+
+    .sales-hero h1 {
+      font-size: 2.2rem;
     }
 
     .sales-layout {

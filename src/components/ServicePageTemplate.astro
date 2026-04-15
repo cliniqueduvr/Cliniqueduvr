@@ -13,7 +13,69 @@ const { service, allServices, lang = 'fr' } = Astro.props as Props;
 const otherServices = allServices.filter((item) => item.slug !== service.slug && item.slug !== 'vente-achat' && item.slug !== 'buying-selling');
 const isEnglish = lang === 'en';
 const contactHref = isEnglish ? '/en/contact/' : '/contact/';
+const chooseServiceHref = isEnglish ? '/en/choose-service/' : '/choisir-service/';
+const projectsHref = isEnglish ? '/en/realisations/' : '/realisations/';
+const inspectionHref = isEnglish ? '/en/services/inspection/' : '/services/inspection/';
+const servicesHref = isEnglish ? '/en/services/' : '/services/';
 const serviceHref = (slug: string) => isEnglish ? `/en/services/${slug}/` : `/services/${slug}/`;
+const serviceAreas = isEnglish
+  ? ['Outaouais', 'Ottawa', 'Laurentides']
+  : ['Outaouais', 'Ottawa', 'Laurentides'];
+const helpfulLinks = isEnglish
+  ? [
+      {
+        href: contactHref,
+        title: 'Contact us about your RV',
+        copy: 'Describe the issue, the vehicle, and your situation to get the right next step.'
+      },
+      {
+        href: projectsHref,
+        title: 'See real workshop projects',
+        copy: 'Review examples of repairs, restoration work, and before-and-after improvements.'
+      },
+      {
+        href: inspectionHref,
+        title: 'Inspection before buying or selling',
+        copy: 'If your situation involves a transaction, start with the inspection section to clarify the real condition of the vehicle.'
+      },
+      {
+        href: chooseServiceHref,
+        title: 'Which service fits best?',
+        copy: 'Use our guidance page if you are not sure whether you need inspection, maintenance, repair, or detailing.'
+      },
+      {
+        href: servicesHref,
+        title: 'Compare our other services',
+        copy: 'If this service is close but not exact, review the full list to choose the best fit.'
+      }
+    ]
+  : [
+      {
+        href: contactHref,
+        title: 'Parlez-nous de votre VR',
+        copy: 'Décrivez le problème, le véhicule et votre situation pour obtenir la bonne prochaine étape.'
+      },
+      {
+        href: projectsHref,
+        title: 'Voir des interventions réelles',
+        copy: 'Consultez des exemples de réparations, de remises en état et d’améliorations avant-après.'
+      },
+      {
+        href: inspectionHref,
+        title: 'Inspection avant achat ou vente',
+        copy: 'Si votre situation touche une transaction, commencez par la section inspection pour clarifier l’état réel du véhicule.'
+      },
+      {
+        href: chooseServiceHref,
+        title: 'Quel service choisir ?',
+        copy: 'Utilisez notre page d’orientation si vous hésitez entre inspection, entretien, réparation ou esthétique.'
+      },
+      {
+        href: servicesHref,
+        title: 'Comparer les autres services',
+        copy: 'Si ce service est proche de votre besoin sans être exact, parcourez la liste complète.'
+      }
+    ];
 ---
 
 <main>
@@ -92,6 +154,40 @@ const serviceHref = (slug: string) => isEnglish ? `/en/services/${slug}/` : `/se
           </div>
         </section>
 
+        <section class="content-card">
+          <h2>{isEnglish ? 'Areas served for this service' : 'Zones desservies pour ce service'}</h2>
+          <p class="section-copy">
+            {isEnglish
+              ? 'This service is offered from our Gatineau workshop and according to the type of work, may also involve nearby travel or regional support.'
+              : 'Ce service est offert à partir de notre atelier de Gatineau et, selon le type d’intervention, peut aussi inclure un déplacement à proximité ou un accompagnement régional.'}
+          </p>
+          <div class="link-card-grid">
+            {serviceAreas.map((area) => (
+              <article class="link-card">
+                <h3>{area}</h3>
+                <p>
+                  {isEnglish
+                    ? `Support available for ${service.navLabel.toLowerCase()} requests in and around ${area}.`
+                    : `Accompagnement offert pour les demandes de ${service.navLabel.toLowerCase()} à ${area} et dans les environs.`}
+                </p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="content-card alt">
+          <h2>{isEnglish ? 'Useful links before you decide' : 'Liens utiles avant de décider'}</h2>
+          <div class="link-card-grid">
+            {helpfulLinks.map((item) => (
+              <a class="link-card link-card-anchor" href={item.href}>
+                <h3>{item.title}</h3>
+                <p>{item.copy}</p>
+                <span>{isEnglish ? 'Learn more' : 'En savoir plus'}</span>
+              </a>
+            ))}
+          </div>
+        </section>
+
         <section class="content-card faq-section">
           <h2>{service.faqTitle}</h2>
           <div class="faq-list">
@@ -110,7 +206,7 @@ const serviceHref = (slug: string) => isEnglish ? `/en/services/${slug}/` : `/se
           <h3>{isEnglish ? 'Need a quick opinion?' : "Besoin d'un avis rapide?"}</h3>
           <p>{isEnglish ? 'We can point you toward inspection, maintenance or repair based on the actual condition of the vehicle.' : "On peut vous orienter vers une inspection, un entretien ou une réparation selon l'état du véhicule."}</p>
           <a class="side-button" href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>
-          <a class="side-link" href={siteSettings.squareBookingUrl} target="_blank" rel="noopener">{isEnglish ? 'Book your appointment' : 'Prendre votre rendez-vous'}</a>
+          <a class="side-link" href={siteSettings.squareBookingUrl} target="_blank" rel="noopener">{isEnglish ? 'Book your appointment' : 'Réserver en ligne'}</a>
         </div>
 
         <div class="side-card">
@@ -132,7 +228,7 @@ const serviceHref = (slug: string) => isEnglish ? `/en/services/${slug}/` : `/se
     lang={lang}
     heading={isEnglish ? `Need help with ${service.navLabel.toLowerCase()}?` : `Besoin d'un service de ${service.navLabel.toLowerCase()}?`}
     subheading={isEnglish ? 'Tell us about your vehicle and your situation. We will point you in the right direction.' : 'Décrivez votre véhicule et votre besoin. On vous revient avec une direction claire.'}
-    squareLabel={isEnglish ? 'Book now' : 'Réserver maintenant'}
+    squareLabel={isEnglish ? 'Book now' : 'Réserver en ligne'}
   />
 </main>
 
@@ -335,21 +431,55 @@ const serviceHref = (slug: string) => isEnglish ? `/en/services/${slug}/` : `/se
     gap: 1rem;
   }
 
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+
   .why-card {
     background: var(--brand-surface);
     border-radius: 16px;
     padding: 1rem;
   }
 
+  .link-card {
+    background: var(--brand-surface);
+    border-radius: 16px;
+    padding: 1rem;
+  }
+
+  .link-card-anchor {
+    display: grid;
+    gap: 0.55rem;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  }
+
+  .link-card-anchor:hover {
+    text-decoration: none;
+    transform: translateY(-2px);
+    background: #eaf1e6;
+    box-shadow: 0 12px 24px rgba(21, 38, 58, 0.08);
+  }
+
   .why-card h3,
-  .faq-item h3 {
+  .faq-item h3,
+  .link-card h3 {
     font-size: 1rem;
     margin-bottom: 0.45rem;
   }
 
   .why-card p,
-  .faq-item p {
+  .faq-item p,
+  .link-card p {
     color: var(--brand-muted);
+  }
+
+  .link-card span {
+    color: var(--brand-navy);
+    font-weight: 700;
   }
 
   .faq-list {
@@ -402,8 +532,24 @@ const serviceHref = (slug: string) => isEnglish ? `/en/services/${slug}/` : `/se
   }
 
   .side-link {
-    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 48px;
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    background: var(--brand-gold);
+    border: 2px solid var(--brand-gold);
+    color: var(--brand-navy-dark);
     font-weight: 700;
+    text-decoration: none;
+  }
+
+  .side-link:hover {
+    text-decoration: none;
+    background: #e1c317;
+    border-color: #e1c317;
   }
 
   .service-nav {

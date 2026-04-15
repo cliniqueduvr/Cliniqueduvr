@@ -1,0 +1,48 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import LocalAreaPageTemplate from '../../components/LocalAreaPageTemplate.astro';
+import { buildBreadcrumbSchema, buildFAQSchema, buildServiceSchema } from '../../lib/seo';
+import { localAreaPagesFr, type LocalAreaPage } from '../../data/local-area-pages';
+
+export function getStaticPaths() {
+  return localAreaPagesFr.map((page) => ({
+    params: { slug: page.slug },
+    props: { page }
+  }));
+}
+
+const { page } = Astro.props as { page: LocalAreaPage };
+const enSlugMap = new Map([
+  ['inspection-vr-outaouais', 'rv-inspection-outaouais'],
+  ['reparation-vr-ottawa', 'rv-repair-ottawa'],
+  ['infiltration-eau-roulotte-laurentides', 'trailer-water-intrusion-laurentides']
+]);
+const schemas = [
+  buildServiceSchema({
+    name: page.h1,
+    serviceType: page.serviceType,
+    description: page.intro
+  }),
+  buildFAQSchema(page.faqs),
+  buildBreadcrumbSchema([
+    { name: 'Accueil', path: '/' },
+    { name: 'Zones desservies', path: '/services/' },
+    { name: page.area }
+  ])
+];
+---
+
+<Layout
+  title={page.title}
+  description={page.description}
+  canonicalPath={`/zones/${page.slug}/`}
+  frPath={`/zones/${page.slug}/`}
+  enPath={`/en/areas/${enSlugMap.get(page.slug)}/`}
+  schemas={schemas}
+>
+  <Header />
+  <LocalAreaPageTemplate page={page} />
+  <Footer />
+</Layout>

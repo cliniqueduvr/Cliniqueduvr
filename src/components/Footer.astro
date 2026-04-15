@@ -19,7 +19,7 @@ const isEnglish = lang === 'en';
       <h4>{isEnglish ? 'Contact' : 'Contact'}</h4>
       <p>
         <strong>{isEnglish ? 'Phone:' : 'Téléphone:'}</strong> <a href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a><br>
-        <strong>Square:</strong> <a href={siteSettings.squareBookingUrl} target="_blank" rel="noopener">{isEnglish ? 'Book now' : 'Prendre rendez-vous'}</a><br>
+        <a href={siteSettings.squareBookingUrl} target="_blank" rel="noopener" class="footer-square-link">{isEnglish ? 'Book now' : 'Réserver en ligne'}</a><br>
         <strong>Email:</strong> <a href={`mailto:${siteSettings.email}`}>{siteSettings.email}</a><br>
         <strong>{isEnglish ? 'Insurance:' : 'Assurance:'}</strong> {isEnglish ? '$2M garage and liability' : 'Garage et civile 2 millions'}
       </p>
@@ -45,6 +45,8 @@ const isEnglish = lang === 'en';
       </a>
       <p class="footer-legal">
         <a href={isEnglish ? '/en/privacy/' : '/privacy/'}>{isEnglish ? 'Privacy Policy' : 'Politique de confidentialité'}</a>
+        {' · '}
+        <a href={isEnglish ? '/en/site-map/' : '/plan-du-site/'}>{isEnglish ? 'Site Map' : 'Plan du site'}</a>
       </p>
     </div>
   </div>
@@ -88,6 +90,27 @@ const isEnglish = lang === 'en';
 
   .footer-col a {
     color: white;
+  }
+
+  .footer-square-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    margin: 0.35rem 0;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    background: var(--brand-gold);
+    color: var(--brand-navy-dark) !important;
+    border: 2px solid var(--brand-gold);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .footer-square-link:hover {
+    text-decoration: none;
+    background: #e1c317;
+    border-color: #e1c317;
   }
 
   .footer-legal {

@@ -6,9 +6,9 @@
     "current": "Contact"
   },
   "formSection": {
-    "title": "Contactez-Nous",
+    "title": "Contactez-nous",
     "intro": "Vous pouvez nous joindre pour une inspection de VR, un entretien, une réparation de fuite d'eau, un problème de toiture, un service esthétique ou une question avant achat et vente. Plus votre message est précis, plus le retour sera utile.",
-    "unconfiguredNote": "Le formulaire n'est pas disponible pour le moment. En attendant, appelez-nous ou utilisez Square.",
+    "unconfiguredNote": "Le formulaire n'est pas disponible pour le moment. En attendant, appelez-nous ou utilisez la réservation en ligne.",
     "fields": {
       "name": "Nom complet *",
       "email": "Courriel *",
@@ -36,7 +36,7 @@
   "infoSection": {
     "title": "Informations de contact",
     "phoneTitle": "Téléphone",
-    "squareLabel": "Rendez-vous Square",
+    "squareLabel": "Réserver en ligne",
     "emailTitle": "Courriel",
     "locationTitle": "Localisation",
     "identityTitle": "Identité d'entreprise",
@@ -48,7 +48,7 @@
   "seoSections": [
     {
       "heading": "Atelier VR à Gatineau-Ottawa",
-      "body": "Clinique du VR dessert Gatineau, Ottawa, l'Outaouais et les environs pour les demandes de service reliées aux VR, roulottes et caravanes. Le formulaire et la prise de rendez-vous Square servent autant aux demandes simples qu'aux dossiers plus complexes."
+      "body": "Clinique du VR dessert Gatineau, Ottawa, l'Outaouais et les environs pour les demandes de service reliées aux VR, roulottes et caravanes. Le formulaire et la réservation en ligne servent autant aux demandes simples qu'aux dossiers plus complexes."
     },
     {
       "heading": "Avant de nous écrire",

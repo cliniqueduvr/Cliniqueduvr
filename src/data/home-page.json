@@ -8,7 +8,7 @@
   },
   "introCard": {
     "icon": "",
-    "heading": "Pourquoi Choisir Clinique du VR?",
+    "heading": "Pourquoi choisir Clinique du VR?",
     "body": "<strong>Service spécialisé et attentif</strong> pour l'entretien, la réparation et l'esthétique de VR. Nous misons sur des explications claires, une lecture concrète de l'état du véhicule et des recommandations adaptées à votre réalité. Nous avons un atelier ouvert à l'année ainsi qu'une unité mobile pour mieux vous servir selon le type d'intervention. Rapidité, transparence et exécution soignée du début à la fin font partie de notre façon de travailler."
   },
   "servicesOverview": {
@@ -22,8 +22,8 @@
   },
   "seoSections": [
     {
-      "heading": "Service VR a Gatineau-Ottawa",
-      "body": "Clinique du VR accompagne les propriétaires de VR, roulottes et caravanes pour les besoins les plus fréquents: inspection avant achat, entretien préventif, réparation de fuite d'eau, toiture, remise en état et esthétique. Notre atelier à Gatineau dessert aussi Ottawa, l'Outaouais, les Laurentides ainsi que plusieurs clients au Québec et en Ontario."
+      "heading": "Service VR à Gatineau-Ottawa",
+      "body": "Clinique du VR accompagne les propriétaires de VR, de roulottes et de caravanes pour les besoins les plus fréquents : inspection avant achat, entretien préventif, réparation de fuite d'eau, toiture, remise en état et esthétique. Notre atelier à Gatineau dessert aussi Ottawa, l'Outaouais, les Laurentides, ainsi que plusieurs clients au Québec et en Ontario."
     },
     {
       "heading": "Une approche utile avant les travaux",
@@ -33,11 +33,11 @@
   "cta": {
     "heading": "Demandez votre soumission gratuite",
     "subheading": "Inspection et devis sans obligation",
-    "squareLabel": "Réserver maintenant"
+    "squareLabel": "Réserver en ligne"
   },
   "contactForm": {
-    "heading": "Contactez-Nous",
-    "unconfiguredNote": "Le formulaire de contact n'est pas disponible pour le moment. Utilisez le téléphone ou la prise de rendez-vous Square en attendant.",
+    "heading": "Contactez-nous",
+    "unconfiguredNote": "Le formulaire de contact n'est pas disponible pour le moment. Utilisez le téléphone ou la réservation en ligne en attendant.",
     "namePlaceholder": "Votre nom",
     "emailPlaceholder": "Votre courriel",
     "subjectPlaceholder": "Sujet",
@@ -46,7 +46,7 @@
   },
   "contactPanel": {
     "heading": "Informations de contact",
-    "squareLabel": "Réserver maintenant",
+    "squareLabel": "Réserver en ligne",
     "ctaText": "Devis gratuit et confidentiel. Appelez-nous ou remplissez le formulaire."
   },
   "reviews": {

@@ -14,7 +14,7 @@ const {
   subheading = "Inspection et devis sans obligation",
   phoneNumber = siteSettings.phone.display,
   lang = 'fr',
-  squareLabel = lang === 'fr' ? 'Réserver maintenant' : 'Book now'
+  squareLabel = lang === 'fr' ? 'Réserver en ligne' : 'Book now'
 } = Astro.props as Props;
 ---
 
@@ -95,21 +95,21 @@ const {
 
   .square-button {
     display: inline-block;
-    background: transparent;
-    color: white;
+    background: var(--brand-gold);
+    color: var(--brand-navy-dark);
     padding: 12px 28px;
     border-radius: 50px;
     font-weight: 700;
     text-decoration: none;
     font-size: 1.05rem;
     transition: all 0.3s ease;
-    border: 2px solid rgba(255, 255, 255, 0.75);
+    border: 2px solid var(--brand-gold);
   }
 
   .square-button:hover {
     text-decoration: none;
-    background: rgba(255, 255, 255, 0.12);
-    border-color: white;
+    background: #e1c317;
+    border-color: #e1c317;
   }
 
   .square-button i {

@@ -18,6 +18,7 @@ const breadcrumbs = buildBreadcrumbSchema([
   <main>
     <section class="page-header">
       <div class="container">
+        <p class="eyebrow">Interventions complètes</p>
         <h1>Nos Réalisations</h1>
         <p>Exemples d'interventions complètes sur VR à Gatineau, Ottawa et les environs</p>
       </div>
@@ -72,23 +73,37 @@ const breadcrumbs = buildBreadcrumbSchema([
 
 <style>
   .page-header {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&h=400&fit=crop');
-    background-size: cover;
+    background:
+      radial-gradient(circle at top left, rgba(242, 210, 27, 0.18), transparent 25%),
+      linear-gradient(135deg, var(--brand-navy-dark) 0%, #1f476d 58%, #eef3f7 58%, #eef3f7 100%);
     color: white;
-    padding: 4rem 0;
-    text-align: center;
+    padding: 4.5rem 0 3.8rem;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    margin-bottom: 1rem;
+    padding: 0.45rem 0.85rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.12);
+    color: var(--brand-gold);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
 
   .page-header h1 {
     color: white;
-    margin-bottom: 0.5rem;
-    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 3rem;
   }
 
-  .page-header p {
+  .page-header p:last-child {
     margin: 0;
-    font-size: 1.1rem;
-    color: #edf5d8;
+    max-width: 55ch;
+    font-size: 1.08rem;
+    color: #e7edf4;
   }
 
   .realisations-section {
@@ -130,7 +145,8 @@ const breadcrumbs = buildBreadcrumbSchema([
 
   @media (max-width: 768px) {
     .page-header {
-      padding: 3rem 1.5rem;
+      background: linear-gradient(180deg, var(--brand-navy-dark) 0%, #1f476d 100%);
+      padding: 3.6rem 1.5rem 3rem;
     }
 
     .page-header h1 {

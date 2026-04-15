@@ -1,6 +1,6 @@
 {
   "metaTitle": "Clinique du VR | RV inspection, maintenance and repair in Gatineau-Ottawa",
-  "metaDescription": "Clinique du VR offers RV inspection, maintenance, repair, detailing and buying selling support in Gatineau-Ottawa.",
+  "metaDescription": "Clinique du VR offers RV inspection, maintenance, repair, detailing, and buying and selling support in Gatineau-Ottawa.",
   "hero": {
     "logoAlt": "Clinique du VR logo — RV maintenance, repair and detailing",
     "title": "Clinique du VR — RV inspection, maintenance and repair in Gatineau-Ottawa",
@@ -45,7 +45,7 @@
   },
   "contactForm": {
     "heading": "Contact Us",
-    "unconfiguredNote": "The contact form is not configured in production yet. Please use the phone number or Square booking link for now.",
+    "unconfiguredNote": "The contact form is not configured in production yet. Please use the phone number or online booking for now.",
     "namePlaceholder": "Your name",
     "emailPlaceholder": "Your email",
     "subjectPlaceholder": "Subject",

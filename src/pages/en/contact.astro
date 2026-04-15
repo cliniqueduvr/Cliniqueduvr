@@ -30,13 +30,19 @@ const schemas = [
   <Header lang="en" />
 
   <main>
+    <section class="page-header">
+      <div class="container">
+        <p class="eyebrow">Tell us about your RV</p>
+        <h1>{contactPage.formSection.title}</h1>
+        <p>{contactPage.formSection.intro}</p>
+      </div>
+    </section>
+
     <section class="contact-container">
       <div class="container contact-layout">
         <div class="contact-form-section">
-          <h1>{contactPage.formSection.title}</h1>
-          <p class="intro-copy">{contactPage.formSection.intro}</p>
           {messageSent && (
-            <p class="success-copy">Thanks. Your message was sent to {siteSettings.email}.</p>
+            <p class="success-copy">Thank you. Your request was sent successfully. We will reply as soon as possible to the email address you provided.</p>
           )}
           {!isFormConfigured && (
             <p class="intro-copy">{contactPage.formSection.unconfiguredNote}</p>
@@ -45,6 +51,7 @@ const schemas = [
             <input type="hidden" name="_next" value={successUrl} />
             <input type="hidden" name="_subject" value="New message from Clinique du VR website form" />
             <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_autoresponse" value="Thank you. We have received your request at Clinique du VR and will reply as soon as possible." />
             <input type="text" name="_honey" class="sr-only" tabindex="-1" autocomplete="off" />
             <div class="form-group">
               <label for="name">{contactPage.formSection.fields.name}</label>
@@ -57,10 +64,6 @@ const schemas = [
             <div class="form-group">
               <label for="phone">{contactPage.formSection.fields.phone}</label>
               <input type="tel" id="phone" name="phone" />
-            </div>
-            <div class="form-group">
-              <label for="subject">{contactPage.formSection.fields.subject}</label>
-              <input type="text" id="subject" name="subject" required />
             </div>
             <fieldset class="form-group form-fieldset">
               <legend>{contactPage.formSection.fields.services}</legend>
@@ -168,7 +171,11 @@ const schemas = [
 </Layout>
 
 <style>
-  .contact-container { padding: 4rem 0; background: white; }
+  .page-header { background: radial-gradient(circle at top left, rgba(242, 210, 27, 0.18), transparent 25%), linear-gradient(135deg, var(--brand-navy-dark) 0%, #1f476d 58%, #eef3f7 58%, #eef3f7 100%); color: white; padding: 4.5rem 0 3.8rem; }
+  .eyebrow { display: inline-flex; margin-bottom: 1rem; padding: 0.45rem 0.85rem; border-radius: 999px; background: rgba(255, 255, 255, 0.12); color: var(--brand-gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+  .page-header h1 { max-width: 12ch; color: white; margin-bottom: 0.9rem; }
+  .page-header p:last-child { max-width: 58ch; color: #e7edf4; font-size: 1.08rem; }
+  .contact-container { padding: 4rem 0; background: #eef3f7; }
   .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
   .contact-form-section h1 { margin-bottom: 2rem; }
   .intro-copy { margin: -1rem 0 1.5rem; color: var(--brand-muted); }
@@ -196,5 +203,5 @@ const schemas = [
   .square-button { display: inline-flex; align-items: center; justify-content: center; background: var(--brand-gold); color: var(--brand-navy-dark); border: 2px solid var(--brand-gold); border-radius: 999px; padding: 0.55rem 1rem; font-weight: 700; font-size: 0.95rem; }
   .square-button:hover { text-decoration: none; background: #e1c317; border-color: #e1c317; }
   .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
-  @media (max-width: 768px) { .contact-layout { grid-template-columns: 1fr; gap: 2rem; } }
+  @media (max-width: 768px) { .page-header { background: linear-gradient(180deg, var(--brand-navy-dark) 0%, #1f476d 100%); padding: 3.6rem 0 3rem; } .contact-layout { grid-template-columns: 1fr; gap: 2rem; } }
 </style>
