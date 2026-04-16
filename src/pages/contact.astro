@@ -8,7 +8,7 @@ import siteSettings from '../data/site-settings.json';
 import contactPage from '../data/contact-page.json';
 
 const isFormConfigured = Boolean(siteSettings.email?.trim());
-const successUrl = '/contact/?sent=1';
+const successUrl = '/merci/';
 const formName = 'contact-fr';
 const breadcrumbs = buildBreadcrumbSchema([
   { name: contactPage.breadcrumbs.home, path: '/' },
@@ -40,7 +40,6 @@ const schemas = [
     <section class="contact-container">
       <div class="container contact-layout">
         <div class="contact-form-section">
-          <p class="success-copy" data-form-success hidden>Nous avons bien reçu votre demande. Nous vous répondrons dans un délai de 24 heures. Pour toute urgence, contactez-nous par téléphone.</p>
           {!isFormConfigured && (
             <p class="intro-copy">{contactPage.formSection.unconfiguredNote}</p>
           )}
@@ -167,17 +166,6 @@ const schemas = [
   <Footer />
 </Layout>
 
-<script>
-  const successMessage = document.querySelector('[data-form-success]');
-
-  if (successMessage) {
-    const params = new URLSearchParams(window.location.search);
-    const messageSent = params.get('sent') === '1';
-
-    successMessage.hidden = !messageSent;
-  }
-</script>
-
 <style>
   .page-header {
     background:
@@ -230,15 +218,6 @@ const schemas = [
   .intro-copy {
     margin: -1rem 0 1.5rem;
     color: var(--brand-muted);
-  }
-
-  .success-copy {
-    margin: -1rem 0 1.5rem;
-    padding: 0.9rem 1rem;
-    border-radius: 12px;
-    background: rgba(58, 141, 47, 0.1);
-    color: var(--brand-green-dark);
-    font-weight: 700;
   }
 
   .form-group {

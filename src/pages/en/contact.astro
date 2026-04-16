@@ -8,7 +8,7 @@ import siteSettings from '../../data/site-settings.json';
 import contactPage from '../../data/contact-page-en.json';
 
 const isFormConfigured = Boolean(siteSettings.email?.trim());
-const successUrl = '/en/contact/?sent=1';
+const successUrl = '/en/thank-you/';
 const formName = 'contact-en';
 const breadcrumbs = buildBreadcrumbSchema([
   { name: contactPage.breadcrumbs.home, path: '/en/' },
@@ -40,7 +40,6 @@ const schemas = [
     <section class="contact-container">
       <div class="container contact-layout">
         <div class="contact-form-section">
-          <p class="success-copy" data-form-success hidden>We have received your request. We will reply within 24 hours. For urgent matters, please contact us by phone.</p>
           {!isFormConfigured && (
             <p class="intro-copy">{contactPage.formSection.unconfiguredNote}</p>
           )}
@@ -167,17 +166,6 @@ const schemas = [
   <Footer lang="en" />
 </Layout>
 
-<script>
-  const successMessage = document.querySelector('[data-form-success]');
-
-  if (successMessage) {
-    const params = new URLSearchParams(window.location.search);
-    const messageSent = params.get('sent') === '1';
-
-    successMessage.hidden = !messageSent;
-  }
-</script>
-
 <style>
   .page-header { background: radial-gradient(circle at top left, rgba(242, 210, 27, 0.18), transparent 25%), linear-gradient(135deg, var(--brand-navy-dark) 0%, #1f476d 58%, #eef3f7 58%, #eef3f7 100%); color: white; padding: 4.5rem 0 3.8rem; }
   .eyebrow { display: inline-flex; margin-bottom: 1rem; padding: 0.45rem 0.85rem; border-radius: 999px; background: rgba(255, 255, 255, 0.12); color: var(--brand-gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
@@ -187,7 +175,6 @@ const schemas = [
   .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
   .contact-form-section h1 { margin-bottom: 2rem; }
   .intro-copy { margin: -1rem 0 1.5rem; color: var(--brand-muted); }
-  .success-copy { margin: -1rem 0 1.5rem; padding: 0.9rem 1rem; border-radius: 12px; background: rgba(58, 141, 47, 0.1); color: var(--brand-green-dark); font-weight: 700; }
   .form-group { display: flex; flex-direction: column; margin-bottom: 1.5rem; }
   .form-group label { font-weight: 600; margin-bottom: 0.5rem; color: var(--brand-ink); }
   .form-fieldset { border: 1px solid #ddd; border-radius: 8px; padding: 1rem; }
