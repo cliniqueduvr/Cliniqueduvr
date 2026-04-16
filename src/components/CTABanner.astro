@@ -146,22 +146,34 @@ const {
 
   @media (max-width: 768px) {
     .cta-banner {
-      padding: 2rem 1rem;
+      padding: 1.7rem 1rem;
     }
 
     .cta-content h2 {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
+      line-height: 1.1;
     }
 
     .cta-content p {
-      font-size: 1rem;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-actions {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.7rem;
     }
 
     .cta-button,
     .sms-button,
     .square-button {
-      padding: 10px 24px;
-      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 0.85rem 1rem;
+      font-size: 0.98rem;
     }
   }
 </style>
