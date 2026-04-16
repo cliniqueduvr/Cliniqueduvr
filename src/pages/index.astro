@@ -106,15 +106,16 @@ const meta = {
             <input type="hidden" name="_next" value={successUrl} />
             <input type="hidden" name="_subject" value="Nouveau message du formulaire Clinique du VR" />
             <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
             <input type="text" name="_honey" class="sr-only" tabindex="-1" autocomplete="off" />
             <label class="sr-only" for="home-name">{homePage.contactForm.namePlaceholder}</label>
-            <input id="home-name" type="text" name="name" placeholder={homePage.contactForm.namePlaceholder} required />
+            <input id="home-name" type="text" name="Nom complet" placeholder={homePage.contactForm.namePlaceholder} required />
             <label class="sr-only" for="home-email">{homePage.contactForm.emailPlaceholder}</label>
-            <input id="home-email" type="email" name="email" placeholder={homePage.contactForm.emailPlaceholder} required />
+            <input id="home-email" type="email" name="Courriel" placeholder={homePage.contactForm.emailPlaceholder} required />
             <label class="sr-only" for="home-subject">{homePage.contactForm.subjectPlaceholder}</label>
-            <input id="home-subject" type="text" name="subject" placeholder={homePage.contactForm.subjectPlaceholder} required />
+            <input id="home-subject" type="text" name="Sujet" placeholder={homePage.contactForm.subjectPlaceholder} required />
             <label class="sr-only" for="home-message">{homePage.contactForm.messagePlaceholder}</label>
-            <textarea id="home-message" name="message" placeholder={homePage.contactForm.messagePlaceholder} rows="5" required></textarea>
+            <textarea id="home-message" name="Message" placeholder={homePage.contactForm.messagePlaceholder} rows="5" required></textarea>
             <button type="submit" disabled={!isFormConfigured}>{homePage.contactForm.submitLabel}</button>
           </form>
         </div>

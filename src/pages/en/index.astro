@@ -94,11 +94,12 @@ const meta = {
             <input type="hidden" name="_next" value={successUrl} />
             <input type="hidden" name="_subject" value="New message from Clinique du VR website form" />
             <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
             <input type="text" name="_honey" class="sr-only" tabindex="-1" autocomplete="off" />
-            <input type="text" name="name" placeholder={homePage.contactForm.namePlaceholder} required />
-            <input type="email" name="email" placeholder={homePage.contactForm.emailPlaceholder} required />
-            <input type="text" name="subject" placeholder={homePage.contactForm.subjectPlaceholder} required />
-            <textarea name="message" placeholder={homePage.contactForm.messagePlaceholder} rows="5" required></textarea>
+            <input type="text" name="Full name" placeholder={homePage.contactForm.namePlaceholder} required />
+            <input type="email" name="Email" placeholder={homePage.contactForm.emailPlaceholder} required />
+            <input type="text" name="Subject" placeholder={homePage.contactForm.subjectPlaceholder} required />
+            <textarea name="Message" placeholder={homePage.contactForm.messagePlaceholder} rows="5" required></textarea>
             <button type="submit" disabled={!isFormConfigured}>{homePage.contactForm.submitLabel}</button>
           </form>
         </div>
