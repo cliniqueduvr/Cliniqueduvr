@@ -7,7 +7,7 @@ import siteSettings from '../../data/site-settings.json';
 import homePage from '../../data/home-page-en.json';
 
 const isFormConfigured = Boolean(siteSettings.email?.trim());
-const formAction = isFormConfigured ? `https://formsubmit.co/${siteSettings.email}` : undefined;
+const formAction = isFormConfigured ? '/form-handler.php' : undefined;
 const successUrl = 'https://www.cliniqueduvr.ca/en/contact/?sent=1';
 const schemas = [buildLocalBusinessSchema({
   telephone: siteSettings.phone.href,
@@ -93,8 +93,6 @@ const meta = {
           <form action={formAction} method="POST">
             <input type="hidden" name="_next" value={successUrl} />
             <input type="hidden" name="_subject" value="New message from Clinique du VR website form" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="table" />
             <input type="text" name="_honey" class="sr-only" tabindex="-1" autocomplete="off" />
             <input type="text" name="Full name" placeholder={homePage.contactForm.namePlaceholder} required />
             <input type="email" name="Email" placeholder={homePage.contactForm.emailPlaceholder} required />

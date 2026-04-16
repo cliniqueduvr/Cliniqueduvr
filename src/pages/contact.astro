@@ -8,9 +8,8 @@ import siteSettings from '../data/site-settings.json';
 import contactPage from '../data/contact-page.json';
 
 const isFormConfigured = Boolean(siteSettings.email?.trim());
-const formAction = isFormConfigured ? `https://formsubmit.co/${siteSettings.email}` : undefined;
+const formAction = isFormConfigured ? '/form-handler.php' : undefined;
 const successUrl = 'https://www.cliniqueduvr.ca/contact/?sent=1';
-const messageSent = Astro.url.searchParams.get('sent') === '1';
 const breadcrumbs = buildBreadcrumbSchema([
   { name: contactPage.breadcrumbs.home, path: '/' },
   { name: contactPage.breadcrumbs.current }
@@ -41,18 +40,13 @@ const schemas = [
     <section class="contact-container">
       <div class="container contact-layout">
         <div class="contact-form-section">
-          {messageSent && (
-            <p class="success-copy">Nous avons bien reçu votre demande. Nous vous répondrons dans un délai de 24 heures. Pour toute urgence, contactez-nous par téléphone.</p>
-          )}
+          <p class="success-copy" data-form-success hidden>Nous avons bien reçu votre demande. Nous vous répondrons dans un délai de 24 heures. Pour toute urgence, contactez-nous par téléphone.</p>
           {!isFormConfigured && (
             <p class="intro-copy">{contactPage.formSection.unconfiguredNote}</p>
           )}
           <form action={formAction} method="POST" enctype="multipart/form-data">
             <input type="hidden" name="_next" value={successUrl} />
             <input type="hidden" name="_subject" value="Nouveau message du formulaire Clinique du VR" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_autoresponse" value="Nous avons bien reçu votre demande chez Clinique du VR. Nous vous répondrons dans un délai de 24 heures. Pour toute urgence, contactez-nous par téléphone." />
             <input type="text" name="_honey" class="sr-only" tabindex="-1" autocomplete="off" />
             <div class="form-group">
               <label for="name">{contactPage.formSection.fields.name}</label>
@@ -170,6 +164,17 @@ const schemas = [
 
   <Footer />
 </Layout>
+
+<script>
+  const successMessage = document.querySelector('[data-form-success]');
+
+  if (successMessage) {
+    const params = new URLSearchParams(window.location.search);
+    const messageSent = params.get('sent') === '1';
+
+    successMessage.hidden = !messageSent;
+  }
+</script>
 
 <style>
   .page-header {

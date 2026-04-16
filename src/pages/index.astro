@@ -7,7 +7,7 @@ import siteSettings from '../data/site-settings.json';
 import homePage from '../data/home-page.json';
 
 const isFormConfigured = Boolean(siteSettings.email?.trim());
-const formAction = isFormConfigured ? `https://formsubmit.co/${siteSettings.email}` : undefined;
+const formAction = isFormConfigured ? '/form-handler.php' : undefined;
 const successUrl = 'https://www.cliniqueduvr.ca/contact/?sent=1';
 const schemas = [
   buildWebSiteSchema(),
@@ -105,8 +105,6 @@ const meta = {
           <form action={formAction} method="POST">
             <input type="hidden" name="_next" value={successUrl} />
             <input type="hidden" name="_subject" value="Nouveau message du formulaire Clinique du VR" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="table" />
             <input type="text" name="_honey" class="sr-only" tabindex="-1" autocomplete="off" />
             <label class="sr-only" for="home-name">{homePage.contactForm.namePlaceholder}</label>
             <input id="home-name" type="text" name="Nom complet" placeholder={homePage.contactForm.namePlaceholder} required />
