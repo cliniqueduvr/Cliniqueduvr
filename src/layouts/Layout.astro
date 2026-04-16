@@ -141,7 +141,12 @@ const hasGoogleAds = googleAdsId.length > 0;
             });
 
             const url = new URL(window.location.href);
-            if (url.searchParams.get('sent') === '1' && (url.pathname === '/contact/' || url.pathname === '/en/contact/')) {
+            const isContactSuccess =
+              url.searchParams.get('sent') === '1' &&
+              (url.pathname === '/contact/' || url.pathname === '/en/contact/');
+            const isThankYouPage = url.pathname === '/merci/' || url.pathname === '/en/thank-you/';
+
+            if (isContactSuccess || isThankYouPage) {
               trackConversion('form');
             }
           }
