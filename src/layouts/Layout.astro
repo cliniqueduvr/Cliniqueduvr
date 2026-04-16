@@ -63,25 +63,37 @@ const hasGoogleAds = googleAdsId.length > 0;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={BRAND_IMAGE} />
     {hasGoogleAds && (
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(googleAdsId)}`}></script>
+    )}
+    {hasGoogleAds && (
       <script is:inline define:vars={{ googleAdsId, googleAdsConversions, squareBookingUrl: siteSettings.squareBookingUrl }}>
         (() => {
           const storageKey = 'cliniqueduvr-cookie-consent';
-          const scriptId = 'google-ads-gtag';
+          let hasConsent = false;
 
-          function loadGoogleAds() {
-            if (!googleAdsId || document.getElementById(scriptId)) return;
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = window.gtag || gtag;
 
-            const externalScript = document.createElement('script');
-            externalScript.id = scriptId;
-            externalScript.async = true;
-            externalScript.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(googleAdsId)}`;
-            document.head.appendChild(externalScript);
+          gtag('consent', 'default', {
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+            analytics_storage: 'denied',
+            wait_for_update: 500
+          });
+          gtag('js', new Date());
+          gtag('config', googleAdsId);
 
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            window.gtag = window.gtag || gtag;
-            gtag('js', new Date());
-            gtag('config', googleAdsId);
+          function grantConsent() {
+            if (hasConsent) return;
+            hasConsent = true;
+            window.gtag('consent', 'update', {
+              ad_storage: 'granted',
+              ad_user_data: 'granted',
+              ad_personalization: 'granted',
+              analytics_storage: 'granted'
+            });
           }
 
           function trackConversion(type) {
@@ -136,17 +148,17 @@ const hasGoogleAds = googleAdsId.length > 0;
 
           try {
             if (window.localStorage.getItem(storageKey) === 'accepted') {
-              loadGoogleAds();
+              grantConsent();
               installTracking();
             } else {
               window.addEventListener('cliniqueduvr:cookie-consent-accepted', () => {
-                loadGoogleAds();
+                grantConsent();
                 installTracking();
               }, { once: true });
             }
           } catch {
             window.addEventListener('cliniqueduvr:cookie-consent-accepted', () => {
-              loadGoogleAds();
+              grantConsent();
               installTracking();
             }, { once: true });
           }
