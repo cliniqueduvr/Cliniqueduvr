@@ -347,6 +347,8 @@ const breadcrumbs = buildBreadcrumbSchema([
 
   .service-card {
     grid-template-rows: auto minmax(3.6rem, auto) 1fr auto;
+    border: 2px solid transparent;
+    transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
   }
 
   .service-card:hover,
@@ -355,6 +357,11 @@ const breadcrumbs = buildBreadcrumbSchema([
     text-decoration: none;
     transform: translateY(-4px);
     box-shadow: 0 24px 44px rgba(21, 38, 58, 0.14);
+  }
+
+  .service-card:hover {
+    border-color: var(--brand-green);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
   }
 
   .card-eyebrow {
