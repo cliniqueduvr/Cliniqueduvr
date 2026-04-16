@@ -93,8 +93,6 @@ const meta = {
           <form name={formName} action={isFormConfigured ? successUrl : undefined} method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-form>
             <input type="hidden" name="form-name" value={formName} />
             <input type="hidden" name="bot-field" />
-            <input type="hidden" name="_next" value={successUrl} />
-            <input type="hidden" name="_subject" value="New message from Clinique du VR website form" />
             <input type="hidden" name="Page" value="Home EN" />
             <input type="text" name="name" placeholder={homePage.contactForm.namePlaceholder} required />
             <input type="email" name="email" placeholder={homePage.contactForm.emailPlaceholder} required />

@@ -46,8 +46,6 @@ const schemas = [
           <form name={formName} action={isFormConfigured ? successUrl : undefined} method="POST" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" data-netlify-form>
             <input type="hidden" name="form-name" value={formName} />
             <input type="hidden" name="bot-field" />
-            <input type="hidden" name="_next" value={successUrl} />
-            <input type="hidden" name="_subject" value="New message from Clinique du VR website form" />
             <input type="hidden" name="Page" value="Contact EN" />
             <div class="form-group">
               <label for="name">{contactPage.formSection.fields.name}</label>
