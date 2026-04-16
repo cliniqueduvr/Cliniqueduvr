@@ -106,26 +106,6 @@ export function buildLocalBusinessSchema({
       'Roulotte',
       'Caravane'
     ],
-    review: [
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'Jesse Brook' },
-        reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-        reviewBody: "Cédric était à l'heure, a tout expliqué clairement et les résultats ont suivi comme promis. Deux pouces en l'air."
-      },
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'Stéphane Desgagné' },
-        reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-        reviewBody: 'Service professionnel et courtois.'
-      },
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'Philippe Albert' },
-        reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-        reviewBody: 'Compagnie efficace, facile de communiquer avec eux. Travail professionnel, que du positif.'
-      }
-    ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Services VR',
