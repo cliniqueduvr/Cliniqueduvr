@@ -15,6 +15,8 @@ export function getStaticPaths() {
 
 const { page } = Astro.props as { page: LocalAreaPage };
 const frSlugMap = new Map([
+  ['rv-water-leak-gatineau', 'fuite-eau-vr-gatineau'],
+  ['rv-maintenance-gatineau', 'entretien-vr-gatineau'],
   ['rv-inspection-outaouais', 'inspection-vr-outaouais'],
   ['rv-repair-ottawa', 'reparation-vr-ottawa'],
   ['trailer-water-intrusion-laurentides', 'infiltration-eau-roulotte-laurentides']

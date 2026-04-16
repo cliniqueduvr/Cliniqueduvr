@@ -93,6 +93,12 @@ export function buildLocalBusinessSchema({
       postalCode: 'J8T 8R7',
       addressCountry: 'CA'
     },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 45.507195,
+      longitude: -75.54977
+    },
+    hasMap: 'https://www.google.com/maps/search/?api=1&query=11+rue+de+Granby+Unite+18+Gatineau+QC',
     priceRange: '$$',
     image: BRAND_IMAGE,
     sameAs: [facebookUrl, tiktokUrl],

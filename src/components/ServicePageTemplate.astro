@@ -17,10 +17,37 @@ const projectsHref = isEnglish ? '/en/realisations/' : '/realisations/';
 const inspectionHref = isEnglish ? '/en/services/inspection/' : '/services/inspection/';
 const servicesHref = isEnglish ? '/en/services/' : '/services/';
 const serviceHref = (slug: string) => isEnglish ? `/en/services/${slug}/` : `/services/${slug}/`;
+const localGuide = isEnglish
+  ? service.slug === 'inspection' || service.slug === 'repair'
+    ? {
+        href: '/en/areas/rv-water-leak-gatineau/',
+        title: 'RV water leak in Gatineau',
+        copy: 'Visit the local page focused on water leaks, moisture, seals, and the right next step in Gatineau.'
+      }
+    : service.slug === 'maintenance'
+      ? {
+          href: '/en/areas/rv-maintenance-gatineau/',
+          title: 'RV maintenance in Gatineau',
+          copy: 'Use the local maintenance page if your main need is seal, roof, or membrane care in Gatineau.'
+        }
+      : null
+  : service.slug === 'inspection' || service.slug === 'reparation'
+    ? {
+        href: '/zones/fuite-eau-vr-gatineau/',
+        title: "Fuite d'eau de VR à Gatineau",
+        copy: "Consultez la page locale dédiée si votre priorité est une fuite d'eau, l'humidité ou des joints suspects à Gatineau."
+      }
+    : service.slug === 'entretien'
+      ? {
+          href: '/zones/entretien-vr-gatineau/',
+          title: 'Entretien de VR à Gatineau',
+          copy: "Utilisez la page locale d'entretien si votre besoin principal touche les joints, la toiture ou la membrane à Gatineau."
+        }
+      : null;
 const serviceAreas = isEnglish
   ? ['Outaouais', 'Ottawa', 'Laurentides']
   : ['Outaouais', 'Ottawa', 'Laurentides'];
-const helpfulLinks = isEnglish
+const baseHelpfulLinks = isEnglish
   ? [
       {
         href: contactHref,
@@ -75,6 +102,7 @@ const helpfulLinks = isEnglish
         copy: 'Si ce service est proche de votre besoin sans être exact, parcourez la liste complète.'
       }
     ];
+const helpfulLinks = [...(localGuide ? [localGuide] : []), ...baseHelpfulLinks];
 ---
 
 <main>

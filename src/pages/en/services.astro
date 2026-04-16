@@ -10,6 +10,16 @@ const servicePagesEn = servicePagesData.items as ServicePage[];
 const visibleServicePagesEn = servicePagesEn.filter((service) => service.slug !== 'buying-selling');
 const serviceAreas = [
   {
+    name: 'Gatineau | Water leak',
+    href: '/en/areas/rv-water-leak-gatineau/',
+    body: 'RV water leaks, moisture, suspicious seals and practical direction between inspection, maintenance and repair.'
+  },
+  {
+    name: 'Gatineau | Maintenance',
+    href: '/en/areas/rv-maintenance-gatineau/',
+    body: 'Seal, roof and membrane maintenance to help prevent water intrusion before the season.'
+  },
+  {
     name: 'Outaouais',
     href: '/en/areas/rv-inspection-outaouais/',
     body: 'Inspection, pre-purchase validation, and a quick read on the RV’s actual condition.'
@@ -45,6 +55,12 @@ const serviceGuides = [
     label: 'View inspection service'
   },
   {
+    title: 'Water leak in Gatineau',
+    body: 'See our local page if your priority is a water leak, suspicious seals, or a roof issue that needs a quick read in Gatineau.',
+    href: '/en/areas/rv-water-leak-gatineau/',
+    label: 'View water leak page'
+  },
+  {
     title: 'Choose a service',
     body: 'If you are not sure where to start, use our guidance page by symptom and situation.',
     href: '/en/choose-service/',
@@ -76,7 +92,7 @@ const breadcrumbs = buildBreadcrumbSchema([
 ]);
 ---
 
-<Layout title="RV services in Gatineau | Maintenance, repair and detailing" description="RV services in Gatineau: inspection, maintenance, repair, and RV and auto detailing, with requests coming from Ottawa, Outaouais, and the Laurentides." lang="en-CA" canonicalPath="/en/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs, buildFAQSchema(serviceFaqs)]}>
+<Layout title="RV services in Gatineau | Water leaks, maintenance and repair" description="RV services in Gatineau for water leaks, seal and roof maintenance, inspection, repair, and detailing, with requests coming from Ottawa, Outaouais, and the Laurentides." lang="en-CA" canonicalPath="/en/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs, buildFAQSchema(serviceFaqs)]}>
   <Header lang="en" />
 
   <main>

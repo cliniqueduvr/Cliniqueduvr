@@ -48,8 +48,20 @@ const staticEntries: UrlEntry[] = [
 
 const servicePages = servicePagesData.items as ServiceSlug[];
 const servicePagesEn = servicePagesEnData.items as ServiceSlug[];
-const frAreaToEnSlug = new Map(localAreaPagesEn.map((page) => [page.area, page.slug]));
-const enAreaToFrSlug = new Map(localAreaPagesFr.map((page) => [page.area, page.slug]));
+const frToEnAreaSlug = new Map([
+  ['fuite-eau-vr-gatineau', 'rv-water-leak-gatineau'],
+  ['entretien-vr-gatineau', 'rv-maintenance-gatineau'],
+  ['inspection-vr-outaouais', 'rv-inspection-outaouais'],
+  ['reparation-vr-ottawa', 'rv-repair-ottawa'],
+  ['infiltration-eau-roulotte-laurentides', 'trailer-water-intrusion-laurentides']
+]);
+const enToFrAreaSlug = new Map([
+  ['rv-water-leak-gatineau', 'fuite-eau-vr-gatineau'],
+  ['rv-maintenance-gatineau', 'entretien-vr-gatineau'],
+  ['rv-inspection-outaouais', 'inspection-vr-outaouais'],
+  ['rv-repair-ottawa', 'reparation-vr-ottawa'],
+  ['trailer-water-intrusion-laurentides', 'infiltration-eau-roulotte-laurentides']
+]);
 
 const serviceEntries = servicePages.map((service) => ({
   path: `/services/${service.slug}/`,
@@ -66,13 +78,13 @@ const serviceEntriesEn = servicePagesEn.map((service) => ({
 const areaEntriesFr = localAreaPagesFr.map((page) => ({
   path: `/zones/${page.slug}/`,
   lastmod: pageLastmods.get(`/zones/${page.slug}/`) ?? '2026-04-15',
-  alternatePaths: frAreaToEnSlug.get(page.area) ? [`/en/areas/${frAreaToEnSlug.get(page.area)}/`] : []
+  alternatePaths: frToEnAreaSlug.get(page.slug) ? [`/en/areas/${frToEnAreaSlug.get(page.slug)}/`] : []
 }));
 
 const areaEntriesEn = localAreaPagesEn.map((page) => ({
   path: `/en/areas/${page.slug}/`,
   lastmod: pageLastmods.get(`/en/areas/${page.slug}/`) ?? '2026-04-15',
-  alternatePaths: enAreaToFrSlug.get(page.area) ? [`/zones/${enAreaToFrSlug.get(page.area)}/`] : []
+  alternatePaths: enToFrAreaSlug.get(page.slug) ? [`/zones/${enToFrAreaSlug.get(page.slug)}/`] : []
 }));
 
 const entries = [...staticEntries, ...serviceEntries, ...serviceEntriesEn, ...areaEntriesFr, ...areaEntriesEn];

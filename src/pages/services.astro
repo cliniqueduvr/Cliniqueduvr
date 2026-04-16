@@ -10,6 +10,16 @@ const servicePages = servicePagesData.items as ServicePage[];
 const visibleServicePages = servicePages.filter((service) => service.slug !== 'vente-achat');
 const serviceAreas = [
   {
+    name: 'Gatineau | Fuite d’eau',
+    href: '/zones/fuite-eau-vr-gatineau/',
+    body: "Fuite d'eau de VR, humidité, joints suspects et orientation entre inspection, entretien et réparation."
+  },
+  {
+    name: 'Gatineau | Entretien',
+    href: '/zones/entretien-vr-gatineau/',
+    body: "Entretien de joints, toiture et membrane pour prévenir les infiltrations d'eau avant la saison."
+  },
+  {
     name: 'Outaouais',
     href: '/zones/inspection-vr-outaouais/',
     body: "Inspection, validation avant achat et lecture rapide de l'état réel du VR."
@@ -45,6 +55,12 @@ const serviceGuides = [
     label: "Voir le service d'inspection"
   },
   {
+    title: "Fuite d'eau à Gatineau",
+    body: "Voyez notre page locale dédiée si votre priorité est une fuite d'eau, des joints suspects ou une toiture qui demande une lecture rapide à Gatineau.",
+    href: '/zones/fuite-eau-vr-gatineau/',
+    label: "Voir la page fuite d'eau"
+  },
+  {
     title: 'Choisir un service',
     body: "Si vous n’êtes pas certain du bon point de départ, voyez notre page d’orientation par symptôme et par situation.",
     href: '/choisir-service/',
@@ -76,7 +92,7 @@ const breadcrumbs = buildBreadcrumbSchema([
 ]);
 ---
 
-<Layout title="Services VR à Gatineau | Entretien, réparation et esthétique" description="Services de VR à Gatineau: inspection, entretien, réparation, esthétique VR et auto, avec demandes provenant d'Ottawa, de l'Outaouais et des Laurentides." canonicalPath="/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs, buildFAQSchema(serviceFaqs)]}>
+<Layout title="Services VR à Gatineau | Fuite d’eau, entretien et réparation" description="Services de VR à Gatineau pour fuite d'eau, entretien de joints et de toiture, inspection, réparation et esthétique, avec demandes provenant d'Ottawa, de l'Outaouais et des Laurentides." canonicalPath="/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs, buildFAQSchema(serviceFaqs)]}>
   <Header />
 
   <main>
