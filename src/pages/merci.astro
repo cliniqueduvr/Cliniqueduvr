@@ -28,7 +28,7 @@ const breadcrumbs = buildBreadcrumbSchema([
         <h1>Merci, nous avons bien reçu votre demande.</h1>
         <p>Nous vous répondrons dans un délai de 24 heures. Pour toute urgence, contactez-nous par téléphone.</p>
         <div class="actions">
-          <a class="btn" href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>
+          <a class="phone-button" href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>
           <a class="link-button" href="/contact/">Retour au formulaire</a>
         </div>
       </div>
@@ -77,6 +77,24 @@ const breadcrumbs = buildBreadcrumbSchema([
     flex-wrap: wrap;
     gap: 0.85rem;
     margin-top: 1.75rem;
+  }
+
+  .phone-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--brand-gold);
+    color: var(--brand-navy-dark);
+    border: 2px solid var(--brand-gold);
+    border-radius: 999px;
+    padding: 0.75rem 1.25rem;
+    font-weight: 700;
+  }
+
+  .phone-button:hover {
+    text-decoration: none;
+    background: #e1c317;
+    border-color: #e1c317;
   }
 
   .link-button {
