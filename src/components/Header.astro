@@ -75,6 +75,7 @@ function getAlternatePath(pathname: string, targetLang: 'fr' | 'en') {
 const homeHref = isEnglish ? '/en/' : '/';
 const frHref = getAlternatePath(currentPath, 'fr');
 const enHref = getAlternatePath(currentPath, 'en');
+const smsHref = `sms:${siteSettings.phone.href}`;
 const isActivePath = (href: string) => {
   if (href === '/') return currentPath === '/';
   if (href === '/en/') return currentPath === '/en/';
@@ -111,6 +112,7 @@ const navItems = isEnglish
     <div class="container topbar-inner">
       <div class="topbar-left">
         <a href={`tel:${siteSettings.phone.href}`} class="topbar-phone">{siteSettings.phone.display}</a>
+        <a href={smsHref} class="sms-link">{isEnglish ? 'Text us' : 'Message texte'}</a>
         <a href={siteSettings.squareBookingUrl} target="_blank" rel="noopener" class="square-link">{isEnglish ? 'Book now' : 'Réserver en ligne'}</a>
       </div>
       <div class="topbar-right">
@@ -291,6 +293,7 @@ const navItems = isEnglish
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    align-items: center;
   }
 
   .topbar-left a, .topbar-left span {
@@ -298,9 +301,30 @@ const navItems = isEnglish
   }
 
   .topbar-phone {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
     font-size: 1.15rem;
     font-weight: 800;
     letter-spacing: 0.02em;
+  }
+
+  .sms-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    color: white !important;
+    font-weight: 700;
+  }
+
+  .sms-link:hover {
+    text-decoration: none;
+    border-color: white;
+    background: rgba(255, 255, 255, 0.12);
   }
 
   .square-link {
