@@ -13,7 +13,7 @@ type ServiceSlug = {
   alternateSlug: string;
 };
 
-const baseUrl = 'https://www.cliniqueduvr.ca';
+const baseUrl = 'https://cliniqueduvr.ca';
 const defaultLastmod = '2026-04-12';
 
 const pageLastmods = new Map<string, string>([

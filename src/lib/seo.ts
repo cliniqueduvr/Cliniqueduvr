@@ -1,4 +1,4 @@
-export const SITE_URL = 'https://www.cliniqueduvr.ca';
+export const SITE_URL = 'https://cliniqueduvr.ca';
 export const BRAND_IMAGE = `${SITE_URL}/clinique-du-vr-brand.jpg`;
 
 export type BreadcrumbItem = {
