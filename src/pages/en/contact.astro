@@ -8,8 +8,8 @@ import siteSettings from '../../data/site-settings.json';
 import contactPage from '../../data/contact-page-en.json';
 
 const isFormConfigured = Boolean(siteSettings.email?.trim());
-const formAction = isFormConfigured ? '/form-handler.php' : undefined;
 const successUrl = 'https://www.cliniqueduvr.ca/en/contact/?sent=1';
+const formName = 'contact-en';
 const breadcrumbs = buildBreadcrumbSchema([
   { name: contactPage.breadcrumbs.home, path: '/en/' },
   { name: contactPage.breadcrumbs.current }
@@ -44,17 +44,19 @@ const schemas = [
           {!isFormConfigured && (
             <p class="intro-copy">{contactPage.formSection.unconfiguredNote}</p>
           )}
-          <form action={formAction} method="POST" enctype="multipart/form-data">
+          <form name={formName} action={isFormConfigured ? successUrl : undefined} method="POST" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" data-netlify-form>
+            <input type="hidden" name="form-name" value={formName} />
+            <input type="hidden" name="bot-field" />
             <input type="hidden" name="_next" value={successUrl} />
             <input type="hidden" name="_subject" value="New message from Clinique du VR website form" />
-            <input type="text" name="_honey" class="sr-only" tabindex="-1" autocomplete="off" />
+            <input type="hidden" name="Page" value="Contact EN" />
             <div class="form-group">
               <label for="name">{contactPage.formSection.fields.name}</label>
-              <input type="text" id="name" name="Full name" required />
+              <input type="text" id="name" name="name" required />
             </div>
             <div class="form-group">
               <label for="email">{contactPage.formSection.fields.email}</label>
-              <input type="email" id="email" name="Email" required />
+              <input type="email" id="email" name="email" required />
             </div>
             <div class="form-group">
               <label for="phone">{contactPage.formSection.fields.phone}</label>
@@ -65,7 +67,7 @@ const schemas = [
               <div class="checkbox-grid">
                 {contactPage.formSection.fields.serviceOptions.map((option, index) => (
                   <label class="check-option" for={`service-${index}`}>
-                    <input type="checkbox" id={`service-${index}`} name="Requested services[]" value={option} />
+                    <input type="checkbox" id={`service-${index}`} name="Requested services" value={option} />
                     <span>{option}</span>
                   </label>
                 ))}
@@ -102,7 +104,7 @@ const schemas = [
             </div>
             <div class="form-group">
               <label for="message">{contactPage.formSection.fields.message}</label>
-              <textarea id="message" name="Message" rows="6" required></textarea>
+              <textarea id="message" name="message" rows="6" required></textarea>
             </div>
             <button type="submit" class="btn" disabled={!isFormConfigured}>{contactPage.formSection.submitLabel}</button>
           </form>
