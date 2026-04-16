@@ -47,13 +47,15 @@ const schemas = [
             <input type="hidden" name="form-name" value={formName} />
             <input type="hidden" name="bot-field" />
             <input type="hidden" name="Page" value="Contact EN" />
+            <input type="hidden" name="Requested services" data-services-output />
+            <input type="hidden" name="Type of work" data-worktype-output />
             <div class="form-group">
               <label for="name">{contactPage.formSection.fields.name}</label>
-              <input type="text" id="name" name="name" required />
+              <input type="text" id="name" name="Full name" required />
             </div>
             <div class="form-group">
               <label for="email">{contactPage.formSection.fields.email}</label>
-              <input type="email" id="email" name="email" required />
+              <input type="email" id="email" name="Email" required />
             </div>
             <div class="form-group">
               <label for="phone">{contactPage.formSection.fields.phone}</label>
@@ -64,7 +66,7 @@ const schemas = [
               <div class="checkbox-grid">
                 {contactPage.formSection.fields.serviceOptions.map((option, index) => (
                   <label class="check-option" for={`service-${index}`}>
-                    <input type="checkbox" id={`service-${index}`} name="Requested services" value={option} />
+                    <input type="checkbox" id={`service-${index}`} value={option} data-service-option />
                     <span>{option}</span>
                   </label>
                 ))}
@@ -74,11 +76,11 @@ const schemas = [
               <legend>{contactPage.formSection.fields.workType}</legend>
               <div class="checkbox-grid checkbox-grid--two">
                 <label class="check-option" for="workshop">
-                  <input type="radio" id="workshop" name="Type of work" value={contactPage.formSection.fields.workshopOption} />
+                  <input type="radio" id="workshop" name="workTypeChoiceEn" value={contactPage.formSection.fields.workshopOption} data-worktype-option />
                   <span>{contactPage.formSection.fields.workshopOption}</span>
                 </label>
                 <label class="check-option" for="mobile">
-                  <input type="radio" id="mobile" name="Type of work" value={contactPage.formSection.fields.mobileOption} />
+                  <input type="radio" id="mobile" name="workTypeChoiceEn" value={contactPage.formSection.fields.mobileOption} data-worktype-option />
                   <span>{contactPage.formSection.fields.mobileOption}</span>
                 </label>
               </div>
@@ -101,7 +103,7 @@ const schemas = [
             </div>
             <div class="form-group">
               <label for="message">{contactPage.formSection.fields.message}</label>
-              <textarea id="message" name="message" rows="6" required></textarea>
+              <textarea id="message" name="Message" rows="6" required></textarea>
             </div>
             <button type="submit" class="btn" disabled={!isFormConfigured}>{contactPage.formSection.submitLabel}</button>
           </form>
@@ -163,6 +165,33 @@ const schemas = [
 
   <Footer lang="en" />
 </Layout>
+
+<script>
+  const form = document.querySelector('form[data-netlify-form][name="contact-en"]');
+
+  if (form instanceof HTMLFormElement) {
+    const syncFields = () => {
+      const servicesOutput = form.querySelector('[data-services-output]');
+      const workTypeOutput = form.querySelector('[data-worktype-output]');
+      const selectedServices = Array.from(form.querySelectorAll('[data-service-option]:checked'))
+        .map((input) => input instanceof HTMLInputElement ? input.value : '')
+        .filter(Boolean);
+      const selectedWorkType = form.querySelector('[data-worktype-option]:checked');
+
+      if (servicesOutput instanceof HTMLInputElement) {
+        servicesOutput.value = selectedServices.join(', ');
+      }
+
+      if (workTypeOutput instanceof HTMLInputElement && selectedWorkType instanceof HTMLInputElement) {
+        workTypeOutput.value = selectedWorkType.value;
+      }
+    };
+
+    form.addEventListener('change', syncFields);
+    form.addEventListener('submit', syncFields);
+    syncFields();
+  }
+</script>
 
 <style>
   .page-header { background: radial-gradient(circle at top left, rgba(242, 210, 27, 0.18), transparent 25%), linear-gradient(135deg, var(--brand-navy-dark) 0%, #1f476d 58%, #eef3f7 58%, #eef3f7 100%); color: white; padding: 4.5rem 0 3.8rem; }
