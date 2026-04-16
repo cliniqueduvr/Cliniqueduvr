@@ -2,7 +2,6 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import CTABanner from '../../components/CTABanner.astro';
 import servicePagesData from '../../data/service-pages-en.json';
 import type { ServicePage } from '../../data/service-page-types';
 import { buildBreadcrumbSchema, buildFAQSchema } from '../../lib/seo';
@@ -175,12 +174,6 @@ const breadcrumbs = buildBreadcrumbSchema([
       </div>
     </section>
 
-    <CTABanner
-      lang="en"
-      heading="Need help with a specific RV issue?"
-      subheading="Choose the service that matches your situation or contact us and we will point you in the right direction."
-      squareLabel="Book now"
-    />
   </main>
 
   <Footer lang="en" />

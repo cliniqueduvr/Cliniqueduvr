@@ -1,5 +1,4 @@
 ---
-import CTABanner from './CTABanner.astro';
 import type { LocalAreaPage } from '../data/local-area-pages';
 
 interface Props {
@@ -63,12 +62,6 @@ const isEnglish = lang === 'en';
     </div>
   </section>
 
-  <CTABanner
-    lang={lang}
-    heading={isEnglish ? `Need help in ${page.area}?` : `Besoin d'aide en ${page.area}?`}
-    subheading={isEnglish ? 'Describe your vehicle and the issue you are seeing. We will point you to the right next step.' : 'Décrivez votre véhicule et le problème observé. Nous vous orienterons vers la bonne prochaine étape.'}
-    squareLabel={isEnglish ? 'Book now' : 'Réserver en ligne'}
-  />
 </main>
 
 <style>

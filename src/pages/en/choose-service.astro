@@ -2,7 +2,6 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import CTABanner from '../../components/CTABanner.astro';
 import { buildBreadcrumbSchema, buildFAQSchema } from '../../lib/seo';
 
 const symptomCards = [
@@ -139,12 +138,6 @@ const breadcrumbs = buildBreadcrumbSchema([
       </div>
     </section>
 
-    <CTABanner
-      lang="en"
-      heading="Still not sure where to start?"
-      subheading="Tell us about your RV, the symptoms you see, and your situation. We will tell you which first step is the most useful."
-      squareLabel="Book now"
-    />
   </main>
 
   <Footer lang="en" />

@@ -78,22 +78,6 @@ const meta = {
       </div>
     </section>
 
-    <!-- CTA SECTION - FREE QUOTE -->
-    <section class="cta-banner">
-      <div class="container cta-content">
-        <h2>{homePage.cta.heading}</h2>
-        <p>{homePage.cta.subheading}</p>
-        <div class="cta-actions">
-          <a href={`tel:${siteSettings.phone.href}`} class="cta-button">
-            <i class="fas fa-phone"></i> {siteSettings.phone.display}
-          </a>
-          <a href={siteSettings.squareBookingUrl} target="_blank" rel="noopener" class="square-button">
-            <i class="fas fa-calendar-check"></i> {homePage.cta.squareLabel}
-          </a>
-        </div>
-      </div>
-    </section>
-
     <!-- CONTACT SECTION -->
     <section class="contact-section">
       <div class="container contact-grid">
@@ -382,82 +366,6 @@ const meta = {
   .review-author {
     margin-top: 1rem;
     color: var(--brand-muted);
-  }
-
-  .cta-banner {
-    background: var(--brand-green);
-    padding: 3rem 1.5rem;
-    text-align: center;
-    color: white;
-  }
-
-  .cta-content {
-    max-width: 720px;
-    margin: 0 auto;
-  }
-
-  .cta-content h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    color: white;
-  }
-
-  .cta-content p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    color: #ffffff;
-  }
-
-  .cta-button {
-    display: inline-block;
-    background: var(--brand-gold);
-    color: var(--brand-navy-dark);
-    padding: 12px 28px;
-    border-radius: 50px;
-    font-weight: 600;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    border: 2px solid var(--brand-gold);
-  }
-
-  .cta-button:hover {
-    background: #e1c317;
-    color: var(--brand-navy-dark);
-  }
-
-  .cta-button i {
-    margin-right: 8px;
-  }
-
-  .cta-actions {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.85rem;
-  }
-
-  .square-button {
-    display: inline-block;
-    background: var(--brand-gold);
-    color: var(--brand-navy-dark);
-    padding: 12px 28px;
-    border-radius: 50px;
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 1.05rem;
-    transition: all 0.3s ease;
-    border: 2px solid var(--brand-gold);
-  }
-
-  .square-button:hover {
-    text-decoration: none;
-    background: #e1c317;
-    border-color: #e1c317;
-  }
-
-  .square-button i {
-    margin-right: 8px;
   }
 
   @media (max-width: 768px) {

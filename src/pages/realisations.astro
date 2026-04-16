@@ -3,7 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ProjectCard from '../components/ProjectCard.astro';
-import CTABanner from '../components/CTABanner.astro';
 import projectsData from '../data/projects.json';
 import { buildBreadcrumbSchema } from '../lib/seo';
 const breadcrumbs = buildBreadcrumbSchema([
@@ -61,11 +60,6 @@ const breadcrumbs = buildBreadcrumbSchema([
       </div>
     </section>
 
-    <CTABanner
-      heading="Nous pouvons aider votre VR aussi"
-      subheading="Chaque intervention est différente. Contactez-nous pour une soumission gratuite."
-      phoneNumber="(581) 337-3366"
-    />
   </main>
 
   <Footer />

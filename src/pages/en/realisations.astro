@@ -3,7 +3,6 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import ProjectCard from '../../components/ProjectCard.astro';
-import CTABanner from '../../components/CTABanner.astro';
 import projectsData from '../../data/projects-en.json';
 import { buildBreadcrumbSchema } from '../../lib/seo';
 const breadcrumbs = buildBreadcrumbSchema([
@@ -62,13 +61,6 @@ const breadcrumbs = buildBreadcrumbSchema([
       </div>
     </section>
 
-    <CTABanner
-      lang="en"
-      heading="We can help your RV too"
-      subheading="Every project is different. Contact us for a practical review."
-      phoneNumber="(581) 337-3366"
-      squareLabel="Book now"
-    />
   </main>
 
   <Footer lang="en" />

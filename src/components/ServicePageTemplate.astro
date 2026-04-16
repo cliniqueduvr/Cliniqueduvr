@@ -1,5 +1,4 @@
 ---
-import CTABanner from './CTABanner.astro';
 import siteSettings from '../data/site-settings.json';
 import type { ServicePage } from '../data/service-page-types';
 
@@ -224,12 +223,6 @@ const helpfulLinks = isEnglish
     </div>
   </section>
 
-  <CTABanner
-    lang={lang}
-    heading={isEnglish ? `Need help with ${service.navLabel.toLowerCase()}?` : `Besoin d'un service de ${service.navLabel.toLowerCase()}?`}
-    subheading={isEnglish ? 'Tell us about your vehicle and your situation. We will point you in the right direction.' : 'Décrivez votre véhicule et votre besoin. On vous revient avec une direction claire.'}
-    squareLabel={isEnglish ? 'Book now' : 'Réserver en ligne'}
-  />
 </main>
 
 <style>

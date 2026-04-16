@@ -7,6 +7,7 @@ export interface Props {
   phoneNumber?: string;
   lang?: 'fr' | 'en';
   squareLabel?: string;
+  smsLabel?: string;
 }
 
 const {
@@ -14,7 +15,8 @@ const {
   subheading = "Inspection et devis sans obligation",
   phoneNumber = siteSettings.phone.display,
   lang = 'fr',
-  squareLabel = lang === 'fr' ? 'Réserver en ligne' : 'Book now'
+  squareLabel = lang === 'fr' ? 'Réserver en ligne' : 'Book now',
+  smsLabel = lang === 'fr' ? 'Message texte' : 'Text us'
 } = Astro.props as Props;
 ---
 
@@ -25,6 +27,9 @@ const {
     <div class="cta-actions">
       <a href={`tel:${siteSettings.phone.href}`} class="cta-button">
         <i class="fas fa-phone"></i> {phoneNumber}
+      </a>
+      <a href={`sms:${siteSettings.phone.href}`} class="sms-button">
+        <i class="fas fa-comment-dots"></i> {smsLabel}
       </a>
       <a href={siteSettings.squareBookingUrl} target="_blank" rel="noopener" class="square-button">
         <i class="fas fa-calendar-check"></i> {squareLabel}
@@ -116,6 +121,29 @@ const {
     margin-right: 8px;
   }
 
+  .sms-button {
+    display: inline-block;
+    background: var(--brand-navy-dark);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--brand-navy-dark);
+  }
+
+  .sms-button:hover {
+    text-decoration: none;
+    background: #163049;
+    border-color: #163049;
+  }
+
+  .sms-button i {
+    margin-right: 8px;
+  }
+
   @media (max-width: 768px) {
     .cta-banner {
       padding: 2rem 1rem;
@@ -129,7 +157,9 @@ const {
       font-size: 1rem;
     }
 
-    .cta-button {
+    .cta-button,
+    .sms-button,
+    .square-button {
       padding: 10px 24px;
       font-size: 1rem;
     }

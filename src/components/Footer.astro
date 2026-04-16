@@ -1,4 +1,5 @@
 ---
+import CTABanner from './CTABanner.astro';
 import siteSettings from '../data/site-settings.json';
 
 export interface Props {
@@ -7,7 +8,11 @@ export interface Props {
 
 const { lang = 'fr' } = Astro.props as Props;
 const isEnglish = lang === 'en';
+const pathname = Astro.url.pathname;
+const shouldShowCta = pathname !== '/contact/' && pathname !== '/en/contact/';
 ---
+
+{shouldShowCta && <CTABanner lang={isEnglish ? 'en' : 'fr'} />}
 
 <footer class="footer">
   <div class="container footer-content">
@@ -62,7 +67,7 @@ const isEnglish = lang === 'en';
     background: var(--brand-navy);
     color: white;
     padding: 3rem 0 0;
-    margin-top: 4rem;
+    margin-top: 0;
   }
 
   .footer-content {

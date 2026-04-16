@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import CTABanner from '../components/CTABanner.astro';
 import { buildBreadcrumbSchema, buildFAQSchema } from '../lib/seo';
 
 const symptomCards = [
@@ -138,10 +137,6 @@ const breadcrumbs = buildBreadcrumbSchema([
       </div>
     </section>
 
-    <CTABanner
-      heading="Vous ne savez toujours pas par où commencer?"
-      subheading="Décrivez votre VR, les symptômes observés et votre contexte. Nous vous dirons quelle première étape est la plus utile."
-    />
   </main>
 
   <Footer />
