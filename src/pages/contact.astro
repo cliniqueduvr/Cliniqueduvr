@@ -8,7 +8,7 @@ import siteSettings from '../data/site-settings.json';
 import contactPage from '../data/contact-page.json';
 
 const isFormConfigured = Boolean(siteSettings.email?.trim());
-const successUrl = 'https://www.cliniqueduvr.ca/contact/?sent=1';
+const successUrl = '/contact/?sent=1';
 const formName = 'contact-fr';
 const breadcrumbs = buildBreadcrumbSchema([
   { name: contactPage.breadcrumbs.home, path: '/' },

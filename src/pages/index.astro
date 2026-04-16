@@ -7,7 +7,7 @@ import siteSettings from '../data/site-settings.json';
 import homePage from '../data/home-page.json';
 
 const isFormConfigured = Boolean(siteSettings.email?.trim());
-const successUrl = 'https://www.cliniqueduvr.ca/contact/?sent=1';
+const successUrl = '/contact/?sent=1';
 const formName = 'home-contact-fr';
 const schemas = [
   buildWebSiteSchema(),
