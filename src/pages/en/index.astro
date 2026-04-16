@@ -34,19 +34,17 @@ const meta = {
       </div>
     </section>
 
-    <section id="about" class="intro-section">
+    <section class="intro-section">
       <div class="container intro-grid">
-        {homePage.introCards.map((card) => (
-          <div class="intro-card">
-            {card.icon && (
-              <div class="card-icon">
-                <i class={card.icon}></i>
-              </div>
-            )}
-            <h2>{card.heading}</h2>
-            <p set:html={card.body} />
-          </div>
-        ))}
+        <div class="intro-card">
+          {homePage.introCard.icon && (
+            <div class="card-icon">
+              <i class={homePage.introCard.icon}></i>
+            </div>
+          )}
+          <h2>{homePage.introCard.heading}</h2>
+          <p set:html={homePage.introCard.body} />
+        </div>
       </div>
     </section>
 
@@ -129,8 +127,8 @@ const meta = {
   .hero-content h1 { color: white; max-width: 16ch; margin: 0 auto; line-height: 1.12; }
   .hero-tagline { font-size: 1.2rem; letter-spacing: 2px; margin-top: 1rem; line-height: 1.5; }
   .intro-section { padding: 4rem 0; background: white; }
-  .intro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; }
-  .intro-card { text-align: center; }
+  .intro-grid { display: flex; justify-content: center; }
+  .intro-card { text-align: center; max-width: 720px; }
   .card-icon { font-size: 3rem; color: var(--brand-green); margin-bottom: 1rem; }
   .services-overview { padding: 4rem 0; background: var(--brand-surface); }
   .seo-copy { padding: 4rem 0; background: white; }

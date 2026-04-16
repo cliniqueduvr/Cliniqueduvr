@@ -1,34 +1,34 @@
 {
   "metaTitle": "Privacy Policy | Clinique du VR",
-  "metaDescription": "Clinique du VR privacy policy for contact requests, appointments and customer communications.",
+  "metaDescription": "Clinique du VR privacy policy for estimate requests, appointments, and customer communications.",
   "breadcrumbs": {
     "home": "Home",
     "current": "Privacy Policy"
   },
   "hero": {
     "title": "Privacy Policy",
-    "body": "Clinique du VR protects the information voluntarily shared through email, phone calls, the contact form and booking requests."
+    "body": "Clinique du VR protects the information voluntarily shared by email, phone, contact form, or appointment booking."
   },
   "sections": [
     {
-      "heading": "Information we collect",
-      "body": "When you contact us, we may collect your name, email address, phone number, details about your RV and any information needed to understand your service request."
+      "heading": "Information collected",
+      "body": "When you contact us, we may collect your name, email address, phone number, details about your RV, and any information useful to your service request."
     },
     {
-      "heading": "How the information is used",
-      "body": "This information is used to reply to your request, plan an appointment, prepare an estimate or follow up on an inspection, maintenance or repair file."
+      "heading": "Use of information",
+      "body": "This information is used to respond to your request, schedule an appointment, prepare an estimate, or follow up on a service, inspection, or repair file."
     },
     {
       "heading": "Compliance and retention",
-      "body": "The site is designed to support a minimal approach to personal information handling and to align with applicable Quebec Law 25 requirements. We do not sell personal information and only use the information needed to process your request."
+      "body": "The site is designed to support a minimal approach to personal information handling and to comply with the applicable requirements of Law 25 in Quebec. We do not sell your personal information, and we only use the information needed to process your request."
     },
     {
       "heading": "Cookies, tracking and navigation",
-      "body": "The site does not use Google Ads, Google Analytics or other advertising or analytics trackers. No advertising cookies are placed and no browsing information is retained to profile users."
+      "body": "The site does not use Google Ads, Google Analytics, or other advertising or analytics tracking tools. No advertising cookies are placed and no browsing information is kept to profile users."
     },
     {
       "heading": "Questions",
-      "body": "For privacy questions or requests related to your information, email info@cliniqueduvr.ca or call (581) 337-3366."
+      "body": "For any question related to privacy or your information, email info@cliniqueduvr.ca or call (581) 337-3366."
     }
   ]
 }

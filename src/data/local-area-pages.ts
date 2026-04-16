@@ -186,11 +186,11 @@ export const localAreaPagesEn: LocalAreaPage[] = [
     slug: 'rv-inspection-outaouais',
     area: 'Outaouais',
     title: 'RV Inspection in Outaouais | Clinique du VR',
-    description: 'RV inspection in Outaouais for water intrusion, seals, roof condition and pre-purchase validation, with the workshop based in Gatineau.',
+    description: 'RV inspection in Outaouais for water intrusion, seals, roof condition, and pre-purchase validation, with the workshop based in Gatineau.',
     eyebrow: 'Outaouais',
     h1: 'RV Inspection in Outaouais',
-    intro: 'Clinique du VR helps clients in Outaouais who want to clarify the true condition of their RV before repairs, a purchase, or restoration work.',
-    lead: 'In Outaouais, inspection is often the right starting point when the RV is nearby, between seasons, or being reviewed before a decision has to be made.',
+    intro: 'Clinique du VR helps clients in Outaouais who want to clarify their RV’s actual condition before repairs, a purchase, or restoration work.',
+    lead: 'In Outaouais, inspection is often the right starting point when the RV is nearby, between seasons, or being assessed before a quick decision.',
     serviceType: 'RV Inspection in Outaouais',
     highlights: ['Visual inspection', 'Moisture meter', 'Before purchase', 'Seals and roof'],
     sections: [
@@ -200,17 +200,17 @@ export const localAreaPagesEn: LocalAreaPage[] = [
       },
       {
         title: 'For buyers and sellers in Outaouais',
-        body: 'Before a transaction, inspection helps clarify strengths, risks, and useful corrections. That gives you a better understanding of a vehicle being considered locally in Outaouais before making a decision.'
+        body: 'Before a transaction, inspection helps clarify strengths, risks, and useful corrections. It is often the right approach for an RV being considered locally in Outaouais before going any further.'
       },
       {
         title: 'What we review first',
-        body: 'We focus on seals, roof areas, vulnerable openings, and signs of moisture. The goal is to identify higher-risk sections quickly and point you to the most useful next step without unnecessary back-and-forth.'
+        body: 'We focus on seals, roof areas, vulnerable openings, and signs of moisture. The goal is to quickly identify higher-risk areas and point you to the most useful next step without unnecessary back-and-forth.'
       }
     ],
     faqs: [
       {
         question: 'Why request an RV inspection in Outaouais?',
-        answer: 'Inspection helps confirm the actual condition of the vehicle, detect moisture or water-intrusion signs, and guide the next step whether you are buying, repairing, or preparing for a sale.'
+        answer: 'Inspection helps confirm the vehicle’s actual condition, detect moisture or water-intrusion signs, and guide the next step whether you are buying, repairing, or preparing for a sale.'
       },
       {
         question: 'Is inspection useful before repairs?',
@@ -239,7 +239,7 @@ export const localAreaPagesEn: LocalAreaPage[] = [
     description: 'RV repair in Ottawa for water intrusion, roof damage, walls, floors and interior issues, with the workshop based in Gatineau.',
     eyebrow: 'Ottawa',
     h1: 'RV Repair in Ottawa',
-    intro: 'Clinique du VR helps clients in Ottawa who need specialized RV repair related to water, roof areas, or visible damage inside the vehicle.',
+    intro: 'Clinique du VR helps clients in Ottawa who need specialized RV repair related to water, roofing, or visible damage inside the vehicle.',
     lead: 'In Ottawa, requests often come in once the damage is already visible and the next step needs to be a structured repair plan.',
     serviceType: 'RV Repair in Ottawa',
     highlights: ['Water intrusion', 'Roof', 'Floors and walls', 'Restoration work'],
@@ -277,7 +277,7 @@ export const localAreaPagesEn: LocalAreaPage[] = [
       {
         href: '/en/realisations/',
         title: 'See real project examples',
-        body: 'Review examples of workshop interventions to better understand your situation before contacting us.',
+        body: 'Browse examples of workshop interventions to better understand your situation before contacting us.',
         linkLabel: 'View projects'
       }
     ]
@@ -286,11 +286,11 @@ export const localAreaPagesEn: LocalAreaPage[] = [
     slug: 'trailer-water-intrusion-laurentides',
     area: 'Laurentides',
     title: 'Trailer Water Intrusion in Laurentides | Clinique du VR',
-    description: 'Help with trailer water intrusion in Laurentides including inspection, seals, roof condition, moisture signs and practical next steps from our Gatineau workshop.',
+    description: 'Help with trailer water intrusion in Laurentides, including inspection, seals, roof condition, moisture signs, and practical next steps from our Gatineau workshop.',
     eyebrow: 'Laurentides',
     h1: 'Trailer Water Intrusion in Laurentides',
-    intro: 'Clinique du VR helps trailer owners in Laurentides when moisture signs, worn seals, or questions about watertightness begin to appear.',
-    lead: 'In Laurentides, the right move is often to confirm watertightness early before moisture, seals, or roof areas have more time to deteriorate.',
+    intro: 'Clinique du VR helps trailer owners in Laurentides when signs of moisture, worn seals, or questions about water intrusion begin to appear.',
+    lead: 'In Laurentides, the right move is often to confirm the seal early before moisture, seals, or roof areas have more time to deteriorate.',
     serviceType: 'Trailer Water Intrusion in Laurentides',
     highlights: ['Moisture inspection', 'Seals and roof', 'Damage prevention', 'Clear direction'],
     sections: [
@@ -304,7 +304,7 @@ export const localAreaPagesEn: LocalAreaPage[] = [
       },
       {
         title: 'When maintenance or repair takes over',
-        body: 'Once the condition of the trailer is confirmed, the next step may be seal maintenance, targeted watertightness work, or a more advanced repair depending on the extent of the damage and the overall condition of the trailer.'
+        body: 'Once the trailer’s condition is confirmed, the next step may be seal maintenance, targeted sealing work, or a more advanced repair depending on the extent of the damage and the trailer’s overall condition.'
       }
     ],
     faqs: [
@@ -314,7 +314,7 @@ export const localAreaPagesEn: LocalAreaPage[] = [
       },
       {
         question: 'Does every water-intrusion issue require immediate repair?',
-        answer: 'Not always. Some cases are better handled with preventive maintenance or targeted seal work, but the actual condition needs to be confirmed first.'
+        answer: 'Not always. Some cases are better handled with preventive maintenance or targeted seal work, but the trailer’s actual condition needs to be confirmed first.'
       }
     ],
     links: [

@@ -2,69 +2,69 @@
   "items": [
     {
       "id": 1,
-      "title": "Exterior Refresh Project",
+      "title": "RV roof restoration",
       "location": "Gatineau",
-      "category": "Aesthetics",
+      "category": "Roofing",
       "beforeImage": "/images/project-1-before.jpg",
       "afterImage": "/images/project-1-after.jpg",
-      "beforeAlt": "Before service on an RV exterior",
-      "afterAlt": "After service with improved finish and presentation",
-      "description": "Exterior cleanup and finish improvement completed to restore a cleaner, more polished overall appearance."
+      "beforeAlt": "Before: worn RV roof with tired seals and visible water intrusion",
+      "afterAlt": "After: watertight roof restored with redone seals and a clean finish",
+      "description": "Complete roof inspection, repair of critical seals, and restoration of a watertight finish to eliminate intrusion and extend the RV's lifespan."
     },
     {
       "id": 2,
-      "title": "Interior Condition Recovery",
+      "title": "Interior repair after water intrusion",
       "location": "Ottawa",
-      "category": "Repair",
+      "category": "Interior",
       "beforeImage": "/images/project-2-before.jpg",
       "afterImage": "/images/project-2-after.jpg",
-      "beforeAlt": "Before service showing condition issues inside the unit",
-      "afterAlt": "After service with improved interior condition",
-      "description": "Targeted work carried out to restore interior usability and improve the presentation of the space."
+      "beforeAlt": "Before: RV interior damaged by water with affected panels and finish",
+      "afterAlt": "After: restored interior with clean surfaces and an even finish",
+      "description": "Repair of damaged surfaces, replacement of compromised sections, and restoration of the interior to recover a clean, solid, and functional space."
     },
     {
       "id": 3,
-      "title": "Inspection and Assessment",
+      "title": "Preventive inspection before the season",
       "location": "Ottawa",
       "category": "Inspection",
       "beforeImage": "/images/project-3-before.jpg",
       "afterImage": "/images/project-3-after.jpg",
-      "beforeAlt": "Before assessment of an RV requiring inspection",
-      "afterAlt": "After inspection with documented findings and next steps",
-      "description": "Full inspection process with clear findings, practical recommendations, and a documented service direction."
+      "beforeAlt": "Before: RV in storage requiring a full check before returning to service",
+      "afterAlt": "After: inspection report with clear priorities and recommended work",
+      "description": "Review of the roof, seals, openings, traces of moisture, and visible components to prevent unpleasant surprises at the start of the season."
     },
     {
       "id": 4,
-      "title": "Workshop Service Intervention",
+      "title": "Exterior sealant replacement",
       "location": "Gatineau",
-      "category": "Workshop",
+      "category": "Watertightness",
       "beforeImage": "/images/project-4-before.jpg",
       "afterImage": "/images/project-4-after.jpg",
-      "beforeAlt": "Before workshop service on a unit",
-      "afterAlt": "After workshop intervention and preparation",
-      "description": "Structured workshop intervention completed with practical repairs and improved readiness for use."
+      "beforeAlt": "Before: cracked exterior seals around openings and accessories",
+      "afterAlt": "After: new sealants installed with an even and watertight finish",
+      "description": "Removal of old sealants, surface preparation, and application of new products to protect vulnerable points against water and changing weather."
     },
     {
       "id": 5,
-      "title": "Post-Service Finish Upgrade",
+      "title": "Complete refresh",
       "location": "Gatineau",
-      "category": "Finish",
+      "category": "Restoration",
       "beforeImage": "/images/project-5-before.jpg",
       "afterImage": "/images/project-5-after.jpg",
-      "beforeAlt": "Before finishing and detailing work",
-      "afterAlt": "After finishing work with a cleaner visual result",
-      "description": "Final appearance work and detailing completed to deliver a sharper, cleaner finished result."
+      "beforeAlt": "Before: visually tired RV before restoration and cleaning work",
+      "afterAlt": "After: clean, refreshed RV ready for the road or for sale",
+      "description": "Combined repair, cleaning, and finishing work to give the RV a cleaner appearance and better use or resale value."
     },
     {
       "id": 6,
-      "title": "Pre-Purchase RV Review",
+      "title": "Pre-purchase diagnostic",
       "location": "Ottawa",
-      "category": "Review",
+      "category": "Inspection",
       "beforeImage": "/images/project-6-before.jpg",
       "afterImage": "/images/project-6-after.jpg",
-      "beforeAlt": "Before a pre-purchase RV review",
-      "afterAlt": "After review with a clear service summary",
-      "description": "Pre-purchase review carried out to help the owner understand condition, issues, and service priorities."
+      "beforeAlt": "Before: RV to assess before a transaction or used purchase",
+      "afterAlt": "After: clear summary of strengths, required fixes, and budget priorities",
+      "description": "Purchase-oriented inspection to better understand the RV's actual condition, the work to expect, and the risks to address before completing a transaction."
     }
   ]
 }

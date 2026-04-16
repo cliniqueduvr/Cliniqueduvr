@@ -1,51 +1,43 @@
 {
   "metaTitle": "Clinique du VR | RV inspection, maintenance and repair in Gatineau",
-  "metaDescription": "Clinique du VR offers RV inspection, maintenance, repair, detailing, and buying and selling support in Gatineau, Ottawa, Outaouais, and Laurentides.",
+  "metaDescription": "Clinique du VR offers RV inspection, maintenance, repair, detailing, and buying and selling support in Gatineau, Outaouais, the greater Ottawa region, and the Laurentides.",
   "hero": {
-    "logoAlt": "Clinique du VR logo — RV maintenance, repair and detailing",
-    "title": "Clinique du VR — RV inspection, maintenance and repair in Gatineau",
-    "tagline": "Your water infiltration specialist in Outaouais"
+    "logoAlt": "Clinique du VR logo — maintenance, repair and detailing for recreational vehicles",
+    "title": "Water intrusion specialist in Outaouais",
+    "tagline": ""
   },
-  "introCards": [
-    {
-      "icon": "",
-      "heading": "Why Choose Clinique du VR?",
-      "body": "<strong>Specialized and attentive service</strong> for RV maintenance, repair and detailing. We focus on clear explanations, practical condition assessment and recommendations that match your real situation. We operate a year-round workshop as well as a mobile unit to serve you better depending on the type of work required. Speed, transparency and careful execution from start to finish are part of how we work."
-    },
-    {
-      "icon": "fas fa-wrench",
-      "heading": "Our Services",
-      "body": "<strong>Preventive maintenance</strong> • <strong>Mechanical and cosmetic repairs</strong> • <strong>RV inspections</strong> • <strong>Refresh work</strong> • <strong>Cleaning and detailing</strong> • <strong>Custom interventions</strong>"
-    }
-  ],
+  "introCard": {
+    "icon": "",
+    "heading": "Why choose Clinique du VR?",
+    "body": "<strong>Specialized and attentive service</strong> for RV maintenance, repair and detailing. We focus on clear explanations, a practical reading of the vehicle's condition, and recommendations tailored to your actual situation. We have a year-round workshop as well as a mobile unit to serve you better depending on the type of work needed. Speed, transparency, and careful execution from start to finish are part of how we work."
+  },
   "servicesOverview": {
     "title": "Our Specialties",
     "items": [
       { "href": "/en/services/inspection/", "icon": "fas fa-clipboard-check", "label": "Inspection" },
       { "href": "/en/services/maintenance/", "icon": "fas fa-screwdriver-wrench", "label": "Maintenance" },
       { "href": "/en/services/repair/", "icon": "fas fa-toolbox", "label": "Repair" },
-      { "href": "/en/services/detailing/", "icon": "fas fa-spray-can-sparkles", "label": "Detailing" },
-      { "href": "/en/sales/", "icon": "", "label": "Sales" }
+      { "href": "/en/services/detailing/", "icon": "fas fa-spray-can-sparkles", "label": "Detailing" }
     ]
   },
   "seoSections": [
     {
       "heading": "RV service in Gatineau and nearby areas",
-      "body": "Clinique du VR supports RV, trailer and caravan owners with common service needs such as pre-purchase inspection, preventive maintenance, water leak repair, roof work, refresh work and detailing. The workshop is based in Gatineau and also serves Ottawa, Outaouais, and Laurentides, while also taking on selected projects elsewhere in Quebec and Ontario."
+      "body": "Clinique du VR supports owners of RVs, travel trailers, and caravans with the most common needs: pre-purchase inspection, preventive maintenance, water leak repair, roof work, restoration, and detailing. Our workshop in Gatineau also serves the greater Ottawa region, Outaouais, and the Laurentides, as well as selected files elsewhere in Quebec and Ontario."
     },
     {
-      "heading": "A clearer service structure",
-      "body": "When an RV shows signs of wear, water intrusion or visible deterioration, the first step is to understand the real condition of the vehicle. From there, we help guide you toward inspection, maintenance, repair, detailing or buying and selling support based on what is actually needed."
+      "heading": "A useful approach before any work begins",
+      "body": "When a vehicle shows signs of wear, water intrusion, or visible deterioration, the first step is to clarify the RV's actual condition. We then help you choose between an inspection, maintenance, repair, detailing service, or pre-sale preparation based on what is most useful."
     }
   ],
   "cta": {
     "heading": "Request your free estimate",
     "subheading": "Inspection and estimate with no obligation",
-    "squareLabel": "Book now"
+    "squareLabel": "Book online"
   },
   "contactForm": {
-    "heading": "Contact Us",
-    "unconfiguredNote": "The contact form is not configured in production yet. Please use the phone number or online booking for now.",
+    "heading": "Contact us",
+    "unconfiguredNote": "The contact form is not available at the moment. Please use the phone number or online booking in the meantime.",
     "namePlaceholder": "Your name",
     "emailPlaceholder": "Your email",
     "subjectPlaceholder": "Subject",
@@ -54,14 +46,14 @@
   },
   "contactPanel": {
     "heading": "Contact Information",
-    "squareLabel": "Book now",
-    "ctaText": "Free and confidential estimate. Call us or send us a message."
+    "squareLabel": "Book online",
+    "ctaText": "Free and confidential estimate. Call us or fill out the form."
   },
   "reviews": {
     "heading": "Google Reviews",
     "items": [
       {
-        "quote": "Cedric was on time, explained everything clearly and delivered the results the next day as promised.",
+        "quote": "Cedric was on time, explained everything clearly, and the results followed as promised. Two thumbs up.",
         "author": "Jesse Brook"
       },
       {
@@ -69,7 +61,7 @@
         "author": "Stephane Desgagne"
       },
       {
-        "quote": "Efficient company, easy to communicate with, and professional work from start to finish.",
+        "quote": "Efficient company, easy to communicate with. Professional work, nothing but positive.",
         "author": "Philippe Albert"
       }
     ]

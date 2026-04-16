@@ -7,12 +7,12 @@ import siteSettings from '../../data/site-settings.json';
 
 const breadcrumbs = buildBreadcrumbSchema([
   { name: 'Home', path: '/en/' },
-  { name: 'Thank You' }
+  { name: 'Thank you' }
 ]);
 ---
 
 <Layout
-  title="Thank You | Clinique du VR"
+  title="Thank you | Clinique du VR"
   description="We have received your request. We will reply within 24 hours."
   lang="en-CA"
   canonicalPath="/en/thank-you/"
@@ -27,7 +27,7 @@ const breadcrumbs = buildBreadcrumbSchema([
       <div class="container">
         <p class="eyebrow">Request sent</p>
         <h1>Thank you, we have received your request.</h1>
-        <p>We will reply within 24 hours. For urgent matters, please contact us by phone.</p>
+        <p>We will reply within 24 hours. For any urgent matter, contact us by phone.</p>
         <div class="actions">
           <a class="phone-button" href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>
           <a class="link-button" href="/en/contact/">Back to the form</a>

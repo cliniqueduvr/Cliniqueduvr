@@ -12,17 +12,17 @@ const serviceAreas = [
   {
     name: 'Outaouais',
     href: '/en/areas/rv-inspection-outaouais/',
-    body: 'Inspection, pre-purchase review, and a fast read on the real condition of the RV.'
+    body: 'Inspection, pre-purchase validation, and a quick read on the RV’s actual condition.'
   },
   {
     name: 'Ottawa',
     href: '/en/areas/rv-repair-ottawa/',
-    body: 'Repair work tied to water intrusion, roofing, walls, floors, and visible damage.'
+    body: 'Repair related to water, the roof, walls, flooring, and visible damage.'
   },
   {
     name: 'Laurentides',
     href: '/en/areas/trailer-water-intrusion-laurentides/',
-    body: 'Trailer water intrusion, worn seals, and moisture concerns that need a clear starting point.'
+    body: 'Water intrusion, worn seals, and doubts about moisture in a travel trailer.'
   }
 ];
 const serviceGuides = [
@@ -34,13 +34,13 @@ const serviceGuides = [
   },
   {
     title: 'Real examples',
-    body: 'Review before-and-after workshop cases to better understand what kind of help you need.',
+    body: 'Browse before-and-after examples to better situate your need.',
     href: '/en/realisations/',
     label: 'View projects'
   },
   {
     title: 'Before buying or selling',
-    body: 'If your situation involves a transaction, start with inspection to clarify the real condition of the vehicle.',
+    body: 'If your situation involves a transaction, start with the inspection to clarify the vehicle’s actual condition.',
     href: '/en/services/inspection/',
     label: 'View inspection service'
   },
@@ -54,15 +54,15 @@ const serviceGuides = [
 const serviceFaqs = [
   {
     question: 'How do I choose the right service for my RV?',
-    answer: 'The right service depends on the actual condition of the vehicle. If you notice water intrusion, worn seals, interior damage, or if you are preparing for a purchase or sale, we can guide you toward inspection, maintenance, repair, detailing, or buying and selling support.'
+    answer: 'The right service mainly depends on the vehicle’s actual condition. If you see signs of water intrusion, worn seals, interior damage, or if you are preparing for a purchase or sale, we can guide you toward inspection, maintenance, repair, detailing, or buying and selling depending on the need.'
   },
   {
     question: 'Do you only work in Gatineau?',
-    answer: 'No. The workshop is in Gatineau, but we also help clients in Ottawa, Outaouais, and Laurentides depending on the type of request.'
+    answer: 'No. The workshop is in Gatineau, but we also support clients in the Ottawa region, Outaouais, and the Laurentides depending on the type of file.'
   },
   {
     question: 'Do you offer both shop and mobile services?',
-    answer: 'Yes, depending on the service. Some work is best handled in the shop, while other situations may also allow mobile service or travel support depending on the request.'
+    answer: 'Yes, depending on the requested service. Some interventions are very well handled in the workshop, while others can also be offered on the road or with travel depending on the situation.'
   }
 ];
 const quickSteps = [
@@ -76,15 +76,15 @@ const breadcrumbs = buildBreadcrumbSchema([
 ]);
 ---
 
-<Layout title="RV Services in Gatineau | Maintenance, Repair, and Detailing" description="RV services in Gatineau, with support for Ottawa, Outaouais and Laurentides: inspection, maintenance, repair, RV and auto detailing, and buying and selling support." lang="en-CA" canonicalPath="/en/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs, buildFAQSchema(serviceFaqs)]}>
+<Layout title="RV services in Gatineau | Maintenance, repair and detailing" description="RV services in Gatineau: inspection, maintenance, repair, and RV and auto detailing, with requests coming from Ottawa, Outaouais, and the Laurentides." lang="en-CA" canonicalPath="/en/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs, buildFAQSchema(serviceFaqs)]}>
   <Header lang="en" />
 
   <main>
     <section class="page-header">
       <div class="container">
-        <p class="eyebrow">For every RV situation</p>
+        <p class="eyebrow">For every need related to your RV</p>
         <h1>Our Services</h1>
-        <p>Inspection, maintenance, repair, and RV and auto detailing based on the vehicle's real condition.</p>
+        <p>Inspection, maintenance, repair, and RV and auto detailing based on the vehicle’s actual condition.</p>
       </div>
     </section>
 
@@ -104,12 +104,12 @@ const breadcrumbs = buildBreadcrumbSchema([
     <section class="seo-copy">
       <div class="container seo-columns">
         <div>
-          <h2>The right service for the condition of your RV</h2>
-          <p>Whether you are getting ready for the season, reviewing a vehicle before purchase, or dealing with an active repair issue, we can point you toward the right service based on the actual condition of the RV and the urgency of the situation.</p>
+          <h2>A service adapted to your situation</h2>
+          <p>Whether you are preparing for the season, evaluating a vehicle before purchase, or in the middle of a repair, we can direct you to the right service based on the vehicle’s condition and the urgency of the situation.</p>
         </div>
         <div>
-          <h2>What the workshop covers</h2>
-          <p>Water leaks, roof issues, seals, propane and electrical systems, interior restoration, detailing, and inspection before a transaction.</p>
+          <h2>What we cover</h2>
+          <p>Water intrusion, roofing, seals, electrical and propane components, interior restoration, detailing, and inspections before a transaction.</p>
         </div>
       </div>
     </section>
@@ -143,7 +143,7 @@ const breadcrumbs = buildBreadcrumbSchema([
     <section class="service-areas-section">
       <div class="container">
         <h2>Areas served</h2>
-        <p class="section-intro">We receive service requests from Outaouais, Ottawa, and Laurentides depending on the type of work and the condition of the vehicle.</p>
+        <p class="section-intro">We receive requests from Outaouais, Ottawa, and the Laurentides depending on the type of service and the vehicle’s situation.</p>
         <div class="area-grid">
           {serviceAreas.map((area) => (
             <a class="area-card" href={area.href}>

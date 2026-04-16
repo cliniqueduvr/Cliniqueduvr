@@ -24,7 +24,7 @@ const shouldShowCta = pathname !== '/contact/' && pathname !== '/en/contact/';
       <h4>{isEnglish ? 'Contact' : 'Contact'}</h4>
       <p>
         <strong>{isEnglish ? 'Phone:' : 'Téléphone:'}</strong> <a href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a><br>
-        <a href={siteSettings.squareBookingUrl} target="_blank" rel="noopener" class="footer-square-link">{isEnglish ? 'Book now' : 'Réserver en ligne'}</a><br>
+        <a href={siteSettings.squareBookingUrl} target="_blank" rel="noopener" class="footer-square-link">{isEnglish ? 'Book online' : 'Réserver en ligne'}</a><br>
         <strong>Email:</strong> <a href={`mailto:${siteSettings.email}`}>{siteSettings.email}</a><br>
         <strong>{isEnglish ? 'Insurance:' : 'Assurance:'}</strong> {isEnglish ? '$2M garage and liability' : 'Garage et civile 2 millions'}
       </p>

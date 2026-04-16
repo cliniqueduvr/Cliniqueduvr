@@ -7,13 +7,13 @@ import { buildBreadcrumbSchema, buildFAQSchema } from '../../lib/seo';
 const symptomCards = [
   {
     title: 'Water intrusion or moisture',
-    copy: 'If you notice water stains, suspicious seals, or moisture, inspection is often the best first step to confirm the real condition of the RV.',
+    copy: 'If you notice water stains, suspicious seals, or moisture, inspection is often the best first step to confirm the RV’s actual condition.',
     href: '/en/services/inspection/',
     linkLabel: 'View inspection service'
   },
   {
     title: 'Worn seals or roof concerns',
-    copy: 'When seals are drying out, cracking, or lifting, maintenance helps preserve watertightness and prevent more expensive damage.',
+    copy: 'When seals are drying out, cracking, or lifting, maintenance helps preserve the seal and prevent more expensive damage.',
     href: '/en/services/maintenance/',
     linkLabel: 'View maintenance service'
   },
@@ -25,7 +25,7 @@ const symptomCards = [
   },
   {
     title: 'Before buying or selling',
-    copy: 'To clarify the real condition of an RV before a transaction, inspection is usually the best first step to identify strengths, risks, and useful corrections.',
+    copy: 'To clarify an RV’s actual condition before a transaction, inspection is usually the best first step to identify strengths, risks, and useful corrections.',
     href: '/en/services/inspection/',
     linkLabel: 'View transaction inspection'
   },
@@ -51,7 +51,7 @@ const serviceAreas = [
 const faqs = [
   {
     question: 'What is the best first step if I am not sure what the problem is?',
-    answer: 'When the problem is not clear, inspection is often the best starting point. It helps confirm the actual condition of the vehicle and avoids going in the wrong direction.'
+    answer: 'When the problem is not clear, inspection is often the best starting point. It helps confirm the vehicle’s actual condition and avoids going in the wrong direction.'
   },
   {
     question: 'When should I choose maintenance instead of repair?',
@@ -85,7 +85,7 @@ const breadcrumbs = buildBreadcrumbSchema([
       <div class="container">
         <p class="eyebrow">Practical guidance</p>
         <h1>Which service should you choose for your RV?</h1>
-        <p>Use this page to identify the right starting point based on visible symptoms, the actual condition of the vehicle, and your situation.</p>
+        <p>Use this page to identify the right starting point based on visible symptoms, the vehicle’s actual condition, and your situation.</p>
       </div>
     </section>
 
@@ -111,7 +111,7 @@ const breadcrumbs = buildBreadcrumbSchema([
     <section class="areas-section">
       <div class="container">
         <h2>Areas served</h2>
-        <p class="section-copy">We receive requests from Outaouais, Ottawa, and Laurentides depending on the type of need and the situation of the vehicle.</p>
+        <p class="section-copy">We receive requests from Outaouais, Ottawa, and the Laurentides depending on the type of need and the vehicle’s situation.</p>
         <div class="card-grid areas-grid">
           {serviceAreas.map((area) => (
             <a class="info-card choice-card" href={area.href}>

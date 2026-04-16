@@ -1,19 +1,19 @@
 {
-  "metaTitle": "Contact Clinique du VR | Estimate and Gatineau Workshop",
-  "metaDescription": "Contact Clinique du VR in Gatineau for an estimate, appointment or RV inspection, maintenance and repair request in Ottawa, Outaouais, and Laurentides.",
+  "metaTitle": "Contact Clinique du VR | Estimate and workshop in Gatineau",
+  "metaDescription": "Contact Clinique du VR in Gatineau for an estimate, an appointment, or a request for inspection, maintenance, or repair in Outaouais, the Ottawa region, and the Laurentides.",
   "breadcrumbs": {
     "home": "Home",
     "current": "Contact"
   },
   "formSection": {
-    "title": "Contact Us",
-    "intro": "You can contact us for an RV inspection, maintenance request, water leak issue, roof concern, detailing service or support before buying or selling. The more specific the message, the more useful the first reply will be.",
-    "unconfiguredNote": "The form will be activated once the real Formspree ID is configured. Until then, please call us or use online booking.",
+    "title": "Contact us",
+    "intro": "You can contact us for an RV inspection, maintenance, water leak repair, a roof issue, detailing, or a question before buying or selling. The more precise your message is, the more useful our reply will be.",
+    "unconfiguredNote": "The form is not available at the moment. In the meantime, call us or book online.",
     "fields": {
-      "name": "Full Name *",
+      "name": "Full name *",
       "email": "Email *",
       "phone": "Phone",
-      "services": "Desired service",
+      "services": "Requested service",
       "serviceOptions": [
         "Inspection",
         "Maintenance",
@@ -21,12 +21,12 @@
         "Detailing",
         "Sales or rental"
       ],
-      "workType": "Type of work",
-      "workshopOption": "In shop",
-      "mobileOption": "Mobile service",
+      "workType": "Type of intervention",
+      "workshopOption": "In the workshop",
+      "mobileOption": "On the road",
       "workAddress": "Work address",
       "vehicleInfo": "RV make and year",
-      "serialNumber": "Serial number if available",
+      "serialNumber": "Serial number (if possible)",
       "attachments": "Attach files",
       "subject": "Subject *",
       "message": "Message *"
@@ -34,25 +34,25 @@
     "submitLabel": "Send"
   },
   "infoSection": {
-    "title": "Contact Information",
+    "title": "Contact information",
     "phoneTitle": "Phone",
-    "squareLabel": "Book now",
+    "squareLabel": "Book online",
     "emailTitle": "Email",
     "locationTitle": "Location",
-    "identityTitle": "Business Identity",
-    "identityBody": "<strong>Insurance:</strong> $2M garage and liability<br><strong>Since:</strong> 2013",
-    "valuesTitle": "Key Values",
+    "identityTitle": "Business identity",
+    "identityBody": "<strong>Insurance:</strong> $2M garage and liability<br><strong>Professionals since 2013</strong>",
+    "valuesTitle": "Key values",
     "valuesBody": "Speed • Transparency • Regulatory compliance • Certified professionals",
-    "ctaBody": "Request your <strong>free estimate</strong> by phone, online booking, or the contact form."
+    "ctaBody": "Request your <strong>free estimate</strong> by phone or through the form."
   },
   "seoSections": [
     {
       "heading": "RV workshop in Gatineau",
-      "body": "Clinique du VR serves Gatineau, Ottawa, Outaouais, and Laurentides for RV, trailer and caravan service requests. The contact form and online booking can both be used for quick questions as well as larger service files."
+      "body": "Clinique du VR serves Gatineau, the Ottawa region, Outaouais, and the Laurentides for service requests related to RVs, travel trailers, and caravans. The form and online booking can be used for both simple requests and more complex files."
     },
     {
       "heading": "Before you send a message",
-      "body": "If you have photos, signs of water intrusion, roof concerns, seal issues or notes about propane and electrical systems, include them in your message. That helps us direct the request faster toward inspection, maintenance or repair."
+      "body": "If you have photos, signs of water intrusion, details about the roof, seals, 12V equipment, or propane systems, mention them in your message. That helps guide the request more quickly toward an inspection, maintenance, or targeted repair."
     }
   ],
   "mapTitle": "Clinique du VR - 11 rue de Granby, Unit 18, Gatineau, QC"
