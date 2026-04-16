@@ -533,14 +533,48 @@ const navItems = isEnglish
       gap: 0.6rem;
     }
 
-    .topbar-left,
-    .topbar-right {
-      justify-content: space-between;
+    .topbar-left {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
       align-items: center;
+      gap: 0.65rem;
+      width: 100%;
     }
 
     .topbar-right {
       display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    .topbar-phone {
+      min-height: 44px;
+      justify-content: flex-start;
+      font-size: 1.05rem;
+    }
+
+    .sms-link,
+    .square-link {
+      min-height: 44px;
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .sms-link {
+      width: auto;
+      min-width: 0;
+      white-space: nowrap;
+    }
+
+    .square-link {
+      grid-column: 1 / -1;
+    }
+
+    .topbar-right a {
+      margin-left: 0;
     }
 
     .navbar {
