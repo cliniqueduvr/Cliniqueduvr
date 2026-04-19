@@ -74,6 +74,7 @@ const isEnglish = lang === 'en';
           <div class="sales-intro-copy">
             <h2>{data.intro.title}</h2>
             <p>{data.intro.body}</p>
+            <p class="seo-keyline">{isEnglish ? 'These units are presented from the Gatineau workshop with a clearer local context for buyers coming from Ottawa, Outaouais, and nearby regions.' : 'Ces unités sont présentées à partir de l’atelier de Gatineau avec un contexte local plus clair pour les acheteurs venant aussi d’Ottawa, de l’Outaouais et des environs.'}</p>
           </div>
           {data.intro.cards && data.intro.cards.length > 0 && (
             <div class="sales-intro-cards">

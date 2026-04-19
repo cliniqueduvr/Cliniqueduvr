@@ -284,6 +284,9 @@ const resolvedProofTitle = service.proofTitle ?? fallbackProofContent?.title;
 const resolvedProofIntro = service.proofIntro ?? fallbackProofContent?.intro;
 const resolvedProofStats = proofStats.length > 0 ? proofStats : fallbackProofContent?.stats ?? [];
 const resolvedProofPoints = proofPoints.length > 0 ? proofPoints : fallbackProofContent?.points ?? [];
+const localServiceFocus = isEnglish
+  ? `Clinique du VR delivers <strong>${service.navLabel}</strong> from its <strong>Gatineau workshop</strong> and supports clients from <u>Outaouais</u>, <u>Ottawa</u>, and the <u>Laurentides</u> depending on the assignment. This page is meant to clarify the right next step when the issue involves <strong>water intrusion</strong>, <strong>roof condition</strong>, <strong>seals</strong>, or an <strong>RV inspection / maintenance / repair decision</strong>.`
+  : `Clinique du VR prend en charge <strong>${service.navLabel}</strong> à partir de son <strong>atelier de Gatineau</strong> et accompagne aussi les demandes venant de <u>l’Outaouais</u>, d’<u>Ottawa</u> et des <u>Laurentides</u> selon le mandat. Cette page sert à clarifier la bonne prochaine étape quand le besoin touche une <strong>infiltration d’eau</strong>, la <strong>toiture</strong>, les <strong>joints</strong> ou un choix entre <strong>inspection, entretien et réparation de VR</strong>.`;
 ---
 
 <main>
@@ -295,10 +298,10 @@ const resolvedProofPoints = proofPoints.length > 0 ? proofPoints : fallbackProof
           (service.slug === 'inspection' || service.slug === 'entretien' || service.slug === 'maintenance' || service.slug === 'reparation' || service.slug === 'repair' || service.slug === 'esthetique' || service.slug === 'detailing' || service.slug === 'esthetique-auto-camion' || service.slug === 'auto-truck-detailing') && 'hero-title-wide',
           service.slug === 'inspection' && 'hero-title-wider'
         ]}>{service.h1}</h1>
-        <p class="opening">{service.opening}</p>
-        <p class="lead">{service.lead}</p>
-        <p class="intro">{service.intro}</p>
-        {service.heroPromise && <p class="hero-promise">{service.heroPromise}</p>}
+        <p class="opening" set:html={service.opening} />
+        <p class="lead" set:html={service.lead} />
+        <p class="intro" set:html={service.intro} />
+        {service.heroPromise && <p class="hero-promise" set:html={service.heroPromise} />}
 
         <div class="hero-badges">
           {service.highlights.map((item) => (
@@ -324,7 +327,7 @@ const resolvedProofPoints = proofPoints.length > 0 ? proofPoints : fallbackProof
         {(resolvedProofStats.length > 0 || resolvedProofPoints.length > 0) && (
           <section class="content-card alt">
             <h2>{resolvedProofTitle ?? (isEnglish ? 'Proof and concrete outcomes' : 'Preuves et résultats concrets')}</h2>
-            {resolvedProofIntro && <p class="section-copy">{resolvedProofIntro}</p>}
+            {resolvedProofIntro && <p class="section-copy" set:html={resolvedProofIntro} />}
             {resolvedProofStats.length > 0 && (
               <div class="proof-stats-grid">
                 {resolvedProofStats.map((item) => (
@@ -340,7 +343,7 @@ const resolvedProofPoints = proofPoints.length > 0 ? proofPoints : fallbackProof
                 {resolvedProofPoints.map((item) => (
                   <article class="why-card">
                     <h3>{item.title}</h3>
-                    <p>{item.text}</p>
+                    <p set:html={item.text} />
                   </article>
                 ))}
               </div>
@@ -349,11 +352,16 @@ const resolvedProofPoints = proofPoints.length > 0 ? proofPoints : fallbackProof
         )}
 
         <section class="content-card">
+          <h2>{isEnglish ? 'Local marker for this service' : 'Repère local pour ce service'}</h2>
+          <p class="section-copy seo-keyline" set:html={localServiceFocus} />
+        </section>
+
+        <section class="content-card">
           <h2>{service.includedTitle}</h2>
-          <p class="section-copy">{service.detailIntro}</p>
+          <p class="section-copy" set:html={service.detailIntro} />
           <ul>
             {service.included.map((item) => (
-              <li>{item}</li>
+              <li set:html={item} />
             ))}
           </ul>
         </section>
@@ -362,7 +370,7 @@ const resolvedProofPoints = proofPoints.length > 0 ? proofPoints : fallbackProof
           <h2>{service.situationsTitle}</h2>
           <ul>
             {service.situations.map((item) => (
-              <li>{item}</li>
+              <li set:html={item} />
             ))}
           </ul>
         </section>
@@ -377,14 +385,14 @@ const resolvedProofPoints = proofPoints.length > 0 ? proofPoints : fallbackProof
                   <a class="link-card link-card-anchor" href={item.href}>
                     <h3>{item.title}</h3>
                     {item.meta && <p class="link-card-meta">{item.meta}</p>}
-                    <p>{item.text}</p>
+                    <p set:html={item.text} />
                     <span>{isEnglish ? 'See the case' : 'Voir le cas'}</span>
                   </a>
                 ) : (
                   <article class="link-card">
                     <h3>{item.title}</h3>
                     {item.meta && <p class="link-card-meta">{item.meta}</p>}
-                    <p>{item.text}</p>
+                    <p set:html={item.text} />
                   </article>
                 )
               ))}
@@ -394,22 +402,22 @@ const resolvedProofPoints = proofPoints.length > 0 ? proofPoints : fallbackProof
 
         <section class="content-card">
           <h2>{isEnglish ? 'How we work' : 'Notre façon de travailler'}</h2>
-          <p class="section-copy">{service.processIntro}</p>
+          <p class="section-copy" set:html={service.processIntro} />
           <ol>
             {service.process.map((item) => (
-              <li>{item}</li>
+              <li set:html={item} />
             ))}
           </ol>
         </section>
 
         <section class="content-card alt">
           <h2>{service.whyChooseTitle}</h2>
-          <p class="section-copy">{service.whyChooseIntro}</p>
+          <p class="section-copy" set:html={service.whyChooseIntro} />
           <div class="why-choose-grid">
             {service.whyChoose.map((item) => (
               <article class="why-card">
                 <h3>{item.title}</h3>
-                <p>{item.text}</p>
+                <p set:html={item.text} />
               </article>
             ))}
           </div>
@@ -436,7 +444,7 @@ const resolvedProofPoints = proofPoints.length > 0 ? proofPoints : fallbackProof
             {service.faqs.map((item) => (
               <details class="faq-item">
                 <summary><h3>{item.question}</h3></summary>
-                <p>{item.answer}</p>
+                <p set:html={item.answer} />
               </details>
             ))}
           </div>

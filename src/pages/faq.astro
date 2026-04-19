@@ -70,6 +70,10 @@ const schemas = [
     <section class="interior-section">
       <div class="container interior-body-grid">
         <div class="interior-faq-list">
+          <article class="interior-card">
+            <h2>Repère local rapide</h2>
+            <p class="seo-keyline">Cette FAQ répond surtout aux recherches autour de <strong>Gatineau</strong>, de <u>l’Outaouais</u>, d’<u>Ottawa</u> et des <u>Laurentides</u> quand le besoin concerne une <strong>inspection de VR</strong>, un <strong>entretien de joints et toiture</strong> ou une <strong>réparation d’infiltration d’eau</strong>.</p>
+          </article>
           {faqItems.map((item) => (
             <details class="interior-faq-item">
               <summary><h3>{item.question}</h3></summary>
@@ -93,6 +97,15 @@ const schemas = [
               <a href="/services/entretien/"><i class="fas fa-screwdriver-wrench"></i><span>Entretien</span></a>
               <a href="/services/reparation/"><i class="fas fa-toolbox"></i><span>Réparation</span></a>
               <a href="/services/esthetique/"><i class="fas fa-spray-can-sparkles"></i><span>Esthétique VR</span></a>
+            </nav>
+          </div>
+
+          <div class="interior-side-card">
+            <h3>Zones locales</h3>
+            <nav class="interior-service-nav" aria-label="Zones locales">
+              <a href="/zones-desservies/"><i class="fas fa-map"></i><span>Gatineau et environs</span></a>
+              <a href="/zones/fuite-eau-vr-gatineau/"><i class="fas fa-droplet"></i><span>Fuite d’eau à Gatineau</span></a>
+              <a href="/zones/reparation-vr-ottawa/"><i class="fas fa-toolbox"></i><span>Réparation à Ottawa</span></a>
             </nav>
           </div>
         </aside>

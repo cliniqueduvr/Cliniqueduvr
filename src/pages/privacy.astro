@@ -37,6 +37,10 @@ const breadcrumbs = buildBreadcrumbSchema([
     <section class="interior-section">
       <div class="container interior-body-grid">
         <article class="content-main policy-grid">
+          <article class="interior-card">
+            <h2>Contexte local</h2>
+            <p class="seo-keyline">Cette page de confidentialité accompagne les demandes faites auprès de <strong>Clinique du VR à Gatineau</strong> pour des services comme l’<strong>inspection</strong>, l’<strong>entretien</strong> et la <strong>réparation de VR</strong>, y compris pour les clients venant de <u>l’Outaouais</u>, d’<u>Ottawa</u> et des <u>Laurentides</u>.</p>
+          </article>
           {privacyPage.sections.map((section) => (
           <article class="interior-card">
             <h2>{section.heading}</h2>
@@ -66,6 +70,15 @@ const breadcrumbs = buildBreadcrumbSchema([
               <a href="/services/entretien/"><i class="fas fa-screwdriver-wrench"></i><span>Entretien</span></a>
               <a href="/services/reparation/"><i class="fas fa-toolbox"></i><span>Réparation</span></a>
               <a href="/services/esthetique/"><i class="fas fa-spray-can-sparkles"></i><span>Esthétique VR</span></a>
+            </nav>
+          </div>
+
+          <div class="interior-side-card">
+            <h3>Pages locales utiles</h3>
+            <nav class="interior-service-nav" aria-label="Pages locales utiles">
+              <a href="/zones-desservies/"><i class="fas fa-map"></i><span>Zones desservies</span></a>
+              <a href="/faq/"><i class="fas fa-circle-question"></i><span>FAQ locale</span></a>
+              <a href="/contact/"><i class="fas fa-envelope"></i><span>Contact atelier</span></a>
             </nav>
           </div>
         </aside>

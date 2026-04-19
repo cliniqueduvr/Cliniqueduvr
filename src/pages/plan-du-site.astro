@@ -80,6 +80,10 @@ const breadcrumbs = buildBreadcrumbSchema([
     <section class="interior-section">
       <div class="container interior-body-grid">
         <article class="content-main sitemap-grid">
+          <article class="interior-card sitemap-card">
+            <h2>Repère local</h2>
+            <p class="seo-keyline">Le plan du site relie les pages principales à des recherches locales comme <strong>inspection de VR à Gatineau</strong>, <strong>réparation de VR à Ottawa</strong>, <strong>entretien en Outaouais</strong> et <strong>infiltration d’eau dans les Laurentides</strong>.</p>
+          </article>
           {sections.map((section) => (
           <article class="interior-card sitemap-card">
             <h2>{section.title}</h2>
@@ -107,6 +111,15 @@ const breadcrumbs = buildBreadcrumbSchema([
               <a href="/services/entretien/"><i class="fas fa-screwdriver-wrench"></i><span>Entretien</span></a>
               <a href="/services/reparation/"><i class="fas fa-toolbox"></i><span>Réparation</span></a>
               <a href="/services/esthetique/"><i class="fas fa-spray-can-sparkles"></i><span>Esthétique VR</span></a>
+            </nav>
+          </div>
+
+          <div class="interior-side-card">
+            <h3>Pages GEO</h3>
+            <nav class="interior-service-nav" aria-label="Pages GEO">
+              <a href="/zones/fuite-eau-vr-gatineau/"><i class="fas fa-droplet"></i><span>Gatineau</span></a>
+              <a href="/zones/reparation-vr-ottawa/"><i class="fas fa-toolbox"></i><span>Ottawa</span></a>
+              <a href="/zones/infiltration-eau-roulotte-laurentides/"><i class="fas fa-map"></i><span>Laurentides</span></a>
             </nav>
           </div>
         </aside>

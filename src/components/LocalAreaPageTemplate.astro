@@ -117,7 +117,10 @@ const localServiceLinks = isEnglish
           { href: '/services/entretien/', icon: 'fas fa-screwdriver-wrench', label: 'Entretien' },
           { href: '/services/reparation/', icon: 'fas fa-toolbox', label: 'Réparation' },
           { href: '/services/', icon: 'fas fa-list', label: 'Tous les services' }
-        ];
+      ];
+const localAreaFocus = isEnglish
+  ? `This page exists to answer a <strong>local search intent</strong> tied to <strong>${page.area}</strong>. The real operating base stays in <strong>Gatineau</strong>, but the useful GEO signal here is the match between <u>${page.area}</u>, the <strong>RV problem</strong>, and the right next step between <strong>inspection</strong>, <strong>maintenance</strong>, and <strong>repair</strong>.`
+  : `Cette page existe pour répondre à une <strong>recherche locale</strong> liée à <strong>${page.area}</strong>. La base réelle reste l’<strong>atelier de Gatineau</strong>, mais le bon signal GEO ici est l’alignement entre <u>${page.area}</u>, le <strong>problème de VR</strong> et la bonne prochaine étape entre <strong>inspection</strong>, <strong>entretien</strong> et <strong>réparation</strong>.`;
 ---
 
 <main>
@@ -163,6 +166,11 @@ const localServiceLinks = isEnglish
             <p class="section-copy">{section.body}</p>
           </section>
         ))}
+
+        <section class="content-card">
+          <h2>{isEnglish ? 'Local SEO marker for this area' : 'Repère SEO local pour cette zone'}</h2>
+          <p class="section-copy seo-keyline" set:html={localAreaFocus} />
+        </section>
 
         <section class="content-card">
           <h2>{isEnglish ? 'A simple local decision path' : 'Un parcours local simple'}</h2>
