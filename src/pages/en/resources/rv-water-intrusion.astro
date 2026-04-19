@@ -2,6 +2,7 @@
 import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
+import siteSettings from '../../../data/site-settings.json';
 import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema, buildWebSiteSchema } from '../../../lib/seo';
 
 const title = 'RV water intrusion | How to recognize it and what to do';
@@ -48,44 +49,126 @@ const schemas = [
 >
   <Header lang="en" />
   <main>
-    <section class="page-hero"><div class="container"><p class="eyebrow">Practical resource</p><h1>RV water intrusion: how to recognize it and what to do</h1><p class="lead">Water intrusion on an RV or trailer does not always begin with a dramatic visible failure. More often, it starts with smaller warning signs that become serious if nothing is done.</p></div></section>
-    <section class="content-section"><div class="container content-grid">
-      <article class="content-card"><h2>How to recognize water intrusion</h2><p>The most common signs are a moisture smell, a water stain, dry or cracked seals, a warped surface, a soft wall, a swelling floor, or a section of ceiling that no longer looks right. On an RV, intrusion can also hide around openings, roof areas, corners, and trim.</p></article>
-      <article class="content-card"><h2>What to check first</h2><p>Wall seals, roof seals, moldings, vulnerable openings, corners, window edges, roof vents, and the roof membrane are among the first places to look. These are often the areas that let water in before damage becomes obvious.</p></article>
-      <article class="content-card"><h2>What to do as soon as you suspect it</h2><ol><li>Keep the vehicle sheltered if possible.</li><li>Take photos of visible signs.</li><li>Do not wait for another storm or another season.</li><li>Confirm whether the next useful step is inspection, seal maintenance, or repair.</li></ol></article>
-      <article class="content-card"><h2>What to avoid</h2><p>It is better not to hide the symptom too quickly without confirming the real cause. Water intrusion that is poorly understood can continue behind surfaces and turn a still-limited issue into a much more expensive repair file.</p></article>
-      <article class="content-card"><h2>When inspection is the right first step</h2><p>Inspection is often the best option when you suspect water intrusion but do not yet know where it is coming from, when several signs point in different directions, or when you want to confirm the vehicle’s actual condition before deciding on work.</p></article>
-      <article class="content-card"><h2>When maintenance or repair takes over</h2><p>If the seals or roof mostly show early aging without major visible damage, maintenance may be enough. If water has already reached the materials and surfaces are soft or damaged, repair is usually the logical next step.</p></article>
-    </div></section>
-    <section class="faq-section"><div class="container"><h2>Frequently asked questions</h2><div class="faq-list">{faqs.map((item) => (<details class="faq-card"><summary><h3>{item.question}</h3></summary><p>{item.answer}</p></details>))}</div></div></section>
-    <section class="links-section"><div class="container links-grid">
-      <a class="link-card" href="/en/services/inspection/"><h2>Start with inspection</h2><p>See the inspection page if you want to confirm water intrusion, suspicious seals, or doubts about roof condition.</p><span>View inspection</span></a>
-      <a class="link-card" href="/en/services/maintenance/"><h2>See preventive maintenance</h2><p>If the issue still seems limited to seals or sealing work, maintenance may be the right next step.</p><span>View maintenance</span></a>
-      <a class="link-card" href="/en/contact/"><h2>Talk to us about your RV</h2><p>Send photos and a short description so we can point you toward the right next step quickly.</p><span>Contact the workshop</span></a>
-    </div></section>
+    <section class="interior-hero">
+      <div class="container interior-hero-grid">
+        <div class="interior-hero-copy">
+          <p class="interior-eyebrow">Practical resource</p>
+          <h1>RV water intrusion: how to recognize it and what to do</h1>
+          <p class="interior-lead">Water intrusion on an RV or trailer does not always begin with a dramatic visible failure. More often, it starts with smaller warning signs that become serious if nothing is done.</p>
+          <div class="hero-badges">
+            <span>Warning signs first</span>
+            <span>Inspection before guesswork</span>
+            <span>Workshop guidance from Gatineau</span>
+          </div>
+        </div>
+
+        <aside class="interior-hero-card">
+          <div class="interior-hero-icon">
+            <i class="fas fa-droplet"></i>
+          </div>
+          <h2>What this guide helps you do</h2>
+          <ul class="hero-checklist">
+            <li>Spot the most common warning signs</li>
+            <li>Avoid waiting too long before acting</li>
+            <li>Choose between inspection, maintenance, and repair</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="interior-section">
+      <div class="container interior-body-grid">
+        <article class="interior-content-main">
+          <section class="interior-card">
+            <h2>How to recognize water intrusion</h2>
+            <p class="interior-copy">The most common signs are a moisture smell, a water stain, dry or cracked seals, a warped surface, a soft wall, a swelling floor, or a section of ceiling that no longer looks right. On an RV, intrusion can also hide around openings, roof areas, corners, and trim.</p>
+          </section>
+
+          <section class="interior-card interior-card-alt">
+            <h2>What to check first</h2>
+            <p class="interior-copy">Wall seals, roof seals, moldings, vulnerable openings, corners, window edges, roof vents, and the roof membrane are among the first places to look. These are often the areas that let water in before damage becomes obvious.</p>
+          </section>
+
+          <section class="interior-card">
+            <h2>What to do as soon as you suspect it</h2>
+            <ol>
+              <li>Keep the vehicle sheltered if possible.</li>
+              <li>Take photos of visible signs.</li>
+              <li>Do not wait for another storm or another season.</li>
+              <li>Confirm whether the next useful step is inspection, seal maintenance, or repair.</li>
+            </ol>
+          </section>
+
+          <section class="interior-card interior-card-alt">
+            <h2>What to avoid</h2>
+            <p class="interior-copy">It is better not to hide the symptom too quickly without confirming the real cause. Water intrusion that is poorly understood can continue behind surfaces and turn a still-limited issue into a much more expensive repair file.</p>
+          </section>
+
+          <section class="interior-card">
+            <h2>When inspection is the right first step</h2>
+            <p class="interior-copy">Inspection is often the best option when you suspect water intrusion but do not yet know where it is coming from, when several signs point in different directions, or when you want to confirm the vehicle’s actual condition before deciding on work.</p>
+          </section>
+
+          <section class="interior-card">
+            <h2>When maintenance or repair takes over</h2>
+            <p class="interior-copy">If the seals or roof mostly show early aging without major visible damage, maintenance may be enough. If water has already reached the materials and surfaces are soft or damaged, repair is usually the logical next step.</p>
+          </section>
+
+          <section class="interior-card interior-card-alt">
+            <h2>Frequently asked questions</h2>
+            <div class="interior-faq-list">
+              {faqs.map((item) => (
+                <details class="interior-faq-item">
+                  <summary><h3>{item.question}</h3></summary>
+                  <p>{item.answer}</p>
+                </details>
+              ))}
+            </div>
+          </section>
+        </article>
+
+        <aside class="interior-side-panel">
+          <div class="interior-side-card interior-side-card-primary">
+            <h3>Need a quick opinion?</h3>
+            <p>We can point you toward inspection, maintenance, or repair depending on the level of water damage and what is already visible.</p>
+            <a class="interior-side-button" href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>
+            <a class="interior-side-link" href={siteSettings.squareBookingUrl} target="_blank" rel="noopener">Book online</a>
+          </div>
+
+          <div class="interior-side-card">
+            <h3>Related services</h3>
+            <nav class="interior-service-nav" aria-label="Related services">
+              <a href="/en/services/inspection/"><i class="fas fa-clipboard-check"></i><span>Inspection</span></a>
+              <a href="/en/services/maintenance/"><i class="fas fa-screwdriver-wrench"></i><span>Maintenance</span></a>
+              <a href="/en/services/repair/"><i class="fas fa-toolbox"></i><span>Repair</span></a>
+              <a href="/en/realisations/"><i class="fas fa-images"></i><span>Projects</span></a>
+            </nav>
+          </div>
+
+          <div class="interior-side-card">
+            <h3>Service areas</h3>
+            <nav class="interior-service-nav" aria-label="Service areas">
+              <a href="/en/service-areas/"><i class="fas fa-map-marker-alt"></i><span>Outaouais</span></a>
+              <a href="/en/service-areas/"><i class="fas fa-map-marker-alt"></i><span>Ottawa</span></a>
+              <a href="/en/service-areas/"><i class="fas fa-map-marker-alt"></i><span>Laurentides</span></a>
+            </nav>
+          </div>
+        </aside>
+      </div>
+    </section>
   </main>
   <Footer lang="en" />
 </Layout>
 
 <style>
-  .page-hero { padding: 4.5rem 0 3rem; background: linear-gradient(135deg, var(--brand-navy-dark) 0%, #1f476d 60%, #eef3f7 60%, #eef3f7 100%); color: white; }
-  .eyebrow { display: inline-flex; margin-bottom: 1rem; padding: 0.45rem 0.85rem; border-radius: 999px; background: rgba(255,255,255,0.12); color: var(--brand-gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
-  .page-hero h1 { color: white; max-width: 16ch; margin-bottom: 1rem; }
-  .lead { max-width: 64ch; color: #e7edf4; font-size: 1.05rem; }
-  .content-section, .faq-section, .links-section { padding: 4rem 0; background: #eef3f7; }
-  .faq-section, .links-section { padding-top: 0; }
-  .content-grid, .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
-  .content-card, .faq-card, .link-card { background: white; border-radius: 18px; padding: 1.5rem; box-shadow: 0 12px 26px rgba(20, 36, 55, 0.08); }
-  .content-card p, .faq-card p, .link-card p { margin-top: 0.8rem; color: var(--brand-muted); }
-  .content-card ol { margin: 0.9rem 0 0; padding-left: 1.2rem; color: var(--brand-muted); }
-  .content-card li + li { margin-top: 0.45rem; }
-  .faq-list { display: grid; gap: 1rem; }
-  .faq-card summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-  .faq-card summary::-webkit-details-marker { display: none; }
-  .faq-card summary::after { content: '+'; flex: 0 0 auto; font-size: 1.4rem; font-weight: 700; line-height: 1; color: var(--brand-navy); }
-  .faq-card[open] summary::after { content: '-'; }
-  .faq-card h3 { margin: 0; }
-  .link-card { text-decoration: none; display: grid; grid-template-rows: auto 1fr auto; gap: 0.7rem; }
-  .link-card span { font-weight: 700; color: var(--brand-navy); }
-  @media (max-width: 768px) { .page-hero { background: linear-gradient(180deg, var(--brand-navy-dark) 0%, #1f476d 100%); padding: 3.8rem 0 2.8rem; } .content-section, .faq-section, .links-section { padding: 3rem 0; } .faq-section, .links-section { padding-top: 0; } }
+  .interior-hero-copy h1 { max-width: 16ch; }
+  .hero-badges { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1.5rem; }
+  .hero-badges span { display: inline-flex; align-items: center; min-height: 44px; padding: 0.75rem 1rem; border-radius: 14px; background: var(--brand-gold); color: var(--brand-navy-dark); font-weight: 700; box-shadow: 0 10px 18px rgba(14, 31, 49, 0.14); }
+  .hero-checklist { display: grid; gap: 0.65rem; padding-left: 1.2rem; color: var(--brand-muted); }
+  .interior-card ol { display: grid; gap: 0.85rem; padding-left: 1.2rem; color: var(--brand-ink); }
+  .interior-card li::marker, .hero-checklist li::marker { color: var(--brand-green); font-weight: 700; }
+  @media (max-width: 768px) {
+    .hero-badges { gap: 0.55rem; }
+    .hero-badges span { min-height: 38px; padding: 0.55rem 0.75rem; border-radius: 12px; font-size: 0.88rem; }
+  }
 </style>

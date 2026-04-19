@@ -107,6 +107,183 @@ const isWorkshopOnlyDetailing = service.slug === 'esthetique-auto-camion' || ser
 const proofStats = service.proofStats ?? [];
 const proofPoints = service.proofPoints ?? [];
 const caseStudies = service.caseStudies ?? [];
+const fallbackProofContent = isEnglish
+  ? ({
+      inspection: {
+        title: 'Why this inspection is often the best first move',
+        intro: 'When the source of a leak is still unclear, the most expensive mistake is usually waiting or booking the wrong type of work first.',
+        stats: [
+          { value: '$49.99', label: 'Workshop inspection' },
+          { value: '$149.99', label: 'Mobile inspection within 40 km' },
+          { value: 'Moisture meter', label: 'Included to support visual findings' }
+        ],
+        points: [
+          { title: 'Quick to trigger', text: 'It gives you a useful answer fast when the issue still looks like a doubt rather than a confirmed repair file.' },
+          { title: 'Cost-oriented', text: 'Catching water early can keep a tired seal from turning into walls, flooring, or interior rebuild work.' },
+          { title: 'Clear next step', text: 'It helps separate inspection, maintenance, and repair instead of blending them together.' }
+        ]
+      },
+      maintenance: {
+        title: 'What good maintenance protects',
+        intro: 'Maintenance is not cosmetic spending. It is what keeps water out and avoids the roof, wall, and flooring files that start with tired sealing points.',
+        stats: [
+          { value: '2x / year', label: 'Recommended rhythm before and after the season' },
+          { value: 'Wall + roof', label: 'Seals and exposed areas covered' },
+          { value: 'Workshop or mobile', label: 'Depending on the assignment' }
+        ],
+        points: [
+          { title: 'Prevention before repair', text: 'Working on seals at the right time usually costs far less than opening a real water-damage file later.' },
+          { title: 'Roof-first logic', text: 'Roof surfaces, openings, and membranes are among the first areas where prevention pays off.' },
+          { title: 'Better seasonal timing', text: 'Maintenance reduces last-minute surprises before travel or after storage.' }
+        ]
+      },
+      repair: {
+        title: 'What matters in a real water-damage repair',
+        intro: 'A real repair is more than making a surface look better. It starts with the source, treats the affected materials, and restores the vehicle in a credible way.',
+        stats: [
+          { value: 'Roof to floor', label: 'Work on the areas affected by water' },
+          { value: 'Insurance or private', label: 'Approach adjusted to your file' },
+          { value: 'Source first', label: 'Diagnosis before rebuild work' }
+        ],
+        points: [
+          { title: 'Cause before cosmetics', text: 'The goal is to avoid closing a damaged area without really addressing where the water came from.' },
+          { title: 'Materials treated as a whole', text: 'Roof, walls, flooring, coverings, and interior sections often have to be understood together.' },
+          { title: 'Clearer repair logic', text: 'You get a more defensible path for private work or for an insurance-backed file.' }
+        ]
+      },
+      detailing: {
+        title: 'What a real RV detailing service should improve',
+        intro: 'This page is not just about washing a large vehicle. It is about presentation, gloss, and a finish that actually looks more sale-ready and better cared for.',
+        stats: [
+          { value: 'Interior + exterior', label: 'Cleaning built around RV size and surfaces' },
+          { value: 'Polish + wax', label: 'Visual improvement and finish enhancement' },
+          { value: 'Workshop or mobile', label: 'Depending on access and assignment' }
+        ],
+        points: [
+          { title: 'Built for larger formats', text: 'RVs and motorhomes need a different approach than small-vehicle detailing.' },
+          { title: 'Useful before sale or season', text: 'This service is strongest when the goal is a cleaner, brighter, more credible presentation.' },
+          { title: 'Clearer finish quality', text: 'Polishing and waxing help move the vehicle beyond a simple rinse or surface clean.' }
+        ]
+      },
+      'auto-truck-detailing': {
+        title: 'Why this separate workshop-only detailing page matters',
+        intro: 'Keeping auto and truck detailing separate from RV detailing makes the offer easier to understand and keeps the workshop standard more consistent.',
+        stats: [
+          { value: 'Workshop only', label: 'Controlled execution conditions' },
+          { value: 'Auto + truck', label: 'Dedicated offer, not mixed with RV work' },
+          { value: 'Polish + finish', label: 'Focused on visible presentation' }
+        ],
+        points: [
+          { title: 'Cleaner scope', text: 'Clients immediately know this page is dedicated to cars and trucks only.' },
+          { title: 'More consistent finish', text: 'Workshop conditions help control the detailing result more tightly.' },
+          { title: 'Better page clarity', text: 'Separating the offers avoids confusion between vehicle types and service expectations.' }
+        ]
+      },
+      'buying-selling': {
+        title: 'What makes this service valuable before a transaction',
+        intro: 'Buying and selling decisions are easier when the vehicle condition is clearer, the priorities are identified, and the presentation is more credible.',
+        stats: [
+          { value: 'Buyer or seller', label: 'Support adapted to the transaction side' },
+          { value: 'Inspection + prep', label: 'Useful before listing or before purchase' },
+          { value: 'Priority fixes', label: 'Focus on the most useful corrections first' }
+        ],
+        points: [
+          { title: 'Better price logic', text: 'A more clearly documented vehicle is easier to price, defend, or negotiate.' },
+          { title: 'Less guesswork', text: 'It helps separate cosmetic work from real structural or water-related concerns.' },
+          { title: 'Clearer next step', text: 'You can decide more rationally whether to repair, buy, sell, or postpone.' }
+        ]
+      }
+    } as const)[service.slug]
+  : ({
+      inspection: {
+        title: 'Pourquoi cette inspection est souvent la meilleure première étape',
+        intro: "Quand la source d'une fuite n'est pas claire, l'erreur la plus coûteuse est souvent d'attendre ou de réserver le mauvais type de travail en premier.",
+        stats: [
+          { value: '49,99 $', label: 'Inspection en atelier' },
+          { value: '149,99 $', label: 'Inspection mobile dans 40 km' },
+          { value: 'Humidimètre', label: 'Inclus pour appuyer le constat visuel' }
+        ],
+        points: [
+          { title: 'Rapide à déclencher', text: "Elle donne une réponse utile rapidement quand le problème ressemble encore à un doute plutôt qu'à un vrai dossier de réparation." },
+          { title: 'Orientée coût évité', text: "Repérer l'eau tôt évite qu'un joint fatigué devienne un mur, un plancher ou une reprise intérieure." },
+          { title: 'Bonne prochaine étape', text: "Elle aide à séparer inspection, entretien et réparation au lieu de tout mélanger." }
+        ]
+      },
+      entretien: {
+        title: 'Ce que protège un bon entretien',
+        intro: "L'entretien n'est pas une dépense cosmétique. C'est ce qui garde l'eau à l'extérieur et ce qui évite les dossiers de toiture, de murs et de plancher.",
+        stats: [
+          { value: '2x / an', label: 'Rythme recommandé avant et après saison' },
+          { value: 'Mur + toit', label: 'Joints et zones exposées traités' },
+          { value: 'Atelier ou mobile', label: "Selon le type d'intervention" }
+        ],
+        points: [
+          { title: 'Prévenir avant réparer', text: "Reprendre les joints au bon moment coûte souvent bien moins qu'un vrai dossier de dommages d'eau." },
+          { title: 'Logique toit en premier', text: 'Toiture, ouvertures et membrane font partie des zones où la prévention paie le plus.' },
+          { title: 'Meilleur rythme de saison', text: "L'entretien réduit les mauvaises surprises juste avant les voyages ou après l'entreposage." }
+        ]
+      },
+      reparation: {
+        title: "Ce qui compte dans une vraie réparation d'infiltration",
+        intro: "Une vraie réparation ne consiste pas seulement à améliorer l'apparence d'une surface. Elle part de la source, traite les matériaux touchés et remet le véhicule dans un état crédible.",
+        stats: [
+          { value: 'Toit à plancher', label: "Intervention sur les zones touchées par l'eau" },
+          { value: 'Assurance ou privé', label: 'Approche adaptée à votre dossier' },
+          { value: 'Source en premier', label: 'Diagnostic avant reconstruction' }
+        ],
+        points: [
+          { title: 'Cause avant cosmétique', text: "Le but est d'éviter de refermer une zone touchée sans traiter la vraie origine de l'eau." },
+          { title: 'Matériaux vus ensemble', text: 'Toit, murs, plancher, revêtements et sections intérieures doivent souvent être compris ensemble.' },
+          { title: 'Démarche plus claire', text: "Vous obtenez une logique de réparation plus défendable, en privé comme en assurance." }
+        ]
+      },
+      esthetique: {
+        title: "Ce qu'un vrai service d'esthétique VR doit améliorer",
+        intro: "Cette page ne sert pas à promettre un simple lavage. Elle sert à montrer une amélioration visuelle nette, une meilleure brillance et une présentation plus crédible du véhicule.",
+        stats: [
+          { value: 'Intérieur + extérieur', label: 'Nettoyage pensé pour les grands formats' },
+          { value: 'Polissage + cirage', label: 'Mise en valeur et finition' },
+          { value: 'Atelier ou route', label: 'Selon le véhicule et le mandat' }
+        ],
+        points: [
+          { title: 'Pensé pour les grands formats', text: 'Un VR ou un motorisé demande une approche différente de celle d’un petit véhicule.' },
+          { title: 'Utile avant vente ou saison', text: 'Le service prend sa valeur quand le but est une présentation plus propre, brillante et crédible.' },
+          { title: 'Finition plus nette', text: 'Polissage et cirage permettent d’aller plus loin qu’un simple nettoyage de surface.' }
+        ]
+      },
+      'esthetique-auto-camion': {
+        title: "Pourquoi cette page atelier seulement est utile",
+        intro: "Séparer l'offre auto et camion de l'offre VR rend le service plus clair et permet de garder un standard d'exécution plus constant en atelier.",
+        stats: [
+          { value: 'Atelier seulement', label: "Conditions d'exécution contrôlées" },
+          { value: 'Auto + camion', label: 'Offre dédiée, séparée des VR' },
+          { value: 'Polissage + finition', label: 'Accent sur la présentation visible' }
+        ],
+        points: [
+          { title: 'Portée plus claire', text: 'Le client comprend immédiatement que cette page est dédiée aux autos et camions seulement.' },
+          { title: 'Finition plus constante', text: "Les conditions d'atelier aident à mieux contrôler le résultat final." },
+          { title: 'Offre mieux cadrée', text: "La séparation évite les confusions entre types de véhicules et attentes de service." }
+        ]
+      },
+      'vente-achat': {
+        title: 'Ce qui donne de la valeur à ce service avant transaction',
+        intro: "Acheter ou vendre devient plus simple quand l'état du véhicule est plus clair, que les priorités sont identifiées et que la présentation inspire davantage confiance.",
+        stats: [
+          { value: 'Acheteur ou vendeur', label: 'Accompagnement selon le côté de la transaction' },
+          { value: 'Inspection + préparation', label: 'Utile avant achat ou mise en vente' },
+          { value: 'Correctifs prioritaires', label: 'Focus sur les bonnes actions en premier' }
+        ],
+        points: [
+          { title: 'Prix plus défendable', text: 'Un véhicule mieux documenté est plus facile à afficher, expliquer ou négocier.' },
+          { title: 'Moins de zones grises', text: 'Le service aide à distinguer le cosmétique des vrais enjeux structurels ou liés à l’eau.' },
+          { title: 'Décision plus claire', text: 'Vous pouvez décider plus rationnellement entre réparer, acheter, vendre ou attendre.' }
+        ]
+      }
+    } as const)[service.slug];
+const resolvedProofTitle = service.proofTitle ?? fallbackProofContent?.title;
+const resolvedProofIntro = service.proofIntro ?? fallbackProofContent?.intro;
+const resolvedProofStats = proofStats.length > 0 ? proofStats : fallbackProofContent?.stats ?? [];
+const resolvedProofPoints = proofPoints.length > 0 ? proofPoints : fallbackProofContent?.points ?? [];
 ---
 
 <main>
@@ -144,13 +321,13 @@ const caseStudies = service.caseStudies ?? [];
   <section class="service-body">
       <div class="container body-grid">
       <article class="service-main">
-        {(proofStats.length > 0 || proofPoints.length > 0) && (
+        {(resolvedProofStats.length > 0 || resolvedProofPoints.length > 0) && (
           <section class="content-card alt">
-            <h2>{service.proofTitle ?? (isEnglish ? 'Proof and concrete outcomes' : 'Preuves et résultats concrets')}</h2>
-            {service.proofIntro && <p class="section-copy">{service.proofIntro}</p>}
-            {proofStats.length > 0 && (
+            <h2>{resolvedProofTitle ?? (isEnglish ? 'Proof and concrete outcomes' : 'Preuves et résultats concrets')}</h2>
+            {resolvedProofIntro && <p class="section-copy">{resolvedProofIntro}</p>}
+            {resolvedProofStats.length > 0 && (
               <div class="proof-stats-grid">
-                {proofStats.map((item) => (
+                {resolvedProofStats.map((item) => (
                   <article class="proof-stat-card">
                     <strong>{item.value}</strong>
                     <span>{item.label}</span>
@@ -158,9 +335,9 @@ const caseStudies = service.caseStudies ?? [];
                 ))}
               </div>
             )}
-            {proofPoints.length > 0 && (
+            {resolvedProofPoints.length > 0 && (
               <div class="why-choose-grid">
-                {proofPoints.map((item) => (
+                {resolvedProofPoints.map((item) => (
                   <article class="why-card">
                     <h3>{item.title}</h3>
                     <p>{item.text}</p>

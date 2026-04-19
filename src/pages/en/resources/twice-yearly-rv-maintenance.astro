@@ -2,6 +2,7 @@
 import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
+import siteSettings from '../../../data/site-settings.json';
 import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema, buildWebSiteSchema } from '../../../lib/seo';
 
 const title = 'Twice-yearly RV maintenance | What to do in spring and fall';
@@ -48,44 +49,131 @@ const schemas = [
 >
   <Header lang="en" />
   <main>
-    <section class="page-hero"><div class="container"><p class="eyebrow">Practical resource</p><h1>Twice-yearly RV maintenance: what to do</h1><p class="lead">One maintenance check in spring and another in fall often provides the best balance between prevention, peace of mind, and protection against water intrusion.</p></div></section>
-    <section class="content-section"><div class="container content-grid">
-      <article class="content-card"><h2>Why two maintenance checks a year</h2><p>An RV goes through temperature swings, UV exposure, rain, freezing weather, and road movement. Two checkpoints each year make it easier to spot tired seals, vulnerable roof areas, and early moisture signs before the issue gets worse.</p></article>
-      <article class="content-card"><h2>What to review in spring</h2><ul><li>Wall and roof seals.</li><li>The membrane and sealing points.</li><li>Water marks, moisture smells, or swelling.</li><li>Vulnerable openings such as windows, vents, and joints.</li></ul></article>
-      <article class="content-card"><h2>What to prepare in fall</h2><ul><li>Correct dry, cracked, or lifting seals.</li><li>Review roof condition before storage.</li><li>Confirm that no area has started taking on water.</li><li>Handle the useful corrections before harsher weather arrives.</li></ul></article>
-      <article class="content-card"><h2>Common mistakes</h2><p>The most common mistake is waiting until there is major visible damage before acting. Another is looking only at appearance without confirming the actual condition of sealing zones, roof areas, and openings.</p></article>
-      <article class="content-card"><h2>When maintenance makes more sense than inspection</h2><p>When seals and roof areas mostly show normal or expected wear, maintenance is often the right next step. If you are unsure of the source or already see moisture signs, inspection may be the better place to start.</p></article>
-      <article class="content-card"><h2>A simple yearly rhythm</h2><p>The easiest rhythm to remember is usually one review in spring before the season and another in fall before harsher months. That helps keep a clear picture of the RV’s condition throughout the year.</p></article>
-    </div></section>
-    <section class="faq-section"><div class="container"><h2>Frequently asked questions</h2><div class="faq-list">{faqs.map((item) => (<details class="faq-card"><summary><h3>{item.question}</h3></summary><p>{item.answer}</p></details>))}</div></div></section>
-    <section class="links-section"><div class="container links-grid">
-      <a class="link-card" href="/en/services/maintenance/"><h2>See the maintenance service</h2><p>Visit the maintenance page if your priority is preventing water intrusion through seals, roof areas, or the membrane.</p><span>View maintenance</span></a>
-      <a class="link-card" href="/en/services/inspection/"><h2>Start with inspection</h2><p>If you are not sure about the RV’s actual condition, inspection can help you avoid moving in the wrong direction.</p><span>View inspection</span></a>
-      <a class="link-card" href="/en/contact/"><h2>Plan the next step</h2><p>Send photos and tell us whether you are in spring, fall, or already dealing with doubts about watertightness.</p><span>Contact the workshop</span></a>
-    </div></section>
+    <section class="interior-hero">
+      <div class="container interior-hero-grid">
+        <div class="interior-hero-copy">
+          <p class="interior-eyebrow">Practical resource</p>
+          <h1>Recommended RV maintenance twice a year</h1>
+          <p class="interior-lead">One maintenance check in spring and another in fall often provides the best balance between prevention, peace of mind, and protection against water intrusion.</p>
+          <div class="hero-badges">
+            <span>Spring + fall rhythm</span>
+            <span>Seals, roof and membrane</span>
+            <span>Prevention before repair</span>
+          </div>
+        </div>
+
+        <aside class="interior-hero-card">
+          <div class="interior-hero-icon">
+            <i class="fas fa-calendar-check"></i>
+          </div>
+          <h2>What this guide helps you plan</h2>
+          <ul class="hero-checklist">
+            <li>What to review before the season</li>
+            <li>What to secure before storage</li>
+            <li>When maintenance should become inspection instead</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="interior-section">
+      <div class="container interior-body-grid">
+        <article class="interior-content-main">
+          <section class="interior-card">
+            <h2>Why two maintenance checks a year</h2>
+            <p class="interior-copy">An RV goes through temperature swings, UV exposure, rain, freezing weather, and road movement. Two checkpoints each year make it easier to spot tired seals, vulnerable roof areas, and early moisture signs before the issue gets worse.</p>
+          </section>
+
+          <section class="interior-card interior-card-alt">
+            <h2>What to review in spring</h2>
+            <ul>
+              <li>Wall and roof seals.</li>
+              <li>The membrane and sealing points.</li>
+              <li>Water marks, moisture smells, or swelling.</li>
+              <li>Vulnerable openings such as windows, vents, and joints.</li>
+            </ul>
+          </section>
+
+          <section class="interior-card">
+            <h2>What to prepare in fall</h2>
+            <ul>
+              <li>Correct dry, cracked, or lifting seals.</li>
+              <li>Review roof condition before storage.</li>
+              <li>Confirm that no area has started taking on water.</li>
+              <li>Handle the useful corrections before harsher weather arrives.</li>
+            </ul>
+          </section>
+
+          <section class="interior-card interior-card-alt">
+            <h2>Common mistakes</h2>
+            <p class="interior-copy">The most common mistake is waiting until there is major visible damage before acting. Another is looking only at appearance without confirming the actual condition of sealing zones, roof areas, and openings.</p>
+          </section>
+
+          <section class="interior-card">
+            <h2>When maintenance makes more sense than inspection</h2>
+            <p class="interior-copy">When seals and roof areas mostly show normal or expected wear, maintenance is often the right next step. If you are unsure of the source or already see moisture signs, inspection may be the better place to start.</p>
+          </section>
+
+          <section class="interior-card">
+            <h2>A simple yearly rhythm</h2>
+            <p class="interior-copy">The easiest rhythm to remember is usually one review in spring before the season and another in fall before harsher months. That helps keep a clear picture of the RV’s condition throughout the year.</p>
+          </section>
+
+          <section class="interior-card interior-card-alt">
+            <h2>Frequently asked questions</h2>
+            <div class="interior-faq-list">
+              {faqs.map((item) => (
+                <details class="interior-faq-item">
+                  <summary><h3>{item.question}</h3></summary>
+                  <p>{item.answer}</p>
+                </details>
+              ))}
+            </div>
+          </section>
+        </article>
+
+        <aside class="interior-side-panel">
+          <div class="interior-side-card interior-side-card-primary">
+            <h3>Need a quick opinion?</h3>
+            <p>We can tell you whether your situation still looks like preventive maintenance or whether it already needs inspection or repair.</p>
+            <a class="interior-side-button" href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>
+            <a class="interior-side-link" href={siteSettings.squareBookingUrl} target="_blank" rel="noopener">Book online</a>
+          </div>
+
+          <div class="interior-side-card">
+            <h3>Related services</h3>
+            <nav class="interior-service-nav" aria-label="Related services">
+              <a href="/en/services/maintenance/"><i class="fas fa-screwdriver-wrench"></i><span>Maintenance</span></a>
+              <a href="/en/services/inspection/"><i class="fas fa-clipboard-check"></i><span>Inspection</span></a>
+              <a href="/en/services/repair/"><i class="fas fa-toolbox"></i><span>Repair</span></a>
+              <a href="/en/realisations/"><i class="fas fa-images"></i><span>Projects</span></a>
+            </nav>
+          </div>
+
+          <div class="interior-side-card">
+            <h3>Service areas</h3>
+            <nav class="interior-service-nav" aria-label="Service areas">
+              <a href="/en/service-areas/"><i class="fas fa-map-marker-alt"></i><span>Outaouais</span></a>
+              <a href="/en/service-areas/"><i class="fas fa-map-marker-alt"></i><span>Ottawa</span></a>
+              <a href="/en/service-areas/"><i class="fas fa-map-marker-alt"></i><span>Laurentides</span></a>
+            </nav>
+          </div>
+        </aside>
+      </div>
+    </section>
   </main>
   <Footer lang="en" />
 </Layout>
 
 <style>
-  .page-hero { padding: 4.5rem 0 3rem; background: linear-gradient(135deg, var(--brand-navy-dark) 0%, #1f476d 60%, #eef3f7 60%, #eef3f7 100%); color: white; }
-  .eyebrow { display: inline-flex; margin-bottom: 1rem; padding: 0.45rem 0.85rem; border-radius: 999px; background: rgba(255,255,255,0.12); color: var(--brand-gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
-  .page-hero h1 { color: white; max-width: 16ch; margin-bottom: 1rem; }
-  .lead { max-width: 64ch; color: #e7edf4; font-size: 1.05rem; }
-  .content-section, .faq-section, .links-section { padding: 4rem 0; background: #eef3f7; }
-  .faq-section, .links-section { padding-top: 0; }
-  .content-grid, .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
-  .content-card, .faq-card, .link-card { background: white; border-radius: 18px; padding: 1.5rem; box-shadow: 0 12px 26px rgba(20, 36, 55, 0.08); }
-  .content-card p, .faq-card p, .link-card p { margin-top: 0.8rem; color: var(--brand-muted); }
-  .content-card ul { margin: 0.9rem 0 0; padding-left: 1.2rem; color: var(--brand-muted); }
-  .content-card li + li { margin-top: 0.45rem; }
-  .faq-list { display: grid; gap: 1rem; }
-  .faq-card summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-  .faq-card summary::-webkit-details-marker { display: none; }
-  .faq-card summary::after { content: '+'; flex: 0 0 auto; font-size: 1.4rem; font-weight: 700; line-height: 1; color: var(--brand-navy); }
-  .faq-card[open] summary::after { content: '-'; }
-  .faq-card h3 { margin: 0; }
-  .link-card { text-decoration: none; display: grid; grid-template-rows: auto 1fr auto; gap: 0.7rem; }
-  .link-card span { font-weight: 700; color: var(--brand-navy); }
-  @media (max-width: 768px) { .page-hero { background: linear-gradient(180deg, var(--brand-navy-dark) 0%, #1f476d 100%); padding: 3.8rem 0 2.8rem; } .content-section, .faq-section, .links-section { padding: 3rem 0; } .faq-section, .links-section { padding-top: 0; } }
+  .interior-hero-copy h1 { max-width: 16ch; }
+  .hero-badges { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1.5rem; }
+  .hero-badges span { display: inline-flex; align-items: center; min-height: 44px; padding: 0.75rem 1rem; border-radius: 14px; background: var(--brand-gold); color: var(--brand-navy-dark); font-weight: 700; box-shadow: 0 10px 18px rgba(14, 31, 49, 0.14); }
+  .hero-checklist { display: grid; gap: 0.65rem; padding-left: 1.2rem; color: var(--brand-muted); }
+  .interior-card ul { display: grid; gap: 0.85rem; padding-left: 1.2rem; color: var(--brand-ink); }
+  .interior-card li::marker, .hero-checklist li::marker { color: var(--brand-green); font-weight: 700; }
+  @media (max-width: 768px) {
+    .hero-badges { gap: 0.55rem; }
+    .hero-badges span { min-height: 38px; padding: 0.55rem 0.75rem; border-radius: 12px; font-size: 0.88rem; }
+  }
 </style>
