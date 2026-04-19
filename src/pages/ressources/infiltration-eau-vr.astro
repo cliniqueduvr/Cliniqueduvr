@@ -68,75 +68,77 @@ const schemas = [
     </section>
 
     <section class="content-section">
-      <div class="container content-grid">
-        <article class="content-card">
-          <h2>Comment reconnaître une infiltration d’eau</h2>
-          <p>Les signes les plus fréquents sont une odeur d’humidité, une tache d’eau, des joints secs ou fendillés, une surface qui gondole, un mur mou, un plancher qui gonfle ou une zone du plafond qui semble avoir travaillé. Sur un VR, une infiltration peut aussi se cacher autour des ouvertures, de la toiture, des coins et des raccords.</p>
+      <div class="container body-grid">
+        <article class="content-main">
+          <div class="content-grid">
+            <article class="content-card">
+              <h2>Comment reconnaître une infiltration d’eau</h2>
+              <p>Les signes les plus fréquents sont une odeur d’humidité, une tache d’eau, des joints secs ou fendillés, une surface qui gondole, un mur mou, un plancher qui gonfle ou une zone du plafond qui semble avoir travaillé. Sur un VR, une infiltration peut aussi se cacher autour des ouvertures, de la toiture, des coins et des raccords.</p>
+            </article>
+
+            <article class="content-card">
+              <h2>Les endroits à vérifier en priorité</h2>
+              <p>Les joints de mur, les joints de toit, les moulures, les ouvertures sensibles, les coins, les contours de fenêtres, les ventilateurs de toit et la membrane sont parmi les premiers endroits à regarder. Ce sont souvent ces zones qui laissent entrer l’eau avant que le dommage soit évident.</p>
+            </article>
+
+            <article class="content-card">
+              <h2>Quoi faire dès les premiers doutes</h2>
+              <ol>
+                <li>Mettre le véhicule à l’abri si possible.</li>
+                <li>Prendre des photos des signes visibles.</li>
+                <li>Éviter d’attendre une autre pluie ou une autre saison.</li>
+                <li>Faire confirmer si la prochaine étape utile est une inspection, un entretien de joints ou une réparation.</li>
+              </ol>
+            </article>
+
+            <article class="content-card">
+              <h2>Ce qu’il faut éviter</h2>
+              <p>Il vaut mieux éviter de masquer trop vite le symptôme sans confirmer la cause. Une infiltration d’eau mal comprise peut continuer derrière les surfaces et transformer un problème encore limité en dossier beaucoup plus coûteux.</p>
+            </article>
+
+            <article class="content-card">
+              <h2>Quand l’inspection est la bonne première étape</h2>
+              <p>L’inspection est souvent la meilleure option quand vous soupçonnez une infiltration sans savoir exactement d’où elle vient, quand vous voyez plusieurs indices contradictoires, ou quand vous voulez valider l’état réel du VR avant de décider des travaux.</p>
+            </article>
+
+            <article class="content-card">
+              <h2>Quand l’entretien ou la réparation prend le relais</h2>
+              <p>Si les joints ou la toiture montrent surtout un vieillissement précoce sans gros dommage visible, l’entretien peut suffire. Si l’eau a déjà atteint les matériaux, que des surfaces sont molles ou que les finis sont touchés, la réparation devient généralement la suite logique.</p>
+            </article>
+          </div>
+
+          <section class="faq-section">
+            <h2>Questions fréquentes</h2>
+            <div class="faq-list">
+              {faqs.map((item) => (
+                <details class="faq-card">
+                  <summary><h3>{item.question}</h3></summary>
+                  <p>{item.answer}</p>
+                </details>
+              ))}
+            </div>
+          </section>
         </article>
 
-        <article class="content-card">
-          <h2>Les endroits à vérifier en priorité</h2>
-          <p>Les joints de mur, les joints de toit, les moulures, les ouvertures sensibles, les coins, les contours de fenêtres, les ventilateurs de toit et la membrane sont parmi les premiers endroits à regarder. Ce sont souvent ces zones qui laissent entrer l’eau avant que le dommage soit évident.</p>
-        </article>
-
-        <article class="content-card">
-          <h2>Quoi faire dès les premiers doutes</h2>
-          <ol>
-            <li>Mettre le véhicule à l’abri si possible.</li>
-            <li>Prendre des photos des signes visibles.</li>
-            <li>Éviter d’attendre une autre pluie ou une autre saison.</li>
-            <li>Faire confirmer si la prochaine étape utile est une inspection, un entretien de joints ou une réparation.</li>
-          </ol>
-        </article>
-
-        <article class="content-card">
-          <h2>Ce qu’il faut éviter</h2>
-          <p>Il vaut mieux éviter de masquer trop vite le symptôme sans confirmer la cause. Une infiltration d’eau mal comprise peut continuer derrière les surfaces et transformer un problème encore limité en dossier beaucoup plus coûteux.</p>
-        </article>
-
-        <article class="content-card">
-          <h2>Quand l’inspection est la bonne première étape</h2>
-          <p>L’inspection est souvent la meilleure option quand vous soupçonnez une infiltration sans savoir exactement d’où elle vient, quand vous voyez plusieurs indices contradictoires, ou quand vous voulez valider l’état réel du VR avant de décider des travaux.</p>
-        </article>
-
-        <article class="content-card">
-          <h2>Quand l’entretien ou la réparation prend le relais</h2>
-          <p>Si les joints ou la toiture montrent surtout un vieillissement précoce sans gros dommage visible, l’entretien peut suffire. Si l’eau a déjà atteint les matériaux, que des surfaces sont molles ou que les finis sont touchés, la réparation devient généralement la suite logique.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="faq-section">
-      <div class="container">
-        <h2>Questions fréquentes</h2>
-        <div class="faq-list">
-          {faqs.map((item) => (
-            <details class="faq-card">
-              <summary><h3>{item.question}</h3></summary>
-              <p>{item.answer}</p>
-            </details>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <section class="links-section">
-      <div class="container links-grid">
-        <a class="link-card" href="/services/inspection/">
-          <h2>Commencer par l’inspection</h2>
-          <p>Voyez la page d’inspection si vous voulez confirmer une infiltration d’eau, des joints suspects ou un doute sur la toiture.</p>
-          <span>Voir l’inspection</span>
-        </a>
-        <a class="link-card" href="/services/entretien/">
-          <h2>Voir l’entretien préventif</h2>
-          <p>Si le problème semble encore limité aux joints ou au scellement, l’entretien peut être la bonne suite.</p>
-          <span>Voir l’entretien</span>
-        </a>
-        <a class="link-card" href="/contact/">
-          <h2>Parler de votre VR</h2>
-          <p>Envoyez des photos et une courte description pour être orienté rapidement vers la bonne prochaine étape.</p>
-          <span>Contacter l’atelier</span>
-        </a>
+        <aside class="side-panel">
+          <div class="side-stack">
+            <a class="link-card" href="/services/inspection/">
+              <h2>Commencer par l’inspection</h2>
+              <p>Voyez la page d’inspection si vous voulez confirmer une infiltration d’eau, des joints suspects ou un doute sur la toiture.</p>
+              <span>Voir l’inspection</span>
+            </a>
+            <a class="link-card" href="/services/entretien/">
+              <h2>Voir l’entretien préventif</h2>
+              <p>Si le problème semble encore limité aux joints ou au scellement, l’entretien peut être la bonne suite.</p>
+              <span>Voir l’entretien</span>
+            </a>
+            <a class="link-card" href="/contact/">
+              <h2>Parler de votre VR</h2>
+              <p>Envoyez des photos et une courte description pour être orienté rapidement vers la bonne prochaine étape.</p>
+              <span>Contacter l’atelier</span>
+            </a>
+          </div>
+        </aside>
       </div>
     </section>
   </main>
@@ -211,25 +213,29 @@ const schemas = [
     margin-top: 0.55rem;
   }
 
-  .content-section,
-  .faq-section,
-  .links-section {
+  .content-section {
     padding: 4rem 0;
     background: #eef3f7;
   }
 
-  .faq-section,
-  .links-section {
-    padding-top: 0;
+  .body-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.8fr);
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .content-main {
+    display: grid;
+    gap: 1.5rem;
   }
 
   .content-grid,
-  .links-grid,
-  .faq-list {
+  .faq-list,
+  .side-stack {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-    max-width: 860px;
   }
 
   .content-card,
@@ -278,6 +284,11 @@ const schemas = [
     margin: 0;
   }
 
+  .faq-section {
+    display: grid;
+    gap: 1rem;
+  }
+
   .content-card ol {
     margin: 0.9rem 0 0;
     padding-left: 1.2rem;
@@ -292,6 +303,11 @@ const schemas = [
     text-decoration: none;
     display: grid;
     gap: 0.7rem;
+  }
+
+  .side-panel {
+    position: sticky;
+    top: 7rem;
   }
 
   .link-card span {
@@ -309,15 +325,16 @@ const schemas = [
       grid-template-columns: 1fr;
     }
 
-    .content-section,
-    .faq-section,
-    .links-section {
+    .content-section {
       padding: 3rem 0;
     }
 
-    .faq-section,
-    .links-section {
-      padding-top: 0;
+    .body-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .side-panel {
+      position: static;
     }
   }
 </style>

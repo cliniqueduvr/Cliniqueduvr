@@ -68,80 +68,82 @@ const schemas = [
     </section>
 
     <section class="content-section">
-      <div class="container content-grid">
-        <article class="content-card">
-          <h2>Pourquoi deux entretiens par an</h2>
-          <p>Le VR subit des variations de température, des UV, de la pluie, du gel et du mouvement sur la route. Deux moments de vérification par année permettent de repérer les joints fatigués, les zones de toiture vulnérables et les premiers signes d’humidité avant que le problème prenne de l’ampleur.</p>
+      <div class="container body-grid">
+        <article class="content-main">
+          <div class="content-grid">
+            <article class="content-card">
+              <h2>Pourquoi deux entretiens par an</h2>
+              <p>Le VR subit des variations de température, des UV, de la pluie, du gel et du mouvement sur la route. Deux moments de vérification par année permettent de repérer les joints fatigués, les zones de toiture vulnérables et les premiers signes d’humidité avant que le problème prenne de l’ampleur.</p>
+            </article>
+
+            <article class="content-card">
+              <h2>Au printemps: quoi regarder</h2>
+              <ul>
+                <li>Les joints de mur et de toit.</li>
+                <li>La membrane et les points de scellement.</li>
+                <li>Les traces d’eau, d’odeur d’humidité ou de gonflement.</li>
+                <li>Les ouvertures sensibles comme fenêtres, évents et raccords.</li>
+              </ul>
+            </article>
+
+            <article class="content-card">
+              <h2>À l’automne: quoi préparer</h2>
+              <ul>
+                <li>Corriger les joints secs, craqués ou qui décollent.</li>
+                <li>Vérifier la toiture avant l’hivernage.</li>
+                <li>Confirmer qu’aucune zone n’a commencé à prendre l’eau.</li>
+                <li>Faire les reprises utiles avant les mois plus durs.</li>
+              </ul>
+            </article>
+
+            <article class="content-card">
+              <h2>Les erreurs fréquentes</h2>
+              <p>L’erreur la plus fréquente est d’attendre de voir un gros dommage avant d’agir. L’autre erreur est de regarder seulement l’apparence sans confirmer l’état réel des zones de scellement, de toiture et des ouvertures.</p>
+            </article>
+
+            <article class="content-card">
+              <h2>Quand demander un entretien plutôt qu’une inspection</h2>
+              <p>Quand les joints et la toiture montrent surtout de l’usure normale ou prévisible, l’entretien est souvent la bonne étape. Si vous n’êtes pas certain de la source du problème ou si vous voyez déjà des signes d’humidité, l’inspection peut être plus logique avant d’intervenir.</p>
+            </article>
+
+            <article class="content-card">
+              <h2>Un rythme simple à retenir</h2>
+              <p>Le plus simple est souvent: une vérification au printemps avant la saison et une autre à l’automne avant la période plus rude. Ce rythme aide à garder une lecture claire de l’état du VR tout au long de l’année.</p>
+            </article>
+          </div>
+
+          <section class="faq-section">
+            <h2>Questions fréquentes</h2>
+            <div class="faq-list">
+              {faqs.map((item) => (
+                <details class="faq-card">
+                  <summary><h3>{item.question}</h3></summary>
+                  <p>{item.answer}</p>
+                </details>
+              ))}
+            </div>
+          </section>
         </article>
 
-        <article class="content-card">
-          <h2>Au printemps: quoi regarder</h2>
-          <ul>
-            <li>Les joints de mur et de toit.</li>
-            <li>La membrane et les points de scellement.</li>
-            <li>Les traces d’eau, d’odeur d’humidité ou de gonflement.</li>
-            <li>Les ouvertures sensibles comme fenêtres, évents et raccords.</li>
-          </ul>
-        </article>
-
-        <article class="content-card">
-          <h2>À l’automne: quoi préparer</h2>
-          <ul>
-            <li>Corriger les joints secs, craqués ou qui décollent.</li>
-            <li>Vérifier la toiture avant l’hivernage.</li>
-            <li>Confirmer qu’aucune zone n’a commencé à prendre l’eau.</li>
-            <li>Faire les reprises utiles avant les mois plus durs.</li>
-          </ul>
-        </article>
-
-        <article class="content-card">
-          <h2>Les erreurs fréquentes</h2>
-          <p>L’erreur la plus fréquente est d’attendre de voir un gros dommage avant d’agir. L’autre erreur est de regarder seulement l’apparence sans confirmer l’état réel des zones de scellement, de toiture et des ouvertures.</p>
-        </article>
-
-        <article class="content-card">
-          <h2>Quand demander un entretien plutôt qu’une inspection</h2>
-          <p>Quand les joints et la toiture montrent surtout de l’usure normale ou prévisible, l’entretien est souvent la bonne étape. Si vous n’êtes pas certain de la source du problème ou si vous voyez déjà des signes d’humidité, l’inspection peut être plus logique avant d’intervenir.</p>
-        </article>
-
-        <article class="content-card">
-          <h2>Un rythme simple à retenir</h2>
-          <p>Le plus simple est souvent: une vérification au printemps avant la saison et une autre à l’automne avant la période plus rude. Ce rythme aide à garder une lecture claire de l’état du VR tout au long de l’année.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="faq-section">
-      <div class="container">
-        <h2>Questions fréquentes</h2>
-        <div class="faq-list">
-          {faqs.map((item) => (
-            <details class="faq-card">
-              <summary><h3>{item.question}</h3></summary>
-              <p>{item.answer}</p>
-            </details>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <section class="links-section">
-      <div class="container links-grid">
-        <a class="link-card" href="/services/entretien/">
-          <h2>Voir le service d’entretien</h2>
-          <p>Consultez la page d’entretien si votre priorité est la prévention des infiltrations par les joints, la toiture ou la membrane.</p>
-          <span>Voir l’entretien</span>
-        </a>
-        <a class="link-card" href="/services/inspection/">
-          <h2>Commencer par l’inspection</h2>
-          <p>Si vous n’êtes pas certain de l’état réel du VR, l’inspection peut vous aider à éviter de partir dans la mauvaise direction.</p>
-          <span>Voir l’inspection</span>
-        </a>
-        <a class="link-card" href="/contact/">
-          <h2>Planifier la prochaine étape</h2>
-          <p>Envoyez des photos et dites-nous si vous êtes au printemps, à l’automne ou déjà face à un doute sur l’étanchéité.</p>
-          <span>Contacter l’atelier</span>
-        </a>
+        <aside class="side-panel">
+          <div class="side-stack">
+            <a class="link-card" href="/services/entretien/">
+              <h2>Voir le service d’entretien</h2>
+              <p>Consultez la page d’entretien si votre priorité est la prévention des infiltrations par les joints, la toiture ou la membrane.</p>
+              <span>Voir l’entretien</span>
+            </a>
+            <a class="link-card" href="/services/inspection/">
+              <h2>Commencer par l’inspection</h2>
+              <p>Si vous n’êtes pas certain de l’état réel du VR, l’inspection peut vous aider à éviter de partir dans la mauvaise direction.</p>
+              <span>Voir l’inspection</span>
+            </a>
+            <a class="link-card" href="/contact/">
+              <h2>Planifier la prochaine étape</h2>
+              <p>Envoyez des photos et dites-nous si vous êtes au printemps, à l’automne ou déjà face à un doute sur l’étanchéité.</p>
+              <span>Contacter l’atelier</span>
+            </a>
+          </div>
+        </aside>
       </div>
     </section>
   </main>
@@ -216,25 +218,29 @@ const schemas = [
     margin-top: 0.55rem;
   }
 
-  .content-section,
-  .faq-section,
-  .links-section {
+  .content-section {
     padding: 4rem 0;
     background: #eef3f7;
   }
 
-  .faq-section,
-  .links-section {
-    padding-top: 0;
+  .body-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.8fr);
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .content-main {
+    display: grid;
+    gap: 1.5rem;
   }
 
   .content-grid,
-  .links-grid,
-  .faq-list {
+  .faq-list,
+  .side-stack {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-    max-width: 860px;
   }
 
   .content-card,
@@ -283,6 +289,11 @@ const schemas = [
     margin: 0;
   }
 
+  .faq-section {
+    display: grid;
+    gap: 1rem;
+  }
+
   .content-card ul {
     margin: 0.9rem 0 0;
     padding-left: 1.2rem;
@@ -297,6 +308,11 @@ const schemas = [
     text-decoration: none;
     display: grid;
     gap: 0.7rem;
+  }
+
+  .side-panel {
+    position: sticky;
+    top: 7rem;
   }
 
   .link-card span {
@@ -314,15 +330,16 @@ const schemas = [
       grid-template-columns: 1fr;
     }
 
-    .content-section,
-    .faq-section,
-    .links-section {
+    .content-section {
       padding: 3rem 0;
     }
 
-    .faq-section,
-    .links-section {
-      padding-top: 0;
+    .body-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .side-panel {
+      position: static;
     }
   }
 </style>
