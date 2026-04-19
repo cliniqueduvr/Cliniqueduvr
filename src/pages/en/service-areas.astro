@@ -4,6 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { localAreaPagesEn } from '../../data/local-area-pages';
 import { buildBreadcrumbSchema, buildCollectionPageSchema, buildWebSiteSchema } from '../../lib/seo';
+import siteSettings from '../../data/site-settings.json';
 
 const schemas = [
   buildWebSiteSchema(),
@@ -31,44 +32,75 @@ const schemas = [
   <Header lang="en" />
 
   <main>
-    <section class="page-hero">
-      <div class="container">
-        <p class="eyebrow">Local SEO</p>
-        <h1>Service areas around Gatineau</h1>
-        <p class="lead">Our workshop is based in Gatineau. We also support requests coming from Ottawa, Outaouais, and the Laurentides depending on the type of work, the issue involved, and whether the next step should happen in the workshop or through mobile support.</p>
+    <section class="interior-hero">
+      <div class="container interior-hero-grid">
+        <div class="interior-hero-copy">
+          <p class="interior-eyebrow">Local SEO</p>
+          <h1>Service areas around Gatineau</h1>
+          <p class="interior-lead">Our workshop is based in Gatineau. We also support requests coming from Ottawa, Outaouais, and the Laurentides depending on the type of work, the issue involved, and whether the next step should happen in the workshop or through mobile support.</p>
+        </div>
+
+        <aside class="interior-hero-card">
+          <div class="interior-hero-icon">
+            <i class="fas fa-map-location-dot"></i>
+          </div>
+          <h2>Need a clear starting point?</h2>
+          <p>We can help you understand the situation, choose the right service, and decide on the next useful step for your RV.</p>
+          <a class="interior-hero-link" href="/en/contact/">Talk to us about your RV</a>
+        </aside>
       </div>
     </section>
 
-    <section class="areas-section">
-      <div class="container">
-        <div class="areas-grid">
-          {localAreaPagesEn.map((page) => (
-            <a class="area-card" href={`/en/areas/${page.slug}/`}>
-              <p class="area-name">{page.area}</p>
-              <h2>{page.h1}</h2>
-              <p>{page.intro}</p>
-              <span>View local page</span>
-            </a>
-          ))}
-        </div>
+    <section class="interior-section">
+      <div class="container interior-body-grid">
+        <article class="interior-content-main">
+          <div class="areas-grid">
+            {localAreaPagesEn.map((page) => (
+              <a class="area-card" href={`/en/areas/${page.slug}/`}>
+                <p class="area-name">{page.area}</p>
+                <h2>{page.h1}</h2>
+                <p>{page.intro}</p>
+                <span>View local page</span>
+              </a>
+            ))}
+          </div>
 
-        <div class="content-grid">
-          <article class="content-card">
+          <div class="content-grid">
+            <article class="interior-card">
             <h2>When a local page helps most</h2>
             <p>A local page is useful when you are searching for a specific service with a clear geographic context: water leak help in Gatineau, maintenance in Outaouais, repair support for Ottawa, or trailer water intrusion questions in the Laurentides.</p>
-          </article>
+            </article>
 
-          <article class="content-card">
+            <article class="interior-card">
             <h2>Gatineau workshop, regional support</h2>
             <p>The workshop in Gatineau remains the anchor point. Depending on the service request, we can direct you toward inspection, maintenance, or repair and confirm the most useful next step before travel or booking.</p>
-          </article>
+            </article>
 
-          <article class="content-card">
+            <article class="interior-card">
             <h2>Before you book</h2>
             <p>If you are still unsure which service fits best, start with our guidance page or contact us with a few photos of the RV, your city, the type of issue, and the urgency level.</p>
             <p class="actions"><a href="/en/choose-service/">Which service should you choose?</a> · <a href="/en/contact/">Contact the workshop</a></p>
-          </article>
-        </div>
+            </article>
+          </div>
+        </article>
+
+        <aside class="interior-side-panel">
+          <div class="interior-side-card interior-side-card-primary">
+            <h3>Need a quick opinion?</h3>
+            <p>We can point you toward inspection, maintenance, or repair based on the vehicle's current condition.</p>
+            <a class="interior-side-button" href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>
+            <a class="interior-side-link" href={siteSettings.squareBookingUrl} target="_blank" rel="noopener">Book online</a>
+          </div>
+          <div class="interior-side-card">
+            <h3>Related services</h3>
+            <nav class="interior-service-nav" aria-label="Related services">
+              <a href="/en/services/inspection/"><i class="fas fa-clipboard-check"></i><span>Inspection</span></a>
+              <a href="/en/services/maintenance/"><i class="fas fa-screwdriver-wrench"></i><span>Maintenance</span></a>
+              <a href="/en/services/repair/"><i class="fas fa-toolbox"></i><span>Repair</span></a>
+              <a href="/en/services/"><i class="fas fa-list"></i><span>All services</span></a>
+            </nav>
+          </div>
+        </aside>
       </div>
     </section>
   </main>
@@ -77,20 +109,14 @@ const schemas = [
 </Layout>
 
 <style>
-  .page-hero { padding: 4.5rem 0 3rem; background: linear-gradient(135deg, var(--brand-navy-dark) 0%, #1f476d 60%, #eef3f7 60%, #eef3f7 100%); color: white; }
-  .eyebrow { display: inline-flex; margin-bottom: 1rem; padding: 0.45rem 0.85rem; border-radius: 999px; background: rgba(255,255,255,0.12); color: var(--brand-gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
-  .page-hero h1 { color: white; margin-bottom: 1rem; max-width: 14ch; }
-  .lead { max-width: 64ch; color: #e7edf4; font-size: 1.05rem; }
-  .areas-section { padding: 4rem 0; background: #eef3f7; }
+  .interior-hero-copy h1 { max-width: 14ch; }
   .areas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
-  .area-card { background: white; border-radius: 18px; padding: 1.5rem; box-shadow: 0 12px 26px rgba(20, 36, 55, 0.08); }
+  .area-card { background: white; border-radius: 22px; padding: 1.75rem; box-shadow: 0 16px 34px rgba(24, 40, 61, 0.08); }
   .area-name { color: var(--brand-green-dark); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.82rem; }
   .area-card h2 { font-size: 1.2rem; margin: 0.45rem 0 0.8rem; }
   .area-card p { color: var(--brand-muted); }
   .area-card span { display: inline-block; margin-top: 1rem; font-weight: 700; }
   .content-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-top: 2rem; }
-  .content-card { background: white; border-radius: 18px; padding: 1.5rem; box-shadow: 0 12px 26px rgba(20, 36, 55, 0.08); }
-  .content-card p { margin-top: 0.75rem; color: var(--brand-muted); }
+  .interior-card p { margin-top: 0.75rem; color: var(--brand-muted); }
   .actions { font-weight: 700; }
-  @media (max-width: 768px) { .page-hero { background: linear-gradient(180deg, var(--brand-navy-dark) 0%, #1f476d 100%); padding: 3.8rem 0 2.8rem; } }
 </style>
