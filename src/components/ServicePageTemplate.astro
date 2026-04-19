@@ -233,8 +233,8 @@ const isWorkshopOnlyDetailing = service.slug === 'esthetique-auto-camion' || ser
         </section>
       </article>
 
-      <aside class="service-side">
-        <div class="side-card sticky">
+      <aside class="service-side sticky">
+        <div class="side-card side-card-primary">
           <h3>{isEnglish ? 'Need a quick opinion?' : "Besoin d'un avis rapide?"}</h3>
           <p>{isEnglish ? 'We can point you toward inspection, maintenance or repair based on the actual condition of the vehicle.' : "On peut vous orienter vers une inspection, un entretien ou une réparation selon l'état du véhicule."}</p>
           <a class="side-button" href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>
@@ -424,6 +424,19 @@ const isWorkshopOnlyDetailing = service.slug === 'esthetique-auto-camion' || ser
     box-shadow: 0 16px 34px rgba(24, 40, 61, 0.08);
   }
 
+  .side-card-primary {
+    background: var(--brand-navy-dark);
+    color: white;
+  }
+
+  .side-card-primary h3 {
+    color: white;
+  }
+
+  .side-card-primary p {
+    color: #dbe4ee;
+  }
+
   .content-card.alt {
     background: linear-gradient(180deg, #f8fbf5 0%, #ffffff 100%);
   }
@@ -559,16 +572,7 @@ const isWorkshopOnlyDetailing = service.slug === 'esthetique-auto-camion' || ser
   .sticky {
     position: sticky;
     top: 7rem;
-    background: var(--brand-navy-dark);
-    color: white;
-  }
-
-  .sticky h3 {
-    color: white;
-  }
-
-  .sticky p {
-    color: #dbe4ee;
+    align-self: start;
   }
 
   .side-button {

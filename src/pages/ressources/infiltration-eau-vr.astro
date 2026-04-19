@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema, buildWebSiteSchema } from '../../lib/seo';
+import siteSettings from '../../data/site-settings.json';
 
 const title = "Infiltration d'eau de VR | Comment la reconnaître et quoi faire";
 const description = "Guide Clinique du VR pour reconnaître une infiltration d'eau sur un VR, une roulotte ou une caravane, et savoir quoi faire avant que les dommages empirent.";
@@ -57,6 +58,9 @@ const schemas = [
         </div>
 
         <aside class="hero-card">
+          <div class="hero-icon">
+            <i class="fas fa-droplet"></i>
+          </div>
           <h2>À surveiller rapidement</h2>
           <ul>
             <li>Odeur d’humidité ou tache d’eau</li>
@@ -76,7 +80,7 @@ const schemas = [
               <p>Les signes les plus fréquents sont une odeur d’humidité, une tache d’eau, des joints secs ou fendillés, une surface qui gondole, un mur mou, un plancher qui gonfle ou une zone du plafond qui semble avoir travaillé. Sur un VR, une infiltration peut aussi se cacher autour des ouvertures, de la toiture, des coins et des raccords.</p>
             </article>
 
-            <article class="content-card">
+            <article class="content-card alt">
               <h2>Les endroits à vérifier en priorité</h2>
               <p>Les joints de mur, les joints de toit, les moulures, les ouvertures sensibles, les coins, les contours de fenêtres, les ventilateurs de toit et la membrane sont parmi les premiers endroits à regarder. Ce sont souvent ces zones qui laissent entrer l’eau avant que le dommage soit évident.</p>
             </article>
@@ -91,7 +95,7 @@ const schemas = [
               </ol>
             </article>
 
-            <article class="content-card">
+            <article class="content-card alt">
               <h2>Ce qu’il faut éviter</h2>
               <p>Il vaut mieux éviter de masquer trop vite le symptôme sans confirmer la cause. Une infiltration d’eau mal comprise peut continuer derrière les surfaces et transformer un problème encore limité en dossier beaucoup plus coûteux.</p>
             </article>
@@ -107,7 +111,7 @@ const schemas = [
             </article>
           </div>
 
-          <section class="faq-section">
+          <section class="content-card alt faq-section">
             <h2>Questions fréquentes</h2>
             <div class="faq-list">
               {faqs.map((item) => (
@@ -121,22 +125,21 @@ const schemas = [
         </article>
 
         <aside class="side-panel">
-          <div class="side-stack">
-            <a class="link-card" href="/services/inspection/">
-              <h2>Commencer par l’inspection</h2>
-              <p>Voyez la page d’inspection si vous voulez confirmer une infiltration d’eau, des joints suspects ou un doute sur la toiture.</p>
-              <span>Voir l’inspection</span>
-            </a>
-            <a class="link-card" href="/services/entretien/">
-              <h2>Voir l’entretien préventif</h2>
-              <p>Si le problème semble encore limité aux joints ou au scellement, l’entretien peut être la bonne suite.</p>
-              <span>Voir l’entretien</span>
-            </a>
-            <a class="link-card" href="/contact/">
-              <h2>Parler de votre VR</h2>
-              <p>Envoyez des photos et une courte description pour être orienté rapidement vers la bonne prochaine étape.</p>
-              <span>Contacter l’atelier</span>
-            </a>
+          <div class="side-card side-card-primary">
+            <h3>Besoin d'un avis rapide?</h3>
+            <p>On peut vous orienter vers une inspection, un entretien ou une réparation selon l'état du véhicule.</p>
+            <a class="side-button" href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>
+            <a class="side-link" href={siteSettings.squareBookingUrl} target="_blank" rel="noopener">Réserver en ligne</a>
+          </div>
+
+          <div class="side-card">
+            <h3>Autres services</h3>
+            <nav class="service-nav" aria-label="Autres services">
+              <a href="/services/inspection/"><i class="fas fa-clipboard-check"></i><span>Inspection</span></a>
+              <a href="/services/entretien/"><i class="fas fa-screwdriver-wrench"></i><span>Entretien</span></a>
+              <a href="/services/reparation/"><i class="fas fa-toolbox"></i><span>Réparation</span></a>
+              <a href="/services/esthetique/"><i class="fas fa-spray-can-sparkles"></i><span>Esthétique VR</span></a>
+            </nav>
           </div>
         </aside>
       </div>
@@ -151,62 +154,84 @@ const schemas = [
     position: relative;
     overflow: hidden;
     background:
-      radial-gradient(circle at top left, rgba(242, 210, 27, 0.18), transparent 25%),
-      linear-gradient(135deg, var(--brand-navy-dark) 0%, #1f476d 58%, #eef3f7 58%, #eef3f7 100%);
-    color: white;
-    padding: 4.5rem 0 3.8rem;
+      radial-gradient(circle at top left, rgba(242, 210, 27, 0.18), transparent 32%),
+      linear-gradient(135deg, var(--brand-navy-dark) 0%, #23476f 58%, #f4f6f8 58%, #f4f6f8 100%);
+    padding: 4.5rem 0 4rem;
   }
 
   .hero-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.75fr) minmax(280px, 0.95fr);
-    gap: 1.5rem;
-    align-items: start;
+    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.9fr);
+    gap: 2rem;
+    align-items: stretch;
+  }
+
+  .hero-copy {
+    color: white;
   }
 
   .eyebrow {
     display: inline-flex;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
     padding: 0.45rem 0.85rem;
     border-radius: 999px;
     background: rgba(255,255,255,0.12);
     color: var(--brand-gold);
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
   }
 
-  .page-hero h1 {
+  .hero-copy h1 {
     color: white;
-    max-width: 14ch;
+    max-width: 17ch;
     margin-bottom: 1rem;
+    line-height: 1.05;
   }
 
   .lead {
-    max-width: 62ch;
-    color: #e7edf4;
-    font-size: 1.05rem;
+    max-width: 60ch;
+    color: #f5f7fa;
+    font-size: 1.2rem;
+    line-height: 1.7;
   }
 
   .hero-card {
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.16);
+    align-self: end;
+    background: white;
     border-radius: 24px;
-    padding: 1.6rem;
-    backdrop-filter: blur(8px);
+    padding: 2rem;
+    box-shadow: 0 22px 44px rgba(16, 35, 56, 0.22);
+  }
+
+  .hero-icon {
+    width: 4rem;
+    height: 4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background: linear-gradient(135deg, var(--brand-green), #57af49);
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .hero-card h2 {
-    color: white;
-    margin-bottom: 0.9rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-card p {
+    color: var(--brand-muted);
+    margin-bottom: 1.25rem;
   }
 
   .hero-card ul {
     margin: 0;
     padding-left: 1.2rem;
-    color: #eef3f7;
+    color: var(--brand-muted);
   }
 
   .hero-card li + li {
@@ -215,13 +240,14 @@ const schemas = [
 
   .content-section {
     padding: 4rem 0;
-    background: #eef3f7;
+    background:
+      linear-gradient(180deg, #ffffff 0%, #ffffff 42%, #f3f5f8 42%, #f3f5f8 100%);
   }
 
   .body-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.8fr);
-    gap: 1.5rem;
+    grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.75fr);
+    gap: 2rem;
     align-items: start;
   }
 
@@ -231,8 +257,7 @@ const schemas = [
   }
 
   .content-grid,
-  .faq-list,
-  .side-stack {
+  .faq-list {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -240,18 +265,40 @@ const schemas = [
 
   .content-card,
   .faq-card,
-  .link-card {
+  .side-card {
     background: white;
-    border-radius: 18px;
-    padding: 1.5rem;
-    box-shadow: 0 12px 26px rgba(20, 36, 55, 0.08);
+    border-radius: 22px;
+    padding: 1.75rem;
+    box-shadow: 0 16px 34px rgba(24, 40, 61, 0.08);
+  }
+
+  .content-card.alt {
+    background: linear-gradient(180deg, #f8fbf5 0%, #ffffff 100%);
   }
 
   .content-card p,
   .faq-card p,
-  .link-card p {
+  .side-card p {
     margin-top: 0.8rem;
     color: var(--brand-muted);
+  }
+
+  .content-card h2,
+  .side-card h3 {
+    margin-bottom: 1rem;
+  }
+
+  .content-card ul,
+  .content-card ol {
+    display: grid;
+    gap: 0.85rem;
+    padding-left: 1.2rem;
+    color: var(--brand-ink);
+  }
+
+  .content-card li::marker {
+    color: var(--brand-green);
+    font-weight: 700;
   }
 
   .faq-card summary {
@@ -282,6 +329,7 @@ const schemas = [
 
   .faq-card h3 {
     margin: 0;
+    font-size: 1rem;
   }
 
   .faq-section {
@@ -289,30 +337,96 @@ const schemas = [
     gap: 1rem;
   }
 
-  .content-card ol {
-    margin: 0.9rem 0 0;
-    padding-left: 1.2rem;
-    color: var(--brand-muted);
-  }
-
   .content-card li + li {
     margin-top: 0.45rem;
   }
 
-  .link-card {
+  .side-panel {
+    display: grid;
+    gap: 1.5rem;
+    position: sticky;
+    top: 7rem;
+    align-self: start;
+  }
+
+  .side-card-primary {
+    background: var(--brand-navy-dark);
+    color: white;
+  }
+
+  .side-card-primary h3 {
+    color: white;
+  }
+
+  .side-card-primary p {
+    color: #dbe4ee;
+  }
+
+  .side-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 48px;
+    border-radius: 999px;
+    background: var(--brand-gold);
+    color: var(--brand-navy-dark);
+    font-weight: 700;
     text-decoration: none;
+    margin: 0.25rem 0 0.75rem;
+  }
+
+  .side-button:hover {
+    text-decoration: none;
+    background: #e2c417;
+  }
+
+  .side-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 48px;
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    background: var(--brand-gold);
+    border: 2px solid var(--brand-gold);
+    color: var(--brand-navy-dark);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .side-link:hover {
+    text-decoration: none;
+    background: #e1c317;
+    border-color: #e1c317;
+  }
+
+  .service-nav {
     display: grid;
     gap: 0.7rem;
   }
 
-  .side-panel {
-    position: sticky;
-    top: 7rem;
+  .service-nav a {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    min-height: 54px;
+    padding: 0.9rem 1rem;
+    border-radius: 16px;
+    background: var(--brand-surface);
+    color: var(--brand-ink);
+    text-decoration: none;
+    font-weight: 700;
   }
 
-  .link-card span {
-    font-weight: 700;
-    color: var(--brand-navy);
+  .service-nav a:hover {
+    text-decoration: none;
+    background: #eaf1e6;
+  }
+
+  .service-nav i {
+    color: var(--brand-green);
   }
 
   @media (max-width: 768px) {
