@@ -40,6 +40,13 @@ const shouldShowCta = pathname !== '/contact/' && pathname !== '/en/contact/';
       </ul>
     </div>
     <div class="footer-col">
+      <h4>{isEnglish ? 'Resources' : 'Ressources'}</h4>
+      <ul>
+        <li><a href={isEnglish ? '/en/resources/rv-water-intrusion/' : '/ressources/infiltration-eau-vr/'}>{isEnglish ? 'Water intrusion' : "Infiltration d'eau"}</a></li>
+        <li><a href={isEnglish ? '/en/resources/twice-yearly-rv-maintenance/' : '/ressources/entretien-vr-deux-fois-par-an/'}>{isEnglish ? 'Twice-yearly maintenance' : "Entretien 2 fois par an"}</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
       <h4>{isEnglish ? 'Follow Us' : 'Nous Suivre'}</h4>
       <a href={siteSettings.facebookUrl} target="_blank" rel="noopener">
         <i class="fab fa-facebook"></i> Facebook

@@ -1,0 +1,152 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema, buildWebSiteSchema } from '../../lib/seo';
+
+const title = "Infiltration d'eau de VR | Comment la reconnaître et quoi faire";
+const description = "Guide Clinique du VR pour reconnaître une infiltration d'eau sur un VR, une roulotte ou une caravane, et savoir quoi faire avant que les dommages empirent.";
+const faqs = [
+  {
+    question: "Quels sont les premiers signes d'une infiltration d'eau dans un VR?",
+    answer: "Les premiers signes sont souvent une odeur d'humidité, une tache d'eau, un joint fissuré, un plafond qui gondole, un mur mou ou un plancher qui gonfle."
+  },
+  {
+    question: "Que faire en premier si je soupçonne une infiltration d'eau?",
+    answer: "Il faut d'abord arrêter d'exposer le véhicule à l'eau si possible, prendre des photos, noter les zones touchées, puis faire confirmer si le bon point de départ est une inspection, un entretien ciblé ou une réparation."
+  },
+  {
+    question: "Une infiltration d'eau demande-t-elle toujours une grosse réparation?",
+    answer: "Pas toujours. Si le problème est pris tôt, un entretien de joints ou une reprise d'étanchéité peut parfois suffire. Quand les matériaux sont déjà atteints, la réparation devient plus probable."
+  }
+];
+const schemas = [
+  buildWebSiteSchema(),
+  buildArticleSchema({
+    headline: title,
+    description,
+    path: '/ressources/infiltration-eau-vr/'
+  }),
+  buildFAQSchema(faqs),
+  buildBreadcrumbSchema([
+    { name: 'Accueil', path: '/' },
+    { name: 'Ressources', path: '/faq/' },
+    { name: "Infiltration d'eau" }
+  ])
+];
+---
+
+<Layout
+  title={`${title} | Clinique du VR`}
+  description={description}
+  canonicalPath="/ressources/infiltration-eau-vr/"
+  frPath="/ressources/infiltration-eau-vr/"
+  enPath="/en/resources/rv-water-intrusion/"
+  schemas={schemas}
+  ogType="article"
+>
+  <Header />
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Ressource pratique</p>
+        <h1>Infiltration d'eau de VR: comment la reconnaître et quoi faire</h1>
+        <p class="lead">Une infiltration d’eau sur un VR, une roulotte ou une caravane ne commence pas toujours par un gros dégât visible. Le plus souvent, ce sont de petits signes qui annoncent un problème plus sérieux si rien n’est fait.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container content-grid">
+        <article class="content-card">
+          <h2>Comment reconnaître une infiltration d’eau</h2>
+          <p>Les signes les plus fréquents sont une odeur d’humidité, une tache d’eau, des joints secs ou fendillés, une surface qui gondole, un mur mou, un plancher qui gonfle ou une zone du plafond qui semble avoir travaillé. Sur un VR, une infiltration peut aussi se cacher autour des ouvertures, de la toiture, des coins et des raccords.</p>
+        </article>
+
+        <article class="content-card">
+          <h2>Les endroits à vérifier en priorité</h2>
+          <p>Les joints de mur, les joints de toit, les moulures, les ouvertures sensibles, les coins, les contours de fenêtres, les ventilateurs de toit et la membrane sont parmi les premiers endroits à regarder. Ce sont souvent ces zones qui laissent entrer l’eau avant que le dommage soit évident.</p>
+        </article>
+
+        <article class="content-card">
+          <h2>Quoi faire dès les premiers doutes</h2>
+          <ol>
+            <li>Mettre le véhicule à l’abri si possible.</li>
+            <li>Prendre des photos des signes visibles.</li>
+            <li>Éviter d’attendre une autre pluie ou une autre saison.</li>
+            <li>Faire confirmer si la prochaine étape utile est une inspection, un entretien de joints ou une réparation.</li>
+          </ol>
+        </article>
+
+        <article class="content-card">
+          <h2>Ce qu’il faut éviter</h2>
+          <p>Il vaut mieux éviter de masquer trop vite le symptôme sans confirmer la cause. Une infiltration d’eau mal comprise peut continuer derrière les surfaces et transformer un problème encore limité en dossier beaucoup plus coûteux.</p>
+        </article>
+
+        <article class="content-card">
+          <h2>Quand l’inspection est la bonne première étape</h2>
+          <p>L’inspection est souvent la meilleure option quand vous soupçonnez une infiltration sans savoir exactement d’où elle vient, quand vous voyez plusieurs indices contradictoires, ou quand vous voulez valider l’état réel du VR avant de décider des travaux.</p>
+        </article>
+
+        <article class="content-card">
+          <h2>Quand l’entretien ou la réparation prend le relais</h2>
+          <p>Si les joints ou la toiture montrent surtout un vieillissement précoce sans gros dommage visible, l’entretien peut suffire. Si l’eau a déjà atteint les matériaux, que des surfaces sont molles ou que les finis sont touchés, la réparation devient généralement la suite logique.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="container">
+        <h2>Questions fréquentes</h2>
+        <div class="faq-list">
+          {faqs.map((item) => (
+            <article class="faq-card">
+              <h3>{item.question}</h3>
+              <p>{item.answer}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="links-section">
+      <div class="container links-grid">
+        <a class="link-card" href="/services/inspection/">
+          <h2>Commencer par l’inspection</h2>
+          <p>Voyez la page d’inspection si vous voulez confirmer une infiltration d’eau, des joints suspects ou un doute sur la toiture.</p>
+          <span>Voir l’inspection</span>
+        </a>
+        <a class="link-card" href="/services/entretien/">
+          <h2>Voir l’entretien préventif</h2>
+          <p>Si le problème semble encore limité aux joints ou au scellement, l’entretien peut être la bonne suite.</p>
+          <span>Voir l’entretien</span>
+        </a>
+        <a class="link-card" href="/contact/">
+          <h2>Parler de votre VR</h2>
+          <p>Envoyez des photos et une courte description pour être orienté rapidement vers la bonne prochaine étape.</p>
+          <span>Contacter l’atelier</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-hero { padding: 4.5rem 0 3rem; background: linear-gradient(135deg, var(--brand-navy-dark) 0%, #1f476d 60%, #eef3f7 60%, #eef3f7 100%); color: white; }
+  .eyebrow { display: inline-flex; margin-bottom: 1rem; padding: 0.45rem 0.85rem; border-radius: 999px; background: rgba(255,255,255,0.12); color: var(--brand-gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+  .page-hero h1 { color: white; max-width: 16ch; margin-bottom: 1rem; }
+  .lead { max-width: 64ch; color: #e7edf4; font-size: 1.05rem; }
+  .content-section, .faq-section, .links-section { padding: 4rem 0; background: #eef3f7; }
+  .faq-section, .links-section { padding-top: 0; }
+  .content-grid, .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+  .content-card, .faq-card, .link-card { background: white; border-radius: 18px; padding: 1.5rem; box-shadow: 0 12px 26px rgba(20, 36, 55, 0.08); }
+  .content-card p, .faq-card p, .link-card p { margin-top: 0.8rem; color: var(--brand-muted); }
+  .content-card ol { margin: 0.9rem 0 0; padding-left: 1.2rem; color: var(--brand-muted); }
+  .content-card li + li { margin-top: 0.45rem; }
+  .faq-list { display: grid; gap: 1rem; }
+  .link-card { text-decoration: none; display: grid; grid-template-rows: auto 1fr auto; gap: 0.7rem; }
+  .link-card span { font-weight: 700; color: var(--brand-navy); }
+  @media (max-width: 768px) { .page-hero { background: linear-gradient(180deg, var(--brand-navy-dark) 0%, #1f476d 100%); padding: 3.8rem 0 2.8rem; } .content-section, .faq-section, .links-section { padding: 3rem 0; } .faq-section, .links-section { padding-top: 0; } }
+</style>

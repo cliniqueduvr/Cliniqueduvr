@@ -1,0 +1,157 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema, buildWebSiteSchema } from '../../lib/seo';
+
+const title = "Entretien de VR 2 fois par an | Quoi faire au printemps et à l'automne";
+const description = "Guide pratique pour l'entretien de VR deux fois par année: quoi vérifier au printemps et à l'automne pour les joints, la toiture, l'humidité et l'étanchéité.";
+const faqs = [
+  {
+    question: "Pourquoi faire l'entretien de son VR deux fois par année?",
+    answer: "Deux entretiens par année permettent de vérifier les joints, la toiture, les zones exposées à l’eau et les signes d’usure avant que de petites faiblesses deviennent des infiltrations plus coûteuses."
+  },
+  {
+    question: "Que faut-il vérifier au printemps?",
+    answer: "Au printemps, il faut surtout vérifier les joints, la toiture, la membrane, les ouvertures et les traces d’eau ou d’humidité apparues après l’hiver."
+  },
+  {
+    question: "Que faut-il vérifier à l’automne?",
+    answer: "À l’automne, l’objectif est de corriger les points faibles avant l’hivernage et d’éviter qu’un joint fatigué ou une petite faiblesse laisse entrer l’eau pendant la mauvaise saison."
+  }
+];
+const schemas = [
+  buildWebSiteSchema(),
+  buildArticleSchema({
+    headline: title,
+    description,
+    path: '/ressources/entretien-vr-deux-fois-par-an/'
+  }),
+  buildFAQSchema(faqs),
+  buildBreadcrumbSchema([
+    { name: 'Accueil', path: '/' },
+    { name: 'Ressources', path: '/faq/' },
+    { name: 'Entretien 2 fois par an' }
+  ])
+];
+---
+
+<Layout
+  title={`${title} | Clinique du VR`}
+  description={description}
+  canonicalPath="/ressources/entretien-vr-deux-fois-par-an/"
+  frPath="/ressources/entretien-vr-deux-fois-par-an/"
+  enPath="/en/resources/twice-yearly-rv-maintenance/"
+  schemas={schemas}
+  ogType="article"
+>
+  <Header />
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Ressource pratique</p>
+        <h1>Entretien de VR 2 fois par année: quoi faire</h1>
+        <p class="lead">Un entretien au printemps et un autre à l’automne donnent souvent le meilleur rapport entre prévention, tranquillité d’esprit et protection contre les infiltrations d’eau.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container content-grid">
+        <article class="content-card">
+          <h2>Pourquoi deux entretiens par an</h2>
+          <p>Le VR subit des variations de température, des UV, de la pluie, du gel et du mouvement sur la route. Deux moments de vérification par année permettent de repérer les joints fatigués, les zones de toiture vulnérables et les premiers signes d’humidité avant que le problème prenne de l’ampleur.</p>
+        </article>
+
+        <article class="content-card">
+          <h2>Au printemps: quoi regarder</h2>
+          <ul>
+            <li>Les joints de mur et de toit.</li>
+            <li>La membrane et les points de scellement.</li>
+            <li>Les traces d’eau, d’odeur d’humidité ou de gonflement.</li>
+            <li>Les ouvertures sensibles comme fenêtres, évents et raccords.</li>
+          </ul>
+        </article>
+
+        <article class="content-card">
+          <h2>À l’automne: quoi préparer</h2>
+          <ul>
+            <li>Corriger les joints secs, craqués ou qui décollent.</li>
+            <li>Vérifier la toiture avant l’hivernage.</li>
+            <li>Confirmer qu’aucune zone n’a commencé à prendre l’eau.</li>
+            <li>Faire les reprises utiles avant les mois plus durs.</li>
+          </ul>
+        </article>
+
+        <article class="content-card">
+          <h2>Les erreurs fréquentes</h2>
+          <p>L’erreur la plus fréquente est d’attendre de voir un gros dommage avant d’agir. L’autre erreur est de regarder seulement l’apparence sans confirmer l’état réel des zones de scellement, de toiture et des ouvertures.</p>
+        </article>
+
+        <article class="content-card">
+          <h2>Quand demander un entretien plutôt qu’une inspection</h2>
+          <p>Quand les joints et la toiture montrent surtout de l’usure normale ou prévisible, l’entretien est souvent la bonne étape. Si vous n’êtes pas certain de la source du problème ou si vous voyez déjà des signes d’humidité, l’inspection peut être plus logique avant d’intervenir.</p>
+        </article>
+
+        <article class="content-card">
+          <h2>Un rythme simple à retenir</h2>
+          <p>Le plus simple est souvent: une vérification au printemps avant la saison et une autre à l’automne avant la période plus rude. Ce rythme aide à garder une lecture claire de l’état du VR tout au long de l’année.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="container">
+        <h2>Questions fréquentes</h2>
+        <div class="faq-list">
+          {faqs.map((item) => (
+            <article class="faq-card">
+              <h3>{item.question}</h3>
+              <p>{item.answer}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="links-section">
+      <div class="container links-grid">
+        <a class="link-card" href="/services/entretien/">
+          <h2>Voir le service d’entretien</h2>
+          <p>Consultez la page d’entretien si votre priorité est la prévention des infiltrations par les joints, la toiture ou la membrane.</p>
+          <span>Voir l’entretien</span>
+        </a>
+        <a class="link-card" href="/services/inspection/">
+          <h2>Commencer par l’inspection</h2>
+          <p>Si vous n’êtes pas certain de l’état réel du VR, l’inspection peut vous aider à éviter de partir dans la mauvaise direction.</p>
+          <span>Voir l’inspection</span>
+        </a>
+        <a class="link-card" href="/contact/">
+          <h2>Planifier la prochaine étape</h2>
+          <p>Envoyez des photos et dites-nous si vous êtes au printemps, à l’automne ou déjà face à un doute sur l’étanchéité.</p>
+          <span>Contacter l’atelier</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-hero { padding: 4.5rem 0 3rem; background: linear-gradient(135deg, var(--brand-navy-dark) 0%, #1f476d 60%, #eef3f7 60%, #eef3f7 100%); color: white; }
+  .eyebrow { display: inline-flex; margin-bottom: 1rem; padding: 0.45rem 0.85rem; border-radius: 999px; background: rgba(255,255,255,0.12); color: var(--brand-gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+  .page-hero h1 { color: white; max-width: 16ch; margin-bottom: 1rem; }
+  .lead { max-width: 64ch; color: #e7edf4; font-size: 1.05rem; }
+  .content-section, .faq-section, .links-section { padding: 4rem 0; background: #eef3f7; }
+  .faq-section, .links-section { padding-top: 0; }
+  .content-grid, .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+  .content-card, .faq-card, .link-card { background: white; border-radius: 18px; padding: 1.5rem; box-shadow: 0 12px 26px rgba(20, 36, 55, 0.08); }
+  .content-card p, .faq-card p, .link-card p { margin-top: 0.8rem; color: var(--brand-muted); }
+  .content-card ul { margin: 0.9rem 0 0; padding-left: 1.2rem; color: var(--brand-muted); }
+  .content-card li + li { margin-top: 0.45rem; }
+  .faq-list { display: grid; gap: 1rem; }
+  .link-card { text-decoration: none; display: grid; grid-template-rows: auto 1fr auto; gap: 0.7rem; }
+  .link-card span { font-weight: 700; color: var(--brand-navy); }
+  @media (max-width: 768px) { .page-hero { background: linear-gradient(180deg, var(--brand-navy-dark) 0%, #1f476d 100%); padding: 3.8rem 0 2.8rem; } .content-section, .faq-section, .links-section { padding: 3rem 0; } .faq-section, .links-section { padding-top: 0; } }
+</style>

@@ -228,3 +228,24 @@ export function buildCollectionPageSchema({
     inLanguage: path.startsWith('/en/') ? 'en-CA' : 'fr-CA'
   };
 }
+
+export function buildArticleSchema({
+  headline,
+  description,
+  path
+}: {
+  headline: string;
+  description: string;
+  path: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline,
+    description,
+    url: absoluteUrl(path),
+    mainEntityOfPage: absoluteUrl(path),
+    inLanguage: path.startsWith('/en/') ? 'en-CA' : 'fr-CA',
+    publisher: { '@id': `${SITE_URL}/#clinique-du-vr` }
+  };
+}

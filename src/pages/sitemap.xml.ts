@@ -25,6 +25,10 @@ const pageLastmods = new Map<string, string>([
   ['/en/faq/', '2026-04-19'],
   ['/zones-desservies/', '2026-04-19'],
   ['/en/service-areas/', '2026-04-19'],
+  ['/ressources/infiltration-eau-vr/', '2026-04-19'],
+  ['/en/resources/rv-water-intrusion/', '2026-04-19'],
+  ['/ressources/entretien-vr-deux-fois-par-an/', '2026-04-19'],
+  ['/en/resources/twice-yearly-rv-maintenance/', '2026-04-19'],
   ['/plan-du-site/', '2026-04-15'],
   ['/en/site-map/', '2026-04-15']
 ]);
@@ -40,6 +44,8 @@ const staticEntries: UrlEntry[] = [
   { path: '/choisir-service/', lastmod: '2026-04-15', alternatePaths: ['/en/choose-service/'] },
   { path: '/faq/', lastmod: '2026-04-19', alternatePaths: ['/en/faq/'] },
   { path: '/zones-desservies/', lastmod: '2026-04-19', alternatePaths: ['/en/service-areas/'] },
+  { path: '/ressources/infiltration-eau-vr/', lastmod: '2026-04-19', alternatePaths: ['/en/resources/rv-water-intrusion/'] },
+  { path: '/ressources/entretien-vr-deux-fois-par-an/', lastmod: '2026-04-19', alternatePaths: ['/en/resources/twice-yearly-rv-maintenance/'] },
   { path: '/plan-du-site/', lastmod: '2026-04-15', alternatePaths: ['/en/site-map/'] },
   { path: '/en/', lastmod: defaultLastmod, alternatePaths: ['/'] },
   { path: '/en/about/', lastmod: defaultLastmod, alternatePaths: ['/about/'] },
@@ -51,6 +57,8 @@ const staticEntries: UrlEntry[] = [
   { path: '/en/choose-service/', lastmod: '2026-04-15', alternatePaths: ['/choisir-service/'] },
   { path: '/en/faq/', lastmod: '2026-04-19', alternatePaths: ['/faq/'] },
   { path: '/en/service-areas/', lastmod: '2026-04-19', alternatePaths: ['/zones-desservies/'] },
+  { path: '/en/resources/rv-water-intrusion/', lastmod: '2026-04-19', alternatePaths: ['/ressources/infiltration-eau-vr/'] },
+  { path: '/en/resources/twice-yearly-rv-maintenance/', lastmod: '2026-04-19', alternatePaths: ['/ressources/entretien-vr-deux-fois-par-an/'] },
   { path: '/en/site-map/', lastmod: '2026-04-15', alternatePaths: ['/plan-du-site/'] }
 ];
 
