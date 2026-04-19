@@ -17,7 +17,7 @@ const shouldShowCta = pathname !== '/contact/' && pathname !== '/en/contact/';
 <footer class="footer">
   <div class="container footer-content">
     <div class="footer-col">
-      <img class="footer-brand" src={siteSettings.brandImage} alt={siteSettings.brandName} />
+      <img class="footer-brand" src={siteSettings.brandImage} alt={siteSettings.brandName} loading="lazy" decoding="async" />
       <p>{isEnglish ? siteSettings.footerDescription.en : siteSettings.footerDescription.fr}</p>
     </div>
     <div class="footer-col">

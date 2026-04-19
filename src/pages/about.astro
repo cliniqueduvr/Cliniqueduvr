@@ -40,7 +40,7 @@ const schemas = [
           <p>{aboutPage.hero.body}</p>
         </div>
         <figure class="brand-card">
-          <img src={siteSettings.brandImage} alt={aboutPage.hero.imageAlt} />
+          <img src={siteSettings.brandImage} alt={aboutPage.hero.imageAlt} loading="lazy" decoding="async" />
           <figcaption>{aboutPage.hero.caption}</figcaption>
         </figure>
       </div>
