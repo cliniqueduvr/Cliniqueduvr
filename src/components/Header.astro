@@ -556,6 +556,10 @@ const navItems = isEnglish
       width: auto;
     }
 
+    .topbar-right .lang-switch {
+      display: none;
+    }
+
     .topbar-phone {
       min-height: 34px;
       justify-content: flex-start;
@@ -585,7 +589,13 @@ const navItems = isEnglish
     }
 
     .topbar-right > a {
-      display: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
     }
 
     .lang-pill {
