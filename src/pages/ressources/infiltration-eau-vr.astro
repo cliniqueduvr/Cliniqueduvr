@@ -14,11 +14,11 @@ const faqs = [
   },
   {
     question: "Que faire en premier si je soupçonne une infiltration d'eau?",
-    answer: "Il faut d'abord arrêter d'exposer le véhicule à l'eau si possible, prendre des photos, noter les zones touchées, puis faire confirmer si le bon point de départ est une inspection, un entretien ciblé ou une réparation."
+    answer: "Il faut d'abord arrêter d'exposer le véhicule à l'eau si possible, prendre des photos, noter les zones touchées, puis faire confirmer si le bon point de départ est une <a href=\"/services/inspection/\">inspection</a>, un <a href=\"/services/entretien/\">entretien ciblé</a> ou une <a href=\"/services/reparation/\">réparation</a>."
   },
   {
     question: "Une infiltration d'eau demande-t-elle toujours une grosse réparation?",
-    answer: "Pas toujours. Si le problème est pris tôt, un entretien de joints ou une reprise d'étanchéité peut parfois suffire. Quand les matériaux sont déjà atteints, la réparation devient plus probable."
+    answer: "Pas toujours. Si le problème est pris tôt, un <a href=\"/services/entretien/\">entretien de joints</a> ou une reprise d'étanchéité peut parfois suffire. Quand les matériaux sont déjà atteints, la <a href=\"/services/reparation/\">réparation</a> devient plus probable."
   }
 ];
 const schemas = [
@@ -123,7 +123,7 @@ const schemas = [
               {faqs.map((item) => (
                 <details class="faq-card">
                   <summary><h3>{item.question}</h3></summary>
-                  <p>{item.answer}</p>
+                  <p set:html={item.answer} />
                 </details>
               ))}
             </div>
@@ -210,6 +210,20 @@ const schemas = [
     color: #f5f7fa;
     font-size: 1.2rem;
     line-height: 1.7;
+  }
+
+  .hero-copy strong {
+    color: var(--brand-gold);
+    font-weight: 800;
+  }
+
+  .hero-copy u {
+    color: white;
+    text-decoration-color: var(--brand-gold);
+  }
+
+  .hero-copy .seo-keyline {
+    color: #dbe4ee;
   }
 
   .hero-card {

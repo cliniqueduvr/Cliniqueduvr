@@ -11,6 +11,14 @@ export type FAQItem = {
   answer: string;
 };
 
+function stripHtml(value: string) {
+  return value
+    .replace(/<br\s*\/?>/gi, ' ')
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 export function absoluteUrl(path: string) {
   const normalizedPath = path === '/' ? '/' : `/${path.replace(/^\/+|\/+$/g, '')}/`;
   return new URL(normalizedPath, SITE_URL).toString();
@@ -35,10 +43,10 @@ export function buildFAQSchema(items: FAQItem[]) {
     '@type': 'FAQPage',
     mainEntity: items.map((item) => ({
       '@type': 'Question',
-      name: item.question,
+      name: stripHtml(item.question),
       acceptedAnswer: {
         '@type': 'Answer',
-        text: item.answer
+        text: stripHtml(item.answer)
       }
     }))
   };

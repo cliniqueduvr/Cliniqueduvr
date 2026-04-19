@@ -10,7 +10,7 @@ const description = "Guide pratique pour l'entretien de VR deux fois par année:
 const faqs = [
   {
     question: "Pourquoi faire l'entretien de son VR deux fois par année?",
-    answer: "Deux entretiens par année permettent de vérifier les joints, la toiture, les zones exposées à l’eau et les signes d’usure avant que de petites faiblesses deviennent des infiltrations plus coûteuses."
+    answer: "Deux entretiens par année permettent de vérifier les joints, la toiture, les zones exposées à l’eau et les signes d’usure avant que de petites faiblesses deviennent des infiltrations plus coûteuses. Consultez notre page <a href=\"/services/entretien/\">entretien de VR</a> si vous voulez planifier ce type d’intervention."
   },
   {
     question: "Que faut-il vérifier au printemps?",
@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     question: "Que faut-il vérifier à l’automne?",
-    answer: "À l’automne, l’objectif est de corriger les points faibles avant l’hivernage et d’éviter qu’un joint fatigué ou une petite faiblesse laisse entrer l’eau pendant la mauvaise saison."
+    answer: "À l’automne, l’objectif est de corriger les points faibles avant l’hivernage et d’éviter qu’un joint fatigué ou une petite faiblesse laisse entrer l’eau pendant la mauvaise saison. Si vous avez déjà un doute sérieux sur l’humidité, commencez plutôt par une <a href=\"/services/inspection/\">inspection</a>."
   }
 ];
 const schemas = [
@@ -128,7 +128,7 @@ const schemas = [
               {faqs.map((item) => (
                 <details class="faq-card">
                   <summary><h3>{item.question}</h3></summary>
-                  <p>{item.answer}</p>
+                  <p set:html={item.answer} />
                 </details>
               ))}
             </div>
@@ -215,6 +215,20 @@ const schemas = [
     color: #f5f7fa;
     font-size: 1.2rem;
     line-height: 1.7;
+  }
+
+  .hero-copy strong {
+    color: var(--brand-gold);
+    font-weight: 800;
+  }
+
+  .hero-copy u {
+    color: white;
+    text-decoration-color: var(--brand-gold);
+  }
+
+  .hero-copy .seo-keyline {
+    color: #dbe4ee;
   }
 
   .hero-card {

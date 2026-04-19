@@ -70,7 +70,7 @@ const serviceGuides = [
 const serviceFaqs = [
   {
     question: 'How do I choose the right service for my RV?',
-    answer: 'The right service mainly depends on the vehicle’s actual condition. If you see signs of water intrusion, worn seals, interior damage, or if you are preparing for a purchase or sale, we can guide you toward inspection, maintenance, repair, detailing, or buying and selling depending on the need.'
+    answer: 'The right service mainly depends on the vehicle’s actual condition. If you see signs of water intrusion, worn seals, interior damage, or if you are preparing for a purchase or sale, we can guide you toward <a href="/en/services/inspection/">inspection</a>, <a href="/en/services/maintenance/">maintenance</a>, <a href="/en/services/repair/">repair</a>, <a href="/en/services/detailing/">detailing</a>, or <a href="/en/sales/">buying and selling</a> depending on the need.'
   },
   {
     question: 'Do you only work in Gatineau?',
@@ -78,7 +78,7 @@ const serviceFaqs = [
   },
   {
     question: 'Do you offer both shop and mobile services?',
-    answer: 'Yes, depending on the requested service. Some interventions are very well handled in the workshop, while others can also be offered on the road or with travel depending on the situation.'
+    answer: 'Yes, depending on the requested service. Some interventions are very well handled in the workshop, while others can also be offered on the road or with travel depending on the situation. See <a href="/en/services/inspection/">inspection</a>, <a href="/en/services/maintenance/">maintenance</a>, or <a href="/en/services/detailing/">RV detailing</a> for the most relevant mobile cases.'
   }
 ];
 const quickSteps = [
@@ -182,7 +182,7 @@ const breadcrumbs = buildBreadcrumbSchema([
                 <h3>{item.question}</h3>
               </summary>
               <div class="accordion-content">
-                <p>{item.answer}</p>
+                <p set:html={item.answer} />
               </div>
             </details>
           ))}

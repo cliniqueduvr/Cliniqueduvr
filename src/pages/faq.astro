@@ -77,7 +77,7 @@ const schemas = [
           {faqItems.map((item) => (
             <details class="interior-faq-item">
               <summary><h3>{item.question}</h3></summary>
-              <p>{item.answer}</p>
+              <p set:html={item.answer} />
             </details>
           ))}
         </div>

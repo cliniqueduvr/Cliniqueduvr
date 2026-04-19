@@ -57,11 +57,11 @@ export const localAreaPagesFr: LocalAreaPage[] = [
     faqs: [
       {
         question: "Que faire si mon VR a une fuite d'eau à Gatineau?",
-        answer: "Il faut d'abord confirmer la source et l'ampleur du problème. Selon l'état des joints, de la toiture et des matériaux atteints, la meilleure prochaine étape peut être une inspection, un entretien ciblé ou une réparation."
+        answer: "Il faut d'abord confirmer la source et l'ampleur du problème. Selon l'état des joints, de la toiture et des matériaux atteints, la meilleure prochaine étape peut être une <a href=\"/services/inspection/\">inspection</a>, un <a href=\"/services/entretien/\">entretien ciblé</a> ou une <a href=\"/services/reparation/\">réparation</a>."
       },
       {
         question: "Une fuite d'eau exige-t-elle toujours une grosse réparation?",
-        answer: "Pas toujours. Si le problème est pris tôt, un entretien ou une reprise de scellement peut parfois suffire. Quand les murs, le plancher ou les finis sont déjà touchés, la réparation devient souvent nécessaire."
+        answer: "Pas toujours. Si le problème est pris tôt, un <a href=\"/services/entretien/\">entretien</a> ou une reprise de scellement peut parfois suffire. Quand les murs, le plancher ou les finis sont déjà touchés, la <a href=\"/services/reparation/\">réparation</a> devient souvent nécessaire."
       }
     ],
     links: [
@@ -107,11 +107,11 @@ export const localAreaPagesFr: LocalAreaPage[] = [
     faqs: [
       {
         question: "À quel moment faire l'entretien d'un VR à Gatineau?",
-        answer: "Dès que les joints commencent à fatiguer, que la toiture semble vulnérable ou avant la saison si vous voulez réduire le risque de fuite d'eau et de dommages plus coûteux."
+        answer: "Dès que les joints commencent à fatiguer, que la toiture semble vulnérable ou avant la saison si vous voulez réduire le risque de fuite d'eau et de dommages plus coûteux. Voyez aussi notre ressource <a href=\"/ressources/entretien-vr-deux-fois-par-an/\">entretien de VR deux fois par an</a>."
       },
       {
         question: "L'entretien aide-t-il vraiment à prévenir une fuite d'eau?",
-        answer: "Oui. Un entretien bien ciblé des joints, du scellement et de la membrane aide à préserver l'étanchéité et à éviter qu'une faiblesse mineure devienne un problème majeur."
+        answer: "Oui. Un <a href=\"/services/entretien/\">entretien</a> bien ciblé des joints, du scellement et de la membrane aide à préserver l'étanchéité et à éviter qu'une faiblesse mineure devienne un problème majeur."
       }
     ],
     links: [
@@ -157,11 +157,11 @@ export const localAreaPagesFr: LocalAreaPage[] = [
     faqs: [
       {
         question: "Pourquoi demander une inspection de VR en Outaouais?",
-        answer: "Une inspection permet de confirmer l'état réel du véhicule, de détecter les signes d'humidité ou d'infiltration et de mieux orienter la suite, que ce soit avant achat, avant réparation ou avant vente dans l'Outaouais."
+        answer: "Une <a href=\"/services/inspection/\">inspection</a> permet de confirmer l'état réel du véhicule, de détecter les signes d'humidité ou d'infiltration et de mieux orienter la suite, que ce soit avant achat, avant réparation ou avant vente dans l'Outaouais."
       },
       {
         question: "L'inspection est-elle utile avant une réparation?",
-        answer: "Oui. Quand le problème n'est pas encore parfaitement clair, l'inspection aide à éviter de partir dans la mauvaise direction et à prioriser les bons travaux."
+        answer: "Oui. Quand le problème n'est pas encore parfaitement clair, l'<a href=\"/services/inspection/\">inspection</a> aide à éviter de partir dans la mauvaise direction et à prioriser les bons travaux."
       }
     ],
     links: [
@@ -207,11 +207,11 @@ export const localAreaPagesFr: LocalAreaPage[] = [
     faqs: [
       {
         question: "Quand faut-il demander une réparation de VR à Ottawa?",
-        answer: "Quand les dommages sont déjà visibles ou confirmés, par exemple un plancher mou, un mur touché, une toiture endommagée ou des signes de moisissure liés à l'eau, la réparation devient généralement la bonne prochaine étape."
+        answer: "Quand les dommages sont déjà visibles ou confirmés, par exemple un plancher mou, un mur touché, une toiture endommagée ou des signes de moisissure liés à l'eau, la <a href=\"/services/reparation/\">réparation</a> devient généralement la bonne prochaine étape."
       },
       {
         question: "Réparez-vous seulement l'apparence ou aussi la cause?",
-        answer: "La réparation utile commence par la validation de la cause. Le but est de corriger le problème à la base avant de remettre les surfaces en état."
+        answer: "La réparation utile commence par la validation de la cause. Le but est de corriger le problème à la base avant de remettre les surfaces en état. Consultez notre page <a href=\"/services/reparation/\">réparation spécialisée</a> pour le détail."
       }
     ],
     links: [
@@ -257,11 +257,11 @@ export const localAreaPagesFr: LocalAreaPage[] = [
     faqs: [
       {
         question: "Que faire si ma roulotte montre des signes d'infiltration d'eau dans les Laurentides?",
-        answer: "La première étape utile est souvent l'inspection pour confirmer les zones humides, l'état de la toiture et des joints, puis décider si un entretien ou une réparation est nécessaire."
+        answer: "La première étape utile est souvent l'<a href=\"/services/inspection/\">inspection</a> pour confirmer les zones humides, l'état de la toiture et des joints, puis décider si un <a href=\"/services/entretien/\">entretien</a> ou une <a href=\"/services/reparation/\">réparation</a> est nécessaire."
       },
       {
         question: "Tous les problèmes d'infiltration demandent-ils une réparation immédiate?",
-        answer: "Pas toujours. Certains cas relèvent d'un entretien préventif ou d'une reprise ciblée des joints, mais il faut d'abord confirmer l'état réel de la roulotte."
+        answer: "Pas toujours. Certains cas relèvent d'un <a href=\"/services/entretien/\">entretien préventif</a> ou d'une reprise ciblée des joints, mais il faut d'abord confirmer l'état réel de la roulotte."
       }
     ],
     links: [

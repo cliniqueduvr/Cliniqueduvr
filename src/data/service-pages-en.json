@@ -71,7 +71,7 @@
         },
         {
           "question": "Do you perform mechanical inspections?",
-          "answer": "No. We do not perform mechanical inspections, but we do offer brake maintenance at our shop only, with no mobile brake service."
+          "answer": "No. We do not perform mechanical inspections. If your concern is mainly watertightness, see our <a href=\"/en/services/inspection/\">RV inspection page</a>. We do, however, offer brake maintenance at our shop only, with no mobile brake service."
         }
       ]
     },
@@ -139,11 +139,11 @@
       "faqs": [
         {
           "question": "Why replace RV seals?",
-          "answer": "Replacing wall seals, adding roof sealant where it is missing, and maintaining the membrane help preserve the watertight condition of the vehicle and reduce the risk of water intrusion before it causes more serious damage."
+          "answer": "Replacing wall seals, adding roof sealant where it is missing, and maintaining the membrane help preserve the watertight condition of the vehicle and reduce the risk of water intrusion before it causes more serious damage. See our <a href=\"/en/services/maintenance/\">RV maintenance page</a> for the full service details."
         },
         {
           "question": "What maintenance items matter most here?",
-          "answer": "Wall seals, roof areas where the sealant is missing or tired, the roof membrane, and other water-exposed points are among the most important items to maintain regularly."
+          "answer": "Wall seals, roof areas where the sealant is missing or tired, the roof membrane, and other water-exposed points are among the most important items to maintain regularly. Our resource on <a href=\"/en/resources/twice-yearly-rv-maintenance/\">twice-yearly RV maintenance</a> also explains the best rhythm to follow."
         },
         {
           "question": "Do you offer the service in shop or mobile?",
@@ -215,15 +215,15 @@
       "faqs": [
         {
           "question": "What should I do if my RV has a water leak?",
-          "answer": "It should be checked quickly so the source can be confirmed before more damage reaches the structure, floor, walls, roof membrane and interior materials, while also reducing the risk of mold."
+          "answer": "It should be checked quickly so the source can be confirmed. Start with an <a href=\"/en/services/inspection/\">inspection</a> when the cause is still unclear, or go directly to our <a href=\"/en/services/repair/\">RV repair page</a> if damage has already reached the structure, floor, walls, roof membrane, or interior materials while also increasing the risk of mold."
         },
         {
           "question": "Do you repair roofs and roof membranes?",
-          "answer": "Yes. We perform targeted roof and roof membrane repairs when appropriate, depending on material condition and how extensive the damage is."
+          "answer": "Yes. We perform targeted roof and roof membrane repairs when appropriate, depending on material condition and how extensive the damage is. If you want to better recognize the signs first, see our <a href=\"/en/resources/rv-water-intrusion/\">RV water intrusion guide</a>."
         },
         {
           "question": "Do you handle insurance and private repairs?",
-          "answer": "Yes. We handle both insurance-based and private repairs depending on the nature of the damage and the needs of the file."
+          "answer": "Yes. We handle both insurance-based and private repairs depending on the nature of the damage and the needs of the file. You can see the scope on our <a href=\"/en/services/repair/\">specialized RV repair page</a>."
         }
       ]
     },
@@ -290,15 +290,15 @@
       "faqs": [
         {
           "question": "Do you handle cleaning, polishing, and waxing for RVs?",
-          "answer": "Yes. This page is dedicated to cleaning, polishing, and waxing for RVs and motorhomes, with work confirmed in the workshop or on the road depending on the vehicle and assignment."
+          "answer": "Yes. See our <a href=\"/en/services/detailing/\">RV and motorhome detailing page</a> for cleaning, polishing, and waxing, with work confirmed in the workshop or on the road depending on the vehicle and assignment."
         },
         {
           "question": "Is this service only available in the workshop?",
-          "answer": "Not always. For RVs and motorhomes, the assignment can be confirmed in the workshop or on location depending on the vehicle, the work involved, and access conditions."
+          "answer": "Not always. For RVs and motorhomes, the assignment can be confirmed in the workshop or on location depending on the vehicle, the work involved, and access conditions. See our <a href=\"/en/services/detailing/\">RV detailing page</a> for details."
         },
         {
           "question": "Is this the same offer as auto and truck detailing?",
-          "answer": "No. Auto and truck detailing is handled on a separate page, with workshop-only service."
+          "answer": "No. <a href=\"/en/services/auto-truck-detailing/\">Auto and truck detailing</a> is handled on a separate page, with workshop-only service."
         }
       ]
     },
@@ -365,15 +365,15 @@
       "faqs": [
         {
           "question": "Is this page only for cars and trucks?",
-          "answer": "Yes. This offer is dedicated to cars and trucks. RV and motorhome detailing is handled on a separate page."
+          "answer": "Yes. This offer is dedicated to cars and trucks. <a href=\"/en/services/detailing/\">RV and motorhome detailing</a> is handled on a separate page."
         },
         {
           "question": "Is the auto and truck service available on the road?",
-          "answer": "No. Auto and truck detailing is available in the workshop only."
+          "answer": "No. Auto and truck detailing is available in the workshop only. See our <a href=\"/en/services/auto-truck-detailing/\">auto and truck detailing page</a> for details."
         },
         {
           "question": "What does this offer mainly include?",
-          "answer": "Depending on the need, it mainly covers interior and exterior cleaning, polishing, and stronger visual finish improvement."
+          "answer": "Depending on the need, it mainly covers interior and exterior cleaning, polishing, and stronger visual finish improvement. See our <a href=\"/en/services/auto-truck-detailing/\">auto and truck detailing page</a> for the full scope."
         }
       ]
     },
@@ -440,15 +440,15 @@
       "faqs": [
         {
           "question": "Why inspect an RV before buying it?",
-          "answer": "A pre-purchase inspection helps detect watertightness, roof, system, or presentation issues that can influence the vehicle's actual value."
+          "answer": "A <a href=\"/en/services/inspection/\">pre-purchase inspection</a> helps detect watertightness, roof, system, or presentation issues that can influence the vehicle's actual value."
         },
         {
           "question": "Which repairs are worth doing before selling an RV?",
-          "answer": "The most useful work is the work that clarifies the vehicle's condition, corrects major issues, and improves the general presentation without unnecessary overinvestment."
+          "answer": "The most useful work is the work that clarifies the vehicle's condition, corrects major issues, and improves the general presentation without unnecessary overinvestment. Depending on the case, an <a href=\"/en/services/inspection/\">inspection</a> or <a href=\"/en/services/detailing/\">RV detailing</a> may be worth doing before selling."
         },
         {
           "question": "Can you help if I am not sure whether to repair or sell?",
-          "answer": "Yes. This service is specifically meant to prioritize the corrections and better understand whether the vehicle deserves a full restoration, a quick sale, or a more gradual upgrade."
+          "answer": "Yes. This service is specifically meant to prioritize the corrections and better understand whether the vehicle deserves a full restoration, a quick sale, or a more gradual upgrade. See our <a href=\"/en/sales/\">RV buying and selling page</a> for how we guide that decision."
         }
       ]
     }

@@ -14,11 +14,11 @@ const faqs = [
   },
   {
     question: 'What should I do first if I suspect water intrusion?',
-    answer: 'Try to keep the vehicle away from more water exposure, take photos, note the affected areas, and then confirm whether the right next step is inspection, targeted maintenance, or repair.'
+    answer: 'Try to keep the vehicle away from more water exposure, take photos, note the affected areas, and then confirm whether the right next step is <a href="/en/services/inspection/">inspection</a>, targeted <a href="/en/services/maintenance/">maintenance</a>, or <a href="/en/services/repair/">repair</a>.'
   },
   {
     question: 'Does water intrusion always mean a major repair?',
-    answer: 'Not always. If caught early, seal maintenance or a sealing correction may be enough. Once materials are already affected, repair becomes more likely.'
+    answer: 'Not always. If caught early, seal <a href="/en/services/maintenance/">maintenance</a> or a sealing correction may be enough. Once materials are already affected, <a href="/en/services/repair/">repair</a> becomes more likely.'
   }
 ];
 const schemas = [
@@ -120,7 +120,7 @@ const schemas = [
               {faqs.map((item) => (
                 <details class="interior-faq-item">
                   <summary><h3>{item.question}</h3></summary>
-                  <p>{item.answer}</p>
+                  <p set:html={item.answer} />
                 </details>
               ))}
             </div>

@@ -326,6 +326,20 @@ const hasGoogleAds = googleAdsId.length > 0;
         line-height: 1.7;
       }
 
+      .interior-hero-copy :global(strong) {
+        color: var(--brand-gold);
+        font-weight: 800;
+      }
+
+      .interior-hero-copy :global(u) {
+        color: white;
+        text-decoration-color: var(--brand-gold);
+      }
+
+      .interior-hero-copy :global(.seo-keyline) {
+        color: #dbe4ee;
+      }
+
       .interior-hero-card {
         align-self: end;
         background: white;
@@ -518,6 +532,14 @@ const hasGoogleAds = googleAdsId.length > 0;
 
       .interior-faq-item summary::-webkit-details-marker {
         display: none;
+      }
+
+      .interior-faq-item p a,
+      .faq-item p a,
+      .faq-card p a {
+        font-weight: 700;
+        text-decoration: underline;
+        text-underline-offset: 0.15em;
       }
 
       .interior-faq-item summary::after {

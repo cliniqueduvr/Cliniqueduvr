@@ -10,7 +10,7 @@ const description = 'Practical guide to twice-yearly RV maintenance: what to che
 const faqs = [
   {
     question: 'Why maintain an RV twice a year?',
-    answer: 'Two maintenance checks each year make it easier to review seals, roof areas, moisture signs, and exposed points before small weaknesses turn into expensive water intrusion.'
+    answer: 'Two maintenance checks each year make it easier to review seals, roof areas, moisture signs, and exposed points before small weaknesses turn into expensive water intrusion. See our <a href="/en/services/maintenance/">RV maintenance service</a> if you want to book that work.'
   },
   {
     question: 'What should be checked in spring?',
@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     question: 'What should be checked in fall?',
-    answer: 'In fall, the goal is to correct weak points before storage or harsher weather so a tired seal or small weakness does not let water in during the off-season.'
+    answer: 'In fall, the goal is to correct weak points before storage or harsher weather so a tired seal or small weakness does not let water in during the off-season. If moisture signs already look serious, start with an <a href="/en/services/inspection/">inspection</a>.'
   }
 ];
 const schemas = [
@@ -125,7 +125,7 @@ const schemas = [
               {faqs.map((item) => (
                 <details class="interior-faq-item">
                   <summary><h3>{item.question}</h3></summary>
-                  <p>{item.answer}</p>
+                  <p set:html={item.answer} />
                 </details>
               ))}
             </div>

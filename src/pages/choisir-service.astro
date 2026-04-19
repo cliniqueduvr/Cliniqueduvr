@@ -53,15 +53,15 @@ const serviceAreas = [
 const faqs = [
   {
     question: 'Quelle est la meilleure première étape si je ne suis pas certain du problème?',
-    answer: "Quand le problème n'est pas clair, l'inspection est souvent le meilleur point de départ. Elle permet de confirmer l'état réel du véhicule et d'éviter de partir dans la mauvaise direction."
+    answer: "Quand le problème n'est pas clair, l'<a href=\"/services/inspection/\">inspection</a> est souvent le meilleur point de départ. Elle permet de confirmer l'état réel du véhicule et d'éviter de partir dans la mauvaise direction."
   },
   {
     question: 'Quand choisir l’entretien au lieu de la réparation?',
-    answer: "L'entretien convient surtout quand on veut prévenir une infiltration, reprendre des joints ou entretenir la toiture avant que des dommages importants apparaissent. Quand le dommage est déjà visible, la réparation est souvent plus appropriée."
+    answer: "L'<a href=\"/services/entretien/\">entretien</a> convient surtout quand on veut prévenir une infiltration, reprendre des joints ou entretenir la toiture avant que des dommages importants apparaissent. Quand le dommage est déjà visible, la <a href=\"/services/reparation/\">réparation</a> est souvent plus appropriée."
   },
   {
     question: 'L’esthétique peut-elle être utile avant une vente?',
-    answer: "Oui. L'esthétique peut améliorer la présentation du véhicule, mais si l'objectif est de clarifier son état réel avant une transaction, l'inspection reste généralement la première étape la plus utile."
+    answer: "Oui. L'<a href=\"/services/esthetique/\">esthétique</a> peut améliorer la présentation du véhicule, mais si l'objectif est de clarifier son état réel avant une transaction, l'<a href=\"/services/inspection/\">inspection</a> reste généralement la première étape la plus utile."
   }
 ];
 
@@ -132,7 +132,7 @@ const breadcrumbs = buildBreadcrumbSchema([
           {faqs.map((item) => (
             <details class="faq-card">
               <summary><h3>{item.question}</h3></summary>
-              <p>{item.answer}</p>
+              <p set:html={item.answer} />
             </details>
           ))}
         </div>

@@ -70,7 +70,7 @@ const serviceGuides = [
 const serviceFaqs = [
   {
     question: 'Comment choisir le bon service pour mon VR?',
-    answer: "Le bon service dépend surtout de l'état réel du véhicule. Si vous voyez des signes d'infiltration, de joints fatigués, de dommages intérieurs ou si vous préparez un achat ou une vente, nous pouvons vous orienter vers l'inspection, l'entretien, la réparation, l'esthétique ou la vente selon le besoin."
+    answer: "Le bon service dépend surtout de l'état réel du véhicule. Si vous voyez des signes d'infiltration, de joints fatigués, de dommages intérieurs ou si vous préparez un achat ou une vente, nous pouvons vous orienter vers l'<a href=\"/services/inspection/\">inspection</a>, l'<a href=\"/services/entretien/\">entretien</a>, la <a href=\"/services/reparation/\">réparation</a>, l'<a href=\"/services/esthetique/\">esthétique</a> ou la <a href=\"/vente/\">vente et achat</a> selon le besoin."
   },
   {
     question: 'Travaillez-vous seulement à Gatineau?',
@@ -78,7 +78,7 @@ const serviceFaqs = [
   },
   {
     question: 'Offrez-vous des services mobiles et en atelier?',
-    answer: "Oui, selon le service demandé. Certaines interventions se font très bien en atelier, alors que d'autres peuvent aussi être offertes sur la route ou avec déplacement selon la situation."
+    answer: "Oui, selon le service demandé. Certaines interventions se font très bien en atelier, alors que d'autres peuvent aussi être offertes sur la route ou avec déplacement selon la situation. Consultez les pages <a href=\"/services/inspection/\">inspection</a>, <a href=\"/services/entretien/\">entretien</a> ou <a href=\"/services/esthetique/\">esthétique VR</a> pour voir les cas où le mobile est pertinent."
   }
 ];
 const quickSteps = [
@@ -169,7 +169,7 @@ const breadcrumbs = buildBreadcrumbSchema([
                     <h3>{item.question}</h3>
                   </summary>
                   <div class="accordion-content">
-                    <p>{item.answer}</p>
+                    <p set:html={item.answer} />
                   </div>
                 </details>
               ))}

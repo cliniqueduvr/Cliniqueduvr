@@ -118,7 +118,7 @@
         },
         {
           "question": "Faites-vous des inspections mécaniques?",
-          "answer": "Non. Nous ne faisons pas d'inspection mécanique. Nous effectuons toutefois l'entretien des freins à notre atelier seulement, sans service sur la route."
+          "answer": "Non. Nous ne faisons pas d'inspection mécanique. Si vous avez surtout un doute sur l'étanchéité, consultez notre page <a href=\"/services/inspection/\">inspection de VR</a>. Nous effectuons toutefois l'entretien des freins à notre atelier seulement, sans service sur la route."
         }
       ]
     },
@@ -233,11 +233,11 @@
       "faqs": [
         {
           "question": "Pourquoi changer les joints d'un VR?",
-          "answer": "Le changement des joints de mur, l'ajout de scellement sur la toiture là où il en manque et l'entretien de la membrane aident à préserver l'étanchéité du véhicule et à éviter les infiltrations d'eau avant qu'elles causent des dommages plus importants."
+          "answer": "Le changement des joints de mur, l'ajout de scellement sur la toiture là où il en manque et l'entretien de la membrane aident à préserver l'étanchéité du véhicule et à éviter les infiltrations d'eau avant qu'elles causent des dommages plus importants. Consultez notre page <a href=\"/services/entretien/\">entretien de VR</a> pour le détail du service."
         },
         {
           "question": "Quels éléments d'entretien sont les plus importants?",
-          "answer": "Les joints de mur, les zones de toiture où le scellement est manquant ou fatigué, la membrane de toit et les autres points exposés à l'eau font partie des éléments les plus importants à entretenir régulièrement."
+          "answer": "Les joints de mur, les zones de toiture où le scellement est manquant ou fatigué, la membrane de toit et les autres points exposés à l'eau font partie des éléments les plus importants à entretenir régulièrement. Notre ressource <a href=\"/ressources/entretien-vr-deux-fois-par-an/\">entretien de VR deux fois par an</a> explique aussi le bon rythme à suivre."
         },
         {
           "question": "Offrez-vous le service en atelier ou sur la route?",
@@ -357,15 +357,15 @@
       "faqs": [
         {
           "question": "Que faire si mon VR présente une infiltration d'eau?",
-        "answer": "Il faut agir rapidement pour confirmer la <strong>source</strong> et limiter les dommages à la structure, au <strong>plancher</strong>, aux <strong>murs</strong>, à la <strong>membrane de toit</strong> et aux matériaux intérieurs, en plus de réduire le risque de <strong>moisissure</strong>."
+        "answer": "Il faut agir rapidement pour confirmer la <strong>source</strong>. Commencez souvent par une <a href=\"/services/inspection/\">inspection</a> si la cause n'est pas encore claire, ou consultez directement notre page <a href=\"/services/reparation/\">réparation de VR</a> si les dommages touchent déjà la structure, le <strong>plancher</strong>, les <strong>murs</strong>, la <strong>membrane de toit</strong> ou les matériaux intérieurs, en plus du risque de <strong>moisissure</strong>."
         },
         {
           "question": "Réparez-vous la toiture et la membrane de toit?",
-        "answer": "Oui. Nous effectuons des réparations ciblées sur la <strong>toiture</strong> et la <strong>membrane de toit</strong> lorsque cela est approprié, selon l'état des matériaux et l'étendue du dommage."
+        "answer": "Oui. Nous effectuons des réparations ciblées sur la <strong>toiture</strong> et la <strong>membrane de toit</strong> lorsque cela est approprié, selon l'état des matériaux et l'étendue du dommage. Si vous voulez d'abord mieux reconnaître les signes, voyez aussi notre ressource <a href=\"/ressources/infiltration-eau-vr/\">infiltration d'eau de VR</a>."
         },
         {
           "question": "Faites-vous des réparations d'assurance ou privées?",
-        "answer": "Oui. Nous prenons en charge autant les réparations d'<strong>assurance</strong> que les réparations privées, selon la nature du dommage et les besoins du dossier."
+        "answer": "Oui. Nous prenons en charge autant les réparations d'<strong>assurance</strong> que les réparations privées, selon la nature du dommage et les besoins du dossier. Vous pouvez voir le détail sur notre page <a href=\"/services/reparation/\">réparation spécialisée de VR</a>."
         }
       ]
     },
@@ -432,15 +432,15 @@
       "faqs": [
         {
           "question": "Faites-vous le nettoyage, le polissage et le cirage de VR?",
-          "answer": "Oui. Cette page est dédiée au nettoyage, au polissage et au cirage de VR et de motorisés, avec intervention possible en atelier ou sur la route selon le véhicule et le mandat."
+          "answer": "Oui. Consultez notre page <a href=\"/services/esthetique/\">esthétique de VR et de motorisé</a> pour le nettoyage, le polissage et le cirage de VR, avec intervention possible en atelier ou sur la route selon le véhicule et le mandat."
         },
         {
           "question": "Le service se fait-il seulement en atelier?",
-          "answer": "Non, pas toujours. Pour les VR et motorisés, l'intervention peut être confirmée en atelier ou sur la route selon le format du véhicule, le type de travail et le contexte d'accès."
+          "answer": "Non, pas toujours. Pour les VR et motorisés, l'intervention peut être confirmée en atelier ou sur la route selon le format du véhicule, le type de travail et le contexte d'accès. Voyez notre page <a href=\"/services/esthetique/\">esthétique de VR et de motorisé</a> pour le détail."
         },
         {
           "question": "Est-ce la même offre que pour les autos et camions?",
-          "answer": "Non. L'esthétique auto et camion est offerte sur une page distincte, avec un service atelier seulement."
+          "answer": "Non. L'<a href=\"/services/esthetique-auto-camion/\">esthétique auto et camion</a> est offerte sur une page distincte, avec un service atelier seulement."
         }
       ]
     },
@@ -507,15 +507,15 @@
       "faqs": [
         {
           "question": "Cette page est-elle seulement pour auto et camion?",
-          "answer": "Oui. Cette offre est dédiée aux autos et camions. L'esthétique de VR et motorisé se trouve sur une autre page distincte."
+          "answer": "Oui. Cette offre est dédiée aux autos et camions. L'<a href=\"/services/esthetique/\">esthétique de VR et motorisé</a> se trouve sur une autre page distincte."
         },
         {
           "question": "Le service auto et camion est-il offert sur la route?",
-          "answer": "Non. Le service esthétique auto et camion est offert en atelier seulement."
+          "answer": "Non. Le service esthétique auto et camion est offert en atelier seulement. Consultez notre page <a href=\"/services/esthetique-auto-camion/\">esthétique auto et camion</a> pour les détails."
         },
         {
           "question": "Que comprend surtout cette offre?",
-          "answer": "Selon le besoin, elle couvre surtout le nettoyage intérieur et extérieur, le polissage et l'amélioration de la finition visuelle du véhicule."
+          "answer": "Selon le besoin, elle couvre surtout le nettoyage intérieur et extérieur, le polissage et l'amélioration de la finition visuelle du véhicule. Voyez notre page <a href=\"/services/esthetique-auto-camion/\">esthétique auto et camion</a> pour l'offre complète."
         }
       ]
     },
@@ -582,15 +582,15 @@
       "faqs": [
         {
           "question": "Pourquoi faire inspecter un VR avant de l'acheter?",
-          "answer": "Une inspection avant achat aide à détecter les problèmes d'étanchéité, de toiture, de systèmes ou de présentation qui peuvent influencer la valeur réelle du véhicule."
+          "answer": "Une <a href=\"/services/inspection/\">inspection avant achat</a> aide à détecter les problèmes d'étanchéité, de toiture, de systèmes ou de présentation qui peuvent influencer la valeur réelle du véhicule."
         },
         {
           "question": "Quels travaux valent la peine avant de vendre un VR?",
-          "answer": "Les travaux les plus utiles sont ceux qui clarifient l'état du véhicule, corrigent les problèmes majeurs et améliorent la présentation générale sans surinvestir inutilement."
+          "answer": "Les travaux les plus utiles sont ceux qui clarifient l'état du véhicule, corrigent les problèmes majeurs et améliorent la présentation générale sans surinvestir inutilement. Selon le cas, une <a href=\"/services/inspection/\">inspection</a> ou un service d'<a href=\"/services/esthetique/\">esthétique VR</a> peut être pertinent avant la vente."
         },
         {
           "question": "Pouvez-vous aider si je ne sais pas si je dois réparer ou vendre?",
-          "answer": "Oui. Ce service sert justement à prioriser les correctifs et à mieux comprendre si le véhicule mérite une remise en état, une vente rapide ou une mise à niveau plus progressive."
+          "answer": "Oui. Ce service sert justement à prioriser les correctifs et à mieux comprendre si le véhicule mérite une remise en état, une vente rapide ou une mise à niveau plus progressive. Consultez notre page <a href=\"/vente/\">vente et achat de VR</a> pour voir comment nous orientons cette décision."
         }
       ]
     }

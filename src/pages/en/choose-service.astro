@@ -53,15 +53,15 @@ const serviceAreas = [
 const faqs = [
   {
     question: 'What is the best first step if I am not sure what the problem is?',
-    answer: 'When the problem is not clear, inspection is often the best starting point. It helps confirm the vehicle’s actual condition and avoids going in the wrong direction.'
+    answer: 'When the problem is not clear, <a href="/en/services/inspection/">inspection</a> is often the best starting point. It helps confirm the vehicle’s actual condition and avoids going in the wrong direction.'
   },
   {
     question: 'When should I choose maintenance instead of repair?',
-    answer: 'Maintenance is generally the right fit when you want to prevent water intrusion, refresh seals, or care for the roof before significant damage appears. If damage is already visible, repair is often the better direction.'
+    answer: '<a href="/en/services/maintenance/">Maintenance</a> is generally the right fit when you want to prevent water intrusion, refresh seals, or care for the roof before significant damage appears. If damage is already visible, <a href="/en/services/repair/">repair</a> is often the better direction.'
   },
   {
     question: 'Can detailing help before selling an RV?',
-    answer: 'Yes. Detailing can improve presentation, but if the goal is to clarify the true condition of the vehicle before a transaction, inspection is usually the most useful first step.'
+    answer: 'Yes. <a href="/en/services/detailing/">Detailing</a> can improve presentation, but if the goal is to clarify the true condition of the vehicle before a transaction, <a href="/en/services/inspection/">inspection</a> is usually the most useful first step.'
   }
 ];
 
@@ -133,7 +133,7 @@ const breadcrumbs = buildBreadcrumbSchema([
           {faqs.map((item) => (
             <details class="faq-card">
               <summary><h3>{item.question}</h3></summary>
-              <p>{item.answer}</p>
+              <p set:html={item.answer} />
             </details>
           ))}
         </div>
