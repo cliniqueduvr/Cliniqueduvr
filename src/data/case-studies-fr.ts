@@ -1,59 +1,133 @@
 export const caseStudiesFr = [
   {
     slug: 'infiltration-toiture-vr-gatineau',
-    title: "Infiltration de toiture sur un VR à Gatineau",
-    metaTitle: "Cas réel: infiltration de toiture sur un VR à Gatineau | Clinique du VR",
-    metaDescription: "Cas réel d'infiltration de toiture sur un VR à Gatineau: inspection ciblée, humidité confirmée, reprise d'étanchéité et prochaines étapes recommandées.",
+    photoSectionTitle: "Photos d'inspection",
+    photoGallery: [
+      {
+        label: 'Défaut observé',
+        image: '/images/realisations/Inspection-vr/infiltration.PNG',
+        alt: "Photo d'inspection montrant une infiltration de toiture sur un VR à Gatineau",
+        title: "Photo d'inspection disponible",
+        text: "Image utilisée pour documenter un défaut visible pendant une inspection d'infiltration."
+      }
+    ],
+    galleryPlaceholderTitle: 'Autre photo à venir',
+    galleryPlaceholderBody: "D'autres angles ou défauts observés pourront être ajoutés à cette inspection au fur et à mesure.",
+    title: "Inspection de VR à Gatineau | Défauts observés et infiltration d'eau",
+    metaTitle: "Cas réel: inspection de VR à Gatineau | Défauts observés et infiltration d'eau | Clinique du VR",
+    metaDescription: "Page d'inspection générale de VR à Gatineau: défauts observés, signes d'infiltration d'eau, zones de toiture à surveiller et logique de prochaine étape.",
     location: 'Gatineau',
-    eyebrow: "Cas réel d'infiltration d'eau",
-    h1: "Infiltration de toiture sur un VR à Gatineau",
-    lead: "Le client soupçonnait une fuite sans pouvoir confirmer si le problème venait réellement de la toiture. L'objectif était d'identifier rapidement la zone à risque et d'éviter que l'humidité se propage.",
-    intro: "Ce type de dossier est fréquent quand les joints et la toiture commencent à fatiguer. Une intervention trop tardive peut transformer un simple problème d'étanchéité en dommage intérieur plus coûteux.",
+    eyebrow: "Inspection générale de VR",
+    h1: "Inspection de VR à Gatineau: défauts observés et signes d'infiltration",
+    lead: "Cette page sert de dossier d'inspection générale quand plusieurs défauts visibles doivent être documentés avant de décider si la bonne suite est un entretien, une reprise d'étanchéité ou une réparation.",
+    intro: "Dans une inspection de VR, on ne cherche pas seulement une fuite confirmée. On documente aussi les indices visibles: joints fatigués, zones de toiture à surveiller, traces d'eau, matériaux touchés ou points faibles qui méritent une prochaine étape claire.",
     highlights: [
-      'Inspection ciblée avec humidimètre',
-      'Validation de la zone de toiture',
-      "Reprise d'étanchéité recommandée",
+      'Photos de défauts observés',
+      'Inspection orientée étanchéité',
+      'Documentation avant décision',
+      'Inspection réalisée à Gatineau'
+    ],
+    heroChecklist: [
+      'Défauts visibles documentés en photo',
+      "Lecture plus claire de l'état réel du véhicule",
+      "Décision plus facile entre inspection, entretien et réparation"
+    ],
+    problemTitle: 'Le problème observé',
+    problemBody: "Sur un dossier d'inspection, le problème n'est pas toujours une seule fuite confirmée. Il peut s'agir d'un ensemble de signes visibles qui demandent d'être documentés correctement avant de choisir la bonne intervention.",
+    problemPoints: [
+      'Défauts visibles sur joints, toiture ou zones sensibles',
+      "Indices d'humidité ou d'usure à confirmer",
+      "Besoin d'éviter une mauvaise décision trop rapide"
+    ],
+    workTitle: "Ce qui a été fait",
+    workBody: "L'inspection a servi à relever les défauts visibles, prendre des photos utiles et orienter le dossier vers la bonne suite. Ce type de page peut donc accueillir plusieurs observations faites sur différents véhicules ou différents angles d'un même problème.",
+    workPoints: [
+      'Observation visuelle des zones à risque',
+      'Documentation photo des défauts constatés',
+      "Orientation vers la prochaine étape réellement utile"
+    ],
+    resultTitle: 'Le résultat',
+    resultBody: "La valeur principale d'une bonne inspection est de rendre le dossier compréhensible. Les défauts sont mieux documentés, la discussion devient plus claire, et la décision entre entretien, reprise d'étanchéité ou réparation se fait sur une base plus solide.",
+    resultPoints: [
+      'Défauts visibles mieux expliqués',
+      'Photos prêtes pour le suivi du dossier',
+      "Décision mieux alignée avec l'état réel du VR"
+    ],
+    valueCards: [
+      {
+        title: "Pourquoi cette page compte",
+        text: "Une page d'inspection générale permet de regrouper plusieurs défauts observés sans créer une page différente pour chaque photo."
+      },
+      {
+        title: 'Service lié',
+        text: "Ce type de dossier commence par l'inspection, puis bascule vers l'entretien ou la réparation selon ce que les observations montrent réellement."
+      }
+    ]
+  },
+  {
+    slug: 'changement-membrane-vr-gatineau',
+    beforeImage: '/images/realisations/changement-membrane-vr-gatineau/avant.JPG',
+    beforeImageAlt: 'Avant changement de membrane de toiture sur un VR à Gatineau',
+    title: 'Changement de membrane de toiture sur un VR à Gatineau',
+    metaTitle: 'Cas réel: changement de membrane de toiture sur un VR à Gatineau | Clinique du VR',
+    metaDescription: "Cas réel de changement de membrane de toiture sur un VR à Gatineau: état avant travaux, logique d'intervention et préparation d'une remise en étanchéité plus complète.",
+    location: 'Gatineau',
+    eyebrow: 'Cas réel de toiture et membrane',
+    h1: 'Changement de membrane de toiture sur un VR à Gatineau',
+    lead: "Quand la membrane de toiture est trop fatiguée, abîmée ou rendue incertaine sur une trop grande surface, une réparation ponctuelle ne suffit plus. Il faut alors envisager un changement plus complet.",
+    intro: "Ce cas sert à montrer le type de dossier où l'état de la toiture justifie une approche plus structurée qu'un simple entretien localisé ou une petite reprise de scellement.",
+    highlights: [
+      'Toiture trop avancée pour une simple reprise',
+      'Membrane à remplacer',
+      'Approche orientée étanchéité durable',
       'Cas traité à Gatineau'
     ],
     heroChecklist: [
-      'Soupçon de fuite autour de la toiture',
-      "Humidité confirmée dans une zone à risque",
-      'Prochaine étape clarifiée avant réparation plus lourde'
+      'Usure avancée de la membrane',
+      'Besoin de repartir sur une base plus saine',
+      "Intervention plus lourde qu'un entretien standard"
     ],
     problemTitle: 'Le problème observé',
-    problemBody: "Le VR présentait des signes compatibles avec une infiltration: joints vieillissants, doute autour de la toiture et besoin de confirmer si l'eau avait déjà commencé à atteindre les matériaux.",
+    problemBody: "Le VR présentait une membrane de toiture rendue trop vulnérable pour se contenter d'une correction locale. Quand la surface a trop vieilli ou que les faiblesses s'accumulent, le risque de retour d'eau demeure trop élevé.",
     problemPoints: [
-      'Joints de toiture fatigués',
-      "Risque d'humidité non visible à l'œil nu",
-      'Besoin de décider rapidement entre entretien ciblé et réparation'
+      'Membrane de toit en fin de cycle ou trop incertaine',
+      "Zones de faiblesse réparties sur la toiture",
+      "Besoin d'une solution plus durable qu'une simple reprise ponctuelle"
     ],
-    workTitle: "Ce qui a été fait",
-    workBody: "L'intervention a commencé par une inspection visuelle orientée vers les zones de toit et les ouvertures sensibles. L'humidimètre a servi à confirmer les secteurs qui demandaient une attention prioritaire.",
+    workTitle: 'Ce qui a été planifié',
+    workBody: "Le dossier a été orienté vers un changement de membrane de toiture, avec une logique de remise en étanchéité plus complète. Cette approche vise à repartir sur une surface plus fiable au lieu de multiplier les corrections locales.",
     workPoints: [
-      'Lecture visuelle des joints et du pourtour des ouvertures',
-      "Vérification à l'humidimètre dans les zones sensibles",
-      "Validation de la meilleure suite: reprise d'étanchéité avant aggravation"
+      "Lecture de l'état général de la toiture",
+      "Validation que le changement complet est la bonne voie",
+      "Préparation d'une intervention plus durable sur l'enveloppe du toit"
     ],
-    resultTitle: 'Le résultat',
-    resultBody: "Le client a obtenu une lecture claire du problème et de la bonne prochaine étape. Le dossier a pu être orienté vers une intervention d'étanchéité avant que les dommages intérieurs ne progressent.",
+    resultTitle: 'La suite recommandée',
+    resultBody: "Le client peut avancer avec une orientation claire: plutôt que d'accumuler les petits correctifs, le dossier demande une intervention plus complète pour retrouver une meilleure protection contre l'eau.",
     resultPoints: [
-      'Source probable mieux ciblée',
-      'Risque de dommages plus coûteux réduit',
-      "Décision plus rapide sur l'entretien ou la réparation"
+      'Décision clarifiée sur le niveau de travaux',
+      "Approche plus cohérente avec l'état réel de la toiture",
+      'Base plus solide pour la protection future du VR'
     ],
     valueCards: [
       {
         title: 'Pourquoi ce cas compte',
-        text: "Une infiltration de toiture prise tôt coûte souvent beaucoup moins cher qu'une réparation une fois les matériaux intérieurs touchés."
+        text: "Certains toits ont dépassé le stade où l'entretien seul suffit. Montrer ce type de cas aide à comprendre quand il faut passer à une solution plus complète."
       },
       {
         title: 'Service lié',
-        text: "Ce type de situation commence souvent par l'inspection, puis bascule vers l'entretien ou la réparation selon l'état réel."
+        text: "Ce genre de dossier relève surtout de la réparation spécialisée lorsque la membrane doit être changée au lieu d'être simplement entretenue."
       }
     ]
   },
   {
     slug: 'reparation-interieure-vr-apres-infiltration-ottawa',
+    beforeImage: '/images/realisations/infiltration-eau-mur/infiltration-eau.JPG',
+    beforeImageAlt: "Photo d'infiltration d'eau dans un mur de VR",
+    photoSectionTitle: "Photo du dommage observé",
+    beforeSlotLabel: 'Mur touché',
+    afterSlotLabel: 'Après travaux',
+    beforeMediaTitle: "Photo du mur touché disponible",
+    beforeMediaBody: "Image réelle montrant une zone de mur affectée par une infiltration d'eau avant la remise en état.",
     title: 'Réparation intérieure après infiltration sur un VR à Ottawa',
     metaTitle: "Cas réel: réparation intérieure de VR après infiltration à Ottawa | Clinique du VR",
     metaDescription: "Cas réel de réparation intérieure après infiltration d'eau sur un VR à Ottawa: diagnostic, zones touchées, remise en état et logique de réparation.",

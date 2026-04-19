@@ -7,6 +7,10 @@ interface Props {
 }
 
 const { study } = Astro.props as Props;
+const mediaGallery = study.photoGallery ?? [];
+const showGalleryMode = mediaGallery.length > 0;
+const placeholderCount = Math.max(0, 3 - mediaGallery.length);
+const galleryPlaceholders = Array.from({ length: placeholderCount });
 ---
 
 <main>
@@ -60,6 +64,89 @@ const { study } = Astro.props as Props;
               <li>{item}</li>
             ))}
           </ul>
+        </section>
+
+        <section class="content-card photo-placeholder-card">
+          <div class="photo-placeholder-head">
+            <div class="photo-placeholder-heading">
+              <p class="placeholder-eyebrow">Bloc photo prévu</p>
+              <h2>{study.photoSectionTitle ?? 'Avant / après à venir'}</h2>
+            </div>
+          </div>
+          <p class="section-copy photo-placeholder-intro">Cet espace est prêt pour recevoir de vraies photos du cas dès qu'elles seront disponibles.</p>
+          {showGalleryMode ? (
+            <div class="photo-placeholder-grid photo-gallery-grid">
+              {mediaGallery.map((item) => (
+                <article class="photo-placeholder">
+                  <span class="photo-placeholder-label">{item.label}</span>
+                  <div class="photo-placeholder-frame photo-placeholder-frame-media">
+                    <img src={item.image} alt={item.alt} loading="lazy" decoding="async" />
+                    <div class="photo-placeholder-caption">
+                      <strong>{item.title}</strong>
+                      <p>{item.text}</p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+              {galleryPlaceholders.map(() => (
+                <article class="photo-placeholder">
+                  <span class="photo-placeholder-label">Autre observation</span>
+                  <div class="photo-placeholder-frame photo-placeholder-frame-media photo-placeholder-frame-empty">
+                    <div class="photo-placeholder-empty-visual">
+                      <i class="fas fa-camera-retro"></i>
+                    </div>
+                    <div class="photo-placeholder-caption">
+                      <strong>{study.galleryPlaceholderTitle ?? 'Autre photo à venir'}</strong>
+                      <p>{study.galleryPlaceholderBody ?? "D'autres défauts observés pourront être ajoutés plus tard dans cette inspection."}</p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <div class="photo-placeholder-grid">
+              <article class="photo-placeholder">
+                <span class="photo-placeholder-label">{study.beforeSlotLabel ?? 'Avant'}</span>
+                {study.beforeImage ? (
+                  <div class="photo-placeholder-frame photo-placeholder-frame-media">
+                    <img src={study.beforeImage} alt={study.beforeImageAlt ?? 'Photo avant du cas réel'} loading="lazy" decoding="async" />
+                    <div class="photo-placeholder-caption">
+                      <strong>{study.beforeMediaTitle ?? 'Photo avant disponible'}</strong>
+                      <p>{study.beforeMediaBody ?? "Vue réelle utilisée pour montrer l'état observé avant l'intervention complète."}</p>
+                    </div>
+                  </div>
+                ) : study.beforeVideo ? (
+                  <div class="photo-placeholder-frame photo-placeholder-frame-media">
+                    <video controls playsinline preload="metadata">
+                      <source src={study.beforeVideo} type="video/quicktime" />
+                    </video>
+                    <div class="photo-placeholder-caption">
+                      <strong>{study.beforeVideoLabel ?? 'Média avant disponible'}</strong>
+                      <p>Version vidéo utilisée en attendant une image fixe du problème observé.</p>
+                    </div>
+                  </div>
+                ) : (
+                  <div class="photo-placeholder-frame">
+                    <i class="fas fa-camera"></i>
+                    <strong>Photo avant à venir</strong>
+                    <p>Vue du problème observé, de la zone touchée ou des signes visibles.</p>
+                  </div>
+                )}
+              </article>
+              <article class="photo-placeholder">
+                <span class="photo-placeholder-label">{study.afterSlotLabel ?? 'Après'}</span>
+                <div class="photo-placeholder-frame photo-placeholder-frame-media photo-placeholder-frame-empty">
+                  <div class="photo-placeholder-empty-visual">
+                    <i class="fas fa-camera-retro"></i>
+                  </div>
+                  <div class="photo-placeholder-caption">
+                    <strong>{study.afterPlaceholderTitle ?? 'Photo après à venir'}</strong>
+                    <p>{study.afterPlaceholderBody ?? 'Vue du résultat, de la remise en état ou de la protection retrouvée.'}</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          )}
         </section>
 
         <section class="content-card">
@@ -269,6 +356,131 @@ const { study } = Astro.props as Props;
     font-weight: 700;
   }
 
+  .photo-placeholder-head {
+    margin-bottom: 0.4rem;
+  }
+
+  .photo-placeholder-heading {
+    max-width: 34rem;
+  }
+
+  .placeholder-eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--brand-green);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .photo-placeholder-head h2 {
+    margin-bottom: 0;
+  }
+
+  .photo-placeholder-intro {
+    max-width: 42rem;
+    margin: 0 0 1.25rem;
+  }
+
+  .photo-placeholder-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .photo-placeholder {
+    display: grid;
+    gap: 0.75rem;
+    align-content: start;
+  }
+
+  .photo-placeholder-label {
+    color: var(--brand-navy);
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .photo-placeholder-frame {
+    min-height: 100%;
+    display: grid;
+    place-items: center;
+    gap: 0.6rem;
+    padding: 1.5rem;
+    text-align: center;
+    border: 1.5px dashed rgba(34, 80, 119, 0.22);
+    border-radius: 20px;
+    background:
+      linear-gradient(135deg, rgba(34, 80, 119, 0.04), rgba(86, 170, 74, 0.08)),
+      #f8fbfd;
+  }
+
+  .photo-placeholder-frame-media {
+    padding: 1rem;
+    place-items: stretch;
+    align-content: start;
+  }
+
+  .photo-placeholder-frame-media video {
+    width: 100%;
+    border-radius: 16px;
+    background: #0f1f31;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+
+  .photo-placeholder-frame-media img {
+    width: 100%;
+    border-radius: 16px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    background: #f2f5f8;
+  }
+
+  .photo-placeholder-caption {
+    display: grid;
+    gap: 0.45rem;
+    margin-top: 0.9rem;
+    text-align: left;
+  }
+
+  .photo-placeholder-empty-visual {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    border-radius: 16px;
+    background:
+      radial-gradient(circle at top left, rgba(242, 210, 27, 0.2), transparent 30%),
+      linear-gradient(135deg, rgba(34, 80, 119, 0.08), rgba(86, 170, 74, 0.1));
+  }
+
+  .photo-placeholder-empty-visual i {
+    font-size: 2rem;
+    color: var(--brand-green);
+  }
+
+  .photo-placeholder-frame i {
+    font-size: 2rem;
+    color: var(--brand-green);
+  }
+
+  .photo-placeholder-frame strong {
+    color: var(--brand-navy);
+    font-size: 1.05rem;
+  }
+
+  .photo-placeholder-frame p {
+    max-width: 28ch;
+    margin: 0;
+    color: var(--brand-muted);
+  }
+
+  .photo-placeholder-caption p {
+    max-width: none;
+  }
+
   .value-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -445,6 +657,15 @@ const { study } = Astro.props as Props;
     .value-card {
       padding: 0.85rem;
       border-radius: 14px;
+    }
+
+    .photo-placeholder-heading,
+    .photo-placeholder-intro {
+      max-width: none;
+    }
+
+    .photo-placeholder-grid {
+      grid-template-columns: 1fr;
     }
 
     .service-nav {

@@ -62,6 +62,36 @@ const breadcrumbs = buildBreadcrumbSchema([
               <h2>Avant-après et interventions réelles</h2>
               <p>Ces réalisations montrent des exemples de travaux effectués sur des VR, roulottes et caravanes: infiltration d'eau, remise en état, correction visuelle et amélioration de l'état général. Cette section renforce la preuve de travail tout en couvrant les recherches liées aux réparations VR à Gatineau, Ottawa, en Outaouais et dans les Laurentides.</p>
             </div>
+            <div class="project-photo-placeholder">
+              <div class="project-photo-placeholder-copy">
+                <p class="placeholder-eyebrow">Photos réelles disponibles</p>
+                <h3>Observations et cas réels</h3>
+                <p>Voici deux visuels déjà disponibles: une photo d'inspection d'infiltration et une photo avant changement de membrane. D'autres images pourront s'ajouter ensuite.</p>
+              </div>
+              <div class="project-photo-placeholder-grid">
+                <a class="project-photo-box project-photo-box-media project-photo-link" href="/realisations/infiltration-toiture-vr-gatineau/">
+                  <img src="/images/realisations/Inspection-vr/infiltration.PNG" alt="Photo d'inspection montrant une infiltration sur un VR" loading="lazy" decoding="async" />
+                  <figcaption>
+                    <strong>Inspection d'infiltration</strong>
+                    <span>Photo d'observation utilisée pendant un dossier d'inspection.</span>
+                  </figcaption>
+                </a>
+                <a class="project-photo-box project-photo-box-media project-photo-link" href="/realisations/changement-membrane-vr-gatineau/">
+                  <img src="/images/realisations/changement-membrane-vr-gatineau/avant.JPG" alt="Photo avant changement de membrane de toiture sur un VR" loading="lazy" decoding="async" />
+                  <figcaption>
+                    <strong>Avant changement de membrane</strong>
+                    <span>Photo avant travaux sur un dossier de membrane de toiture.</span>
+                  </figcaption>
+                </a>
+                <a class="project-photo-box project-photo-box-media project-photo-link" href="/realisations/reparation-interieure-vr-apres-infiltration-ottawa/">
+                  <img src="/images/realisations/infiltration-eau-mur/infiltration-eau.JPG" alt="Photo d'infiltration d'eau dans un mur de VR" loading="lazy" decoding="async" />
+                  <figcaption>
+                    <strong>Infiltration d'eau dans un mur</strong>
+                    <span>Photo réelle d'un dommage intérieur visible avant intervention.</span>
+                  </figcaption>
+                </a>
+              </div>
+            </div>
             <div class="projects-grid">
               {projectsData.items.map((project) => (
                 <ProjectCard
@@ -239,6 +269,103 @@ const breadcrumbs = buildBreadcrumbSchema([
     color: var(--brand-muted);
   }
 
+  .project-photo-placeholder {
+    margin-bottom: 2rem;
+    padding: 1.35rem;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #f8fbf5 0%, #ffffff 100%);
+    border: 1px solid rgba(34, 80, 119, 0.08);
+  }
+
+  .placeholder-eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--brand-green);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .project-photo-placeholder-copy h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .project-photo-placeholder-copy p:last-child {
+    margin: 0;
+    color: var(--brand-muted);
+  }
+
+  .project-photo-placeholder-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .project-photo-box {
+    min-height: 200px;
+    display: grid;
+    place-items: center;
+    gap: 0.6rem;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 18px;
+    border: 1.5px dashed rgba(34, 80, 119, 0.22);
+    background:
+      linear-gradient(135deg, rgba(34, 80, 119, 0.04), rgba(86, 170, 74, 0.08)),
+      #f8fbfd;
+  }
+
+  .project-photo-box i {
+    color: var(--brand-green);
+    font-size: 1.9rem;
+  }
+
+  .project-photo-box strong {
+    color: var(--brand-navy);
+    font-size: 1rem;
+  }
+
+  .project-photo-box-media {
+    padding: 0.9rem;
+    place-items: stretch;
+  }
+
+  .project-photo-box-media img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 14px;
+    background: #f2f5f8;
+  }
+
+  .project-photo-box-media figcaption {
+    display: grid;
+    gap: 0.35rem;
+    margin-top: 0.8rem;
+    text-align: left;
+  }
+
+  .project-photo-link {
+    color: inherit;
+    text-decoration: none;
+    transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+  }
+
+  .project-photo-link:hover {
+    text-decoration: none;
+    transform: translateY(-2px);
+    background:
+      linear-gradient(135deg, rgba(34, 80, 119, 0.06), rgba(86, 170, 74, 0.1)),
+      #f8fbfd;
+    box-shadow: 0 14px 28px rgba(21, 38, 58, 0.08);
+  }
+
+  .project-photo-box-media span {
+    color: var(--brand-muted);
+    font-size: 0.94rem;
+  }
+
   .case-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -411,6 +538,10 @@ const breadcrumbs = buildBreadcrumbSchema([
     .projects-grid {
       grid-template-columns: 1fr;
       gap: 1rem;
+    }
+
+    .project-photo-placeholder-grid {
+      grid-template-columns: 1fr;
     }
 
     .content-card,
