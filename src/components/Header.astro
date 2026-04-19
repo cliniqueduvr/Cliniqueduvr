@@ -187,11 +187,17 @@ const navItems = isEnglish
               )
           ))}
         </ul>
-        <div class="mobile-lang-switch">
-          <span>{isEnglish ? 'Language' : 'Langue'}</span>
-          <div class="lang-switch">
-            <a href={frHref} class:list={['lang-pill', !isEnglish && 'active']}>FR</a>
-            <a href={enHref} class:list={['lang-pill', isEnglish && 'active']}>EN</a>
+        <div class="mobile-social-links">
+          <span>{isEnglish ? 'Follow us' : 'Nous suivre'}</span>
+          <div class="mobile-social-row">
+            <a href={siteSettings.facebookUrl} target="_blank" rel="noopener">
+              <i class="fab fa-facebook" aria-hidden="true"></i>
+              <span>Facebook</span>
+            </a>
+            <a href={siteSettings.tiktokUrl} target="_blank" rel="noopener">
+              <i class="fab fa-tiktok" aria-hidden="true"></i>
+              <span>TikTok</span>
+            </a>
           </div>
         </div>
       </div>
@@ -498,7 +504,7 @@ const navItems = isEnglish
     font-weight: 700;
   }
 
-  .mobile-lang-switch {
+  .mobile-social-links {
     display: none;
   }
 
@@ -683,13 +689,13 @@ const navItems = isEnglish
       color: var(--brand-muted);
     }
 
-    .mobile-lang-switch {
+    .mobile-social-links {
       display: grid;
       gap: 0.5rem;
       padding-top: 0.1rem;
     }
 
-    .mobile-lang-switch span {
+    .mobile-social-links > span {
       color: var(--brand-muted);
       font-size: 0.82rem;
       font-weight: 700;
@@ -697,9 +703,33 @@ const navItems = isEnglish
       text-transform: uppercase;
     }
 
-    .mobile-lang-switch .lang-switch .lang-pill {
-      border-color: rgba(31, 58, 95, 0.18);
+    .mobile-social-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+
+    .mobile-social-row a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.55rem 0.8rem;
+      border: 1px solid rgba(31, 58, 95, 0.12);
+      border-radius: 999px;
       color: var(--brand-navy);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .mobile-social-row a:hover {
+      text-decoration: none;
+      border-color: rgba(31, 58, 95, 0.24);
+    }
+
+    .mobile-social-row i {
+      font-size: 0.95rem;
     }
 
     .hamburger {
