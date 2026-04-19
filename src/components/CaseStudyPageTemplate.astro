@@ -1,0 +1,468 @@
+---
+import siteSettings from '../data/site-settings.json';
+import type { CaseStudyFr } from '../data/case-studies-fr';
+
+interface Props {
+  study: CaseStudyFr;
+}
+
+const { study } = Astro.props as Props;
+---
+
+<main>
+  <section class="page-hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">{study.eyebrow}</p>
+        <h1>{study.h1}</h1>
+        <p class="lead">{study.lead}</p>
+        <p class="intro">{study.intro}</p>
+
+        <div class="hero-badges">
+          {study.highlights.map((item) => (
+            <span>{item}</span>
+          ))}
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <div class="hero-icon">
+          <i class="fas fa-file-circle-check"></i>
+        </div>
+        <h2>Ce que ce cas montre</h2>
+        <ul>
+          {study.heroChecklist.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container body-grid">
+      <article class="content-main">
+        <section class="content-card">
+          <h2>{study.problemTitle}</h2>
+          <p class="section-copy">{study.problemBody}</p>
+          <ul>
+            {study.problemPoints.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </section>
+
+        <section class="content-card alt">
+          <h2>{study.workTitle}</h2>
+          <p class="section-copy">{study.workBody}</p>
+          <ul>
+            {study.workPoints.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </section>
+
+        <section class="content-card">
+          <h2>{study.resultTitle}</h2>
+          <p class="section-copy">{study.resultBody}</p>
+          <ul>
+            {study.resultPoints.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </section>
+
+        <section class="content-card alt">
+          <h2>Pourquoi ce cas est utile</h2>
+          <div class="value-grid">
+            {study.valueCards.map((item) => (
+              <article class="value-card">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+      </article>
+
+      <aside class="side-panel sticky">
+        <div class="side-card side-card-primary">
+          <h3>Besoin d'un avis rapide?</h3>
+          <p>On peut vous orienter vers une inspection, un entretien ou une réparation selon l'état réel du VR et la présence d'eau.</p>
+          <a class="side-button" href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>
+          <a class="side-link" href={siteSettings.squareBookingUrl} target="_blank" rel="noopener">Réserver en ligne</a>
+        </div>
+
+        <div class="side-card">
+          <h3>Autres pages utiles</h3>
+          <nav class="service-nav" aria-label="Autres pages utiles">
+            <a href="/services/inspection/"><i class="fas fa-clipboard-check"></i><span>Inspection</span></a>
+            <a href="/services/reparation/"><i class="fas fa-toolbox"></i><span>Réparation</span></a>
+            <a href="/ressources/infiltration-eau-vr/"><i class="fas fa-droplet"></i><span>Infiltration d'eau</span></a>
+            <a href="/realisations/"><i class="fas fa-images"></i><span>Réalisations</span></a>
+          </nav>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<style>
+  .page-hero {
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at top left, rgba(242, 210, 27, 0.18), transparent 32%),
+      linear-gradient(135deg, var(--brand-navy-dark) 0%, #23476f 58%, #f4f6f8 58%, #f4f6f8 100%);
+    padding: 4.5rem 0 4rem;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.9fr);
+    gap: 2rem;
+    align-items: stretch;
+  }
+
+  .hero-copy {
+    color: white;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    margin-bottom: 1.25rem;
+    padding: 0.45rem 0.85rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.12);
+    color: var(--brand-gold);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .hero-copy h1 {
+    color: white;
+    max-width: 18ch;
+    margin-bottom: 1rem;
+    line-height: 1.05;
+  }
+
+  .lead {
+    max-width: 60ch;
+    color: #f5f7fa;
+    font-size: 1.18rem;
+    line-height: 1.7;
+  }
+
+  .intro {
+    margin-top: 1rem;
+    max-width: 62ch;
+    color: #dbe4ee;
+  }
+
+  .hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.75rem;
+  }
+
+  .hero-badges span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0.75rem 1rem;
+    border-radius: 14px;
+    background: var(--brand-gold);
+    border: 1px solid var(--brand-gold);
+    color: var(--brand-navy-dark);
+    font-weight: 700;
+    box-shadow: 0 10px 18px rgba(14, 31, 49, 0.14);
+  }
+
+  .hero-card {
+    align-self: end;
+    background: white;
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 22px 44px rgba(16, 35, 56, 0.22);
+  }
+
+  .hero-icon {
+    width: 4rem;
+    height: 4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background: linear-gradient(135deg, var(--brand-green), #57af49);
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-card ul {
+    display: grid;
+    gap: 0.65rem;
+    padding-left: 1.2rem;
+    color: var(--brand-muted);
+  }
+
+  .content-section {
+    padding: 4rem 0;
+    background:
+      linear-gradient(180deg, #ffffff 0%, #ffffff 42%, #f3f5f8 42%, #f3f5f8 100%);
+  }
+
+  .body-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.75fr);
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .content-main,
+  .side-panel {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .content-card,
+  .side-card {
+    background: white;
+    border-radius: 22px;
+    padding: 1.75rem;
+    box-shadow: 0 16px 34px rgba(24, 40, 61, 0.08);
+  }
+
+  .content-card.alt {
+    background: linear-gradient(180deg, #f8fbf5 0%, #ffffff 100%);
+  }
+
+  .content-card h2,
+  .side-card h3 {
+    margin-bottom: 1rem;
+  }
+
+  .section-copy,
+  .content-card p,
+  .side-card p,
+  .value-card p {
+    color: var(--brand-muted);
+  }
+
+  .content-card ul {
+    display: grid;
+    gap: 0.85rem;
+    padding-left: 1.2rem;
+    color: var(--brand-ink);
+  }
+
+  .content-card li::marker {
+    color: var(--brand-green);
+    font-weight: 700;
+  }
+
+  .value-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+
+  .value-card {
+    background: var(--brand-surface);
+    border-radius: 16px;
+    padding: 1rem;
+  }
+
+  .value-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .sticky {
+    position: sticky;
+    top: 7rem;
+    align-self: start;
+  }
+
+  .side-card-primary {
+    background: var(--brand-navy-dark);
+    color: white;
+  }
+
+  .side-card-primary h3 {
+    color: white;
+  }
+
+  .side-card-primary p {
+    color: #dbe4ee;
+  }
+
+  .side-button,
+  .side-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 48px;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .side-button {
+    margin: 0.25rem 0 0.75rem;
+    background: var(--brand-gold);
+    color: var(--brand-navy-dark);
+  }
+
+  .side-button:hover,
+  .side-link:hover {
+    text-decoration: none;
+    background: #e1c317;
+    border-color: #e1c317;
+  }
+
+  .side-link {
+    padding: 0.55rem 1rem;
+    background: var(--brand-gold);
+    border: 2px solid var(--brand-gold);
+    color: var(--brand-navy-dark);
+  }
+
+  .service-nav {
+    display: grid;
+    gap: 0.7rem;
+  }
+
+  .service-nav a {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    min-height: 54px;
+    padding: 0.9rem 1rem;
+    border-radius: 16px;
+    background: var(--brand-surface);
+    color: var(--brand-ink);
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .service-nav a:hover {
+    text-decoration: none;
+    background: #eaf1e6;
+  }
+
+  .service-nav i {
+    color: var(--brand-green);
+  }
+
+  @media (max-width: 920px) {
+    .hero-grid,
+    .body-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-copy h1 {
+      max-width: none;
+    }
+
+    .sticky {
+      position: static;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .page-hero {
+      padding: 2.6rem 0 2.2rem;
+      background:
+        radial-gradient(circle at top left, rgba(242, 210, 27, 0.18), transparent 38%),
+        linear-gradient(180deg, var(--brand-navy-dark) 0%, #23476f 100%);
+    }
+
+    .eyebrow {
+      margin-bottom: 0.85rem;
+      font-size: 0.74rem;
+    }
+
+    .lead,
+    .intro {
+      font-size: 0.96rem;
+      line-height: 1.55;
+    }
+
+    .hero-badges {
+      gap: 0.55rem;
+      margin-top: 1.15rem;
+    }
+
+    .hero-badges span {
+      min-height: 38px;
+      padding: 0.55rem 0.8rem;
+      border-radius: 12px;
+      font-size: 0.88rem;
+    }
+
+    .hero-badges span:nth-child(n+3) {
+      display: none;
+    }
+
+    .content-section {
+      padding: 2.35rem 0;
+      background: #f3f5f8;
+    }
+
+    .content-card,
+    .side-card,
+    .hero-card {
+      border-radius: 16px;
+      padding: 1.05rem;
+      box-shadow: 0 10px 24px rgba(24, 40, 61, 0.08);
+    }
+
+    .content-main,
+    .side-panel,
+    .value-grid {
+      gap: 0.9rem;
+    }
+
+    .content-card h2,
+    .side-card h3 {
+      margin-bottom: 0.75rem;
+    }
+
+    .content-card ul {
+      gap: 0.65rem;
+    }
+
+    .value-card {
+      padding: 0.85rem;
+      border-radius: 14px;
+    }
+
+    .service-nav {
+      gap: 0.55rem;
+    }
+
+    .service-nav a {
+      min-height: 48px;
+      padding: 0.7rem 0.85rem;
+      border-radius: 14px;
+      font-size: 0.94rem;
+    }
+
+    .side-button,
+    .side-link {
+      min-height: 44px;
+      padding: 0.7rem 0.9rem;
+      font-size: 0.95rem;
+    }
+  }
+</style>

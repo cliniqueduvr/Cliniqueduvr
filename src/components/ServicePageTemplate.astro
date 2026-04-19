@@ -104,6 +104,9 @@ const baseHelpfulLinks = isEnglish
     ];
 const helpfulLinks = [...(localGuide ? [localGuide] : []), ...baseHelpfulLinks];
 const isWorkshopOnlyDetailing = service.slug === 'esthetique-auto-camion' || service.slug === 'auto-truck-detailing';
+const proofStats = service.proofStats ?? [];
+const proofPoints = service.proofPoints ?? [];
+const caseStudies = service.caseStudies ?? [];
 ---
 
 <main>
@@ -118,6 +121,7 @@ const isWorkshopOnlyDetailing = service.slug === 'esthetique-auto-camion' || ser
         <p class="opening">{service.opening}</p>
         <p class="lead">{service.lead}</p>
         <p class="intro">{service.intro}</p>
+        {service.heroPromise && <p class="hero-promise">{service.heroPromise}</p>}
 
         <div class="hero-badges">
           {service.highlights.map((item) => (
@@ -138,8 +142,35 @@ const isWorkshopOnlyDetailing = service.slug === 'esthetique-auto-camion' || ser
   </section>
 
   <section class="service-body">
-    <div class="container body-grid">
+      <div class="container body-grid">
       <article class="service-main">
+        {(proofStats.length > 0 || proofPoints.length > 0) && (
+          <section class="content-card alt">
+            <h2>{service.proofTitle ?? (isEnglish ? 'Proof and concrete outcomes' : 'Preuves et résultats concrets')}</h2>
+            {service.proofIntro && <p class="section-copy">{service.proofIntro}</p>}
+            {proofStats.length > 0 && (
+              <div class="proof-stats-grid">
+                {proofStats.map((item) => (
+                  <article class="proof-stat-card">
+                    <strong>{item.value}</strong>
+                    <span>{item.label}</span>
+                  </article>
+                ))}
+              </div>
+            )}
+            {proofPoints.length > 0 && (
+              <div class="why-choose-grid">
+                {proofPoints.map((item) => (
+                  <article class="why-card">
+                    <h3>{item.title}</h3>
+                    <p>{item.text}</p>
+                  </article>
+                ))}
+              </div>
+            )}
+          </section>
+        )}
+
         <section class="content-card">
           <h2>{service.includedTitle}</h2>
           <p class="section-copy">{service.detailIntro}</p>
@@ -158,6 +189,31 @@ const isWorkshopOnlyDetailing = service.slug === 'esthetique-auto-camion' || ser
             ))}
           </ul>
         </section>
+
+        {caseStudies.length > 0 && (
+          <section class="content-card">
+            <h2>{service.caseStudiesTitle ?? (isEnglish ? 'Real examples related to this service' : 'Exemples réels liés à ce service')}</h2>
+            {service.caseStudiesIntro && <p class="section-copy">{service.caseStudiesIntro}</p>}
+            <div class="link-card-grid">
+              {caseStudies.map((item) => (
+                item.href ? (
+                  <a class="link-card link-card-anchor" href={item.href}>
+                    <h3>{item.title}</h3>
+                    {item.meta && <p class="link-card-meta">{item.meta}</p>}
+                    <p>{item.text}</p>
+                    <span>{isEnglish ? 'See the case' : 'Voir le cas'}</span>
+                  </a>
+                ) : (
+                  <article class="link-card">
+                    <h3>{item.title}</h3>
+                    {item.meta && <p class="link-card-meta">{item.meta}</p>}
+                    <p>{item.text}</p>
+                  </article>
+                )
+              ))}
+            </div>
+          </section>
+        )}
 
         <section class="content-card">
           <h2>{isEnglish ? 'How we work' : 'Notre façon de travailler'}</h2>
@@ -181,29 +237,6 @@ const isWorkshopOnlyDetailing = service.slug === 'esthetique-auto-camion' || ser
             ))}
           </div>
         </section>
-
-        {!isWorkshopOnlyDetailing && (
-          <section class="content-card">
-            <h2>{isEnglish ? 'Areas served for this service' : 'Zones desservies pour ce service'}</h2>
-            <p class="section-copy">
-              {isEnglish
-                ? 'This service is offered from our Gatineau workshop and according to the type of work, may also involve nearby travel or regional support.'
-                : 'Ce service est offert à partir de notre atelier de Gatineau et, selon le type d’intervention, peut aussi inclure un déplacement à proximité ou un accompagnement régional.'}
-            </p>
-            <div class="link-card-grid">
-              {serviceAreas.map((area) => (
-                <article class="link-card">
-                  <h3>{area}</h3>
-                  <p>
-                    {isEnglish
-                      ? `Support available for ${service.navLabel.toLowerCase()} requests in and around ${area}.`
-                      : `Accompagnement offert pour les demandes de ${service.navLabel.toLowerCase()} à ${area} et dans les environs.`}
-                  </p>
-                </article>
-              ))}
-            </div>
-          </section>
-        )}
 
         {!isWorkshopOnlyDetailing && (
           <section class="content-card alt">
@@ -252,6 +285,20 @@ const isWorkshopOnlyDetailing = service.slug === 'esthetique-auto-camion' || ser
             ))}
           </nav>
         </div>
+
+        {!isWorkshopOnlyDetailing && (
+          <div class="side-card">
+            <h3>{isEnglish ? 'Service areas' : 'Zones desservies'}</h3>
+            <nav class="service-nav" aria-label={isEnglish ? 'Service areas' : 'Zones desservies'}>
+              {serviceAreas.map((area) => (
+                <a href={isEnglish ? '/en/service-areas/' : '/zones-desservies/'}>
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>{area}</span>
+                </a>
+              ))}
+            </nav>
+          </div>
+        )}
       </aside>
     </div>
   </section>
@@ -325,6 +372,14 @@ const isWorkshopOnlyDetailing = service.slug === 'esthetique-auto-camion' || ser
     margin-top: 1rem;
     max-width: 62ch;
     color: #dbe4ee;
+  }
+
+  .hero-promise {
+    margin-top: 1rem;
+    max-width: 55ch;
+    color: white;
+    font-weight: 700;
+    font-size: 1.05rem;
   }
 
   .hero-badges {
@@ -470,6 +525,34 @@ const isWorkshopOnlyDetailing = service.slug === 'esthetique-auto-camion' || ser
     gap: 1rem;
   }
 
+  .proof-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .proof-stat-card {
+    display: grid;
+    gap: 0.35rem;
+    padding: 1rem;
+    background: var(--brand-surface);
+    border-radius: 16px;
+  }
+
+  .proof-stat-card strong {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.7rem;
+    color: var(--brand-navy);
+    line-height: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .proof-stat-card span {
+    color: var(--brand-muted);
+  }
+
   .link-card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -518,6 +601,13 @@ const isWorkshopOnlyDetailing = service.slug === 'esthetique-auto-camion' || ser
   .faq-item p,
   .link-card p {
     color: var(--brand-muted);
+  }
+
+  .link-card-meta {
+    margin-bottom: 0.25rem;
+    color: var(--brand-navy);
+    font-weight: 700;
+    font-size: 0.9rem;
   }
 
   .link-card span {
@@ -663,26 +753,108 @@ const isWorkshopOnlyDetailing = service.slug === 'esthetique-auto-camion' || ser
 
   @media (max-width: 768px) {
     .service-hero {
-      padding: 3.25rem 0 3rem;
+      padding: 2.6rem 0 2.2rem;
       background:
         radial-gradient(circle at top left, rgba(242, 210, 27, 0.18), transparent 38%),
         linear-gradient(180deg, var(--brand-navy-dark) 0%, #23476f 100%);
     }
 
+    .eyebrow {
+      margin-bottom: 0.85rem;
+      font-size: 0.74rem;
+    }
+
+    .opening {
+      font-size: 0.95rem;
+      margin-bottom: 0.8rem;
+    }
+
     .lead {
-      font-size: 1.05rem;
+      font-size: 0.98rem;
+      line-height: 1.6;
+    }
+
+    .intro,
+    .hero-promise {
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    .hero-badges {
+      gap: 0.55rem;
+      margin-top: 1.15rem;
+    }
+
+    .hero-badges span {
+      min-height: 38px;
+      padding: 0.55rem 0.8rem;
+      border-radius: 12px;
+      font-size: 0.88rem;
+    }
+
+    .hero-badges span:nth-child(n+3) {
+      display: none;
     }
 
     .service-body {
-      padding: 3rem 0;
+      padding: 2.35rem 0;
       background: #f3f5f8;
     }
 
     .content-card,
     .side-card,
     .hero-card {
-      border-radius: 18px;
-      padding: 1.3rem;
+      border-radius: 16px;
+      padding: 1.05rem;
+      box-shadow: 0 10px 24px rgba(24, 40, 61, 0.08);
+    }
+
+    .service-main,
+    .service-side,
+    .faq-list,
+    .why-choose-grid,
+    .proof-stats-grid,
+    .link-card-grid {
+      gap: 0.9rem;
+    }
+
+    .content-card h2,
+    .side-card h3 {
+      margin-bottom: 0.75rem;
+    }
+
+    .section-copy {
+      margin-bottom: 0.75rem;
+    }
+
+    .content-card ul,
+    .content-card ol {
+      gap: 0.65rem;
+    }
+
+    .why-card,
+    .link-card,
+    .proof-stat-card {
+      padding: 0.85rem;
+      border-radius: 14px;
+    }
+
+    .service-nav {
+      gap: 0.55rem;
+    }
+
+    .service-nav a {
+      min-height: 48px;
+      padding: 0.7rem 0.85rem;
+      border-radius: 14px;
+      font-size: 0.94rem;
+    }
+
+    .side-button,
+    .side-link {
+      min-height: 44px;
+      padding: 0.7rem 0.9rem;
+      font-size: 0.95rem;
     }
   }
 </style>

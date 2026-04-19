@@ -9,7 +9,7 @@
   "introCard": {
     "icon": "",
     "heading": "Pourquoi choisir Clinique du VR?",
-    "body": "<strong>Service spécialisé et attentif</strong> pour l'entretien, la réparation et l'esthétique de VR. Nous misons sur des explications claires, une lecture concrète de l'état du véhicule et des recommandations adaptées à votre réalité. Nous avons un atelier ouvert à l'année ainsi qu'une unité mobile pour mieux vous servir selon le type d'intervention. Nous offrons aussi une page distincte pour l'esthétique auto et camion, en atelier seulement. Rapidité, transparence et exécution soignée du début à la fin font partie de notre façon de travailler."
+    "body": "<strong>Notre priorité est simple:</strong> détecter vite les problèmes d'étanchéité, recommander la bonne suite et éviter que l'eau transforme un joint fatigué en dossier beaucoup plus coûteux. Nous avons un atelier ouvert à l'année ainsi qu'une unité mobile selon le type d'intervention. Vous obtenez une lecture claire de l'état réel du véhicule, des prochaines étapes concrètes et un service spécialisé pour l'inspection, l'entretien, la réparation et l'esthétique de VR."
   },
   "servicesOverview": {
     "title": "Nos Spécialités",
@@ -49,22 +49,5 @@
     "heading": "Informations de contact",
     "squareLabel": "Réserver en ligne",
     "ctaText": "Devis gratuit et confidentiel. Appelez-nous ou remplissez le formulaire."
-  },
-  "reviews": {
-    "heading": "Avis Google",
-    "items": [
-      {
-        "quote": "Cédric était à l’heure, a tout expliqué clairement et les résultats ont suivi comme promis. Deux pouces en l’air.",
-        "author": "Jesse Brook"
-      },
-      {
-        "quote": "Service professionnel et courtois.",
-        "author": "Stéphane Desgagné"
-      },
-      {
-        "quote": "Compagnie efficace, facile de communiquer avec eux. Travail professionnel, que du positif.",
-        "author": "Philippe Albert"
-      }
-    ]
   }
 }

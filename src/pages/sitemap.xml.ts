@@ -1,6 +1,7 @@
 import servicePagesData from '../data/service-pages.json';
 import servicePagesEnData from '../data/service-pages-en.json';
 import { localAreaPagesFr, localAreaPagesEn } from '../data/local-area-pages';
+import { caseStudiesFr } from '../data/case-studies-fr';
 
 type UrlEntry = {
   path: string;
@@ -29,6 +30,10 @@ const pageLastmods = new Map<string, string>([
   ['/en/resources/rv-water-intrusion/', '2026-04-19'],
   ['/ressources/entretien-vr-deux-fois-par-an/', '2026-04-19'],
   ['/en/resources/twice-yearly-rv-maintenance/', '2026-04-19'],
+  ['/realisations/', '2026-04-19'],
+  ['/realisations/infiltration-toiture-vr-gatineau/', '2026-04-19'],
+  ['/realisations/reparation-interieure-vr-apres-infiltration-ottawa/', '2026-04-19'],
+  ['/realisations/reprise-scellants-vr-gatineau/', '2026-04-19'],
   ['/plan-du-site/', '2026-04-15'],
   ['/en/site-map/', '2026-04-15']
 ]);
@@ -103,7 +108,13 @@ const areaEntriesEn = localAreaPagesEn.map((page) => ({
   alternatePaths: enToFrAreaSlug.get(page.slug) ? [`/zones/${enToFrAreaSlug.get(page.slug)}/`] : []
 }));
 
-const entries = [...staticEntries, ...serviceEntries, ...serviceEntriesEn, ...areaEntriesFr, ...areaEntriesEn];
+const caseStudyEntriesFr = caseStudiesFr.map((study) => ({
+  path: `/realisations/${study.slug}/`,
+  lastmod: pageLastmods.get(`/realisations/${study.slug}/`) ?? '2026-04-19',
+  alternatePaths: []
+}));
+
+const entries = [...staticEntries, ...serviceEntries, ...serviceEntriesEn, ...areaEntriesFr, ...areaEntriesEn, ...caseStudyEntriesFr];
 
 function escapeXml(value: string) {
   return value

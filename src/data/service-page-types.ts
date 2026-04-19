@@ -5,6 +5,18 @@ export interface WhyChoosePoint {
   text: string;
 }
 
+export interface ServiceProofStat {
+  value: string;
+  label: string;
+}
+
+export interface ServiceCaseStudy {
+  title: string;
+  text: string;
+  meta?: string;
+  href?: string;
+}
+
 export interface ServicePage {
   slug: string;
   alternateSlug: string;
@@ -19,8 +31,16 @@ export interface ServicePage {
   opening: string;
   lead: string;
   intro: string;
+  heroPromise?: string;
   detailIntro: string;
   highlights: string[];
+  proofTitle?: string;
+  proofIntro?: string;
+  proofStats?: ServiceProofStat[];
+  proofPoints?: WhyChoosePoint[];
+  caseStudiesTitle?: string;
+  caseStudiesIntro?: string;
+  caseStudies?: ServiceCaseStudy[];
   includedTitle: string;
   included: string[];
   situationsTitle: string;

@@ -4,6 +4,8 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import projectsData from '../data/projects.json';
+import { caseStudiesFr } from '../data/case-studies-fr';
+import siteSettings from '../data/site-settings.json';
 import { buildBreadcrumbSchema } from '../lib/seo';
 const breadcrumbs = buildBreadcrumbSchema([
   { name: 'Accueil', path: '/' },
@@ -16,47 +18,99 @@ const breadcrumbs = buildBreadcrumbSchema([
 
   <main>
     <section class="page-header">
-      <div class="container">
-        <p class="eyebrow">Interventions complètes</p>
-        <h1>Nos Réalisations</h1>
-        <p>Exemples d'interventions complètes sur VR à Gatineau, Ottawa et les environs</p>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Interventions complètes</p>
+          <h1>Des cas réels de VR à Gatineau, Ottawa et les environs</h1>
+          <p>Avant-après, dossiers d'infiltration d'eau, réparation intérieure, joints et toiture: cette page montre des exemples concrets du type de problèmes que nous traitons réellement.</p>
+        </div>
+
+        <aside class="hero-card">
+          <div class="hero-icon">
+            <i class="fas fa-images"></i>
+          </div>
+          <h2>Ce que vous allez voir</h2>
+          <ul>
+            <li>Des cas liés à l'infiltration d'eau et à l'étanchéité</li>
+            <li>Des exemples de remise en état et de prévention</li>
+            <li>Des liens directs vers inspection, entretien et réparation</li>
+          </ul>
+        </aside>
       </div>
     </section>
 
     <section class="realisations-section">
-      <div class="container">
-        <div class="section-intro">
-          <h2>Avant-après et interventions réelles</h2>
-          <p>Ces réalisations montrent des exemples de travaux effectués sur des VR, roulottes et caravanes: infiltration d'eau, remise en état, correction visuelle et amélioration de l'état général. Cette section renforce la preuve de travail tout en couvrant les recherches liées aux réparations VR à Gatineau, Ottawa, en Outaouais et dans les Laurentides.</p>
-        </div>
-        <div class="projects-grid">
-          {projectsData.items.map((project) => (
-            <ProjectCard
-              id={project.id}
-              title={project.title}
-              location={project.location}
-              category={project.category}
-              beforeImage={project.beforeImage}
-              afterImage={project.afterImage}
-              beforeAlt={project.beforeAlt}
-              afterAlt={project.afterAlt}
-              description={project.description}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
+      <div class="container body-grid">
+        <article class="content-main">
+          <section class="content-card alt">
+            <h2>Cas détaillés autour de l'infiltration d'eau</h2>
+            <p class="section-copy">Pour mieux comprendre la logique entre inspection, entretien préventif et réparation spécialisée, voici trois cas typiques liés à l'eau et à l'étanchéité.</p>
+            <div class="case-grid">
+              {caseStudiesFr.map((study) => (
+                <a class="case-card" href={`/realisations/${study.slug}/`}>
+                  <h3>{study.title}</h3>
+                  <p class="case-meta">{study.location}</p>
+                  <p>{study.lead}</p>
+                  <span>Voir le cas</span>
+                </a>
+              ))}
+            </div>
+          </section>
 
-    <section class="seo-copy">
-      <div class="container seo-columns">
-        <div>
-          <h2>Pourquoi ces projets comptent</h2>
-          <p>Un avant-après aide à comprendre le type de problème traité, la nature des dommages observés et le niveau de remise en état possible selon le véhicule. C'est aussi une bonne façon de montrer la différence entre entretien, réparation et restauration plus complète.</p>
-        </div>
-        <div>
-          <h2>Travaux fréquents en atelier</h2>
-          <p>Parmi les demandes les plus courantes, on retrouve les fuites d'eau, les joints fatigués, la toiture, les dommages intérieurs, la présentation avant vente et la remise à niveau après infiltration. Si votre situation ressemble à l'un de ces cas, nous pouvons vous orienter vers le bon service.</p>
-        </div>
+          <section class="content-card">
+            <div class="section-intro">
+              <h2>Avant-après et interventions réelles</h2>
+              <p>Ces réalisations montrent des exemples de travaux effectués sur des VR, roulottes et caravanes: infiltration d'eau, remise en état, correction visuelle et amélioration de l'état général. Cette section renforce la preuve de travail tout en couvrant les recherches liées aux réparations VR à Gatineau, Ottawa, en Outaouais et dans les Laurentides.</p>
+            </div>
+            <div class="projects-grid">
+              {projectsData.items.map((project) => (
+                <ProjectCard
+                  id={project.id}
+                  title={project.title}
+                  location={project.location}
+                  category={project.category}
+                  beforeImage={project.beforeImage}
+                  afterImage={project.afterImage}
+                  beforeAlt={project.beforeAlt}
+                  afterAlt={project.afterAlt}
+                  description={project.description}
+                />
+              ))}
+            </div>
+          </section>
+
+          <section class="content-card alt seo-copy-card">
+            <div class="seo-columns">
+              <div>
+                <h2>Pourquoi ces projets comptent</h2>
+                <p>Un avant-après aide à comprendre le type de problème traité, la nature des dommages observés et le niveau de remise en état possible selon le véhicule. C'est aussi une bonne façon de montrer la différence entre entretien, réparation et restauration plus complète.</p>
+              </div>
+              <div>
+                <h2>Travaux fréquents en atelier</h2>
+                <p>Parmi les demandes les plus courantes, on retrouve les fuites d'eau, les joints fatigués, la toiture, les dommages intérieurs, la présentation avant vente et la remise à niveau après infiltration. Si votre situation ressemble à l'un de ces cas, nous pouvons vous orienter vers le bon service.</p>
+              </div>
+            </div>
+          </section>
+        </article>
+
+        <aside class="side-panel sticky">
+          <div class="side-card side-card-primary">
+            <h3>Besoin d'un avis rapide?</h3>
+            <p>On peut vous orienter vers une inspection, un entretien ou une réparation selon l'état réel du véhicule et la présence d'eau.</p>
+            <a class="side-button" href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>
+            <a class="side-link" href={siteSettings.squareBookingUrl} target="_blank" rel="noopener">Réserver en ligne</a>
+          </div>
+
+          <div class="side-card">
+            <h3>Autres pages utiles</h3>
+            <nav class="service-nav" aria-label="Autres pages utiles">
+              <a href="/services/inspection/"><i class="fas fa-clipboard-check"></i><span>Inspection</span></a>
+              <a href="/services/reparation/"><i class="fas fa-toolbox"></i><span>Réparation</span></a>
+              <a href="/ressources/infiltration-eau-vr/"><i class="fas fa-droplet"></i><span>Infiltration d'eau</span></a>
+              <a href="/contact/"><i class="fas fa-envelope"></i><span>Contact</span></a>
+            </nav>
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -70,8 +124,18 @@ const breadcrumbs = buildBreadcrumbSchema([
     background:
       radial-gradient(circle at top left, rgba(242, 210, 27, 0.18), transparent 25%),
       linear-gradient(135deg, var(--brand-navy-dark) 0%, #1f476d 58%, #eef3f7 58%, #eef3f7 100%);
-    color: white;
     padding: 4.5rem 0 3.8rem;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.9fr);
+    gap: 2rem;
+    align-items: stretch;
+  }
+
+  .hero-copy {
+    color: white;
   }
 
   .eyebrow {
@@ -91,22 +155,82 @@ const breadcrumbs = buildBreadcrumbSchema([
     color: white;
     margin-bottom: 0.75rem;
     font-size: 3rem;
+    max-width: 14ch;
+    line-height: 1.05;
   }
 
-  .page-header p:last-child {
+  .hero-copy p:last-child {
     margin: 0;
     max-width: 55ch;
     font-size: 1.08rem;
     color: #e7edf4;
   }
 
+  .hero-card {
+    align-self: end;
+    background: white;
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 22px 44px rgba(16, 35, 56, 0.22);
+  }
+
+  .hero-icon {
+    width: 4rem;
+    height: 4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background: linear-gradient(135deg, var(--brand-green), #57af49);
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-card ul {
+    display: grid;
+    gap: 0.65rem;
+    padding-left: 1.2rem;
+    color: var(--brand-muted);
+  }
+
   .realisations-section {
     padding: 4rem 0;
+    background:
+      linear-gradient(180deg, #ffffff 0%, #ffffff 42%, #f3f5f8 42%, #f3f5f8 100%);
+  }
+
+  .body-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.75fr);
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .content-main,
+  .side-panel {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .content-card,
+  .side-card {
     background: white;
+    border-radius: 22px;
+    padding: 1.75rem;
+    box-shadow: 0 16px 34px rgba(24, 40, 61, 0.08);
+  }
+
+  .content-card.alt {
+    background: linear-gradient(180deg, #f8fbf5 0%, #ffffff 100%);
   }
 
   .section-intro {
-    max-width: 850px;
     margin-bottom: 2rem;
   }
 
@@ -115,21 +239,142 @@ const breadcrumbs = buildBreadcrumbSchema([
     color: var(--brand-muted);
   }
 
+  .case-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+
+  .case-card {
+    display: grid;
+    gap: 0.55rem;
+    background: var(--brand-surface);
+    border-radius: 16px;
+    padding: 1rem;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .case-card:hover {
+    text-decoration: none;
+    transform: translateY(-2px);
+    background: #eaf1e6;
+    box-shadow: 0 12px 24px rgba(21, 38, 58, 0.08);
+  }
+
+  .case-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .case-card p {
+    color: var(--brand-muted);
+  }
+
+  .case-meta {
+    color: var(--brand-navy) !important;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  .case-card span {
+    color: var(--brand-navy);
+    font-weight: 700;
+  }
+
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
   }
 
-  .seo-copy {
-    padding: 0 0 4rem;
-    background: white;
-  }
-
   .seo-columns {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
+  }
+
+  .seo-copy-card p,
+  .side-card p {
+    color: var(--brand-muted);
+  }
+
+  .sticky {
+    position: sticky;
+    top: 7rem;
+    align-self: start;
+  }
+
+  .side-card-primary {
+    background: var(--brand-navy-dark);
+    color: white;
+  }
+
+  .side-card-primary h3 {
+    color: white;
+  }
+
+  .side-card-primary p {
+    color: #dbe4ee;
+  }
+
+  .side-button,
+  .side-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 48px;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .side-button {
+    margin: 0.25rem 0 0.75rem;
+    background: var(--brand-gold);
+    color: var(--brand-navy-dark);
+  }
+
+  .side-link {
+    padding: 0.55rem 1rem;
+    background: var(--brand-gold);
+    border: 2px solid var(--brand-gold);
+    color: var(--brand-navy-dark);
+  }
+
+  .side-button:hover,
+  .side-link:hover {
+    text-decoration: none;
+    background: #e1c317;
+    border-color: #e1c317;
+  }
+
+  .service-nav {
+    display: grid;
+    gap: 0.7rem;
+  }
+
+  .service-nav a {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    min-height: 54px;
+    padding: 0.9rem 1rem;
+    border-radius: 16px;
+    background: var(--brand-surface);
+    color: var(--brand-ink);
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .service-nav a:hover {
+    text-decoration: none;
+    background: #eaf1e6;
+  }
+
+  .service-nav i {
+    color: var(--brand-green);
   }
 
   .seo-columns p {
@@ -140,24 +385,81 @@ const breadcrumbs = buildBreadcrumbSchema([
   @media (max-width: 768px) {
     .page-header {
       background: linear-gradient(180deg, var(--brand-navy-dark) 0%, #1f476d 100%);
-      padding: 3.6rem 1.5rem 3rem;
+      padding: 2.8rem 0 2.3rem;
+    }
+
+    .hero-grid,
+    .body-grid {
+      grid-template-columns: 1fr;
     }
 
     .page-header h1 {
       font-size: 2rem;
+      max-width: none;
     }
 
     .page-header p {
-      font-size: 1rem;
+      font-size: 0.96rem;
+      line-height: 1.55;
     }
 
     .realisations-section {
-      padding: 2rem 0;
+      padding: 2.35rem 0;
+      background: #f3f5f8;
     }
 
     .projects-grid {
       grid-template-columns: 1fr;
-      gap: 1.5rem;
+      gap: 1rem;
+    }
+
+    .content-card,
+    .side-card,
+    .hero-card {
+      border-radius: 16px;
+      padding: 1.05rem;
+      box-shadow: 0 10px 24px rgba(24, 40, 61, 0.08);
+    }
+
+    .content-main,
+    .side-panel,
+    .case-grid,
+    .seo-columns {
+      gap: 0.9rem;
+    }
+
+    .section-intro {
+      margin-bottom: 1.1rem;
+    }
+
+    .case-card,
+    .service-nav a {
+      border-radius: 14px;
+    }
+
+    .case-card {
+      padding: 0.85rem;
+    }
+
+    .service-nav {
+      gap: 0.55rem;
+    }
+
+    .service-nav a {
+      min-height: 48px;
+      padding: 0.7rem 0.85rem;
+      font-size: 0.94rem;
+    }
+
+    .side-button,
+    .side-link {
+      min-height: 44px;
+      padding: 0.7rem 0.9rem;
+      font-size: 0.95rem;
+    }
+
+    .sticky {
+      position: static;
     }
   }
 </style>

@@ -1,7 +1,7 @@
 {
-  "name": "demo-solution-redesign",
+  "name": "cliniqueduvr-site",
   "version": "1.0.0",
-  "description": "Production-ready redesign of Demo Solution website",
+  "description": "Clinique du VR website",
   "type": "module",
   "scripts": {
     "dev": "astro dev",

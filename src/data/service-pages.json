@@ -14,12 +14,59 @@
       "opening": "Clinique du VR offre l'inspection visuelle de VR à Gatineau avec humidimètre, en mettant l'accent sur les joints, l'état de la toiture et les signes d'infiltration d'eau. Notre objectif est de repérer rapidement les zones à risque, les traces d'humidité et les problèmes d'étanchéité avant qu'ils causent plus de dommages.",
       "lead": "Nos inspections sont principalement conçues pour détecter les problèmes de joints, de toiture et d'infiltration d'eau. Nous ne faisons pas d'inspection mécanique. Nous effectuons toutefois l'entretien des freins à notre atelier seulement, sans service sur la route.",
       "intro": "Nous réalisons des inspections visuelles en atelier ou sur la route, avec humidimètre, pour mieux cibler les zones vulnérables à l'eau. C'est un service utile quand vous voulez confirmer l'état de l'étanchéité d'un VR, d'une roulotte ou d'une caravane.",
+      "heroPromise": "Détectez les infiltrations d'eau avant qu'elles ne deviennent des réparations coûteuses sur votre toit, vos murs ou votre plancher.",
       "detailIntro": "Une inspection efficace ne consiste pas à tout vérifier sans priorité. Chez Clinique du VR, nous nous concentrons d'abord sur ce qui cause le plus souvent des dommages coûteux: les joints fatigués, les défauts de toiture, les ouvertures sensibles et les signes d'infiltration d'eau. L'humidimètre nous aide à confirmer les zones problématiques et à mieux orienter les prochaines étapes.",
       "highlights": [
         "Inspection visuelle avec humidimètre",
         "Accent sur les joints et la toiture",
         "Recherche de signes d'infiltration d'eau",
         "Service en atelier ou mobile"
+      ],
+      "proofTitle": "Pourquoi cette inspection est souvent la meilleure première étape",
+      "proofIntro": "Quand la source d'une fuite n'est pas claire, l'erreur la plus coûteuse est d'attendre ou de réparer au hasard. Une inspection ciblée permet de confirmer rapidement la zone à risque et la bonne prochaine étape.",
+      "proofStats": [
+        {
+          "value": "49,99 $",
+          "label": "Inspection en atelier"
+        },
+        {
+          "value": "149,99 $",
+          "label": "Inspection mobile dans un rayon de 40 km"
+        },
+        {
+          "value": "Humidimètre",
+          "label": "Inclus pour appuyer le constat visuel"
+        }
+      ],
+      "proofPoints": [
+        {
+          "title": "Rapide à déclencher",
+          "text": "Quand vous avez un doute sur l'eau, les joints ou la toiture, l'inspection permet de ne pas perdre de temps sur une mauvaise intervention."
+        },
+        {
+          "title": "Orientée coût évité",
+          "text": "Identifier tôt une infiltration peut éviter qu'un simple joint devienne un plancher, un mur ou un plafond à reprendre."
+        },
+        {
+          "title": "Lecture claire ensuite",
+          "text": "Vous savez plus vite si la bonne suite est un entretien, une réparation d'étanchéité ou une remise en état plus importante."
+        }
+      ],
+      "caseStudiesTitle": "Cas réels d'inspection et d'infiltration",
+      "caseStudiesIntro": "Ces cas montrent comment une inspection bien orientée aide à confirmer la fuite, à prioriser les travaux et à limiter les dommages cachés.",
+      "caseStudies": [
+        {
+          "title": "Infiltration autour du toit sur un VR à Gatineau",
+          "meta": "Inspection ciblée • Gatineau",
+          "text": "Humidité confirmée autour d'une zone de toiture et des joints fatigués avant que les dommages intérieurs ne s'étendent.",
+          "href": "/realisations/infiltration-toiture-vr-gatineau/"
+        },
+        {
+          "title": "Traces d'eau intérieures sur une roulotte à Ottawa",
+          "meta": "Inspection + plan de réparation • Ottawa",
+          "text": "Le diagnostic a permis de distinguer ce qui relevait du scellement et ce qui demandait déjà une réparation intérieure.",
+          "href": "/realisations/reparation-interieure-vr-apres-infiltration-ottawa/"
+        }
       ],
       "includedTitle": "Ce que nous vérifions",
       "included": [
@@ -89,12 +136,59 @@
       "opening": "L'entretien de VR à Gatineau chez Clinique du VR met l'accent sur le changement des joints de mur, l'ajout de scellement là où il en manque sur la toiture, ainsi que sur l'entretien de la membrane de toit en TPO ou EPDM afin d'éviter les infiltrations d'eau. Nous intervenons pour remettre en bon état les zones de scellement et les surfaces de toiture qui vieillissent mal afin de protéger le véhicule contre les dommages liés à l'humidité.",
       "lead": "Le changement des joints de mur, l'ajout de scellement sur la toiture là où il en manque, ainsi que l'entretien de la membrane de toit en TPO ou EPDM, sont d'excellents moyens de prévenir les infiltrations d'eau. Nous offrons ce service en atelier ou sur la route.",
       "intro": "Nous prenons en charge l'entretien des joints, des zones de toiture sensibles et des membranes de toit en TPO ou EPDM pour aider à conserver l'étanchéité du VR, de la roulotte ou de la caravane. Le but est de corriger les zones faibles avant qu'elles causent des dommages plus importants.",
+      "heroPromise": "Un entretien fait au bon moment coûte souvent beaucoup moins cher qu'une réparation après infiltration d'eau.",
       "detailIntro": "Un entretien efficace doit d'abord viser les composantes qui protègent le véhicule contre l'eau. Les joints de mur, les joints de toit, la membrane de toit en TPO ou EPDM et les autres points de scellement sont souvent les premières zones à se fatiguer. En les remplaçant, en les reprenant ou en les entretenant au bon moment, on réduit fortement le risque d'infiltration d'eau et les réparations plus coûteuses qui suivent.",
       "highlights": [
         "Changement de joints de mur",
         "Changement de joints de toit",
         "Prévention des infiltrations d'eau",
         "Service en atelier ou sur la route"
+      ],
+      "proofTitle": "Ce que protège un bon entretien",
+      "proofIntro": "L'entretien n'est pas une dépense cosmétique. C'est ce qui garde l'eau à l'extérieur et ce qui évite le plus souvent les dossiers de toiture, de murs et de plancher.",
+      "proofStats": [
+        {
+          "value": "2x / an",
+          "label": "Rythme recommandé avant et après saison"
+        },
+        {
+          "value": "Mur + toit",
+          "label": "Joints et zones sensibles traités"
+        },
+        {
+          "value": "Atelier ou mobile",
+          "label": "Selon le type d'intervention"
+        }
+      ],
+      "proofPoints": [
+        {
+          "title": "Prévenir avant les gros travaux",
+          "text": "Remettre des joints fatigués en état au bon moment coûte moins qu'un dossier de dommages d'eau déjà avancé."
+        },
+        {
+          "title": "Mieux protéger la toiture",
+          "text": "La toiture, la membrane et les ouvertures sont les premières zones qui méritent une vigilance régulière."
+        },
+        {
+          "title": "Décider plus tôt",
+          "text": "Un entretien recommandé réduit les surprises juste avant la saison ou après une période d'entreposage."
+        }
+      ],
+      "caseStudiesTitle": "Cas réels liés à l'entretien préventif",
+      "caseStudiesIntro": "Ces exemples montrent ce qu'un entretien des joints et du scellement peut éviter quand il est fait avant que l'eau s'installe.",
+      "caseStudies": [
+        {
+          "title": "Remplacement de scellants extérieurs à Gatineau",
+          "meta": "Étanchéité préventive • Gatineau",
+          "text": "Des joints extérieurs fissurés ont été repris avant qu'ils ne laissent l'eau atteindre les matériaux intérieurs.",
+          "href": "/realisations/reprise-scellants-vr-gatineau/"
+        },
+        {
+          "title": "Inspection avant saison sur un VR d'Ottawa",
+          "meta": "Entretien recommandé • Ottawa",
+          "text": "Les zones faibles ont été ciblées avant les premiers voyages pour éviter un problème d'infiltration en cours de saison.",
+          "href": "/realisations/infiltration-toiture-vr-gatineau/"
+        }
       ],
       "includedTitle": "Ce que nous faisons en entretien",
       "included": [
@@ -165,6 +259,7 @@
       "opening": "Clinique du VR prend en charge la réparation spécialisée de VR à Gatineau pour les problèmes d'infiltration d'eau, de moisissure, de toiture, de membrane de toit, de plancher et de revêtement mural. Nous intervenons autant pour les réparations d'assurance que pour les réparations privées, avec une attention particulière à la vraie source du dommage.",
       "lead": "Quand l'eau entre dans un VR, les dommages peuvent toucher bien plus que la surface visible. La réparation doit donc viser la cause, les matériaux atteints et la remise en état durable du véhicule.",
       "intro": "Nous réalisons des réparations spécialisées sur les zones les plus exposées aux dommages d'eau, notamment la toiture, la membrane de toit, le plancher, les murs et les finis intérieurs.",
+      "heroPromise": "Quand l'eau a déjà commencé à faire des dommages, la priorité est de confirmer la source et de remettre le VR en état sans simplement cacher le problème.",
       "detailIntro": "Une infiltration d'eau peut affecter la structure, les matériaux intérieurs et l'état général du VR. Une tache d'eau, une odeur de moisissure, un plancher mou ou un revêtement mural abîmé peuvent indiquer un problème déjà avancé qui demande une réparation méthodique.",
       "highlights": [
         "Réparation d'infiltration d'eau",
@@ -172,11 +267,58 @@
         "Réparation de plancher et revêtement mural",
         "Dossiers d'assurance ou privés"
       ],
+      "proofTitle": "Ce qui compte dans une vraie réparation d'infiltration",
+      "proofIntro": "Une bonne réparation ne se limite pas à refaire une surface. Elle commence par la source, traite les matériaux touchés et remet le véhicule dans un état durable et crédible.",
+      "proofStats": [
+        {
+          "value": "Toit à plancher",
+          "label": "Intervention sur les zones touchées par l'eau"
+        },
+        {
+          "value": "Assurance ou privé",
+          "label": "Démarche adaptée à votre dossier"
+        },
+        {
+          "value": "Diagnostic d'abord",
+          "label": "Pour éviter de réparer à l'aveugle"
+        }
+      ],
+      "proofPoints": [
+        {
+          "title": "La cause avant la finition",
+          "text": "Nous validons d'abord l'origine de l'eau avant de refermer ou de refaire les surfaces visibles."
+        },
+        {
+          "title": "Réparation structurée",
+          "text": "Toiture, membrane, murs, plancher et finis sont repris selon l'ampleur réelle du dommage."
+        },
+        {
+          "title": "Utile pour l'assurance",
+          "text": "La lecture claire du dommage aide autant les dossiers privés que les réparations liées à l'assurance."
+        }
+      ],
+      "caseStudiesTitle": "Cas réels de réparation après infiltration",
+      "caseStudiesIntro": "Voici des exemples typiques de dossiers où l'eau avait déjà dépassé le simple entretien de joints.",
+      "caseStudies": [
+        {
+          "title": "Réparation intérieure après infiltration à Ottawa",
+          "meta": "Murs et matériaux intérieurs • Ottawa",
+          "text": "Une infiltration a touché les surfaces intérieures et a demandé une remise en état structurée, pas seulement un nouveau scellement.",
+          "href": "/realisations/reparation-interieure-vr-apres-infiltration-ottawa/"
+        },
+        {
+          "title": "Réfection de toiture avec joints repris à Gatineau",
+          "meta": "Toiture et étanchéité • Gatineau",
+          "text": "Le problème venait du haut du véhicule et demandait une intervention sur la toiture avant que les dommages progressent.",
+          "href": "/realisations/infiltration-toiture-vr-gatineau/"
+        }
+      ],
       "includedTitle": "Ce que nous réparons",
       "included": [
         "Recherche de la source d'infiltration d'eau",
         "Traitement des zones touchées par l'humidité ou la moisissure",
         "Réparation de toiture et de membrane de toit",
+        "Changement complet de membrane de toiture lorsque requis",
         "Réparation ou remplacement de plancher endommagé",
         "Réparation de revêtement mural et remise en état intérieure",
         "Réparations d'assurance ou privées selon votre dossier"

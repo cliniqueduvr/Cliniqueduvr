@@ -1,0 +1,43 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CaseStudyPageTemplate from '../../components/CaseStudyPageTemplate.astro';
+import { caseStudiesFr } from '../../data/case-studies-fr';
+import { buildArticleSchema, buildBreadcrumbSchema } from '../../lib/seo';
+
+export function getStaticPaths() {
+  return caseStudiesFr.map((study) => ({
+    params: { slug: study.slug },
+    props: { study }
+  }));
+}
+
+const { study } = Astro.props;
+const path = `/realisations/${study.slug}/`;
+const schemas = [
+  buildArticleSchema({
+    headline: study.h1,
+    description: study.metaDescription,
+    path
+  }),
+  buildBreadcrumbSchema([
+    { name: 'Accueil', path: '/' },
+    { name: 'Réalisations', path: '/realisations/' },
+    { name: study.title }
+  ])
+];
+---
+
+<Layout
+  title={study.metaTitle}
+  description={study.metaDescription}
+  canonicalPath={path}
+  frPath={path}
+  schemas={schemas}
+  ogType="article"
+>
+  <Header />
+  <CaseStudyPageTemplate study={study} />
+  <Footer />
+</Layout>
