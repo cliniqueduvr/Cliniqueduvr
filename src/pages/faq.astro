@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import servicePagesData from '../data/service-pages.json';
+import { localAreaPagesFr } from '../data/local-area-pages';
+import { buildBreadcrumbSchema, buildCollectionPageSchema, buildFAQSchema, buildWebSiteSchema } from '../lib/seo';
+import type { ServicePage } from '../data/service-page-types';
+
+const servicePages = servicePagesData.items as ServicePage[];
+const faqItems = [
+  ...servicePages.flatMap((service) => service.faqs),
+  ...localAreaPagesFr.flatMap((page) => page.faqs),
+  {
+    question: 'Travaillez-vous seulement à Gatineau?',
+    answer: "Notre atelier est à Gatineau, mais nous accompagnons aussi des clients de l'Outaouais, d'Ottawa et des Laurentides selon le type de demande."
+  },
+  {
+    question: "Quand faut-il réserver une inspection plutôt qu'une réparation?",
+    answer: "Quand la source du problème n'est pas encore claire, l'inspection est souvent la meilleure première étape. Quand les dommages sont déjà visibles ou confirmés, la réparation devient généralement la bonne suite."
+  }
+];
+
+const schemas = [
+  buildWebSiteSchema(),
+  buildCollectionPageSchema({
+    name: 'FAQ Clinique du VR',
+    description: "Questions fréquentes sur l'inspection, l'entretien, la réparation et les zones desservies par Clinique du VR.",
+    path: '/faq/'
+  }),
+  buildFAQSchema(faqItems),
+  buildBreadcrumbSchema([
+    { name: 'Accueil', path: '/' },
+    { name: 'FAQ' }
+  ])
+];
+---
+
+<Layout
+  title="FAQ VR à Gatineau | Inspection, entretien, réparation | Clinique du VR"
+  description="FAQ Clinique du VR sur l'inspection, l'entretien, la réparation de fuite d'eau, les zones desservies et la meilleure prochaine étape pour votre VR à Gatineau."
+  canonicalPath="/faq/"
+  frPath="/faq/"
+  enPath="/en/faq/"
+  schemas={schemas}
+>
+  <Header />
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Questions fréquentes</p>
+        <h1>FAQ sur les services VR à Gatineau</h1>
+        <p class="lead">Cette page regroupe les questions les plus fréquentes sur les fuites d’eau, l’entretien, la réparation, l’inspection avant achat et les zones desservies autour de Gatineau.</p>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="container faq-layout">
+        <div class="faq-list">
+          {faqItems.map((item) => (
+            <article class="faq-item">
+              <h2>{item.question}</h2>
+              <p>{item.answer}</p>
+            </article>
+          ))}
+        </div>
+
+        <aside class="side-panel">
+          <div class="side-card">
+            <h2>Pages utiles</h2>
+            <a href="/choisir-service/">Quel service choisir ?</a>
+            <a href="/zones-desservies/">Zones desservies</a>
+            <a href="/services/">Tous les services</a>
+            <a href="/contact/">Contacter l’atelier</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-hero { padding: 4.5rem 0 3rem; background: linear-gradient(135deg, var(--brand-navy-dark) 0%, #1f476d 60%, #eef3f7 60%, #eef3f7 100%); color: white; }
+  .eyebrow { display: inline-flex; margin-bottom: 1rem; padding: 0.45rem 0.85rem; border-radius: 999px; background: rgba(255,255,255,0.12); color: var(--brand-gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+  .page-hero h1 { color: white; margin-bottom: 1rem; max-width: 14ch; }
+  .lead { max-width: 62ch; color: #e7edf4; font-size: 1.05rem; }
+  .faq-section { padding: 4rem 0; background: #eef3f7; }
+  .faq-layout { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.8fr); gap: 2rem; align-items: start; }
+  .faq-list { display: grid; gap: 1rem; }
+  .faq-item { background: white; border-radius: 18px; padding: 1.5rem; box-shadow: 0 12px 26px rgba(20, 36, 55, 0.08); }
+  .faq-item h2 { font-size: 1.15rem; letter-spacing: 0.04em; }
+  .faq-item p { margin-top: 0.8rem; color: var(--brand-muted); }
+  .side-card { position: sticky; top: 1.5rem; background: white; border-radius: 18px; padding: 1.5rem; box-shadow: 0 12px 26px rgba(20, 36, 55, 0.08); }
+  .side-card h2 { margin-bottom: 1rem; font-size: 1.1rem; }
+  .side-card a { display: block; margin: 0.7rem 0; font-weight: 700; }
+  @media (max-width: 768px) { .page-hero { background: linear-gradient(180deg, var(--brand-navy-dark) 0%, #1f476d 100%); padding: 3.8rem 0 2.8rem; } .faq-layout { grid-template-columns: 1fr; } .side-card { position: static; } }
+</style>

@@ -21,6 +21,10 @@ const pageLastmods = new Map<string, string>([
   ['/en/sales/', '2026-04-14'],
   ['/choisir-service/', '2026-04-15'],
   ['/en/choose-service/', '2026-04-15'],
+  ['/faq/', '2026-04-19'],
+  ['/en/faq/', '2026-04-19'],
+  ['/zones-desservies/', '2026-04-19'],
+  ['/en/service-areas/', '2026-04-19'],
   ['/plan-du-site/', '2026-04-15'],
   ['/en/site-map/', '2026-04-15']
 ]);
@@ -34,6 +38,8 @@ const staticEntries: UrlEntry[] = [
   { path: '/vente/', lastmod: '2026-04-14', alternatePaths: ['/en/sales/'] },
   { path: '/privacy/', lastmod: defaultLastmod, alternatePaths: ['/en/privacy/'] },
   { path: '/choisir-service/', lastmod: '2026-04-15', alternatePaths: ['/en/choose-service/'] },
+  { path: '/faq/', lastmod: '2026-04-19', alternatePaths: ['/en/faq/'] },
+  { path: '/zones-desservies/', lastmod: '2026-04-19', alternatePaths: ['/en/service-areas/'] },
   { path: '/plan-du-site/', lastmod: '2026-04-15', alternatePaths: ['/en/site-map/'] },
   { path: '/en/', lastmod: defaultLastmod, alternatePaths: ['/'] },
   { path: '/en/about/', lastmod: defaultLastmod, alternatePaths: ['/about/'] },
@@ -43,6 +49,8 @@ const staticEntries: UrlEntry[] = [
   { path: '/en/sales/', lastmod: '2026-04-14', alternatePaths: ['/vente/'] },
   { path: '/en/privacy/', lastmod: defaultLastmod, alternatePaths: ['/privacy/'] },
   { path: '/en/choose-service/', lastmod: '2026-04-15', alternatePaths: ['/choisir-service/'] },
+  { path: '/en/faq/', lastmod: '2026-04-19', alternatePaths: ['/faq/'] },
+  { path: '/en/service-areas/', lastmod: '2026-04-19', alternatePaths: ['/zones-desservies/'] },
   { path: '/en/site-map/', lastmod: '2026-04-15', alternatePaths: ['/plan-du-site/'] }
 ];
 

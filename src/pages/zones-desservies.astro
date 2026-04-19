@@ -1,0 +1,95 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { localAreaPagesFr } from '../data/local-area-pages';
+import { buildBreadcrumbSchema, buildCollectionPageSchema, buildWebSiteSchema } from '../lib/seo';
+
+const schemas = [
+  buildWebSiteSchema(),
+  buildCollectionPageSchema({
+    name: 'Zones desservies | Clinique du VR',
+    description: 'Zones desservies par Clinique du VR depuis Gatineau pour inspection, entretien et réparation de VR.',
+    path: '/zones-desservies/'
+  }),
+  buildBreadcrumbSchema([
+    { name: 'Accueil', path: '/' },
+    { name: 'Zones desservies' }
+  ])
+];
+---
+
+<Layout
+  title="Zones desservies VR | Gatineau, Ottawa, Outaouais, Laurentides | Clinique du VR"
+  description="Découvrez les zones desservies par Clinique du VR depuis Gatineau pour l'inspection, l'entretien et la réparation de VR, roulottes et caravanes."
+  canonicalPath="/zones-desservies/"
+  frPath="/zones-desservies/"
+  enPath="/en/service-areas/"
+  schemas={schemas}
+>
+  <Header />
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Local SEO</p>
+        <h1>Zones desservies autour de Gatineau</h1>
+        <p class="lead">Notre atelier est à Gatineau. Nous accompagnons aussi des demandes venant d’Ottawa, de l’Outaouais et des Laurentides selon le type d’intervention, la nature du problème et le format atelier ou mobile.</p>
+      </div>
+    </section>
+
+    <section class="areas-section">
+      <div class="container">
+        <div class="areas-grid">
+          {localAreaPagesFr.map((page) => (
+            <a class="area-card" href={`/zones/${page.slug}/`}>
+              <p class="area-name">{page.area}</p>
+              <h2>{page.h1}</h2>
+              <p>{page.intro}</p>
+              <span>Voir la page locale</span>
+            </a>
+          ))}
+        </div>
+
+        <div class="content-grid">
+          <article class="content-card">
+            <h2>Quand une page locale est utile</h2>
+            <p>Une page locale est utile quand vous cherchez un service précis avec une réalité géographique claire: fuite d’eau à Gatineau, entretien en Outaouais, réparation pour Ottawa ou infiltration sur une roulotte dans les Laurentides.</p>
+          </article>
+
+          <article class="content-card">
+            <h2>Atelier à Gatineau, accompagnement régional</h2>
+            <p>Le point de départ reste notre atelier de Gatineau. Selon le service demandé, nous pouvons orienter vers une inspection, un entretien ou une réparation, puis confirmer la meilleure prochaine étape avant déplacement ou réservation.</p>
+          </article>
+
+          <article class="content-card">
+            <h2>Avant de réserver</h2>
+            <p>Si vous hésitez encore entre plusieurs services, commencez par notre page d’orientation ou contactez-nous avec quelques photos du VR, la ville, le type de problème et le niveau d’urgence.</p>
+            <p class="actions"><a href="/choisir-service/">Quel service choisir ?</a> · <a href="/contact/">Contacter l’atelier</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-hero { padding: 4.5rem 0 3rem; background: linear-gradient(135deg, var(--brand-navy-dark) 0%, #1f476d 60%, #eef3f7 60%, #eef3f7 100%); color: white; }
+  .eyebrow { display: inline-flex; margin-bottom: 1rem; padding: 0.45rem 0.85rem; border-radius: 999px; background: rgba(255,255,255,0.12); color: var(--brand-gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+  .page-hero h1 { color: white; margin-bottom: 1rem; max-width: 14ch; }
+  .lead { max-width: 64ch; color: #e7edf4; font-size: 1.05rem; }
+  .areas-section { padding: 4rem 0; background: #eef3f7; }
+  .areas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+  .area-card { background: white; border-radius: 18px; padding: 1.5rem; box-shadow: 0 12px 26px rgba(20, 36, 55, 0.08); }
+  .area-name { color: var(--brand-green-dark); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.82rem; }
+  .area-card h2 { font-size: 1.2rem; margin: 0.45rem 0 0.8rem; }
+  .area-card p { color: var(--brand-muted); }
+  .area-card span { display: inline-block; margin-top: 1rem; font-weight: 700; }
+  .content-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-top: 2rem; }
+  .content-card { background: white; border-radius: 18px; padding: 1.5rem; box-shadow: 0 12px 26px rgba(20, 36, 55, 0.08); }
+  .content-card p { margin-top: 0.75rem; color: var(--brand-muted); }
+  .actions { font-weight: 700; }
+  @media (max-width: 768px) { .page-hero { background: linear-gradient(180deg, var(--brand-navy-dark) 0%, #1f476d 100%); padding: 3.8rem 0 2.8rem; } }
+</style>

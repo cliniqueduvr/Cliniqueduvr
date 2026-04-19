@@ -1,0 +1,101 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import servicePagesData from '../../data/service-pages-en.json';
+import { localAreaPagesEn } from '../../data/local-area-pages';
+import { buildBreadcrumbSchema, buildCollectionPageSchema, buildFAQSchema, buildWebSiteSchema } from '../../lib/seo';
+import type { ServicePage } from '../../data/service-page-types';
+
+const servicePages = servicePagesData.items as ServicePage[];
+const faqItems = [
+  ...servicePages.flatMap((service) => service.faqs),
+  ...localAreaPagesEn.flatMap((page) => page.faqs),
+  {
+    question: 'Do you only work in Gatineau?',
+    answer: 'Our workshop is based in Gatineau, but we also support clients from Outaouais, Ottawa, and the Laurentides depending on the type of request.'
+  },
+  {
+    question: 'When should I book an inspection instead of a repair?',
+    answer: 'When the source of the issue is still unclear, inspection is often the right first step. When damage is already visible or confirmed, repair is usually the next move.'
+  }
+];
+
+const schemas = [
+  buildWebSiteSchema(),
+  buildCollectionPageSchema({
+    name: 'Clinique du VR FAQ',
+    description: 'Frequently asked questions about inspection, maintenance, repair, and service areas for Clinique du VR.',
+    path: '/en/faq/'
+  }),
+  buildFAQSchema(faqItems),
+  buildBreadcrumbSchema([
+    { name: 'Home', path: '/en/' },
+    { name: 'FAQ' }
+  ])
+];
+---
+
+<Layout
+  title="RV FAQ in Gatineau | Inspection, maintenance and repair | Clinique du VR"
+  description="Clinique du VR FAQ about inspection, maintenance, water leak repair, service areas, and the right next step for your RV in Gatineau."
+  lang="en-CA"
+  canonicalPath="/en/faq/"
+  frPath="/faq/"
+  enPath="/en/faq/"
+  schemas={schemas}
+>
+  <Header lang="en" />
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Frequently asked questions</p>
+        <h1>FAQ about RV services in Gatineau</h1>
+        <p class="lead">This page gathers the most common questions about water leaks, maintenance, repair, pre-purchase inspection, and service areas around Gatineau.</p>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="container faq-layout">
+        <div class="faq-list">
+          {faqItems.map((item) => (
+            <article class="faq-item">
+              <h2>{item.question}</h2>
+              <p>{item.answer}</p>
+            </article>
+          ))}
+        </div>
+
+        <aside class="side-panel">
+          <div class="side-card">
+            <h2>Helpful pages</h2>
+            <a href="/en/choose-service/">Which service should you choose?</a>
+            <a href="/en/service-areas/">Service areas</a>
+            <a href="/en/services/">All services</a>
+            <a href="/en/contact/">Contact the workshop</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang="en" />
+</Layout>
+
+<style>
+  .page-hero { padding: 4.5rem 0 3rem; background: linear-gradient(135deg, var(--brand-navy-dark) 0%, #1f476d 60%, #eef3f7 60%, #eef3f7 100%); color: white; }
+  .eyebrow { display: inline-flex; margin-bottom: 1rem; padding: 0.45rem 0.85rem; border-radius: 999px; background: rgba(255,255,255,0.12); color: var(--brand-gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+  .page-hero h1 { color: white; margin-bottom: 1rem; max-width: 14ch; }
+  .lead { max-width: 62ch; color: #e7edf4; font-size: 1.05rem; }
+  .faq-section { padding: 4rem 0; background: #eef3f7; }
+  .faq-layout { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.8fr); gap: 2rem; align-items: start; }
+  .faq-list { display: grid; gap: 1rem; }
+  .faq-item { background: white; border-radius: 18px; padding: 1.5rem; box-shadow: 0 12px 26px rgba(20, 36, 55, 0.08); }
+  .faq-item h2 { font-size: 1.15rem; letter-spacing: 0.04em; }
+  .faq-item p { margin-top: 0.8rem; color: var(--brand-muted); }
+  .side-card { position: sticky; top: 1.5rem; background: white; border-radius: 18px; padding: 1.5rem; box-shadow: 0 12px 26px rgba(20, 36, 55, 0.08); }
+  .side-card h2 { margin-bottom: 1rem; font-size: 1.1rem; }
+  .side-card a { display: block; margin: 0.7rem 0; font-weight: 700; }
+  @media (max-width: 768px) { .page-hero { background: linear-gradient(180deg, var(--brand-navy-dark) 0%, #1f476d 100%); padding: 3.8rem 0 2.8rem; } .faq-layout { grid-template-columns: 1fr; } .side-card { position: static; } }
+</style>

@@ -77,6 +77,8 @@ export function buildLocalBusinessSchema({
     email,
     url: SITE_URL,
     inLanguage: ['fr-CA', 'en-CA'],
+    availableLanguage: ['fr-CA', 'en-CA'],
+    foundingDate: '2013',
     areaServed: [
       { '@type': 'City', name: 'Gatineau' },
       { '@type': 'City', name: 'Ottawa' },
@@ -102,6 +104,16 @@ export function buildLocalBusinessSchema({
     priceRange: '$$',
     image: BRAND_IMAGE,
     sameAs: [facebookUrl, tiktokUrl],
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        contactType: 'customer service',
+        telephone,
+        email,
+        areaServed: ['CA-QC', 'CA-ON'],
+        availableLanguage: ['fr-CA', 'en-CA']
+      }
+    ],
     knowsAbout: [
       'Inspection de VR',
       'Entretien de VR',
@@ -192,5 +204,27 @@ export function buildServiceSchema({
     ],
     serviceType,
     description
+  };
+}
+
+export function buildCollectionPageSchema({
+  name,
+  description,
+  path
+}: {
+  name: string;
+  description: string;
+  path: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': absoluteUrl(path),
+    url: absoluteUrl(path),
+    name,
+    description,
+    isPartOf: { '@id': `${SITE_URL}/#website` },
+    about: { '@id': `${SITE_URL}/#clinique-du-vr` },
+    inLanguage: path.startsWith('/en/') ? 'en-CA' : 'fr-CA'
   };
 }
