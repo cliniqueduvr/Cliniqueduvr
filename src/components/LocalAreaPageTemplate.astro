@@ -8,6 +8,68 @@ interface Props {
 
 const { page, lang = 'fr' } = Astro.props as Props;
 const isEnglish = lang === 'en';
+const contactHref = isEnglish ? '/en/contact/' : '/contact/';
+const faqHref = isEnglish ? '/en/faq/' : '/faq/';
+const chooseServiceHref = isEnglish ? '/en/choose-service/' : '/choisir-service/';
+const serviceAreasHref = isEnglish ? '/en/service-areas/' : '/zones-desservies/';
+const projectsHref = isEnglish ? '/en/realisations/' : '/realisations/';
+const quickAnswerTitle = isEnglish ? `Do you help in ${page.area}?` : `Intervenez-vous pour ${page.area} ?`;
+const quickAnswerBody = isEnglish
+  ? `Yes. Clinique du VR helps clients in ${page.area} from its Gatineau workshop and points each request toward inspection, maintenance, or repair depending on the actual condition of the RV or trailer.`
+  : `Oui. Clinique du VR accompagne les demandes venant de ${page.area} à partir de son atelier de Gatineau et oriente chaque dossier vers une inspection, un entretien ou une réparation selon l’état réel du VR ou de la roulotte.`;
+const practicalBlocks = isEnglish
+  ? [
+      {
+        title: `Why this ${page.area} page is useful`,
+        body: `This page is meant to answer the local question directly: what to do when the need is tied to ${page.area} and the issue involves moisture, seals, roof condition, inspection, maintenance, or repair.`
+      },
+      {
+        title: 'What to prepare before contacting us',
+        body: 'The most useful starting point is usually a short description of the problem, a few photos, the vehicle type, and whether the concern is still a doubt or already visible damage. That makes it easier to direct you quickly.'
+      },
+      {
+        title: 'Workshop first, then the right next step',
+        body: `The workshop remains in Gatineau, but clients from ${page.area} often need the same thing first: clarity. The goal is to avoid booking the wrong service and move directly toward the useful next step.`
+      }
+    ]
+  : [
+      {
+        title: `Pourquoi cette page locale pour ${page.area}`,
+        body: `Cette page sert à répondre clairement à la question locale: quoi faire quand le besoin est lié à ${page.area} et que le problème touche l’humidité, les joints, la toiture, l’inspection, l’entretien ou la réparation.`
+      },
+      {
+        title: 'Quoi préparer avant de nous écrire',
+        body: "Le point de départ le plus utile est souvent une courte description du problème, quelques photos, le type de véhicule et le fait que le souci soit encore un doute ou déjà un dommage visible. Cela permet de vous orienter plus vite."
+      },
+      {
+        title: "Atelier à Gatineau, bonne prochaine étape ensuite",
+        body: `L’atelier reste à Gatineau, mais les clients de ${page.area} ont souvent le même besoin au départ: obtenir une lecture claire de la situation. L’objectif est d’éviter de réserver le mauvais service et d’aller directement vers l’étape utile.`
+      }
+    ];
+const decisionSteps = isEnglish
+  ? [
+      'Describe the issue, city, and vehicle type.',
+      'Confirm whether the need sounds like inspection, maintenance, or repair.',
+      'Move to the most useful next page or contact the workshop.'
+    ]
+  : [
+      'Décrire le problème, la ville et le type de véhicule.',
+      'Confirmer si le besoin ressemble surtout à une inspection, un entretien ou une réparation.',
+      "Passer vers la page la plus utile ou contacter l’atelier."
+    ];
+const supportLinks = isEnglish
+  ? [
+      { href: chooseServiceHref, title: 'Which service should you choose?', body: 'Use the decision page if you are still hesitating between inspection, maintenance, or repair.' },
+      { href: faqHref, title: 'Read the FAQ', body: 'See common questions about water leaks, maintenance timing, and service-area realities.' },
+      { href: serviceAreasHref, title: 'Browse all service areas', body: 'Compare the local pages and see how Gatineau, Ottawa, Outaouais, and the Laurentides are covered.' },
+      { href: projectsHref, title: 'Review real project examples', body: 'Check real workshop interventions before booking if you want more context.' }
+    ]
+  : [
+      { href: chooseServiceHref, title: 'Quel service choisir ?', body: "Utilisez la page d’orientation si vous hésitez encore entre inspection, entretien ou réparation." },
+      { href: faqHref, title: 'Lire la FAQ', body: "Consultez les questions fréquentes sur les fuites d’eau, l’entretien et les réalités des zones desservies." },
+      { href: serviceAreasHref, title: 'Voir toutes les zones desservies', body: "Comparez les pages locales et voyez comment Gatineau, Ottawa, l’Outaouais et les Laurentides sont couverts." },
+      { href: projectsHref, title: 'Voir des cas réels', body: "Consultez des interventions réelles avant de réserver si vous voulez plus de contexte." }
+    ];
 ---
 
 <main>
@@ -27,12 +89,50 @@ const isEnglish = lang === 'en';
 
   <section class="content-section">
     <div class="container card-grid">
+      <article class="info-card info-card--accent">
+        <h2>{quickAnswerTitle}</h2>
+        <p>{quickAnswerBody}</p>
+      </article>
+
       {page.sections.map((section) => (
         <article class="info-card">
           <h2>{section.title}</h2>
           <p>{section.body}</p>
         </article>
       ))}
+    </div>
+  </section>
+
+  <section class="practical-section">
+    <div class="container practical-layout">
+      <div class="practical-main">
+        <div class="card-grid">
+          {practicalBlocks.map((section) => (
+            <article class="info-card">
+              <h2>{section.title}</h2>
+              <p>{section.body}</p>
+            </article>
+          ))}
+        </div>
+
+        <article class="info-card process-card">
+          <h2>{isEnglish ? 'A simple local decision path' : 'Un parcours local simple'}</h2>
+          <ol>
+            {decisionSteps.map((step) => (
+              <li>{step}</li>
+            ))}
+          </ol>
+        </article>
+      </div>
+
+      <aside class="sidebar">
+        <article class="info-card sticky-card">
+          <h2>{isEnglish ? 'Need a practical next step?' : 'Besoin d’une prochaine étape claire ?'}</h2>
+          <p>{isEnglish ? `If your request comes from ${page.area}, the fastest route is to send a few photos and a short summary of the issue.` : `Si votre demande vient de ${page.area}, le plus rapide est d’envoyer quelques photos et un court résumé du problème.`}</p>
+          <a class="sidebar-button" href={contactHref}>{isEnglish ? 'Contact the workshop' : "Contacter l'atelier"}</a>
+          <a class="sidebar-link" href={chooseServiceHref}>{isEnglish ? 'Compare services first' : "Comparer les services d'abord"}</a>
+        </article>
+      </aside>
     </div>
   </section>
 
@@ -57,6 +157,13 @@ const isEnglish = lang === 'en';
           <h2>{item.title}</h2>
           <p>{item.body}</p>
           <span>{item.linkLabel}</span>
+        </a>
+      ))}
+      {supportLinks.map((item) => (
+        <a class="info-card info-link" href={item.href}>
+          <h2>{item.title}</h2>
+          <p>{item.body}</p>
+          <span>{isEnglish ? 'Learn more' : 'En savoir plus'}</span>
         </a>
       ))}
     </div>
@@ -134,12 +241,14 @@ const isEnglish = lang === 'en';
   }
 
   .content-section,
+  .practical-section,
   .faq-section,
   .links-section {
     padding: 4rem 0;
     background: #f3f5f8;
   }
 
+  .practical-section,
   .faq-section,
   .links-section {
     padding-top: 0;
@@ -171,9 +280,67 @@ const isEnglish = lang === 'en';
     color: var(--brand-muted);
   }
 
+  .info-card--accent {
+    background: linear-gradient(160deg, #fff9d8 0%, #ffffff 100%);
+    border: 1px solid rgba(242, 210, 27, 0.45);
+  }
+
   .faq-list {
     display: grid;
     gap: 1rem;
+  }
+
+  .practical-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.8fr);
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .practical-main {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .process-card ol {
+    margin: 0.9rem 0 0;
+    padding-left: 1.2rem;
+    color: var(--brand-muted);
+  }
+
+  .process-card li + li {
+    margin-top: 0.55rem;
+  }
+
+  .sticky-card {
+    position: sticky;
+    top: 1.5rem;
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .sidebar-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    border-radius: 999px;
+    background: var(--brand-gold);
+    color: var(--brand-navy-dark);
+    border: 2px solid var(--brand-gold);
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+  }
+
+  .sidebar-button:hover {
+    text-decoration: none;
+    background: #e1c317;
+    border-color: #e1c317;
+  }
+
+  .sidebar-link {
+    font-weight: 700;
   }
 
   .info-link {
@@ -209,15 +376,25 @@ const isEnglish = lang === 'en';
     }
 
     .content-section,
+    .practical-section,
     .faq-section,
     .links-section {
       padding: 3rem 0;
       background: #f3f5f8;
     }
 
+    .practical-section,
     .faq-section,
     .links-section {
       padding-top: 0;
+    }
+
+    .practical-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .sticky-card {
+      position: static;
     }
   }
 </style>
