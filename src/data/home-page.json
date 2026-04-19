@@ -9,7 +9,7 @@
   "introCard": {
     "icon": "",
     "heading": "Pourquoi choisir Clinique du VR?",
-    "body": "<strong>Service spécialisé et attentif</strong> pour l'entretien, la réparation et l'esthétique de VR. Nous misons sur des explications claires, une lecture concrète de l'état du véhicule et des recommandations adaptées à votre réalité. Nous avons un atelier ouvert à l'année ainsi qu'une unité mobile pour mieux vous servir selon le type d'intervention. Rapidité, transparence et exécution soignée du début à la fin font partie de notre façon de travailler."
+    "body": "<strong>Service spécialisé et attentif</strong> pour l'entretien, la réparation et l'esthétique de VR. Nous misons sur des explications claires, une lecture concrète de l'état du véhicule et des recommandations adaptées à votre réalité. Nous avons un atelier ouvert à l'année ainsi qu'une unité mobile pour mieux vous servir selon le type d'intervention. Nous offrons aussi une page distincte pour l'esthétique auto et camion, en atelier seulement. Rapidité, transparence et exécution soignée du début à la fin font partie de notre façon de travailler."
   },
   "servicesOverview": {
     "title": "Nos Spécialités",
@@ -17,7 +17,8 @@
       { "href": "/services/inspection/", "icon": "fas fa-clipboard-check", "label": "Inspection" },
       { "href": "/services/entretien/", "icon": "fas fa-screwdriver-wrench", "label": "Entretien" },
       { "href": "/services/reparation/", "icon": "fas fa-toolbox", "label": "Réparation" },
-      { "href": "/services/esthetique/", "icon": "fas fa-spray-can-sparkles", "label": "Esthétique" }
+      { "href": "/services/esthetique/", "icon": "fas fa-spray-can-sparkles", "label": "Esthétique VR" },
+      { "href": "/services/esthetique-auto-camion/", "icon": "fas fa-car-side", "label": "Esthétique auto" }
     ]
   },
   "seoSections": [

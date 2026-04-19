@@ -57,7 +57,7 @@ const schemas = [
       <article class="content-card"><h2>When maintenance makes more sense than inspection</h2><p>When seals and roof areas mostly show normal or expected wear, maintenance is often the right next step. If you are unsure of the source or already see moisture signs, inspection may be the better place to start.</p></article>
       <article class="content-card"><h2>A simple yearly rhythm</h2><p>The easiest rhythm to remember is usually one review in spring before the season and another in fall before harsher months. That helps keep a clear picture of the RV’s condition throughout the year.</p></article>
     </div></section>
-    <section class="faq-section"><div class="container"><h2>Frequently asked questions</h2><div class="faq-list">{faqs.map((item) => (<article class="faq-card"><h3>{item.question}</h3><p>{item.answer}</p></article>))}</div></div></section>
+    <section class="faq-section"><div class="container"><h2>Frequently asked questions</h2><div class="faq-list">{faqs.map((item) => (<details class="faq-card"><summary><h3>{item.question}</h3></summary><p>{item.answer}</p></details>))}</div></div></section>
     <section class="links-section"><div class="container links-grid">
       <a class="link-card" href="/en/services/maintenance/"><h2>See the maintenance service</h2><p>Visit the maintenance page if your priority is preventing water intrusion through seals, roof areas, or the membrane.</p><span>View maintenance</span></a>
       <a class="link-card" href="/en/services/inspection/"><h2>Start with inspection</h2><p>If you are not sure about the RV’s actual condition, inspection can help you avoid moving in the wrong direction.</p><span>View inspection</span></a>
@@ -80,6 +80,11 @@ const schemas = [
   .content-card ul { margin: 0.9rem 0 0; padding-left: 1.2rem; color: var(--brand-muted); }
   .content-card li + li { margin-top: 0.45rem; }
   .faq-list { display: grid; gap: 1rem; }
+  .faq-card summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .faq-card summary::-webkit-details-marker { display: none; }
+  .faq-card summary::after { content: '+'; flex: 0 0 auto; font-size: 1.4rem; font-weight: 700; line-height: 1; color: var(--brand-navy); }
+  .faq-card[open] summary::after { content: '-'; }
+  .faq-card h3 { margin: 0; }
   .link-card { text-decoration: none; display: grid; grid-template-rows: auto 1fr auto; gap: 0.7rem; }
   .link-card span { font-weight: 700; color: var(--brand-navy); }
   @media (max-width: 768px) { .page-hero { background: linear-gradient(180deg, var(--brand-navy-dark) 0%, #1f476d 100%); padding: 3.8rem 0 2.8rem; } .content-section, .faq-section, .links-section { padding: 3rem 0; } .faq-section, .links-section { padding-top: 0; } }

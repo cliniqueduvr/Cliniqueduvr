@@ -31,9 +31,9 @@ const symptomCards = [
   },
   {
     title: 'Vehicle looks tired or needs presentation work',
-    copy: 'If the need is mostly visual, detailing helps improve presentation, cleanliness, and the overall finish of the vehicle.',
+    copy: 'For an RV or motorhome that needs real cleaning, polishing, or waxing, detailing helps restore presentation, cleanliness, and finish quality either at the workshop or on the road.',
     href: '/en/services/detailing/',
-    linkLabel: 'View detailing service'
+    linkLabel: 'View RV detailing'
   },
   {
     title: 'You are hesitating between two services',
@@ -95,7 +95,7 @@ const breadcrumbs = buildBreadcrumbSchema([
       <div class="container">
         <div class="section-intro">
           <h2>Start with the right service</h2>
-          <p>When an RV shows more than one issue at the same time, it is not always obvious whether you should begin with inspection, maintenance, repair, or detailing. The cards below help point you to the most useful next step.</p>
+          <p>When an RV shows more than one issue at the same time, it is not always obvious whether you should begin with inspection, maintenance, repair, or detailing. The cards below help point you to the most useful next step for an RV or motorhome.</p>
         </div>
 
         <div class="card-grid">
@@ -131,10 +131,10 @@ const breadcrumbs = buildBreadcrumbSchema([
         <h2>Frequently asked questions</h2>
         <div class="faq-list">
           {faqs.map((item) => (
-            <article class="faq-card">
-              <h3>{item.question}</h3>
+            <details class="faq-card">
+              <summary><h3>{item.question}</h3></summary>
               <p>{item.answer}</p>
-            </article>
+            </details>
           ))}
         </div>
       </div>
@@ -219,6 +219,32 @@ const breadcrumbs = buildBreadcrumbSchema([
     border-radius: 22px;
     padding: 1.6rem;
     box-shadow: 0 18px 34px rgba(21, 38, 58, 0.08);
+  }
+
+  .faq-card summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .faq-card summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-card summary::after {
+    content: '+';
+    flex: 0 0 auto;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--brand-navy);
+  }
+
+  .faq-card[open] summary::after {
+    content: '-';
   }
 
   .choice-card {

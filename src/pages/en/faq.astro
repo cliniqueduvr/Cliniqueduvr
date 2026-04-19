@@ -60,10 +60,10 @@ const schemas = [
       <div class="container faq-layout">
         <div class="faq-list">
           {faqItems.map((item) => (
-            <article class="faq-item">
-              <h2>{item.question}</h2>
+            <details class="faq-item">
+              <summary><h2>{item.question}</h2></summary>
               <p>{item.answer}</p>
-            </article>
+            </details>
           ))}
         </div>
 
@@ -92,8 +92,12 @@ const schemas = [
   .faq-layout { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.8fr); gap: 2rem; align-items: start; }
   .faq-list { display: grid; gap: 1rem; }
   .faq-item { background: white; border-radius: 18px; padding: 1.5rem; box-shadow: 0 12px 26px rgba(20, 36, 55, 0.08); }
-  .faq-item h2 { font-size: 1.15rem; letter-spacing: 0.04em; }
+  .faq-item h2 { font-size: 1.15rem; letter-spacing: 0.04em; margin: 0; }
   .faq-item p { margin-top: 0.8rem; color: var(--brand-muted); }
+  .faq-item summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: '+'; flex: 0 0 auto; font-size: 1.4rem; font-weight: 700; line-height: 1; color: var(--brand-navy); }
+  .faq-item[open] summary::after { content: '-'; }
   .side-card { position: sticky; top: 1.5rem; background: white; border-radius: 18px; padding: 1.5rem; box-shadow: 0 12px 26px rgba(20, 36, 55, 0.08); }
   .side-card h2 { margin-bottom: 1rem; font-size: 1.1rem; }
   .side-card a { display: block; margin: 0.7rem 0; font-weight: 700; }

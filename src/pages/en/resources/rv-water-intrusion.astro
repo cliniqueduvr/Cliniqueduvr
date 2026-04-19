@@ -57,7 +57,7 @@ const schemas = [
       <article class="content-card"><h2>When inspection is the right first step</h2><p>Inspection is often the best option when you suspect water intrusion but do not yet know where it is coming from, when several signs point in different directions, or when you want to confirm the vehicle’s actual condition before deciding on work.</p></article>
       <article class="content-card"><h2>When maintenance or repair takes over</h2><p>If the seals or roof mostly show early aging without major visible damage, maintenance may be enough. If water has already reached the materials and surfaces are soft or damaged, repair is usually the logical next step.</p></article>
     </div></section>
-    <section class="faq-section"><div class="container"><h2>Frequently asked questions</h2><div class="faq-list">{faqs.map((item) => (<article class="faq-card"><h3>{item.question}</h3><p>{item.answer}</p></article>))}</div></div></section>
+    <section class="faq-section"><div class="container"><h2>Frequently asked questions</h2><div class="faq-list">{faqs.map((item) => (<details class="faq-card"><summary><h3>{item.question}</h3></summary><p>{item.answer}</p></details>))}</div></div></section>
     <section class="links-section"><div class="container links-grid">
       <a class="link-card" href="/en/services/inspection/"><h2>Start with inspection</h2><p>See the inspection page if you want to confirm water intrusion, suspicious seals, or doubts about roof condition.</p><span>View inspection</span></a>
       <a class="link-card" href="/en/services/maintenance/"><h2>See preventive maintenance</h2><p>If the issue still seems limited to seals or sealing work, maintenance may be the right next step.</p><span>View maintenance</span></a>
@@ -80,6 +80,11 @@ const schemas = [
   .content-card ol { margin: 0.9rem 0 0; padding-left: 1.2rem; color: var(--brand-muted); }
   .content-card li + li { margin-top: 0.45rem; }
   .faq-list { display: grid; gap: 1rem; }
+  .faq-card summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .faq-card summary::-webkit-details-marker { display: none; }
+  .faq-card summary::after { content: '+'; flex: 0 0 auto; font-size: 1.4rem; font-weight: 700; line-height: 1; color: var(--brand-navy); }
+  .faq-card[open] summary::after { content: '-'; }
+  .faq-card h3 { margin: 0; }
   .link-card { text-decoration: none; display: grid; grid-template-rows: auto 1fr auto; gap: 0.7rem; }
   .link-card span { font-weight: 700; color: var(--brand-navy); }
   @media (max-width: 768px) { .page-hero { background: linear-gradient(180deg, var(--brand-navy-dark) 0%, #1f476d 100%); padding: 3.8rem 0 2.8rem; } .content-section, .faq-section, .links-section { padding: 3rem 0; } .faq-section, .links-section { padding-top: 0; } }

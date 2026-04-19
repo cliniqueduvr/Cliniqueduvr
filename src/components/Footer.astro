@@ -36,6 +36,7 @@ const shouldShowCta = pathname !== '/contact/' && pathname !== '/en/contact/';
         <li><a href={isEnglish ? '/en/services/maintenance/' : '/services/entretien/'}>{isEnglish ? 'Maintenance' : 'Entretien'}</a></li>
         <li><a href={isEnglish ? '/en/services/repair/' : '/services/reparation/'}>{isEnglish ? 'Repair' : 'Réparation'}</a></li>
         <li><a href={isEnglish ? '/en/services/detailing/' : '/services/esthetique/'}>{isEnglish ? 'RV Detailing' : 'Esthétique VR'}</a></li>
+        <li><a href={isEnglish ? '/en/services/auto-truck-detailing/' : '/services/esthetique-auto-camion/'}>{isEnglish ? 'Auto Detailing' : 'Esthétique auto'}</a></li>
         <li><a href={isEnglish ? '/en/sales/' : '/vente/'}>{isEnglish ? 'Sales' : 'Vente'}</a></li>
       </ul>
     </div>
@@ -43,7 +44,11 @@ const shouldShowCta = pathname !== '/contact/' && pathname !== '/en/contact/';
       <h4>{isEnglish ? 'Resources' : 'Ressources'}</h4>
       <ul>
         <li><a href={isEnglish ? '/en/resources/rv-water-intrusion/' : '/ressources/infiltration-eau-vr/'}>{isEnglish ? 'Water intrusion' : "Infiltration d'eau"}</a></li>
-        <li><a href={isEnglish ? '/en/resources/twice-yearly-rv-maintenance/' : '/ressources/entretien-vr-deux-fois-par-an/'}>{isEnglish ? 'Twice-yearly maintenance' : "Entretien 2 fois par an"}</a></li>
+        <li><a href={isEnglish ? '/en/resources/twice-yearly-rv-maintenance/' : '/ressources/entretien-vr-deux-fois-par-an/'}>{isEnglish ? 'Recommended maintenance' : "Entretien recommandé"}</a></li>
+        <li><a href={isEnglish ? '/en/privacy/' : '/privacy/'}>{isEnglish ? 'Privacy Policy' : 'Politique de confidentialité'}</a></li>
+        <li><a href={isEnglish ? '/en/service-areas/' : '/zones-desservies/'}>{isEnglish ? 'Service Areas' : 'Zones desservies'}</a></li>
+        <li><a href={isEnglish ? '/en/faq/' : '/faq/'}>FAQ</a></li>
+        <li><a href={isEnglish ? '/en/site-map/' : '/plan-du-site/'}>{isEnglish ? 'Site Map' : 'Plan du site'}</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -55,15 +60,6 @@ const shouldShowCta = pathname !== '/contact/' && pathname !== '/en/contact/';
       <a href={siteSettings.tiktokUrl} target="_blank" rel="noopener">
         <i class="fab fa-tiktok"></i> TikTok
       </a>
-      <p class="footer-legal">
-        <a href={isEnglish ? '/en/privacy/' : '/privacy/'}>{isEnglish ? 'Privacy Policy' : 'Politique de confidentialité'}</a>
-        {' · '}
-        <a href={isEnglish ? '/en/service-areas/' : '/zones-desservies/'}>{isEnglish ? 'Service Areas' : 'Zones desservies'}</a>
-        {' · '}
-        <a href={isEnglish ? '/en/faq/' : '/faq/'}>FAQ</a>
-        {' · '}
-        <a href={isEnglish ? '/en/site-map/' : '/plan-du-site/'}>{isEnglish ? 'Site Map' : 'Plan du site'}</a>
-      </p>
     </div>
   </div>
   <div class="footer-bottom">
@@ -83,9 +79,10 @@ const shouldShowCta = pathname !== '/contact/' && pathname !== '/en/contact/';
 
   .footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: minmax(220px, 1.1fr) minmax(220px, 1fr) minmax(180px, 0.9fr) minmax(220px, 1fr) minmax(180px, 0.9fr);
     gap: 2rem;
     padding: 2rem;
+    align-items: start;
   }
 
   .footer-brand {
@@ -127,10 +124,6 @@ const shouldShowCta = pathname !== '/contact/' && pathname !== '/en/contact/';
     text-decoration: none;
     background: #e1c317;
     border-color: #e1c317;
-  }
-
-  .footer-legal {
-    margin-top: 1rem;
   }
 
   .footer-col ul {

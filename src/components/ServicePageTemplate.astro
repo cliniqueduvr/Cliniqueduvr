@@ -103,6 +103,7 @@ const baseHelpfulLinks = isEnglish
       }
     ];
 const helpfulLinks = [...(localGuide ? [localGuide] : []), ...baseHelpfulLinks];
+const isWorkshopOnlyDetailing = service.slug === 'esthetique-auto-camion' || service.slug === 'auto-truck-detailing';
 ---
 
 <main>
@@ -111,7 +112,7 @@ const helpfulLinks = [...(localGuide ? [localGuide] : []), ...baseHelpfulLinks];
       <div class="hero-copy">
         <p class="eyebrow">{service.eyebrow}</p>
         <h1 class:list={[
-          (service.slug === 'inspection' || service.slug === 'entretien' || service.slug === 'maintenance' || service.slug === 'reparation' || service.slug === 'repair' || service.slug === 'esthetique' || service.slug === 'detailing') && 'hero-title-wide',
+          (service.slug === 'inspection' || service.slug === 'entretien' || service.slug === 'maintenance' || service.slug === 'reparation' || service.slug === 'repair' || service.slug === 'esthetique' || service.slug === 'detailing' || service.slug === 'esthetique-auto-camion' || service.slug === 'auto-truck-detailing') && 'hero-title-wide',
           service.slug === 'inspection' && 'hero-title-wider'
         ]}>{service.h1}</h1>
         <p class="opening">{service.opening}</p>
@@ -181,48 +182,52 @@ const helpfulLinks = [...(localGuide ? [localGuide] : []), ...baseHelpfulLinks];
           </div>
         </section>
 
-        <section class="content-card">
-          <h2>{isEnglish ? 'Areas served for this service' : 'Zones desservies pour ce service'}</h2>
-          <p class="section-copy">
-            {isEnglish
-              ? 'This service is offered from our Gatineau workshop and according to the type of work, may also involve nearby travel or regional support.'
-              : 'Ce service est offert à partir de notre atelier de Gatineau et, selon le type d’intervention, peut aussi inclure un déplacement à proximité ou un accompagnement régional.'}
-          </p>
-          <div class="link-card-grid">
-            {serviceAreas.map((area) => (
-              <article class="link-card">
-                <h3>{area}</h3>
-                <p>
-                  {isEnglish
-                    ? `Support available for ${service.navLabel.toLowerCase()} requests in and around ${area}.`
-                    : `Accompagnement offert pour les demandes de ${service.navLabel.toLowerCase()} à ${area} et dans les environs.`}
-                </p>
-              </article>
-            ))}
-          </div>
-        </section>
+        {!isWorkshopOnlyDetailing && (
+          <section class="content-card">
+            <h2>{isEnglish ? 'Areas served for this service' : 'Zones desservies pour ce service'}</h2>
+            <p class="section-copy">
+              {isEnglish
+                ? 'This service is offered from our Gatineau workshop and according to the type of work, may also involve nearby travel or regional support.'
+                : 'Ce service est offert à partir de notre atelier de Gatineau et, selon le type d’intervention, peut aussi inclure un déplacement à proximité ou un accompagnement régional.'}
+            </p>
+            <div class="link-card-grid">
+              {serviceAreas.map((area) => (
+                <article class="link-card">
+                  <h3>{area}</h3>
+                  <p>
+                    {isEnglish
+                      ? `Support available for ${service.navLabel.toLowerCase()} requests in and around ${area}.`
+                      : `Accompagnement offert pour les demandes de ${service.navLabel.toLowerCase()} à ${area} et dans les environs.`}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
 
-        <section class="content-card alt">
-          <h2>{isEnglish ? 'Useful links before you decide' : 'Liens utiles avant de décider'}</h2>
-          <div class="link-card-grid">
-            {helpfulLinks.map((item) => (
-              <a class="link-card link-card-anchor" href={item.href}>
-                <h3>{item.title}</h3>
-                <p>{item.copy}</p>
-                <span>{isEnglish ? 'Learn more' : 'En savoir plus'}</span>
-              </a>
-            ))}
-          </div>
-        </section>
+        {!isWorkshopOnlyDetailing && (
+          <section class="content-card alt">
+            <h2>{isEnglish ? 'Useful links before you decide' : 'Liens utiles avant de décider'}</h2>
+            <div class="link-card-grid">
+              {helpfulLinks.map((item) => (
+                <a class="link-card link-card-anchor" href={item.href}>
+                  <h3>{item.title}</h3>
+                  <p>{item.copy}</p>
+                  <span>{isEnglish ? 'Learn more' : 'En savoir plus'}</span>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
 
         <section class="content-card faq-section">
           <h2>{service.faqTitle}</h2>
           <div class="faq-list">
             {service.faqs.map((item) => (
-              <article class="faq-item">
-                <h3>{item.question}</h3>
+              <details class="faq-item">
+                <summary><h3>{item.question}</h3></summary>
                 <p>{item.answer}</p>
-              </article>
+              </details>
             ))}
           </div>
         </section>
@@ -492,6 +497,10 @@ const helpfulLinks = [...(localGuide ? [localGuide] : []), ...baseHelpfulLinks];
     margin-bottom: 0.45rem;
   }
 
+  .faq-item h3 {
+    margin: 0;
+  }
+
   .why-card p,
   .faq-item p,
   .link-card p {
@@ -509,13 +518,42 @@ const helpfulLinks = [...(localGuide ? [localGuide] : []), ...baseHelpfulLinks];
   }
 
   .faq-item {
-    padding-bottom: 1rem;
     border-bottom: 1px solid rgba(31, 58, 95, 0.08);
   }
 
   .faq-item:last-child {
-    padding-bottom: 0;
     border-bottom: none;
+  }
+
+  .faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0 0 1rem;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary::after {
+    content: '+';
+    flex: 0 0 auto;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--brand-navy);
+  }
+
+  .faq-item[open] summary::after {
+    content: '-';
+  }
+
+  .faq-item[open] summary {
+    padding-bottom: 0.7rem;
   }
 
   .sticky {

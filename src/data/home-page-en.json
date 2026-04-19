@@ -9,7 +9,7 @@
   "introCard": {
     "icon": "",
     "heading": "Why choose Clinique du VR?",
-    "body": "<strong>Specialized and attentive service</strong> for RV maintenance, repair and detailing. We focus on clear explanations, a practical reading of the vehicle's condition, and recommendations tailored to your actual situation. We have a year-round workshop as well as a mobile unit to serve you better depending on the type of work needed. Speed, transparency, and careful execution from start to finish are part of how we work."
+    "body": "<strong>Specialized and attentive service</strong> for RV maintenance, repair and detailing. We focus on clear explanations, a practical reading of the vehicle's condition, and recommendations tailored to your actual situation. We have a year-round workshop as well as a mobile unit to serve you better depending on the type of work needed. We also offer a separate auto and truck detailing page, workshop only. Speed, transparency, and careful execution from start to finish are part of how we work."
   },
   "servicesOverview": {
     "title": "Our Specialties",
@@ -17,7 +17,8 @@
       { "href": "/en/services/inspection/", "icon": "fas fa-clipboard-check", "label": "Inspection" },
       { "href": "/en/services/maintenance/", "icon": "fas fa-screwdriver-wrench", "label": "Maintenance" },
       { "href": "/en/services/repair/", "icon": "fas fa-toolbox", "label": "Repair" },
-      { "href": "/en/services/detailing/", "icon": "fas fa-spray-can-sparkles", "label": "Detailing" }
+      { "href": "/en/services/detailing/", "icon": "fas fa-spray-can-sparkles", "label": "RV detailing" },
+      { "href": "/en/services/auto-truck-detailing/", "icon": "fas fa-car-side", "label": "Auto detailing" }
     ]
   },
   "seoSections": [

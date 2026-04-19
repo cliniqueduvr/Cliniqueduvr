@@ -230,75 +230,150 @@
     {
       "slug": "esthetique",
       "alternateSlug": "detailing",
-      "title": "Esthétique auto, camion et VR",
-      "h1": "Esthétique auto, camion et VR à Gatineau",
-      "navLabel": "Esthétique VR et auto",
+      "title": "Esthétique de VR et de motorisé",
+      "h1": "Esthétique de VR et de motorisé à Gatineau",
+      "navLabel": "Esthétique VR",
       "icon": "fas fa-spray-can-sparkles",
-      "serviceType": "Esthétique auto, camion et VR",
-      "seoTitle": "Esthétique VR, auto et camion à Gatineau | Nettoyage et polissage",
-      "seoDescription": "Esthétique VR, auto et camion à Gatineau: nettoyage intérieur et extérieur, polissage, correction de peinture et protection nano céramique. Service d'atelier pour Gatineau, Ottawa et l'Outaouais.",
-      "eyebrow": "Nettoyage, polissage et protection haut de gamme",
-      "opening": "Clinique du VR offre un service d'esthétique à Gatineau pour les voitures, les camions, les VR et les motorisés. Nous mettons l'accent sur le nettoyage complet, le polissage, la correction de peinture et la remise à neuf visuelle pour offrir un résultat haut de gamme en atelier.",
-      "lead": "Notre service esthétique vise un résultat clair : un véhicule plus propre, plus brillant et mieux protégé, qu'il s'agisse d'une voiture, d'un camion ou d'un VR.",
-      "intro": "L'esthétique va plus loin qu'un simple lavage. Nous travaillons l'intérieur, l'extérieur, la peinture et les surfaces visibles pour redonner au véhicule une apparence nette, soignée et valorisante.",
-      "detailIntro": "Ce service est utile pour les clients qui veulent remettre leur véhicule à neuf, corriger l'apparence de la peinture, améliorer la brillance ou protéger les surfaces avec des produits de qualité supérieure. Nous utilisons notamment des produits haut de gamme de Labocosmetica et Mafra pour obtenir un résultat propre et durable.",
+      "serviceType": "Esthétique de VR et de motorisé",
+      "seoTitle": "Esthétique de VR et motorisé à Gatineau | Nettoyage, polissage et cirage",
+      "seoDescription": "Esthétique de VR et de motorisé à Gatineau: nettoyage intérieur et extérieur, polissage et cirage, offert en atelier ou sur la route selon le véhicule et le mandat.",
+      "eyebrow": "Nettoyage, polissage et cirage de VR",
+      "opening": "Clinique du VR offre un vrai service d'esthétique pour VR et motorisés à Gatineau. Nous prenons en charge le nettoyage intérieur et extérieur, le polissage et le cirage pour redonner au véhicule une présentation plus propre, plus brillante et mieux protégée, en atelier ou sur la route selon le type de mandat.",
+      "lead": "Ce service vise un résultat concret sur les VR et motorisés: une carrosserie mieux entretenue, des surfaces plus propres et une finition plus valorisante avant la saison, après les voyages ou avant une vente.",
+      "intro": "L'esthétique de VR demande une approche adaptée aux grands formats, aux surfaces exposées, aux traces de route et aux longues périodes d'entreposage. Nous travaillons le nettoyage, le polissage et le cirage pour remettre le véhicule en meilleur état visuel.",
+      "detailIntro": "Ce service est pensé pour les propriétaires de VR et de motorisés qui veulent faire nettoyer leur véhicule en profondeur, améliorer la brillance, reprendre l'apparence extérieure et protéger les surfaces avec un cirage ou une finition adaptée. Selon le véhicule, le contexte et l'accès au site, l'intervention peut se faire en atelier ou sur la route.",
       "highlights": [
-        "Nettoyage intérieur et extérieur complet",
-        "Polissage et correction de peinture",
-        "Décontamination de la peinture et des jantes",
-        "Protection nano céramique"
+        "Nettoyage intérieur et extérieur de VR",
+        "Polissage de surfaces visibles",
+        "Cirage et mise en valeur",
+        "Atelier ou sur la route"
       ],
-      "includedTitle": "Ce que nous offrons en esthétique",
+      "includedTitle": "Ce que nous faisons en esthétique VR",
       "included": [
-        "Nettoyage intérieur et extérieur complet",
-        "Décontamination de la peinture et des jantes",
-        "Polissage et correction de peinture",
-        "Remise à neuf visuelle de voitures, de camions, de VR et de motorisés",
-        "Protection nano céramique pour la brillance et la protection longue durée"
+        "Nettoyage intérieur et extérieur de VR et de motorisés",
+        "Lavage visuel plus poussé des surfaces exposées à la route",
+        "Polissage pour améliorer l'apparence et la brillance",
+        "Cirage pour protéger et rehausser la finition",
+        "Service possible en atelier ou sur la route selon le véhicule et le contexte"
+      ],
+      "situationsTitle": "Quand ce service esthétique VR est utile",
+      "situations": [
+        "Quand le VR ou le motorisé a perdu son éclat",
+        "Après une saison de route ou d'entreposage",
+        "Avant une mise en vente ou une livraison",
+        "Quand vous voulez un nettoyage, un polissage ou un cirage plus complet"
+      ],
+      "processIntro": "Nous adaptons l'intervention selon le format du véhicule, l'état général des surfaces et l'objectif recherché. Le but est d'obtenir une amélioration visuelle nette sans traiter un VR comme une petite voiture.",
+      "process": [
+        "Évaluation visuelle du VR ou du motorisé",
+        "Choix du nettoyage, du polissage et du niveau de finition recherché",
+        "Exécution en atelier ou sur la route selon le mandat confirmé",
+        "Vérification finale et recommandations pour garder le véhicule propre plus longtemps"
+      ],
+      "whyChooseTitle": "Pourquoi choisir Clinique du VR pour l'esthétique de VR et motorisé?",
+      "whyChooseIntro": "Un vrai service d'esthétique pour VR ne consiste pas seulement à rincer un grand véhicule. Il faut tenir compte des dimensions, des surfaces, des traces de route, des périodes d'entreposage et du résultat visuel que vous voulez réellement obtenir.",
+      "whyChoose": [
+        {
+          "title": "Pensé pour les VR",
+          "text": "Nous structurons le service pour les VR et motorisés, avec une approche adaptée aux grands formats et aux besoins réels du véhicule."
+        },
+        {
+          "title": "Atelier ou sur la route",
+          "text": "Selon le type de véhicule et le contexte, nous pouvons confirmer une intervention à l'atelier ou sur la route."
+        },
+        {
+          "title": "Résultat visuel clair",
+          "text": "Le nettoyage, le polissage et le cirage sont pensés pour redonner une apparence plus propre, brillante et soignée."
+        }
+      ],
+      "faqTitle": "Questions fréquentes sur l'esthétique de VR et motorisé",
+      "faqs": [
+        {
+          "question": "Faites-vous le nettoyage, le polissage et le cirage de VR?",
+          "answer": "Oui. Cette page est dédiée au nettoyage, au polissage et au cirage de VR et de motorisés, avec intervention possible en atelier ou sur la route selon le véhicule et le mandat."
+        },
+        {
+          "question": "Le service se fait-il seulement en atelier?",
+          "answer": "Non, pas toujours. Pour les VR et motorisés, l'intervention peut être confirmée en atelier ou sur la route selon le format du véhicule, le type de travail et le contexte d'accès."
+        },
+        {
+          "question": "Est-ce la même offre que pour les autos et camions?",
+          "answer": "Non. L'esthétique auto et camion est offerte sur une page distincte, avec un service atelier seulement."
+        }
+      ]
+    },
+    {
+      "slug": "esthetique-auto-camion",
+      "alternateSlug": "auto-truck-detailing",
+      "title": "Esthétique auto et camion",
+      "h1": "Esthétique auto et camion à Gatineau",
+      "navLabel": "Esthétique auto",
+      "icon": "fas fa-car-side",
+      "serviceType": "Esthétique auto et camion",
+      "seoTitle": "Esthétique auto et camion à Gatineau | Nettoyage, polissage et finition atelier",
+      "seoDescription": "Esthétique auto et camion à Gatineau pour nettoyage intérieur et extérieur, polissage et finition visuelle. Service offert en atelier seulement.",
+      "eyebrow": "Nettoyage et polissage en atelier seulement",
+      "opening": "Clinique du VR offre aussi un vrai service d'esthétique auto et camion à Gatineau. Cette page est dédiée aux véhicules automobiles et aux camions qui ont besoin d'un nettoyage plus poussé, d'un polissage et d'une remise en valeur visuelle, en atelier seulement.",
+      "lead": "Pour les autos et camions, nous visons une finition plus propre, plus nette et plus brillante, avec une exécution structurée en atelier.",
+      "intro": "L'esthétique auto et camion ne répond pas aux mêmes contraintes qu'un VR. Nous avons donc séparé cette offre pour les clients qui veulent un service dédié aux voitures et camions, avec un cadre atelier seulement.",
+      "detailIntro": "Cette page est destinée aux clients qui veulent faire nettoyer, polir et améliorer l'apparence d'une auto ou d'un camion sans mélanger cette offre avec l'esthétique de VR. Le service est planifié et réalisé en atelier pour mieux contrôler le niveau de finition et le résultat final.",
+      "highlights": [
+        "Nettoyage intérieur et extérieur",
+        "Polissage et mise en valeur",
+        "Finition plus nette",
+        "Atelier seulement"
+      ],
+      "includedTitle": "Ce que nous offrons pour auto et camion",
+      "included": [
+        "Nettoyage intérieur et extérieur plus poussé",
+        "Polissage pour améliorer la présentation visuelle",
+        "Travail sur la brillance et la finition générale",
+        "Service structuré en atelier seulement",
+        "Recommandations d'entretien après intervention"
       ],
       "situationsTitle": "Quand ce service est utile",
       "situations": [
-        "Quand le véhicule a perdu son éclat",
-        "Avant une mise en vente ou une livraison",
-        "Après une saison de route ou d'entreposage",
-        "Quand vous voulez une remise à neuf plus haut de gamme"
+        "Quand l'auto ou le camion a perdu son éclat",
+        "Avant une vente ou une livraison",
+        "Après une saison difficile ou de longues routes",
+        "Quand vous voulez un résultat visuel plus soigné"
       ],
-      "processIntro": "Nous adaptons le niveau d'intervention selon le type de véhicule, l'état des surfaces et le résultat recherché. L'objectif est d'offrir un nettoyage et une finition qui améliorent vraiment l'apparence globale du véhicule.",
+      "processIntro": "Le service est préparé en atelier pour permettre une meilleure constance dans l'exécution et la finition. L'objectif est d'obtenir un résultat propre et cohérent sur les autos et camions.",
       "process": [
-        "Évaluation visuelle du véhicule et de l'état des surfaces",
-        "Choix du nettoyage, de la décontamination et du niveau de correction souhaité",
+        "Évaluation visuelle du véhicule",
+        "Choix du niveau de nettoyage et de polissage",
         "Exécution en atelier avec attention aux finis",
-        "Vérification finale du résultat et recommandations d'entretien"
+        "Vérification finale et conseils pour l'entretien courant"
       ],
-      "whyChooseTitle": "Pourquoi choisir Clinique du VR pour l'esthétique auto, camion et VR?",
-      "whyChooseIntro": "Un bon service esthétique ne consiste pas seulement à laver un véhicule. Il faut savoir préparer les surfaces, corriger ce qui peut l'être et utiliser des produits capables d'offrir un vrai résultat visuel.",
+      "whyChooseTitle": "Pourquoi choisir Clinique du VR pour l'esthétique auto et camion?",
+      "whyChooseIntro": "Séparer l'offre auto et camion de l'offre VR permet d'avoir une page, un discours et une intervention mieux adaptés au type de véhicule.",
       "whyChoose": [
         {
-          "title": "Résultat haut de gamme",
-          "text": "Nous visons une finition propre, brillante et soignée qui améliore réellement la présentation du véhicule."
+          "title": "Page dédiée",
+          "text": "Cette offre est distincte pour éviter de mélanger les besoins auto et camion avec ceux des VR et motorisés."
         },
         {
-          "title": "Produits de qualité",
-          "text": "Nous utilisons notamment des produits haut de gamme de Labocosmetica et Mafra pour le nettoyage, la décontamination et la finition."
+          "title": "Atelier seulement",
+          "text": "Le service est réalisé en atelier afin de mieux contrôler les conditions de travail et la qualité de la finition."
         },
         {
-          "title": "Service multi-véhicules",
-          "text": "Nous travaillons sur les voitures, les camions, les VR et les motorisés selon les besoins réels du véhicule."
+          "title": "Résultat visuel net",
+          "text": "Le nettoyage et le polissage sont pensés pour améliorer clairement l'apparence du véhicule."
         }
       ],
-      "faqTitle": "Questions fréquentes sur l'esthétique auto, camion et VR",
+      "faqTitle": "Questions fréquentes sur l'esthétique auto et camion",
       "faqs": [
         {
-          "question": "Faites-vous l'esthétique pour voiture, camion et VR?",
-          "answer": "Oui. Notre service esthétique en atelier s'adresse aux voitures, aux camions, aux VR et aux motorisés selon le niveau de nettoyage, de polissage ou de protection souhaité."
+          "question": "Cette page est-elle seulement pour auto et camion?",
+          "answer": "Oui. Cette offre est dédiée aux autos et camions. L'esthétique de VR et motorisé se trouve sur une autre page distincte."
         },
         {
-          "question": "Que comprend un service d'esthétique?",
-          "answer": "Selon le besoin, le service peut comprendre le nettoyage intérieur et extérieur, la décontamination de la peinture et des jantes, le polissage, la correction de peinture et la protection nano céramique."
+          "question": "Le service auto et camion est-il offert sur la route?",
+          "answer": "Non. Le service esthétique auto et camion est offert en atelier seulement."
         },
         {
-          "question": "Quels produits utilisez-vous?",
-          "answer": "Nous utilisons uniquement des produits haut de gamme, notamment de Labocosmetica et Mafra, pour offrir un résultat impeccable et une meilleure tenue de la finition."
+          "question": "Que comprend surtout cette offre?",
+          "answer": "Selon le besoin, elle couvre surtout le nettoyage intérieur et extérieur, le polissage et l'amélioration de la finition visuelle du véhicule."
         }
       ]
     },

@@ -230,75 +230,150 @@
     {
       "slug": "detailing",
       "alternateSlug": "esthetique",
-      "title": "Auto, Truck and RV Detailing",
-      "h1": "Auto, Truck and RV Detailing in Gatineau",
-      "navLabel": "RV and auto detailing",
+      "title": "RV and Motorhome Detailing",
+      "h1": "RV and Motorhome Detailing in Gatineau",
+      "navLabel": "RV detailing",
       "icon": "fas fa-spray-can-sparkles",
-      "serviceType": "Auto, Truck and RV Detailing",
-      "seoTitle": "RV, Auto and Truck Detailing in Gatineau | Cleaning and Polishing",
-      "seoDescription": "RV, auto and truck detailing in Gatineau with interior and exterior cleaning, polishing, paint correction and ceramic protection. Shop service for Gatineau and nearby Ottawa-area clients.",
-      "eyebrow": "Cleaning, polishing and premium protection",
-      "opening": "Clinique du VR offers detailing in Gatineau for cars, trucks, RVs, and motorhomes. We focus on complete cleaning, polishing, paint correction, and visual restoration to deliver a premium result in the workshop.",
-      "lead": "Our detailing service aims for a clear result: a vehicle that is cleaner, shinier, and better protected, whether it is a car, a truck, or an RV.",
-      "intro": "Detailing goes beyond a simple wash. We work on the interior, exterior, paint, and visible surfaces to give the vehicle a clean, polished, and value-enhancing appearance.",
-      "detailIntro": "This service is ideal for clients who want to refresh their vehicle, improve paint appearance, increase gloss or protect surfaces with higher-end products. We use premium products from Labocosmetica and Mafra to achieve a clean and durable result.",
+      "serviceType": "RV and Motorhome Detailing",
+      "seoTitle": "RV and motorhome detailing in Gatineau | Cleaning, polishing and waxing",
+      "seoDescription": "RV and motorhome detailing in Gatineau with interior and exterior cleaning, polishing and waxing, available in the workshop or on the road depending on the vehicle and scope.",
+      "eyebrow": "RV cleaning, polishing and waxing",
+      "opening": "Clinique du VR offers a dedicated detailing service for RVs and motorhomes in Gatineau. We handle interior and exterior cleaning, polishing and waxing to give the vehicle a cleaner, brighter, and better-presented finish, either in the workshop or on the road depending on the vehicle and the assignment.",
+      "lead": "This service is built for RVs and motorhomes that need a real visual refresh before the season, after travel, or before resale.",
+      "intro": "RV detailing has to account for larger formats, exposed surfaces, road film, and long storage periods. We focus on cleaning, polishing, and waxing to improve the vehicle's overall appearance.",
+      "detailIntro": "This service is designed for RV and motorhome owners who want deeper cleaning, stronger visual improvement, better gloss, and a more polished finish. Depending on the vehicle, context, and site access, the work can happen in the workshop or as an on-location assignment.",
       "highlights": [
-        "Complete interior and exterior cleaning",
-        "Polishing and paint correction",
-        "Paint and wheel decontamination",
-        "Nano ceramic protection"
+        "Interior and exterior RV cleaning",
+        "Polishing for visible surfaces",
+        "Waxing and finish enhancement",
+        "Workshop or mobile service"
       ],
-      "includedTitle": "What our detailing service can include",
+      "includedTitle": "What our RV detailing service includes",
       "included": [
-        "Complete interior and exterior cleaning",
-        "Paint and wheel decontamination",
-        "Polishing and paint correction",
-        "Visual restoration for cars, trucks, RVs and motorhomes",
-        "Nano ceramic protection for gloss and longer-lasting protection"
+        "Interior and exterior cleaning for RVs and motorhomes",
+        "More thorough visual washing for road-exposed surfaces",
+        "Polishing to improve gloss and presentation",
+        "Waxing to protect and enhance the finish",
+        "Workshop or mobile execution depending on the vehicle and assignment"
       ],
-      "situationsTitle": "When detailing is most useful",
+      "situationsTitle": "When this RV detailing service is most useful",
       "situations": [
-        "When the vehicle has lost its shine",
-        "Before a sale or delivery",
+        "When the RV or motorhome has lost its shine",
         "After a season on the road or in storage",
-        "When you want a more premium visual refresh"
+        "Before a sale or delivery",
+        "When you want a stronger cleaning, polishing, or waxing result"
       ],
-      "processIntro": "We adapt the level of detailing based on the vehicle type, surface condition and the result you want. The goal is to deliver cleaning and finishing work that noticeably improves the overall look of the vehicle.",
+      "processIntro": "We adapt the work to the vehicle format, the surface condition, and the result you want. The goal is to improve the appearance of an RV without treating it like a small car.",
       "process": [
-        "Visual review of the vehicle and the condition of the surfaces",
-        "Selection of the cleaning, decontamination and correction level needed",
-        "Shop execution with close attention to the finish",
-        "Final review of the result and maintenance recommendations"
+        "Visual review of the RV or motorhome",
+        "Choice of cleaning, polishing, and finishing level",
+        "Workshop or on-location execution depending on the confirmed assignment",
+        "Final review and maintenance recommendations"
       ],
-      "whyChooseTitle": "Why choose Clinique du VR for auto, truck and RV detailing?",
-      "whyChooseIntro": "A strong detailing service is not just about washing a vehicle. It also requires proper surface preparation, correction where appropriate and products that deliver a real visual result.",
+      "whyChooseTitle": "Why choose Clinique du VR for RV and motorhome detailing?",
+      "whyChooseIntro": "A true RV detailing service is not just about rinsing a large vehicle. It needs an approach adapted to larger formats, exposed surfaces, storage realities, and the visual result you actually want.",
       "whyChoose": [
         {
-          "title": "Premium result",
-          "text": "We aim for a clean, glossy and refined finish that clearly improves the presentation of the vehicle."
+          "title": "Built for RVs",
+          "text": "We shape the service around RVs and motorhomes rather than trying to force a small-vehicle detailing approach onto a larger format."
         },
         {
-          "title": "Quality products",
-          "text": "We use premium products, including Labocosmetica and Mafra, for cleaning, decontamination, and finishing."
+          "title": "Workshop or mobile",
+          "text": "Depending on the vehicle and context, the job can be confirmed in the workshop or on the road."
         },
         {
-          "title": "Multi-vehicle service",
-          "text": "We work on cars, trucks, RVs and motorhomes based on the actual needs of the vehicle."
+          "title": "Clear visual improvement",
+          "text": "The cleaning, polishing, and waxing are structured to deliver a more presentable and better-finished vehicle."
         }
       ],
-      "faqTitle": "Frequently asked questions about auto, truck and RV detailing",
+      "faqTitle": "Frequently asked questions about RV and motorhome detailing",
       "faqs": [
         {
-          "question": "Do you offer detailing for cars, trucks and RVs?",
-          "answer": "Yes. Our in-shop detailing service is available for cars, trucks, RVs and motorhomes depending on the level of cleaning, polishing or protection needed."
+          "question": "Do you handle cleaning, polishing, and waxing for RVs?",
+          "answer": "Yes. This page is dedicated to cleaning, polishing, and waxing for RVs and motorhomes, with work confirmed in the workshop or on the road depending on the vehicle and assignment."
         },
         {
-          "question": "What does the detailing service include?",
-          "answer": "Depending on the need, the service can include interior and exterior cleaning, paint and wheel decontamination, polishing, paint correction and nano ceramic protection."
+          "question": "Is this service only available in the workshop?",
+          "answer": "Not always. For RVs and motorhomes, the assignment can be confirmed in the workshop or on location depending on the vehicle, the work involved, and access conditions."
         },
         {
-          "question": "Which products do you use?",
-          "answer": "We only use premium products, including Labocosmetica and Mafra, to deliver an impeccable result and better-lasting finish quality."
+          "question": "Is this the same offer as auto and truck detailing?",
+          "answer": "No. Auto and truck detailing is handled on a separate page, with workshop-only service."
+        }
+      ]
+    },
+    {
+      "slug": "auto-truck-detailing",
+      "alternateSlug": "esthetique-auto-camion",
+      "title": "Auto and Truck Detailing",
+      "h1": "Auto and Truck Detailing in Gatineau",
+      "navLabel": "Auto detailing",
+      "icon": "fas fa-car-side",
+      "serviceType": "Auto and Truck Detailing",
+      "seoTitle": "Auto and truck detailing in Gatineau | Cleaning, polishing and workshop finish",
+      "seoDescription": "Auto and truck detailing in Gatineau for interior and exterior cleaning, polishing and visual finish improvement. Workshop service only.",
+      "eyebrow": "Cleaning and polishing in the workshop only",
+      "opening": "Clinique du VR also offers a dedicated auto and truck detailing service in Gatineau. This page is built for cars and trucks that need stronger cleaning, polishing, and visual improvement, with work carried out in the workshop only.",
+      "lead": "For cars and trucks, the goal is a cleaner, sharper, and more polished finish with work planned in a controlled workshop setting.",
+      "intro": "Auto and truck detailing does not follow the same constraints as RV detailing. That is why this service is separated for clients who want an offer tailored specifically to cars and trucks.",
+      "detailIntro": "This page is intended for clients who want to clean, polish, and improve the look of a car or truck without mixing that offer with RV detailing. The service is planned and completed in the workshop only to better control finish quality.",
+      "highlights": [
+        "Interior and exterior cleaning",
+        "Polishing and finish enhancement",
+        "Sharper visual presentation",
+        "Workshop only"
+      ],
+      "includedTitle": "What we offer for cars and trucks",
+      "included": [
+        "More thorough interior and exterior cleaning",
+        "Polishing to improve visual presentation",
+        "Work focused on gloss and overall finish quality",
+        "Structured workshop-only service",
+        "Maintenance recommendations after the work"
+      ],
+      "situationsTitle": "When this service is useful",
+      "situations": [
+        "When the car or truck has lost its shine",
+        "Before a sale or delivery",
+        "After a hard season or long road use",
+        "When you want a cleaner and more polished result"
+      ],
+      "processIntro": "The service is prepared in the workshop to ensure better consistency in execution and finish quality. The goal is a cleaner and more coherent final result on cars and trucks.",
+      "process": [
+        "Visual review of the vehicle",
+        "Choice of cleaning and polishing level",
+        "Workshop execution with close attention to the finish",
+        "Final review and maintenance recommendations"
+      ],
+      "whyChooseTitle": "Why choose Clinique du VR for auto and truck detailing?",
+      "whyChooseIntro": "Separating the auto and truck offer from the RV offer makes it easier to give each vehicle type the right page, the right framing, and the right execution model.",
+      "whyChoose": [
+        {
+          "title": "Dedicated page",
+          "text": "This offer is separated so car and truck detailing is not mixed with RV and motorhome detailing."
+        },
+        {
+          "title": "Workshop only",
+          "text": "The service is carried out in the workshop only to keep conditions and finish quality under control."
+        },
+        {
+          "title": "Cleaner visual result",
+          "text": "The cleaning and polishing work is built to clearly improve the way the vehicle looks."
+        }
+      ],
+      "faqTitle": "Frequently asked questions about auto and truck detailing",
+      "faqs": [
+        {
+          "question": "Is this page only for cars and trucks?",
+          "answer": "Yes. This offer is dedicated to cars and trucks. RV and motorhome detailing is handled on a separate page."
+        },
+        {
+          "question": "Is the auto and truck service available on the road?",
+          "answer": "No. Auto and truck detailing is available in the workshop only."
+        },
+        {
+          "question": "What does this offer mainly include?",
+          "answer": "Depending on the need, it mainly covers interior and exterior cleaning, polishing, and stronger visual finish improvement."
         }
       ]
     },

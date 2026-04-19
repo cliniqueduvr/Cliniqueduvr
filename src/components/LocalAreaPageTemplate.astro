@@ -141,10 +141,10 @@ const supportLinks = isEnglish
       <h2>{isEnglish ? 'Frequently asked questions' : 'Questions fréquentes'}</h2>
       <div class="faq-list">
         {page.faqs.map((item) => (
-          <article class="faq-card">
-            <h3>{item.question}</h3>
+          <details class="faq-card">
+            <summary><h3>{item.question}</h3></summary>
             <p>{item.answer}</p>
-          </article>
+          </details>
         ))}
       </div>
     </div>
@@ -270,7 +270,7 @@ const supportLinks = isEnglish
 
   .info-card h2,
   .faq-card h3 {
-    margin: 0 0 0.75rem;
+    margin: 0;
     color: var(--brand-navy);
   }
 
@@ -278,6 +278,36 @@ const supportLinks = isEnglish
   .faq-card p {
     margin: 0;
     color: var(--brand-muted);
+  }
+
+  .faq-card summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .faq-card summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-card summary::after {
+    content: '+';
+    flex: 0 0 auto;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--brand-navy);
+  }
+
+  .faq-card[open] summary::after {
+    content: '-';
+  }
+
+  .faq-card p {
+    margin-top: 0.9rem;
   }
 
   .info-card--accent {
