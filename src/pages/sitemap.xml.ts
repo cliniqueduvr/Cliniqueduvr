@@ -30,6 +30,8 @@ const pageLastmods = new Map<string, string>([
   ['/en/resources/rv-water-intrusion/', '2026-04-19'],
   ['/ressources/entretien-vr-deux-fois-par-an/', '2026-04-19'],
   ['/en/resources/twice-yearly-rv-maintenance/', '2026-04-19'],
+  ['/ressources/installation-panneau-solaire-vr/', '2026-04-22'],
+  ['/en/resources/rv-solar-panel-installation/', '2026-04-22'],
   ['/realisations/', '2026-04-19'],
   ['/realisations/infiltration-toiture-vr-gatineau/', '2026-04-19'],
   ['/realisations/reparation-interieure-vr-apres-infiltration-ottawa/', '2026-04-19'],
@@ -51,6 +53,7 @@ const staticEntries: UrlEntry[] = [
   { path: '/zones-desservies/', lastmod: '2026-04-19', alternatePaths: ['/en/service-areas/'] },
   { path: '/ressources/infiltration-eau-vr/', lastmod: '2026-04-19', alternatePaths: ['/en/resources/rv-water-intrusion/'] },
   { path: '/ressources/entretien-vr-deux-fois-par-an/', lastmod: '2026-04-19', alternatePaths: ['/en/resources/twice-yearly-rv-maintenance/'] },
+  { path: '/ressources/installation-panneau-solaire-vr/', lastmod: '2026-04-22', alternatePaths: ['/en/resources/rv-solar-panel-installation/'] },
   { path: '/plan-du-site/', lastmod: '2026-04-15', alternatePaths: ['/en/site-map/'] },
   { path: '/en/', lastmod: defaultLastmod, alternatePaths: ['/'] },
   { path: '/en/about/', lastmod: defaultLastmod, alternatePaths: ['/about/'] },
@@ -64,6 +67,7 @@ const staticEntries: UrlEntry[] = [
   { path: '/en/service-areas/', lastmod: '2026-04-19', alternatePaths: ['/zones-desservies/'] },
   { path: '/en/resources/rv-water-intrusion/', lastmod: '2026-04-19', alternatePaths: ['/ressources/infiltration-eau-vr/'] },
   { path: '/en/resources/twice-yearly-rv-maintenance/', lastmod: '2026-04-19', alternatePaths: ['/ressources/entretien-vr-deux-fois-par-an/'] },
+  { path: '/en/resources/rv-solar-panel-installation/', lastmod: '2026-04-22', alternatePaths: ['/ressources/installation-panneau-solaire-vr/'] },
   { path: '/en/site-map/', lastmod: '2026-04-15', alternatePaths: ['/plan-du-site/'] }
 ];
 

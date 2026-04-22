@@ -45,6 +45,7 @@ const shouldShowCta = pathname !== '/contact/' && pathname !== '/en/contact/';
       <ul>
         <li><a href={isEnglish ? '/en/resources/rv-water-intrusion/' : '/ressources/infiltration-eau-vr/'}>{isEnglish ? 'Water intrusion' : "Infiltration d'eau"}</a></li>
         <li><a href={isEnglish ? '/en/resources/twice-yearly-rv-maintenance/' : '/ressources/entretien-vr-deux-fois-par-an/'}>{isEnglish ? 'Recommended maintenance' : "Entretien recommandé"}</a></li>
+        <li><a href={isEnglish ? '/en/resources/rv-solar-panel-installation/' : '/ressources/installation-panneau-solaire-vr/'}>{isEnglish ? 'RV solar panels' : 'Panneau solaire VR'}</a></li>
         <li><a href={isEnglish ? '/en/privacy/' : '/privacy/'}>{isEnglish ? 'Privacy Policy' : 'Politique de confidentialité'}</a></li>
         <li><a href={isEnglish ? '/en/service-areas/' : '/zones-desservies/'}>{isEnglish ? 'Service Areas' : 'Zones desservies'}</a></li>
         <li><a href={isEnglish ? '/en/faq/' : '/faq/'}>FAQ</a></li>
@@ -103,6 +104,10 @@ const shouldShowCta = pathname !== '/contact/' && pathname !== '/en/contact/';
 
   .footer-col a {
     color: white;
+  }
+
+  .footer-col strong {
+    color: #d5e4f5;
   }
 
   .footer-square-link {

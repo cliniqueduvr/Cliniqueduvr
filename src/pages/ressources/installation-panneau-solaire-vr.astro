@@ -1,0 +1,181 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema, buildWebSiteSchema } from '../../lib/seo';
+import siteSettings from '../../data/site-settings.json';
+
+const title = "Installation de panneau solaire pour VR | Ce qu'il faut prévoir avant de commencer";
+const description = "Guide pratique sur l'installation de panneau solaire pour VR: toiture, batterie, contrôleur, câblage et erreurs à éviter avant d'ajouter un système solaire.";
+const faqs = [
+  {
+    question: "Est-ce qu'un panneau solaire convient à tous les VR?",
+    answer: "Pas automatiquement. Il faut d'abord regarder l'état de la <strong>toiture</strong>, l'espace disponible, la batterie, le type de consommation électrique et le chemin de câblage avant de choisir un système."
+  },
+  {
+    question: "Que faut-il vérifier avant d'installer un panneau solaire sur un VR?",
+    answer: "Il faut surtout vérifier l'état du toit, des <strong>joints</strong>, des ouvertures, la capacité de la batterie, l'emplacement du <strong>contrôleur</strong> et la façon de faire passer le câblage sans créer de nouveau risque d'<a href=\"/ressources/infiltration-eau-vr/\">infiltration d'eau</a>."
+  },
+  {
+    question: "Quand faut-il faire inspecter le toit avant un projet solaire?",
+    answer: "Si la toiture montre déjà des signes d'usure, de scellement fatigué, d'humidité ou de réparation ancienne, il est plus prudent de commencer par une <a href=\"/services/inspection/\">inspection</a> ou un <a href=\"/services/entretien/\">entretien ciblé</a> avant d'ajouter du matériel solaire."
+  }
+];
+const schemas = [
+  buildWebSiteSchema(),
+  buildArticleSchema({
+    headline: title,
+    description,
+    path: '/ressources/installation-panneau-solaire-vr/'
+  }),
+  buildFAQSchema(faqs),
+  buildBreadcrumbSchema([
+    { name: 'Accueil', path: '/' },
+    { name: 'Ressources' },
+    { name: 'Panneau solaire VR' }
+  ])
+];
+---
+
+<Layout
+  title={`${title} | Clinique du VR`}
+  description={description}
+  canonicalPath="/ressources/installation-panneau-solaire-vr/"
+  frPath="/ressources/installation-panneau-solaire-vr/"
+  enPath="/en/resources/rv-solar-panel-installation/"
+  schemas={schemas}
+  ogType="article"
+>
+  <Header />
+
+  <main>
+    <section class="interior-hero">
+      <div class="container interior-hero-grid">
+        <div class="interior-hero-copy">
+          <p class="interior-eyebrow">Ressource pratique</p>
+          <h1>Installation de panneau solaire pour VR</h1>
+          <p class="interior-lead">Nous <strong>vendons et installons des panneaux solaires pour VR</strong>, mais un bon projet commence toujours par une lecture claire du toit, du câblage, de la batterie et des points d'étanchéité.</p>
+          <div class="hero-badges">
+            <span>Toit et joints d'abord</span>
+            <span>Batterie et contrôleur</span>
+            <span>Éviter les erreurs de perçage</span>
+          </div>
+        </div>
+
+        <aside class="interior-hero-card">
+          <div class="interior-hero-icon">
+            <i class="fas fa-solar-panel"></i>
+          </div>
+          <h2>Ce guide aide à clarifier</h2>
+          <ul class="hero-checklist">
+            <li>Ce qu'il faut vérifier avant d'acheter</li>
+            <li>Les composantes à prévoir</li>
+            <li>Les risques à éviter sur la toiture du VR</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="interior-section">
+      <div class="container interior-body-grid">
+        <article class="interior-content-main">
+          <section class="interior-card">
+            <h2>Pourquoi bien préparer un projet solaire</h2>
+            <p class="interior-copy">Un système solaire mal planifié peut apporter plus de problèmes que d'autonomie. Chez Clinique du VR, nous <strong>vendons et installons</strong> des systèmes adaptés au véhicule et à l'usage réel. Sur un VR, il faut composer avec la surface réelle du toit, les zones déjà occupées par les évents et climatiseurs, le passage du câblage, la capacité de recharge et le risque de fragiliser une toiture qui montre déjà des signes d'usure.</p>
+          </section>
+
+          <section class="interior-card interior-card-alt">
+            <h2>Ce qu'il faut vérifier avant l'installation</h2>
+            <ul>
+              <li>L'état général de la toiture et des joints.</li>
+              <li>L'espace disponible malgré les ouvertures et accessoires déjà en place.</li>
+              <li>Le type de batterie et l'autonomie réellement visée.</li>
+              <li>La place pour le contrôleur, les fusibles et le câblage.</li>
+            </ul>
+          </section>
+
+          <section class="interior-card">
+            <h2>Les composantes d'un système solaire VR</h2>
+            <p class="interior-copy">Le système comprend généralement un ou plusieurs panneaux, un contrôleur de charge, la batterie ou le banc de batteries, le câblage protégé, les fusibles et parfois un onduleur. Le bon choix dépend surtout de ce que vous voulez alimenter: entretien de batterie, éclairage léger, réfrigérateur 12 V, télétravail ou séjours hors réseau plus longs. Nous pouvons aussi <strong>vous vendre les composantes et prendre en charge l'installation</strong> selon le projet.</p>
+          </section>
+
+          <section class="interior-card interior-card-alt">
+            <h2>Les erreurs les plus fréquentes</h2>
+            <ul>
+              <li>Ajouter un panneau sans valider l'état du toit.</li>
+              <li>Percer ou fixer trop vite sans stratégie d'étanchéité claire.</li>
+              <li>Sous-estimer la capacité de batterie ou la consommation réelle.</li>
+              <li>Faire passer le câblage dans une zone qui devient vulnérable à l'eau.</li>
+            </ul>
+          </section>
+
+          <section class="interior-card">
+            <h2>Quand inspection ou entretien vient avant le solaire</h2>
+            <p class="interior-copy">Si le toit présente déjà des joints secs, des reprises anciennes, une membrane douteuse ou des signes d'humidité, il vaut mieux commencer par l'étanchéité. Ajouter un panneau sur une toiture qui n'est pas saine complique souvent le futur entretien et peut masquer un problème déjà commencé.</p>
+          </section>
+
+          <section class="interior-card">
+            <h2>Repère local utile</h2>
+            <p class="interior-copy">Pour un projet d'installation de panneau solaire pour VR à Gatineau, Ottawa, en Outaouais ou dans les Laurentides, la bonne première question n'est pas seulement la puissance du panneau. C'est aussi de savoir si la toiture et les points de passage sont prêts à recevoir un ajout sans augmenter le risque d'infiltration.</p>
+          </section>
+
+          <section class="interior-card interior-card-alt">
+            <h2>Questions fréquentes</h2>
+            <div class="interior-faq-list">
+              {faqs.map((item) => (
+                <details class="interior-faq-item">
+                  <summary><h3>{item.question}</h3></summary>
+                  <p set:html={item.answer} />
+                </details>
+              ))}
+            </div>
+          </section>
+        </article>
+
+        <aside class="interior-side-panel">
+          <div class="interior-side-card interior-side-card-primary">
+            <h3>Vente et installation disponibles</h3>
+            <p>On peut vous conseiller sur le bon système solaire, vérifier si la toiture est prête et prendre en charge l'installation sur votre VR.</p>
+            <a class="interior-side-button" href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>
+            <a class="interior-side-link" href={siteSettings.squareBookingUrl} target="_blank" rel="noopener">Réserver en ligne</a>
+          </div>
+
+          <div class="interior-side-card">
+            <h3>Services liés</h3>
+            <nav class="interior-service-nav" aria-label="Services liés">
+              <a href="/services/inspection/"><i class="fas fa-clipboard-check"></i><span>Inspection</span></a>
+              <a href="/services/entretien/"><i class="fas fa-screwdriver-wrench"></i><span>Entretien</span></a>
+              <a href="/services/reparation/"><i class="fas fa-toolbox"></i><span>Réparation</span></a>
+              <a href="/ressources/infiltration-eau-vr/"><i class="fas fa-droplet"></i><span>Infiltration d'eau</span></a>
+            </nav>
+          </div>
+
+          <div class="interior-side-card">
+            <h3>Zones desservies</h3>
+            <nav class="interior-service-nav" aria-label="Zones desservies">
+              <a href="/zones-desservies/"><i class="fas fa-map-marker-alt"></i><span>Outaouais</span></a>
+              <a href="/zones-desservies/"><i class="fas fa-map-marker-alt"></i><span>Ottawa</span></a>
+              <a href="/zones-desservies/"><i class="fas fa-map-marker-alt"></i><span>Laurentides</span></a>
+            </nav>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .interior-hero-copy h1 { max-width: 16ch; }
+  .interior-lead :global(strong) { color: #ffe98a !important; text-shadow: 0 1px 10px rgba(0, 0, 0, 0.18); }
+  .hero-badges { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1.5rem; }
+  .hero-badges span { display: inline-flex; align-items: center; min-height: 44px; padding: 0.75rem 1rem; border-radius: 14px; background: var(--brand-gold); color: var(--brand-navy-dark); font-weight: 700; box-shadow: 0 10px 18px rgba(14, 31, 49, 0.14); }
+  .hero-checklist { display: grid; gap: 0.65rem; padding-left: 1.2rem; color: var(--brand-muted); }
+  .interior-card ul { display: grid; gap: 0.85rem; padding-left: 1.2rem; color: var(--brand-ink); }
+  .interior-card li::marker, .hero-checklist li::marker { color: var(--brand-green); font-weight: 700; }
+  @media (max-width: 768px) {
+    .hero-badges { gap: 0.55rem; }
+    .hero-badges span { min-height: 38px; padding: 0.55rem 0.75rem; border-radius: 12px; font-size: 0.88rem; }
+  }
+</style>

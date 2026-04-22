@@ -1,0 +1,182 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import siteSettings from '../../../data/site-settings.json';
+import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema, buildWebSiteSchema } from '../../../lib/seo';
+
+const title = 'RV solar panel installation | What to plan before you start';
+const description = 'Practical guide to RV solar panel installation: roof condition, battery setup, charge controller, wiring, and mistakes to avoid before adding solar.';
+const faqs = [
+  {
+    question: 'Will a solar panel setup work on every RV?',
+    answer: 'Not automatically. You need to look at <strong>roof</strong> condition, available space, battery setup, real power use, and cable routing before choosing a solar package.'
+  },
+  {
+    question: 'What should be checked before installing solar panels on an RV?',
+    answer: 'Start with roof condition, <strong>seals</strong>, openings, battery capacity, controller location, and how wiring will pass through the vehicle without creating a new <a href="/en/resources/rv-water-intrusion/">water intrusion</a> risk.'
+  },
+  {
+    question: 'When should the roof be inspected before a solar project?',
+    answer: 'If the roof already shows aging, tired sealant, moisture signs, or older repairs, it is safer to start with an <a href="/en/services/inspection/">inspection</a> or targeted <a href="/en/services/maintenance/">maintenance</a> before adding solar equipment.'
+  }
+];
+const schemas = [
+  buildWebSiteSchema(),
+  buildArticleSchema({
+    headline: title,
+    description,
+    path: '/en/resources/rv-solar-panel-installation/'
+  }),
+  buildFAQSchema(faqs),
+  buildBreadcrumbSchema([
+    { name: 'Home', path: '/en/' },
+    { name: 'Resources' },
+    { name: 'RV solar panels' }
+  ])
+];
+---
+
+<Layout
+  title={`${title} | Clinique du VR`}
+  description={description}
+  lang="en-CA"
+  canonicalPath="/en/resources/rv-solar-panel-installation/"
+  frPath="/ressources/installation-panneau-solaire-vr/"
+  enPath="/en/resources/rv-solar-panel-installation/"
+  schemas={schemas}
+  ogType="article"
+>
+  <Header lang="en" />
+
+  <main>
+    <section class="interior-hero">
+      <div class="container interior-hero-grid">
+        <div class="interior-hero-copy">
+          <p class="interior-eyebrow">Practical resource</p>
+          <h1>RV solar panel installation</h1>
+          <p class="interior-lead">We <strong>sell and install RV solar panels</strong>, but the project only makes sense when roof condition, wiring paths, battery setup, and watertightness are reviewed first.</p>
+          <div class="hero-badges">
+            <span>Roof and seals first</span>
+            <span>Battery and controller</span>
+            <span>Avoid bad drilling decisions</span>
+          </div>
+        </div>
+
+        <aside class="interior-hero-card">
+          <div class="interior-hero-icon">
+            <i class="fas fa-solar-panel"></i>
+          </div>
+          <h2>What this guide helps clarify</h2>
+          <ul class="hero-checklist">
+            <li>What to review before buying parts</li>
+            <li>Which components need to be planned</li>
+            <li>What roof-related mistakes to avoid</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="interior-section">
+      <div class="container interior-body-grid">
+        <article class="interior-content-main">
+          <section class="interior-card">
+            <h2>Why a solar project needs planning first</h2>
+            <p class="interior-copy">A poorly planned solar setup can create more problems than autonomy. At Clinique du VR, we <strong>sell and install</strong> solar setups based on the vehicle and the real usage target. On an RV, you still have to work around real roof space, vents and rooftop accessories, wiring paths, charge needs, and the risk of adding hardware to a roof that already shows signs of wear.</p>
+          </section>
+
+          <section class="interior-card interior-card-alt">
+            <h2>What to check before installation</h2>
+            <ul>
+              <li>The overall condition of the roof and seals.</li>
+              <li>The usable space left once vents and accessories are considered.</li>
+              <li>The battery type and the autonomy you actually want.</li>
+              <li>The location for the controller, fuses, and protected wiring.</li>
+            </ul>
+          </section>
+
+          <section class="interior-card">
+            <h2>Main components of an RV solar setup</h2>
+            <p class="interior-copy">A typical setup includes one or more panels, a charge controller, the battery or battery bank, protected wiring, fuses, and sometimes an inverter. The right package depends on what you want to run: battery maintenance, light 12 V use, a 12 V fridge, remote work, or longer off-grid stays. We can also <strong>supply the components and handle installation</strong> depending on the project.</p>
+          </section>
+
+          <section class="interior-card interior-card-alt">
+            <h2>Most common mistakes</h2>
+            <ul>
+              <li>Adding solar without validating roof condition first.</li>
+              <li>Drilling or fastening too quickly without a watertight plan.</li>
+              <li>Underestimating battery capacity or real power use.</li>
+              <li>Routing cables through an area that becomes vulnerable to water.</li>
+            </ul>
+          </section>
+
+          <section class="interior-card">
+            <h2>When inspection or maintenance should come first</h2>
+            <p class="interior-copy">If the roof already has dry seals, older repairs, a questionable membrane, or moisture signs, watertightness should come before solar. Mounting panels on an unhealthy roof usually makes later maintenance harder and can hide a problem that had already started.</p>
+          </section>
+
+          <section class="interior-card">
+            <h2>Useful local context</h2>
+            <p class="interior-copy">For an RV solar panel installation project in Gatineau, Ottawa, Outaouais, or Laurentides, the first question is not only panel wattage. It is also whether the roof and cable-entry points are ready for new hardware without increasing water-intrusion risk.</p>
+          </section>
+
+          <section class="interior-card interior-card-alt">
+            <h2>Frequently asked questions</h2>
+            <div class="interior-faq-list">
+              {faqs.map((item) => (
+                <details class="interior-faq-item">
+                  <summary><h3>{item.question}</h3></summary>
+                  <p set:html={item.answer} />
+                </details>
+              ))}
+            </div>
+          </section>
+        </article>
+
+        <aside class="interior-side-panel">
+          <div class="interior-side-card interior-side-card-primary">
+            <h3>Sales and installation available</h3>
+            <p>We can help size the right solar setup, confirm whether the roof is ready, and handle the installation on your RV.</p>
+            <a class="interior-side-button" href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>
+            <a class="interior-side-link" href={siteSettings.squareBookingUrl} target="_blank" rel="noopener">Book online</a>
+          </div>
+
+          <div class="interior-side-card">
+            <h3>Related services</h3>
+            <nav class="interior-service-nav" aria-label="Related services">
+              <a href="/en/services/inspection/"><i class="fas fa-clipboard-check"></i><span>Inspection</span></a>
+              <a href="/en/services/maintenance/"><i class="fas fa-screwdriver-wrench"></i><span>Maintenance</span></a>
+              <a href="/en/services/repair/"><i class="fas fa-toolbox"></i><span>Repair</span></a>
+              <a href="/en/resources/rv-water-intrusion/"><i class="fas fa-droplet"></i><span>Water intrusion</span></a>
+            </nav>
+          </div>
+
+          <div class="interior-side-card">
+            <h3>Service areas</h3>
+            <nav class="interior-service-nav" aria-label="Service areas">
+              <a href="/en/service-areas/"><i class="fas fa-map-marker-alt"></i><span>Outaouais</span></a>
+              <a href="/en/service-areas/"><i class="fas fa-map-marker-alt"></i><span>Ottawa</span></a>
+              <a href="/en/service-areas/"><i class="fas fa-map-marker-alt"></i><span>Laurentides</span></a>
+            </nav>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang="en" />
+</Layout>
+
+<style>
+  .interior-hero-copy h1 { max-width: 14ch; }
+  .interior-lead :global(strong) { color: #ffe98a !important; text-shadow: 0 1px 10px rgba(0, 0, 0, 0.18); }
+  .hero-badges { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1.5rem; }
+  .hero-badges span { display: inline-flex; align-items: center; min-height: 44px; padding: 0.75rem 1rem; border-radius: 14px; background: var(--brand-gold); color: var(--brand-navy-dark); font-weight: 700; box-shadow: 0 10px 18px rgba(14, 31, 49, 0.14); }
+  .hero-checklist { display: grid; gap: 0.65rem; padding-left: 1.2rem; color: var(--brand-muted); }
+  .interior-card ul { display: grid; gap: 0.85rem; padding-left: 1.2rem; color: var(--brand-ink); }
+  .interior-card li::marker, .hero-checklist li::marker { color: var(--brand-green); font-weight: 700; }
+  @media (max-width: 768px) {
+    .hero-badges { gap: 0.55rem; }
+    .hero-badges span { min-height: 38px; padding: 0.55rem 0.75rem; border-radius: 12px; font-size: 0.88rem; }
+  }
+</style>
