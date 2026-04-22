@@ -18,6 +18,7 @@
         "Inspection",
         "Entretien",
         "Réparation",
+        "Panneau solaire",
         "Esthétique",
         "Vente ou location"
       ],
@@ -39,8 +40,8 @@
     "squareLabel": "Réserver en ligne",
     "emailTitle": "Courriel",
     "locationTitle": "Localisation",
-    "identityTitle": "Identité d'entreprise",
-    "identityBody": "<strong>Assurance:</strong> Garage et civile 2 millions<br><strong>Professionnels depuis 2013</strong>",
+    "identityTitle": "Assurance",
+    "identityBody": "Garage et civile 2 millions<br><strong>Professionnels depuis 2013</strong>",
     "valuesTitle": "Valeurs clés",
     "valuesBody": "Rapidité • Transparence • Conformité réglementaire • Professionnels certifiés",
     "ctaBody": "Demandez votre <strong>soumission gratuite</strong> par téléphone ou formulaire."

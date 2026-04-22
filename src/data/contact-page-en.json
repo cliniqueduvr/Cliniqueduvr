@@ -18,6 +18,7 @@
         "Inspection",
         "Maintenance",
         "Repair",
+        "Solar panels",
         "Detailing",
         "Sales or rental"
       ],
@@ -39,8 +40,8 @@
     "squareLabel": "Book online",
     "emailTitle": "Email",
     "locationTitle": "Location",
-    "identityTitle": "Business identity",
-    "identityBody": "<strong>Insurance:</strong> $2M garage and liability<br><strong>Professionals since 2013</strong>",
+    "identityTitle": "Insurance",
+    "identityBody": "$2M garage and liability<br><strong>Professionals since 2013</strong>",
     "valuesTitle": "Key values",
     "valuesBody": "Speed • Transparency • Regulatory compliance • Certified professionals",
     "ctaBody": "Request your <strong>free estimate</strong> by phone or through the form."
