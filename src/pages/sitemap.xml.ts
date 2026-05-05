@@ -18,8 +18,6 @@ const baseUrl = 'https://cliniqueduvr.ca';
 const defaultLastmod = '2026-04-12';
 
 const pageLastmods = new Map<string, string>([
-  ['/vente/', '2026-04-14'],
-  ['/en/sales/', '2026-04-14'],
   ['/choisir-service/', '2026-04-15'],
   ['/en/choose-service/', '2026-04-15'],
   ['/faq/', '2026-04-19'],
@@ -46,7 +44,6 @@ const staticEntries: UrlEntry[] = [
   { path: '/services/', lastmod: defaultLastmod, alternatePaths: ['/en/services/'] },
   { path: '/realisations/', lastmod: defaultLastmod, alternatePaths: ['/en/realisations/'] },
   { path: '/contact/', lastmod: defaultLastmod, alternatePaths: ['/en/contact/'] },
-  { path: '/vente/', lastmod: '2026-04-14', alternatePaths: ['/en/sales/'] },
   { path: '/privacy/', lastmod: defaultLastmod, alternatePaths: ['/en/privacy/'] },
   { path: '/choisir-service/', lastmod: '2026-04-15', alternatePaths: ['/en/choose-service/'] },
   { path: '/faq/', lastmod: '2026-04-19', alternatePaths: ['/en/faq/'] },
@@ -60,7 +57,6 @@ const staticEntries: UrlEntry[] = [
   { path: '/en/services/', lastmod: defaultLastmod, alternatePaths: ['/services/'] },
   { path: '/en/realisations/', lastmod: defaultLastmod, alternatePaths: ['/realisations/'] },
   { path: '/en/contact/', lastmod: defaultLastmod, alternatePaths: ['/contact/'] },
-  { path: '/en/sales/', lastmod: '2026-04-14', alternatePaths: ['/vente/'] },
   { path: '/en/privacy/', lastmod: defaultLastmod, alternatePaths: ['/privacy/'] },
   { path: '/en/choose-service/', lastmod: '2026-04-15', alternatePaths: ['/choisir-service/'] },
   { path: '/en/faq/', lastmod: '2026-04-19', alternatePaths: ['/faq/'] },

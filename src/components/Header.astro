@@ -31,7 +31,6 @@ function getAlternatePath(pathname: string, targetLang: 'fr' | 'en') {
     '/realisations/': '/en/realisations/',
     '/ressources/installation-panneau-solaire-vr/': '/en/resources/rv-solar-panel-installation/',
     '/services/': '/en/services/',
-    '/vente/': '/en/sales/',
     '/services/vente-achat/': '/en/services/buying-selling/'
   };
 
@@ -45,7 +44,6 @@ function getAlternatePath(pathname: string, targetLang: 'fr' | 'en') {
     '/en/privacy/': '/privacy/',
     '/en/realisations/': '/realisations/',
     '/en/services/': '/services/',
-    '/en/sales/': '/vente/',
     '/en/services/buying-selling/': '/services/vente-achat/'
   };
 
@@ -106,7 +104,6 @@ const navItems = isEnglish
       { label: 'Home', href: '/en/' },
       { label: 'Services', href: '/en/services/' },
       { label: 'Projects', href: '/en/realisations/' },
-      { label: 'Sales', href: '/en/sales/' },
       { label: 'About', href: '/en/about/' },
       { label: 'Contact', href: '/en/contact/' },
       { label: 'Resources', href: '/en/resources/rv-solar-panel-installation/', pushRight: true, type: 'resources' }
@@ -115,7 +112,6 @@ const navItems = isEnglish
       { label: 'Accueil', href: '/' },
       { label: 'Services', href: '/services/' },
       { label: 'Réalisations', href: '/realisations/' },
-      { label: 'Vente', href: '/vente/' },
       { label: 'À Propos', href: '/about/' },
       { label: 'Contact', href: '/contact/' },
       { label: 'Ressources', href: '/ressources/installation-panneau-solaire-vr/', pushRight: true, type: 'resources' }
