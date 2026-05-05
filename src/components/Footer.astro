@@ -24,7 +24,6 @@ const shouldShowCta = pathname !== '/contact/' && pathname !== '/en/contact/';
       <h4>{isEnglish ? 'Contact' : 'Contact'}</h4>
       <p>
         <strong>{isEnglish ? 'Phone:' : 'Téléphone:'}</strong> <a href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a><br>
-        <a href={siteSettings.squareBookingUrl} target="_blank" rel="noopener" class="footer-square-link">{isEnglish ? 'Book online' : 'Réserver en ligne'}</a><br>
         <strong>Email:</strong> <a href={`mailto:${siteSettings.email}`}>{siteSettings.email}</a><br>
         <strong>{isEnglish ? 'Insurance:' : 'Assurance:'}</strong> {isEnglish ? '$2M garage and liability' : 'Garage et civile 2 millions'}
       </p>
@@ -109,27 +108,6 @@ const shouldShowCta = pathname !== '/contact/' && pathname !== '/en/contact/';
     color: #d5e4f5;
   }
 
-  .footer-square-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 40px;
-    margin: 0.35rem 0;
-    padding: 0.5rem 1rem;
-    border-radius: 999px;
-    background: var(--brand-gold);
-    color: var(--brand-navy-dark) !important;
-    border: 2px solid var(--brand-gold);
-    font-weight: 700;
-    text-decoration: none;
-  }
-
-  .footer-square-link:hover {
-    text-decoration: none;
-    background: #e1c317;
-    border-color: #e1c317;
-  }
-
   .footer-col ul {
     list-style: none;
   }
@@ -178,12 +156,6 @@ const shouldShowCta = pathname !== '/contact/' && pathname !== '/en/contact/';
     .footer-col li,
     .footer-col a {
       font-size: 0.86rem;
-    }
-
-    .footer-square-link {
-      width: 100%;
-      min-height: 34px;
-      padding: 0.44rem 0.78rem;
     }
 
     .footer-bottom {
