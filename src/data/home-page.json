@@ -17,8 +17,7 @@
       { "href": "/services/inspection/", "icon": "fas fa-clipboard-check", "label": "Inspection" },
       { "href": "/services/entretien/", "icon": "fas fa-screwdriver-wrench", "label": "Entretien" },
       { "href": "/services/reparation/", "icon": "fas fa-toolbox", "label": "Réparation" },
-      { "href": "/services/esthetique/", "icon": "fas fa-spray-can-sparkles", "label": "Esthétique VR" },
-      { "href": "/services/esthetique-auto-camion/", "icon": "fas fa-car-side", "label": "Esthétique auto" }
+      { "href": "/services/esthetique/", "icon": "fas fa-spray-can-sparkles", "label": "Esthétique VR" }
     ]
   },
   "seoSections": [

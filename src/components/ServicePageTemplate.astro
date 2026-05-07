@@ -103,7 +103,6 @@ const baseHelpfulLinks = isEnglish
       }
     ];
 const helpfulLinks = [...(localGuide ? [localGuide] : []), ...baseHelpfulLinks];
-const isWorkshopOnlyDetailing = service.slug === 'esthetique-auto-camion' || service.slug === 'auto-truck-detailing';
 const proofStats = service.proofStats ?? [];
 const proofPoints = service.proofPoints ?? [];
 const caseStudies = service.caseStudies ?? [];
@@ -163,20 +162,6 @@ const fallbackProofContent = isEnglish
           { title: 'Built for larger formats', text: 'RVs and motorhomes need a different approach than small-vehicle detailing.' },
           { title: 'Useful before sale or season', text: 'This service is strongest when the goal is a cleaner, brighter, more credible presentation.' },
           { title: 'Clearer finish quality', text: 'Polishing and waxing help move the vehicle beyond a simple rinse or surface clean.' }
-        ]
-      },
-      'auto-truck-detailing': {
-        title: 'Why this separate workshop-only detailing page matters',
-        intro: 'Keeping auto and truck detailing separate from RV detailing makes the offer easier to understand and keeps the workshop standard more consistent.',
-        stats: [
-          { value: 'Workshop only', label: 'Controlled execution conditions' },
-          { value: 'Auto + truck', label: 'Dedicated offer, not mixed with RV work' },
-          { value: 'Polish + finish', label: 'Focused on visible presentation' }
-        ],
-        points: [
-          { title: 'Cleaner scope', text: 'Clients immediately know this page is dedicated to cars and trucks only.' },
-          { title: 'More consistent finish', text: 'Workshop conditions help control the detailing result more tightly.' },
-          { title: 'Better page clarity', text: 'Separating the offers avoids confusion between vehicle types and service expectations.' }
         ]
       },
       'buying-selling': {
@@ -251,20 +236,6 @@ const fallbackProofContent = isEnglish
           { title: 'Finition plus nette', text: 'Polissage et cirage permettent d’aller plus loin qu’un simple nettoyage de surface.' }
         ]
       },
-      'esthetique-auto-camion': {
-        title: "Pourquoi cette page atelier seulement est utile",
-        intro: "Séparer l'offre auto et camion de l'offre VR rend le service plus clair et permet de garder un standard d'exécution plus constant en atelier.",
-        stats: [
-          { value: 'Atelier seulement', label: "Conditions d'exécution contrôlées" },
-          { value: 'Auto + camion', label: 'Offre dédiée, séparée des VR' },
-          { value: 'Polissage + finition', label: 'Accent sur la présentation visible' }
-        ],
-        points: [
-          { title: 'Portée plus claire', text: 'Le client comprend immédiatement que cette page est dédiée aux autos et camions seulement.' },
-          { title: 'Finition plus constante', text: "Les conditions d'atelier aident à mieux contrôler le résultat final." },
-          { title: 'Offre mieux cadrée', text: "La séparation évite les confusions entre types de véhicules et attentes de service." }
-        ]
-      },
       'vente-achat': {
         title: 'Ce qui donne de la valeur à ce service avant transaction',
         intro: "Acheter ou vendre devient plus simple quand l'état du véhicule est plus clair, que les priorités sont identifiées et que la présentation inspire davantage confiance.",
@@ -295,7 +266,7 @@ const localServiceFocus = isEnglish
       <div class="hero-copy">
         <p class="eyebrow">{service.eyebrow}</p>
         <h1 class:list={[
-          (service.slug === 'inspection' || service.slug === 'entretien' || service.slug === 'maintenance' || service.slug === 'reparation' || service.slug === 'repair' || service.slug === 'esthetique' || service.slug === 'detailing' || service.slug === 'esthetique-auto-camion' || service.slug === 'auto-truck-detailing') && 'hero-title-wide',
+          (service.slug === 'inspection' || service.slug === 'entretien' || service.slug === 'maintenance' || service.slug === 'reparation' || service.slug === 'repair' || service.slug === 'esthetique' || service.slug === 'detailing') && 'hero-title-wide',
           service.slug === 'inspection' && 'hero-title-wider'
         ]}>{service.h1}</h1>
         <p class="opening" set:html={service.opening} />
@@ -423,20 +394,18 @@ const localServiceFocus = isEnglish
           </div>
         </section>
 
-        {!isWorkshopOnlyDetailing && (
-          <section class="content-card alt">
-            <h2>{isEnglish ? 'Useful links before you decide' : 'Liens utiles avant de décider'}</h2>
-            <div class="link-card-grid">
-              {helpfulLinks.map((item) => (
-                <a class="link-card link-card-anchor" href={item.href}>
-                  <h3>{item.title}</h3>
-                  <p>{item.copy}</p>
-                  <span>{isEnglish ? 'Learn more' : 'En savoir plus'}</span>
-                </a>
-              ))}
-            </div>
-          </section>
-        )}
+        <section class="content-card alt">
+          <h2>{isEnglish ? 'Useful links before you decide' : 'Liens utiles avant de décider'}</h2>
+          <div class="link-card-grid">
+            {helpfulLinks.map((item) => (
+              <a class="link-card link-card-anchor" href={item.href}>
+                <h3>{item.title}</h3>
+                <p>{item.copy}</p>
+                <span>{isEnglish ? 'Learn more' : 'En savoir plus'}</span>
+              </a>
+            ))}
+          </div>
+        </section>
 
         <section class="content-card faq-section">
           <h2>{service.faqTitle}</h2>
@@ -471,19 +440,17 @@ const localServiceFocus = isEnglish
           </nav>
         </div>
 
-        {!isWorkshopOnlyDetailing && (
-          <div class="side-card">
-            <h3>{isEnglish ? 'Service areas' : 'Zones desservies'}</h3>
-            <nav class="service-nav" aria-label={isEnglish ? 'Service areas' : 'Zones desservies'}>
-              {serviceAreas.map((area) => (
-                <a href={isEnglish ? '/en/service-areas/' : '/zones-desservies/'}>
-                  <i class="fas fa-map-marker-alt"></i>
-                  <span>{area}</span>
-                </a>
-              ))}
-            </nav>
-          </div>
-        )}
+        <div class="side-card">
+          <h3>{isEnglish ? 'Service areas' : 'Zones desservies'}</h3>
+          <nav class="service-nav" aria-label={isEnglish ? 'Service areas' : 'Zones desservies'}>
+            {serviceAreas.map((area) => (
+              <a href={isEnglish ? '/en/service-areas/' : '/zones-desservies/'}>
+                <i class="fas fa-map-marker-alt"></i>
+                <span>{area}</span>
+              </a>
+            ))}
+          </nav>
+        </div>
       </aside>
     </div>
   </section>
