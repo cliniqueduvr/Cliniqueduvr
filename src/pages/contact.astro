@@ -43,7 +43,6 @@ const schemas = [
           </div>
           <h2>Pour aller plus vite</h2>
           <p>Envoyez le type de véhicule, la ville, quelques photos et ce que vous voyez déjà. Cela aide à orienter la demande dès le premier contact.</p>
-          <a class="interior-hero-link" href={siteSettings.squareBookingUrl} target="_blank" rel="noopener">Réserver en ligne</a>
         </aside>
       </div>
     </section>
@@ -151,7 +150,6 @@ const schemas = [
             <h3>Besoin d’un avis rapide?</h3>
             <p>On peut vous orienter vers une inspection, un entretien ou une réparation selon ce que vous observez déjà sur le véhicule.</p>
             <a class="interior-side-button" href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>
-            <a class="interior-side-link" href={siteSettings.squareBookingUrl} target="_blank" rel="noopener">{contactPage.infoSection.squareLabel}</a>
           </div>
 
           <div class="interior-side-card">
@@ -160,7 +158,6 @@ const schemas = [
               <h3>{contactPage.infoSection.phoneTitle}</h3>
               <div class="phone-actions">
                 <a href={`tel:${siteSettings.phone.href}`} class="phone-link">{siteSettings.phone.display}</a>
-                <a href={siteSettings.squareBookingUrl} target="_blank" rel="noopener" class="square-button">{contactPage.infoSection.squareLabel}</a>
               </div>
             </div>
 
@@ -280,8 +277,6 @@ const schemas = [
   .seo-columns p { margin-top: 0.75rem; color: var(--brand-muted); }
   .phone-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
   .phone-link { font-weight: 700; }
-  .square-button { display: inline-flex; align-items: center; justify-content: center; background: var(--brand-gold); color: var(--brand-navy-dark); border: 2px solid var(--brand-gold); border-radius: 999px; padding: 0.55rem 1rem; font-weight: 700; font-size: 0.95rem; }
-  .square-button:hover { text-decoration: none; background: #e1c317; border-color: #e1c317; }
   .map-section { width: 100%; margin-top: 3rem; }
   @media (max-width: 768px) {
     .guide-grid,

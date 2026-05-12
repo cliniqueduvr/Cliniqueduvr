@@ -43,7 +43,6 @@ const schemas = [
           </div>
           <h2>To move faster</h2>
           <p>Send the vehicle type, your city, a few photos, and what you already see. That makes it easier to point you toward the right next step from the start.</p>
-          <a class="interior-hero-link" href={siteSettings.squareBookingUrl} target="_blank" rel="noopener">Book online</a>
         </aside>
       </div>
     </section>
@@ -69,7 +68,7 @@ const schemas = [
             </div>
           </section>
 
-          <section class="interior-card">
+          <section class="interior-card" id="formulaire-soumission">
             <h2>{contactPage.formSection.title}</h2>
             {!isFormConfigured && (
               <p class="intro-copy">{contactPage.formSection.unconfiguredNote}</p>
@@ -146,7 +145,6 @@ const schemas = [
             <h3>Need a quick opinion?</h3>
             <p>We can point you toward inspection, maintenance, or repair based on what is already visible on the vehicle.</p>
             <a class="interior-side-button" href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>
-            <a class="interior-side-link" href={siteSettings.squareBookingUrl} target="_blank" rel="noopener">{contactPage.infoSection.squareLabel}</a>
           </div>
 
           <div class="interior-side-card">
@@ -155,7 +153,6 @@ const schemas = [
               <h3>{contactPage.infoSection.phoneTitle}</h3>
               <div class="phone-actions">
                 <a href={`tel:${siteSettings.phone.href}`} class="phone-link">{siteSettings.phone.display}</a>
-                <a href={siteSettings.squareBookingUrl} target="_blank" rel="noopener" class="square-button">{contactPage.infoSection.squareLabel}</a>
               </div>
             </div>
 
@@ -271,8 +268,6 @@ const schemas = [
   .seo-columns p { margin-top: 0.75rem; color: var(--brand-muted); }
   .phone-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
   .phone-link { font-weight: 700; }
-  .square-button { display: inline-flex; align-items: center; justify-content: center; background: var(--brand-gold); color: var(--brand-navy-dark); border: 2px solid var(--brand-gold); border-radius: 999px; padding: 0.55rem 1rem; font-weight: 700; font-size: 0.95rem; }
-  .square-button:hover { text-decoration: none; background: #e1c317; border-color: #e1c317; }
   .map-section { width: 100%; margin-top: 3rem; }
   @media (max-width: 768px) {
     .guide-grid,

@@ -213,7 +213,6 @@ const isEnglish = lang === 'en';
           <p>{data.contactCard.body}</p>
           <a class="contact-button" href={`tel:${siteSettings.phone.href}`}>{data.contactCard.phoneLabel}</a>
           <a class="contact-link" href={`mailto:${siteSettings.email}`}>{data.contactCard.emailLabel}</a>
-          <a class="contact-link contact-square" href={siteSettings.squareBookingUrl} target="_blank" rel="noopener">{data.contactCard.squareLabel}</a>
         </div>
       </aside>
     </div>
@@ -632,21 +631,10 @@ const isEnglish = lang === 'en';
     background: white;
   }
 
-  .contact-square {
-    background: var(--brand-gold);
-    color: var(--brand-navy-dark);
-    border: 2px solid var(--brand-gold);
-  }
-
   .contact-button:hover,
   .contact-link:hover {
     text-decoration: none;
     transform: translateY(-1px);
-  }
-
-  .contact-square:hover {
-    background: #e1c317;
-    border-color: #e1c317;
   }
 
   @media (max-width: 768px) {

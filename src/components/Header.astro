@@ -124,13 +124,8 @@ const navItems = isEnglish
       <div class="topbar-left">
         <a href={`tel:${siteSettings.phone.href}`} class="topbar-phone">{siteSettings.phone.display}</a>
         <a href={smsHref} class="sms-link">{isEnglish ? 'Text us' : 'Message texte'}</a>
-        <a
-          href={isEnglish ? siteSettings.squareBookingUrl : '/contact/#formulaire-soumission'}
-          target={isEnglish ? '_blank' : undefined}
-          rel={isEnglish ? 'noopener' : undefined}
-          class="square-link"
-        >
-          {isEnglish ? 'Book online' : 'Soumission'}
+        <a href={isEnglish ? '/en/contact/' : '/contact/#formulaire-soumission'} class="square-link">
+          {isEnglish ? 'Contact' : 'Soumission'}
         </a>
       </div>
       <div class="topbar-right">
