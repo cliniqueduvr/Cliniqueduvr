@@ -97,7 +97,7 @@ export function buildLocalBusinessSchema({
     ],
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '11 rue de Granby, Unité 18',
+      streetAddress: '11 rue de Granby, Unité 17',
       addressLocality: 'Gatineau',
       addressRegion: 'QC',
       postalCode: 'J8T 8R7',
@@ -108,7 +108,7 @@ export function buildLocalBusinessSchema({
       latitude: 45.507195,
       longitude: -75.54977
     },
-    hasMap: 'https://www.google.com/maps/search/?api=1&query=11+rue+de+Granby+Unite+18+Gatineau+QC',
+    hasMap: 'https://www.google.com/maps/search/?api=1&query=11+rue+de+Granby+Unite+17+Gatineau+QC',
     priceRange: '$$',
     image: BRAND_IMAGE,
     sameAs: [facebookUrl, tiktokUrl],
