@@ -255,6 +255,31 @@ const resolvedProofTitle = service.proofTitle ?? fallbackProofContent?.title;
 const resolvedProofIntro = service.proofIntro ?? fallbackProofContent?.intro;
 const resolvedProofStats = proofStats.length > 0 ? proofStats : fallbackProofContent?.stats ?? [];
 const resolvedProofPoints = proofPoints.length > 0 ? proofPoints : fallbackProofContent?.points ?? [];
+const rexosealPanel = isEnglish
+  ? service.slug === 'maintenance'
+    ? {
+        eyebrow: 'Roof protection service',
+        title: 'Rexoseal work offered through our maintenance service',
+        intro: 'For some roof and membrane files, we offer <strong>Rexoseal</strong> work directly through the workshop as part of an RV maintenance or roof-protection plan.',
+        points: [
+          'Used on selected roof or membrane files when the surface and support condition are a good fit.',
+          'Integrated into the maintenance plan when the goal is to protect, restore, or reinforce vulnerable roof areas.',
+          'Validated by us first so the solution matches the vehicle instead of applying the same approach to every roof.'
+        ]
+      }
+    : null
+  : service.slug === 'entretien'
+    ? {
+        eyebrow: 'Service de protection de toiture',
+        title: 'Travaux Rexoseal offerts dans notre service d’entretien',
+        intro: 'Pour certains dossiers de toiture et de membrane, nous offrons directement des travaux avec <strong>Rexoseal</strong> dans le cadre d’un entretien ou d’une remise en protection du VR.',
+        points: [
+          'Utilisé sur certains dossiers de toiture ou de membrane quand la surface et l’état du support s’y prêtent.',
+          'Intégré au plan d’entretien quand l’objectif est de protéger, restaurer ou renforcer des zones de toit plus vulnérables.',
+          'Validé par l’atelier avant recommandation pour choisir une solution cohérente avec le véhicule plutôt qu’une approche unique pour tous les toits.'
+        ]
+      }
+    : null;
 const localServiceFocus = isEnglish
   ? `Clinique du VR delivers <strong>${service.navLabel}</strong> from its <strong>Gatineau workshop</strong> and supports clients from <u>Outaouais</u>, <u>Ottawa</u>, and the <u>Laurentides</u> depending on the assignment. This page is meant to clarify the right next step when the issue involves <strong>water intrusion</strong>, <strong>roof condition</strong>, <strong>seals</strong>, or an <strong>RV inspection / maintenance / repair decision</strong>.`
   : `Clinique du VR prend en charge <strong>${service.navLabel}</strong> à partir de son <strong>atelier de Gatineau</strong> et accompagne aussi les demandes venant de <u>l’Outaouais</u>, d’<u>Ottawa</u> et des <u>Laurentides</u> selon le mandat. Cette page sert à clarifier la bonne prochaine étape quand le besoin touche une <strong>infiltration d’eau</strong>, la <strong>toiture</strong>, les <strong>joints</strong> ou un choix entre <strong>inspection, entretien et réparation de VR</strong>.`;
@@ -336,6 +361,19 @@ const localServiceFocus = isEnglish
             ))}
           </ul>
         </section>
+
+        {rexosealPanel && (
+          <section class="content-card rexoseal-panel">
+            <p class="section-eyebrow">{rexosealPanel.eyebrow}</p>
+            <h2>{rexosealPanel.title}</h2>
+            <p class="section-copy" set:html={rexosealPanel.intro} />
+            <ul>
+              {rexosealPanel.points.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         <section class="content-card alt">
           <h2>{service.situationsTitle}</h2>
@@ -658,6 +696,13 @@ const localServiceFocus = isEnglish
     background: linear-gradient(180deg, #f8fbf5 0%, #ffffff 100%);
   }
 
+  .rexoseal-panel {
+    background:
+      radial-gradient(circle at top right, rgba(58, 141, 47, 0.12), transparent 34%),
+      linear-gradient(180deg, #ffffff 0%, #f8fbfd 100%);
+    border: 1px solid rgba(31, 58, 95, 0.1);
+  }
+
   .content-card h2,
   .side-card h3 {
     margin-bottom: 1rem;
@@ -674,6 +719,20 @@ const localServiceFocus = isEnglish
   .section-copy {
     margin-bottom: 1rem;
     color: var(--brand-muted);
+  }
+
+  .section-eyebrow {
+    display: inline-flex;
+    width: fit-content;
+    margin: 0 0 0.85rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(58, 141, 47, 0.12);
+    color: var(--brand-green-dark);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
 
   .content-card li::marker {
