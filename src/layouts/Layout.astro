@@ -102,6 +102,17 @@ const hasGoogleAds = googleAdsId.length > 0;
           function trackConversion(type) {
             if (typeof window.gtag !== 'function') return;
 
+            if (type === 'form') {
+              try {
+                const formConversionKey = 'cliniqueduvr-form-conversion-tracked';
+                if (window.sessionStorage.getItem(formConversionKey) === 'true') return;
+                window.sessionStorage.setItem(formConversionKey, 'true');
+              } catch {
+                if (window.__cliniqueduvrFormConversionTracked) return;
+                window.__cliniqueduvrFormConversionTracked = true;
+              }
+            }
+
             const label = googleAdsConversions?.[type];
             window.gtag('event', `${type}_contact`, {
               event_category: 'engagement',
