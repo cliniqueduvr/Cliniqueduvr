@@ -17,8 +17,19 @@
       { "href": "/en/services/inspection/", "icon": "fas fa-clipboard-check", "label": "Inspection" },
       { "href": "/en/services/maintenance/", "icon": "fas fa-screwdriver-wrench", "label": "Maintenance" },
       { "href": "/en/services/repair/", "icon": "fas fa-toolbox", "label": "Repair" },
-      { "href": "/en/services/detailing/", "icon": "fas fa-spray-can-sparkles", "label": "RV detailing" }
+      { "href": "/en/store/", "icon": "fas fa-store", "label": "Store" }
     ]
+  },
+  "partsStore": {
+    "eyebrow": "Available at our workshop",
+    "heading": "RV Parts and Accessories Store",
+    "body": "Visit us for a selection of parts and accessories for RV maintenance, repairs, and upgrades. Our team can also help you identify the right product for your vehicle and check its availability.",
+    "items": [
+      { "icon": "fas fa-droplet", "label": "Sealants" },
+      { "icon": "fas fa-screwdriver-wrench", "label": "Maintenance parts" },
+      { "icon": "fas fa-solar-panel", "label": "Accessories and equipment" }
+    ],
+    "ctaLabel": "View products"
   },
   "seoSections": [
     {

@@ -1,0 +1,197 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import siteSettings from '../../data/site-settings.json';
+import products from '../../data/store-products.json';
+import { buildBreadcrumbSchema } from '../../lib/seo';
+
+const categories = [...new Set(products.map((product) => product.categoryEn))];
+const suppliers = [...new Set(products.map((product) => product.supplier))].sort((a, b) => a.localeCompare(b, 'en-CA'));
+const categoryIcons: Record<string, string> = {
+  'Care products': 'fas fa-spray-can-sparkles',
+  Sanitation: 'fas fa-droplet',
+  Sealants: 'fas fa-fill-drip',
+  Electrical: 'fas fa-bolt',
+  Hardware: 'fas fa-screwdriver-wrench',
+  Plumbing: 'fas fa-faucet-drip',
+  Locks: 'fas fa-lock'
+};
+
+const breadcrumbs = buildBreadcrumbSchema([
+  { name: 'Home', path: '/en/' },
+  { name: 'Store' }
+]);
+---
+
+<Layout
+  title="RV Parts and Accessories Store in Gatineau | Clinique du VR"
+  description="RV parts, sealants, accessories, and equipment available at our Gatineau workshop. Call us to check availability."
+  lang="en-CA"
+  canonicalPath="/en/store/"
+  frPath="/magasin/"
+  enPath="/en/store/"
+  schemas={[breadcrumbs]}
+>
+  <Header lang="en" />
+
+  <main>
+    <section class="store-hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">At our Gatineau workshop</p>
+          <h1>RV Parts and Accessories</h1>
+          <p>Our store carries products to maintain, repair, and equip your RV. Our team can help you find the right part or accessory for your vehicle.</p>
+        </div>
+        <div class="store-symbol" aria-hidden="true"><i class="fas fa-store"></i></div>
+      </div>
+    </section>
+
+    <section class="store-products">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-eyebrow">Products in store</p>
+          <h2>Our catalogue</h2>
+        </div>
+        <div class="catalog-tools">
+          <label class="search-field">
+            <span class="sr-only">Search products or suppliers</span>
+            <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+            <input type="search" placeholder="Search products or suppliers..." data-product-search />
+          </label>
+          <label class="supplier-field">
+            <span>Supplier</span>
+            <select data-supplier-filter>
+              <option value="all">All suppliers</option>
+              {suppliers.map((supplier) => <option value={supplier}>{supplier}</option>)}
+            </select>
+          </label>
+          <div class="category-filters" aria-label="Filter by category">
+            <button type="button" class="filter-button active" data-category="all">All</button>
+            {categories.map((category) => (
+              <button type="button" class="filter-button" data-category={category}>{category}</button>
+            ))}
+          </div>
+        </div>
+        <div class="product-grid">
+          {products.map((product) => (
+            <article class="product-card" data-product data-search={`${product.name} ${product.supplier}`.toLocaleLowerCase('en-CA')} data-category={product.categoryEn} data-supplier={product.supplier}>
+              <div class="product-icon"><i class={categoryIcons[product.categoryEn] ?? 'fas fa-box'} aria-hidden="true"></i></div>
+              <p class="product-category">{product.categoryEn}</p>
+              <h3>{product.name}</h3>
+              {product.detailsEn && <p class="product-details">{product.detailsEn}</p>}
+              <p class="product-supplier">Supplier: {product.supplier === 'Non précisé' ? 'Not specified' : product.supplier}</p>
+              <p class="product-price">{product.priceEn ?? product.price}</p>
+            </article>
+          ))}
+        </div>
+        <p class="no-results" data-no-results hidden>No products match your search.</p>
+      </div>
+    </section>
+
+    <section class="store-contact">
+      <div class="container contact-card">
+        <div>
+          <p class="section-eyebrow">Looking for a specific part?</p>
+          <h2>Check availability with our team</h2>
+          <p>Send us the make, model, and year of your RV, along with a description or photo of the part you need.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="primary-action" href={`tel:${siteSettings.phone.href}`}><i class="fas fa-phone" aria-hidden="true"></i>{siteSettings.phone.display}</a>
+          <a class="secondary-action" href="/en/contact/">Contact us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang="en" />
+</Layout>
+
+<script is:inline>
+  const searchInput = document.querySelector('[data-product-search]');
+  const supplierFilter = document.querySelector('[data-supplier-filter]');
+  const filterButtons = document.querySelectorAll('[data-category]');
+  const productCards = document.querySelectorAll('[data-product]');
+  const noResults = document.querySelector('[data-no-results]');
+  let activeCategory = 'all';
+
+  function filterProducts() {
+    const query = searchInput instanceof HTMLInputElement ? searchInput.value.trim().toLocaleLowerCase('en-CA') : '';
+    let visibleCount = 0;
+
+    productCards.forEach((card) => {
+      if (!(card instanceof HTMLElement)) return;
+      const matchesSearch = (card.dataset.search || '').includes(query);
+      const matchesCategory = activeCategory === 'all' || card.dataset.category === activeCategory;
+      const selectedSupplier = supplierFilter instanceof HTMLSelectElement ? supplierFilter.value : 'all';
+      const matchesSupplier = selectedSupplier === 'all' || card.dataset.supplier === selectedSupplier;
+      const isVisible = matchesSearch && matchesCategory && matchesSupplier;
+      card.hidden = !isVisible;
+      if (isVisible) visibleCount += 1;
+    });
+
+    if (noResults instanceof HTMLElement) noResults.hidden = visibleCount > 0;
+  }
+
+  searchInput?.addEventListener('input', filterProducts);
+  supplierFilter?.addEventListener('change', filterProducts);
+  filterButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      if (!(button instanceof HTMLButtonElement)) return;
+      activeCategory = button.dataset.category || 'all';
+      filterButtons.forEach((item) => item.classList.toggle('active', item === button));
+      filterProducts();
+    });
+  });
+</script>
+
+<style>
+  .store-hero { padding: 4.5rem 0 4rem; background: radial-gradient(circle at top left, rgba(242, 210, 27, 0.18), transparent 28%), linear-gradient(135deg, var(--brand-navy-dark), #23476f); color: white; }
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(220px, 0.5fr); gap: 3rem; align-items: center; }
+  .eyebrow, .section-eyebrow { color: var(--brand-green); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+  .store-hero .eyebrow { color: var(--brand-gold); }
+  .store-hero h1 { max-width: 18ch; margin: 0.5rem 0 1rem; color: white; }
+  .store-hero p:last-child { max-width: 62ch; color: #e7edf4; font-size: 1.08rem; }
+  .store-symbol { display: grid; place-items: center; width: 190px; height: 190px; margin: 0 auto; border-radius: 50%; background: var(--brand-gold); color: var(--brand-navy-dark); font-size: 5rem; box-shadow: 0 18px 35px rgba(0, 0, 0, 0.2); }
+  .store-products { padding: 4rem 0; background: var(--brand-surface); }
+  .section-heading { max-width: 760px; margin-bottom: 2rem; }
+  .section-heading h2 { margin: 0.4rem 0 0.75rem; }
+  .section-heading > p:last-child, .contact-card p { color: var(--brand-muted); }
+  .catalog-tools { display: grid; gap: 1rem; margin-bottom: 2rem; }
+  .search-field { display: flex; align-items: center; gap: 0.75rem; max-width: 520px; padding: 0.8rem 1rem; border: 2px solid #dfe5ea; border-radius: 12px; background: white; color: var(--brand-muted); }
+  .search-field:focus-within { border-color: var(--brand-green); }
+  .search-field input { width: 100%; border: 0; outline: 0; font: inherit; }
+  .supplier-field { display: flex; align-items: center; gap: 0.75rem; max-width: 520px; color: var(--brand-navy); font-weight: 700; }
+  .supplier-field select { flex: 1; min-width: 0; padding: 0.72rem 0.85rem; border: 2px solid #dfe5ea; border-radius: 10px; background: white; color: var(--brand-ink); font: inherit; }
+  .category-filters { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+  .filter-button { padding: 0.55rem 0.9rem; border: 2px solid var(--brand-navy); border-radius: 999px; background: transparent; color: var(--brand-navy); font-size: 0.9rem; }
+  .filter-button:hover, .filter-button.active { background: var(--brand-navy); color: white; }
+  .product-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+  .product-card { padding: 1.75rem; border-radius: 20px; background: white; box-shadow: 0 14px 30px rgba(24, 40, 61, 0.08); }
+  .product-card[hidden] { display: none; }
+  .product-icon { display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: 1rem; border-radius: 14px; background: #edf5e9; color: var(--brand-green); font-size: 1.3rem; }
+  .product-category { margin-bottom: 0.4rem; color: var(--brand-green); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+  .product-card h3 { margin-bottom: 0.6rem; color: var(--brand-navy); }
+  .product-details { margin: -0.25rem 0 0.65rem; color: var(--brand-muted); font-size: 0.82rem; }
+  .product-supplier { margin-bottom: 0.75rem; color: var(--brand-muted); font-size: 0.88rem; }
+  .product-price { color: var(--brand-navy-dark); font-size: 1.25rem; font-weight: 800; }
+  .no-results { padding: 2rem; border-radius: 16px; background: white; color: var(--brand-muted); text-align: center; }
+  .store-contact { padding: 4rem 0; background: white; }
+  .contact-card { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; align-items: center; padding-top: 2rem; padding-bottom: 2rem; border-left: 6px solid var(--brand-gold); border-radius: 18px; background: #f8fbf5; box-shadow: 0 14px 30px rgba(24, 40, 61, 0.08); }
+  .contact-card h2 { margin: 0.4rem 0 0.7rem; }
+  .contact-actions { display: flex; flex-direction: column; gap: 0.75rem; min-width: 230px; }
+  .primary-action, .secondary-action { display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem; min-height: 48px; padding: 0.75rem 1rem; border-radius: 999px; font-weight: 700; }
+  .primary-action { background: var(--brand-green); color: white; }
+  .secondary-action { border: 2px solid var(--brand-navy); color: var(--brand-navy); }
+  .primary-action:hover, .secondary-action:hover { text-decoration: none; }
+  .primary-action:hover { background: var(--brand-green-dark); }
+  .secondary-action:hover { background: var(--brand-navy); color: white; }
+  @media (max-width: 768px) {
+    .store-hero, .store-products, .store-contact { padding: 2.5rem 0; }
+    .hero-grid, .contact-card { grid-template-columns: 1fr; }
+    .store-symbol { width: 110px; height: 110px; font-size: 3rem; }
+    .product-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .product-card { padding: 1.25rem; }
+    .contact-card { margin: 0 1rem; padding: 1.4rem 1rem; }
+  }
+</style>
