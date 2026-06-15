@@ -76,7 +76,7 @@ const breadcrumbs = buildBreadcrumbSchema([
         </div>
         <div class="product-grid">
           {products.map((product) => (
-            <article class="product-card" data-product data-search={`${product.name} ${product.supplier}`.toLocaleLowerCase('fr-CA')} data-category={product.category} data-supplier={product.supplier}>
+            <article class="product-card" data-product data-search={`${product.name} ${product.supplier} ${product.details ?? ''}`.toLocaleLowerCase('fr-CA')} data-category={product.category} data-supplier={product.supplier}>
               <div class="product-icon"><i class={categoryIcons[product.category] ?? 'fas fa-box'} aria-hidden="true"></i></div>
               <p class="product-category">{product.category}</p>
               <h3>{product.name}</h3>

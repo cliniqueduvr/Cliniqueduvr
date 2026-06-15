@@ -35,38 +35,6 @@ const serviceAreas = [
     body: 'Water intrusion, worn seals, and doubts about moisture in a travel trailer.'
   }
 ];
-const serviceGuides = [
-  {
-    title: 'Contact us',
-    body: 'Describe the issue, the vehicle, and your priority so we can direct you to the right service.',
-    href: '/en/contact/',
-    label: 'Contact the workshop'
-  },
-  {
-    title: 'Real examples',
-    body: 'Browse before-and-after examples to better situate your need.',
-    href: '/en/realisations/',
-    label: 'View projects'
-  },
-  {
-    title: 'Before buying or selling',
-    body: 'If your situation involves a transaction, start with the inspection to clarify the vehicle’s actual condition.',
-    href: '/en/services/inspection/',
-    label: 'View inspection service'
-  },
-  {
-    title: 'Water leak in Gatineau',
-    body: 'See our local page if your priority is a water leak, suspicious seals, or a roof issue that needs a quick read in Gatineau.',
-    href: '/en/areas/rv-water-leak-gatineau/',
-    label: 'View water leak page'
-  },
-  {
-    title: 'Choose a service',
-    body: 'If you are not sure where to start, use our guidance page by symptom and situation.',
-    href: '/en/choose-service/',
-    label: 'View guidance page'
-  }
-];
 const serviceFaqs = [
   {
     question: 'How do I choose the right service for my RV?',
@@ -131,25 +99,12 @@ const breadcrumbs = buildBreadcrumbSchema([
     </section>
 
     <section class="planning-section">
-      <div class="container planning-layout">
+      <div class="container">
         <div class="quick-steps-card">
           <h2>Where to start</h2>
           <div class="quick-steps-list">
             {quickSteps.map((item) => (
               <p>{item}</p>
-            ))}
-          </div>
-        </div>
-
-        <div class="quick-guides-card">
-          <h2>Useful shortcuts</h2>
-          <div class="guide-list">
-            {serviceGuides.map((guide) => (
-              <a class="guide-item" href={guide.href}>
-                <h3>{guide.title}</h3>
-                <p>{guide.body}</p>
-                <span>{guide.label}</span>
-              </a>
             ))}
           </div>
         </div>

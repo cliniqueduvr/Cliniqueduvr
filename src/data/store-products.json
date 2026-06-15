@@ -24,6 +24,16 @@
   { "name": "Détachant de moisissure Mirage 2000", "price": "20,95 $", "category": "Entretien", "categoryEn": "Care products", "supplier": "Mirage 2000" },
   { "name": "Dicor - Scellant Cap (MUR)", "price": "14,99 $", "category": "Étanchéité", "categoryEn": "Sealants", "supplier": "Dicor", "details": "Couleurs : blanc, noir et clair", "detailsEn": "Colours: white, black and clear" },
   { "name": "Dicor - Contour de toit", "price": "17,99 $", "category": "Étanchéité", "categoryEn": "Sealants", "supplier": "Dicor", "details": "Couleurs : noir et blanc", "detailsEn": "Colours: black and white" },
-  { "name": "Dicor - Scellant auto-nivelant", "price": "Prix sur demande", "priceEn": "Price on request", "category": "Étanchéité", "categoryEn": "Sealants", "supplier": "Dicor", "details": "Couleurs : blanc et noir", "detailsEn": "Colours: white and black" },
-  { "name": "Scellant Proflex VR", "price": "21,95 $", "category": "Étanchéité", "categoryEn": "Sealants", "supplier": "Proflex VR", "details": "Couleurs : blanc, noir et clair", "detailsEn": "Colours: white, black and clear" }
+  { "name": "Dicor - Scellant auto-nivelant", "price": "14,99 $", "category": "Étanchéité", "categoryEn": "Sealants", "supplier": "Dicor", "details": "Couleurs : blanc et noir", "detailsEn": "Colours: white and black" },
+  { "name": "Scellant Proflex VR", "price": "21,95 $", "category": "Étanchéité", "categoryEn": "Sealants", "supplier": "Proflex VR", "details": "Couleurs : blanc, noir et clair", "detailsEn": "Colours: white, black and clear" },
+  { "name": "Rexoseal - Kit 40 pieds", "price": "659,95 $", "category": "Étanchéité", "categoryEn": "Sealants", "supplier": "Rexoseal", "details": "Code : RXRV19KT", "detailsEn": "Product code: RXRV19KT" },
+  { "name": "Rexoseal - Kit 30 pieds", "price": "569,95 $", "category": "Étanchéité", "categoryEn": "Sealants", "supplier": "Rexoseal", "details": "Code : RXRV15KT", "detailsEn": "Product code: RXRV15KT" },
+  { "name": "Rexoseal - Kit 20 pieds", "price": "519,95 $", "category": "Étanchéité", "categoryEn": "Sealants", "supplier": "Rexoseal", "details": "Code : RXRV12KT", "detailsEn": "Product code: RXRV12KT" },
+  { "name": "Rexoseal - 8 litres", "price": "382,95 $", "category": "Étanchéité", "categoryEn": "Sealants", "supplier": "Rexoseal", "details": "Code : RXRV08", "detailsEn": "Product code: RXRV08" },
+  { "name": "Rexoseal - 4 litres", "price": "255,95 $", "category": "Étanchéité", "categoryEn": "Sealants", "supplier": "Rexoseal", "details": "Code : RXRV04", "detailsEn": "Product code: RXRV04" },
+  { "name": "Rexoseal - 1 litre", "price": "98,95 $", "category": "Étanchéité", "categoryEn": "Sealants", "supplier": "Rexoseal", "details": "Code : RXRV1K", "detailsEn": "Product code: RXRV1K" },
+  { "name": "Rexoseal - Tissu renforçant", "price": "29,95 $", "category": "Étanchéité", "categoryEn": "Sealants", "supplier": "Rexoseal", "details": "Code : RF25", "detailsEn": "Product code: RF25" },
+  { "name": "Rexoseal - Kit T/R", "price": "468,95 $", "category": "Étanchéité", "categoryEn": "Sealants", "supplier": "Rexoseal", "details": "Code : RXRVTT", "detailsEn": "Product code: RXRVTT" },
+  { "name": "Rexoseal - 3,78 litres", "price": "245,95 $", "category": "Étanchéité", "categoryEn": "Sealants", "supplier": "Rexoseal", "details": "Code : RXTR04", "detailsEn": "Product code: RXTR04" },
+  { "name": "Rexoseal - Kit de réparation", "price": "55,95 $", "category": "Étanchéité", "categoryEn": "Sealants", "supplier": "Rexoseal", "details": "Code : TLKT1", "detailsEn": "Product code: TLKT1" }
 ]

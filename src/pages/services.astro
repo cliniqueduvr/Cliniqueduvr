@@ -7,7 +7,10 @@ import type { ServicePage } from '../data/service-page-types';
 import { buildBreadcrumbSchema, buildFAQSchema } from '../lib/seo';
 
 const servicePages = servicePagesData.items as ServicePage[];
-const visibleServicePages = servicePages.filter((service) => service.slug !== 'vente-achat');
+const serviceOrder = ['inspection', 'entretien', 'reparation', 'rexoseal', 'esthetique'];
+const visibleServicePages = servicePages
+  .filter((service) => serviceOrder.includes(service.slug))
+  .sort((a, b) => serviceOrder.indexOf(a.slug) - serviceOrder.indexOf(b.slug));
 const serviceAreas = [
   {
     name: 'Gatineau | Fuite d’eau',
@@ -33,38 +36,6 @@ const serviceAreas = [
     name: 'Laurentides',
     href: '/zones/infiltration-eau-roulotte-laurentides/',
     body: "Infiltration d'eau, joints fatigués et doutes sur l'humidité d'une roulotte."
-  }
-];
-const serviceGuides = [
-  {
-    title: 'Nous contacter',
-    body: 'Décrivez le problème, le véhicule et votre priorité pour être orienté vers le bon service.',
-    href: '/contact/',
-    label: "Contacter l'atelier"
-  },
-  {
-    title: 'Cas réels',
-    body: "Consultez des exemples d'interventions avant-après pour mieux situer votre besoin.",
-    href: '/realisations/',
-    label: 'Voir les réalisations'
-  },
-  {
-    title: 'Avant achat ou vente',
-    body: "Si votre situation touche une transaction, commencez par l’inspection pour clarifier l’état réel du véhicule.",
-    href: '/services/inspection/',
-    label: "Voir le service d'inspection"
-  },
-  {
-    title: "Fuite d'eau à Gatineau",
-    body: "Voyez notre page locale dédiée si votre priorité est une fuite d'eau, des joints suspects ou une toiture qui demande une lecture rapide à Gatineau.",
-    href: '/zones/fuite-eau-vr-gatineau/',
-    label: "Voir la page fuite d'eau"
-  },
-  {
-    title: 'Choisir un service',
-    body: "Si vous n’êtes pas certain du bon point de départ, voyez notre page d’orientation par symptôme et par situation.",
-    href: '/choisir-service/',
-    label: "Voir la page d'orientation"
   }
 ];
 const serviceFaqs = [
@@ -105,7 +76,7 @@ const breadcrumbs = buildBreadcrumbSchema([
     </section>
 
     <section class="services-content">
-      <div class="container services-layout">
+      <div class="container">
         <div class="services-main">
           <section class="services-grid-section">
             <div class="services-grid">
@@ -176,21 +147,6 @@ const breadcrumbs = buildBreadcrumbSchema([
             </div>
           </section>
         </div>
-
-        <aside class="services-side">
-          <div class="quick-guides-card">
-            <h2>Raccourcis utiles</h2>
-            <div class="guide-list">
-              {serviceGuides.map((guide) => (
-                <a class="guide-item" href={guide.href}>
-                  <h3>{guide.title}</h3>
-                  <p>{guide.body}</p>
-                  <span>{guide.label}</span>
-                </a>
-              ))}
-            </div>
-          </div>
-        </aside>
       </div>
     </section>
 
@@ -240,21 +196,12 @@ const breadcrumbs = buildBreadcrumbSchema([
   }
 
   .services-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1.82fr) minmax(280px, 0.72fr);
-    gap: 2.4rem;
-    align-items: start;
+    display: block;
   }
 
   .services-main {
     display: grid;
-    gap: 2rem;
-  }
-
-  .services-side {
-    position: sticky;
-    top: 7rem;
-    align-self: start;
+    gap: 4rem;
   }
 
   .services-grid-section,
@@ -344,7 +291,7 @@ const breadcrumbs = buildBreadcrumbSchema([
 
   .services-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.5rem;
   }
 

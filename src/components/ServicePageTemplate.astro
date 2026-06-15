@@ -184,8 +184,8 @@ const fallbackProofContent = isEnglish
         title: 'Pourquoi cette inspection est souvent la meilleure première étape',
         intro: "Quand la source d'une fuite n'est pas claire, l'erreur la plus coûteuse est souvent d'attendre ou de réserver le mauvais type de travail en premier.",
         stats: [
-          { value: '49,99 $', label: 'Inspection en atelier' },
-          { value: '149,99 $', label: 'Inspection mobile dans 40 km' },
+          { value: 'Gratuite', label: 'Sans rendez-vous en atelier' },
+          { value: 'Tarif variable', label: 'Inspection sur la route selon le déplacement' },
           { value: 'Humidimètre', label: 'Inclus pour appuyer le constat visuel' }
         ],
         points: [
@@ -255,6 +255,7 @@ const resolvedProofTitle = service.proofTitle ?? fallbackProofContent?.title;
 const resolvedProofIntro = service.proofIntro ?? fallbackProofContent?.intro;
 const resolvedProofStats = proofStats.length > 0 ? proofStats : fallbackProofContent?.stats ?? [];
 const resolvedProofPoints = proofPoints.length > 0 ? proofPoints : fallbackProofContent?.points ?? [];
+const showProofSection = isEnglish || !['entretien', 'reparation', 'esthetique'].includes(service.slug);
 const rexosealPanel = isEnglish
   ? service.slug === 'maintenance'
     ? {
@@ -291,7 +292,7 @@ const localServiceFocus = isEnglish
       <div class="hero-copy">
         <p class="eyebrow">{service.eyebrow}</p>
         <h1 class:list={[
-          (service.slug === 'inspection' || service.slug === 'entretien' || service.slug === 'maintenance' || service.slug === 'reparation' || service.slug === 'repair' || service.slug === 'esthetique' || service.slug === 'detailing') && 'hero-title-wide',
+          (service.slug === 'inspection' || service.slug === 'entretien' || service.slug === 'maintenance' || service.slug === 'rexoseal' || service.slug === 'reparation' || service.slug === 'repair' || service.slug === 'esthetique' || service.slug === 'detailing') && 'hero-title-wide',
           service.slug === 'inspection' && 'hero-title-wider'
         ]}>{service.h1}</h1>
         <p class="opening" set:html={service.opening} />
@@ -320,7 +321,7 @@ const localServiceFocus = isEnglish
   <section class="service-body">
       <div class="container body-grid">
       <article class="service-main">
-        {(resolvedProofStats.length > 0 || resolvedProofPoints.length > 0) && (
+        {showProofSection && (resolvedProofStats.length > 0 || resolvedProofPoints.length > 0) && (
           <section class="content-card alt">
             <h2>{resolvedProofTitle ?? (isEnglish ? 'Proof and concrete outcomes' : 'Preuves et résultats concrets')}</h2>
             {resolvedProofIntro && <p class="section-copy" set:html={resolvedProofIntro} />}
@@ -428,19 +429,6 @@ const localServiceFocus = isEnglish
                 <h3>{item.title}</h3>
                 <p set:html={item.text} />
               </article>
-            ))}
-          </div>
-        </section>
-
-        <section class="content-card alt">
-          <h2>{isEnglish ? 'Useful links before you decide' : 'Liens utiles avant de décider'}</h2>
-          <div class="link-card-grid">
-            {helpfulLinks.map((item) => (
-              <a class="link-card link-card-anchor" href={item.href}>
-                <h3>{item.title}</h3>
-                <p>{item.copy}</p>
-                <span>{isEnglish ? 'Learn more' : 'En savoir plus'}</span>
-              </a>
             ))}
           </div>
         </section>

@@ -9,29 +9,29 @@
       "icon": "fas fa-clipboard-check",
       "serviceType": "Inspection de fuite d'eau et détection d'humidité de VR",
       "seoTitle": "Inspection de fuite d'eau de VR à Gatineau | Joints, toiture et humidité",
-      "seoDescription": "Inspection de fuite d'eau de VR à Gatineau avec humidimètre, axée sur les joints, la toiture, l'humidité et l'infiltration d'eau pour Gatineau, l'Outaouais, Ottawa et les Laurentides.",
+      "seoDescription": "Inspection gratuite et sans rendez-vous en atelier à Gatineau pour détecter les fuites d'eau de VR, l'humidité et les problèmes de joints ou de toiture.",
       "eyebrow": "Joints, toiture et infiltration d'eau",
-      "opening": "Clinique du VR offre l'<strong>inspection visuelle de fuite d'eau de VR à Gatineau</strong> avec humidimètre, en mettant l'accent sur les <strong>joints</strong>, l'état de la <strong>toiture</strong> et les signes d'<strong>infiltration d'eau</strong>. Notre objectif est de repérer rapidement les zones à risque, les traces d'humidité et les problèmes d'étanchéité avant qu'ils causent plus de dommages.",
-      "lead": "Nos inspections sont principalement conçues pour détecter les problèmes de <strong>joints</strong>, de <strong>toiture</strong> et d'<strong>infiltration d'eau</strong>. Nous ne faisons pas d'inspection mécanique. Nous effectuons toutefois l'entretien des freins à notre <u>atelier de Gatineau</u> seulement, sans service sur la route.",
-      "intro": "Nous réalisons des inspections visuelles en <strong>atelier</strong> ou sur la route, avec humidimètre, pour mieux cibler les zones vulnérables à l'eau. C'est un service utile quand vous voulez confirmer l'état de l'étanchéité d'un <strong>VR</strong>, d'une <strong>roulotte</strong> ou d'une <strong>caravane</strong>.",
+      "opening": "Clinique du VR offre l'<strong>inspection visuelle gratuite et sans rendez-vous en atelier à Gatineau</strong>, avec humidimètre, en mettant l'accent sur les <strong>joints</strong>, l'état de la <strong>toiture</strong> et les signes d'<strong>infiltration d'eau</strong>. Notre objectif est de repérer rapidement les zones à risque, les traces d'humidité et les problèmes d'étanchéité avant qu'ils causent plus de dommages.",
+      "lead": "Passez directement à notre <u>atelier de Gatineau</u>: l'<strong>inspection est toujours gratuite et sans rendez-vous en atelier</strong>. Nos inspections ciblent les problèmes de <strong>joints</strong>, de <strong>toiture</strong> et d'<strong>infiltration d'eau</strong>. Nous ne faisons pas d'inspection mécanique.",
+      "intro": "Nous réalisons gratuitement les inspections visuelles en <strong>atelier, sans rendez-vous</strong>. L'inspection sur la route est aussi offerte à un <strong>tarif variable selon le déplacement</strong>. L'humidimètre permet de mieux cibler les zones vulnérables à l'eau sur un <strong>VR</strong>, une <strong>roulotte</strong> ou une <strong>caravane</strong>.",
       "heroPromise": "Détectez les <strong>infiltrations d'eau</strong> avant qu'elles ne deviennent des réparations coûteuses sur votre <strong>toit</strong>, vos <strong>murs</strong> ou votre <strong>plancher</strong>.",
       "detailIntro": "Une inspection efficace ne consiste pas à tout vérifier sans priorité. Chez Clinique du VR, nous nous concentrons d'abord sur ce qui cause le plus souvent des dommages coûteux: les <strong>joints fatigués</strong>, les <strong>défauts de toiture</strong>, les <strong>ouvertures sensibles</strong> et les signes d'<strong>infiltration d'eau</strong>. L'humidimètre nous aide à confirmer les zones problématiques et à mieux orienter les prochaines étapes.",
       "highlights": [
         "Inspection visuelle avec humidimètre",
         "Accent sur les joints et la toiture",
         "Recherche de signes d'infiltration d'eau",
-        "Service en atelier ou mobile"
+        "Gratuite et sans rendez-vous en atelier"
       ],
       "proofTitle": "Pourquoi cette inspection est souvent la meilleure première étape",
       "proofIntro": "Quand la source d'une fuite n'est pas claire, l'erreur la plus coûteuse est d'<strong>attendre</strong> ou de <strong>réparer au hasard</strong>. Une inspection ciblée permet de confirmer rapidement la zone à risque et la bonne prochaine étape.",
       "proofStats": [
         {
-          "value": "49,99 $",
-          "label": "Inspection en atelier"
+          "value": "Gratuite",
+          "label": "Sans rendez-vous en atelier"
         },
         {
-          "value": "149,99 $",
-          "label": "Inspection mobile dans un rayon de 40 km"
+          "value": "Tarif variable",
+          "label": "Inspection sur la route selon le déplacement"
         },
         {
           "value": "Humidimètre",
@@ -102,15 +102,15 @@
           "text": "L'utilisation de l'<strong>humidimètre</strong> permet de mieux confirmer la présence d'humidité dans les zones à risque et d'appuyer le constat visuel."
         },
         {
-          "title": "Tarification claire",
-          "text": "<strong>49,99 $ en atelier</strong> et <strong>149,99 $ sur la route</strong>, incluant un rayon de 40 km du bureau. Contactez-nous pour un déplacement plus loin."
+          "title": "Gratuite en atelier",
+          "text": "L'<strong>inspection est toujours gratuite et sans rendez-vous en atelier</strong>. Pour une inspection sur la route, le <strong>tarif varie selon le déplacement</strong>."
         }
       ],
       "faqTitle": "Questions fréquentes sur l'inspection de VR",
       "faqs": [
         {
           "question": "Combien coûte une inspection de VR?",
-        "answer": "Le prix est de <strong>49,99 $</strong> pour une inspection en atelier et de <strong>149,99 $</strong> pour une inspection sur la route. Le tarif mobile inclut un rayon de 40 km du bureau. Contactez-nous pour un déplacement plus loin."
+        "answer": "L'<strong>inspection est toujours gratuite et sans rendez-vous en atelier</strong>. Pour une inspection sur la route, le <strong>tarif est variable selon le déplacement</strong>. Contactez-nous pour obtenir les détails."
         },
         {
           "question": "Que vérifiez-vous principalement lors d'une inspection?",
@@ -133,16 +133,15 @@
       "seoTitle": "Entretien de VR à Gatineau | Joints, toit et prévention de fuite d'eau",
       "seoDescription": "Entretien de VR à Gatineau pour joints de mur et de toit, membrane et prévention de fuite d'eau. Service d'entretien offert pour Gatineau, l'Outaouais, Ottawa et les Laurentides.",
       "eyebrow": "Prévenir les infiltrations d'eau",
-      "opening": "L'<strong>entretien de VR à Gatineau</strong> chez Clinique du VR met l'accent sur le changement des <strong>joints de mur</strong>, l'ajout de <strong>scellement</strong> là où il en manque sur la <strong>toiture</strong>, ainsi que sur l'entretien de la <strong>membrane de toit</strong> en TPO ou EPDM afin d'éviter les <strong>infiltrations d'eau</strong>. Nous offrons aussi l'application de solutions <strong>Rexoseal</strong> pour certains dossiers de toiture et de membrane quand cette approche convient à l'état réel du véhicule.",
-      "lead": "Le changement des <strong>joints de mur</strong>, l'ajout de scellement sur la <strong>toiture</strong> là où il en manque, l'entretien de la <strong>membrane de toit</strong> en TPO ou EPDM et certains travaux avec <strong>Rexoseal</strong> sont d'excellents moyens de prévenir les <strong>infiltrations d'eau</strong>. Nous offrons ce service en <strong>atelier</strong> ou sur la route.",
-      "intro": "Nous prenons en charge l'entretien des <strong>joints</strong>, des zones de <strong>toiture sensibles</strong>, des <strong>membranes de toit</strong> en TPO ou EPDM ainsi que certains travaux de remise en protection avec <strong>Rexoseal</strong> pour aider à conserver l'étanchéité du <strong>VR</strong>, de la <strong>roulotte</strong> ou de la <strong>caravane</strong>. Le but est de corriger les zones faibles avant qu'elles causent des dommages plus importants.",
+      "opening": "L'<strong>entretien de VR à Gatineau</strong> chez Clinique du VR met l'accent sur le changement des <strong>joints de mur</strong>, l'ajout de <strong>scellement</strong> là où il en manque sur la <strong>toiture</strong>, ainsi que sur l'entretien de la <strong>membrane de toit</strong> en TPO ou EPDM afin d'éviter les <strong>infiltrations d'eau</strong>.",
+      "lead": "Le changement des <strong>joints de mur</strong>, l'ajout de scellement sur la <strong>toiture</strong> là où il en manque et l'entretien de la <strong>membrane de toit</strong> en TPO ou EPDM sont d'excellents moyens de prévenir les <strong>infiltrations d'eau</strong>. Nous offrons ce service en <strong>atelier</strong> ou sur la route.",
+      "intro": "Nous prenons en charge l'entretien des <strong>joints</strong>, des zones de <strong>toiture sensibles</strong> et des <strong>membranes de toit</strong> en TPO ou EPDM pour aider à conserver l'étanchéité du <strong>VR</strong>, de la <strong>roulotte</strong> ou de la <strong>caravane</strong>. Le but est de corriger les zones faibles avant qu'elles causent des dommages plus importants.",
       "heroPromise": "Un <strong>entretien fait au bon moment</strong> coûte souvent beaucoup moins cher qu'une <strong>réparation après infiltration d'eau</strong>.",
-      "detailIntro": "Un entretien efficace doit d'abord viser les composantes qui protègent le véhicule contre l'<strong>eau</strong>. Les <strong>joints de mur</strong>, les <strong>joints de toit</strong>, la <strong>membrane de toit</strong> en TPO ou EPDM et les autres points de scellement sont souvent les premières zones à se fatiguer. En les remplaçant, en les reprenant, en les entretenant au bon moment ou en appliquant une solution <strong>Rexoseal</strong> quand le dossier s'y prête, on réduit fortement le risque d'<strong>infiltration d'eau</strong> et les réparations plus coûteuses qui suivent.",
+      "detailIntro": "Un entretien efficace doit viser les composantes qui protègent le véhicule contre l'<strong>eau</strong>, mais aussi les éléments essentiels à son bon fonctionnement. Nous entretenons les <strong>joints de mur</strong>, les <strong>joints de toit</strong> et la <strong>membrane de toit</strong> en TPO ou EPDM. Nous effectuons également l'<strong>entretien des freins et des essieux en atelier</strong>.",
       "highlights": [
         "Changement de joints de mur",
         "Changement de joints de toit",
         "Prévention des infiltrations d'eau",
-        "Application Rexoseal sur certains dossiers de toiture",
         "Service en atelier ou sur la route"
       ],
       "proofTitle": "Ce que protège un bon entretien",
@@ -196,9 +195,9 @@
         "Changement des joints de mur lorsque le scellement est fatigué",
         "Ajout de scellement sur la toiture et les zones exposées là où il en manque",
         "Entretien de la membrane de toit en TPO ou EPDM",
-        "Application de produits Rexoseal sur certaines toitures ou membranes selon l'état du véhicule",
         "Vérification visuelle des points sensibles à l'eau",
         "Entretien préventif pour réduire le risque d'infiltration",
+        "Entretien des freins et des essieux en atelier",
         "Service offert en atelier ou sur la route"
       ],
       "situationsTitle": "Quand faire l'entretien",
@@ -212,12 +211,11 @@
       "process": [
         "Évaluation des joints de mur, de toit et des zones exposées",
         "Entretien ou changement des joints selon l'état observé",
-        "Application Rexoseal lorsque le type de toiture et la condition du support s'y prêtent",
         "Intervention en atelier ou sur la route selon votre besoin",
         "Retour clair sur les zones traitées et celles à surveiller"
       ],
       "whyChooseTitle": "Pourquoi choisir Clinique du VR pour l'entretien des joints?",
-      "whyChooseIntro": "Quand on veut éviter les infiltrations d'eau, il faut intervenir au bon endroit et au bon moment. Le changement des joints de mur, l'ajout de scellement sur la toiture là où il en manque, l'entretien de la membrane et certains travaux avec <strong>Rexoseal</strong> sont des interventions utiles pour préserver l'étanchéité du véhicule et éviter des travaux beaucoup plus coûteux plus tard.",
+      "whyChooseIntro": "Quand on veut éviter les infiltrations d'eau, il faut intervenir au bon endroit et au bon moment. Le changement des joints de mur, l'ajout de scellement sur la toiture là où il en manque et l'entretien de la membrane sont des interventions utiles pour préserver l'étanchéité du véhicule et éviter des travaux beaucoup plus coûteux plus tard.",
       "whyChoose": [
         {
           "title": "Focus sur l'étanchéité",
@@ -230,10 +228,6 @@
         {
           "title": "Prévention rentable",
           "text": "Un changement de joints au bon moment coûte souvent beaucoup moins cher qu'une réparation après infiltration d'eau."
-        },
-        {
-          "title": "Solution adaptée au toit",
-          "text": "Quand le type de membrane et l'état de la surface le permettent, nous pouvons intégrer une approche <strong>Rexoseal</strong> dans un service d'entretien ou de remise en protection."
         }
       ],
       "faqTitle": "Questions fréquentes sur l'entretien de VR",
@@ -244,15 +238,119 @@
         },
         {
           "question": "Quels éléments d'entretien sont les plus importants?",
-          "answer": "Les joints de mur, les zones de toiture où le scellement est manquant ou fatigué, la membrane de toit et les autres points exposés à l'eau font partie des éléments les plus importants à entretenir régulièrement. Selon le dossier, nous pouvons aussi proposer une intervention avec <strong>Rexoseal</strong> quand cette solution convient à la toiture ou à la membrane."
-        },
-        {
-          "question": "Offrez-vous des travaux avec Rexoseal?",
-          "answer": "Oui, pour certains dossiers de toiture ou de membrane. L'application dépend du type de surface, de l'état du support et de l'objectif du travail. Nous validons d'abord si l'approche <strong>Rexoseal</strong> convient vraiment au véhicule avant de la recommander."
+          "answer": "Les joints de mur, les zones de toiture où le scellement est manquant ou fatigué, la membrane de toit et les autres points exposés à l'eau font partie des éléments les plus importants à entretenir régulièrement."
         },
         {
           "question": "Offrez-vous le service en atelier ou sur la route?",
           "answer": "Oui. Nous offrons l'entretien des joints en atelier ou sur la route, selon ce qui convient le mieux à votre situation."
+        }
+      ]
+    },
+    {
+      "slug": "rexoseal",
+      "alternateSlug": "rexoseal",
+      "title": "Rexoseal pour toiture de VR",
+      "h1": "Rexoseal pour toiture de VR à Gatineau",
+      "navLabel": "Rexoseal",
+      "icon": "fas fa-shield-halved",
+      "serviceType": "Vente et application de Rexoseal pour toiture de VR",
+      "seoTitle": "Rexoseal pour toiture de VR à Gatineau | Vente et application",
+      "seoDescription": "Rexoseal pour toiture de VR à Gatineau: produit vendu pour application par le propriétaire ou service d'application professionnelle en atelier.",
+      "eyebrow": "Protection de toiture de VR",
+      "opening": "Clinique du VR offre <strong>Rexoseal comme service distinct</strong> pour protéger et remettre en état certaines toitures de VR. Vous pouvez <strong>acheter le produit pour effectuer vous-même l'application</strong> ou nous confier le travail à notre <strong>atelier de Gatineau</strong>.",
+      "lead": "Deux options sont offertes: la <strong>vente des produits Rexoseal</strong> avec les renseignements nécessaires pour votre projet, ou un <strong>service d'application en atelier</strong> après validation de l'état de la toiture.",
+      "intro": "Avant une application, il faut vérifier le type de surface, l'adhérence du support et les réparations nécessaires. Rexoseal protège une toiture compatible, mais ne remplace pas la correction d'une infiltration active ou d'un support déjà endommagé.",
+      "heroPromise": "Achetez Rexoseal pour le faire vous-même ou confiez-nous l'<strong>application complète en atelier</strong>.",
+      "detailIntro": "Notre offre Rexoseal est séparée de l'entretien régulier. Elle comprend la <strong>vente du produit</strong> pour les propriétaires qui souhaitent réaliser les travaux eux-mêmes et le <strong>service d'application à l'atelier</strong> pour ceux qui préfèrent nous confier la préparation et l'application.",
+      "highlights": [
+        "Produits Rexoseal vendus sur place",
+        "Option pour application par le propriétaire",
+        "Application professionnelle en atelier",
+        "Validation de la toiture avant les travaux"
+      ],
+      "proofTitle": "Deux façons de profiter de Rexoseal",
+      "proofIntro": "Choisissez l'option qui correspond à votre expérience, à l'état de la toiture et au niveau d'accompagnement recherché.",
+      "proofStats": [
+        {
+          "value": "Vente",
+          "label": "Produit disponible pour le faire vous-même"
+        },
+        {
+          "value": "Atelier",
+          "label": "Application réalisée par notre équipe"
+        },
+        {
+          "value": "Validation",
+          "label": "Compatibilité de la toiture vérifiée avant le service"
+        }
+      ],
+      "proofPoints": [
+        {
+          "title": "Option autonome",
+          "text": "Achetez les produits Rexoseal nécessaires et réalisez vous-même l'application sur une toiture compatible."
+        },
+        {
+          "title": "Service clé en main",
+          "text": "Confiez-nous la préparation et l'application du produit directement à notre atelier."
+        },
+        {
+          "title": "Bonne solution au bon endroit",
+          "text": "Nous vérifions d'abord si Rexoseal convient à la surface et si des réparations doivent être faites avant l'application."
+        }
+      ],
+      "includedTitle": "Nos options Rexoseal",
+      "included": [
+        "Vente de produits Rexoseal pour application par le propriétaire",
+        "Conseils de base pour choisir les produits adaptés au projet",
+        "Évaluation de la compatibilité et de l'état visible de la toiture",
+        "Préparation de la surface lorsque l'application est faite en atelier",
+        "Application Rexoseal en atelier",
+        "Recommandations d'entretien après l'application"
+      ],
+      "situationsTitle": "Quand considérer Rexoseal",
+      "situations": [
+        "Quand la toiture est compatible et demande une nouvelle protection",
+        "Quand vous voulez acheter le produit et effectuer vous-même les travaux",
+        "Quand vous préférez une application complète réalisée en atelier",
+        "Quand vous voulez faire valider la surface avant de choisir la solution"
+      ],
+      "processIntro": "Le processus dépend de l'option choisie. Pour une application en atelier, nous validons la toiture avant de préparer la surface et d'appliquer le système. Pour un achat autonome, nous vous orientons vers les produits disponibles pour votre projet.",
+      "process": [
+        "Discussion sur la toiture et l'option souhaitée",
+        "Validation de la compatibilité du support",
+        "Vente des produits pour une application autonome ou planification du service en atelier",
+        "Préparation et application à l'atelier lorsque ce service est choisi",
+        "Recommandations pour l'entretien de la protection"
+      ],
+      "whyChooseTitle": "Pourquoi choisir Clinique du VR pour Rexoseal?",
+      "whyChooseIntro": "Nous offrons une solution flexible selon que vous souhaitez faire les travaux vous-même ou confier l'application à un atelier spécialisé en VR.",
+      "whyChoose": [
+        {
+          "title": "Produit disponible",
+          "text": "Vous pouvez acheter Rexoseal directement pour réaliser votre propre projet."
+        },
+        {
+          "title": "Application en atelier",
+          "text": "Notre équipe peut prendre en charge la préparation et l'application sur une toiture compatible."
+        },
+        {
+          "title": "Évaluation avant application",
+          "text": "Nous évitons d'appliquer le produit sur une surface qui exige d'abord une réparation ou une autre solution."
+        }
+      ],
+      "faqTitle": "Questions fréquentes sur Rexoseal",
+      "faqs": [
+        {
+          "question": "Puis-je acheter Rexoseal pour l'appliquer moi-même?",
+          "answer": "Oui. Nous vendons les produits Rexoseal aux propriétaires qui souhaitent effectuer eux-mêmes l'application. Consultez aussi notre <a href=\"/magasin/\">magasin</a> ou contactez l'atelier pour vérifier la disponibilité."
+        },
+        {
+          "question": "Pouvez-vous appliquer Rexoseal pour moi?",
+          "answer": "Oui. Nous offrons le service de préparation et d'application Rexoseal à notre <strong>atelier de Gatineau</strong>, après validation de la toiture."
+        },
+        {
+          "question": "Rexoseal convient-il à toutes les toitures?",
+          "answer": "Non. La compatibilité dépend du type de surface et de son état. Une toiture endommagée ou une infiltration active peut nécessiter une réparation avant l'application."
         }
       ]
     },
@@ -265,18 +363,18 @@
       "icon": "fas fa-toolbox",
       "serviceType": "Réparation spécialisée de VR",
       "seoTitle": "Réparation de fuite d'eau de VR à Gatineau | Toiture, murs et plancher",
-      "seoDescription": "Réparation de fuite d'eau de VR à Gatineau pour toiture, membrane, murs, plancher, humidité et moisissure. Réparations privées ou d'assurance pour Gatineau, Ottawa, l'Outaouais et les Laurentides.",
-      "eyebrow": "Infiltration d'eau, toiture et dommages intérieurs",
-      "opening": "Clinique du VR prend en charge la <strong>réparation spécialisée de VR à Gatineau</strong> pour les problèmes d'<strong>infiltration d'eau</strong>, de <strong>moisissure</strong>, de <strong>toiture</strong>, de <strong>membrane de toit</strong>, de <strong>plancher</strong> et de <strong>revêtement mural</strong>. Nous intervenons autant pour les réparations d'assurance que pour les réparations privées, avec une attention particulière à la vraie source du dommage.",
+      "seoDescription": "Réparation de VR à Gatineau: infiltration d'eau, toiture, électricité, plomberie, propane et diagnostic. Réparations privées ou d'assurance.",
+      "eyebrow": "Infiltration d'eau, électricité, plomberie et propane",
+      "opening": "Clinique du VR prend en charge la <strong>réparation spécialisée de VR à Gatineau</strong> pour les problèmes d'<strong>infiltration d'eau</strong>, de <strong>toiture</strong>, d'<strong>électricité</strong>, de <strong>plomberie</strong> et de <strong>propane</strong>. Nous effectuons aussi le <strong>diagnostic</strong> des problèmes afin d'identifier leur origine avant la réparation.",
       "lead": "Quand l'eau entre dans un VR, les dommages peuvent toucher bien plus que la surface visible. La réparation doit donc viser la <strong>cause</strong>, les <strong>matériaux atteints</strong> et la <strong>remise en état durable</strong> du véhicule.",
-      "intro": "Nous réalisons des réparations spécialisées sur les zones les plus exposées aux dommages d'eau, notamment la <strong>toiture</strong>, la <strong>membrane de toit</strong>, le <strong>plancher</strong>, les <strong>murs</strong> et les <strong>finis intérieurs</strong>.",
+      "intro": "Nous réalisons des réparations sur la <strong>toiture</strong>, la <strong>membrane de toit</strong>, le <strong>plancher</strong>, les <strong>murs</strong> et les <strong>finis intérieurs</strong>, ainsi que sur les systèmes <strong>électriques</strong>, de <strong>plomberie</strong> et de <strong>propane</strong> du VR.",
       "heroPromise": "Quand l'eau a déjà commencé à faire des dommages, la priorité est de confirmer la <strong>source</strong> et de remettre le VR en état sans simplement cacher le problème.",
       "detailIntro": "Une <strong>infiltration d'eau</strong> peut affecter la structure, les matériaux intérieurs et l'état général du VR. Une tache d'eau, une odeur de moisissure, un <strong>plancher mou</strong> ou un <strong>revêtement mural abîmé</strong> peuvent indiquer un problème déjà avancé qui demande une réparation méthodique.",
       "highlights": [
         "Réparation d'infiltration d'eau",
-        "Réparation de toiture et membrane de toit",
-        "Réparation de plancher et revêtement mural",
-        "Dossiers d'assurance ou privés"
+        "Réparation électrique et diagnostic",
+        "Réparation de plomberie",
+        "Réparation de systèmes au propane"
       ],
       "proofTitle": "Ce qui compte dans une vraie réparation d'infiltration",
       "proofIntro": "Une bonne réparation ne se limite pas à refaire une surface. Elle commence par la <strong>source</strong>, traite les <strong>matériaux touchés</strong> et remet le véhicule dans un état durable et crédible.",
@@ -332,6 +430,9 @@
         "Changement complet de <strong>membrane de toiture</strong> lorsque requis",
         "Réparation ou remplacement de <strong>plancher endommagé</strong>",
         "Réparation de <strong>revêtement mural</strong> et remise en état intérieure",
+        "Diagnostic et réparation de problèmes <strong>électriques</strong>",
+        "Diagnostic et réparation de problèmes de <strong>plomberie</strong>",
+        "Diagnostic et réparation de systèmes et appareils au <strong>propane</strong>",
         "Réparations d'<strong>assurance</strong> ou privées selon votre dossier"
       ],
       "situationsTitle": "Signes qui demandent une réparation",
@@ -339,11 +440,14 @@
         "Trace d'eau, odeur de <strong>moisissure</strong> ou <strong>mur mou</strong>",
         "<strong>Toiture</strong> ou <strong>membrane de toit</strong> endommagée",
         "<strong>Plancher</strong>, plafond ou revêtement mural abîmé",
+        "Panne ou fonctionnement anormal d'un système <strong>électrique</strong>",
+        "Fuite ou problème de <strong>plomberie</strong>",
+        "Problème lié au système ou à un appareil au <strong>propane</strong>",
         "Dommage nécessitant une réparation d'<strong>assurance</strong> ou privée"
       ],
       "processIntro": "Notre méthode de réparation spécialisée commence par la validation de la <strong>source du dommage</strong>, puis par un ordre logique de remise en état. Cela permet de corriger le problème à la base et d'adapter les travaux selon qu'il s'agit d'un dossier d'<strong>assurance</strong> ou d'une réparation privée.",
       "process": [
-        "Diagnostic pour confirmer la <strong>source</strong> de l'infiltration ou du dommage",
+        "Diagnostic pour confirmer la <strong>source</strong> de l'infiltration, de la panne ou du dommage",
         "Évaluation des zones touchées comme la <strong>toiture</strong>, le <strong>plancher</strong> ou les <strong>murs</strong>",
         "Réparation et remise en état selon l'ampleur du dossier",
         "Suivi clair pour réparation d'<strong>assurance</strong> ou privée"

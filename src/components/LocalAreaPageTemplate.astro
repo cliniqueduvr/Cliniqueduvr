@@ -181,26 +181,6 @@ const localAreaFocus = isEnglish
           </ol>
         </section>
 
-        <section class="content-card alt">
-          <h2>{isEnglish ? 'Useful pages before you decide' : 'Pages utiles avant de décider'}</h2>
-          <div class="link-card-grid">
-            {page.links.map((item) => (
-              <a class="link-card link-card-anchor" href={item.href}>
-                <h3>{item.title}</h3>
-                <p>{item.body}</p>
-                <span>{item.linkLabel}</span>
-              </a>
-            ))}
-            {supportLinks.map((item) => (
-              <a class="link-card link-card-anchor" href={item.href}>
-                <h3>{item.title}</h3>
-                <p>{item.body}</p>
-                <span>{isEnglish ? 'Learn more' : 'En savoir plus'}</span>
-              </a>
-            ))}
-          </div>
-        </section>
-
         <section class="content-card faq-section">
           <h2>{isEnglish ? 'Frequently asked questions' : 'Questions fréquentes'}</h2>
           <div class="faq-list">
