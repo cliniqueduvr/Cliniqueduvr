@@ -83,7 +83,13 @@ const isActivePath = (href: string) => {
   if (href === '/en/') return currentPath === '/en/';
   return currentPath === href || currentPath.startsWith(href);
 };
-const serviceMenuItems = (isEnglish ? servicePagesEn.items : servicePagesFr.items)
+const frenchServiceOrder = ['inspection', 'entretien', 'reparation', 'rexoseal', 'esthetique'];
+const orderedServicePages = isEnglish
+  ? servicePagesEn.items
+  : [...servicePagesFr.items].sort(
+      (a, b) => frenchServiceOrder.indexOf(a.slug) - frenchServiceOrder.indexOf(b.slug)
+    );
+const serviceMenuItems = orderedServicePages
   .filter((service) => service.slug !== 'vente-achat' && service.slug !== 'buying-selling')
   .map((service) => ({
     label: service.navLabel,
