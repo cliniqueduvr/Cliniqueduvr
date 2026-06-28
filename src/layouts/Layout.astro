@@ -162,20 +162,17 @@ const hasGoogleAds = googleAdsId.length > 0;
             }
           }
 
+          installTracking();
+
           try {
             if (window.localStorage.getItem(storageKey) === 'accepted') {
               grantConsent();
-              installTracking();
             } else {
-              window.addEventListener('cliniqueduvr:cookie-consent-accepted', () => {
-                grantConsent();
-                installTracking();
-              }, { once: true });
+              window.addEventListener('cliniqueduvr:cookie-consent-accepted', grantConsent, { once: true });
             }
           } catch {
             window.addEventListener('cliniqueduvr:cookie-consent-accepted', () => {
               grantConsent();
-              installTracking();
             }, { once: true });
           }
         })();
