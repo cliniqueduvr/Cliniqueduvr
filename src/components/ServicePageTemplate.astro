@@ -28,7 +28,7 @@ const localGuide = isEnglish
       ? {
           href: '/en/areas/rv-maintenance-gatineau/',
           title: 'RV maintenance in Gatineau',
-          copy: 'Use the local maintenance page if your main need is seal, roof, or membrane care in Gatineau.'
+          copy: 'Use the local maintenance page if your need involves preventive maintenance, diagnosis, comfort systems, electrical systems, seals, roof, or membrane care in Gatineau.'
         }
       : null
   : service.slug === 'inspection' || service.slug === 'reparation'
@@ -41,7 +41,7 @@ const localGuide = isEnglish
       ? {
           href: '/zones/entretien-vr-gatineau/',
           title: 'Entretien de VR à Gatineau',
-          copy: "Utilisez la page locale d'entretien si votre besoin principal touche les joints, la toiture ou la membrane à Gatineau."
+          copy: "Utilisez la page locale d'entretien si votre besoin touche l'entretien préventif, le diagnostic, la climatisation, le chauffage, l'électricité, l'électronique, les joints, la toiture ou la membrane à Gatineau."
         }
       : null;
 const serviceAreas = isEnglish
@@ -282,8 +282,16 @@ const rexosealPanel = isEnglish
       }
     : null;
 const localServiceFocus = isEnglish
-  ? `Clinique du VR delivers <strong>${service.navLabel}</strong> from its <strong>Gatineau workshop</strong> and supports clients from <u>Outaouais</u>, <u>Ottawa</u>, and the <u>Laurentides</u> depending on the assignment. This page is meant to clarify the right next step when the issue involves <strong>water intrusion</strong>, <strong>roof condition</strong>, <strong>seals</strong>, or an <strong>RV inspection / maintenance / repair decision</strong>.`
-  : `Clinique du VR prend en charge <strong>${service.navLabel}</strong> à partir de son <strong>atelier de Gatineau</strong> et accompagne aussi les demandes venant de <u>l’Outaouais</u>, d’<u>Ottawa</u> et des <u>Laurentides</u> selon le mandat. Cette page sert à clarifier la bonne prochaine étape quand le besoin touche une <strong>infiltration d’eau</strong>, la <strong>toiture</strong>, les <strong>joints</strong> ou un choix entre <strong>inspection, entretien et réparation de VR</strong>.`;
+  ? service.slug === 'maintenance'
+    ? `Clinique du VR delivers <strong>${service.navLabel}</strong> from its <strong>Gatineau workshop</strong> and supports clients from <u>Outaouais</u>, <u>Ottawa</u>, and the <u>Laurentides</u> depending on the assignment. This page is meant to clarify the right next step for <strong>preventive maintenance</strong>, <strong>diagnosis</strong>, <strong>comfort systems</strong>, <strong>electrical systems</strong>, <strong>roof condition</strong>, <strong>seals</strong>, and other RV maintenance needs.`
+    : service.slug === 'repair'
+      ? `Clinique du VR delivers <strong>${service.navLabel}</strong> from its <strong>Gatineau workshop</strong> and supports clients from <u>Outaouais</u>, <u>Ottawa</u>, and the <u>Laurentides</u> depending on the assignment. This page is meant to clarify the right repair path for <strong>diagnosis</strong>, <strong>comfort systems</strong>, <strong>electrical systems</strong>, <strong>electronics</strong>, <strong>plumbing</strong>, <strong>propane</strong>, <strong>roof condition</strong>, and water-related damage.`
+    : `Clinique du VR delivers <strong>${service.navLabel}</strong> from its <strong>Gatineau workshop</strong> and supports clients from <u>Outaouais</u>, <u>Ottawa</u>, and the <u>Laurentides</u> depending on the assignment. This page is meant to clarify the right next step when the issue involves <strong>water intrusion</strong>, <strong>roof condition</strong>, <strong>seals</strong>, or an <strong>RV inspection / maintenance / repair decision</strong>.`
+  : service.slug === 'entretien'
+    ? `Clinique du VR prend en charge <strong>${service.navLabel}</strong> à partir de son <strong>atelier de Gatineau</strong> et accompagne aussi les demandes venant de <u>l’Outaouais</u>, d’<u>Ottawa</u> et des <u>Laurentides</u> selon le mandat. Cette page sert à clarifier la bonne prochaine étape pour l’<strong>entretien préventif</strong>, le <strong>diagnostic</strong>, la <strong>climatisation</strong>, le <strong>chauffage</strong>, l’<strong>électricité</strong>, l’<strong>électronique</strong>, la <strong>toiture</strong>, les <strong>joints</strong> et les autres besoins d’entretien de VR.`
+    : service.slug === 'reparation'
+      ? `Clinique du VR prend en charge <strong>${service.navLabel}</strong> à partir de son <strong>atelier de Gatineau</strong> et accompagne aussi les demandes venant de <u>l’Outaouais</u>, d’<u>Ottawa</u> et des <u>Laurentides</u> selon le mandat. Cette page sert à clarifier la bonne réparation pour le <strong>diagnostic</strong>, la <strong>climatisation</strong>, le <strong>chauffage</strong>, l’<strong>électricité</strong>, l’<strong>électronique</strong>, la <strong>plomberie</strong>, le <strong>propane</strong>, la <strong>toiture</strong> et les dommages liés à l’eau.`
+    : `Clinique du VR prend en charge <strong>${service.navLabel}</strong> à partir de son <strong>atelier de Gatineau</strong> et accompagne aussi les demandes venant de <u>l’Outaouais</u>, d’<u>Ottawa</u> et des <u>Laurentides</u> selon le mandat. Cette page sert à clarifier la bonne prochaine étape quand le besoin touche une <strong>infiltration d’eau</strong>, la <strong>toiture</strong>, les <strong>joints</strong> ou un choix entre <strong>inspection, entretien et réparation de VR</strong>.`;
 ---
 
 <main>

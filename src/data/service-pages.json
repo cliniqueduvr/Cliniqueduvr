@@ -125,24 +125,24 @@
     {
       "slug": "entretien",
       "alternateSlug": "maintenance",
-      "title": "Entretien de VR et de joints",
-      "h1": "Entretien de VR et de joints à Gatineau",
+      "title": "Entretien complet de VR",
+      "h1": "Entretien complet de roulotte et de VR à Gatineau",
       "navLabel": "Entretien",
       "icon": "fas fa-screwdriver-wrench",
-      "serviceType": "Entretien de VR, joints et toiture",
-      "seoTitle": "Entretien de VR à Gatineau | Joints, toit et prévention de fuite d'eau",
-      "seoDescription": "Entretien de VR à Gatineau pour joints de mur et de toit, membrane et prévention de fuite d'eau. Service d'entretien offert pour Gatineau, l'Outaouais, Ottawa et les Laurentides.",
-      "eyebrow": "Prévenir les infiltrations d'eau",
-      "opening": "L'<strong>entretien de VR à Gatineau</strong> chez Clinique du VR met l'accent sur le changement des <strong>joints de mur</strong>, l'ajout de <strong>scellement</strong> là où il en manque sur la <strong>toiture</strong>, ainsi que sur l'entretien de la <strong>membrane de toit</strong> en TPO ou EPDM afin d'éviter les <strong>infiltrations d'eau</strong>.",
-      "lead": "Le changement des <strong>joints de mur</strong>, l'ajout de scellement sur la <strong>toiture</strong> là où il en manque et l'entretien de la <strong>membrane de toit</strong> en TPO ou EPDM sont d'excellents moyens de prévenir les <strong>infiltrations d'eau</strong>. Nous offrons ce service en <strong>atelier</strong> ou sur la route.",
-      "intro": "Nous prenons en charge l'entretien des <strong>joints</strong>, des zones de <strong>toiture sensibles</strong> et des <strong>membranes de toit</strong> en TPO ou EPDM pour aider à conserver l'étanchéité du <strong>VR</strong>, de la <strong>roulotte</strong> ou de la <strong>caravane</strong>. Le but est de corriger les zones faibles avant qu'elles causent des dommages plus importants.",
-      "heroPromise": "Un <strong>entretien fait au bon moment</strong> coûte souvent beaucoup moins cher qu'une <strong>réparation après infiltration d'eau</strong>.",
-      "detailIntro": "Un entretien efficace doit viser les composantes qui protègent le véhicule contre l'<strong>eau</strong>, mais aussi les éléments essentiels à son bon fonctionnement. Nous entretenons les <strong>joints de mur</strong>, les <strong>joints de toit</strong> et la <strong>membrane de toit</strong> en TPO ou EPDM. Nous effectuons également l'<strong>entretien des freins et des essieux en atelier</strong>.",
+      "serviceType": "Entretien complet de roulotte et de VR",
+      "seoTitle": "Entretien de VR à Gatineau | Diagnostic, chauffage, climatisation et étanchéité",
+      "seoDescription": "Entretien de roulotte et de VR à Gatineau: diagnostic, réparation préventive, étanchéité, freins, essieux, climatisation, chauffage, électricité et électronique.",
+      "eyebrow": "Entretien, diagnostic et prévention",
+      "opening": "L'<strong>entretien de VR à Gatineau</strong> chez Clinique du VR couvre bien plus que les joints. Nous aidons à garder votre <strong>roulotte</strong> ou votre <strong>VR</strong> fiable avec l'entretien préventif, le <strong>diagnostic</strong>, l'<strong>étanchéité</strong>, les <strong>freins</strong>, les <strong>essieux</strong>, la <strong>climatisation</strong>, le <strong>chauffage</strong>, l'<strong>électricité</strong> et l'<strong>électronique</strong>.",
+      "lead": "Avant la saison, après l'entreposage ou dès qu'un système semble moins fiable, un entretien complet permet de vérifier les points importants et d'agir avant qu'une petite faiblesse devienne une réparation plus coûteuse. Le service est offert en <strong>atelier</strong> ou sur la route selon le type d'intervention.",
+      "intro": "Nous prenons en charge l'entretien général de la <strong>roulotte</strong>, du <strong>VR</strong> ou de la <strong>caravane</strong>: joints, toiture, membrane, composantes de roulement, appareils, systèmes électriques et électroniques. Le but est de comprendre l'état réel du véhicule, corriger ce qui doit l'être et vous donner des prochaines étapes claires.",
+      "heroPromise": "Un <strong>entretien fait au bon moment</strong> aide à prévenir les pannes, les infiltrations, les problèmes de confort et les réparations plus lourdes.",
+      "detailIntro": "Un entretien efficace doit viser les composantes qui protègent le véhicule, mais aussi les systèmes qui rendent le VR fonctionnel et confortable. Nous vérifions les points sensibles à l'eau, les joints, la toiture et la membrane, tout en couvrant aussi les freins, les essieux, la climatisation, le chauffage, l'électricité, l'électronique et les diagnostics selon les symptômes observés.",
       "highlights": [
-        "Changement de joints de mur",
-        "Changement de joints de toit",
-        "Prévention des infiltrations d'eau",
-        "Service en atelier ou sur la route"
+        "Diagnostic",
+        "Climatisation et chauffage",
+        "Électricité et électronique",
+        "Atelier ou mobile"
       ],
       "proofTitle": "Ce que protège un bon entretien",
       "proofIntro": "L'entretien n'est pas une dépense cosmétique. C'est ce qui garde l'eau à l'extérieur et ce qui évite le plus souvent les dossiers de toiture, de murs et de plancher.",
@@ -192,57 +192,59 @@
       ],
       "includedTitle": "Ce que nous faisons en entretien",
       "included": [
-        "Changement des joints de mur lorsque le scellement est fatigué",
-        "Ajout de scellement sur la toiture et les zones exposées là où il en manque",
-        "Entretien de la membrane de toit en TPO ou EPDM",
-        "Vérification visuelle des points sensibles à l'eau",
-        "Entretien préventif pour réduire le risque d'infiltration",
+        "Entretien préventif avant saison, après entreposage ou avant un long déplacement",
+        "Diagnostic des problèmes observés: bruit, odeur, humidité, système intermittent ou appareil qui ne fonctionne pas correctement",
+        "Vérification et entretien des joints, de la toiture, du scellement et de la membrane TPO ou EPDM",
         "Entretien des freins et des essieux en atelier",
-        "Service offert en atelier ou sur la route"
+        "Vérification des systèmes de climatisation et de chauffage selon le problème rapporté",
+        "Vérification électrique et électronique: alimentation 12 V, 110 V, batteries, lumières, panneaux, contrôles et accessoires",
+        "Service offert en atelier ou sur la route selon le type de travail"
       ],
       "situationsTitle": "Quand faire l'entretien",
       "situations": [
-        "Quand les joints commencent à sécher, craquer ou décoller",
-        "Quand vous voulez prévenir une infiltration d'eau avant la saison",
-        "Quand la toiture ou les murs montrent des signes d'usure au scellement",
+        "Avant la saison ou après une période d'entreposage",
+        "Quand un appareil, un système électrique, le chauffage ou la climatisation fonctionne mal",
+        "Quand vous voulez vérifier les freins, les essieux, les batteries, les lumières ou les accessoires",
+        "Quand les joints, la toiture ou les murs montrent des signes d'usure au scellement",
         "Quand vous voulez faire l'entretien en atelier ou directement sur place"
       ],
-      "processIntro": "Notre approche est simple: cibler les joints et les zones de toiture qui protègent réellement le véhicule contre l'eau. Nous évaluons l'état du scellement, remplaçons ce qui doit l'être et vous indiquons les prochaines zones à surveiller pour garder le VR étanche.",
+      "processIntro": "Notre approche est simple: partir de l'état réel du véhicule et du problème observé, puis prioriser les travaux utiles. On distingue ce qui relève de l'entretien, du diagnostic ou de la réparation pour éviter de remplacer des pièces au hasard.",
       "process": [
-        "Évaluation des joints de mur, de toit et des zones exposées",
-        "Entretien ou changement des joints selon l'état observé",
-        "Intervention en atelier ou sur la route selon votre besoin",
-        "Retour clair sur les zones traitées et celles à surveiller"
+        "Écoute du problème, du type de VR et de l'historique d'entretien",
+        "Vérification des systèmes concernés: étanchéité, roulement, chauffage, climatisation, électricité, électronique ou accessoires",
+        "Diagnostic ou entretien ciblé selon ce que les observations montrent réellement",
+        "Intervention en atelier ou sur la route selon le type de travail",
+        "Retour clair sur les zones traitées, les risques observés et les prochaines étapes"
       ],
-      "whyChooseTitle": "Pourquoi choisir Clinique du VR pour l'entretien des joints?",
-      "whyChooseIntro": "Quand on veut éviter les infiltrations d'eau, il faut intervenir au bon endroit et au bon moment. Le changement des joints de mur, l'ajout de scellement sur la toiture là où il en manque et l'entretien de la membrane sont des interventions utiles pour préserver l'étanchéité du véhicule et éviter des travaux beaucoup plus coûteux plus tard.",
+      "whyChooseTitle": "Pourquoi choisir Clinique du VR pour l'entretien?",
+      "whyChooseIntro": "Un VR combine plusieurs systèmes: structure, toiture, roulement, appareils, chauffage, climatisation, électricité et électronique. Une bonne intervention commence par une lecture claire de l'ensemble, puis par des travaux ciblés selon le besoin réel.",
       "whyChoose": [
         {
-          "title": "Focus sur l'étanchéité",
-          "text": "Nous mettons l'accent sur les joints et la toiture, parce que ce sont des zones clés pour prévenir les infiltrations d'eau."
+          "title": "Vision complète du VR",
+          "text": "Nous ne regardons pas seulement les joints. Nous pouvons aussi vérifier les systèmes de confort, de roulement, d'électricité, d'électronique et les composantes liées à l'utilisation réelle du véhicule."
+        },
+        {
+          "title": "Diagnostic avant travaux",
+          "text": "Quand un problème n'est pas clair, nous cherchons d'abord à comprendre la cause avant de recommander l'entretien ou la réparation appropriée."
         },
         {
           "title": "Service flexible",
-          "text": "Le service peut être effectué à l'atelier ou sur la route selon le type de besoin et l'emplacement du véhicule."
-        },
-        {
-          "title": "Prévention rentable",
-          "text": "Un changement de joints au bon moment coûte souvent beaucoup moins cher qu'une réparation après infiltration d'eau."
+          "text": "Le service peut être effectué à l'atelier ou sur la route selon le type de besoin, l'emplacement du véhicule et la nature de l'intervention."
         }
       ],
       "faqTitle": "Questions fréquentes sur l'entretien de VR",
       "faqs": [
         {
-          "question": "Pourquoi changer les joints d'un VR?",
-          "answer": "Le changement des joints de mur, l'ajout de scellement sur la toiture là où il en manque et l'entretien de la membrane aident à préserver l'étanchéité du véhicule et à éviter les infiltrations d'eau avant qu'elles causent des dommages plus importants. Consultez notre page <a href=\"/services/entretien/\">entretien de VR</a> pour le détail du service."
+          "question": "Quels types d'entretien faites-vous sur un VR?",
+          "answer": "Nous faisons l'entretien général de roulottes et de VR: joints, toiture, membrane, freins, essieux, diagnostic, climatisation, chauffage, électricité, électronique et vérifications préventives selon le véhicule et les symptômes observés."
         },
         {
-          "question": "Quels éléments d'entretien sont les plus importants?",
-          "answer": "Les joints de mur, les zones de toiture où le scellement est manquant ou fatigué, la membrane de toit et les autres points exposés à l'eau font partie des éléments les plus importants à entretenir régulièrement."
+          "question": "Pouvez-vous diagnostiquer un problème avant de réparer?",
+          "answer": "Oui. Quand le problème n'est pas évident, le diagnostic sert à confirmer l'origine du symptôme avant de décider si la bonne suite est un entretien, une réparation ou une vérification plus poussée."
         },
         {
           "question": "Offrez-vous le service en atelier ou sur la route?",
-          "answer": "Oui. Nous offrons l'entretien des joints en atelier ou sur la route, selon ce qui convient le mieux à votre situation."
+          "answer": "Oui. Plusieurs entretiens peuvent être faits en atelier ou sur la route, selon le type de travail. Certains travaux, comme l'entretien des freins et des essieux, se font à l'atelier."
         }
       ]
     },
@@ -362,19 +364,19 @@
       "navLabel": "Réparation",
       "icon": "fas fa-toolbox",
       "serviceType": "Réparation spécialisée de VR",
-      "seoTitle": "Réparation de fuite d'eau de VR à Gatineau | Toiture, murs et plancher",
-      "seoDescription": "Réparation de VR à Gatineau: infiltration d'eau, toiture, électricité, plomberie, propane et diagnostic. Réparations privées ou d'assurance.",
-      "eyebrow": "Infiltration d'eau, électricité, plomberie et propane",
-      "opening": "Clinique du VR prend en charge la <strong>réparation spécialisée de VR à Gatineau</strong> pour les problèmes d'<strong>infiltration d'eau</strong>, de <strong>toiture</strong>, d'<strong>électricité</strong>, de <strong>plomberie</strong> et de <strong>propane</strong>. Nous effectuons aussi le <strong>diagnostic</strong> des problèmes afin d'identifier leur origine avant la réparation.",
-      "lead": "Quand l'eau entre dans un VR, les dommages peuvent toucher bien plus que la surface visible. La réparation doit donc viser la <strong>cause</strong>, les <strong>matériaux atteints</strong> et la <strong>remise en état durable</strong> du véhicule.",
-      "intro": "Nous réalisons des réparations sur la <strong>toiture</strong>, la <strong>membrane de toit</strong>, le <strong>plancher</strong>, les <strong>murs</strong> et les <strong>finis intérieurs</strong>, ainsi que sur les systèmes <strong>électriques</strong>, de <strong>plomberie</strong> et de <strong>propane</strong> du VR.",
-      "heroPromise": "Quand l'eau a déjà commencé à faire des dommages, la priorité est de confirmer la <strong>source</strong> et de remettre le VR en état sans simplement cacher le problème.",
-      "detailIntro": "Une <strong>infiltration d'eau</strong> peut affecter la structure, les matériaux intérieurs et l'état général du VR. Une tache d'eau, une odeur de moisissure, un <strong>plancher mou</strong> ou un <strong>revêtement mural abîmé</strong> peuvent indiquer un problème déjà avancé qui demande une réparation méthodique.",
+      "seoTitle": "Réparation de VR à Gatineau | Diagnostic, chauffage, climatisation et électricité",
+      "seoDescription": "Réparation de roulotte et de VR à Gatineau: diagnostic, infiltration d'eau, toiture, climatisation, chauffage, électricité, électronique, plomberie, propane et assurance.",
+      "eyebrow": "Diagnostic, systèmes et remise en état",
+      "opening": "Clinique du VR prend en charge la <strong>réparation spécialisée de VR à Gatineau</strong> pour les problèmes de <strong>diagnostic</strong>, d'<strong>infiltration d'eau</strong>, de <strong>toiture</strong>, de <strong>climatisation</strong>, de <strong>chauffage</strong>, d'<strong>électricité</strong>, d'<strong>électronique</strong>, de <strong>plomberie</strong> et de <strong>propane</strong>.",
+      "lead": "Quand un système ne fonctionne plus, qu'un appareil devient intermittent ou qu'un dommage est visible, la réparation doit commencer par une lecture claire du problème. Nous cherchons la <strong>cause</strong>, évaluons les composantes touchées et remettons le véhicule en état selon la priorité réelle.",
+      "intro": "Nous réalisons des réparations sur la <strong>toiture</strong>, la <strong>membrane de toit</strong>, le <strong>plancher</strong>, les <strong>murs</strong> et les <strong>finis intérieurs</strong>, ainsi que sur les systèmes de <strong>climatisation</strong>, de <strong>chauffage</strong>, d'<strong>électricité</strong>, d'<strong>électronique</strong>, de <strong>plomberie</strong> et de <strong>propane</strong> du VR.",
+      "heroPromise": "La priorité est de confirmer la <strong>source du problème</strong>, puis de réparer la bonne composante sans simplement masquer le symptôme.",
+      "detailIntro": "Une réparation de VR peut toucher la structure, les matériaux intérieurs, les appareils et les systèmes de confort. Une infiltration, une panne électrique, un chauffage capricieux, une climatisation qui ne refroidit plus, un problème de plomberie ou un appareil au propane demande une approche méthodique avant de remplacer des pièces.",
       "highlights": [
-        "Réparation d'infiltration d'eau",
-        "Réparation électrique et diagnostic",
-        "Réparation de plomberie",
-        "Réparation de systèmes au propane"
+        "Diagnostic et réparation",
+        "Climatisation et chauffage",
+        "Électricité et électronique",
+        "Plomberie et propane"
       ],
       "proofTitle": "Ce qui compte dans une vraie réparation d'infiltration",
       "proofIntro": "Une bonne réparation ne se limite pas à refaire une surface. Elle commence par la <strong>source</strong>, traite les <strong>matériaux touchés</strong> et remet le véhicule dans un état durable et crédible.",
@@ -430,9 +432,13 @@
         "Changement complet de <strong>membrane de toiture</strong> lorsque requis",
         "Réparation ou remplacement de <strong>plancher endommagé</strong>",
         "Réparation de <strong>revêtement mural</strong> et remise en état intérieure",
+        "Diagnostic et réparation de problèmes de <strong>climatisation</strong>",
+        "Diagnostic et réparation de problèmes de <strong>chauffage</strong>",
         "Diagnostic et réparation de problèmes <strong>électriques</strong>",
+        "Diagnostic et réparation de problèmes <strong>électroniques</strong>",
         "Diagnostic et réparation de problèmes de <strong>plomberie</strong>",
         "Diagnostic et réparation de systèmes et appareils au <strong>propane</strong>",
+        "Réparation ou remplacement de composantes, accessoires et appareils selon le diagnostic",
         "Réparations d'<strong>assurance</strong> ou privées selon votre dossier"
       ],
       "situationsTitle": "Signes qui demandent une réparation",
@@ -440,28 +446,31 @@
         "Trace d'eau, odeur de <strong>moisissure</strong> ou <strong>mur mou</strong>",
         "<strong>Toiture</strong> ou <strong>membrane de toit</strong> endommagée",
         "<strong>Plancher</strong>, plafond ou revêtement mural abîmé",
+        "<strong>Climatisation</strong> qui ne refroidit plus ou fonctionne anormalement",
+        "<strong>Chauffage</strong> qui démarre mal, s'arrête ou ne chauffe pas correctement",
         "Panne ou fonctionnement anormal d'un système <strong>électrique</strong>",
+        "Problème d'<strong>électronique</strong>, de contrôle, de panneau ou d'accessoire",
         "Fuite ou problème de <strong>plomberie</strong>",
         "Problème lié au système ou à un appareil au <strong>propane</strong>",
         "Dommage nécessitant une réparation d'<strong>assurance</strong> ou privée"
       ],
-      "processIntro": "Notre méthode de réparation spécialisée commence par la validation de la <strong>source du dommage</strong>, puis par un ordre logique de remise en état. Cela permet de corriger le problème à la base et d'adapter les travaux selon qu'il s'agit d'un dossier d'<strong>assurance</strong> ou d'une réparation privée.",
+      "processIntro": "Notre méthode de réparation spécialisée commence par la validation de la <strong>source du problème</strong>, puis par un ordre logique de remise en état. Cela permet de corriger le problème à la base, qu'il s'agisse d'un système mécanique, électrique, électronique, d'un appareil, d'une infiltration ou d'un dossier d'<strong>assurance</strong>.",
       "process": [
-        "Diagnostic pour confirmer la <strong>source</strong> de l'infiltration, de la panne ou du dommage",
-        "Évaluation des zones touchées comme la <strong>toiture</strong>, le <strong>plancher</strong> ou les <strong>murs</strong>",
-        "Réparation et remise en état selon l'ampleur du dossier",
+        "Diagnostic pour confirmer la <strong>source</strong> de la panne, de l'infiltration ou du dommage",
+        "Évaluation des zones ou systèmes touchés: toiture, structure, climatisation, chauffage, électricité, électronique, plomberie ou propane",
+        "Réparation, remplacement de composante ou remise en état selon l'ampleur du dossier",
         "Suivi clair pour réparation d'<strong>assurance</strong> ou privée"
       ],
       "whyChooseTitle": "Pourquoi choisir Clinique du VR pour la réparation spécialisée?",
-      "whyChooseIntro": "La différence entre une <strong>réparation durable</strong> et une simple correction visuelle repose sur le <strong>diagnostic</strong>, la qualité d'exécution et la capacité à traiter les <strong>dommages d'eau</strong> dans leur ensemble.",
+      "whyChooseIntro": "La différence entre une <strong>réparation durable</strong> et une simple correction temporaire repose sur le <strong>diagnostic</strong>, la qualité d'exécution et la capacité à comprendre les systèmes d'un VR dans leur ensemble.",
       "whyChoose": [
         {
           "title": "Réparation axée sur la cause",
-          "text": "Nous cherchons la véritable origine de l'<strong>infiltration d'eau</strong> avant de refermer ou de refaire les surfaces."
+          "text": "Nous cherchons la véritable origine du problème avant de remplacer une pièce, refermer une surface ou recommander une réparation plus importante."
         },
         {
-          "title": "Expertise sur les dommages à l'eau",
-          "text": "Nous intervenons sur les zones les plus souvent touchées par l'<strong>humidité</strong>, comme la <strong>toiture</strong>, la <strong>membrane</strong>, le <strong>plancher</strong> et les <strong>murs</strong>."
+          "title": "Plusieurs systèmes couverts",
+          "text": "Nous pouvons intervenir sur la toiture, la structure, les systèmes de confort, l'électricité, l'électronique, la plomberie, le propane et les appareils du VR."
         },
         {
           "title": "Assurance ou privé",
@@ -471,12 +480,12 @@
       "faqTitle": "Questions fréquentes sur la réparation de VR",
       "faqs": [
         {
-          "question": "Que faire si mon VR présente une infiltration d'eau?",
-        "answer": "Il faut agir rapidement pour confirmer la <strong>source</strong>. Commencez souvent par une <a href=\"/services/inspection/\">inspection</a> si la cause n'est pas encore claire, ou consultez directement notre page <a href=\"/services/reparation/\">réparation de VR</a> si les dommages touchent déjà la structure, le <strong>plancher</strong>, les <strong>murs</strong>, la <strong>membrane de toit</strong> ou les matériaux intérieurs, en plus du risque de <strong>moisissure</strong>."
+          "question": "Quels types de réparations faites-vous sur un VR?",
+        "answer": "Nous réparons les problèmes d'infiltration, de toiture, de structure, de plancher, de murs, de climatisation, de chauffage, d'électricité, d'électronique, de plomberie, de propane, d'appareils et d'accessoires selon le diagnostic."
         },
         {
-          "question": "Réparez-vous la toiture et la membrane de toit?",
-        "answer": "Oui. Nous effectuons des réparations ciblées sur la <strong>toiture</strong> et la <strong>membrane de toit</strong> lorsque cela est approprié, selon l'état des matériaux et l'étendue du dommage. Si vous voulez d'abord mieux reconnaître les signes, voyez aussi notre ressource <a href=\"/ressources/infiltration-eau-vr/\">infiltration d'eau de VR</a>."
+          "question": "Pouvez-vous diagnostiquer une panne avant de remplacer une pièce?",
+        "answer": "Oui. Le diagnostic sert à confirmer la source du symptôme avant de remplacer une composante ou d'ouvrir un dossier de réparation plus lourd."
         },
         {
           "question": "Faites-vous des réparations d'assurance ou privées?",
@@ -630,7 +639,7 @@
         },
         {
           "question": "Pouvez-vous aider si je ne sais pas si je dois réparer ou vendre?",
-          "answer": "Oui. Ce service sert justement à prioriser les correctifs et à mieux comprendre si le véhicule mérite une remise en état, une vente rapide ou une mise à niveau plus progressive. Consultez notre page <a href=\"/vente/\">vente et achat de VR</a> pour voir comment nous orientons cette décision."
+          "answer": "Oui. Ce service sert justement à prioriser les correctifs et à mieux comprendre si le véhicule mérite une remise en état, une vente rapide ou une mise à niveau plus progressive. Consultez notre page <a href=\"/services/vente-achat/\">vente et achat de VR</a> pour voir comment nous orientons cette décision."
         }
       ]
     }

@@ -16,6 +16,7 @@ export function getStaticPaths() {
 }
 
 const { service } = Astro.props as { service: ServicePage };
+const enPath = service.slug === 'rexoseal' ? undefined : `/en/services/${service.alternateSlug}/`;
 const schemas = [
   buildServiceSchema({
     name: service.h1,
@@ -36,7 +37,7 @@ const schemas = [
   description={service.seoDescription}
   canonicalPath={`/services/${service.slug}/`}
   frPath={`/services/${service.slug}/`}
-  enPath={`/en/services/${service.alternateSlug}/`}
+  enPath={enPath}
   schemas={schemas}
 >
   <Header />

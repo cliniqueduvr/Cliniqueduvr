@@ -26,12 +26,17 @@ function getAlternatePath(pathname: string, targetLang: 'fr' | 'en') {
     '/about/': '/en/about/',
     '/choisir-service/': '/en/choose-service/',
     '/contact/': '/en/contact/',
+    '/merci/': '/en/thank-you/',
     '/magasin/': '/en/store/',
     '/plan-du-site/': '/en/site-map/',
     '/privacy/': '/en/privacy/',
     '/realisations/': '/en/realisations/',
+    '/ressources/infiltration-eau-vr/': '/en/resources/rv-water-intrusion/',
+    '/ressources/entretien-vr-deux-fois-par-an/': '/en/resources/twice-yearly-rv-maintenance/',
     '/ressources/installation-panneau-solaire-vr/': '/en/resources/rv-solar-panel-installation/',
     '/services/': '/en/services/',
+    '/services/rexoseal/': '/en/services/maintenance/',
+    '/zones-desservies/': '/en/service-areas/',
     '/services/vente-achat/': '/en/services/buying-selling/'
   };
 
@@ -40,11 +45,15 @@ function getAlternatePath(pathname: string, targetLang: 'fr' | 'en') {
     '/en/about/': '/about/',
     '/en/choose-service/': '/choisir-service/',
     '/en/contact/': '/contact/',
+    '/en/thank-you/': '/merci/',
     '/en/store/': '/magasin/',
+    '/en/resources/rv-water-intrusion/': '/ressources/infiltration-eau-vr/',
+    '/en/resources/twice-yearly-rv-maintenance/': '/ressources/entretien-vr-deux-fois-par-an/',
     '/en/resources/rv-solar-panel-installation/': '/ressources/installation-panneau-solaire-vr/',
     '/en/site-map/': '/plan-du-site/',
     '/en/privacy/': '/privacy/',
     '/en/realisations/': '/realisations/',
+    '/en/service-areas/': '/zones-desservies/',
     '/en/services/': '/services/',
     '/en/services/buying-selling/': '/services/vente-achat/'
   };
@@ -58,6 +67,9 @@ function getAlternatePath(pathname: string, targetLang: 'fr' | 'en') {
     if (normalizedPath.startsWith('/zones/')) {
       const slug = normalizedPath.replace('/zones/', '').replaceAll('/', '');
       return `/en/areas/${frToEnAreaSlug.get(slug) ?? slug}/`;
+    }
+    if (normalizedPath.startsWith('/realisations/')) {
+      return '/en/realisations/';
     }
     return normalizedPath.startsWith('/en/') ? normalizedPath : `/en${normalizedPath}`;
   }

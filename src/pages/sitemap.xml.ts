@@ -18,6 +18,12 @@ const baseUrl = 'https://cliniqueduvr.ca';
 const defaultLastmod = '2026-04-12';
 
 const pageLastmods = new Map<string, string>([
+  ['/', '2026-07-07'],
+  ['/services/', '2026-07-07'],
+  ['/services/entretien/', '2026-07-07'],
+  ['/services/reparation/', '2026-07-07'],
+  ['/en/services/maintenance/', '2026-07-07'],
+  ['/en/services/repair/', '2026-07-07'],
   ['/choisir-service/', '2026-04-15'],
   ['/en/choose-service/', '2026-04-15'],
   ['/faq/', '2026-04-19'],
@@ -39,9 +45,9 @@ const pageLastmods = new Map<string, string>([
 ]);
 
 const staticEntries: UrlEntry[] = [
-  { path: '/', lastmod: defaultLastmod, alternatePaths: ['/en/'] },
+  { path: '/', lastmod: pageLastmods.get('/') ?? defaultLastmod, alternatePaths: ['/en/'] },
   { path: '/about/', lastmod: defaultLastmod, alternatePaths: ['/en/about/'] },
-  { path: '/services/', lastmod: defaultLastmod, alternatePaths: ['/en/services/'] },
+  { path: '/services/', lastmod: pageLastmods.get('/services/') ?? defaultLastmod, alternatePaths: ['/en/services/'] },
   { path: '/magasin/', lastmod: '2026-06-14', alternatePaths: ['/en/store/'] },
   { path: '/realisations/', lastmod: defaultLastmod, alternatePaths: ['/en/realisations/'] },
   { path: '/contact/', lastmod: defaultLastmod, alternatePaths: ['/en/contact/'] },
@@ -89,7 +95,7 @@ const enToFrAreaSlug = new Map([
 const serviceEntries = servicePages.map((service) => ({
   path: `/services/${service.slug}/`,
   lastmod: pageLastmods.get(`/services/${service.slug}/`) ?? defaultLastmod,
-  alternatePaths: service.alternateSlug ? [`/en/services/${service.alternateSlug}/`] : []
+  alternatePaths: service.alternateSlug && service.slug !== 'rexoseal' ? [`/en/services/${service.alternateSlug}/`] : []
 }));
 
 const serviceEntriesEn = servicePagesEn.map((service) => ({
