@@ -27,7 +27,7 @@
     "items": [
       { "icon": "fas fa-droplet", "label": "Produits d'étanchéité" },
       { "icon": "fas fa-screwdriver-wrench", "label": "Pièces d'entretien" },
-      { "icon": "fas fa-solar-panel", "label": "Panneaux solaires" },
+      { "icon": "fas fa-solar-panel", "label": "Panneaux solaires", "href": "/services/installation-panneaux-solaires/" },
       { "icon": "fas fa-toolbox", "label": "Accessoires et équipements" }
     ],
     "ctaLabel": "Voir les produits"

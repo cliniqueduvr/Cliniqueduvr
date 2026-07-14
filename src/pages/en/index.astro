@@ -73,7 +73,11 @@ const meta = {
           <p class="parts-store-copy">{homePage.partsStore.body}</p>
           <div class="parts-store-items">
             {homePage.partsStore.items.map((item) => (
-              <span><i class={item.icon} aria-hidden="true"></i>{item.label}</span>
+              item.href ? (
+                <a href={item.href}><i class={item.icon} aria-hidden="true"></i>{item.label}</a>
+              ) : (
+                <span><i class={item.icon} aria-hidden="true"></i>{item.label}</span>
+              )
             ))}
           </div>
           <a class="parts-store-cta" href="/en/store/">
@@ -153,7 +157,8 @@ const meta = {
   .parts-store h2 { color: white; }
   .parts-store-copy { max-width: 72ch; margin-top: 0.75rem; color: #e8eef5; }
   .parts-store-items { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.25rem; }
-  .parts-store-items span { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.55rem 0.8rem; border-radius: 999px; background: rgba(255, 255, 255, 0.1); font-weight: 700; }
+  .parts-store-items span, .parts-store-items a { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.55rem 0.8rem; border-radius: 999px; background: rgba(255, 255, 255, 0.1); color: white; font-weight: 700; }
+  .parts-store-items a:hover { background: rgba(255, 255, 255, 0.18); text-decoration: none; }
   .parts-store-items i { color: var(--brand-gold); }
   .parts-store-cta { display: inline-flex; align-items: center; gap: 0.6rem; margin-top: 1.5rem; padding: 0.8rem 1.15rem; border-radius: 6px; background: var(--brand-green); color: white; font-weight: 700; }
   .parts-store-cta:hover { background: var(--brand-green-dark); text-decoration: none; }
@@ -196,7 +201,7 @@ const meta = {
     .parts-store-eyebrow { font-size: 0.78rem; }
     .parts-store-copy { margin-top: 0.6rem; }
     .parts-store-items { justify-content: center; gap: 0.5rem; margin-top: 1rem; }
-    .parts-store-items span { padding: 0.45rem 0.65rem; font-size: 0.82rem; }
+    .parts-store-items span, .parts-store-items a { padding: 0.45rem 0.65rem; font-size: 0.82rem; }
     .parts-store-cta { margin-top: 1.15rem; }
     .seo-grid, .contact-grid { grid-template-columns: 1fr; gap: 1.35rem; }
     .contact-form-wrapper h2, .services-overview h2 { margin-bottom: 0.7rem; }

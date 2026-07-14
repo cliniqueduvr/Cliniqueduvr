@@ -27,7 +27,7 @@
     "items": [
       { "icon": "fas fa-droplet", "label": "Sealants" },
       { "icon": "fas fa-screwdriver-wrench", "label": "Maintenance parts" },
-      { "icon": "fas fa-solar-panel", "label": "Solar panels" },
+      { "icon": "fas fa-solar-panel", "label": "Solar panels", "href": "/en/services/solar-panel-installation/" },
       { "icon": "fas fa-toolbox", "label": "Accessories and equipment" }
     ],
     "ctaLabel": "View products"

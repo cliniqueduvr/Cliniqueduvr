@@ -79,7 +79,11 @@ const meta = {
           <p class="parts-store-copy">{homePage.partsStore.body}</p>
           <div class="parts-store-items">
             {homePage.partsStore.items.map((item) => (
-              <span><i class={item.icon} aria-hidden="true"></i>{item.label}</span>
+              item.href ? (
+                <a href={item.href}><i class={item.icon} aria-hidden="true"></i>{item.label}</a>
+              ) : (
+                <span><i class={item.icon} aria-hidden="true"></i>{item.label}</span>
+              )
             ))}
           </div>
           <a class="parts-store-cta" href="/magasin/">
@@ -271,14 +275,21 @@ const meta = {
     margin-top: 1.25rem;
   }
 
-  .parts-store-items span {
+  .parts-store-items span,
+  .parts-store-items a {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     padding: 0.55rem 0.8rem;
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.1);
+    color: white;
     font-weight: 700;
+  }
+
+  .parts-store-items a:hover {
+    background: rgba(255, 255, 255, 0.18);
+    text-decoration: none;
   }
 
   .parts-store-items i {
@@ -540,7 +551,8 @@ const meta = {
       margin-top: 1rem;
     }
 
-    .parts-store-items span {
+    .parts-store-items span,
+    .parts-store-items a {
       padding: 0.45rem 0.65rem;
       font-size: 0.82rem;
     }
