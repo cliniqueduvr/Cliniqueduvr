@@ -23,11 +23,12 @@
   "partsStore": {
     "eyebrow": "Disponible à notre atelier",
     "heading": "Magasin de pièces et accessoires pour VR",
-    "body": "Vous trouverez sur place une sélection de pièces et d'accessoires pour l'entretien, la réparation et l'amélioration de votre VR. Notre équipe peut aussi vous aider à identifier le bon produit pour votre véhicule et vérifier sa disponibilité.",
+    "body": "Vous trouverez sur place une sélection de pièces et d'accessoires pour l'entretien, la réparation et l'amélioration de votre VR, incluant des produits solaires. Notre équipe peut aussi vous aider à identifier le bon produit pour votre véhicule et vérifier sa disponibilité.",
     "items": [
       { "icon": "fas fa-droplet", "label": "Produits d'étanchéité" },
       { "icon": "fas fa-screwdriver-wrench", "label": "Pièces d'entretien" },
-      { "icon": "fas fa-solar-panel", "label": "Accessoires et équipements" }
+      { "icon": "fas fa-solar-panel", "label": "Panneaux solaires" },
+      { "icon": "fas fa-toolbox", "label": "Accessoires et équipements" }
     ],
     "ctaLabel": "Voir les produits"
   },

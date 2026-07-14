@@ -1,5 +1,5 @@
 export const SITE_URL = 'https://cliniqueduvr.ca';
-export const BRAND_IMAGE = `${SITE_URL}/clinique-du-vr-brand.jpg`;
+export const BRAND_IMAGE = `${SITE_URL}/clinique-du-vr-brand.png`;
 
 export type BreadcrumbItem = {
   name: string;

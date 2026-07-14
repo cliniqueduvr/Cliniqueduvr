@@ -95,7 +95,7 @@ const isActivePath = (href: string) => {
   if (href === '/en/') return currentPath === '/en/';
   return currentPath === href || currentPath.startsWith(href);
 };
-const frenchServiceOrder = ['inspection', 'entretien', 'reparation', 'rexoseal', 'esthetique'];
+const frenchServiceOrder = ['inspection', 'entretien', 'reparation', 'rexoseal', 'installation-panneaux-solaires'];
 const orderedServicePages = isEnglish
   ? servicePagesEn.items
   : [...servicePagesFr.items].sort(

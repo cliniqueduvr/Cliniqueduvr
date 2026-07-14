@@ -7,7 +7,7 @@ import type { ServicePage } from '../data/service-page-types';
 import { buildBreadcrumbSchema, buildFAQSchema } from '../lib/seo';
 
 const servicePages = servicePagesData.items as ServicePage[];
-const serviceOrder = ['inspection', 'entretien', 'reparation', 'rexoseal', 'esthetique'];
+const serviceOrder = ['inspection', 'entretien', 'reparation', 'rexoseal', 'installation-panneaux-solaires'];
 const visibleServicePages = servicePages
   .filter((service) => serviceOrder.includes(service.slug))
   .sort((a, b) => serviceOrder.indexOf(a.slug) - serviceOrder.indexOf(b.slug));
@@ -41,7 +41,7 @@ const serviceAreas = [
 const serviceFaqs = [
   {
     question: 'Comment choisir le bon service pour mon VR?',
-    answer: "Le bon service dépend surtout de l'état réel du véhicule. Si vous voyez des signes d'infiltration, de joints fatigués, de dommages intérieurs ou si vous préparez un achat ou une vente, nous pouvons vous orienter vers l'<a href=\"/services/inspection/\">inspection</a>, l'<a href=\"/services/entretien/\">entretien</a>, la <a href=\"/services/reparation/\">réparation</a>, l'<a href=\"/services/esthetique/\">esthétique</a> ou la <a href=\"/services/vente-achat/\">vente et achat</a> selon le besoin."
+    answer: "Le bon service dépend surtout de l'état réel du véhicule. Si vous voyez des signes d'infiltration, de joints fatigués, de dommages intérieurs, un besoin solaire ou si vous préparez un achat ou une vente, nous pouvons vous orienter vers l'<a href=\"/services/inspection/\">inspection</a>, l'<a href=\"/services/entretien/\">entretien</a>, la <a href=\"/services/reparation/\">réparation</a>, les <a href=\"/services/installation-panneaux-solaires/\">panneaux solaires</a> ou la <a href=\"/services/vente-achat/\">vente et achat</a> selon le besoin."
   },
   {
     question: 'Travaillez-vous seulement à Gatineau?',
@@ -49,7 +49,7 @@ const serviceFaqs = [
   },
   {
     question: 'Offrez-vous des services mobiles et en atelier?',
-    answer: "Oui, selon le service demandé. Certaines interventions se font très bien en atelier, alors que d'autres peuvent aussi être offertes sur la route ou avec déplacement selon la situation. Consultez les pages <a href=\"/services/inspection/\">inspection</a>, <a href=\"/services/entretien/\">entretien</a> ou <a href=\"/services/esthetique/\">esthétique VR</a> pour voir les cas où le mobile est pertinent."
+    answer: "Oui, selon le service demandé. Certaines interventions se font très bien en atelier, alors que d'autres peuvent aussi être offertes sur la route ou avec déplacement selon la situation. Consultez les pages <a href=\"/services/inspection/\">inspection</a>, <a href=\"/services/entretien/\">entretien</a> ou <a href=\"/services/installation-panneaux-solaires/\">panneaux solaires</a> pour voir les cas où le mobile est pertinent."
   }
 ];
 const quickSteps = [
@@ -63,7 +63,7 @@ const breadcrumbs = buildBreadcrumbSchema([
 ]);
 ---
 
-<Layout title="Services VR à Gatineau | Fuite d’eau, entretien et réparation" description="Services de VR à Gatineau pour fuite d'eau, entretien de joints et de toiture, inspection, réparation et esthétique, avec demandes provenant d'Ottawa, de l'Outaouais et des Laurentides." canonicalPath="/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs, buildFAQSchema(serviceFaqs)]}>
+<Layout title="Services VR à Gatineau | Fuite d’eau, entretien, réparation et solaire" description="Services de VR à Gatineau pour fuite d'eau, entretien de joints et de toiture, inspection, réparation et installation de panneaux solaires avec produits Victron Energy." canonicalPath="/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs, buildFAQSchema(serviceFaqs)]}>
   <Header />
 
   <main>
@@ -71,7 +71,7 @@ const breadcrumbs = buildBreadcrumbSchema([
       <div class="container">
         <p class="eyebrow">Pour chaque besoin de votre VR</p>
         <h1>Nos Services</h1>
-        <p>Inspection, entretien, réparation et esthétique VR et auto selon l'état réel du véhicule.</p>
+        <p>Inspection, entretien, réparation et installation de panneaux solaires selon l'état réel du véhicule.</p>
       </div>
     </section>
 
@@ -110,7 +110,7 @@ const breadcrumbs = buildBreadcrumbSchema([
               </div>
               <div class="info-card">
                 <h2>Ce que nous couvrons</h2>
-                <p>Infiltrations d'eau, toiture, joints, composantes électriques et propane, remise en état intérieure, esthétique et inspections avant transaction.</p>
+                <p>Infiltrations d'eau, toiture, joints, composantes électriques et propane, remise en état intérieure, panneaux solaires et inspections avant transaction.</p>
               </div>
             </div>
           </section>

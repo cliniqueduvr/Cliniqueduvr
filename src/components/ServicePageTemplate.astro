@@ -300,7 +300,7 @@ const localServiceFocus = isEnglish
       <div class="hero-copy">
         <p class="eyebrow">{service.eyebrow}</p>
         <h1 class:list={[
-          (service.slug === 'inspection' || service.slug === 'entretien' || service.slug === 'maintenance' || service.slug === 'rexoseal' || service.slug === 'reparation' || service.slug === 'repair' || service.slug === 'esthetique' || service.slug === 'detailing') && 'hero-title-wide',
+          (service.slug === 'inspection' || service.slug === 'entretien' || service.slug === 'maintenance' || service.slug === 'rexoseal' || service.slug === 'reparation' || service.slug === 'repair' || service.slug === 'installation-panneaux-solaires' || service.slug === 'solar-panel-installation') && 'hero-title-wide',
           service.slug === 'inspection' && 'hero-title-wider'
         ]}>{service.h1}</h1>
         <p class="opening" set:html={service.opening} />

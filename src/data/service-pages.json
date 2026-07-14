@@ -110,11 +110,11 @@
       "faqs": [
         {
           "question": "Combien coûte une inspection de VR?",
-        "answer": "L'<strong>inspection est toujours gratuite et sans rendez-vous en atelier</strong>. Pour une inspection sur la route, le <strong>tarif est variable selon le déplacement</strong>. Contactez-nous pour obtenir les détails."
+          "answer": "L'<strong>inspection est toujours gratuite et sans rendez-vous en atelier</strong>. Pour une inspection sur la route, le <strong>tarif est variable selon le déplacement</strong>. Contactez-nous pour obtenir les détails."
         },
         {
           "question": "Que vérifiez-vous principalement lors d'une inspection?",
-        "answer": "Nous nous concentrons principalement sur les <strong>joints</strong>, l'état de la <strong>toiture</strong> et les signes d'<strong>infiltration d'eau</strong>. Nous utilisons aussi un <strong>humidimètre</strong> dans les zones à risque."
+          "answer": "Nous nous concentrons principalement sur les <strong>joints</strong>, l'état de la <strong>toiture</strong> et les signes d'<strong>infiltration d'eau</strong>. Nous utilisons aussi un <strong>humidimètre</strong> dans les zones à risque."
         },
         {
           "question": "Faites-vous des inspections mécaniques?",
@@ -481,90 +481,103 @@
       "faqs": [
         {
           "question": "Quels types de réparations faites-vous sur un VR?",
-        "answer": "Nous réparons les problèmes d'infiltration, de toiture, de structure, de plancher, de murs, de climatisation, de chauffage, d'électricité, d'électronique, de plomberie, de propane, d'appareils et d'accessoires selon le diagnostic."
+          "answer": "Nous réparons les problèmes d'infiltration, de toiture, de structure, de plancher, de murs, de climatisation, de chauffage, d'électricité, d'électronique, de plomberie, de propane, d'appareils et d'accessoires selon le diagnostic."
         },
         {
           "question": "Pouvez-vous diagnostiquer une panne avant de remplacer une pièce?",
-        "answer": "Oui. Le diagnostic sert à confirmer la source du symptôme avant de remplacer une composante ou d'ouvrir un dossier de réparation plus lourd."
+          "answer": "Oui. Le diagnostic sert à confirmer la source du symptôme avant de remplacer une composante ou d'ouvrir un dossier de réparation plus lourd."
         },
         {
           "question": "Faites-vous des réparations d'assurance ou privées?",
-        "answer": "Oui. Nous prenons en charge autant les réparations d'<strong>assurance</strong> que les réparations privées, selon la nature du dommage et les besoins du dossier. Vous pouvez voir le détail sur notre page <a href=\"/services/reparation/\">réparation spécialisée de VR</a>."
+          "answer": "Oui. Nous prenons en charge autant les réparations d'<strong>assurance</strong> que les réparations privées, selon la nature du dommage et les besoins du dossier. Vous pouvez voir le détail sur notre page <a href=\"/services/reparation/\">réparation spécialisée de VR</a>."
         }
       ]
     },
     {
-      "slug": "esthetique",
-      "alternateSlug": "detailing",
-      "title": "Esthétique de VR et de motorisé",
-      "h1": "Esthétique de VR et de motorisé à Gatineau",
-      "navLabel": "Esthétique VR",
-      "icon": "fas fa-spray-can-sparkles",
-      "serviceType": "Esthétique de VR et de motorisé",
-      "seoTitle": "Esthétique de VR et motorisé à Gatineau | Nettoyage, polissage et cirage",
-      "seoDescription": "Esthétique de VR et de motorisé à Gatineau: nettoyage intérieur et extérieur, polissage et cirage, offert en atelier ou sur la route selon le véhicule et le mandat.",
-      "eyebrow": "Nettoyage, polissage et cirage de VR",
-      "opening": "Clinique du VR offre un vrai service d'<strong>esthétique pour VR et motorisés à Gatineau</strong>. Nous prenons en charge le <strong>nettoyage intérieur et extérieur</strong>, le <strong>polissage</strong> et le <strong>cirage</strong> pour redonner au véhicule une présentation plus propre, plus brillante et mieux protégée, en <strong>atelier</strong> ou sur la route selon le type de mandat.",
-      "lead": "Ce service vise un résultat concret sur les <strong>VR</strong> et <strong>motorisés</strong>: une carrosserie mieux entretenue, des surfaces plus propres et une finition plus valorisante avant la saison, après les voyages ou avant une vente.",
-      "intro": "L'<strong>esthétique de VR</strong> demande une approche adaptée aux grands formats, aux surfaces exposées, aux traces de route et aux longues périodes d'entreposage. Nous travaillons le <strong>nettoyage</strong>, le <strong>polissage</strong> et le <strong>cirage</strong> pour remettre le véhicule en meilleur état visuel.",
-      "detailIntro": "Ce service est pensé pour les propriétaires de <strong>VR</strong> et de <strong>motorisés</strong> qui veulent faire nettoyer leur véhicule en profondeur, améliorer la brillance, reprendre l'apparence extérieure et protéger les surfaces avec un <strong>cirage</strong> ou une finition adaptée. Selon le véhicule, le contexte et l'accès au site, l'intervention peut se faire en <strong>atelier</strong> ou sur la route.",
+      "slug": "installation-panneaux-solaires",
+      "alternateSlug": "solar-panel-installation",
+      "title": "Installation de panneaux solaires pour VR",
+      "h1": "Panneaux solaires pour VR",
+      "navLabel": "Panneaux solaires",
+      "icon": "fas fa-solar-panel",
+      "serviceType": "Installation, fourniture et distribution de solutions solaires pour VR",
+      "seoTitle": "Installation de panneaux solaires pour VR à Gatineau | Victron Energy",
+      "seoDescription": "Installation et fourniture de panneaux solaires pour VR à Gatineau, avec distribution et intégration de produits Victron Energy.",
+      "eyebrow": "Solaire VR, autonomie et énergie",
+      "opening": "Installation et fourniture de systèmes solaires pour VR avec <strong>produits Victron Energy</strong>.",
+      "lead": "On dimensionne, fournit et installe les composantes selon votre autonomie réelle.",
+      "intro": "Panneaux, contrôleurs, batteries, onduleurs et surveillance: une solution claire, adaptée à votre véhicule.",
+      "heroPromise": "",
+      "detailIntro": "Un bon système solaire de VR ne se limite pas à ajouter un panneau sur le toit. Il faut valider la surface disponible, les points d’étanchéité, le passage du câblage, la batterie, le contrôleur, l’onduleur et la façon de surveiller le système. Comme installateur et distributeur de produits Victron Energy, nous pouvons fournir les composantes et les intégrer dans une solution cohérente pour votre véhicule.",
       "highlights": [
-        "Nettoyage intérieur et extérieur de VR",
-        "Polissage de surfaces visibles",
-        "Cirage et mise en valeur",
-        "Atelier ou sur la route"
+        "Fourniture de panneaux solaires",
+        "Produits Victron Energy",
+        "Installation sur VR et motorisé",
+        "Systèmes autonomes ou hybrides"
       ],
-      "includedTitle": "Ce que nous faisons en esthétique VR",
+      "includedTitle": "Ce que nous pouvons prendre en charge",
       "included": [
-        "Nettoyage intérieur et extérieur de VR et de motorisés",
-        "Lavage visuel plus poussé des surfaces exposées à la route",
-        "Polissage pour améliorer l'apparence et la brillance",
-        "Cirage pour protéger et rehausser la finition",
-        "Service possible en atelier ou sur la route selon le véhicule et le contexte"
+        "Analyse du besoin énergétique et du niveau d’autonomie souhaité",
+        "Vérification de la toiture, des accès et des contraintes de montage",
+        "Fourniture de panneaux solaires, contrôleurs, batteries, onduleurs et accessoires compatibles",
+        "Distribution et intégration de produits Victron Energy",
+        "Installation des panneaux, passage du câblage et raccordement selon le projet",
+        "Configuration de base, vérification du fonctionnement et explication de l’utilisation"
       ],
-      "situationsTitle": "Quand ce service esthétique VR est utile",
+      "situationsTitle": "Quand ce service solaire est utile",
       "situations": [
-        "Quand le VR ou le motorisé a perdu son éclat",
-        "Après une saison de route ou d'entreposage",
-        "Avant une mise en vente ou une livraison",
-        "Quand vous voulez un nettoyage, un polissage ou un cirage plus complet"
+        "Vous voulez plus d’autonomie en camping ou sur la route",
+        "Vous voulez alimenter des appareils sans dépendre uniquement du branchement au terrain",
+        "Vous préparez une installation avec batteries, contrôleur de charge ou onduleur",
+        "Votre système solaire actuel doit être amélioré ou corrigé",
+        "Vous voulez acheter des produits Victron Energy avec une installation adaptée au VR"
       ],
-      "processIntro": "Nous adaptons l'intervention selon le format du véhicule, l'état général des surfaces et l'objectif recherché. Le but est d'obtenir une amélioration visuelle nette sans traiter un VR comme une petite voiture.",
+      "processIntro": "Nous avançons par étapes pour éviter les systèmes mal dimensionnés: comprendre votre usage, choisir les composantes, protéger la toiture, installer proprement et valider le fonctionnement.",
       "process": [
-        "Évaluation visuelle du VR ou du motorisé",
-        "Choix du nettoyage, du polissage et du niveau de finition recherché",
-        "Exécution en atelier ou sur la route selon le mandat confirmé",
-        "Vérification finale et recommandations pour garder le véhicule propre plus longtemps"
+        "Discussion sur vos appareils, votre façon de voyager et l’autonomie souhaitée",
+        "Évaluation du VR, de la toiture, des accès et des composantes existantes",
+        "Sélection des panneaux, contrôleurs, batteries, onduleurs et produits Victron Energy adaptés",
+        "Fourniture des équipements et planification de l’installation",
+        "Installation, raccordement, configuration et vérification",
+        "Explication du fonctionnement et des points d’entretien à surveiller"
       ],
-      "whyChooseTitle": "Pourquoi choisir Clinique du VR pour l'esthétique de VR et motorisé?",
-      "whyChooseIntro": "Un vrai service d'esthétique pour VR ne consiste pas seulement à rincer un grand véhicule. Il faut tenir compte des dimensions, des surfaces, des traces de route, des périodes d'entreposage et du résultat visuel que vous voulez réellement obtenir.",
+      "whyChooseTitle": "Pourquoi choisir Clinique du VR pour votre projet solaire?",
+      "whyChooseIntro": "Une installation solaire sur VR doit respecter le véhicule, l’étanchéité de la toiture, la capacité électrique et l’usage réel du propriétaire. L’objectif est de livrer un système utile, compréhensible et durable.",
       "whyChoose": [
         {
+          "title": "Approche complète",
+          "text": "Nous pouvons fournir les équipements, installer les composantes et accompagner la mise en service du système."
+        },
+        {
+          "title": "Produits Victron Energy",
+          "text": "Nous travaillons avec des produits Victron Energy pour bâtir des systèmes robustes, configurables et faciles à surveiller."
+        },
+        {
           "title": "Pensé pour les VR",
-          "text": "Nous structurons le service pour les VR et motorisés, avec une approche adaptée aux grands formats et aux besoins réels du véhicule."
+          "text": "Nous tenons compte de la toiture, du câblage, des batteries, du poids, de l’accès et de l’étanchéité du véhicule."
         },
         {
-          "title": "Atelier ou sur la route",
-          "text": "Selon le type de véhicule et le contexte, nous pouvons confirmer une intervention à l'atelier ou sur la route."
-        },
-        {
-          "title": "Résultat visuel clair",
-          "text": "Le nettoyage, le polissage et le cirage sont pensés pour redonner une apparence plus propre, brillante et soignée."
+          "title": "Dimensionnement réfléchi",
+          "text": "Le système est choisi selon votre consommation, votre usage et le niveau d’autonomie recherché."
         }
       ],
-      "faqTitle": "Questions fréquentes sur l'esthétique de VR et motorisé",
+      "faqTitle": "Questions fréquentes sur les panneaux solaires pour VR",
       "faqs": [
         {
-          "question": "Faites-vous le nettoyage, le polissage et le cirage de VR?",
-          "answer": "Oui. Consultez notre page <a href=\"/services/esthetique/\">esthétique de VR et de motorisé</a> pour le nettoyage, le polissage et le cirage de VR, avec intervention possible en atelier ou sur la route selon le véhicule et le mandat."
+          "question": "Êtes-vous installateur et distributeur de produits Victron Energy?",
+          "answer": "Oui. Nous pouvons fournir des produits Victron Energy et les intégrer dans un système solaire adapté à votre VR."
         },
         {
-          "question": "Le service se fait-il seulement en atelier?",
-          "answer": "Non, pas toujours. Pour les VR et motorisés, l'intervention peut être confirmée en atelier ou sur la route selon le format du véhicule, le type de travail et le contexte d'accès. Voyez notre page <a href=\"/services/esthetique/\">esthétique de VR et de motorisé</a> pour le détail."
+          "question": "Pouvez-vous fournir seulement les équipements?",
+          "answer": "Oui. Selon le besoin, nous pouvons fournir les panneaux, contrôleurs, batteries, onduleurs et accessoires, ou prendre en charge l’installation complète."
         },
         {
-          "question": "Est-ce la même offre que pour les autos et camions?",
-          "answer": "Non. Cette page est dédiée à l'<a href=\"/services/esthetique/\">esthétique de VR et de motorisé</a>, avec une approche adaptée aux grands formats et aux besoins propres aux véhicules récréatifs."
+          "question": "Faut-il inspecter la toiture avant d’installer un panneau solaire?",
+          "answer": "Oui, c’est fortement recommandé. La toiture, les joints et les points de passage doivent être assez propres et solides pour recevoir une installation sans augmenter le risque d’infiltration."
+        },
+        {
+          "question": "Pouvez-vous améliorer un système solaire existant?",
+          "answer": "Oui. Nous pouvons évaluer les composantes en place et proposer des améliorations selon les limites observées et votre objectif d’autonomie."
         }
       ]
     },
@@ -635,7 +648,7 @@
         },
         {
           "question": "Quels travaux valent la peine avant de vendre un VR?",
-          "answer": "Les travaux les plus utiles sont ceux qui clarifient l'état du véhicule, corrigent les problèmes majeurs et améliorent la présentation générale sans surinvestir inutilement. Selon le cas, une <a href=\"/services/inspection/\">inspection</a> ou un service d'<a href=\"/services/esthetique/\">esthétique VR</a> peut être pertinent avant la vente."
+          "answer": "Les travaux les plus utiles sont ceux qui clarifient l'état du véhicule, corrigent les problèmes majeurs et améliorent la présentation générale sans surinvestir inutilement. Selon le cas, une <a href=\"/services/inspection/\">inspection</a> ou une amélioration ciblée comme un <a href=\"/services/installation-panneaux-solaires/\">système solaire</a> peut être pertinente avant la vente."
         },
         {
           "question": "Pouvez-vous aider si je ne sais pas si je dois réparer ou vendre?",

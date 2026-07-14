@@ -239,77 +239,90 @@
       ]
     },
     {
-      "slug": "detailing",
-      "alternateSlug": "esthetique",
-      "title": "RV and Motorhome Detailing",
-      "h1": "RV and Motorhome Detailing in Gatineau",
-      "navLabel": "RV detailing",
-      "icon": "fas fa-spray-can-sparkles",
-      "serviceType": "RV and Motorhome Detailing",
-      "seoTitle": "RV and motorhome detailing in Gatineau | Cleaning, polishing and waxing",
-      "seoDescription": "RV and motorhome detailing in Gatineau with interior and exterior cleaning, polishing and waxing, available in the workshop or on the road depending on the vehicle and scope.",
-      "eyebrow": "RV cleaning, polishing and waxing",
-      "opening": "Clinique du VR offers a dedicated <strong>detailing service for RVs and motorhomes in Gatineau</strong>. We handle <strong>interior and exterior cleaning</strong>, <strong>polishing</strong> and <strong>waxing</strong> to give the vehicle a cleaner, brighter, and better-presented finish, either in the <strong>workshop</strong> or on the road depending on the vehicle and the assignment.",
-      "lead": "This service is built for <strong>RVs</strong> and <strong>motorhomes</strong> that need a real visual refresh before the season, after travel, or before resale.",
-      "intro": "<strong>RV detailing</strong> has to account for larger formats, exposed surfaces, road film, and long storage periods. We focus on <strong>cleaning</strong>, <strong>polishing</strong>, and <strong>waxing</strong> to improve the vehicle's overall appearance.",
-      "detailIntro": "This service is designed for <strong>RV</strong> and <strong>motorhome</strong> owners who want deeper cleaning, stronger visual improvement, better gloss, and a more polished finish. Depending on the vehicle, context, and site access, the work can happen in the <strong>workshop</strong> or as an on-location assignment.",
+      "slug": "solar-panel-installation",
+      "alternateSlug": "installation-panneaux-solaires",
+      "title": "RV Solar Panel Installation",
+      "h1": "RV solar panels",
+      "navLabel": "Solar panels",
+      "icon": "fas fa-solar-panel",
+      "serviceType": "RV solar system installation, supply and distribution",
+      "seoTitle": "RV Solar Panel Installation in Gatineau | Victron Energy",
+      "seoDescription": "Solar panel installation and equipment supply for RVs in Gatineau, including Victron Energy product distribution and integration.",
+      "eyebrow": "RV solar, autonomy and energy",
+      "opening": "Solar system installation and supply for RVs with <strong>Victron Energy products</strong>.",
+      "lead": "We size, supply and install the components around your real autonomy needs.",
+      "intro": "Panels, controllers, batteries, inverters and monitoring: a clear setup adapted to your vehicle.",
+      "heroPromise": "",
+      "detailIntro": "A good RV solar system is not just about adding a panel to the roof. Roof space, sealing points, cable routing, battery capacity, controller, inverter and monitoring all have to be considered. As an installer and distributor of Victron Energy products, we can supply the components and integrate them into a coherent system for your vehicle.",
       "highlights": [
-        "Interior and exterior RV cleaning",
-        "Polishing for visible surfaces",
-        "Waxing and finish enhancement",
-        "Workshop or mobile service"
+        "Solar panel supply",
+        "Victron Energy products",
+        "RV and motorhome installation",
+        "Off-grid or hybrid systems"
       ],
-      "includedTitle": "What our RV detailing service includes",
+      "includedTitle": "What we can handle",
       "included": [
-        "Interior and exterior cleaning for RVs and motorhomes",
-        "More thorough visual washing for road-exposed surfaces",
-        "Polishing to improve gloss and presentation",
-        "Waxing to protect and enhance the finish",
-        "Workshop or mobile execution depending on the vehicle and assignment"
+        "Review of the energy need and autonomy target",
+        "Roof, access and mounting constraint verification",
+        "Supply of solar panels, controllers, batteries, inverters and compatible accessories",
+        "Distribution and integration of Victron Energy products",
+        "Panel installation, cable routing and connection based on the project",
+        "Basic configuration, functional verification and user guidance"
       ],
-      "situationsTitle": "When this RV detailing service is most useful",
+      "situationsTitle": "When this solar service is useful",
       "situations": [
-        "When the RV or motorhome has lost its shine",
-        "After a season on the road or in storage",
-        "Before a sale or delivery",
-        "When you want a stronger cleaning, polishing, or waxing result"
+        "You want more autonomy while camping or travelling",
+        "You want to power equipment without relying only on campground hookup",
+        "You are planning a system with batteries, charge controller or inverter",
+        "Your existing solar system needs an upgrade or correction",
+        "You want to buy Victron Energy products with an RV-ready installation"
       ],
-      "processIntro": "We adapt the work to the vehicle format, the surface condition, and the result you want. The goal is to improve the appearance of an RV without treating it like a small car.",
+      "processIntro": "We work step by step to avoid poorly sized systems: understand your usage, choose components, protect the roof, install cleanly and verify operation.",
       "process": [
-        "Visual review of the RV or motorhome",
-        "Choice of cleaning, polishing, and finishing level",
-        "Workshop or on-location execution depending on the confirmed assignment",
-        "Final review and maintenance recommendations"
+        "Discussion about your equipment, travel habits and autonomy target",
+        "Review of the RV, roof, access points and existing components",
+        "Selection of solar panels, controllers, batteries, inverters and Victron Energy products",
+        "Equipment supply and installation planning",
+        "Installation, connection, configuration and verification",
+        "Explanation of system operation and maintenance points to monitor"
       ],
-      "whyChooseTitle": "Why choose Clinique du VR for RV and motorhome detailing?",
-      "whyChooseIntro": "A true RV detailing service is not just about rinsing a large vehicle. It needs an approach adapted to larger formats, exposed surfaces, storage realities, and the visual result you actually want.",
+      "whyChooseTitle": "Why choose Clinique du VR for your solar project?",
+      "whyChooseIntro": "An RV solar installation has to respect the vehicle, roof sealing, electrical capacity and the owner’s real usage. The goal is to deliver a useful, understandable and durable system.",
       "whyChoose": [
         {
-          "title": "Built for RVs",
-          "text": "We shape the service around RVs and motorhomes rather than trying to force a small-vehicle detailing approach onto a larger format."
+          "title": "Complete approach",
+          "text": "We can supply the equipment, install the components and support system commissioning."
         },
         {
-          "title": "Workshop or mobile",
-          "text": "Depending on the vehicle and context, the job can be confirmed in the workshop or on the road."
+          "title": "Victron Energy products",
+          "text": "We work with Victron Energy products to build robust, configurable and easy-to-monitor systems."
         },
         {
-          "title": "Clear visual improvement",
-          "text": "The cleaning, polishing, and waxing are structured to deliver a more presentable and better-finished vehicle."
+          "title": "RV-specific thinking",
+          "text": "We consider the roof, wiring, batteries, weight, access and watertightness of the vehicle."
+        },
+        {
+          "title": "Thoughtful sizing",
+          "text": "The system is selected around consumption, usage and the desired level of autonomy."
         }
       ],
-      "faqTitle": "Frequently asked questions about RV and motorhome detailing",
+      "faqTitle": "Frequently asked questions about RV solar panels",
       "faqs": [
         {
-          "question": "Do you handle cleaning, polishing, and waxing for RVs?",
-          "answer": "Yes. See our <a href=\"/en/services/detailing/\">RV and motorhome detailing page</a> for cleaning, polishing, and waxing, with work confirmed in the workshop or on the road depending on the vehicle and assignment."
+          "question": "Are you an installer and distributor of Victron Energy products?",
+          "answer": "Yes. We can supply Victron Energy products and integrate them into a solar system adapted to your RV."
         },
         {
-          "question": "Is this service only available in the workshop?",
-          "answer": "Not always. For RVs and motorhomes, the assignment can be confirmed in the workshop or on location depending on the vehicle, the work involved, and access conditions. See our <a href=\"/en/services/detailing/\">RV detailing page</a> for details."
+          "question": "Can you supply only the equipment?",
+          "answer": "Yes. Depending on the need, we can supply panels, controllers, batteries, inverters and accessories, or handle the full installation."
         },
         {
-          "question": "Is this the same offer as auto and truck detailing?",
-          "answer": "No. This page is dedicated to <a href=\"/en/services/detailing/\">RV and motorhome detailing</a>, with an approach adapted to larger vehicles and recreational-use needs."
+          "question": "Should the roof be inspected before installing a solar panel?",
+          "answer": "Yes, it is strongly recommended. The roof, seals and cable entry points should be clean and solid enough to receive the installation without increasing the risk of water intrusion."
+        },
+        {
+          "question": "Can you improve an existing solar system?",
+          "answer": "Yes. We can review the installed components and recommend upgrades based on observed limitations and your autonomy goal."
         }
       ]
     },
@@ -380,7 +393,7 @@
         },
         {
           "question": "Which repairs are worth doing before selling an RV?",
-          "answer": "The most useful work is the work that clarifies the vehicle's condition, corrects major issues, and improves the general presentation without unnecessary overinvestment. Depending on the case, an <a href=\"/en/services/inspection/\">inspection</a> or <a href=\"/en/services/detailing/\">RV detailing</a> may be worth doing before selling."
+          "answer": "The most useful work is the work that clarifies the vehicle's condition, corrects major issues, and improves the general presentation without unnecessary overinvestment. Depending on the case, an <a href=\"/en/services/inspection/\">inspection</a> or a targeted upgrade like a <a href=\"/en/services/solar-panel-installation/\">solar system</a> may be worth doing before selling."
         },
         {
           "question": "Can you help if I am not sure whether to repair or sell?",
