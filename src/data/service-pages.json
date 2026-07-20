@@ -1,358 +1,338 @@
 {
   "items": [
     {
-      "slug": "inspection",
-      "alternateSlug": "inspection",
-      "title": "Inspection de VR",
-      "h1": "Inspection de fuite d'eau de VR à Gatineau",
-      "navLabel": "Inspection",
-      "icon": "fas fa-clipboard-check",
-      "serviceType": "Inspection de fuite d'eau et détection d'humidité de VR",
-      "seoTitle": "Inspection de fuite d'eau de VR à Gatineau | Joints, toiture et humidité",
-      "seoDescription": "Inspection gratuite et sans rendez-vous en atelier à Gatineau pour détecter les fuites d'eau de VR, l'humidité et les problèmes de joints ou de toiture.",
-      "eyebrow": "Joints, toiture et infiltration d'eau",
-      "opening": "Clinique du VR offre l'<strong>inspection visuelle gratuite et sans rendez-vous en atelier à Gatineau</strong>, avec humidimètre, en mettant l'accent sur les <strong>joints</strong>, l'état de la <strong>toiture</strong> et les signes d'<strong>infiltration d'eau</strong>. Notre objectif est de repérer rapidement les zones à risque, les traces d'humidité et les problèmes d'étanchéité avant qu'ils causent plus de dommages.",
-      "lead": "Passez directement à notre <u>atelier de Gatineau</u>: l'<strong>inspection est toujours gratuite et sans rendez-vous en atelier</strong>. Nos inspections ciblent les problèmes de <strong>joints</strong>, de <strong>toiture</strong> et d'<strong>infiltration d'eau</strong>. Nous ne faisons pas d'inspection mécanique.",
-      "intro": "Nous réalisons gratuitement les inspections visuelles en <strong>atelier, sans rendez-vous</strong>. L'inspection sur la route est aussi offerte à un <strong>tarif variable selon le déplacement</strong>. L'humidimètre permet de mieux cibler les zones vulnérables à l'eau sur un <strong>VR</strong>, une <strong>roulotte</strong> ou une <strong>caravane</strong>.",
-      "heroPromise": "Détectez les <strong>infiltrations d'eau</strong> avant qu'elles ne deviennent des réparations coûteuses sur votre <strong>toit</strong>, vos <strong>murs</strong> ou votre <strong>plancher</strong>.",
-      "detailIntro": "Une inspection efficace ne consiste pas à tout vérifier sans priorité. Chez Clinique du VR, nous nous concentrons d'abord sur ce qui cause le plus souvent des dommages coûteux: les <strong>joints fatigués</strong>, les <strong>défauts de toiture</strong>, les <strong>ouvertures sensibles</strong> et les signes d'<strong>infiltration d'eau</strong>. L'humidimètre nous aide à confirmer les zones problématiques et à mieux orienter les prochaines étapes.",
+      "slug": "modification-amenagement",
+      "alternateSlug": "rv-modification-custom-builds",
+      "title": "Modification et aménagement de VR",
+      "h1": "Modification et amélioration de VR à Gatineau et Ottawa",
+      "navLabel": "Modification & aménagement",
+      "icon": "fas fa-sliders",
+      "serviceType": "Modification, amélioration, autonomie énergétique et aménagement de VR",
+      "seoTitle": "Modification et amélioration de VR à Gatineau | Solaire, lithium et aménagement",
+      "seoDescription": "Modification et aménagement de VR à Gatineau-Ottawa: solaire, lithium, Victron, chauffage, climatisation, plomberie, mobilier, rangement et projets sur mesure.",
+      "eyebrow": "Solaire, lithium, autonomie et projets sur mesure",
+      "opening": "Clinique du VR réalise des projets de <strong>modification de VR</strong>, d'<strong>aménagement intérieur</strong> et d'<strong>autonomie énergétique</strong> pour adapter votre véhicule à votre façon de voyager.",
+      "lead": "Solaire, lithium, Victron Energy, MPPT, onduleurs, chargeurs, Shore Power, chauffage diesel, chauffe-eau, MaxxAir, climatisation, plomberie, mobilier, rangement, lits, cuisines et projets sur mesure.",
+      "intro": "Chaque projet commence par votre usage réel: camping autonome, longs voyages, confort 4 saisons, ajout d'équipements, meilleure organisation intérieure ou mise à niveau d'un système existant.",
+      "heroPromise": "Parlez-nous de votre projet pour obtenir une solution plus autonome, plus confortable et mieux adaptée à votre VR.",
+      "detailIntro": "Une bonne modification de VR doit respecter la structure, l'électricité, la plomberie, l'étanchéité, l'accès aux composantes, le poids et l'équilibre du véhicule. Nous pouvons intégrer des panneaux solaires, batteries lithium, produits Victron Energy, contrôleurs MPPT, onduleurs, chargeurs, Shore Power, recharge par alternateur, chauffage diesel, chauffe-eau, MaxxAir, climatisation, mobilier, rangement, lits, cuisines et autres améliorations selon le projet.",
       "highlights": [
-        "Inspection visuelle avec humidimètre",
-        "Accent sur les joints et la toiture",
-        "Recherche de signes d'infiltration d'eau",
-        "Gratuite et sans rendez-vous en atelier"
+        "Solaire et lithium",
+        "Produits Victron Energy",
+        "Aménagement intérieur",
+        "Chauffage, eau et confort",
+        "Projets sur mesure"
       ],
-      "proofTitle": "Pourquoi cette inspection est souvent la meilleure première étape",
-      "proofIntro": "Quand la source d'une fuite n'est pas claire, l'erreur la plus coûteuse est d'<strong>attendre</strong> ou de <strong>réparer au hasard</strong>. Une inspection ciblée permet de confirmer rapidement la zone à risque et la bonne prochaine étape.",
+      "proofTitle": "Une modification utile commence par le bon cadrage",
+      "proofIntro": "Le bon projet améliore l'autonomie, le confort et l'usage du véhicule sans créer de problèmes d'accès, de poids, d'électricité, de plomberie ou d'étanchéité. C'est ce cadrage qui distingue une vraie amélioration d'un simple ajout d'équipement.",
       "proofStats": [
-        {
-          "value": "Gratuite",
-          "label": "Sans rendez-vous en atelier"
-        },
-        {
-          "value": "Tarif variable",
-          "label": "Inspection sur la route selon le déplacement"
-        },
-        {
-          "value": "Humidimètre",
-          "label": "Inclus pour appuyer le constat visuel"
-        }
+        { "value": "Solaire + lithium", "label": "Autonomie énergétique et recharge" },
+        { "value": "Victron", "label": "MPPT, onduleurs, chargeurs et monitoring" },
+        { "value": "Sur mesure", "label": "Plan adapté au véhicule et à l'usage" }
       ],
       "proofPoints": [
         {
-          "title": "Rapide à déclencher",
-          "text": "Quand vous avez un doute sur l'<strong>eau</strong>, les <strong>joints</strong> ou la <strong>toiture</strong>, l'inspection permet de ne pas perdre de temps sur une mauvaise intervention."
+          "title": "Usage avant équipement",
+          "text": "Nous partons de votre façon de voyager, de vos appareils et de votre autonomie souhaitée avant de choisir les composantes à installer."
         },
         {
-          "title": "Orientée coût évité",
-          "text": "Identifier tôt une <strong>infiltration</strong> peut éviter qu'un simple joint devienne un <strong>plancher</strong>, un <strong>mur</strong> ou un <strong>plafond</strong> à reprendre."
+          "title": "Systèmes cohérents",
+          "text": "Solaire, batteries, charge, Shore Power, ventilation, chauffage, eau et plomberie doivent fonctionner ensemble."
         },
         {
-          "title": "Lecture claire ensuite",
-          "text": "Vous savez plus vite si la bonne suite est un <strong>entretien</strong>, une <strong>réparation d'étanchéité</strong> ou une remise en état plus importante."
+          "title": "Installation pensée pour le VR",
+          "text": "Le passage de câbles, la toiture, le poids, la ventilation, le rangement et l'accès aux composantes sont pris en compte."
         }
       ],
-      "caseStudiesTitle": "Cas réels d'inspection et d'infiltration",
-      "caseStudiesIntro": "Ces cas montrent comment une inspection bien orientée aide à confirmer la fuite, à prioriser les travaux et à limiter les dommages cachés.",
+      "caseStudiesTitle": "Types de projets Modification & Aménagement",
+      "caseStudiesIntro": "Ces exemples représentent les familles de projets que la page doit mettre de l'avant pour différencier Clinique du VR d'un atelier de réparation traditionnel.",
       "caseStudies": [
         {
-          "title": "Infiltration autour du toit sur un VR à Gatineau",
-          "meta": "Inspection ciblée • Gatineau",
-          "text": "Humidité confirmée autour d'une zone de toiture et des joints fatigués avant que les dommages intérieurs ne s'étendent.",
-          "href": "/realisations/infiltration-toiture-vr-gatineau/"
+          "title": "Autonomie solaire et lithium",
+          "meta": "Victron • MPPT • onduleur • recharge",
+          "text": "Dimensionnement et intégration d'un système énergétique pour alimenter les appareils, améliorer la recharge et prolonger l'autonomie hors branchement."
         },
         {
-          "title": "Traces d'eau intérieures sur une roulotte à Ottawa",
-          "meta": "Inspection + plan de réparation • Ottawa",
-          "text": "Le diagnostic a permis de distinguer ce qui relevait du scellement et ce qui demandait déjà une réparation intérieure.",
-          "href": "/realisations/reparation-interieure-vr-apres-infiltration-ottawa/"
+          "title": "Confort 4 saisons",
+          "meta": "Chauffage • ventilation • eau chaude",
+          "text": "Ajout ou amélioration de chauffage diesel, chauffe-eau, ventilation MaxxAir, climatisation ou plomberie selon la façon d'utiliser le VR."
+        },
+        {
+          "title": "Aménagement intérieur plus fonctionnel",
+          "meta": "Mobilier • rangement • lits • cuisine",
+          "text": "Modification de lits, rangement, mobilier, cuisine ou zones de vie pour rendre le véhicule plus pratique au quotidien."
         }
       ],
-      "includedTitle": "Ce que nous vérifions",
+      "includedTitle": "Modifications possibles",
       "included": [
-        "Inspection visuelle des <strong>joints</strong>, scellants et ouvertures",
-        "Lecture à l'<strong>humidimètre</strong> dans les zones à risque",
-        "État visible de la <strong>toiture</strong> et des points sensibles",
-        "Recherche de traces d'<strong>infiltration d'eau</strong> ou d'humidité",
-        "Observation des zones faibles autour des ouvertures et raccords"
+        "Panneaux solaires, contrôleurs MPPT et produits <strong>Victron Energy</strong>",
+        "Batteries <strong>lithium</strong>, onduleurs, chargeurs, DC-DC, recharge par alternateur et Shore Power",
+        "Chauffage diesel, chauffe-eau, ventilation MaxxAir, climatisation et confort 3 ou 4 saisons",
+        "Plomberie, eau propre, rangement, mobilier, modification de lits, cuisines et aménagement intérieur",
+        "Correction d'installations existantes qui manquent de cohérence ou de capacité",
+        "Mise à niveau ou correction de systèmes existants",
+        "Projets sur mesure selon le véhicule et l'usage"
       ],
-      "situationsTitle": "Quand demander une inspection",
+      "situationsTitle": "Quand demander une modification",
       "situations": [
-        "Quand vous soupçonnez une <strong>infiltration d'eau</strong>",
-        "Quand vous voulez vérifier l'état des <strong>joints</strong> ou de la <strong>toiture</strong>",
-        "Avant de planifier une <strong>réparation d'étanchéité</strong>",
-        "Quand vous voulez confirmer rapidement une zone à risque"
+        "Vous voulez plus d'autonomie sans dépendre uniquement des terrains de camping",
+        "Vous voulez ajouter du solaire, du lithium, un onduleur ou un système Victron Energy",
+        "Votre intérieur manque de rangement, de confort ou de fonctionnalité",
+        "Vous préparez un projet de voyage prolongé, autonome ou 4 saisons",
+        "Vous voulez améliorer un système existant plutôt que tout recommencer"
       ],
-      "processIntro": "Notre processus est simple et orienté vers l'<strong>étanchéité</strong>. Le but est de confirmer l'état visible des <strong>joints</strong> et de la <strong>toiture</strong>, de détecter les signes d'humidité et de vous dire clairement si une réparation doit être envisagée rapidement.",
+      "processIntro": "Nous validons d'abord l'objectif, le véhicule, les contraintes techniques, les composantes existantes, le niveau d'autonomie souhaité et le budget approximatif avant de recommander une solution.",
       "process": [
-        "Prise de contact et validation du type d'<strong>inspection</strong>",
-        "Inspection visuelle des <strong>joints</strong>, de la <strong>toiture</strong> et des zones sensibles",
-        "Vérification à l'<strong>humidimètre</strong> dans les secteurs à risque",
-        "Retour clair sur les traces d'<strong>infiltration</strong> et les prochaines étapes recommandées"
+        "Discussion sur votre façon de voyager, vos appareils, votre confort attendu et vos priorités",
+        "Validation du VR, de la toiture, des accès, des systèmes existants et des contraintes d'installation",
+        "Choix des composantes: solaire, lithium, Victron, recharge, chauffage, eau, ventilation ou aménagement intérieur",
+        "Priorisation des travaux pour respecter le budget, le calendrier et l'usage réel",
+        "Installation en atelier, tests, vérification de fonctionnement et explication de l'utilisation"
       ],
-      "whyChooseTitle": "Pourquoi choisir Clinique du VR pour l'inspection d'infiltration?",
-      "whyChooseIntro": "L'<strong>infiltration d'eau</strong> est l'un des problèmes les plus coûteux sur un VR. Une inspection utile doit donc aller droit au but: confirmer l'état des <strong>joints</strong>, observer la <strong>toiture</strong> et mesurer l'humidité dans les zones qui vieillissent mal.",
+      "whyChooseTitle": "Pourquoi choisir Clinique du VR pour modifier votre VR?",
+      "whyChooseIntro": "Un projet de modification touche souvent plusieurs systèmes à la fois. Notre approche vise une solution utile, compréhensible et durable.",
       "whyChoose": [
         {
-          "title": "Focus sur l'eau",
-          "text": "Nous concentrons l'inspection sur les zones les plus souvent touchées par l'<strong>infiltration d'eau</strong>, plutôt que de diluer le service dans une vérification générale."
+          "title": "Vision complète",
+          "text": "Nous considérons l'électricité, l'étanchéité, la plomberie, le chauffage, la ventilation, le poids, l'accès aux composantes et l'usage réel du véhicule."
         },
         {
-          "title": "Humidimètre inclus",
-          "text": "L'utilisation de l'<strong>humidimètre</strong> permet de mieux confirmer la présence d'humidité dans les zones à risque et d'appuyer le constat visuel."
+          "title": "Autonomie énergétique",
+          "text": "Nous pouvons intégrer solaire, lithium, Victron Energy, recharge par alternateur, Shore Power, onduleurs et monitoring dans une solution cohérente."
         },
         {
-          "title": "Gratuite en atelier",
-          "text": "L'<strong>inspection est toujours gratuite et sans rendez-vous en atelier</strong>. Pour une inspection sur la route, le <strong>tarif varie selon le déplacement</strong>."
+          "title": "Projet évolutif",
+          "text": "Le plan peut être complet ou progressif selon votre véhicule, votre budget, votre calendrier et les systèmes déjà en place."
         }
       ],
-      "faqTitle": "Questions fréquentes sur l'inspection de VR",
+      "faqTitle": "Questions fréquentes sur la modification de VR",
       "faqs": [
         {
-          "question": "Combien coûte une inspection de VR?",
-          "answer": "L'<strong>inspection est toujours gratuite et sans rendez-vous en atelier</strong>. Pour une inspection sur la route, le <strong>tarif est variable selon le déplacement</strong>. Contactez-nous pour obtenir les détails."
+          "question": "Pouvez-vous installer un système solaire et lithium complet?",
+          "answer": "Oui. Nous pouvons évaluer le besoin, fournir les composantes et installer un système avec panneaux solaires, batteries lithium, contrôleurs MPPT, onduleurs, chargeurs, DC-DC, Shore Power, monitoring et produits Victron Energy selon le projet."
         },
         {
-          "question": "Que vérifiez-vous principalement lors d'une inspection?",
-          "answer": "Nous nous concentrons principalement sur les <strong>joints</strong>, l'état de la <strong>toiture</strong> et les signes d'<strong>infiltration d'eau</strong>. Nous utilisons aussi un <strong>humidimètre</strong> dans les zones à risque."
+          "question": "Faites-vous des projets sur mesure?",
+          "answer": "Oui. Les modifications peuvent toucher l'électricité, la plomberie, le chauffage, la ventilation, la climatisation, le rangement, le mobilier, les lits, la cuisine ou d'autres éléments selon le véhicule."
         },
         {
-          "question": "Faites-vous des inspections mécaniques?",
-          "answer": "Non. Nous ne faisons pas d'inspection mécanique. Si vous avez surtout un doute sur l'étanchéité, consultez notre page <a href=\"/services/inspection/\">inspection de VR</a>. Nous effectuons toutefois l'entretien des freins à notre atelier seulement, sans service sur la route."
+          "question": "Puis-je améliorer un système déjà installé?",
+          "answer": "Oui. Nous pouvons évaluer un système existant et proposer une mise à niveau ou une correction si les composantes et l'installation le permettent."
+        },
+        {
+          "question": "Est-ce que la modification doit être complète dès le départ?",
+          "answer": "Non. Un projet peut être progressif. Nous pouvons prioriser les travaux les plus utiles d'abord, par exemple l'énergie, la recharge, le chauffage, la ventilation ou l'aménagement intérieur."
         }
       ]
     },
     {
-      "slug": "entretien",
-      "alternateSlug": "maintenance",
-      "title": "Entretien complet de VR",
-      "h1": "Entretien complet de roulotte et de VR à Gatineau",
-      "navLabel": "Entretien",
-      "icon": "fas fa-screwdriver-wrench",
-      "serviceType": "Entretien complet de roulotte et de VR",
-      "seoTitle": "Entretien de VR à Gatineau | Diagnostic, chauffage, climatisation et étanchéité",
-      "seoDescription": "Entretien de roulotte et de VR à Gatineau: diagnostic, réparation préventive, étanchéité, freins, essieux, climatisation, chauffage, électricité et électronique.",
-      "eyebrow": "Entretien, diagnostic et prévention",
-      "opening": "L'<strong>entretien de VR à Gatineau</strong> chez Clinique du VR couvre bien plus que les joints. Nous aidons à garder votre <strong>roulotte</strong> ou votre <strong>VR</strong> fiable avec l'entretien préventif, le <strong>diagnostic</strong>, l'<strong>étanchéité</strong>, les <strong>freins</strong>, les <strong>essieux</strong>, la <strong>climatisation</strong>, le <strong>chauffage</strong>, l'<strong>électricité</strong> et l'<strong>électronique</strong>.",
-      "lead": "Avant la saison, après l'entreposage ou dès qu'un système semble moins fiable, un entretien complet permet de vérifier les points importants et d'agir avant qu'une petite faiblesse devienne une réparation plus coûteuse. Le service est offert en <strong>atelier</strong> ou sur la route selon le type d'intervention.",
-      "intro": "Nous prenons en charge l'entretien général de la <strong>roulotte</strong>, du <strong>VR</strong> ou de la <strong>caravane</strong>: joints, toiture, membrane, composantes de roulement, appareils, systèmes électriques et électroniques. Le but est de comprendre l'état réel du véhicule, corriger ce qui doit l'être et vous donner des prochaines étapes claires.",
-      "heroPromise": "Un <strong>entretien fait au bon moment</strong> aide à prévenir les pannes, les infiltrations, les problèmes de confort et les réparations plus lourdes.",
-      "detailIntro": "Un entretien efficace doit viser les composantes qui protègent le véhicule, mais aussi les systèmes qui rendent le VR fonctionnel et confortable. Nous vérifions les points sensibles à l'eau, les joints, la toiture et la membrane, tout en couvrant aussi les freins, les essieux, la climatisation, le chauffage, l'électricité, l'électronique et les diagnostics selon les symptômes observés.",
+      "slug": "van-life",
+      "alternateSlug": "van-life-conversion",
+      "title": "Conversion et aménagement Van Life",
+      "h1": "Conversion et aménagement Van Life à Gatineau-Ottawa",
+      "navLabel": "Van Life",
+      "icon": "fas fa-van-shuttle",
+      "serviceType": "Conversion complète et partielle de vans Van Life",
+      "seoTitle": "Conversion Van Life à Gatineau-Ottawa | Transit, ProMaster et Sprinter",
+      "seoDescription": "Conversion Van Life à Gatineau-Ottawa pour Ford Transit, Ram ProMaster et Mercedes-Benz Sprinter: isolation, mobilier, solaire, lithium, eau, chauffage et solutions 4 saisons.",
+      "eyebrow": "Conversions complètes ou partielles",
+      "opening": "Clinique du VR accompagne les projets de <strong>conversion Van Life</strong>, de l'aménagement partiel à la conversion complète de vans comme Ford Transit, Ram ProMaster et Mercedes-Benz Sprinter.",
+      "lead": "Isolation, plancher, mobilier, cuisine, eau, chauffage diesel, solaire, lithium, Victron, éclairage, ventilation et solutions 3 ou 4 saisons.",
+      "intro": "Vous pouvez apporter votre propre van ou être accompagné dans la définition du projet avant l'achat du véhicule.",
+      "heroPromise": "Démarrez un projet Van Life cohérent avec votre véhicule, votre budget et votre façon de voyager.",
+      "detailIntro": "Une conversion Van Life réussie doit équilibrer l'espace, le poids, l'électricité, l'eau, le chauffage, la ventilation, le rangement et la facilité d'entretien. Nous pouvons prendre en charge des conversions partielles ou complètes avec isolation, insonorisation, plancher, mobilier, cuisine, eau propre, eaux grises, douche, toilette, chauffage diesel, solaire, lithium, Victron, éclairage, ventilation, climatisation et solutions 4 saisons.",
       "highlights": [
-        "Diagnostic",
-        "Climatisation et chauffage",
-        "Électricité et électronique",
-        "Atelier ou mobile"
+        "Conversion partielle",
+        "Conversion complète",
+        "Transit, ProMaster, Sprinter",
+        "Solutions 4 saisons"
       ],
-      "proofTitle": "Ce que protège un bon entretien",
-      "proofIntro": "L'entretien n'est pas une dépense cosmétique. C'est ce qui garde l'eau à l'extérieur et ce qui évite le plus souvent les dossiers de toiture, de murs et de plancher.",
+      "proofTitle": "Trois niveaux de projet Van Life",
+      "proofIntro": "Le bon forfait dépend du véhicule, du nombre de voyageurs, de l'usage 3 ou 4 saisons, du niveau d'autonomie et du budget approximatif.",
       "proofStats": [
         {
-          "value": "2x / an",
-          "label": "Rythme recommandé avant et après saison"
+          "value": "Essentielle",
+          "label": "Isolation, plancher, électricité de base, ventilation et mobilier essentiel"
         },
         {
-          "value": "Mur + toit",
-          "label": "Joints et zones sensibles traités"
+          "value": "Aventure",
+          "label": "Solaire, lithium, chauffage, eau, cuisine et autonomie prolongée"
         },
         {
-          "value": "Atelier ou mobile",
-          "label": "Selon le type d'intervention"
+          "value": "Sur mesure",
+          "label": "Conception complète, systèmes avancés et équipements premium"
         }
       ],
       "proofPoints": [
         {
-          "title": "Prévenir avant les gros travaux",
-          "text": "Remettre des joints fatigués en état au bon moment coûte moins qu'un dossier de dommages d'eau déjà avancé."
+          "title": "Conversion essentielle",
+          "text": "Une base fonctionnelle pour structurer le véhicule sans viser une autonomie complète."
         },
         {
-          "title": "Mieux protéger la toiture",
-          "text": "La toiture, la membrane et les ouvertures sont les premières zones qui méritent une vigilance régulière."
+          "title": "Conversion aventure",
+          "text": "Un projet orienté voyages plus longs avec énergie, eau, cuisine et confort prolongé."
         },
         {
-          "title": "Décider plus tôt",
-          "text": "Un entretien recommandé réduit les surprises juste avant la saison ou après une période d'entreposage."
+          "title": "Conversion sur mesure",
+          "text": "Une conception personnalisée avec systèmes électriques avancés, douche, eau chaude et mobilier adapté."
         }
       ],
-      "caseStudiesTitle": "Cas réels liés à l'entretien préventif",
-      "caseStudiesIntro": "Ces exemples montrent ce qu'un entretien des joints et du scellement peut éviter quand il est fait avant que l'eau s'installe.",
+      "caseStudiesTitle": "Réalisations Van Life",
+      "caseStudiesIntro": "Les projets peuvent être présentés par catégorie: Van Life, solaire et lithium, modifications, toitures, infiltrations et réparations majeures.",
       "caseStudies": [
         {
-          "title": "Remplacement de scellants extérieurs à Gatineau",
-          "meta": "Étanchéité préventive • Gatineau",
-          "text": "Des joints extérieurs fissurés ont été repris avant qu'ils ne laissent l'eau atteindre les matériaux intérieurs.",
-          "href": "/realisations/reprise-scellants-vr-gatineau/"
+          "title": "Conversion partielle de van",
+          "meta": "Van Life",
+          "text": "Aménagement fonctionnel avec mobilier, ventilation et préparation électrique."
         },
         {
-          "title": "Inspection avant saison sur un VR d'Ottawa",
-          "meta": "Entretien recommandé • Ottawa",
-          "text": "Les zones faibles ont été ciblées avant les premiers voyages pour éviter un problème d'infiltration en cours de saison.",
-          "href": "/realisations/infiltration-toiture-vr-gatineau/"
+          "title": "Autonomie solaire pour van",
+          "meta": "Solaire & lithium",
+          "text": "Intégration de composantes solaires et lithium pour soutenir les voyages hors réseau."
         }
       ],
-      "includedTitle": "Ce que nous faisons en entretien",
+      "includedTitle": "Ce que peut inclure une conversion",
       "included": [
-        "Entretien préventif avant saison, après entreposage ou avant un long déplacement",
-        "Diagnostic des problèmes observés: bruit, odeur, humidité, système intermittent ou appareil qui ne fonctionne pas correctement",
-        "Vérification et entretien des joints, de la toiture, du scellement et de la membrane TPO ou EPDM",
-        "Entretien des freins et des essieux en atelier",
-        "Vérification des systèmes de climatisation et de chauffage selon le problème rapporté",
-        "Vérification électrique et électronique: alimentation 12 V, 110 V, batteries, lumières, panneaux, contrôles et accessoires",
-        "Service offert en atelier ou sur la route selon le type de travail"
+        "Isolation, insonorisation, plancher, murs et finition intérieure",
+        "Mobilier, rangement, lit, cuisine et zones de vie",
+        "Eau propre, eaux grises, douche, toilette et chauffe-eau selon le projet",
+        "Chauffage diesel, ventilation, climatisation et solutions 4 saisons",
+        "Solaire, lithium, Victron, éclairage, prises et monitoring",
+        "Conversion complète ou partielle de Ford Transit, Ram ProMaster ou Mercedes-Benz Sprinter"
       ],
-      "situationsTitle": "Quand faire l'entretien",
+      "situationsTitle": "Pour quel type de projet",
       "situations": [
-        "Avant la saison ou après une période d'entreposage",
-        "Quand un appareil, un système électrique, le chauffage ou la climatisation fonctionne mal",
-        "Quand vous voulez vérifier les freins, les essieux, les batteries, les lumières ou les accessoires",
-        "Quand les joints, la toiture ou les murs montrent des signes d'usure au scellement",
-        "Quand vous voulez faire l'entretien en atelier ou directement sur place"
+        "Vous avez déjà un Ford Transit, Ram ProMaster ou Mercedes-Benz Sprinter",
+        "Vous magasinez un véhicule et voulez valider le potentiel avant achat",
+        "Vous voulez une conversion partielle avec seulement les éléments essentiels",
+        "Vous voulez une conversion complète orientée autonomie et confort",
+        "Vous voulez une solution 3 ou 4 saisons avec solaire, lithium et chauffage"
       ],
-      "processIntro": "Notre approche est simple: partir de l'état réel du véhicule et du problème observé, puis prioriser les travaux utiles. On distingue ce qui relève de l'entretien, du diagnostic ou de la réparation pour éviter de remplacer des pièces au hasard.",
+      "processIntro": "Le formulaire ou la première discussion doit clarifier le véhicule, l'année, la longueur, le nombre de voyageurs, l'usage 3 ou 4 saisons, les équipements souhaités, le budget approximatif et la date visée.",
       "process": [
-        "Écoute du problème, du type de VR et de l'historique d'entretien",
-        "Vérification des systèmes concernés: étanchéité, roulement, chauffage, climatisation, électricité, électronique ou accessoires",
-        "Diagnostic ou entretien ciblé selon ce que les observations montrent réellement",
-        "Intervention en atelier ou sur la route selon le type de travail",
-        "Retour clair sur les zones traitées, les risques observés et les prochaines étapes"
+        "Validation du véhicule ou accompagnement avant choix du véhicule",
+        "Discussion sur conversion partielle ou complète, voyageurs et usage prévu",
+        "Choix des systèmes: solaire, lithium, eau, chauffage, douche, cuisine et rangement",
+        "Conception du plan de travail et estimation sur soumission",
+        "Installation en atelier, tests et ajustements finaux"
       ],
-      "whyChooseTitle": "Pourquoi choisir Clinique du VR pour l'entretien?",
-      "whyChooseIntro": "Un VR combine plusieurs systèmes: structure, toiture, roulement, appareils, chauffage, climatisation, électricité et électronique. Une bonne intervention commence par une lecture claire de l'ensemble, puis par des travaux ciblés selon le besoin réel.",
+      "whyChooseTitle": "Pourquoi choisir Clinique du VR pour votre projet Van Life?",
+      "whyChooseIntro": "Une van aménagée combine les contraintes d'un véhicule et celles d'un petit espace de vie. La conception doit rester pratique, durable et facile à utiliser.",
       "whyChoose": [
         {
-          "title": "Vision complète du VR",
-          "text": "Nous ne regardons pas seulement les joints. Nous pouvons aussi vérifier les systèmes de confort, de roulement, d'électricité, d'électronique et les composantes liées à l'utilisation réelle du véhicule."
+          "title": "Approche réaliste",
+          "text": "Nous adaptons le projet au véhicule, au budget et à votre façon réelle de voyager."
         },
         {
-          "title": "Diagnostic avant travaux",
-          "text": "Quand un problème n'est pas clair, nous cherchons d'abord à comprendre la cause avant de recommander l'entretien ou la réparation appropriée."
+          "title": "Autonomie intégrée",
+          "text": "Solaire, lithium, eau, chauffage, ventilation et éclairage sont pensés comme un ensemble."
         },
         {
-          "title": "Service flexible",
-          "text": "Le service peut être effectué à l'atelier ou sur la route selon le type de besoin, l'emplacement du véhicule et la nature de l'intervention."
+          "title": "Sur soumission",
+          "text": "Les conversions sont affichées sur soumission afin de refléter le niveau de personnalisation et les équipements choisis."
         }
       ],
-      "faqTitle": "Questions fréquentes sur l'entretien de VR",
+      "faqTitle": "Questions fréquentes sur la conversion Van Life",
       "faqs": [
         {
-          "question": "Quels types d'entretien faites-vous sur un VR?",
-          "answer": "Nous faisons l'entretien général de roulottes et de VR: joints, toiture, membrane, freins, essieux, diagnostic, climatisation, chauffage, électricité, électronique et vérifications préventives selon le véhicule et les symptômes observés."
+          "question": "Faites-vous des conversions complètes et partielles?",
+          "answer": "Oui. Le projet peut être essentiel, aventure ou entièrement sur mesure selon le véhicule, l'usage, les équipements souhaités et le budget."
         },
         {
-          "question": "Pouvez-vous diagnostiquer un problème avant de réparer?",
-          "answer": "Oui. Quand le problème n'est pas évident, le diagnostic sert à confirmer l'origine du symptôme avant de décider si la bonne suite est un entretien, une réparation ou une vérification plus poussée."
+          "question": "Quels véhicules pouvez-vous aménager?",
+          "answer": "Nous pouvons travailler sur des vans comme Ford Transit, Ram ProMaster et Mercedes-Benz Sprinter, selon l'état du véhicule et les contraintes du projet."
         },
         {
-          "question": "Offrez-vous le service en atelier ou sur la route?",
-          "answer": "Oui. Plusieurs entretiens peuvent être faits en atelier ou sur la route, selon le type de travail. Certains travaux, comme l'entretien des freins et des essieux, se font à l'atelier."
+          "question": "Affichez-vous des prix fixes?",
+          "answer": "Les conversions sont généralement sur soumission, car le coût dépend du véhicule, des systèmes électriques, de l'eau, du chauffage, du mobilier et du niveau de finition."
         }
       ]
     },
     {
-      "slug": "rexoseal",
-      "alternateSlug": "rexoseal",
-      "title": "Rexoseal pour toiture de VR",
-      "h1": "Rexoseal pour toiture de VR à Gatineau",
-      "navLabel": "Rexoseal",
-      "icon": "fas fa-shield-halved",
-      "serviceType": "Vente et application de Rexoseal pour toiture de VR",
-      "seoTitle": "Rexoseal pour toiture de VR à Gatineau | Vente et application",
-      "seoDescription": "Rexoseal pour toiture de VR à Gatineau: produit vendu pour application par le propriétaire ou service d'application professionnelle en atelier.",
-      "eyebrow": "Protection de toiture de VR",
-      "opening": "Clinique du VR offre <strong>Rexoseal comme service distinct</strong> pour protéger et remettre en état certaines toitures de VR. Vous pouvez <strong>acheter le produit pour effectuer vous-même l'application</strong> ou nous confier le travail à notre <strong>atelier de Gatineau</strong>.",
-      "lead": "Deux options sont offertes: la <strong>vente des produits Rexoseal</strong> avec les renseignements nécessaires pour votre projet, ou un <strong>service d'application en atelier</strong> après validation de l'état de la toiture.",
-      "intro": "Avant une application, il faut vérifier le type de surface, l'adhérence du support et les réparations nécessaires. Rexoseal protège une toiture compatible, mais ne remplace pas la correction d'une infiltration active ou d'un support déjà endommagé.",
-      "heroPromise": "Achetez Rexoseal pour le faire vous-même ou confiez-nous l'<strong>application complète en atelier</strong>.",
-      "detailIntro": "Notre offre Rexoseal est séparée de l'entretien régulier. Elle comprend la <strong>vente du produit</strong> pour les propriétaires qui souhaitent réaliser les travaux eux-mêmes et le <strong>service d'application à l'atelier</strong> pour ceux qui préfèrent nous confier la préparation et l'application.",
+      "slug": "installation-panneaux-solaires",
+      "alternateSlug": "solar-panel-installation",
+      "title": "Installation de panneaux solaires pour VR",
+      "h1": "Installation de panneaux solaires et batteries lithium pour VR et Van Life",
+      "navLabel": "Solaire & lithium",
+      "icon": "fas fa-solar-panel",
+      "serviceType": "Installation, fourniture et distribution de solutions solaires pour VR",
+      "seoTitle": "Installation solaire et batteries lithium pour VR à Gatineau | Victron",
+      "seoDescription": "Installation de panneaux solaires, batteries lithium, Victron, MPPT, onduleurs, DC-DC, Shore Power et monitoring pour VR et Van Life à Gatineau.",
+      "eyebrow": "Solaire VR, autonomie et énergie",
+      "opening": "Installation et fourniture de systèmes solaires pour VR avec <strong>produits Victron Energy</strong>.",
+      "lead": "Victron Energy, MPPT, batteries lithium, onduleurs, panneaux solaires, DC-DC, recharge par alternateur, Shore Power, monitoring et mise à niveau de systèmes existants.",
+      "intro": "Panneaux, contrôleurs, batteries, onduleurs et surveillance: une solution claire, adaptée à votre véhicule.",
+      "heroPromise": "",
+      "detailIntro": "Un bon système solaire de VR ne se limite pas à ajouter un panneau sur le toit. Il faut valider la surface disponible, les points d’étanchéité, le passage du câblage, la batterie, le contrôleur, l’onduleur et la façon de surveiller le système. Comme installateur et distributeur de produits Victron Energy, nous pouvons fournir les composantes et les intégrer dans une solution cohérente pour votre véhicule.",
       "highlights": [
-        "Produits Rexoseal vendus sur place",
-        "Option pour application par le propriétaire",
-        "Application professionnelle en atelier",
-        "Validation de la toiture avant les travaux"
+        "Panneaux solaires",
+        "Batteries lithium",
+        "Victron Energy",
+        "Mise à niveau existante"
       ],
-      "proofTitle": "Deux façons de profiter de Rexoseal",
-      "proofIntro": "Choisissez l'option qui correspond à votre expérience, à l'état de la toiture et au niveau d'accompagnement recherché.",
-      "proofStats": [
-        {
-          "value": "Vente",
-          "label": "Produit disponible pour le faire vous-même"
-        },
-        {
-          "value": "Atelier",
-          "label": "Application réalisée par notre équipe"
-        },
-        {
-          "value": "Validation",
-          "label": "Compatibilité de la toiture vérifiée avant le service"
-        }
-      ],
-      "proofPoints": [
-        {
-          "title": "Option autonome",
-          "text": "Achetez les produits Rexoseal nécessaires et réalisez vous-même l'application sur une toiture compatible."
-        },
-        {
-          "title": "Service clé en main",
-          "text": "Confiez-nous la préparation et l'application du produit directement à notre atelier."
-        },
-        {
-          "title": "Bonne solution au bon endroit",
-          "text": "Nous vérifions d'abord si Rexoseal convient à la surface et si des réparations doivent être faites avant l'application."
-        }
-      ],
-      "includedTitle": "Nos options Rexoseal",
+      "includedTitle": "Ce que nous pouvons prendre en charge",
       "included": [
-        "Vente de produits Rexoseal pour application par le propriétaire",
-        "Conseils de base pour choisir les produits adaptés au projet",
-        "Évaluation de la compatibilité et de l'état visible de la toiture",
-        "Préparation de la surface lorsque l'application est faite en atelier",
-        "Application Rexoseal en atelier",
-        "Recommandations d'entretien après l'application"
+        "Analyse du besoin énergétique et du niveau d’autonomie souhaité",
+        "Vérification de la toiture, des accès et des contraintes de montage",
+        "Fourniture de panneaux solaires, contrôleurs, batteries, onduleurs et accessoires compatibles",
+        "Distribution et intégration de produits Victron Energy",
+        "Installation des panneaux, passage du câblage et raccordement selon le projet",
+        "Configuration de base, vérification du fonctionnement et explication de l’utilisation"
       ],
-      "situationsTitle": "Quand considérer Rexoseal",
+      "situationsTitle": "Quand ce service solaire est utile",
       "situations": [
-        "Quand la toiture est compatible et demande une nouvelle protection",
-        "Quand vous voulez acheter le produit et effectuer vous-même les travaux",
-        "Quand vous préférez une application complète réalisée en atelier",
-        "Quand vous voulez faire valider la surface avant de choisir la solution"
+        "Vous voulez plus d’autonomie en camping ou sur la route",
+        "Vous voulez alimenter des appareils sans dépendre uniquement du branchement au terrain",
+        "Vous préparez une installation avec batteries, contrôleur de charge ou onduleur",
+        "Votre système solaire actuel doit être amélioré ou corrigé",
+        "Vous voulez acheter des produits Victron Energy avec une installation adaptée au VR"
       ],
-      "processIntro": "Le processus dépend de l'option choisie. Pour une application en atelier, nous validons la toiture avant de préparer la surface et d'appliquer le système. Pour un achat autonome, nous vous orientons vers les produits disponibles pour votre projet.",
+      "processIntro": "Nous avançons par étapes pour éviter les systèmes mal dimensionnés: comprendre votre usage, choisir les composantes, protéger la toiture, installer proprement et valider le fonctionnement.",
       "process": [
-        "Discussion sur la toiture et l'option souhaitée",
-        "Validation de la compatibilité du support",
-        "Vente des produits pour une application autonome ou planification du service en atelier",
-        "Préparation et application à l'atelier lorsque ce service est choisi",
-        "Recommandations pour l'entretien de la protection"
+        "Discussion sur vos appareils, votre façon de voyager et l’autonomie souhaitée",
+        "Évaluation du VR, de la toiture, des accès et des composantes existantes",
+        "Sélection des panneaux, contrôleurs, batteries, onduleurs et produits Victron Energy adaptés",
+        "Fourniture des équipements et planification de l’installation",
+        "Installation, raccordement, configuration et vérification",
+        "Explication du fonctionnement et des points d’entretien à surveiller"
       ],
-      "whyChooseTitle": "Pourquoi choisir Clinique du VR pour Rexoseal?",
-      "whyChooseIntro": "Nous offrons une solution flexible selon que vous souhaitez faire les travaux vous-même ou confier l'application à un atelier spécialisé en VR.",
+      "whyChooseTitle": "Pourquoi choisir Clinique du VR pour votre projet solaire?",
+      "whyChooseIntro": "Une installation solaire sur VR doit respecter le véhicule, l’étanchéité de la toiture, la capacité électrique et l’usage réel du propriétaire. L’objectif est de livrer un système utile, compréhensible et durable.",
       "whyChoose": [
         {
-          "title": "Produit disponible",
-          "text": "Vous pouvez acheter Rexoseal directement pour réaliser votre propre projet."
+          "title": "Approche complète",
+          "text": "Nous pouvons fournir les équipements, installer les composantes et accompagner la mise en service du système."
         },
         {
-          "title": "Application en atelier",
-          "text": "Notre équipe peut prendre en charge la préparation et l'application sur une toiture compatible."
+          "title": "Produits Victron Energy",
+          "text": "Nous travaillons avec des produits Victron Energy pour bâtir des systèmes robustes, configurables et faciles à surveiller."
         },
         {
-          "title": "Évaluation avant application",
-          "text": "Nous évitons d'appliquer le produit sur une surface qui exige d'abord une réparation ou une autre solution."
+          "title": "Pensé pour les VR",
+          "text": "Nous tenons compte de la toiture, du câblage, des batteries, du poids, de l’accès et de l’étanchéité du véhicule."
+        },
+        {
+          "title": "Dimensionnement réfléchi",
+          "text": "Le système est choisi selon votre consommation, votre usage et le niveau d’autonomie recherché."
         }
       ],
-      "faqTitle": "Questions fréquentes sur Rexoseal",
+      "faqTitle": "Questions fréquentes sur les panneaux solaires pour VR",
       "faqs": [
         {
-          "question": "Puis-je acheter Rexoseal pour l'appliquer moi-même?",
-          "answer": "Oui. Nous vendons les produits Rexoseal aux propriétaires qui souhaitent effectuer eux-mêmes l'application. Consultez aussi notre <a href=\"/magasin/\">magasin</a> ou contactez l'atelier pour vérifier la disponibilité."
+          "question": "Êtes-vous installateur et distributeur de produits Victron Energy?",
+          "answer": "Oui. Nous pouvons fournir des produits Victron Energy et les intégrer dans un système solaire adapté à votre VR."
         },
         {
-          "question": "Pouvez-vous appliquer Rexoseal pour moi?",
-          "answer": "Oui. Nous offrons le service de préparation et d'application Rexoseal à notre <strong>atelier de Gatineau</strong>, après validation de la toiture."
+          "question": "Pouvez-vous fournir seulement les équipements?",
+          "answer": "Oui. Selon le besoin, nous pouvons fournir les panneaux, contrôleurs, batteries, onduleurs et accessoires, ou prendre en charge l’installation complète."
         },
         {
-          "question": "Rexoseal convient-il à toutes les toitures?",
-          "answer": "Non. La compatibilité dépend du type de surface et de son état. Une toiture endommagée ou une infiltration active peut nécessiter une réparation avant l'application."
+          "question": "Faut-il inspecter la toiture avant d’installer un panneau solaire?",
+          "answer": "Oui, c’est fortement recommandé. La toiture, les joints et les points de passage doivent être assez propres et solides pour recevoir une installation sans augmenter le risque d’infiltration."
+        },
+        {
+          "question": "Pouvez-vous améliorer un système solaire existant?",
+          "answer": "Oui. Nous pouvons évaluer les composantes en place et proposer des améliorations selon les limites observées et votre objectif d’autonomie."
         }
       ]
     },
@@ -494,90 +474,358 @@
       ]
     },
     {
-      "slug": "installation-panneaux-solaires",
-      "alternateSlug": "solar-panel-installation",
-      "title": "Installation de panneaux solaires pour VR",
-      "h1": "Panneaux solaires pour VR",
-      "navLabel": "Panneaux solaires",
-      "icon": "fas fa-solar-panel",
-      "serviceType": "Installation, fourniture et distribution de solutions solaires pour VR",
-      "seoTitle": "Installation de panneaux solaires pour VR à Gatineau | Victron Energy",
-      "seoDescription": "Installation et fourniture de panneaux solaires pour VR à Gatineau, avec distribution et intégration de produits Victron Energy.",
-      "eyebrow": "Solaire VR, autonomie et énergie",
-      "opening": "Installation et fourniture de systèmes solaires pour VR avec <strong>produits Victron Energy</strong>.",
-      "lead": "On dimensionne, fournit et installe les composantes selon votre autonomie réelle.",
-      "intro": "Panneaux, contrôleurs, batteries, onduleurs et surveillance: une solution claire, adaptée à votre véhicule.",
-      "heroPromise": "",
-      "detailIntro": "Un bon système solaire de VR ne se limite pas à ajouter un panneau sur le toit. Il faut valider la surface disponible, les points d’étanchéité, le passage du câblage, la batterie, le contrôleur, l’onduleur et la façon de surveiller le système. Comme installateur et distributeur de produits Victron Energy, nous pouvons fournir les composantes et les intégrer dans une solution cohérente pour votre véhicule.",
+      "slug": "entretien",
+      "alternateSlug": "maintenance",
+      "title": "Entretien complet de VR",
+      "h1": "Entretien complet de roulotte et de VR à Gatineau",
+      "navLabel": "Entretien",
+      "icon": "fas fa-screwdriver-wrench",
+      "serviceType": "Entretien complet de roulotte et de VR",
+      "seoTitle": "Entretien de VR à Gatineau | Diagnostic, chauffage, climatisation et étanchéité",
+      "seoDescription": "Entretien de roulotte et de VR à Gatineau: diagnostic, réparation préventive, étanchéité, freins, essieux, climatisation, chauffage, électricité et électronique.",
+      "eyebrow": "Entretien, diagnostic et prévention",
+      "opening": "L'<strong>entretien de VR à Gatineau</strong> chez Clinique du VR couvre bien plus que les joints. Nous aidons à garder votre <strong>roulotte</strong> ou votre <strong>VR</strong> fiable avec l'entretien préventif, le <strong>diagnostic</strong>, l'<strong>étanchéité</strong>, les <strong>freins</strong>, les <strong>essieux</strong>, la <strong>climatisation</strong>, le <strong>chauffage</strong>, l'<strong>électricité</strong> et l'<strong>électronique</strong>.",
+      "lead": "Avant la saison, après l'entreposage ou dès qu'un système semble moins fiable, un entretien complet permet de vérifier les points importants et d'agir avant qu'une petite faiblesse devienne une réparation plus coûteuse. Le service est offert en <strong>atelier</strong> ou sur la route selon le type d'intervention.",
+      "intro": "Nous prenons en charge l'entretien général de la <strong>roulotte</strong>, du <strong>VR</strong> ou de la <strong>caravane</strong>: joints, toiture, membrane, composantes de roulement, appareils, systèmes électriques et électroniques. Le but est de comprendre l'état réel du véhicule, corriger ce qui doit l'être et vous donner des prochaines étapes claires.",
+      "heroPromise": "Un <strong>entretien fait au bon moment</strong> aide à prévenir les pannes, les infiltrations, les problèmes de confort et les réparations plus lourdes.",
+      "detailIntro": "Un entretien efficace doit viser les composantes qui protègent le véhicule, mais aussi les systèmes qui rendent le VR fonctionnel et confortable. Nous vérifions les points sensibles à l'eau, les joints, la toiture et la membrane, tout en couvrant aussi les freins, les essieux, la climatisation, le chauffage, l'électricité, l'électronique et les diagnostics selon les symptômes observés.",
       "highlights": [
-        "Fourniture de panneaux solaires",
-        "Produits Victron Energy",
-        "Installation sur VR et motorisé",
-        "Systèmes autonomes ou hybrides"
+        "Diagnostic",
+        "Climatisation et chauffage",
+        "Électricité et électronique",
+        "Atelier ou mobile"
       ],
-      "includedTitle": "Ce que nous pouvons prendre en charge",
-      "included": [
-        "Analyse du besoin énergétique et du niveau d’autonomie souhaité",
-        "Vérification de la toiture, des accès et des contraintes de montage",
-        "Fourniture de panneaux solaires, contrôleurs, batteries, onduleurs et accessoires compatibles",
-        "Distribution et intégration de produits Victron Energy",
-        "Installation des panneaux, passage du câblage et raccordement selon le projet",
-        "Configuration de base, vérification du fonctionnement et explication de l’utilisation"
-      ],
-      "situationsTitle": "Quand ce service solaire est utile",
-      "situations": [
-        "Vous voulez plus d’autonomie en camping ou sur la route",
-        "Vous voulez alimenter des appareils sans dépendre uniquement du branchement au terrain",
-        "Vous préparez une installation avec batteries, contrôleur de charge ou onduleur",
-        "Votre système solaire actuel doit être amélioré ou corrigé",
-        "Vous voulez acheter des produits Victron Energy avec une installation adaptée au VR"
-      ],
-      "processIntro": "Nous avançons par étapes pour éviter les systèmes mal dimensionnés: comprendre votre usage, choisir les composantes, protéger la toiture, installer proprement et valider le fonctionnement.",
-      "process": [
-        "Discussion sur vos appareils, votre façon de voyager et l’autonomie souhaitée",
-        "Évaluation du VR, de la toiture, des accès et des composantes existantes",
-        "Sélection des panneaux, contrôleurs, batteries, onduleurs et produits Victron Energy adaptés",
-        "Fourniture des équipements et planification de l’installation",
-        "Installation, raccordement, configuration et vérification",
-        "Explication du fonctionnement et des points d’entretien à surveiller"
-      ],
-      "whyChooseTitle": "Pourquoi choisir Clinique du VR pour votre projet solaire?",
-      "whyChooseIntro": "Une installation solaire sur VR doit respecter le véhicule, l’étanchéité de la toiture, la capacité électrique et l’usage réel du propriétaire. L’objectif est de livrer un système utile, compréhensible et durable.",
-      "whyChoose": [
+      "proofTitle": "Ce que protège un bon entretien",
+      "proofIntro": "L'entretien n'est pas une dépense cosmétique. C'est ce qui garde l'eau à l'extérieur et ce qui évite le plus souvent les dossiers de toiture, de murs et de plancher.",
+      "proofStats": [
         {
-          "title": "Approche complète",
-          "text": "Nous pouvons fournir les équipements, installer les composantes et accompagner la mise en service du système."
+          "value": "2x / an",
+          "label": "Rythme recommandé avant et après saison"
         },
         {
-          "title": "Produits Victron Energy",
-          "text": "Nous travaillons avec des produits Victron Energy pour bâtir des systèmes robustes, configurables et faciles à surveiller."
+          "value": "Mur + toit",
+          "label": "Joints et zones sensibles traités"
         },
         {
-          "title": "Pensé pour les VR",
-          "text": "Nous tenons compte de la toiture, du câblage, des batteries, du poids, de l’accès et de l’étanchéité du véhicule."
-        },
-        {
-          "title": "Dimensionnement réfléchi",
-          "text": "Le système est choisi selon votre consommation, votre usage et le niveau d’autonomie recherché."
+          "value": "Atelier ou mobile",
+          "label": "Selon le type d'intervention"
         }
       ],
-      "faqTitle": "Questions fréquentes sur les panneaux solaires pour VR",
+      "proofPoints": [
+        {
+          "title": "Prévenir avant les gros travaux",
+          "text": "Remettre des joints fatigués en état au bon moment coûte moins qu'un dossier de dommages d'eau déjà avancé."
+        },
+        {
+          "title": "Mieux protéger la toiture",
+          "text": "La toiture, la membrane et les ouvertures sont les premières zones qui méritent une vigilance régulière."
+        },
+        {
+          "title": "Décider plus tôt",
+          "text": "Un entretien recommandé réduit les surprises juste avant la saison ou après une période d'entreposage."
+        }
+      ],
+      "caseStudiesTitle": "Cas réels liés à l'entretien préventif",
+      "caseStudiesIntro": "Ces exemples montrent ce qu'un entretien des joints et du scellement peut éviter quand il est fait avant que l'eau s'installe.",
+      "caseStudies": [
+        {
+          "title": "Remplacement de scellants extérieurs à Gatineau",
+          "meta": "Étanchéité préventive • Gatineau",
+          "text": "Des joints extérieurs fissurés ont été repris avant qu'ils ne laissent l'eau atteindre les matériaux intérieurs.",
+          "href": "/realisations/reprise-scellants-vr-gatineau/"
+        },
+        {
+          "title": "Inspection avant saison sur un VR d'Ottawa",
+          "meta": "Entretien recommandé • Ottawa",
+          "text": "Les zones faibles ont été ciblées avant les premiers voyages pour éviter un problème d'infiltration en cours de saison.",
+          "href": "/realisations/infiltration-toiture-vr-gatineau/"
+        }
+      ],
+      "includedTitle": "Ce que nous faisons en entretien",
+      "included": [
+        "Entretien préventif avant saison, après entreposage ou avant un long déplacement",
+        "Diagnostic des problèmes observés: bruit, odeur, humidité, système intermittent ou appareil qui ne fonctionne pas correctement",
+        "Vérification et entretien des joints, de la toiture, du scellement et de la membrane TPO ou EPDM",
+        "Entretien des freins et des essieux en atelier",
+        "Vérification des systèmes de climatisation et de chauffage selon le problème rapporté",
+        "Vérification électrique et électronique: alimentation 12 V, 110 V, batteries, lumières, panneaux, contrôles et accessoires",
+        "Service offert en atelier ou sur la route selon le type de travail"
+      ],
+      "situationsTitle": "Quand faire l'entretien",
+      "situations": [
+        "Avant la saison ou après une période d'entreposage",
+        "Quand un appareil, un système électrique, le chauffage ou la climatisation fonctionne mal",
+        "Quand vous voulez vérifier les freins, les essieux, les batteries, les lumières ou les accessoires",
+        "Quand les joints, la toiture ou les murs montrent des signes d'usure au scellement",
+        "Quand vous voulez faire l'entretien en atelier ou directement sur place"
+      ],
+      "processIntro": "Notre approche est simple: partir de l'état réel du véhicule et du problème observé, puis prioriser les travaux utiles. On distingue ce qui relève de l'entretien, du diagnostic ou de la réparation pour éviter de remplacer des pièces au hasard.",
+      "process": [
+        "Écoute du problème, du type de VR et de l'historique d'entretien",
+        "Vérification des systèmes concernés: étanchéité, roulement, chauffage, climatisation, électricité, électronique ou accessoires",
+        "Diagnostic ou entretien ciblé selon ce que les observations montrent réellement",
+        "Intervention en atelier ou sur la route selon le type de travail",
+        "Retour clair sur les zones traitées, les risques observés et les prochaines étapes"
+      ],
+      "whyChooseTitle": "Pourquoi choisir Clinique du VR pour l'entretien?",
+      "whyChooseIntro": "Un VR combine plusieurs systèmes: structure, toiture, roulement, appareils, chauffage, climatisation, électricité et électronique. Une bonne intervention commence par une lecture claire de l'ensemble, puis par des travaux ciblés selon le besoin réel.",
+      "whyChoose": [
+        {
+          "title": "Vision complète du VR",
+          "text": "Nous ne regardons pas seulement les joints. Nous pouvons aussi vérifier les systèmes de confort, de roulement, d'électricité, d'électronique et les composantes liées à l'utilisation réelle du véhicule."
+        },
+        {
+          "title": "Diagnostic avant travaux",
+          "text": "Quand un problème n'est pas clair, nous cherchons d'abord à comprendre la cause avant de recommander l'entretien ou la réparation appropriée."
+        },
+        {
+          "title": "Service flexible",
+          "text": "Le service peut être effectué à l'atelier ou sur la route selon le type de besoin, l'emplacement du véhicule et la nature de l'intervention."
+        }
+      ],
+      "faqTitle": "Questions fréquentes sur l'entretien de VR",
       "faqs": [
         {
-          "question": "Êtes-vous installateur et distributeur de produits Victron Energy?",
-          "answer": "Oui. Nous pouvons fournir des produits Victron Energy et les intégrer dans un système solaire adapté à votre VR."
+          "question": "Quels types d'entretien faites-vous sur un VR?",
+          "answer": "Nous faisons l'entretien général de roulottes et de VR: joints, toiture, membrane, freins, essieux, diagnostic, climatisation, chauffage, électricité, électronique et vérifications préventives selon le véhicule et les symptômes observés."
         },
         {
-          "question": "Pouvez-vous fournir seulement les équipements?",
-          "answer": "Oui. Selon le besoin, nous pouvons fournir les panneaux, contrôleurs, batteries, onduleurs et accessoires, ou prendre en charge l’installation complète."
+          "question": "Pouvez-vous diagnostiquer un problème avant de réparer?",
+          "answer": "Oui. Quand le problème n'est pas évident, le diagnostic sert à confirmer l'origine du symptôme avant de décider si la bonne suite est un entretien, une réparation ou une vérification plus poussée."
         },
         {
-          "question": "Faut-il inspecter la toiture avant d’installer un panneau solaire?",
-          "answer": "Oui, c’est fortement recommandé. La toiture, les joints et les points de passage doivent être assez propres et solides pour recevoir une installation sans augmenter le risque d’infiltration."
+          "question": "Offrez-vous le service en atelier ou sur la route?",
+          "answer": "Oui. Plusieurs entretiens peuvent être faits en atelier ou sur la route, selon le type de travail. Certains travaux, comme l'entretien des freins et des essieux, se font à l'atelier."
+        }
+      ]
+    },
+    {
+      "slug": "inspection",
+      "alternateSlug": "inspection",
+      "title": "Inspection de VR",
+      "h1": "Inspection de fuite d'eau de VR à Gatineau",
+      "navLabel": "Inspection",
+      "icon": "fas fa-clipboard-check",
+      "serviceType": "Inspection de fuite d'eau et détection d'humidité de VR",
+      "seoTitle": "Inspection de fuite d'eau de VR à Gatineau | Joints, toiture et humidité",
+      "seoDescription": "Inspection gratuite et sans rendez-vous en atelier à Gatineau pour détecter les fuites d'eau de VR, l'humidité et les problèmes de joints ou de toiture.",
+      "eyebrow": "Joints, toiture et infiltration d'eau",
+      "opening": "Clinique du VR offre l'<strong>inspection visuelle gratuite et sans rendez-vous en atelier à Gatineau</strong>, avec humidimètre, en mettant l'accent sur les <strong>joints</strong>, l'état de la <strong>toiture</strong> et les signes d'<strong>infiltration d'eau</strong>. Notre objectif est de repérer rapidement les zones à risque, les traces d'humidité et les problèmes d'étanchéité avant qu'ils causent plus de dommages.",
+      "lead": "Passez directement à notre <u>atelier de Gatineau</u>: l'<strong>inspection est toujours gratuite et sans rendez-vous en atelier</strong>. Nos inspections ciblent les problèmes de <strong>joints</strong>, de <strong>toiture</strong> et d'<strong>infiltration d'eau</strong>. Nous ne faisons pas d'inspection mécanique.",
+      "intro": "Nous réalisons gratuitement les inspections visuelles en <strong>atelier, sans rendez-vous</strong>. L'inspection sur la route est aussi offerte à un <strong>tarif variable selon le déplacement</strong>. L'humidimètre permet de mieux cibler les zones vulnérables à l'eau sur un <strong>VR</strong>, une <strong>roulotte</strong> ou une <strong>caravane</strong>.",
+      "heroPromise": "Détectez les <strong>infiltrations d'eau</strong> avant qu'elles ne deviennent des réparations coûteuses sur votre <strong>toit</strong>, vos <strong>murs</strong> ou votre <strong>plancher</strong>.",
+      "detailIntro": "Une inspection efficace ne consiste pas à tout vérifier sans priorité. Chez Clinique du VR, nous nous concentrons d'abord sur ce qui cause le plus souvent des dommages coûteux: les <strong>joints fatigués</strong>, les <strong>défauts de toiture</strong>, les <strong>ouvertures sensibles</strong> et les signes d'<strong>infiltration d'eau</strong>. L'humidimètre nous aide à confirmer les zones problématiques et à mieux orienter les prochaines étapes.",
+      "highlights": [
+        "Inspection visuelle avec humidimètre",
+        "Accent sur les joints et la toiture",
+        "Recherche de signes d'infiltration d'eau",
+        "Gratuite et sans rendez-vous en atelier"
+      ],
+      "proofTitle": "Pourquoi cette inspection est souvent la meilleure première étape",
+      "proofIntro": "Quand la source d'une fuite n'est pas claire, l'erreur la plus coûteuse est d'<strong>attendre</strong> ou de <strong>réparer au hasard</strong>. Une inspection ciblée permet de confirmer rapidement la zone à risque et la bonne prochaine étape.",
+      "proofStats": [
+        {
+          "value": "Gratuite",
+          "label": "Sans rendez-vous en atelier"
         },
         {
-          "question": "Pouvez-vous améliorer un système solaire existant?",
-          "answer": "Oui. Nous pouvons évaluer les composantes en place et proposer des améliorations selon les limites observées et votre objectif d’autonomie."
+          "value": "Tarif variable",
+          "label": "Inspection sur la route selon le déplacement"
+        },
+        {
+          "value": "Humidimètre",
+          "label": "Inclus pour appuyer le constat visuel"
+        }
+      ],
+      "proofPoints": [
+        {
+          "title": "Rapide à déclencher",
+          "text": "Quand vous avez un doute sur l'<strong>eau</strong>, les <strong>joints</strong> ou la <strong>toiture</strong>, l'inspection permet de ne pas perdre de temps sur une mauvaise intervention."
+        },
+        {
+          "title": "Orientée coût évité",
+          "text": "Identifier tôt une <strong>infiltration</strong> peut éviter qu'un simple joint devienne un <strong>plancher</strong>, un <strong>mur</strong> ou un <strong>plafond</strong> à reprendre."
+        },
+        {
+          "title": "Lecture claire ensuite",
+          "text": "Vous savez plus vite si la bonne suite est un <strong>entretien</strong>, une <strong>réparation d'étanchéité</strong> ou une remise en état plus importante."
+        }
+      ],
+      "caseStudiesTitle": "Cas réels d'inspection et d'infiltration",
+      "caseStudiesIntro": "Ces cas montrent comment une inspection bien orientée aide à confirmer la fuite, à prioriser les travaux et à limiter les dommages cachés.",
+      "caseStudies": [
+        {
+          "title": "Infiltration autour du toit sur un VR à Gatineau",
+          "meta": "Inspection ciblée • Gatineau",
+          "text": "Humidité confirmée autour d'une zone de toiture et des joints fatigués avant que les dommages intérieurs ne s'étendent.",
+          "href": "/realisations/infiltration-toiture-vr-gatineau/"
+        },
+        {
+          "title": "Traces d'eau intérieures sur une roulotte à Ottawa",
+          "meta": "Inspection + plan de réparation • Ottawa",
+          "text": "Le diagnostic a permis de distinguer ce qui relevait du scellement et ce qui demandait déjà une réparation intérieure.",
+          "href": "/realisations/reparation-interieure-vr-apres-infiltration-ottawa/"
+        }
+      ],
+      "includedTitle": "Ce que nous vérifions",
+      "included": [
+        "Inspection visuelle des <strong>joints</strong>, scellants et ouvertures",
+        "Lecture à l'<strong>humidimètre</strong> dans les zones à risque",
+        "État visible de la <strong>toiture</strong> et des points sensibles",
+        "Recherche de traces d'<strong>infiltration d'eau</strong> ou d'humidité",
+        "Observation des zones faibles autour des ouvertures et raccords"
+      ],
+      "situationsTitle": "Quand demander une inspection",
+      "situations": [
+        "Quand vous soupçonnez une <strong>infiltration d'eau</strong>",
+        "Quand vous voulez vérifier l'état des <strong>joints</strong> ou de la <strong>toiture</strong>",
+        "Avant de planifier une <strong>réparation d'étanchéité</strong>",
+        "Quand vous voulez confirmer rapidement une zone à risque"
+      ],
+      "processIntro": "Notre processus est simple et orienté vers l'<strong>étanchéité</strong>. Le but est de confirmer l'état visible des <strong>joints</strong> et de la <strong>toiture</strong>, de détecter les signes d'humidité et de vous dire clairement si une réparation doit être envisagée rapidement.",
+      "process": [
+        "Prise de contact et validation du type d'<strong>inspection</strong>",
+        "Inspection visuelle des <strong>joints</strong>, de la <strong>toiture</strong> et des zones sensibles",
+        "Vérification à l'<strong>humidimètre</strong> dans les secteurs à risque",
+        "Retour clair sur les traces d'<strong>infiltration</strong> et les prochaines étapes recommandées"
+      ],
+      "whyChooseTitle": "Pourquoi choisir Clinique du VR pour l'inspection d'infiltration?",
+      "whyChooseIntro": "L'<strong>infiltration d'eau</strong> est l'un des problèmes les plus coûteux sur un VR. Une inspection utile doit donc aller droit au but: confirmer l'état des <strong>joints</strong>, observer la <strong>toiture</strong> et mesurer l'humidité dans les zones qui vieillissent mal.",
+      "whyChoose": [
+        {
+          "title": "Focus sur l'eau",
+          "text": "Nous concentrons l'inspection sur les zones les plus souvent touchées par l'<strong>infiltration d'eau</strong>, plutôt que de diluer le service dans une vérification générale."
+        },
+        {
+          "title": "Humidimètre inclus",
+          "text": "L'utilisation de l'<strong>humidimètre</strong> permet de mieux confirmer la présence d'humidité dans les zones à risque et d'appuyer le constat visuel."
+        },
+        {
+          "title": "Gratuite en atelier",
+          "text": "L'<strong>inspection est toujours gratuite et sans rendez-vous en atelier</strong>. Pour une inspection sur la route, le <strong>tarif varie selon le déplacement</strong>."
+        }
+      ],
+      "faqTitle": "Questions fréquentes sur l'inspection de VR",
+      "faqs": [
+        {
+          "question": "Combien coûte une inspection de VR?",
+          "answer": "L'<strong>inspection est toujours gratuite et sans rendez-vous en atelier</strong>. Pour une inspection sur la route, le <strong>tarif est variable selon le déplacement</strong>. Contactez-nous pour obtenir les détails."
+        },
+        {
+          "question": "Que vérifiez-vous principalement lors d'une inspection?",
+          "answer": "Nous nous concentrons principalement sur les <strong>joints</strong>, l'état de la <strong>toiture</strong> et les signes d'<strong>infiltration d'eau</strong>. Nous utilisons aussi un <strong>humidimètre</strong> dans les zones à risque."
+        },
+        {
+          "question": "Faites-vous des inspections mécaniques?",
+          "answer": "Non. Nous ne faisons pas d'inspection mécanique. Si vous avez surtout un doute sur l'étanchéité, consultez notre page <a href=\"/services/inspection/\">inspection de VR</a>. Nous effectuons toutefois l'entretien des freins à notre atelier seulement, sans service sur la route."
+        }
+      ]
+    },
+    {
+      "slug": "rexoseal",
+      "alternateSlug": "rexoseal",
+      "title": "Rexoseal pour toiture de VR",
+      "h1": "Rexoseal pour toiture de VR à Gatineau",
+      "navLabel": "Rexoseal",
+      "icon": "fas fa-shield-halved",
+      "serviceType": "Vente et application de Rexoseal pour toiture de VR",
+      "seoTitle": "Rexoseal pour toiture de VR à Gatineau | Vente et application",
+      "seoDescription": "Rexoseal pour toiture de VR à Gatineau: produit vendu pour application par le propriétaire ou service d'application professionnelle en atelier.",
+      "eyebrow": "Protection de toiture de VR",
+      "opening": "Clinique du VR offre <strong>Rexoseal comme service distinct</strong> pour protéger et remettre en état certaines toitures de VR. Vous pouvez <strong>acheter le produit pour effectuer vous-même l'application</strong> ou nous confier le travail à notre <strong>atelier de Gatineau</strong>.",
+      "lead": "Deux options sont offertes: la <strong>vente des produits Rexoseal</strong> avec les renseignements nécessaires pour votre projet, ou un <strong>service d'application en atelier</strong> après validation de l'état de la toiture.",
+      "intro": "Avant une application, il faut vérifier le type de surface, l'adhérence du support et les réparations nécessaires. Rexoseal protège une toiture compatible, mais ne remplace pas la correction d'une infiltration active ou d'un support déjà endommagé.",
+      "heroPromise": "Achetez Rexoseal pour le faire vous-même ou confiez-nous l'<strong>application complète en atelier</strong>.",
+      "detailIntro": "Notre offre Rexoseal est séparée de l'entretien régulier. Elle comprend la <strong>vente du produit</strong> pour les propriétaires qui souhaitent réaliser les travaux eux-mêmes et le <strong>service d'application à l'atelier</strong> pour ceux qui préfèrent nous confier la préparation et l'application.",
+      "highlights": [
+        "Produits Rexoseal vendus sur place",
+        "Option pour application par le propriétaire",
+        "Application professionnelle en atelier",
+        "Validation de la toiture avant les travaux"
+      ],
+      "proofTitle": "Deux façons de profiter de Rexoseal",
+      "proofIntro": "Choisissez l'option qui correspond à votre expérience, à l'état de la toiture et au niveau d'accompagnement recherché.",
+      "proofStats": [
+        {
+          "value": "Vente",
+          "label": "Produit disponible pour le faire vous-même"
+        },
+        {
+          "value": "Atelier",
+          "label": "Application réalisée par notre équipe"
+        },
+        {
+          "value": "Validation",
+          "label": "Compatibilité de la toiture vérifiée avant le service"
+        }
+      ],
+      "proofPoints": [
+        {
+          "title": "Option autonome",
+          "text": "Achetez les produits Rexoseal nécessaires et réalisez vous-même l'application sur une toiture compatible."
+        },
+        {
+          "title": "Service clé en main",
+          "text": "Confiez-nous la préparation et l'application du produit directement à notre atelier."
+        },
+        {
+          "title": "Bonne solution au bon endroit",
+          "text": "Nous vérifions d'abord si Rexoseal convient à la surface et si des réparations doivent être faites avant l'application."
+        }
+      ],
+      "includedTitle": "Nos options Rexoseal",
+      "included": [
+        "Vente de produits Rexoseal pour application par le propriétaire",
+        "Conseils de base pour choisir les produits adaptés au projet",
+        "Évaluation de la compatibilité et de l'état visible de la toiture",
+        "Préparation de la surface lorsque l'application est faite en atelier",
+        "Application Rexoseal en atelier",
+        "Recommandations d'entretien après l'application"
+      ],
+      "situationsTitle": "Quand considérer Rexoseal",
+      "situations": [
+        "Quand la toiture est compatible et demande une nouvelle protection",
+        "Quand vous voulez acheter le produit et effectuer vous-même les travaux",
+        "Quand vous préférez une application complète réalisée en atelier",
+        "Quand vous voulez faire valider la surface avant de choisir la solution"
+      ],
+      "processIntro": "Le processus dépend de l'option choisie. Pour une application en atelier, nous validons la toiture avant de préparer la surface et d'appliquer le système. Pour un achat autonome, nous vous orientons vers les produits disponibles pour votre projet.",
+      "process": [
+        "Discussion sur la toiture et l'option souhaitée",
+        "Validation de la compatibilité du support",
+        "Vente des produits pour une application autonome ou planification du service en atelier",
+        "Préparation et application à l'atelier lorsque ce service est choisi",
+        "Recommandations pour l'entretien de la protection"
+      ],
+      "whyChooseTitle": "Pourquoi choisir Clinique du VR pour Rexoseal?",
+      "whyChooseIntro": "Nous offrons une solution flexible selon que vous souhaitez faire les travaux vous-même ou confier l'application à un atelier spécialisé en VR.",
+      "whyChoose": [
+        {
+          "title": "Produit disponible",
+          "text": "Vous pouvez acheter Rexoseal directement pour réaliser votre propre projet."
+        },
+        {
+          "title": "Application en atelier",
+          "text": "Notre équipe peut prendre en charge la préparation et l'application sur une toiture compatible."
+        },
+        {
+          "title": "Évaluation avant application",
+          "text": "Nous évitons d'appliquer le produit sur une surface qui exige d'abord une réparation ou une autre solution."
+        }
+      ],
+      "faqTitle": "Questions fréquentes sur Rexoseal",
+      "faqs": [
+        {
+          "question": "Puis-je acheter Rexoseal pour l'appliquer moi-même?",
+          "answer": "Oui. Nous vendons les produits Rexoseal aux propriétaires qui souhaitent effectuer eux-mêmes l'application. Consultez aussi notre <a href=\"/magasin/\">magasin</a> ou contactez l'atelier pour vérifier la disponibilité."
+        },
+        {
+          "question": "Pouvez-vous appliquer Rexoseal pour moi?",
+          "answer": "Oui. Nous offrons le service de préparation et d'application Rexoseal à notre <strong>atelier de Gatineau</strong>, après validation de la toiture."
+        },
+        {
+          "question": "Rexoseal convient-il à toutes les toitures?",
+          "answer": "Non. La compatibilité dépend du type de surface et de son état. Une toiture endommagée ou une infiltration active peut nécessiter une réparation avant l'application."
         }
       ]
     },

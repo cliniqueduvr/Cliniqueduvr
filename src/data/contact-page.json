@@ -1,36 +1,39 @@
 {
   "metaTitle": "Contact Clinique du VR | Soumission et atelier à Gatineau",
-  "metaDescription": "Contactez Clinique du VR à Gatineau pour une soumission, un rendez-vous ou une demande d'inspection, d'entretien ou de réparation en Outaouais, dans la grande région d'Ottawa et les Laurentides.",
+  "metaDescription": "Contactez Clinique du VR à Gatineau pour une soumission de réparation, modification, aménagement, Van Life, solaire, lithium, inspection ou entretien en Outaouais, Ottawa et Laurentides.",
   "breadcrumbs": {
     "home": "Accueil",
     "current": "Contact"
   },
   "formSection": {
     "title": "Contactez-nous",
-    "intro": "Vous pouvez nous joindre pour une inspection de VR, un entretien, une réparation de fuite d'eau, un problème de toiture, un service esthétique ou une question avant achat et vente. Plus votre message est précis, plus le retour sera utile.",
+    "intro": "Vous pouvez nous joindre pour une réparation de VR, une modification, un aménagement, un projet Van Life, une installation solaire/lithium, une infiltration, un problème de toiture, une inspection ou un entretien. Plus votre demande est précise, plus le retour sera utile.",
     "unconfiguredNote": "Le formulaire n'est pas disponible pour le moment. En attendant, appelez-nous ou utilisez la réservation en ligne.",
     "fields": {
       "name": "Nom complet *",
       "email": "Courriel *",
       "phone": "Téléphone",
-      "services": "Service désiré",
+      "services": "Type de demande",
       "serviceOptions": [
-        "Inspection",
-        "Entretien",
         "Réparation",
-        "Panneau solaire",
-        "Esthétique",
-        "Vente ou location"
+        "Modification & aménagement",
+        "Van Life",
+        "Solaire & lithium",
+        "Toiture / infiltration",
+        "Entretien / inspection",
+        "Magasin de pièces"
       ],
       "workType": "Type d'intervention",
       "workshopOption": "En atelier",
       "mobileOption": "Sur la route",
-      "workAddress": "Adresse des travaux",
-      "vehicleInfo": "Marque et année du VR",
+      "workAddress": "Ville ou adresse des travaux",
+      "vehicleInfo": "Type, marque, modèle et année du véhicule",
       "serialNumber": "Numéro de série (si possible)",
+      "timeline": "Date ou période souhaitée",
+      "budget": "Budget approximatif (si projet de modification ou Van Life)",
       "attachments": "Joindre des fichiers",
       "subject": "Sujet *",
-      "message": "Message *"
+      "message": "Décrivez le projet ou le problème *"
     },
     "submitLabel": "Envoyer"
   },
@@ -49,11 +52,11 @@
   "seoSections": [
     {
       "heading": "Atelier VR à Gatineau",
-      "body": "Clinique du VR dessert Gatineau, la grande région d'Ottawa, l'Outaouais et les Laurentides pour les demandes de service reliées aux VR, roulottes et caravanes. Le formulaire et la réservation en ligne servent autant aux demandes simples qu'aux dossiers plus complexes."
+      "body": "Clinique du VR dessert Gatineau, la grande région d'Ottawa, l'Outaouais et les Laurentides pour les demandes de réparation, modification, aménagement, Van Life, solaire, lithium, entretien, inspection et pièces VR."
     },
     {
       "heading": "Avant de nous écrire",
-      "body": "Si vous avez des photos, des signes d'infiltration, des détails sur la toiture, les joints, les appareils 12V ou propane, mentionnez-les dans votre message. Cela aide à orienter plus rapidement vers une inspection, un entretien ou une réparation ciblée."
+      "body": "Si vous avez des photos, des signes d'infiltration, des détails sur la toiture, les joints, les appareils 12 V / 120 V, le propane, le solaire, les batteries ou l'aménagement souhaité, mentionnez-les dans votre message."
     }
   ],
   "mapTitle": "Clinique du VR - 11 rue de Granby, Unité 17, Gatineau, QC"

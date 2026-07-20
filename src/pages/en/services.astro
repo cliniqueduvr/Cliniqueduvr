@@ -7,7 +7,17 @@ import type { ServicePage } from '../../data/service-page-types';
 import { buildBreadcrumbSchema, buildFAQSchema } from '../../lib/seo';
 
 const servicePagesEn = servicePagesData.items as ServicePage[];
-const visibleServicePagesEn = servicePagesEn.filter((service) => service.slug !== 'buying-selling');
+const serviceOrderEn = [
+  'rv-modification-custom-builds',
+  'van-life-conversion',
+  'solar-panel-installation',
+  'repair',
+  'maintenance',
+  'inspection'
+];
+const visibleServicePagesEn = servicePagesEn
+  .filter((service) => serviceOrderEn.includes(service.slug))
+  .sort((a, b) => serviceOrderEn.indexOf(a.slug) - serviceOrderEn.indexOf(b.slug));
 const serviceAreas = [
   {
     name: 'Gatineau | Water leak',
@@ -38,7 +48,7 @@ const serviceAreas = [
 const serviceFaqs = [
   {
     question: 'How do I choose the right service for my RV?',
-    answer: 'The right service mainly depends on the vehicle’s actual condition. If you see signs of water intrusion, worn seals, interior damage, a solar power need, or if you are preparing for a purchase or sale, we can guide you toward <a href="/en/services/inspection/">inspection</a>, <a href="/en/services/maintenance/">maintenance</a>, <a href="/en/services/repair/">repair</a>, <a href="/en/services/solar-panel-installation/">solar panels</a>, or <a href="/en/services/buying-selling/">buying and selling</a> depending on the need.'
+    answer: 'The right service mainly depends on the vehicle’s actual condition and your project goal. If you need a custom upgrade, Van Life conversion, solar and lithium system, water-intrusion repair, preventive maintenance or inspection, we can guide you toward <a href="/en/services/rv-modification-custom-builds/">custom modifications</a>, <a href="/en/services/van-life-conversion/">Van Life</a>, <a href="/en/services/solar-panel-installation/">solar and lithium</a>, <a href="/en/services/repair/">repair</a>, <a href="/en/services/maintenance/">maintenance</a> or <a href="/en/services/inspection/">inspection</a>.'
   },
   {
     question: 'Do you only work in Gatineau?',
@@ -50,7 +60,7 @@ const serviceFaqs = [
   }
 ];
 const quickSteps = [
-  'Choose the main type of need first.',
+  'Choose first between modification, Van Life, solar or repair.',
   'Open only the service or area that matches your situation.',
   'Use inspection as the starting point for buying, selling, or uncertainty.'
 ];
@@ -60,15 +70,15 @@ const breadcrumbs = buildBreadcrumbSchema([
 ]);
 ---
 
-<Layout title="RV services in Gatineau | Water leaks, maintenance, repair and solar" description="RV services in Gatineau for water leaks, seal and roof maintenance, inspection, repair, and solar panel installation with Victron Energy products." lang="en-CA" canonicalPath="/en/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs, buildFAQSchema(serviceFaqs)]}>
+<Layout title="RV Services in Gatineau | Modification, Van Life, Solar and Repair" description="RV services in Gatineau: custom modification, Van Life conversion, solar, lithium, Victron, water leaks, roof work, maintenance, inspection and repair." lang="en-CA" canonicalPath="/en/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs, buildFAQSchema(serviceFaqs)]}>
   <Header lang="en" />
 
   <main>
     <section class="page-header">
       <div class="container">
-        <p class="eyebrow">For every need related to your RV</p>
+        <p class="eyebrow">Modification • Van Life • Repair</p>
         <h1>Our Services</h1>
-        <p>Inspection, maintenance, repair, and solar panel installation based on the vehicle’s actual condition.</p>
+        <p>Custom modification, Van Life conversion, solar, lithium, roof work, water intrusion, maintenance, inspection and repair based on the vehicle and the way you travel.</p>
       </div>
     </section>
 
@@ -89,11 +99,11 @@ const breadcrumbs = buildBreadcrumbSchema([
       <div class="container seo-columns">
         <div>
           <h2>A service adapted to your situation</h2>
-          <p>Whether you are preparing for the season, evaluating a vehicle before purchase, or in the middle of a repair, we can direct you to the right service based on the vehicle’s condition and the urgency of the situation.</p>
+          <p>Whether you are planning energy autonomy, a Van Life build, a solar and lithium upgrade or a repair, we can direct you to the right service based on the vehicle’s condition and the urgency of the situation.</p>
         </div>
         <div>
           <h2>What we cover</h2>
-          <p>Water intrusion, roofing, seals, electrical and propane components, interior restoration, solar panels, and inspections before a transaction.</p>
+          <p>Custom interiors, solar, lithium, Victron, heating, air conditioning, plumbing, Van Life, water intrusion, roof work, seals, electrical components, propane and inspections before a transaction.</p>
         </div>
       </div>
     </section>

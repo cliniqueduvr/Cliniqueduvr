@@ -30,10 +30,10 @@ const symptomCards = [
     linkLabel: "Voir l'inspection avant transaction"
   },
   {
-    title: 'Véhicule terni ou à remettre en valeur',
-    copy: "Pour un VR ou un motorisé qui a besoin d'un vrai nettoyage, d'un polissage ou d'un cirage, le service d'esthétique aide à remettre le véhicule en valeur en atelier ou sur la route.",
-    href: '/services/esthetique/',
-    linkLabel: "Voir l'esthétique VR"
+    title: 'Modification, autonomie ou aménagement',
+    copy: "Pour ajouter du solaire, du lithium, un système Victron, du chauffage, de la ventilation, du rangement ou un aménagement plus fonctionnel, commencez par la page Modification & aménagement.",
+    href: '/services/modification-amenagement/',
+    linkLabel: "Voir Modification & aménagement"
   },
   {
     title: 'Vous hésitez entre deux services',
@@ -60,8 +60,8 @@ const faqs = [
     answer: "L'<a href=\"/services/entretien/\">entretien</a> convient surtout quand on veut prévenir une infiltration, reprendre des joints ou entretenir la toiture avant que des dommages importants apparaissent. Quand le dommage est déjà visible, la <a href=\"/services/reparation/\">réparation</a> est souvent plus appropriée."
   },
   {
-    question: 'L’esthétique peut-elle être utile avant une vente?',
-    answer: "Oui. L'<a href=\"/services/esthetique/\">esthétique</a> peut améliorer la présentation du véhicule, mais si l'objectif est de clarifier son état réel avant une transaction, l'<a href=\"/services/inspection/\">inspection</a> reste généralement la première étape la plus utile."
+    question: 'Une modification peut-elle augmenter la valeur d’un VR?',
+    answer: "Oui. Une <a href=\"/services/modification-amenagement/\">modification bien planifiée</a>, comme le solaire, le lithium, l'autonomie ou un aménagement plus fonctionnel, peut rendre le VR plus utile et plus intéressant. Si l'objectif est de clarifier son état réel avant une transaction, l'<a href=\"/services/inspection/\">inspection</a> reste généralement la première étape la plus utile."
   }
 ];
 
@@ -73,7 +73,7 @@ const breadcrumbs = buildBreadcrumbSchema([
 
 <Layout
   title="Quel service choisir pour votre VR à Gatineau | Clinique du VR"
-  description="Choisissez le bon service pour votre VR à Gatineau selon les symptômes observés: fuite d'eau, entretien de joints et de toiture, réparation, esthétique ou inspection avant achat."
+  description="Choisissez le bon service pour votre VR à Gatineau selon les besoins: réparation, modification, aménagement, solaire, lithium, fuite d'eau, entretien ou inspection avant achat."
   canonicalPath="/choisir-service/"
   frPath="/choisir-service/"
   enPath="/en/choose-service/"
@@ -94,7 +94,7 @@ const breadcrumbs = buildBreadcrumbSchema([
       <div class="container">
         <div class="section-intro">
           <h2>Commencer par le bon service</h2>
-          <p>Quand un VR présente plusieurs signes en même temps, il n'est pas toujours évident de savoir s'il faut commencer par une inspection, un entretien, une réparation ou un service esthétique. Les cartes ci-dessous vous aident à choisir la prochaine étape la plus utile pour un VR ou un motorisé.</p>
+          <p>Quand un VR présente plusieurs besoins en même temps, il n'est pas toujours évident de savoir s'il faut commencer par une inspection, un entretien, une réparation, une modification ou un projet d'autonomie. Les cartes ci-dessous vous aident à choisir la prochaine étape la plus utile pour un VR ou un motorisé.</p>
         </div>
 
         <div class="card-grid">
@@ -117,7 +117,7 @@ const breadcrumbs = buildBreadcrumbSchema([
           {serviceAreas.map((area) => (
             <a class="info-card choice-card" href={area.href}>
               <h3>{area.name}</h3>
-              <p>Demandes fréquentes en inspection, entretien, réparation, esthétique et préparation avant transaction.</p>
+              <p>Demandes fréquentes en inspection, entretien, réparation, modification, solaire, lithium et préparation avant transaction.</p>
               <span>Voir la page locale</span>
             </a>
           ))}

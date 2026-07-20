@@ -1,12 +1,14 @@
 # Clinique du VR
 
-> Inspection, entretien, reparation et esthetique de vehicules recreatifs (VR) a Gatineau, Ottawa, Outaouais et Laurentides.
+> Modification, amenagement, Van Life, solaire, lithium, inspection, entretien et reparation de vehicules recreatifs (VR) a Gatineau, Ottawa, Outaouais et Laurentides.
 
 ## Services
+- [Modification et amenagement de VR](https://www.cliniqueduvr.ca/services/modification-amenagement/)
+- [Conversion Van Life](https://www.cliniqueduvr.ca/services/van-life/)
+- [Solaire et lithium pour VR](https://www.cliniqueduvr.ca/services/installation-panneaux-solaires/)
 - [Inspection de VR](https://www.cliniqueduvr.ca/services/inspection/)
 - [Entretien de VR](https://www.cliniqueduvr.ca/services/entretien/)
 - [Reparation de VR](https://www.cliniqueduvr.ca/services/reparation/)
-- [Esthetique de VR](https://www.cliniqueduvr.ca/services/esthetique/)
 - [Vente et achat de VR](https://www.cliniqueduvr.ca/services/vente-achat/)
 
 ## Contact

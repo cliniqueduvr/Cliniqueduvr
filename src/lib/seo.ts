@@ -80,7 +80,7 @@ export function buildLocalBusinessSchema({
     '@type': 'AutoRepair',
     '@id': `${SITE_URL}/#clinique-du-vr`,
     name: 'Clinique du VR',
-    description: 'Inspection, entretien, réparation et infiltration d’eau de VR à Gatineau, Ottawa, Outaouais et Laurentides',
+    description: 'Modification, aménagement, Van Life, solaire, lithium, autonomie, réparation et entretien de VR à Gatineau, Ottawa, Outaouais et Laurentides',
     telephone,
     email,
     url: SITE_URL,
@@ -123,12 +123,18 @@ export function buildLocalBusinessSchema({
       }
     ],
     knowsAbout: [
+      'Modification de VR',
+      'Aménagement de VR',
+      'Conversion Van Life',
+      'Installation solaire VR',
+      'Batteries lithium pour VR',
+      'Autonomie énergétique VR',
+      'Produits Victron Energy',
       'Inspection de VR',
       'Entretien de VR',
       'Réparation de VR',
       'Infiltration d’eau de VR',
       'Toiture de VR',
-      'Esthétique de VR',
       'Roulotte',
       'Caravane'
     ],
@@ -136,10 +142,12 @@ export function buildLocalBusinessSchema({
       '@type': 'OfferCatalog',
       name: 'Services VR',
       itemListElement: [
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Modification et aménagement de VR' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Conversion Van Life' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Solaire et batteries lithium pour VR' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Inspection de VR' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Entretien de VR' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Réparation de VR' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Esthétique de VR' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Vente et achat de VR' } }
       ]
     }
@@ -211,7 +219,7 @@ export function buildServiceSchema({
       { '@type': 'AdministrativeArea', name: 'Laurentides' }
     ],
     serviceType,
-    description
+    description: stripHtml(description)
   };
 }
 

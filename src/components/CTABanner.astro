@@ -11,17 +11,20 @@ export interface Props {
 
 const {
   heading = "Demandez votre soumission gratuite",
-  subheading = "Inspection et devis sans obligation",
+  subheading,
   phoneNumber = siteSettings.phone.display,
   lang = 'fr',
   smsLabel = lang === 'fr' ? 'Message texte' : 'Text us'
 } = Astro.props as Props;
+const resolvedSubheading = subheading ?? (lang === 'fr'
+  ? "Modification, Van Life, solaire, lithium, toiture, infiltration ou réparation"
+  : "Custom builds, Van Life, solar, lithium, roof, water intrusion or repair");
 ---
 
 <section class="cta-banner">
   <div class="container cta-content">
     <h2>{heading}</h2>
-    <p>{subheading}</p>
+    <p>{resolvedSubheading}</p>
     <div class="cta-actions">
       <a href={`tel:${siteSettings.phone.href}`} class="cta-button">
         <i class="fas fa-phone"></i> {phoneNumber}

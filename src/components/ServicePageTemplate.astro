@@ -47,6 +47,28 @@ const localGuide = isEnglish
 const serviceAreas = isEnglish
   ? ['Outaouais', 'Ottawa', 'Laurentides']
   : ['Outaouais', 'Ottawa', 'Laurentides'];
+const serviceGuidanceCopy = isEnglish
+  ? service.slug === 'solar-panel-installation'
+    ? 'We can help you define the right solar, lithium, charging and monitoring setup for the way you actually travel.'
+    : 'We can help you understand the situation, choose the right service and decide on the next useful step for your RV.'
+  : service.slug === 'modification-amenagement'
+    ? "On peut vous aider à cadrer le projet, prioriser les systèmes à modifier et choisir une solution cohérente avec votre VR."
+    : service.slug === 'van-life'
+      ? "On peut vous aider à définir le niveau de conversion, les systèmes essentiels et les contraintes réelles de votre van."
+      : service.slug === 'installation-panneaux-solaires'
+        ? "On peut vous aider à choisir le bon niveau de solaire, lithium, recharge et monitoring selon votre façon de voyager."
+        : "On peut vous aider à comprendre la situation, à choisir le bon service et à décider de la prochaine étape utile pour votre VR.";
+const sideGuidanceCopy = isEnglish
+  ? service.slug === 'solar-panel-installation'
+    ? 'We can point you toward the right solar, lithium or charging setup based on your vehicle and power needs.'
+    : 'We can point you toward inspection, maintenance or repair based on the actual condition of the vehicle.'
+  : service.slug === 'modification-amenagement'
+    ? "On peut vous orienter vers une modification intérieure, une mise à niveau solaire/lithium ou un projet sur mesure selon votre véhicule."
+    : service.slug === 'van-life'
+      ? "On peut vous orienter vers une conversion essentielle, aventure ou sur mesure selon le véhicule, l'usage et le budget."
+      : service.slug === 'installation-panneaux-solaires'
+        ? "On peut vous orienter vers le bon système solaire, lithium ou recharge selon votre VR et votre consommation."
+        : "On peut vous orienter vers une inspection, un entretien ou une réparation selon l'état du véhicule.";
 const baseHelpfulLinks = isEnglish
   ? [
       {
@@ -67,7 +89,7 @@ const baseHelpfulLinks = isEnglish
       {
         href: chooseServiceHref,
         title: 'Which service fits best?',
-        copy: 'Use our guidance page if you are not sure whether you need inspection, maintenance, repair, or detailing.'
+        copy: 'Use our guidance page if you are not sure whether you need modification, Van Life, solar, inspection, maintenance, or repair.'
       },
       {
         href: servicesHref,
@@ -94,7 +116,7 @@ const baseHelpfulLinks = isEnglish
       {
         href: chooseServiceHref,
         title: 'Quel service choisir ?',
-        copy: 'Utilisez notre page d’orientation si vous hésitez entre inspection, entretien, réparation ou esthétique.'
+        copy: 'Utilisez notre page d’orientation si vous hésitez entre modification, Van Life, solaire, inspection, entretien ou réparation.'
       },
       {
         href: servicesHref,
@@ -148,20 +170,6 @@ const fallbackProofContent = isEnglish
           { title: 'Cause before cosmetics', text: 'The goal is to avoid closing a damaged area without really addressing where the water came from.' },
           { title: 'Materials treated as a whole', text: 'Roof, walls, flooring, coverings, and interior sections often have to be understood together.' },
           { title: 'Clearer repair logic', text: 'You get a more defensible path for private work or for an insurance-backed file.' }
-        ]
-      },
-      detailing: {
-        title: 'What a real RV detailing service should improve',
-        intro: 'This page is not just about washing a large vehicle. It is about presentation, gloss, and a finish that actually looks more sale-ready and better cared for.',
-        stats: [
-          { value: 'Interior + exterior', label: 'Cleaning built around RV size and surfaces' },
-          { value: 'Polish + wax', label: 'Visual improvement and finish enhancement' },
-          { value: 'Workshop or mobile', label: 'Depending on access and assignment' }
-        ],
-        points: [
-          { title: 'Built for larger formats', text: 'RVs and motorhomes need a different approach than small-vehicle detailing.' },
-          { title: 'Useful before sale or season', text: 'This service is strongest when the goal is a cleaner, brighter, more credible presentation.' },
-          { title: 'Clearer finish quality', text: 'Polishing and waxing help move the vehicle beyond a simple rinse or surface clean.' }
         ]
       },
       'buying-selling': {
@@ -222,20 +230,6 @@ const fallbackProofContent = isEnglish
           { title: 'Démarche plus claire', text: "Vous obtenez une logique de réparation plus défendable, en privé comme en assurance." }
         ]
       },
-      esthetique: {
-        title: "Ce qu'un vrai service d'esthétique VR doit améliorer",
-        intro: "Cette page ne sert pas à promettre un simple lavage. Elle sert à montrer une amélioration visuelle nette, une meilleure brillance et une présentation plus crédible du véhicule.",
-        stats: [
-          { value: 'Intérieur + extérieur', label: 'Nettoyage pensé pour les grands formats' },
-          { value: 'Polissage + cirage', label: 'Mise en valeur et finition' },
-          { value: 'Atelier ou route', label: 'Selon le véhicule et le mandat' }
-        ],
-        points: [
-          { title: 'Pensé pour les grands formats', text: 'Un VR ou un motorisé demande une approche différente de celle d’un petit véhicule.' },
-          { title: 'Utile avant vente ou saison', text: 'Le service prend sa valeur quand le but est une présentation plus propre, brillante et crédible.' },
-          { title: 'Finition plus nette', text: 'Polissage et cirage permettent d’aller plus loin qu’un simple nettoyage de surface.' }
-        ]
-      },
       'vente-achat': {
         title: 'Ce qui donne de la valeur à ce service avant transaction',
         intro: "Acheter ou vendre devient plus simple quand l'état du véhicule est plus clair, que les priorités sont identifiées et que la présentation inspire davantage confiance.",
@@ -255,7 +249,7 @@ const resolvedProofTitle = service.proofTitle ?? fallbackProofContent?.title;
 const resolvedProofIntro = service.proofIntro ?? fallbackProofContent?.intro;
 const resolvedProofStats = proofStats.length > 0 ? proofStats : fallbackProofContent?.stats ?? [];
 const resolvedProofPoints = proofPoints.length > 0 ? proofPoints : fallbackProofContent?.points ?? [];
-const showProofSection = isEnglish || !['entretien', 'reparation', 'esthetique'].includes(service.slug);
+const showProofSection = isEnglish || !['entretien', 'reparation'].includes(service.slug);
 const rexosealPanel = isEnglish
   ? service.slug === 'maintenance'
     ? {
@@ -286,12 +280,20 @@ const localServiceFocus = isEnglish
     ? `Clinique du VR delivers <strong>${service.navLabel}</strong> from its <strong>Gatineau workshop</strong> and supports clients from <u>Outaouais</u>, <u>Ottawa</u>, and the <u>Laurentides</u> depending on the assignment. This page is meant to clarify the right next step for <strong>preventive maintenance</strong>, <strong>diagnosis</strong>, <strong>comfort systems</strong>, <strong>electrical systems</strong>, <strong>roof condition</strong>, <strong>seals</strong>, and other RV maintenance needs.`
     : service.slug === 'repair'
       ? `Clinique du VR delivers <strong>${service.navLabel}</strong> from its <strong>Gatineau workshop</strong> and supports clients from <u>Outaouais</u>, <u>Ottawa</u>, and the <u>Laurentides</u> depending on the assignment. This page is meant to clarify the right repair path for <strong>diagnosis</strong>, <strong>comfort systems</strong>, <strong>electrical systems</strong>, <strong>electronics</strong>, <strong>plumbing</strong>, <strong>propane</strong>, <strong>roof condition</strong>, and water-related damage.`
-    : `Clinique du VR delivers <strong>${service.navLabel}</strong> from its <strong>Gatineau workshop</strong> and supports clients from <u>Outaouais</u>, <u>Ottawa</u>, and the <u>Laurentides</u> depending on the assignment. This page is meant to clarify the right next step when the issue involves <strong>water intrusion</strong>, <strong>roof condition</strong>, <strong>seals</strong>, or an <strong>RV inspection / maintenance / repair decision</strong>.`
+    : service.slug === 'solar-panel-installation'
+      ? `Clinique du VR delivers <strong>${service.navLabel}</strong> from its <strong>Gatineau workshop</strong> and supports clients from <u>Outaouais</u>, <u>Ottawa</u>, and the <u>Laurentides</u> depending on the assignment. This page is meant to clarify <strong>RV solar panels</strong>, <strong>lithium batteries</strong>, <strong>Victron Energy</strong>, charging, monitoring and off-grid power needs.`
+      : `Clinique du VR delivers <strong>${service.navLabel}</strong> from its <strong>Gatineau workshop</strong> and supports clients from <u>Outaouais</u>, <u>Ottawa</u>, and the <u>Laurentides</u> depending on the assignment. This page is meant to clarify the right next step when the issue involves <strong>water intrusion</strong>, <strong>roof condition</strong>, <strong>seals</strong>, or an <strong>RV inspection / maintenance / repair decision</strong>.`
   : service.slug === 'entretien'
     ? `Clinique du VR prend en charge <strong>${service.navLabel}</strong> à partir de son <strong>atelier de Gatineau</strong> et accompagne aussi les demandes venant de <u>l’Outaouais</u>, d’<u>Ottawa</u> et des <u>Laurentides</u> selon le mandat. Cette page sert à clarifier la bonne prochaine étape pour l’<strong>entretien préventif</strong>, le <strong>diagnostic</strong>, la <strong>climatisation</strong>, le <strong>chauffage</strong>, l’<strong>électricité</strong>, l’<strong>électronique</strong>, la <strong>toiture</strong>, les <strong>joints</strong> et les autres besoins d’entretien de VR.`
     : service.slug === 'reparation'
       ? `Clinique du VR prend en charge <strong>${service.navLabel}</strong> à partir de son <strong>atelier de Gatineau</strong> et accompagne aussi les demandes venant de <u>l’Outaouais</u>, d’<u>Ottawa</u> et des <u>Laurentides</u> selon le mandat. Cette page sert à clarifier la bonne réparation pour le <strong>diagnostic</strong>, la <strong>climatisation</strong>, le <strong>chauffage</strong>, l’<strong>électricité</strong>, l’<strong>électronique</strong>, la <strong>plomberie</strong>, le <strong>propane</strong>, la <strong>toiture</strong> et les dommages liés à l’eau.`
-    : `Clinique du VR prend en charge <strong>${service.navLabel}</strong> à partir de son <strong>atelier de Gatineau</strong> et accompagne aussi les demandes venant de <u>l’Outaouais</u>, d’<u>Ottawa</u> et des <u>Laurentides</u> selon le mandat. Cette page sert à clarifier la bonne prochaine étape quand le besoin touche une <strong>infiltration d’eau</strong>, la <strong>toiture</strong>, les <strong>joints</strong> ou un choix entre <strong>inspection, entretien et réparation de VR</strong>.`;
+    : service.slug === 'modification-amenagement'
+      ? `Clinique du VR prend en charge la <strong>modification et l'aménagement de VR</strong> à partir de son <strong>atelier de Gatineau</strong> et accompagne aussi les projets venant de <u>l'Outaouais</u>, d'<u>Ottawa</u> et des <u>Laurentides</u> selon le mandat. Cette page sert à clarifier les projets de <strong>panneaux solaires</strong>, <strong>batteries lithium</strong>, <strong>Victron Energy</strong>, autonomie énergétique, chauffage, climatisation, plomberie, mobilier, rangement, lits, cuisines et autres <strong>projets sur mesure</strong>.`
+      : service.slug === 'van-life'
+        ? `Clinique du VR prend en charge l'<strong>aménagement Van Life</strong> à partir de son <strong>atelier de Gatineau</strong> et accompagne aussi les projets venant de <u>l'Outaouais</u>, d'<u>Ottawa</u> et des <u>Laurentides</u> selon le mandat. Cette page sert à clarifier les conversions partielles ou complètes, l'isolation, le plancher, le mobilier, l'eau, le chauffage, la ventilation, le solaire, le lithium et les solutions 3 ou 4 saisons.`
+        : service.slug === 'installation-panneaux-solaires'
+          ? `Clinique du VR prend en charge l'<strong>installation de panneaux solaires et batteries lithium</strong> à partir de son <strong>atelier de Gatineau</strong> et accompagne aussi les projets venant de <u>l'Outaouais</u>, d'<u>Ottawa</u> et des <u>Laurentides</u> selon le mandat. Cette page sert à clarifier les besoins en <strong>Victron Energy</strong>, MPPT, onduleurs, DC-DC, recharge par alternateur, Shore Power, monitoring et autonomie énergétique.`
+          : `Clinique du VR prend en charge <strong>${service.navLabel}</strong> à partir de son <strong>atelier de Gatineau</strong> et accompagne aussi les demandes venant de <u>l’Outaouais</u>, d’<u>Ottawa</u> et des <u>Laurentides</u> selon le mandat. Cette page sert à clarifier la bonne prochaine étape quand le besoin touche une <strong>infiltration d’eau</strong>, la <strong>toiture</strong>, les <strong>joints</strong> ou un choix entre <strong>inspection, entretien et réparation de VR</strong>.`;
 ---
 
 <main>
@@ -300,7 +302,8 @@ const localServiceFocus = isEnglish
       <div class="hero-copy">
         <p class="eyebrow">{service.eyebrow}</p>
         <h1 class:list={[
-          (service.slug === 'inspection' || service.slug === 'entretien' || service.slug === 'maintenance' || service.slug === 'rexoseal' || service.slug === 'reparation' || service.slug === 'repair' || service.slug === 'installation-panneaux-solaires' || service.slug === 'solar-panel-installation') && 'hero-title-wide',
+          (service.slug === 'inspection' || service.slug === 'entretien' || service.slug === 'maintenance' || service.slug === 'rexoseal' || service.slug === 'reparation' || service.slug === 'repair' || service.slug === 'installation-panneaux-solaires' || service.slug === 'solar-panel-installation' || service.slug === 'modification-amenagement' || service.slug === 'van-life') && 'hero-title-wide',
+          (service.slug === 'modification-amenagement' || service.slug === 'van-life') && 'hero-title-balanced',
           service.slug === 'inspection' && 'hero-title-wider'
         ]}>{service.h1}</h1>
         <p class="opening" set:html={service.opening} />
@@ -320,7 +323,7 @@ const localServiceFocus = isEnglish
           <i class={service.icon}></i>
         </div>
         <h2>{isEnglish ? 'Need a practical starting point?' : 'Besoin d’un point de départ clair?'}</h2>
-        <p>{isEnglish ? 'We can help you understand the situation, choose the right service and decide on the next useful step for your RV.' : 'On peut vous aider à comprendre la situation, à choisir le bon service et à décider de la prochaine étape utile pour votre VR.'}</p>
+        <p>{serviceGuidanceCopy}</p>
         <a class="hero-link" href={contactHref}>{isEnglish ? 'Talk to us about your RV' : 'Parler de votre VR'}</a>
       </aside>
     </div>
@@ -457,7 +460,7 @@ const localServiceFocus = isEnglish
       <aside class="service-side sticky">
         <div class="side-card side-card-primary">
           <h3>{isEnglish ? 'Need a quick opinion?' : "Besoin d'un avis rapide?"}</h3>
-          <p>{isEnglish ? 'We can point you toward inspection, maintenance or repair based on the actual condition of the vehicle.' : "On peut vous orienter vers une inspection, un entretien ou une réparation selon l'état du véhicule."}</p>
+          <p>{sideGuidanceCopy}</p>
           <a class="side-button" href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>
         </div>
 
@@ -496,7 +499,7 @@ const localServiceFocus = isEnglish
     overflow: hidden;
     background:
       radial-gradient(circle at top left, rgba(242, 210, 27, 0.18), transparent 32%),
-      linear-gradient(135deg, var(--brand-navy-dark) 0%, #23476f 58%, #f4f6f8 58%, #f4f6f8 100%);
+      linear-gradient(135deg, var(--brand-navy-dark) 0%, #23476f 68%, #f4f6f8 68%, #f4f6f8 100%);
     padding: 4.5rem 0 4rem;
   }
 
@@ -533,6 +536,12 @@ const localServiceFocus = isEnglish
 
   .hero-copy h1.hero-title-wide {
     max-width: 17ch;
+  }
+
+  .hero-copy h1.hero-title-balanced {
+    max-width: 20ch;
+    font-size: clamp(2.55rem, 5vw, 4.2rem);
+    line-height: 1.04;
   }
 
   .hero-copy h1.hero-title-wider {

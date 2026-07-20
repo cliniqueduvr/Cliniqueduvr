@@ -21,10 +21,12 @@ const sections = [
   {
     title: 'Services',
     links: [
+      { href: '/services/modification-amenagement/', label: 'Modification & aménagement' },
+      { href: '/services/van-life/', label: 'Van Life' },
+      { href: '/services/installation-panneaux-solaires/', label: 'Solaire & lithium' },
       { href: '/services/inspection/', label: 'Inspection' },
       { href: '/services/entretien/', label: 'Entretien' },
-      { href: '/services/reparation/', label: 'Réparation' },
-      { href: '/services/esthetique/', label: 'Esthétique VR' }
+      { href: '/services/reparation/', label: 'Réparation' }
     ]
   },
   {
@@ -100,7 +102,7 @@ const breadcrumbs = buildBreadcrumbSchema([
         <article class="content-main sitemap-grid">
           <article class="interior-card sitemap-card">
             <h2>Repère local</h2>
-            <p class="seo-keyline">Le plan du site relie les pages principales à des recherches locales comme <strong>inspection de VR à Gatineau</strong>, <strong>réparation de VR à Ottawa</strong>, <strong>entretien en Outaouais</strong> et <strong>infiltration d’eau dans les Laurentides</strong>.</p>
+            <p class="seo-keyline">Le plan du site relie les pages principales à des recherches locales comme <strong>modification de VR à Gatineau</strong>, <strong>aménagement Van Life à Ottawa</strong>, <strong>installation solaire VR en Outaouais</strong>, <strong>réparation de VR à Ottawa</strong> et <strong>infiltration d’eau dans les Laurentides</strong>.</p>
           </article>
           {sections.map((section) => (
           <article class="interior-card sitemap-card">
@@ -117,17 +119,18 @@ const breadcrumbs = buildBreadcrumbSchema([
         <aside class="interior-side-panel">
           <div class="interior-side-card interior-side-card-primary">
             <h3>Besoin d'un avis rapide?</h3>
-            <p>On peut vous orienter vers une inspection, un entretien ou une réparation selon l'état du véhicule.</p>
+            <p>On peut vous orienter vers une modification, un aménagement, une installation solaire, une inspection, un entretien ou une réparation selon votre besoin.</p>
             <a class="interior-side-button" href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>
           </div>
 
           <div class="interior-side-card">
             <h3>Autres services</h3>
             <nav class="interior-service-nav" aria-label="Autres services">
-              <a href="/services/inspection/"><i class="fas fa-clipboard-check"></i><span>Inspection</span></a>
-              <a href="/services/entretien/"><i class="fas fa-screwdriver-wrench"></i><span>Entretien</span></a>
+              <a href="/services/modification-amenagement/"><i class="fas fa-sliders"></i><span>Modification & aménagement</span></a>
+              <a href="/services/van-life/"><i class="fas fa-van-shuttle"></i><span>Van Life</span></a>
+              <a href="/services/installation-panneaux-solaires/"><i class="fas fa-solar-panel"></i><span>Solaire & lithium</span></a>
               <a href="/services/reparation/"><i class="fas fa-toolbox"></i><span>Réparation</span></a>
-              <a href="/services/esthetique/"><i class="fas fa-spray-can-sparkles"></i><span>Esthétique VR</span></a>
+              <a href="/services/entretien/"><i class="fas fa-screwdriver-wrench"></i><span>Entretien</span></a>
             </nav>
           </div>
 

@@ -13,6 +13,7 @@ const isEnglish = lang === 'en';
 const currentPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
 const frToEnServiceSlug = new Map(servicePagesFr.items.map((service) => [service.slug, service.alternateSlug]));
 const enToFrServiceSlug = new Map(servicePagesEn.items.map((service) => [service.slug, service.alternateSlug]));
+const englishServiceSlugs = new Set(servicePagesEn.items.map((service) => service.slug));
 const frAreaToEnSlug = new Map(localAreaPagesEn.map((page) => [page.area, page.slug]));
 const enAreaToFrSlug = new Map(localAreaPagesFr.map((page) => [page.area, page.slug]));
 const frToEnAreaSlug = new Map(localAreaPagesFr.map((page) => [page.slug, frAreaToEnSlug.get(page.area)]));
@@ -62,7 +63,8 @@ function getAlternatePath(pathname: string, targetLang: 'fr' | 'en') {
     if (staticFrToEn[normalizedPath]) return staticFrToEn[normalizedPath];
     if (normalizedPath.startsWith('/services/')) {
       const slug = normalizedPath.replace('/services/', '').replaceAll('/', '');
-      return `/en/services/${frToEnServiceSlug.get(slug) ?? slug}/`;
+      const alternateSlug = frToEnServiceSlug.get(slug) ?? slug;
+      return englishServiceSlugs.has(alternateSlug) ? `/en/services/${alternateSlug}/` : '/en/services/';
     }
     if (normalizedPath.startsWith('/zones/')) {
       const slug = normalizedPath.replace('/zones/', '').replaceAll('/', '');
@@ -95,9 +97,27 @@ const isActivePath = (href: string) => {
   if (href === '/en/') return currentPath === '/en/';
   return currentPath === href || currentPath.startsWith(href);
 };
-const frenchServiceOrder = ['inspection', 'entretien', 'reparation', 'rexoseal', 'installation-panneaux-solaires'];
+const frenchServiceOrder = [
+  'modification-amenagement',
+  'van-life',
+  'installation-panneaux-solaires',
+  'reparation',
+  'entretien',
+  'inspection',
+  'rexoseal'
+];
+const englishServiceOrder = [
+  'rv-modification-custom-builds',
+  'van-life-conversion',
+  'solar-panel-installation',
+  'repair',
+  'maintenance',
+  'inspection'
+];
 const orderedServicePages = isEnglish
-  ? servicePagesEn.items
+  ? [...servicePagesEn.items].sort(
+      (a, b) => englishServiceOrder.indexOf(a.slug) - englishServiceOrder.indexOf(b.slug)
+    )
   : [...servicePagesFr.items].sort(
       (a, b) => frenchServiceOrder.indexOf(a.slug) - frenchServiceOrder.indexOf(b.slug)
     );

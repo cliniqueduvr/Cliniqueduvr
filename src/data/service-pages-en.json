@@ -1,6 +1,240 @@
 {
   "items": [
     {
+      "slug": "rv-modification-custom-builds",
+      "alternateSlug": "modification-amenagement",
+      "title": "RV Modification and Custom Builds",
+      "h1": "RV modification, custom builds and upgrades in Gatineau-Ottawa",
+      "navLabel": "Custom modifications",
+      "icon": "fas fa-sliders",
+      "serviceType": "RV modification, custom interior upgrades and energy autonomy",
+      "seoTitle": "RV Modification in Gatineau-Ottawa | Solar, Lithium and Custom Builds",
+      "seoDescription": "RV modification and custom builds in Gatineau-Ottawa: solar, lithium, Victron, heating, water, ventilation, storage, furniture and interior upgrades.",
+      "eyebrow": "Solar, lithium, autonomy and custom projects",
+      "opening": "Clinique du VR handles <strong>RV modification</strong>, <strong>custom interior upgrades</strong> and <strong>energy autonomy</strong> projects for owners who want a vehicle that better fits the way they travel.",
+      "lead": "Solar, lithium, Victron Energy, MPPT, inverters, chargers, shore power, diesel heating, water heaters, MaxxAir ventilation, air conditioning, plumbing, storage, beds, kitchens and custom RV upgrades.",
+      "intro": "Each project starts with real usage: off-grid camping, longer trips, 3- or 4-season comfort, added equipment, better interior organization or an upgrade to an existing system.",
+      "heroPromise": "Tell us about your project so we can frame a more autonomous, more comfortable and better adapted RV setup.",
+      "detailIntro": "A good RV modification has to respect structure, electrical systems, plumbing, watertightness, component access, weight and vehicle balance. We can integrate solar panels, lithium batteries, Victron Energy products, MPPT controllers, inverters, chargers, shore power, alternator charging, diesel heating, water heaters, MaxxAir ventilation, air conditioning, furniture, storage, beds, kitchens and other upgrades depending on the project.",
+      "highlights": [
+        "Solar and lithium",
+        "Victron Energy products",
+        "Interior upgrades",
+        "Heating, water and comfort",
+        "Custom projects"
+      ],
+      "proofTitle": "Useful modification starts with the right project frame",
+      "proofIntro": "The right project improves autonomy, comfort and daily use without creating access, weight, electrical, plumbing or watertightness problems.",
+      "proofStats": [
+        { "value": "Solar + lithium", "label": "Energy autonomy and charging" },
+        { "value": "Victron", "label": "MPPT, inverters, chargers and monitoring" },
+        { "value": "Custom", "label": "Plan adapted to the vehicle and travel style" }
+      ],
+      "proofPoints": [
+        {
+          "title": "Usage before equipment",
+          "text": "We start with how you travel, the appliances you use and the autonomy you want before selecting components."
+        },
+        {
+          "title": "Coherent systems",
+          "text": "Solar, batteries, charging, shore power, ventilation, heating, water and plumbing have to work together."
+        },
+        {
+          "title": "Built for the RV",
+          "text": "Cable routing, roof condition, weight, ventilation, storage and component access are considered before installation."
+        }
+      ],
+      "caseStudiesTitle": "Types of RV modification projects",
+      "caseStudiesIntro": "These examples show the project families that separate Clinique du VR from a traditional repair-only workshop.",
+      "caseStudies": [
+        {
+          "title": "Solar and lithium autonomy",
+          "meta": "Victron • MPPT • inverter • charging",
+          "text": "Sizing and integration of an energy system to power equipment, improve charging and extend autonomy away from hookups."
+        },
+        {
+          "title": "3- or 4-season comfort",
+          "meta": "Heating • ventilation • hot water",
+          "text": "Addition or improvement of diesel heating, water heating, MaxxAir ventilation, air conditioning or plumbing depending on travel style."
+        },
+        {
+          "title": "More functional interior",
+          "meta": "Furniture • storage • beds • kitchen",
+          "text": "Bed, storage, furniture, kitchen or living-area modifications to make the vehicle more practical day to day."
+        }
+      ],
+      "includedTitle": "Possible modifications",
+      "included": [
+        "Solar panels, MPPT controllers and <strong>Victron Energy</strong> products",
+        "<strong>Lithium</strong> batteries, inverters, chargers, DC-DC, alternator charging and shore power",
+        "Diesel heating, water heaters, MaxxAir ventilation, air conditioning and 3- or 4-season comfort",
+        "Plumbing, fresh water, storage, furniture, bed changes, kitchens and interior upgrades",
+        "Correction of existing systems that lack capacity or coherence",
+        "Custom projects based on the vehicle and usage"
+      ],
+      "situationsTitle": "When to ask for an RV modification",
+      "situations": [
+        "You want more autonomy without relying only on campgrounds",
+        "You want solar, lithium, an inverter or a Victron Energy system",
+        "Your interior lacks storage, comfort or functionality",
+        "You are preparing for longer, off-grid or 4-season travel",
+        "You want to improve an existing system instead of starting over"
+      ],
+      "processIntro": "We first validate the objective, vehicle, technical constraints, existing components, desired autonomy level and approximate budget before recommending a solution.",
+      "process": [
+        "Discussion about travel style, equipment, expected comfort and priorities",
+        "Review of the RV, roof, access points, existing systems and installation constraints",
+        "Component selection: solar, lithium, Victron, charging, heating, water, ventilation or interior upgrades",
+        "Work prioritization based on budget, schedule and actual use",
+        "Workshop installation, testing, functional check and user explanation"
+      ],
+      "whyChooseTitle": "Why choose Clinique du VR for RV modifications?",
+      "whyChooseIntro": "A modification project often touches several systems at once. Our approach aims for a useful, understandable and durable solution.",
+      "whyChoose": [
+        {
+          "title": "Complete view",
+          "text": "We consider electricity, watertightness, plumbing, heating, ventilation, weight, component access and the way the vehicle is actually used."
+        },
+        {
+          "title": "Energy autonomy",
+          "text": "We can integrate solar, lithium, Victron Energy, alternator charging, shore power, inverters and monitoring into one coherent setup."
+        },
+        {
+          "title": "Scalable project",
+          "text": "The plan can be complete or progressive depending on the vehicle, budget, schedule and systems already in place."
+        }
+      ],
+      "faqTitle": "Frequently asked questions about RV modification",
+      "faqs": [
+        {
+          "question": "Can you install a complete solar and lithium system?",
+          "answer": "Yes. We can evaluate the need, supply components and install a system with solar panels, lithium batteries, MPPT controllers, inverters, chargers, DC-DC, shore power, monitoring and Victron Energy products depending on the project."
+        },
+        {
+          "question": "Do you handle custom projects?",
+          "answer": "Yes. Modifications can involve electricity, plumbing, heating, ventilation, air conditioning, storage, furniture, beds, kitchens or other elements depending on the vehicle."
+        },
+        {
+          "question": "Can an existing system be upgraded?",
+          "answer": "Yes. We can evaluate an existing system and recommend an upgrade or correction if the components and installation allow it."
+        }
+      ]
+    },
+    {
+      "slug": "van-life-conversion",
+      "alternateSlug": "van-life",
+      "title": "Van Life Conversion",
+      "h1": "Van Life conversion and custom van builds in Gatineau-Ottawa",
+      "navLabel": "Van Life",
+      "icon": "fas fa-van-shuttle",
+      "serviceType": "Complete and partial Van Life conversion",
+      "seoTitle": "Van Life Conversion in Gatineau-Ottawa | Transit, ProMaster and Sprinter",
+      "seoDescription": "Van Life conversion in Gatineau-Ottawa for Ford Transit, Ram ProMaster and Mercedes-Benz Sprinter: insulation, furniture, solar, lithium, water, heating and 4-season systems.",
+      "eyebrow": "Complete or partial conversions",
+      "opening": "Clinique du VR supports <strong>Van Life conversion</strong> projects, from partial builds to complete conversions for vans such as Ford Transit, Ram ProMaster and Mercedes-Benz Sprinter.",
+      "lead": "Insulation, flooring, furniture, kitchen, water, diesel heating, solar, lithium, Victron, lighting, ventilation and 3- or 4-season solutions.",
+      "intro": "You can bring your own van or ask for guidance before choosing the vehicle.",
+      "heroPromise": "Start a Van Life project that fits your vehicle, your budget and the way you actually travel.",
+      "detailIntro": "A successful Van Life conversion has to balance space, weight, electricity, water, heating, ventilation, storage and service access. We can handle partial or complete conversions with insulation, sound deadening, flooring, furniture, kitchen, fresh water, grey water, shower, toilet, diesel heating, solar, lithium, Victron, lighting, ventilation, air conditioning and 4-season solutions.",
+      "highlights": [
+        "Partial conversion",
+        "Complete conversion",
+        "Transit, ProMaster, Sprinter",
+        "4-season solutions"
+      ],
+      "proofTitle": "Three levels of Van Life projects",
+      "proofIntro": "The right build depends on the vehicle, number of travellers, 3- or 4-season use, autonomy target and approximate budget.",
+      "proofStats": [
+        { "value": "Essential", "label": "Insulation, flooring, basic electrical, ventilation and essential furniture" },
+        { "value": "Adventure", "label": "Solar, lithium, heating, water, kitchen and extended autonomy" },
+        { "value": "Custom", "label": "Complete design, advanced systems and premium equipment" }
+      ],
+      "proofPoints": [
+        {
+          "title": "Essential conversion",
+          "text": "A functional base that structures the vehicle without aiming for full autonomy."
+        },
+        {
+          "title": "Adventure conversion",
+          "text": "A longer-travel build with energy, water, kitchen and extended comfort."
+        },
+        {
+          "title": "Custom conversion",
+          "text": "A personalized design with advanced electrical systems, shower, hot water and adapted furniture."
+        }
+      ],
+      "caseStudiesTitle": "Van Life project examples",
+      "caseStudiesIntro": "Projects can be presented by category: Van Life, solar and lithium, modifications, roof work, water intrusion and major repairs.",
+      "caseStudies": [
+        {
+          "title": "Partial van conversion",
+          "meta": "Van Life",
+          "text": "Functional build with furniture, ventilation and electrical preparation."
+        },
+        {
+          "title": "Solar autonomy for a van",
+          "meta": "Solar and lithium",
+          "text": "Integration of solar and lithium components to support off-grid travel."
+        }
+      ],
+      "includedTitle": "What a conversion can include",
+      "included": [
+        "Insulation, sound deadening, flooring, walls and interior finishing",
+        "Furniture, storage, bed, kitchen and living areas",
+        "Fresh water, grey water, shower, toilet and water heater depending on the project",
+        "Diesel heating, ventilation, air conditioning and 4-season solutions",
+        "Solar, lithium, Victron, lighting, outlets and monitoring",
+        "Complete or partial conversion of Ford Transit, Ram ProMaster or Mercedes-Benz Sprinter"
+      ],
+      "situationsTitle": "Which project this fits",
+      "situations": [
+        "You already have a Ford Transit, Ram ProMaster or Mercedes-Benz Sprinter",
+        "You are shopping for a vehicle and want to validate potential before buying",
+        "You want a partial conversion with only the essentials",
+        "You want a complete conversion built around autonomy and comfort",
+        "You want a 3- or 4-season setup with solar, lithium and heating"
+      ],
+      "processIntro": "The first discussion should clarify the vehicle, year, length, number of travellers, 3- or 4-season use, desired equipment, approximate budget and target date.",
+      "process": [
+        "Vehicle validation or support before choosing the vehicle",
+        "Discussion about partial or complete conversion, travellers and intended use",
+        "System choices: solar, lithium, water, heating, shower, kitchen and storage",
+        "Work plan and estimate by quote",
+        "Workshop installation, tests and final adjustments"
+      ],
+      "whyChooseTitle": "Why choose Clinique du VR for your Van Life project?",
+      "whyChooseIntro": "A converted van combines vehicle constraints with the realities of a small living space. The design has to stay practical, durable and easy to use.",
+      "whyChoose": [
+        {
+          "title": "Realistic approach",
+          "text": "We adapt the project to the vehicle, budget and way you actually travel."
+        },
+        {
+          "title": "Integrated autonomy",
+          "text": "Solar, lithium, water, heating, ventilation and lighting are planned as one system."
+        },
+        {
+          "title": "Quoted projects",
+          "text": "Conversions are priced by quote to reflect the level of customization and selected equipment."
+        }
+      ],
+      "faqTitle": "Frequently asked questions about Van Life conversion",
+      "faqs": [
+        {
+          "question": "Do you handle complete and partial conversions?",
+          "answer": "Yes. A project can be essential, adventure-oriented or fully custom depending on the vehicle, usage, desired equipment and budget."
+        },
+        {
+          "question": "Which vans can you convert?",
+          "answer": "We can work on vans such as Ford Transit, Ram ProMaster and Mercedes-Benz Sprinter depending on vehicle condition and project constraints."
+        },
+        {
+          "question": "Do you publish fixed prices?",
+          "answer": "Conversions are usually quoted because cost depends on the vehicle, electrical systems, water, heating, furniture and finish level."
+        }
+      ]
+    },
+    {
       "slug": "inspection",
       "alternateSlug": "inspection",
       "title": "RV Inspection",
@@ -83,29 +317,28 @@
       "navLabel": "Maintenance",
       "icon": "fas fa-screwdriver-wrench",
       "serviceType": "RV Maintenance, Seals and Roof Care",
-      "seoTitle": "RV Maintenance in Gatineau | Seals, Roof and Water Leak Prevention",
-      "seoDescription": "RV maintenance in Gatineau for wall and roof seals, membrane care and water leak prevention. Available in shop or mobile for Gatineau, Outaouais, Ottawa and the Laurentides.",
-      "eyebrow": "Prevent water intrusion",
-      "opening": "RV maintenance in Gatineau at Clinique du VR focuses on replacing <strong>wall seals</strong>, adding <strong>sealant</strong> where it is missing on the <strong>roof</strong>, and maintaining <strong>TPO or EPDM roof membranes</strong> to prevent <strong>water intrusion</strong>. We also offer <strong>Rexoseal</strong>-based work for some roof and membrane files when that approach fits the vehicle’s actual condition.",
-      "lead": "Replacing <strong>wall seals</strong>, adding <strong>roof sealant</strong> where it is missing, maintaining the <strong>TPO or EPDM roof membrane</strong>, and using <strong>Rexoseal</strong> on suitable roof files are effective ways to prevent <strong>water intrusion</strong>. We offer this service in the <strong>workshop</strong> or on the road.",
-      "intro": "We take care of <strong>seal maintenance</strong>, sensitive <strong>roof areas</strong>, <strong>TPO or EPDM roof membranes</strong>, and selected <strong>Rexoseal</strong> protection work to help preserve the watertightness of an <strong>RV</strong>, <strong>travel trailer</strong>, or <strong>caravan</strong>. The goal is to correct weak areas before they cause more significant damage.",
-      "detailIntro": "Effective maintenance should focus first on the components that protect the vehicle from <strong>water</strong>. <strong>Wall seals</strong>, <strong>roof seals</strong>, <strong>TPO or EPDM roof membranes</strong>, and exposed sealing points are often the first areas to wear out. Replacing, maintaining, or in some cases treating them with <strong>Rexoseal</strong> at the right time helps reduce the risk of <strong>water intrusion</strong> and the larger repairs that can follow.",
+      "seoTitle": "RV Maintenance in Gatineau | Diagnostics, HVAC, Electrical and Seals",
+      "seoDescription": "RV maintenance in Gatineau: diagnostics, preventive repair, seals, roof, brakes, axles, air conditioning, heating, electrical and electronic systems.",
+      "eyebrow": "Maintenance, diagnostics and prevention",
+      "opening": "RV maintenance in Gatineau at Clinique du VR covers more than seals. We help keep your <strong>RV</strong> or <strong>travel trailer</strong> reliable with preventive maintenance, <strong>diagnostics</strong>, <strong>watertightness</strong>, <strong>brakes</strong>, <strong>axles</strong>, <strong>air conditioning</strong>, <strong>heating</strong>, <strong>electrical systems</strong> and <strong>electronics</strong>.",
+      "lead": "Before the season, after storage or when a system feels less reliable, complete maintenance helps check the important points and act before a small weakness becomes a more expensive repair. Service is available in the <strong>workshop</strong> or on the road depending on the type of intervention.",
+      "intro": "We handle general maintenance for <strong>RVs</strong>, <strong>travel trailers</strong> and <strong>caravans</strong>: seals, roof, membrane, running gear, appliances, electrical systems and electronic controls. The goal is to understand the actual condition of the vehicle, correct what matters and give you clear next steps.",
+      "detailIntro": "Effective maintenance has to protect the vehicle and keep it functional. We check water-sensitive points, seals, the roof and membrane while also covering brakes, axles, air conditioning, heating, electrical systems, electronics and diagnostics depending on the symptoms observed.",
       "highlights": [
-        "Wall seal replacement",
-        "Roof seal replacement",
-        "Water intrusion prevention",
-        "Rexoseal application for selected roof files",
+        "Diagnostics",
+        "Air conditioning and heating",
+        "Electrical and electronic systems",
         "In-shop or mobile service"
       ],
       "includedTitle": "What we maintain",
       "included": [
-        "Replacement of worn wall seals",
-        "Addition of sealant on the roof and exposed areas where it is missing",
-        "Maintenance of TPO or EPDM roof membranes",
-        "Application of Rexoseal products on selected roofs or membranes based on vehicle condition",
-        "Visual check of water-sensitive points",
-        "Preventive maintenance to reduce intrusion risk",
-        "Service available in shop or mobile"
+        "Preventive maintenance before the season, after storage or before a long trip",
+        "Diagnostics for reported issues: noise, odour, moisture, intermittent systems or appliances that do not work properly",
+        "Seal, roof, sealant and TPO or EPDM membrane maintenance",
+        "Brake and axle maintenance in the workshop",
+        "Air conditioning and heating system checks based on the reported problem",
+        "Electrical and electronic checks: 12 V, 110 V, batteries, lights, panels, controls and accessories",
+        "Service available in shop or mobile depending on the type of work"
       ],
       "situationsTitle": "When to do the maintenance",
       "situations": [
@@ -170,26 +403,33 @@
       "navLabel": "Repair",
       "icon": "fas fa-toolbox",
       "serviceType": "Specialized RV Repair",
-      "seoTitle": "RV Water Leak Repair in Gatineau | Roof, Walls and Flooring",
-      "seoDescription": "RV water leak repair in Gatineau for roof damage, membrane issues, walls, flooring, moisture and mold. Insurance and private repairs for Gatineau, Ottawa, Outaouais and the Laurentides.",
-      "eyebrow": "Water intrusion, roof and interior damage",
-      "opening": "Clinique du VR handles <strong>specialized RV repair in Gatineau</strong> for problems related to <strong>water intrusion</strong>, <strong>mold</strong>, the <strong>roof</strong>, the <strong>roof membrane</strong>, <strong>flooring</strong>, and <strong>wall covering</strong>. We work on both insurance and private repairs, with special attention to the true source of the damage.",
-      "lead": "When water gets into an RV, the damage often goes beyond the visible surface. The repair approach needs to address the <strong>cause</strong>, the <strong>affected materials</strong> and the <strong>long-term condition</strong> of the vehicle.",
-      "intro": "We carry out specialized repairs on the areas most exposed to water damage, including the <strong>roof</strong>, <strong>roof membrane</strong>, <strong>floor</strong>, <strong>walls</strong> and interior finish materials.",
-      "detailIntro": "<strong>Water intrusion</strong> can affect structure, interior materials and the overall condition of the RV. A stain, mold odour, <strong>soft floor</strong> or <strong>damaged wall covering</strong> can point to a more advanced issue that requires methodical repair work.",
+      "seoTitle": "RV Repair in Gatineau | Diagnostics, Heating, AC, Electrical and Water Leaks",
+      "seoDescription": "RV and travel trailer repair in Gatineau: diagnostics, water intrusion, roof, air conditioning, heating, electrical, electronics, plumbing, propane and insurance work.",
+      "eyebrow": "Diagnostics, systems and restoration",
+      "opening": "Clinique du VR handles <strong>specialized RV repair in Gatineau</strong> for <strong>diagnostics</strong>, <strong>water intrusion</strong>, <strong>roof</strong>, <strong>air conditioning</strong>, <strong>heating</strong>, <strong>electrical systems</strong>, <strong>electronics</strong>, <strong>plumbing</strong> and <strong>propane</strong> problems.",
+      "lead": "When a system stops working, an appliance becomes intermittent or damage is visible, repair should start with a clear read of the problem. We look for the <strong>cause</strong>, assess the affected components and restore the vehicle based on the real priority.",
+      "intro": "We repair <strong>roofs</strong>, <strong>roof membranes</strong>, <strong>flooring</strong>, <strong>walls</strong> and interior finishes, as well as <strong>air conditioning</strong>, <strong>heating</strong>, <strong>electrical</strong>, <strong>electronic</strong>, <strong>plumbing</strong> and <strong>propane</strong> systems.",
+      "detailIntro": "An RV repair can involve structure, interior materials, appliances and comfort systems. Water intrusion, an electrical failure, unreliable heating, air conditioning that no longer cools, plumbing trouble or a propane appliance issue requires a methodical approach before replacing parts.",
       "highlights": [
-        "Water intrusion repair",
-        "Roof and roof membrane repair",
-        "Floor and wall covering repair",
-        "Insurance or private files"
+        "Diagnostics and repair",
+        "Air conditioning and heating",
+        "Electrical and electronic systems",
+        "Plumbing and propane"
       ],
       "includedTitle": "What we repair",
       "included": [
         "Search for the source of water intrusion",
         "Treatment of moisture-affected or mold-affected areas",
         "Roof and roof membrane repair",
+        "Complete roof membrane replacement when required",
         "Repair or replacement of damaged flooring",
         "Wall covering repair and interior restoration",
+        "Air conditioning diagnostics and repair",
+        "Heating diagnostics and repair",
+        "Electrical and electronic diagnostics and repair",
+        "Plumbing diagnostics and repair",
+        "Propane system and appliance diagnostics and repair",
+        "Component, accessory or appliance replacement according to diagnosis",
         "Insurance or private repairs depending on your file"
       ],
       "situationsTitle": "Signs that require repair",
@@ -197,13 +437,16 @@
         "Water stain, mold odour or soft wall",
         "Damaged roof or roof membrane",
         "Damaged floor, ceiling or wall covering",
+        "Air conditioning that no longer cools or behaves abnormally",
+        "Heating that starts poorly, stops or does not heat properly",
+        "Electrical, electronic, plumbing or propane system issue",
         "Damage requiring an insurance or private repair"
       ],
       "processIntro": "Our specialized repair method starts by confirming the source of the damage, then follows a logical restoration order. This makes it possible to correct the problem at its source and adapt the work whether it is an insurance file or a private repair.",
       "process": [
-        "Diagnosis to confirm the source of the leak or damage",
-        "Assessment of affected areas such as the roof, floor or walls",
-        "Repair and restoration based on the scope of the file",
+        "Diagnosis to confirm the source of the failure, leak or damage",
+        "Assessment of affected areas or systems: roof, structure, air conditioning, heating, electrical, electronics, plumbing or propane",
+        "Repair, component replacement or restoration based on the scope of the file",
         "Clear follow-up for insurance or private repair"
       ],
       "whyChooseTitle": "Why choose Clinique du VR for specialized repair?",
@@ -241,24 +484,24 @@
     {
       "slug": "solar-panel-installation",
       "alternateSlug": "installation-panneaux-solaires",
-      "title": "RV Solar Panel Installation",
-      "h1": "RV solar panels",
-      "navLabel": "Solar panels",
+      "title": "RV Solar and Lithium Installation",
+      "h1": "RV solar panels and lithium batteries for RV and Van Life",
+      "navLabel": "Solar and lithium",
       "icon": "fas fa-solar-panel",
       "serviceType": "RV solar system installation, supply and distribution",
-      "seoTitle": "RV Solar Panel Installation in Gatineau | Victron Energy",
-      "seoDescription": "Solar panel installation and equipment supply for RVs in Gatineau, including Victron Energy product distribution and integration.",
+      "seoTitle": "RV Solar and Lithium Installation in Gatineau | Victron Energy",
+      "seoDescription": "Solar panel, lithium battery, Victron, MPPT, inverter, DC-DC, shore power and monitoring installation for RV and Van Life projects in Gatineau.",
       "eyebrow": "RV solar, autonomy and energy",
       "opening": "Solar system installation and supply for RVs with <strong>Victron Energy products</strong>.",
-      "lead": "We size, supply and install the components around your real autonomy needs.",
+      "lead": "Victron Energy, MPPT, lithium batteries, inverters, solar panels, DC-DC, alternator charging, shore power, monitoring and upgrades to existing systems.",
       "intro": "Panels, controllers, batteries, inverters and monitoring: a clear setup adapted to your vehicle.",
       "heroPromise": "",
       "detailIntro": "A good RV solar system is not just about adding a panel to the roof. Roof space, sealing points, cable routing, battery capacity, controller, inverter and monitoring all have to be considered. As an installer and distributor of Victron Energy products, we can supply the components and integrate them into a coherent system for your vehicle.",
       "highlights": [
-        "Solar panel supply",
+        "Solar panels",
+        "Lithium batteries",
         "Victron Energy products",
-        "RV and motorhome installation",
-        "Off-grid or hybrid systems"
+        "Existing system upgrades"
       ],
       "includedTitle": "What we can handle",
       "included": [

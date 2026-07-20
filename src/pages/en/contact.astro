@@ -42,7 +42,7 @@ const schemas = [
             <i class="fas fa-envelope-open-text"></i>
           </div>
           <h2>To move faster</h2>
-          <p>Send the vehicle type, your city, a few photos, and what you already see. That makes it easier to point you toward the right next step from the start.</p>
+          <p>Send the vehicle type, your city, a few photos, your desired timeframe, and the goal. That makes it easier to point you toward the right next step from the start.</p>
         </aside>
       </div>
     </section>
@@ -59,7 +59,7 @@ const schemas = [
               </article>
               <article class="guide-item">
                 <h3>The issue</h3>
-                <p>Water leak, seals, roof, maintenance, detailing, or sale preparation.</p>
+                <p>Repair, custom modification, Van Life, solar/lithium, water intrusion, roof, maintenance, or parts.</p>
               </article>
               <article class="guide-item">
                 <h3>The context</h3>
@@ -121,11 +121,21 @@ const schemas = [
               </div>
               <div class="form-group">
                 <label for="vehicle-info">{contactPage.formSection.fields.vehicleInfo}</label>
-                <input type="text" id="vehicle-info" name="RV make and year" />
+                <input type="text" id="vehicle-info" name="Vehicle type, make, model, and year" />
               </div>
               <div class="form-group">
                 <label for="serial-number">{contactPage.formSection.fields.serialNumber}</label>
                 <input type="text" id="serial-number" name="Serial number" />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="timeline">{contactPage.formSection.fields.timeline}</label>
+                  <input type="text" id="timeline" name="Desired date or timeframe" />
+                </div>
+                <div class="form-group">
+                  <label for="budget">{contactPage.formSection.fields.budget}</label>
+                  <input type="text" id="budget" name="Approximate budget" />
+                </div>
               </div>
               <div class="form-group">
                 <label for="attachments">{contactPage.formSection.fields.attachments}</label>
@@ -143,7 +153,7 @@ const schemas = [
         <aside class="interior-side-panel contact-info-section">
           <div class="interior-side-card interior-side-card-primary">
             <h3>Need a quick opinion?</h3>
-            <p>We can point you toward inspection, maintenance, or repair based on what is already visible on the vehicle.</p>
+            <p>We can point you toward repair, modification, Van Life, inspection, maintenance, or solar/lithium based on your request.</p>
             <a class="interior-side-button" href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>
           </div>
 
@@ -185,9 +195,10 @@ const schemas = [
             <h3>What happens next</h3>
             <nav class="interior-service-nav" aria-label="Next steps">
               <a href="/en/services/inspection/"><i class="fas fa-clipboard-check"></i><span>If the source is unclear: inspection</span></a>
+              <a href="/en/services/"><i class="fas fa-sliders"></i><span>If you want to transform the RV: modification</span></a>
+              <a href="/en/services/"><i class="fas fa-van-shuttle"></i><span>If it is a van project: Van Life</span></a>
               <a href="/en/services/maintenance/"><i class="fas fa-screwdriver-wrench"></i><span>If it is mainly preventive: maintenance</span></a>
               <a href="/en/services/repair/"><i class="fas fa-toolbox"></i><span>If damage is visible: repair</span></a>
-              <a href="/en/realisations/"><i class="fas fa-images"></i><span>See real projects</span></a>
             </nav>
           </div>
         </aside>
@@ -249,6 +260,7 @@ const schemas = [
   .guide-item h3 { font-size: 1rem; margin-bottom: 0.35rem; }
   .guide-item p { color: var(--brand-muted); }
   .form-group { display: flex; flex-direction: column; margin-bottom: 1.5rem; }
+  .form-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
   .form-group label { font-weight: 600; margin-bottom: 0.5rem; color: var(--brand-ink); }
   .form-fieldset { border: 1px solid rgba(23, 48, 79, 0.12); border-radius: 16px; padding: 1rem; }
   .form-fieldset legend { padding: 0 0.35rem; font-weight: 600; color: var(--brand-ink); }
@@ -271,6 +283,7 @@ const schemas = [
   .map-section { width: 100%; margin-top: 3rem; }
   @media (max-width: 768px) {
     .guide-grid,
+    .form-row,
     .checkbox-grid,
     .checkbox-grid--two {
       grid-template-columns: 1fr;

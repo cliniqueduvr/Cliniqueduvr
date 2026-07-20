@@ -1,64 +1,97 @@
 {
-  "metaTitle": "Clinique du VR | Spécialiste des infiltrations d’eau et membranes de toit à Gatineau",
-  "metaDescription": "Clinique du VR aide à Gatineau pour la fuite d'eau de VR, l'entretien des joints et de la toiture, l'inspection et la réparation, avec service pour l'Outaouais, Ottawa et les Laurentides.",
+  "metaTitle": "Clinique du VR | Modification, Van Life, solaire et réparation à Gatineau",
+  "metaDescription": "Clinique du VR transforme, aménage et répare les VR et vans à Gatineau: solaire, lithium, autonomie, Van Life, toiture, infiltration, entretien et réparation.",
   "hero": {
-    "logoAlt": "Logo Clinique du VR — Entretien, réparation et esthétique de véhicules récréatifs",
-    "title": "Spécialiste de la roulotte et du VR en Outaouais",
-    "tagline": "L'inspection est toujours gratuite et sans rendez-vous en atelier"
+    "logoAlt": "Logo Clinique du VR — Modification, aménagement, Van Life et réparation de VR",
+    "title": "Modification • Aménagement • Van Life • Réparation",
+    "tagline": "Transformez votre VR ou votre van selon votre façon de voyager. Solaire, lithium, autonomie énergétique, aménagement sur mesure, toiture, infiltration et réparation."
   },
   "introCard": {
     "icon": "",
-    "heading": "Pourquoi choisir Clinique du VR?",
-    "body": "<strong>Notre priorité est simple:</strong> vous aider à garder votre roulotte ou votre VR fiable, sécuritaire et prêt pour la route. Nous prenons en charge l'entretien, la réparation, le diagnostic, l'étanchéité, la climatisation, le chauffage, l'électricité, l'électronique et plusieurs autres travaux spécialisés. Avec notre atelier ouvert à l'année et notre unité mobile selon le type d'intervention, vous obtenez une lecture claire de l'état réel du véhicule et des prochaines étapes concrètes."
+    "heading": "Un centre spécialisé pour transformer votre VR ou votre van",
+    "body": "<strong>Clinique du VR fait beaucoup plus que de la réparation traditionnelle.</strong> Notre atelier accompagne les propriétaires de VR, roulottes et vans pour les projets de modification, d'autonomie énergétique, de solaire, de lithium, d'aménagement intérieur, de conversion Van Life, de toiture, d'infiltration et de réparation complète. L'objectif est simple: adapter votre véhicule à votre façon de voyager, avec une lecture claire des travaux utiles avant de commencer."
   },
   "servicesOverview": {
-    "title": "Nos Spécialités",
+    "title": "Trois façons de vous accompagner",
     "items": [
-      { "href": "/services/inspection/", "icon": "fas fa-clipboard-check", "label": "Inspection" },
-      { "href": "/services/entretien/", "icon": "fas fa-screwdriver-wrench", "label": "Entretien" },
-      { "href": "/services/reparation/", "icon": "fas fa-toolbox", "label": "Réparation" },
-      { "href": "/magasin/", "icon": "fas fa-store", "label": "Magasin" }
+      {
+        "href": "/services/modification-amenagement/",
+        "icon": "fas fa-sliders",
+        "label": "Modification & autonomie"
+      },
+      {
+        "href": "/services/van-life/",
+        "icon": "fas fa-van-shuttle",
+        "label": "Van Life"
+      },
+      {
+        "href": "/services/reparation/",
+        "icon": "fas fa-toolbox",
+        "label": "Réparation & entretien"
+      },
+      {
+        "href": "/magasin/",
+        "icon": "fas fa-store",
+        "label": "Magasin de pièces"
+      }
     ]
   },
   "partsStore": {
-    "eyebrow": "Disponible à notre atelier",
-    "heading": "Magasin de pièces et accessoires pour VR",
-    "body": "Vous trouverez sur place une sélection de pièces et d'accessoires pour l'entretien, la réparation et l'amélioration de votre VR, incluant des produits solaires. Notre équipe peut aussi vous aider à identifier le bon produit pour votre véhicule et vérifier sa disponibilité.",
+    "eyebrow": "Pièces, accessoires et commandes spéciales",
+    "heading": "Magasin de pièces et accessoires VR à Gatineau",
+    "body": "Vous trouverez sur place une sélection de pièces VR, scellants, produits Dicor, accessoires, composantes solaires et matériel électrique. Vous ne trouvez pas votre pièce? Contactez-nous: nous pouvons commander de nombreuses pièces rapidement selon la disponibilité.",
     "items": [
-      { "icon": "fas fa-droplet", "label": "Produits d'étanchéité" },
-      { "icon": "fas fa-screwdriver-wrench", "label": "Pièces d'entretien" },
-      { "icon": "fas fa-solar-panel", "label": "Panneaux solaires", "href": "/services/installation-panneaux-solaires/" },
-      { "icon": "fas fa-toolbox", "label": "Accessoires et équipements" }
+      {
+        "icon": "fas fa-droplet",
+        "label": "Scellants et Dicor"
+      },
+      {
+        "icon": "fas fa-bolt",
+        "label": "Électricité 12 V / 120 V"
+      },
+      {
+        "icon": "fas fa-solar-panel",
+        "label": "Solaire et accessoires",
+        "href": "/services/installation-panneaux-solaires/"
+      },
+      {
+        "icon": "fas fa-box-open",
+        "label": "Commandes spéciales"
+      }
     ],
-    "ctaLabel": "Voir les produits"
+    "ctaLabel": "Voir le magasin"
   },
   "seoSections": [
     {
-      "heading": "Service VR à Gatineau et dans les environs",
-      "body": "Clinique du VR accompagne les propriétaires de VR, de roulottes et de caravanes pour les besoins les plus fréquents : inspection avant achat, entretien préventif, réparation de fuite d'eau, toiture, remise en état et esthétique. Notre atelier à Gatineau dessert aussi la grande région d'Ottawa, l'Outaouais et les Laurentides, ainsi que certains dossiers ailleurs au Québec et en Ontario."
+      "heading": "Modification, autonomie et aménagement sur mesure",
+      "body": "Nous accompagnons les projets de panneaux solaires, batteries lithium, produits Victron Energy, MPPT, onduleurs, chargeurs, recharge par alternateur, chauffage diesel, MaxxAir, climatisation, plomberie, rangement, mobilier, modification de lits, cuisine et autres améliorations intérieures pour VR, roulottes et vans."
     },
     {
-      "heading": "Une approche utile avant les travaux",
-      "body": "Quand un véhicule présente des signes d'usure, d'infiltration ou de détérioration visuelle, il faut d'abord clarifier l'état réel du VR. Nous vous aidons ensuite à choisir entre une inspection, un entretien, une réparation, un service esthétique ou une préparation avant vente selon ce qui est le plus utile."
+      "heading": "Conversion Van Life à Gatineau-Ottawa",
+      "body": "Clinique du VR peut aider pour une conversion partielle ou complète de Ford Transit, Ram ProMaster ou Mercedes-Benz Sprinter: isolation, plancher, mobilier, eau propre et eaux grises, chauffage, ventilation, solaire, lithium, éclairage et solutions 3 ou 4 saisons."
+    },
+    {
+      "heading": "Réparation VR, toiture et infiltration",
+      "body": "La réparation reste un service complet: diagnostic, toiture, infiltration d'eau, joints, membrane TPO ou EPDM, structure, électricité, plomberie, propane, réfrigérateurs, appareils, freins, auvents, climatisation et chauffage pour Gatineau, Ottawa, l'Outaouais et les Laurentides."
     }
   ],
   "cta": {
-    "heading": "Demandez votre soumission gratuite",
-    "subheading": "Inspection et devis sans obligation",
-    "squareLabel": "Réserver en ligne"
+    "heading": "Discutez de votre projet",
+    "subheading": "Modification, Van Life, solaire, lithium, toiture, infiltration ou réparation",
+    "squareLabel": "Demander une soumission"
   },
   "contactForm": {
-    "heading": "Contactez-nous",
+    "heading": "Demander une soumission",
     "unconfiguredNote": "Le formulaire de contact n'est pas disponible pour le moment. Utilisez le téléphone ou la réservation en ligne en attendant.",
     "namePlaceholder": "Votre nom",
     "emailPlaceholder": "Votre courriel",
-    "subjectPlaceholder": "Sujet",
-    "messagePlaceholder": "Votre message",
-    "submitLabel": "Envoyer"
+    "subjectPlaceholder": "Sujet ou type de projet",
+    "messagePlaceholder": "Décrivez votre VR, votre van ou les travaux souhaités",
+    "submitLabel": "Envoyer ma demande"
   },
   "contactPanel": {
     "heading": "Informations de contact",
     "squareLabel": "Réserver en ligne",
-    "ctaText": "Devis gratuit et confidentiel. Appelez-nous ou remplissez le formulaire."
+    "ctaText": "Parlez-nous de votre projet: modification, Van Life, solaire, autonomie, réparation ou entretien."
   }
 }

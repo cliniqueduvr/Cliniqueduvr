@@ -16,23 +16,32 @@ type ServiceSlug = {
 
 const baseUrl = 'https://cliniqueduvr.ca';
 const defaultLastmod = '2026-04-12';
+const refonteLastmod = '2026-07-20';
 
 const pageLastmods = new Map<string, string>([
-  ['/', '2026-07-07'],
-  ['/services/', '2026-07-07'],
-  ['/services/entretien/', '2026-07-07'],
-  ['/services/reparation/', '2026-07-07'],
-  ['/en/services/maintenance/', '2026-07-07'],
-  ['/en/services/repair/', '2026-07-07'],
-  ['/choisir-service/', '2026-04-15'],
-  ['/en/choose-service/', '2026-04-15'],
-  ['/faq/', '2026-04-19'],
+  ['/', refonteLastmod],
+  ['/services/', refonteLastmod],
+  ['/services/modification-amenagement/', refonteLastmod],
+  ['/services/van-life/', refonteLastmod],
+  ['/services/installation-panneaux-solaires/', refonteLastmod],
+  ['/services/entretien/', refonteLastmod],
+  ['/services/reparation/', refonteLastmod],
+  ['/en/services/', refonteLastmod],
+  ['/en/services/rv-modification-custom-builds/', refonteLastmod],
+  ['/en/services/van-life-conversion/', refonteLastmod],
+  ['/en/services/solar-panel-installation/', refonteLastmod],
+  ['/en/services/maintenance/', refonteLastmod],
+  ['/en/services/repair/', refonteLastmod],
+  ['/choisir-service/', refonteLastmod],
+  ['/en/choose-service/', refonteLastmod],
+  ['/privacy/', refonteLastmod],
+  ['/faq/', refonteLastmod],
   ['/en/faq/', '2026-04-19'],
-  ['/zones-desservies/', '2026-04-19'],
+  ['/zones-desservies/', refonteLastmod],
   ['/en/service-areas/', '2026-04-19'],
-  ['/ressources/infiltration-eau-vr/', '2026-04-19'],
+  ['/ressources/infiltration-eau-vr/', refonteLastmod],
   ['/en/resources/rv-water-intrusion/', '2026-04-19'],
-  ['/ressources/entretien-vr-deux-fois-par-an/', '2026-04-19'],
+  ['/ressources/entretien-vr-deux-fois-par-an/', refonteLastmod],
   ['/en/resources/twice-yearly-rv-maintenance/', '2026-04-19'],
   ['/ressources/installation-panneau-solaire-vr/', '2026-04-22'],
   ['/en/resources/rv-solar-panel-installation/', '2026-04-22'],
@@ -40,8 +49,8 @@ const pageLastmods = new Map<string, string>([
   ['/realisations/infiltration-toiture-vr-gatineau/', '2026-04-19'],
   ['/realisations/reparation-interieure-vr-apres-infiltration-ottawa/', '2026-04-19'],
   ['/realisations/reprise-scellants-vr-gatineau/', '2026-04-19'],
-  ['/plan-du-site/', '2026-04-15'],
-  ['/en/site-map/', '2026-04-15']
+  ['/plan-du-site/', refonteLastmod],
+  ['/en/site-map/', refonteLastmod]
 ]);
 
 const staticEntries: UrlEntry[] = [
@@ -51,32 +60,33 @@ const staticEntries: UrlEntry[] = [
   { path: '/magasin/', lastmod: '2026-06-14', alternatePaths: ['/en/store/'] },
   { path: '/realisations/', lastmod: defaultLastmod, alternatePaths: ['/en/realisations/'] },
   { path: '/contact/', lastmod: defaultLastmod, alternatePaths: ['/en/contact/'] },
-  { path: '/privacy/', lastmod: defaultLastmod, alternatePaths: ['/en/privacy/'] },
-  { path: '/choisir-service/', lastmod: '2026-04-15', alternatePaths: ['/en/choose-service/'] },
-  { path: '/faq/', lastmod: '2026-04-19', alternatePaths: ['/en/faq/'] },
-  { path: '/zones-desservies/', lastmod: '2026-04-19', alternatePaths: ['/en/service-areas/'] },
-  { path: '/ressources/infiltration-eau-vr/', lastmod: '2026-04-19', alternatePaths: ['/en/resources/rv-water-intrusion/'] },
-  { path: '/ressources/entretien-vr-deux-fois-par-an/', lastmod: '2026-04-19', alternatePaths: ['/en/resources/twice-yearly-rv-maintenance/'] },
+  { path: '/privacy/', lastmod: pageLastmods.get('/privacy/') ?? defaultLastmod, alternatePaths: ['/en/privacy/'] },
+  { path: '/choisir-service/', lastmod: pageLastmods.get('/choisir-service/') ?? defaultLastmod, alternatePaths: ['/en/choose-service/'] },
+  { path: '/faq/', lastmod: pageLastmods.get('/faq/') ?? defaultLastmod, alternatePaths: ['/en/faq/'] },
+  { path: '/zones-desservies/', lastmod: pageLastmods.get('/zones-desservies/') ?? defaultLastmod, alternatePaths: ['/en/service-areas/'] },
+  { path: '/ressources/infiltration-eau-vr/', lastmod: pageLastmods.get('/ressources/infiltration-eau-vr/') ?? defaultLastmod, alternatePaths: ['/en/resources/rv-water-intrusion/'] },
+  { path: '/ressources/entretien-vr-deux-fois-par-an/', lastmod: pageLastmods.get('/ressources/entretien-vr-deux-fois-par-an/') ?? defaultLastmod, alternatePaths: ['/en/resources/twice-yearly-rv-maintenance/'] },
   { path: '/ressources/installation-panneau-solaire-vr/', lastmod: '2026-04-22', alternatePaths: ['/en/resources/rv-solar-panel-installation/'] },
-  { path: '/plan-du-site/', lastmod: '2026-04-15', alternatePaths: ['/en/site-map/'] },
+  { path: '/plan-du-site/', lastmod: pageLastmods.get('/plan-du-site/') ?? defaultLastmod, alternatePaths: ['/en/site-map/'] },
   { path: '/en/', lastmod: defaultLastmod, alternatePaths: ['/'] },
   { path: '/en/about/', lastmod: defaultLastmod, alternatePaths: ['/about/'] },
-  { path: '/en/services/', lastmod: defaultLastmod, alternatePaths: ['/services/'] },
+  { path: '/en/services/', lastmod: pageLastmods.get('/en/services/') ?? defaultLastmod, alternatePaths: ['/services/'] },
   { path: '/en/store/', lastmod: '2026-06-14', alternatePaths: ['/magasin/'] },
   { path: '/en/realisations/', lastmod: defaultLastmod, alternatePaths: ['/realisations/'] },
   { path: '/en/contact/', lastmod: defaultLastmod, alternatePaths: ['/contact/'] },
   { path: '/en/privacy/', lastmod: defaultLastmod, alternatePaths: ['/privacy/'] },
-  { path: '/en/choose-service/', lastmod: '2026-04-15', alternatePaths: ['/choisir-service/'] },
+  { path: '/en/choose-service/', lastmod: pageLastmods.get('/en/choose-service/') ?? defaultLastmod, alternatePaths: ['/choisir-service/'] },
   { path: '/en/faq/', lastmod: '2026-04-19', alternatePaths: ['/faq/'] },
   { path: '/en/service-areas/', lastmod: '2026-04-19', alternatePaths: ['/zones-desservies/'] },
   { path: '/en/resources/rv-water-intrusion/', lastmod: '2026-04-19', alternatePaths: ['/ressources/infiltration-eau-vr/'] },
   { path: '/en/resources/twice-yearly-rv-maintenance/', lastmod: '2026-04-19', alternatePaths: ['/ressources/entretien-vr-deux-fois-par-an/'] },
   { path: '/en/resources/rv-solar-panel-installation/', lastmod: '2026-04-22', alternatePaths: ['/ressources/installation-panneau-solaire-vr/'] },
-  { path: '/en/site-map/', lastmod: '2026-04-15', alternatePaths: ['/plan-du-site/'] }
+  { path: '/en/site-map/', lastmod: pageLastmods.get('/en/site-map/') ?? defaultLastmod, alternatePaths: ['/plan-du-site/'] }
 ];
 
 const servicePages = servicePagesData.items as ServiceSlug[];
 const servicePagesEn = servicePagesEnData.items as ServiceSlug[];
+const englishServiceSlugs = new Set(servicePagesEn.map((service) => service.slug));
 const frToEnAreaSlug = new Map([
   ['fuite-eau-vr-gatineau', 'rv-water-leak-gatineau'],
   ['entretien-vr-gatineau', 'rv-maintenance-gatineau'],
@@ -95,7 +105,7 @@ const enToFrAreaSlug = new Map([
 const serviceEntries = servicePages.map((service) => ({
   path: `/services/${service.slug}/`,
   lastmod: pageLastmods.get(`/services/${service.slug}/`) ?? defaultLastmod,
-  alternatePaths: service.alternateSlug && service.slug !== 'rexoseal' ? [`/en/services/${service.alternateSlug}/`] : []
+  alternatePaths: service.alternateSlug && service.slug !== 'rexoseal' && englishServiceSlugs.has(service.alternateSlug) ? [`/en/services/${service.alternateSlug}/`] : []
 }));
 
 const serviceEntriesEn = servicePagesEn.map((service) => ({

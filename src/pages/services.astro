@@ -7,7 +7,15 @@ import type { ServicePage } from '../data/service-page-types';
 import { buildBreadcrumbSchema, buildFAQSchema } from '../lib/seo';
 
 const servicePages = servicePagesData.items as ServicePage[];
-const serviceOrder = ['inspection', 'entretien', 'reparation', 'rexoseal', 'installation-panneaux-solaires'];
+const serviceOrder = [
+  'modification-amenagement',
+  'van-life',
+  'installation-panneaux-solaires',
+  'reparation',
+  'entretien',
+  'inspection',
+  'rexoseal'
+];
 const visibleServicePages = servicePages
   .filter((service) => serviceOrder.includes(service.slug))
   .sort((a, b) => serviceOrder.indexOf(a.slug) - serviceOrder.indexOf(b.slug));
@@ -53,7 +61,7 @@ const serviceFaqs = [
   }
 ];
 const quickSteps = [
-  "Choisissez d'abord une grande catégorie de besoin.",
+  "Choisissez d'abord entre modification, Van Life, solaire ou réparation.",
   'Ouvrez ensuite seulement le service ou la zone qui correspond à votre situation.',
   "Utilisez l'inspection comme point de départ pour un achat, une vente ou un doute."
 ];
@@ -63,15 +71,15 @@ const breadcrumbs = buildBreadcrumbSchema([
 ]);
 ---
 
-<Layout title="Services VR à Gatineau | Fuite d’eau, entretien, réparation et solaire" description="Services de VR à Gatineau pour fuite d'eau, entretien de joints et de toiture, inspection, réparation et installation de panneaux solaires avec produits Victron Energy." canonicalPath="/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs, buildFAQSchema(serviceFaqs)]}>
+<Layout title="Services VR à Gatineau | Modification, Van Life, solaire et réparation" description="Services de VR à Gatineau: modification, aménagement, Van Life, solaire, lithium, autonomie, toiture, infiltration, entretien et réparation." canonicalPath="/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs, buildFAQSchema(serviceFaqs)]}>
   <Header />
 
   <main>
     <section class="page-header">
       <div class="container">
-        <p class="eyebrow">Pour chaque besoin de votre VR</p>
+        <p class="eyebrow">Modification • Van Life • Réparation</p>
         <h1>Nos Services</h1>
-        <p>Inspection, entretien, réparation et installation de panneaux solaires selon l'état réel du véhicule.</p>
+        <p>Modification, aménagement, solaire, lithium, conversion Van Life, toiture, infiltration, entretien et réparation selon votre véhicule et votre façon de voyager.</p>
       </div>
     </section>
 
@@ -106,11 +114,11 @@ const breadcrumbs = buildBreadcrumbSchema([
             <div class="seo-columns">
               <div class="info-card">
                 <h2>Un service adapté à votre situation</h2>
-                <p>Que vous soyez en préparation avant la saison, en évaluation avant achat ou en pleine réparation, nous vous orientons vers le bon service selon l'état du véhicule et l'urgence de la situation.</p>
+                <p>Que vous soyez en projet d'autonomie, d'aménagement Van Life, de mise à niveau solaire ou en pleine réparation, nous vous orientons vers le bon service selon l'état réel du véhicule.</p>
               </div>
               <div class="info-card">
                 <h2>Ce que nous couvrons</h2>
-                <p>Infiltrations d'eau, toiture, joints, composantes électriques et propane, remise en état intérieure, panneaux solaires et inspections avant transaction.</p>
+                <p>Modification intérieure, solaire, lithium, Victron, chauffage, climatisation, plomberie, Van Life, infiltrations d'eau, toiture, joints, composantes électriques, propane et inspections avant transaction.</p>
               </div>
             </div>
           </section>

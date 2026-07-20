@@ -42,7 +42,7 @@ const schemas = [
             <i class="fas fa-envelope-open-text"></i>
           </div>
           <h2>Pour aller plus vite</h2>
-          <p>Envoyez le type de véhicule, la ville, quelques photos et ce que vous voyez déjà. Cela aide à orienter la demande dès le premier contact.</p>
+          <p>Envoyez le type de véhicule, la ville, quelques photos, la date souhaitée et votre objectif. Cela aide à orienter la demande dès le premier contact.</p>
         </aside>
       </div>
     </section>
@@ -52,7 +52,7 @@ const schemas = [
         <div class="contact-form-section">
           <section class="interior-card">
             <h2>Repère local pour votre demande</h2>
-            <p class="seo-keyline">Le point de départ réel est notre <strong>atelier de Gatineau</strong>. La demande devient plus facile à orienter si vous indiquez la ville, par exemple <u>Gatineau</u>, <u>Ottawa</u>, <u>Outaouais</u> ou <u>Laurentides</u>, ainsi que si le besoin ressemble surtout à une <strong>inspection</strong>, un <strong>entretien</strong> ou une <strong>réparation de VR liée à l’eau</strong>.</p>
+            <p class="seo-keyline">Le point de départ réel est notre <strong>atelier de Gatineau</strong>. La demande devient plus facile à orienter si vous indiquez la ville, par exemple <u>Gatineau</u>, <u>Ottawa</u>, <u>Outaouais</u> ou <u>Laurentides</u>, ainsi que si le besoin touche une <strong>réparation</strong>, une <strong>modification</strong>, un <strong>aménagement</strong>, un projet <strong>Van Life</strong>, du <strong>solaire/lithium</strong> ou une <strong>infiltration d’eau</strong>.</p>
           </section>
 
           <section class="interior-card interior-card-alt quick-guide-card">
@@ -64,7 +64,7 @@ const schemas = [
               </article>
               <article class="guide-item">
                 <h3>Le problème</h3>
-                <p>Fuite d’eau, joints, toit, entretien, esthétique ou préparation avant vente.</p>
+                <p>Réparation, modification, aménagement, Van Life, solaire/lithium, infiltration ou entretien.</p>
               </article>
               <article class="guide-item">
                 <h3>Le contexte</h3>
@@ -126,11 +126,21 @@ const schemas = [
               </div>
               <div class="form-group">
                 <label for="vehicle-info">{contactPage.formSection.fields.vehicleInfo}</label>
-                <input type="text" id="vehicle-info" name="Marque et année du VR" />
+                <input type="text" id="vehicle-info" name="Type, marque, modèle et année du véhicule" />
               </div>
               <div class="form-group">
                 <label for="serial-number">{contactPage.formSection.fields.serialNumber}</label>
                 <input type="text" id="serial-number" name="Numéro de série" />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="timeline">{contactPage.formSection.fields.timeline}</label>
+                  <input type="text" id="timeline" name="Date ou période souhaitée" />
+                </div>
+                <div class="form-group">
+                  <label for="budget">{contactPage.formSection.fields.budget}</label>
+                  <input type="text" id="budget" name="Budget approximatif" />
+                </div>
               </div>
               <div class="form-group">
                 <label for="attachments">{contactPage.formSection.fields.attachments}</label>
@@ -148,7 +158,7 @@ const schemas = [
         <aside class="interior-side-panel contact-info-section">
           <div class="interior-side-card interior-side-card-primary">
             <h3>Besoin d’un avis rapide?</h3>
-            <p>On peut vous orienter vers une inspection, un entretien ou une réparation selon ce que vous observez déjà sur le véhicule.</p>
+            <p>On peut vous orienter vers une réparation, une modification, un aménagement, une inspection ou une installation solaire/lithium selon votre besoin.</p>
             <a class="interior-side-button" href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>
           </div>
 
@@ -190,9 +200,10 @@ const schemas = [
             <h3>À quoi vous attendre</h3>
             <nav class="interior-service-nav" aria-label="Prochaines étapes">
               <a href="/services/inspection/"><i class="fas fa-clipboard-check"></i><span>Si la source n’est pas claire: inspection</span></a>
+              <a href="/services/modification-amenagement/"><i class="fas fa-sliders"></i><span>Si vous voulez transformer le VR: modification</span></a>
+              <a href="/services/van-life/"><i class="fas fa-van-shuttle"></i><span>Si c’est un projet de van: Van Life</span></a>
               <a href="/services/entretien/"><i class="fas fa-screwdriver-wrench"></i><span>Si c’est surtout préventif: entretien</span></a>
               <a href="/services/reparation/"><i class="fas fa-toolbox"></i><span>Si des dommages sont visibles: réparation</span></a>
-              <a href="/realisations/"><i class="fas fa-images"></i><span>Voir des cas réels</span></a>
             </nav>
           </div>
         </aside>
@@ -209,7 +220,7 @@ const schemas = [
         ))}
         <div class="interior-card">
           <h2>Signal local utile</h2>
-          <p class="seo-keyline">Cette page de contact soutient les recherches liées à <strong>Clinique du VR Gatineau</strong>, aux demandes venant d’<u>Ottawa</u>, de <u>l’Outaouais</u> et des <u>Laurentides</u>, ainsi qu’aux besoins de <strong>fuite d’eau</strong>, de <strong>toiture</strong>, de <strong>joints</strong> et d’<strong>inspection avant réparation</strong>.</p>
+          <p class="seo-keyline">Cette page de contact soutient les recherches liées à <strong>Clinique du VR Gatineau</strong>, aux demandes venant d’<u>Ottawa</u>, de <u>l’Outaouais</u> et des <u>Laurentides</u>, ainsi qu’aux besoins de <strong>réparation VR</strong>, <strong>modification VR</strong>, <strong>aménagement Van Life</strong>, <strong>solaire/lithium</strong>, <strong>fuite d’eau</strong>, <strong>toiture</strong> et <strong>joints</strong>.</p>
         </div>
       </div>
     </section>
@@ -258,6 +269,7 @@ const schemas = [
   .guide-item h3 { font-size: 1rem; margin-bottom: 0.35rem; }
   .guide-item p { color: var(--brand-muted); }
   .form-group { display: flex; flex-direction: column; margin-bottom: 1.5rem; }
+  .form-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
   .form-group label { font-weight: 600; margin-bottom: 0.5rem; color: var(--brand-ink); }
   .form-fieldset { border: 1px solid rgba(23, 48, 79, 0.12); border-radius: 16px; padding: 1rem; }
   .form-fieldset legend { padding: 0 0.35rem; font-weight: 600; color: var(--brand-ink); }
@@ -280,6 +292,7 @@ const schemas = [
   .map-section { width: 100%; margin-top: 3rem; }
   @media (max-width: 768px) {
     .guide-grid,
+    .form-row,
     .checkbox-grid,
     .checkbox-grid--two {
       grid-template-columns: 1fr;

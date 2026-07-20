@@ -1,23 +1,25 @@
 {
-  "metaTitle": "Clinique du VR | RV water leak, maintenance and repair in Gatineau",
-  "metaDescription": "Clinique du VR helps in Gatineau with RV water leaks, seal and roof maintenance, inspection, and repair, serving Outaouais, Ottawa, and the Laurentides.",
+  "metaTitle": "Clinique du VR | RV Modification, Van Life, Solar and Repair in Gatineau",
+  "metaDescription": "Clinique du VR modifies, upgrades and repairs RVs and vans in Gatineau: solar, lithium, autonomy, Van Life, roof work, water intrusion, maintenance and repair.",
   "hero": {
-    "logoAlt": "Clinique du VR logo — maintenance, repair and detailing for recreational vehicles",
-    "title": "RV Inspection, Maintenance and Repair in Gatineau",
+    "logoAlt": "Clinique du VR logo - RV modification, Van Life, solar, maintenance and repair",
+    "title": "RV Modification, Van Life and Repair in Gatineau",
     "tagline": ""
   },
   "introCard": {
     "icon": "",
     "heading": "Why choose Clinique du VR?",
-    "body": "<strong>Specialized and attentive service</strong> for RV maintenance, repair and detailing. We focus on clear explanations, a practical reading of the vehicle's condition, and recommendations tailored to your actual situation. We have a year-round workshop as well as a mobile unit to serve you better depending on the type of work needed. Speed, transparency, and careful execution from start to finish are part of how we work."
+    "body": "<strong>Specialized and attentive service</strong> for RV modification, Van Life conversion, solar and lithium systems, maintenance and repair. We focus on clear explanations, a practical reading of the vehicle's condition, and recommendations tailored to your actual situation. We have a year-round workshop as well as a mobile unit to serve you better depending on the type of work needed. Speed, transparency, and careful execution from start to finish are part of how we work."
   },
   "servicesOverview": {
     "title": "Our Specialties",
     "items": [
-      { "href": "/en/services/inspection/", "icon": "fas fa-clipboard-check", "label": "Inspection" },
-      { "href": "/en/services/maintenance/", "icon": "fas fa-screwdriver-wrench", "label": "Maintenance" },
+      { "href": "/en/services/rv-modification-custom-builds/", "icon": "fas fa-sliders", "label": "Custom modifications" },
+      { "href": "/en/services/van-life-conversion/", "icon": "fas fa-van-shuttle", "label": "Van Life" },
+      { "href": "/en/services/solar-panel-installation/", "icon": "fas fa-solar-panel", "label": "Solar and lithium" },
       { "href": "/en/services/repair/", "icon": "fas fa-toolbox", "label": "Repair" },
-      { "href": "/en/store/", "icon": "fas fa-store", "label": "Store" }
+      { "href": "/en/services/maintenance/", "icon": "fas fa-screwdriver-wrench", "label": "Maintenance" },
+      { "href": "/en/services/inspection/", "icon": "fas fa-clipboard-check", "label": "Inspection" }
     ]
   },
   "partsStore": {
@@ -35,11 +37,11 @@
   "seoSections": [
     {
       "heading": "RV service in Gatineau and nearby areas",
-      "body": "Clinique du VR supports owners of RVs, travel trailers, and caravans with the most common needs: pre-purchase inspection, preventive maintenance, water leak repair, roof work, restoration, and detailing. Our workshop in Gatineau also serves the greater Ottawa region, Outaouais, and the Laurentides, as well as selected files elsewhere in Quebec and Ontario."
+      "body": "Clinique du VR supports owners of RVs, travel trailers, caravans and vans with modification, Van Life conversion, solar and lithium autonomy, pre-purchase inspection, preventive maintenance, water leak repair, roof work and restoration. Our workshop in Gatineau also serves the greater Ottawa region, Outaouais and the Laurentides, as well as selected files elsewhere in Quebec and Ontario."
     },
     {
       "heading": "A useful approach before any work begins",
-      "body": "When a vehicle shows signs of wear, water intrusion, or visible deterioration, the first step is to clarify the RV's actual condition. We then help you choose between an inspection, maintenance, repair, detailing service, or pre-sale preparation based on what is most useful."
+      "body": "When a vehicle needs more autonomy, a custom interior, Van Life equipment, solar and lithium upgrades, or repair after wear or water intrusion, the first step is to clarify the vehicle's actual condition. We then help you choose between modification, solar, Van Life, inspection, maintenance, repair or pre-sale preparation based on what is most useful."
     }
   ],
   "cta": {

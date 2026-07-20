@@ -30,10 +30,10 @@ const symptomCards = [
     linkLabel: 'View transaction inspection'
   },
   {
-    title: 'Vehicle looks tired or needs presentation work',
-    copy: 'For an RV or motorhome that needs real cleaning, polishing, or waxing, detailing helps restore presentation, cleanliness, and finish quality either at the workshop or on the road.',
-    href: '/en/services/detailing/',
-    linkLabel: 'View RV detailing'
+    title: 'Custom modification or off-grid upgrade',
+    copy: 'For solar, lithium, Victron, heating, ventilation, storage, interior changes, or a more functional layout, start with the services overview and contact us about the project.',
+    href: '/en/services/',
+    linkLabel: 'View services'
   },
   {
     title: 'You are hesitating between two services',
@@ -60,8 +60,8 @@ const faqs = [
     answer: '<a href="/en/services/maintenance/">Maintenance</a> is generally the right fit when you want to prevent water intrusion, refresh seals, or care for the roof before significant damage appears. If damage is already visible, <a href="/en/services/repair/">repair</a> is often the better direction.'
   },
   {
-    question: 'Can detailing help before selling an RV?',
-    answer: 'Yes. <a href="/en/services/detailing/">Detailing</a> can improve presentation, but if the goal is to clarify the true condition of the vehicle before a transaction, <a href="/en/services/inspection/">inspection</a> is usually the most useful first step.'
+    question: 'Can an upgrade add value before selling an RV?',
+    answer: 'Yes. A useful upgrade such as solar, lithium, charging, or a more functional interior can make an RV more attractive. If the goal is to clarify the true condition of the vehicle before a transaction, <a href="/en/services/inspection/">inspection</a> is usually the most useful first step.'
   }
 ];
 
@@ -73,7 +73,7 @@ const breadcrumbs = buildBreadcrumbSchema([
 
 <Layout
   title="Which RV service should you choose in Gatineau | Clinique du VR"
-  description="Choose the right RV service in Gatineau based on visible symptoms: water leaks, seal and roof maintenance, repair, detailing, or inspection before buying."
+  description="Choose the right RV service in Gatineau based on visible symptoms and needs: repair, maintenance, solar, lithium, modification, water leaks, or inspection before buying."
   lang="en-CA"
   canonicalPath="/en/choose-service/"
   frPath="/choisir-service/"
@@ -95,7 +95,7 @@ const breadcrumbs = buildBreadcrumbSchema([
       <div class="container">
         <div class="section-intro">
           <h2>Start with the right service</h2>
-          <p>When an RV shows more than one issue at the same time, it is not always obvious whether you should begin with inspection, maintenance, repair, or detailing. The cards below help point you to the most useful next step for an RV or motorhome.</p>
+          <p>When an RV shows more than one need at the same time, it is not always obvious whether you should begin with inspection, maintenance, repair, solar, lithium, or a custom modification. The cards below help point you to the most useful next step for an RV or motorhome.</p>
         </div>
 
         <div class="card-grid">
@@ -118,7 +118,7 @@ const breadcrumbs = buildBreadcrumbSchema([
           {serviceAreas.map((area) => (
             <a class="info-card choice-card" href={area.href}>
               <h3>{area.name}</h3>
-              <p>Common requests include inspection, maintenance, repair, detailing, and support before a transaction.</p>
+              <p>Common requests include inspection, maintenance, repair, solar, lithium, custom modification, and support before a transaction.</p>
               <span>View local page</span>
             </a>
           ))}

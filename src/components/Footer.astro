@@ -31,10 +31,12 @@ const shouldShowCta = pathname !== '/contact/' && pathname !== '/en/contact/';
     <div class="footer-col">
       <h4>{isEnglish ? 'Services' : 'Services'}</h4>
       <ul>
-        <li><a href={isEnglish ? '/en/services/inspection/' : '/services/inspection/'}>{isEnglish ? 'Inspection' : 'Inspection'}</a></li>
-        <li><a href={isEnglish ? '/en/services/maintenance/' : '/services/entretien/'}>{isEnglish ? 'Maintenance' : 'Entretien'}</a></li>
+        <li><a href={isEnglish ? '/en/services/rv-modification-custom-builds/' : '/services/modification-amenagement/'}>{isEnglish ? 'Custom modifications' : 'Modification & aménagement'}</a></li>
+        <li><a href={isEnglish ? '/en/services/van-life-conversion/' : '/services/van-life/'}>{isEnglish ? 'Van Life' : 'Van Life'}</a></li>
+        <li><a href={isEnglish ? '/en/services/solar-panel-installation/' : '/services/installation-panneaux-solaires/'}>{isEnglish ? 'Solar and lithium' : 'Solaire & lithium'}</a></li>
         <li><a href={isEnglish ? '/en/services/repair/' : '/services/reparation/'}>{isEnglish ? 'Repair' : 'Réparation'}</a></li>
-        <li><a href={isEnglish ? '/en/services/solar-panel-installation/' : '/services/installation-panneaux-solaires/'}>{isEnglish ? 'Solar panels' : 'Panneaux solaires'}</a></li>
+        <li><a href={isEnglish ? '/en/services/maintenance/' : '/services/entretien/'}>{isEnglish ? 'Maintenance' : 'Entretien'}</a></li>
+        <li><a href={isEnglish ? '/en/services/inspection/' : '/services/inspection/'}>{isEnglish ? 'Inspection' : 'Inspection'}</a></li>
       </ul>
     </div>
     <div class="footer-col">
