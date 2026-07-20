@@ -65,7 +65,7 @@ export function buildWebSiteSchema() {
 }
 
 export function buildLocalBusinessSchema({
-  telephone = '+1-581-337-3366',
+  telephone = '+1-819-669-8787',
   email = 'info@cliniqueduvr.ca',
   facebookUrl = 'https://www.facebook.com/profile.php?id=61588265661776',
   tiktokUrl = 'https://www.tiktok.com/@cliniqueduvr'
