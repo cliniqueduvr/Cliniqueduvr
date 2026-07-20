@@ -964,11 +964,11 @@ const localServiceFocus = isEnglish
     }
 
     .hero-copy h1 {
-      max-width: none;
+      max-width: 100%;
     }
     
     .hero-copy h1.hero-title-wide {
-      max-width: none;
+      max-width: 100%;
     }
 
     .sticky {
@@ -984,25 +984,64 @@ const localServiceFocus = isEnglish
         linear-gradient(180deg, var(--brand-navy-dark) 0%, #23476f 100%);
     }
 
+    .hero-grid {
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    .hero-copy,
+    .hero-card,
+    .content-card,
+    .side-card {
+      width: min(100%, 22rem);
+      min-width: 0;
+      max-width: 100%;
+      overflow-wrap: anywhere;
+    }
+
     .eyebrow {
       margin-bottom: 0.7rem;
       font-size: 0.68rem;
+      max-width: 100%;
+      line-height: 1.25;
+      white-space: normal;
+      overflow-wrap: anywhere;
+      text-align: left;
+    }
+
+    .hero-copy h1,
+    .hero-copy h1.hero-title-wide,
+    .hero-copy h1.hero-title-balanced,
+    .hero-copy h1.hero-title-wider {
+      max-width: min(14ch, 100%);
+      font-size: clamp(1.38rem, 6.4vw, 1.72rem);
+      line-height: 1.1;
+      letter-spacing: 0;
+      overflow-wrap: break-word;
+      text-wrap: auto;
     }
 
     .opening {
       font-size: 0.88rem;
       margin-bottom: 0.65rem;
+      max-width: min(100%, 22rem);
+      overflow-wrap: anywhere;
     }
 
     .lead {
       font-size: 0.9rem;
       line-height: 1.48;
+      max-width: min(100%, 22rem);
+      overflow-wrap: anywhere;
     }
 
     .intro,
     .hero-promise {
       font-size: 0.88rem;
       line-height: 1.46;
+      max-width: min(100%, 22rem);
+      overflow-wrap: anywhere;
     }
 
     .hero-badges {
@@ -1015,6 +1054,9 @@ const localServiceFocus = isEnglish
       padding: 0.38rem 0.62rem;
       border-radius: 10px;
       font-size: 0.74rem;
+      max-width: 100%;
+      white-space: normal;
+      overflow-wrap: anywhere;
     }
 
     .hero-badges span:nth-child(n+3) {

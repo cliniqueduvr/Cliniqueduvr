@@ -596,7 +596,7 @@ const galleryPlaceholders = Array.from({ length: placeholderCount });
     }
 
     .hero-copy h1 {
-      max-width: none;
+      max-width: 100%;
     }
 
     .sticky {
@@ -615,12 +615,32 @@ const galleryPlaceholders = Array.from({ length: placeholderCount });
     .eyebrow {
       margin-bottom: 0.85rem;
       font-size: 0.74rem;
+      max-width: 100%;
+      white-space: normal;
+      overflow-wrap: anywhere;
     }
 
     .lead,
     .intro {
       font-size: 0.96rem;
       line-height: 1.55;
+      max-width: 100%;
+      overflow-wrap: anywhere;
+    }
+
+    .hero-copy,
+    .hero-card,
+    .content-card,
+    .side-card {
+      min-width: 0;
+      max-width: 100%;
+      overflow-wrap: anywhere;
+    }
+
+    .hero-copy h1 {
+      letter-spacing: 0;
+      overflow-wrap: anywhere;
+      text-wrap: balance;
     }
 
     .hero-badges {
@@ -633,6 +653,9 @@ const galleryPlaceholders = Array.from({ length: placeholderCount });
       padding: 0.55rem 0.8rem;
       border-radius: 12px;
       font-size: 0.88rem;
+      max-width: 100%;
+      white-space: normal;
+      overflow-wrap: anywhere;
     }
 
     .hero-badges span:nth-child(n+3) {

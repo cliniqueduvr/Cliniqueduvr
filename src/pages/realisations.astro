@@ -540,12 +540,25 @@ const breadcrumbs = buildBreadcrumbSchema([
 
     .page-header h1 {
       font-size: 2rem;
-      max-width: none;
+      max-width: 100%;
+      letter-spacing: 0;
+      overflow-wrap: anywhere;
     }
 
     .page-header p {
       font-size: 0.96rem;
       line-height: 1.55;
+      max-width: 100%;
+      overflow-wrap: anywhere;
+    }
+
+    .page-header .container,
+    .hero-card,
+    .content-card,
+    .side-card {
+      min-width: 0;
+      max-width: 100%;
+      overflow-wrap: anywhere;
     }
 
     .realisations-section {
