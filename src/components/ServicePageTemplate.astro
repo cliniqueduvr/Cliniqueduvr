@@ -45,8 +45,8 @@ const localGuide = isEnglish
         }
       : null;
 const serviceAreas = isEnglish
-  ? ['Outaouais', 'Ottawa', 'Laurentides']
-  : ['Outaouais', 'Ottawa', 'Laurentides'];
+  ? ['Canada', 'Quebec', 'Ontario', 'Ottawa']
+  : ['Canada', 'Québec', 'Ontario', 'Ottawa'];
 const serviceGuidanceCopy = isEnglish
   ? service.slug === 'solar-panel-installation'
     ? 'We can help you define the right solar, lithium, charging and monitoring setup for the way you actually travel.'
@@ -276,7 +276,13 @@ const rexosealPanel = isEnglish
       }
     : null;
 const localServiceFocus = isEnglish
-  ? service.slug === 'maintenance'
+  ? service.slug === 'rv-modification-custom-builds'
+    ? `Clinique du VR delivers <strong>RV modification and custom builds</strong> from its <strong>Gatineau workshop</strong> and can frame selected projects for clients across <u>Canada</u>. This page is meant to clarify <strong>solar</strong>, <strong>lithium</strong>, <strong>Victron Energy</strong>, interior upgrades, storage, heating, water, ventilation and other <strong>custom RV projects</strong> before workshop planning.`
+    : service.slug === 'van-life-conversion'
+      ? `Clinique du VR delivers <strong>Van Life conversions</strong> from its <strong>Gatineau workshop</strong> and can frame selected projects for clients across <u>Canada</u>. This page is meant to clarify partial or complete van conversions, insulation, flooring, furniture, water, heating, ventilation, solar, lithium and 3- or 4-season systems.`
+      : service.slug === 'solar-panel-installation'
+        ? `Clinique du VR delivers <strong>RV solar and lithium installations</strong> from its <strong>Gatineau workshop</strong> and can frame selected autonomy projects for clients across <u>Canada</u>. This page is meant to clarify <strong>Victron Energy</strong>, MPPT, inverters, DC-DC charging, shore power, monitoring and off-grid power needs.`
+        : service.slug === 'maintenance'
     ? `Clinique du VR delivers <strong>${service.navLabel}</strong> from its <strong>Gatineau workshop</strong> and supports clients from <u>Outaouais</u>, <u>Ottawa</u>, and the <u>Laurentides</u> depending on the assignment. This page is meant to clarify the right next step for <strong>preventive maintenance</strong>, <strong>diagnosis</strong>, <strong>comfort systems</strong>, <strong>electrical systems</strong>, <strong>roof condition</strong>, <strong>seals</strong>, and other RV maintenance needs.`
     : service.slug === 'repair'
       ? `Clinique du VR delivers <strong>${service.navLabel}</strong> from its <strong>Gatineau workshop</strong> and supports clients from <u>Outaouais</u>, <u>Ottawa</u>, and the <u>Laurentides</u> depending on the assignment. This page is meant to clarify the right repair path for <strong>diagnosis</strong>, <strong>comfort systems</strong>, <strong>electrical systems</strong>, <strong>electronics</strong>, <strong>plumbing</strong>, <strong>propane</strong>, <strong>roof condition</strong>, and water-related damage.`
@@ -288,11 +294,11 @@ const localServiceFocus = isEnglish
     : service.slug === 'reparation'
       ? `Clinique du VR prend en charge <strong>${service.navLabel}</strong> à partir de son <strong>atelier de Gatineau</strong> et accompagne aussi les demandes venant de <u>l’Outaouais</u>, d’<u>Ottawa</u> et des <u>Laurentides</u> selon le mandat. Cette page sert à clarifier la bonne réparation pour le <strong>diagnostic</strong>, la <strong>climatisation</strong>, le <strong>chauffage</strong>, l’<strong>électricité</strong>, l’<strong>électronique</strong>, la <strong>plomberie</strong>, le <strong>propane</strong>, la <strong>toiture</strong> et les dommages liés à l’eau.`
     : service.slug === 'modification-amenagement'
-      ? `Clinique du VR prend en charge la <strong>modification et l'aménagement de VR</strong> à partir de son <strong>atelier de Gatineau</strong> et accompagne aussi les projets venant de <u>l'Outaouais</u>, d'<u>Ottawa</u> et des <u>Laurentides</u> selon le mandat. Cette page sert à clarifier les projets de <strong>panneaux solaires</strong>, <strong>batteries lithium</strong>, <strong>Victron Energy</strong>, autonomie énergétique, chauffage, climatisation, plomberie, mobilier, rangement, lits, cuisines et autres <strong>projets sur mesure</strong>.`
+      ? `Clinique du VR prend en charge la <strong>modification et l'aménagement de VR</strong> à partir de son <strong>atelier de Gatineau</strong> et peut cadrer certains projets venant de partout au <u>Canada</u>. Cette page sert à clarifier les projets de <strong>panneaux solaires</strong>, <strong>batteries lithium</strong>, <strong>Victron Energy</strong>, autonomie énergétique, chauffage, climatisation, plomberie, mobilier, rangement, lits, cuisines et autres <strong>projets sur mesure</strong> avant planification en atelier.`
       : service.slug === 'van-life'
-        ? `Clinique du VR prend en charge l'<strong>aménagement Van Life</strong> à partir de son <strong>atelier de Gatineau</strong> et accompagne aussi les projets venant de <u>l'Outaouais</u>, d'<u>Ottawa</u> et des <u>Laurentides</u> selon le mandat. Cette page sert à clarifier les conversions partielles ou complètes, l'isolation, le plancher, le mobilier, l'eau, le chauffage, la ventilation, le solaire, le lithium et les solutions 3 ou 4 saisons.`
+        ? `Clinique du VR prend en charge l'<strong>aménagement Van Life</strong> à partir de son <strong>atelier de Gatineau</strong> et peut cadrer certains projets venant de partout au <u>Canada</u>. Cette page sert à clarifier les conversions partielles ou complètes, l'isolation, le plancher, le mobilier, l'eau, le chauffage, la ventilation, le solaire, le lithium et les solutions 3 ou 4 saisons.`
         : service.slug === 'installation-panneaux-solaires'
-          ? `Clinique du VR prend en charge l'<strong>installation de panneaux solaires et batteries lithium</strong> à partir de son <strong>atelier de Gatineau</strong> et accompagne aussi les projets venant de <u>l'Outaouais</u>, d'<u>Ottawa</u> et des <u>Laurentides</u> selon le mandat. Cette page sert à clarifier les besoins en <strong>Victron Energy</strong>, MPPT, onduleurs, DC-DC, recharge par alternateur, Shore Power, monitoring et autonomie énergétique.`
+          ? `Clinique du VR prend en charge l'<strong>installation de panneaux solaires et batteries lithium</strong> à partir de son <strong>atelier de Gatineau</strong> et peut cadrer certains projets d'autonomie venant de partout au <u>Canada</u>. Cette page sert à clarifier les besoins en <strong>Victron Energy</strong>, MPPT, onduleurs, DC-DC, recharge par alternateur, Shore Power, monitoring et autonomie énergétique.`
           : `Clinique du VR prend en charge <strong>${service.navLabel}</strong> à partir de son <strong>atelier de Gatineau</strong> et accompagne aussi les demandes venant de <u>l’Outaouais</u>, d’<u>Ottawa</u> et des <u>Laurentides</u> selon le mandat. Cette page sert à clarifier la bonne prochaine étape quand le besoin touche une <strong>infiltration d’eau</strong>, la <strong>toiture</strong>, les <strong>joints</strong> ou un choix entre <strong>inspection, entretien et réparation de VR</strong>.`;
 ---
 

@@ -8,27 +8,36 @@
       "navLabel": "Custom modifications",
       "icon": "fas fa-sliders",
       "serviceType": "RV modification, custom interior upgrades and energy autonomy",
-      "seoTitle": "RV Modification in Gatineau-Ottawa | Solar, Lithium and Custom Builds",
-      "seoDescription": "RV modification and custom builds in Gatineau-Ottawa: solar, lithium, Victron, heating, water, ventilation, storage, furniture and interior upgrades.",
+      "seoTitle": "RV Modification in Canada | Solar, Lithium and Custom Builds",
+      "seoDescription": "RV modification and custom builds in Canada with workshop planning in Gatineau: solar, lithium, Victron, heating, water, storage and interior upgrades.",
       "eyebrow": "Solar, lithium, autonomy and custom projects",
-      "opening": "Clinique du VR handles <strong>RV modification</strong>, <strong>custom interior upgrades</strong> and <strong>energy autonomy</strong> projects for owners who want a vehicle that better fits the way they travel.",
+      "opening": "Clinique du VR handles <strong>RV modification in Canada</strong>, <strong>custom interior upgrades</strong> and <strong>energy autonomy</strong> projects, with remote project framing and workshop work in Gatineau depending on the assignment.",
       "lead": "Solar, lithium, Victron Energy, MPPT, inverters, chargers, shore power, diesel heating, water heaters, MaxxAir ventilation, air conditioning, plumbing, storage, beds, kitchens and custom RV upgrades.",
-      "intro": "Each project starts with real usage: off-grid camping, longer trips, 3- or 4-season comfort, added equipment, better interior organization or an upgrade to an existing system.",
+      "intro": "Each project starts with real usage: off-grid camping, longer travel across Canada, 3- or 4-season comfort, added equipment, better interior organization or an upgrade to an existing system.",
       "heroPromise": "Tell us about your project so we can frame a more autonomous, more comfortable and better adapted RV setup.",
-      "detailIntro": "A good RV modification has to respect structure, electrical systems, plumbing, watertightness, component access, weight and vehicle balance. We can integrate solar panels, lithium batteries, Victron Energy products, MPPT controllers, inverters, chargers, shore power, alternator charging, diesel heating, water heaters, MaxxAir ventilation, air conditioning, furniture, storage, beds, kitchens and other upgrades depending on the project.",
+      "detailIntro": "A good RV modification has to respect structure, electrical systems, plumbing, watertightness, component access, weight and vehicle balance. We can frame projects from across Canada, then integrate solar panels, lithium batteries, Victron Energy products, MPPT controllers, inverters, chargers, shore power, alternator charging, diesel heating, water heaters, MaxxAir ventilation, air conditioning, furniture, storage, beds, kitchens and other upgrades in the workshop depending on the project.",
       "highlights": [
+        "Canada-wide projects",
         "Solar and lithium",
         "Victron Energy products",
         "Interior upgrades",
-        "Heating, water and comfort",
         "Custom projects"
       ],
       "proofTitle": "Useful modification starts with the right project frame",
       "proofIntro": "The right project improves autonomy, comfort and daily use without creating access, weight, electrical, plumbing or watertightness problems.",
       "proofStats": [
-        { "value": "Solar + lithium", "label": "Energy autonomy and charging" },
-        { "value": "Victron", "label": "MPPT, inverters, chargers and monitoring" },
-        { "value": "Custom", "label": "Plan adapted to the vehicle and travel style" }
+        {
+          "value": "Solar + lithium",
+          "label": "Energy autonomy and charging"
+        },
+        {
+          "value": "Victron",
+          "label": "MPPT, inverters, chargers and monitoring"
+        },
+        {
+          "value": "Custom",
+          "label": "Plan adapted to the vehicle and travel style"
+        }
       ],
       "proofPoints": [
         {
@@ -78,10 +87,12 @@
         "You want solar, lithium, an inverter or a Victron Energy system",
         "Your interior lacks storage, comfort or functionality",
         "You are preparing for longer, off-grid or 4-season travel",
-        "You want to improve an existing system instead of starting over"
+        "You want to improve an existing system instead of starting over",
+        "You are elsewhere in Canada and can plan a workshop project in Gatineau"
       ],
       "processIntro": "We first validate the objective, vehicle, technical constraints, existing components, desired autonomy level and approximate budget before recommending a solution.",
       "process": [
+        "Remote project framing: city, province, vehicle, goals, timeline and ability to bring the RV to Gatineau",
         "Discussion about travel style, equipment, expected comfort and priorities",
         "Review of the RV, roof, access points, existing systems and installation constraints",
         "Component selection: solar, lithium, Victron, charging, heating, water, ventilation or interior upgrades",
@@ -117,6 +128,10 @@
         {
           "question": "Can an existing system be upgraded?",
           "answer": "Yes. We can evaluate an existing system and recommend an upgrade or correction if the components and installation allow it."
+        },
+        {
+          "question": "Do you accept RV modification projects from across Canada?",
+          "answer": "Yes. RV modification, solar, lithium, autonomy and custom interior projects can be framed remotely for clients across Canada. Workshop work is then planned depending on feasibility, vehicle condition, schedule and the ability to bring the RV to our Gatineau workshop."
         }
       ]
     },
@@ -128,15 +143,16 @@
       "navLabel": "Van Life",
       "icon": "fas fa-van-shuttle",
       "serviceType": "Complete and partial Van Life conversion",
-      "seoTitle": "Van Life Conversion in Gatineau-Ottawa | Transit, ProMaster and Sprinter",
-      "seoDescription": "Van Life conversion in Gatineau-Ottawa for Ford Transit, Ram ProMaster and Mercedes-Benz Sprinter: insulation, furniture, solar, lithium, water, heating and 4-season systems.",
+      "seoTitle": "Van Life Conversion in Canada | Transit, ProMaster and Sprinter",
+      "seoDescription": "Van Life conversion in Canada with workshop planning in Gatineau: Ford Transit, Ram ProMaster, Sprinter, insulation, furniture, solar, lithium, water and heating.",
       "eyebrow": "Complete or partial conversions",
-      "opening": "Clinique du VR supports <strong>Van Life conversion</strong> projects, from partial builds to complete conversions for vans such as Ford Transit, Ram ProMaster and Mercedes-Benz Sprinter.",
+      "opening": "Clinique du VR supports <strong>Van Life conversion in Canada</strong>, from partial builds to complete conversions for vans such as Ford Transit, Ram ProMaster and Mercedes-Benz Sprinter.",
       "lead": "Insulation, flooring, furniture, kitchen, water, diesel heating, solar, lithium, Victron, lighting, ventilation and 3- or 4-season solutions.",
-      "intro": "You can bring your own van or ask for guidance before choosing the vehicle.",
+      "intro": "You can bring your own van, come from another province, or ask for remote guidance before choosing the vehicle.",
       "heroPromise": "Start a Van Life project that fits your vehicle, your budget and the way you actually travel.",
-      "detailIntro": "A successful Van Life conversion has to balance space, weight, electricity, water, heating, ventilation, storage and service access. We can handle partial or complete conversions with insulation, sound deadening, flooring, furniture, kitchen, fresh water, grey water, shower, toilet, diesel heating, solar, lithium, Victron, lighting, ventilation, air conditioning and 4-season solutions.",
+      "detailIntro": "A successful Van Life conversion has to balance space, weight, electricity, water, heating, ventilation, storage and service access. We can frame projects from across Canada, then handle partial or complete workshop conversions with insulation, sound deadening, flooring, furniture, kitchen, fresh water, grey water, shower, toilet, diesel heating, solar, lithium, Victron, lighting, ventilation, air conditioning and 4-season solutions.",
       "highlights": [
+        "Canada-wide projects",
         "Partial conversion",
         "Complete conversion",
         "Transit, ProMaster, Sprinter",
@@ -145,9 +161,18 @@
       "proofTitle": "Three levels of Van Life projects",
       "proofIntro": "The right build depends on the vehicle, number of travellers, 3- or 4-season use, autonomy target and approximate budget.",
       "proofStats": [
-        { "value": "Essential", "label": "Insulation, flooring, basic electrical, ventilation and essential furniture" },
-        { "value": "Adventure", "label": "Solar, lithium, heating, water, kitchen and extended autonomy" },
-        { "value": "Custom", "label": "Complete design, advanced systems and premium equipment" }
+        {
+          "value": "Essential",
+          "label": "Insulation, flooring, basic electrical, ventilation and essential furniture"
+        },
+        {
+          "value": "Adventure",
+          "label": "Solar, lithium, heating, water, kitchen and extended autonomy"
+        },
+        {
+          "value": "Custom",
+          "label": "Complete design, advanced systems and premium equipment"
+        }
       ],
       "proofPoints": [
         {
@@ -192,10 +217,12 @@
         "You are shopping for a vehicle and want to validate potential before buying",
         "You want a partial conversion with only the essentials",
         "You want a complete conversion built around autonomy and comfort",
-        "You want a 3- or 4-season setup with solar, lithium and heating"
+        "You want a 3- or 4-season setup with solar, lithium and heating",
+        "You are elsewhere in Canada and want a workshop that can frame a complete Van Life project"
       ],
       "processIntro": "The first discussion should clarify the vehicle, year, length, number of travellers, 3- or 4-season use, desired equipment, approximate budget and target date.",
       "process": [
+        "Remote project framing: province, city, van, length, goals, budget and logistics toward Gatineau",
         "Vehicle validation or support before choosing the vehicle",
         "Discussion about partial or complete conversion, travellers and intended use",
         "System choices: solar, lithium, water, heating, shower, kitchen and storage",
@@ -231,6 +258,10 @@
         {
           "question": "Do you publish fixed prices?",
           "answer": "Conversions are usually quoted because cost depends on the vehicle, electrical systems, water, heating, furniture and finish level."
+        },
+        {
+          "question": "Do you accept Van Life projects from across Canada?",
+          "answer": "Yes. We can frame a Van Life project remotely for clients across Canada. Workshop work is quoted and planned based on the vehicle, project scope, budget, timeline and logistics for bringing the van to the Gatineau workshop."
         }
       ]
     },
@@ -489,12 +520,12 @@
       "navLabel": "Solar and lithium",
       "icon": "fas fa-solar-panel",
       "serviceType": "RV solar system installation, supply and distribution",
-      "seoTitle": "RV Solar and Lithium Installation in Gatineau | Victron Energy",
-      "seoDescription": "Solar panel, lithium battery, Victron, MPPT, inverter, DC-DC, shore power and monitoring installation for RV and Van Life projects in Gatineau.",
+      "seoTitle": "RV Solar Installation in Canada | Lithium Batteries and Victron",
+      "seoDescription": "RV solar and lithium battery installation in Canada with workshop planning in Gatineau: Victron, MPPT, inverters, DC-DC, shore power and monitoring.",
       "eyebrow": "RV solar, autonomy and energy",
       "opening": "Solar system installation and supply for RVs with <strong>Victron Energy products</strong>.",
       "lead": "Victron Energy, MPPT, lithium batteries, inverters, solar panels, DC-DC, alternator charging, shore power, monitoring and upgrades to existing systems.",
-      "intro": "Panels, controllers, batteries, inverters and monitoring: a clear setup adapted to your vehicle.",
+      "intro": "Panels, controllers, batteries, inverters and monitoring: a clear setup adapted to your vehicle and travel across Canada.",
       "heroPromise": "",
       "detailIntro": "A good RV solar system is not just about adding a panel to the roof. Roof space, sealing points, cable routing, battery capacity, controller, inverter and monitoring all have to be considered. As an installer and distributor of Victron Energy products, we can supply the components and integrate them into a coherent system for your vehicle.",
       "highlights": [
@@ -518,7 +549,8 @@
         "You want to power equipment without relying only on campground hookup",
         "You are planning a system with batteries, charge controller or inverter",
         "Your existing solar system needs an upgrade or correction",
-        "You want to buy Victron Energy products with an RV-ready installation"
+        "You want to buy Victron Energy products with an RV-ready installation",
+        "You are preparing long-distance travel across Canada and want to validate autonomy before departure"
       ],
       "processIntro": "We work step by step to avoid poorly sized systems: understand your usage, choose components, protect the roof, install cleanly and verify operation.",
       "process": [

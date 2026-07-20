@@ -1,25 +1,49 @@
 {
-  "metaTitle": "Clinique du VR | RV Modification, Van Life, Solar and Repair in Gatineau",
-  "metaDescription": "Clinique du VR modifies, upgrades and repairs RVs and vans in Gatineau: solar, lithium, autonomy, Van Life, roof work, water intrusion, maintenance and repair.",
+  "metaTitle": "Clinique du VR | RV Modification, Van Life, Solar and Repair in Canada",
+  "metaDescription": "Clinique du VR modifies, upgrades and repairs RVs and vans: Canada-wide modification, Van Life, solar, lithium, autonomy, roof work and repair projects from Gatineau.",
   "hero": {
     "logoAlt": "Clinique du VR logo - RV modification, Van Life, solar, maintenance and repair",
-    "title": "RV Modification, Van Life and Repair in Gatineau",
+    "title": "RV Modification, Van Life and Repair in Canada",
     "tagline": ""
   },
   "introCard": {
     "icon": "",
     "heading": "Why choose Clinique du VR?",
-    "body": "<strong>Specialized and attentive service</strong> for RV modification, Van Life conversion, solar and lithium systems, maintenance and repair. We focus on clear explanations, a practical reading of the vehicle's condition, and recommendations tailored to your actual situation. We have a year-round workshop as well as a mobile unit to serve you better depending on the type of work needed. Speed, transparency, and careful execution from start to finish are part of how we work."
+    "body": "<strong>Specialized and attentive service</strong> for RV modification, Van Life conversion, solar and lithium systems, maintenance and repair. Canada-wide modification, Van Life and solar projects can be framed remotely, then planned for workshop work in Gatineau depending on the assignment, timeline and vehicle logistics."
   },
   "servicesOverview": {
     "title": "Our Specialties",
     "items": [
-      { "href": "/en/services/rv-modification-custom-builds/", "icon": "fas fa-sliders", "label": "Custom modifications" },
-      { "href": "/en/services/van-life-conversion/", "icon": "fas fa-van-shuttle", "label": "Van Life" },
-      { "href": "/en/services/solar-panel-installation/", "icon": "fas fa-solar-panel", "label": "Solar and lithium" },
-      { "href": "/en/services/repair/", "icon": "fas fa-toolbox", "label": "Repair" },
-      { "href": "/en/services/maintenance/", "icon": "fas fa-screwdriver-wrench", "label": "Maintenance" },
-      { "href": "/en/services/inspection/", "icon": "fas fa-clipboard-check", "label": "Inspection" }
+      {
+        "href": "/en/services/rv-modification-custom-builds/",
+        "icon": "fas fa-sliders",
+        "label": "Custom modifications"
+      },
+      {
+        "href": "/en/services/van-life-conversion/",
+        "icon": "fas fa-van-shuttle",
+        "label": "Van Life"
+      },
+      {
+        "href": "/en/services/solar-panel-installation/",
+        "icon": "fas fa-solar-panel",
+        "label": "Solar and lithium"
+      },
+      {
+        "href": "/en/services/repair/",
+        "icon": "fas fa-toolbox",
+        "label": "Repair"
+      },
+      {
+        "href": "/en/services/maintenance/",
+        "icon": "fas fa-screwdriver-wrench",
+        "label": "Maintenance"
+      },
+      {
+        "href": "/en/services/inspection/",
+        "icon": "fas fa-clipboard-check",
+        "label": "Inspection"
+      }
     ]
   },
   "partsStore": {
@@ -27,21 +51,34 @@
     "heading": "RV Parts and Accessories Store",
     "body": "Visit us for a selection of parts and accessories for RV maintenance, repairs, and upgrades, including solar products. Our team can also help you identify the right product for your vehicle and check its availability.",
     "items": [
-      { "icon": "fas fa-droplet", "label": "Sealants" },
-      { "icon": "fas fa-screwdriver-wrench", "label": "Maintenance parts" },
-      { "icon": "fas fa-solar-panel", "label": "Solar panels", "href": "/en/services/solar-panel-installation/" },
-      { "icon": "fas fa-toolbox", "label": "Accessories and equipment" }
+      {
+        "icon": "fas fa-droplet",
+        "label": "Sealants"
+      },
+      {
+        "icon": "fas fa-screwdriver-wrench",
+        "label": "Maintenance parts"
+      },
+      {
+        "icon": "fas fa-solar-panel",
+        "label": "Solar panels",
+        "href": "/en/services/solar-panel-installation/"
+      },
+      {
+        "icon": "fas fa-toolbox",
+        "label": "Accessories and equipment"
+      }
     ],
     "ctaLabel": "View products"
   },
   "seoSections": [
     {
-      "heading": "RV service in Gatineau and nearby areas",
-      "body": "Clinique du VR supports owners of RVs, travel trailers, caravans and vans with modification, Van Life conversion, solar and lithium autonomy, pre-purchase inspection, preventive maintenance, water leak repair, roof work and restoration. Our workshop in Gatineau also serves the greater Ottawa region, Outaouais and the Laurentides, as well as selected files elsewhere in Quebec and Ontario."
+      "heading": "RV modification, Van Life and solar projects in Canada",
+      "body": "Clinique du VR supports owners of RVs, travel trailers, caravans and vans with modification, Van Life conversion, solar and lithium autonomy, pre-purchase inspection, preventive maintenance, water leak repair, roof work and restoration. The Gatineau workshop serves nearby regions and can frame selected modification, Van Life and solar projects for clients across Canada."
     },
     {
       "heading": "A useful approach before any work begins",
-      "body": "When a vehicle needs more autonomy, a custom interior, Van Life equipment, solar and lithium upgrades, or repair after wear or water intrusion, the first step is to clarify the vehicle's actual condition. We then help you choose between modification, solar, Van Life, inspection, maintenance, repair or pre-sale preparation based on what is most useful."
+      "body": "When a vehicle needs more autonomy, a custom interior, Van Life equipment, solar and lithium upgrades, or repair after wear or water intrusion, the first step is to clarify the vehicle's actual condition, province, travel plan and logistics. We then help you choose the most useful next step."
     }
   ],
   "cta": {

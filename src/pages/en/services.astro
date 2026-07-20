@@ -52,7 +52,7 @@ const serviceFaqs = [
   },
   {
     question: 'Do you only work in Gatineau?',
-    answer: 'No. The workshop is in Gatineau, but we also support clients in the Ottawa region, Outaouais, and the Laurentides depending on the type of file.'
+    answer: 'No. The workshop is in Gatineau. Inspection, maintenance and repair remain mostly regional. For custom modification, Van Life, solar and lithium projects, we can also frame requests from across Canada when the vehicle can be planned for workshop work.'
   },
   {
     question: 'Do you offer both shop and mobile services?',
@@ -64,13 +64,31 @@ const quickSteps = [
   'Open only the service or area that matches your situation.',
   'Use inspection as the starting point for buying, selling, or uncertainty.'
 ];
+const priorityServiceSearches = [
+  {
+    title: 'RV modification in Canada',
+    body: 'Interior upgrades, off-grid power, solar, lithium, heating, ventilation and custom projects framed remotely and planned for workshop work.'
+  },
+  {
+    title: 'Van Life conversion in Canada',
+    body: 'Partial or complete van conversions for vehicles coming from Quebec, Ontario or elsewhere in Canada, with furniture, insulation, water, heating and energy.'
+  },
+  {
+    title: 'RV solar installation in Canada',
+    body: 'Solar panels, lithium batteries, Victron Energy products, MPPT controllers, inverters and upgrades for long-distance travel.'
+  },
+  {
+    title: 'RV water-intrusion repair in the Laurentides',
+    body: 'Leak diagnosis, roof, membrane, seals, walls, flooring and restoration after water damage.'
+  }
+];
 const breadcrumbs = buildBreadcrumbSchema([
   { name: 'Home', path: '/en/' },
   { name: 'Services' }
 ]);
 ---
 
-<Layout title="RV Services in Gatineau | Modification, Van Life, Solar and Repair" description="RV services in Gatineau: custom modification, Van Life conversion, solar, lithium, Victron, water leaks, roof work, maintenance, inspection and repair." lang="en-CA" canonicalPath="/en/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs, buildFAQSchema(serviceFaqs)]}>
+<Layout title="RV Services in Canada | Modification, Van Life, Solar and Repair" description="RV services from Gatineau with selected projects across Canada: custom modification, Van Life conversion, solar, lithium, Victron, water leaks, roof work, maintenance, inspection and repair." lang="en-CA" canonicalPath="/en/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs, buildFAQSchema(serviceFaqs)]}>
   <Header lang="en" />
 
   <main>
@@ -78,7 +96,7 @@ const breadcrumbs = buildBreadcrumbSchema([
       <div class="container">
         <p class="eyebrow">Modification • Van Life • Repair</p>
         <h1>Our Services</h1>
-        <p>Custom modification, Van Life conversion, solar, lithium, roof work, water intrusion, maintenance, inspection and repair based on the vehicle and the way you travel.</p>
+        <p>Custom modification, Van Life conversion, solar, lithium, roof work, water intrusion, maintenance, inspection and repair based on the vehicle, province and the way you travel.</p>
       </div>
     </section>
 
@@ -117,6 +135,21 @@ const breadcrumbs = buildBreadcrumbSchema([
               <p>{item}</p>
             ))}
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="priority-search-section">
+      <div class="container">
+        <h2>Services searched by region</h2>
+          <p class="section-intro">These groupings help route frequent requests from Canada, Quebec, Ontario, Gatineau, Ottawa, Outaouais, and the Laurentides.</p>
+        <div class="priority-search-grid">
+          {priorityServiceSearches.map((item) => (
+            <article class="priority-search-card">
+              <h3>{item.title}</h3>
+              <p>{item.body}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>
@@ -202,6 +235,7 @@ const breadcrumbs = buildBreadcrumbSchema([
 
   .seo-copy,
   .planning-section,
+  .priority-search-section,
   .service-areas-section,
   .service-faq-section {
     padding: 0 0 4rem;
@@ -338,6 +372,38 @@ const breadcrumbs = buildBreadcrumbSchema([
     gap: 1.5rem;
   }
 
+  .priority-search-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .priority-search-card {
+    display: grid;
+    gap: 0.65rem;
+    padding: 1.2rem;
+    border-radius: 18px;
+    background: white;
+    border-top: 4px solid var(--brand-gold);
+    box-shadow: 0 14px 28px rgba(21, 38, 58, 0.07);
+  }
+
+  .priority-search-card h3 {
+    margin: 0;
+    color: var(--brand-navy);
+    font-size: 1rem;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+  }
+
+  .priority-search-card p {
+    margin: 0;
+    color: var(--brand-muted);
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
   .faq-list {
     display: grid;
     gap: 1rem;
@@ -370,6 +436,7 @@ const breadcrumbs = buildBreadcrumbSchema([
     .seo-columns,
     .planning-layout,
     .guide-list,
+    .priority-search-grid,
     .area-grid {
       grid-template-columns: 1fr;
     }
@@ -384,11 +451,18 @@ const breadcrumbs = buildBreadcrumbSchema([
     .page-header .container,
     .service-card,
     .seo-columns > div,
+    .priority-search-card,
     .quick-steps-card,
     .area-card {
+      width: min(100%, 22rem);
       min-width: 0;
       max-width: 100%;
       overflow-wrap: anywhere;
+    }
+
+    .page-header .container {
+      margin-left: 0;
+      margin-right: auto;
     }
 
     .eyebrow {

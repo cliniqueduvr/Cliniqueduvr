@@ -1,18 +1,31 @@
 {
-  "metaTitle": "Contact Clinique du VR | Estimate and workshop in Gatineau",
-  "metaDescription": "Contact Clinique du VR in Gatineau for an estimate for repair, custom modification, Van Life, solar, lithium, inspection, or maintenance in Outaouais, Ottawa, and the Laurentides.",
+  "metaTitle": "Contact Clinique du VR | RV Estimates and Canada Projects",
+  "metaDescription": "Contact Clinique du VR for RV repair, custom modification, Van Life, solar or lithium estimates in Gatineau and selected projects across Canada.",
   "breadcrumbs": {
     "home": "Home",
     "current": "Contact"
   },
   "formSection": {
     "title": "Contact us",
-    "intro": "You can contact us for RV repair, custom modification, Van Life, solar/lithium, water intrusion, roof work, inspection, maintenance, or parts. The more precise your request is, the more useful our reply will be.",
+    "intro": "You can contact us for RV repair, custom modification, Van Life, solar/lithium, water intrusion, roof work, inspection, maintenance, or parts. For modification, Van Life and solar projects from across Canada, include your city, province and whether the vehicle can be brought to Gatineau.",
     "unconfiguredNote": "The form is not available at the moment. In the meantime, call us or book online.",
     "fields": {
       "name": "Full name *",
       "email": "Email *",
       "phone": "Phone",
+      "preferredContact": "Preferred follow-up method",
+      "preferredContactOptions": [
+        "Phone",
+        "Email",
+        "Text message"
+      ],
+      "urgency": "Urgency level",
+      "urgencyOptions": [
+        "Normal planning",
+        "Before a departure",
+        "Vehicle cannot be used",
+        "Insurance file"
+      ],
       "services": "Request type",
       "serviceOptions": [
         "Repair",
@@ -33,7 +46,15 @@
       "budget": "Approximate budget (for custom modification or Van Life)",
       "attachments": "Attach files",
       "subject": "Subject *",
-      "message": "Describe the project or issue *"
+      "message": "Describe the project or issue *",
+      "messageHelp": "Include what you see, when it started, approximate dimensions, affected equipment, and the result you want.",
+      "province": "Province",
+      "travelToWorkshop": "Can you bring the vehicle to Gatineau?",
+      "travelToWorkshopOptions": [
+        "Yes",
+        "To discuss",
+        "No / remote guidance only"
+      ]
     },
     "submitLabel": "Send"
   },
@@ -51,8 +72,8 @@
   },
   "seoSections": [
     {
-      "heading": "RV workshop in Gatineau",
-      "body": "Clinique du VR serves Gatineau, the Ottawa region, Outaouais, and the Laurentides for RV repair, custom modification, Van Life, solar, lithium, maintenance, inspection, and parts requests."
+      "heading": "RV workshop in Gatineau, Canada-wide projects",
+      "body": "Clinique du VR serves Gatineau, Ottawa, Outaouais and the Laurentides for local requests. Custom modification, Van Life, solar and lithium projects can also be framed for clients across Canada when the vehicle can be planned for workshop work."
     },
     {
       "heading": "Before you send a message",

@@ -53,7 +53,7 @@ const serviceFaqs = [
   },
   {
     question: 'Travaillez-vous seulement à Gatineau?',
-    answer: "Non. L'atelier est à Gatineau, mais nous accompagnons aussi des clients de la grande région d'Ottawa, de l'Outaouais et des Laurentides selon le type de dossier."
+    answer: "Non. L'atelier est à Gatineau. Pour l'inspection, l'entretien et la réparation, la zone reste surtout régionale. Pour les projets de modification, Van Life, solaire et lithium, nous pouvons aussi cadrer des demandes venant de partout au Canada lorsque le véhicule peut être planifié en atelier."
   },
   {
     question: 'Offrez-vous des services mobiles et en atelier?',
@@ -65,13 +65,31 @@ const quickSteps = [
   'Ouvrez ensuite seulement le service ou la zone qui correspond à votre situation.',
   "Utilisez l'inspection comme point de départ pour un achat, une vente ou un doute."
 ];
+const priorityServiceSearches = [
+  {
+    title: 'Modification VR Canada',
+    body: "Aménagement intérieur, autonomie énergétique, solaire, lithium, chauffage, ventilation et projets sur mesure cadrés à distance et planifiés en atelier."
+  },
+  {
+    title: 'Conversion Van Life Canada',
+    body: "Conversion partielle ou complète pour vans provenant du Québec, de l'Ontario ou d'ailleurs au Canada, avec mobilier, isolation, eau, chauffage et énergie."
+  },
+  {
+    title: 'Installation solaire VR Canada',
+    body: "Panneaux solaires, batteries lithium, produits Victron Energy, MPPT, onduleurs et mise à niveau pour les voyages longue distance."
+  },
+  {
+    title: 'Réparation infiltration VR Laurentides',
+    body: "Diagnostic de fuite, toiture, membrane, joints, murs, plancher et remise en état après dommage d'eau."
+  }
+];
 const breadcrumbs = buildBreadcrumbSchema([
   { name: 'Accueil', path: '/' },
   { name: 'Services' }
 ]);
 ---
 
-<Layout title="Services VR à Gatineau | Modification, Van Life, solaire et réparation" description="Services de VR à Gatineau: modification, aménagement, Van Life, solaire, lithium, autonomie, toiture, infiltration, entretien et réparation." canonicalPath="/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs, buildFAQSchema(serviceFaqs)]}>
+<Layout title="Services VR au Canada | Modification, Van Life, solaire et réparation" description="Services VR depuis Gatineau avec projets sélectionnés au Canada: modification, aménagement, Van Life, solaire, lithium, autonomie, toiture, infiltration, entretien et réparation." canonicalPath="/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs, buildFAQSchema(serviceFaqs)]}>
   <Header />
 
   <main>
@@ -79,7 +97,7 @@ const breadcrumbs = buildBreadcrumbSchema([
       <div class="container">
         <p class="eyebrow">Modification • Van Life • Réparation</p>
         <h1>Nos Services</h1>
-        <p>Modification, aménagement, solaire, lithium, conversion Van Life, toiture, infiltration, entretien et réparation selon votre véhicule et votre façon de voyager.</p>
+        <p>Modification, aménagement, solaire, lithium, conversion Van Life, toiture, infiltration, entretien et réparation selon votre véhicule, votre province et votre façon de voyager.</p>
       </div>
     </section>
 
@@ -114,12 +132,27 @@ const breadcrumbs = buildBreadcrumbSchema([
             <div class="seo-columns">
               <div class="info-card">
                 <h2>Un service adapté à votre situation</h2>
-                <p>Que vous soyez en projet d'autonomie, d'aménagement Van Life, de mise à niveau solaire ou en pleine réparation, nous vous orientons vers le bon service selon l'état réel du véhicule.</p>
+              <p>Que vous soyez en projet d'autonomie, d'aménagement Van Life, de mise à niveau solaire ou en pleine réparation, nous vous orientons vers le bon service selon l'état réel du véhicule, votre localisation et la logistique vers l'atelier.</p>
               </div>
               <div class="info-card">
                 <h2>Ce que nous couvrons</h2>
-                <p>Modification intérieure, solaire, lithium, Victron, chauffage, climatisation, plomberie, Van Life, infiltrations d'eau, toiture, joints, composantes électriques, propane et inspections avant transaction.</p>
+              <p>Modification intérieure, solaire, lithium, Victron, chauffage, climatisation, plomberie, Van Life, projets longue distance au Canada, infiltrations d'eau, toiture, joints, composantes électriques, propane et inspections avant transaction.</p>
               </div>
+            </div>
+          </section>
+
+          <section class="priority-search-section">
+            <div class="section-header">
+              <h2>Services recherchés par région</h2>
+              <p class="section-intro">Ces regroupements aident à orienter rapidement les demandes fréquentes provenant du Canada, du Québec, de l'Ontario, de Gatineau, Ottawa, l'Outaouais et les Laurentides.</p>
+            </div>
+            <div class="priority-search-grid">
+              {priorityServiceSearches.map((item) => (
+                <article class="priority-search-card">
+                  <h3>{item.title}</h3>
+                  <p>{item.body}</p>
+                </article>
+              ))}
             </div>
           </section>
 
@@ -427,6 +460,37 @@ const breadcrumbs = buildBreadcrumbSchema([
     gap: 1.5rem;
   }
 
+  .priority-search-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .priority-search-card {
+    display: grid;
+    gap: 0.65rem;
+    padding: 1.2rem;
+    border-radius: 18px;
+    background: white;
+    border-top: 4px solid var(--brand-gold);
+    box-shadow: 0 14px 28px rgba(21, 38, 58, 0.07);
+  }
+
+  .priority-search-card h3 {
+    margin: 0;
+    color: var(--brand-navy);
+    font-size: 1rem;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+  }
+
+  .priority-search-card p {
+    margin: 0;
+    color: var(--brand-muted);
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
   .section-header {
     margin-bottom: 1.5rem;
   }
@@ -461,6 +525,7 @@ const breadcrumbs = buildBreadcrumbSchema([
 
   @media (max-width: 900px) {
     .seo-columns,
+    .priority-search-grid,
     .area-grid {
       grid-template-columns: 1fr;
     }
@@ -488,11 +553,18 @@ const breadcrumbs = buildBreadcrumbSchema([
     .page-header .container,
     .service-card,
     .info-card,
+    .priority-search-card,
     .quick-steps-card,
     .area-card {
+      width: min(100%, 22rem);
       min-width: 0;
       max-width: 100%;
       overflow-wrap: anywhere;
+    }
+
+    .page-header .container {
+      margin-left: 0;
+      margin-right: auto;
     }
 
     .eyebrow {

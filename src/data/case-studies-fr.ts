@@ -5,7 +5,7 @@ export const caseStudiesFr = [
     photoGallery: [
       {
         label: 'Défaut observé',
-        image: '/images/realisations/Inspection-vr/infiltration.PNG',
+        image: '/images/realisations/Inspection-vr/infiltration.webp',
         alt: "Photo d'inspection montrant une infiltration de toiture sur un VR à Gatineau",
         title: "Photo d'inspection disponible",
         text: "Image utilisée pour documenter un défaut visible pendant une inspection d'infiltration."
@@ -66,7 +66,7 @@ export const caseStudiesFr = [
   },
   {
     slug: 'changement-membrane-vr-gatineau',
-    beforeImage: '/images/realisations/changement-membrane-vr-gatineau/avant.JPG',
+    beforeImage: '/images/realisations/changement-membrane-vr-gatineau/avant.webp',
     beforeImageAlt: 'Avant changement de membrane de toiture sur un VR à Gatineau',
     title: 'Changement de membrane de toiture sur un VR à Gatineau',
     metaTitle: 'Cas réel: changement de membrane de toiture sur un VR à Gatineau | Clinique du VR',
@@ -121,7 +121,7 @@ export const caseStudiesFr = [
   },
   {
     slug: 'reparation-interieure-vr-apres-infiltration-ottawa',
-    beforeImage: '/images/realisations/infiltration-eau-mur/infiltration-eau.JPG',
+    beforeImage: '/images/realisations/infiltration-eau-mur/infiltration-eau.webp',
     beforeImageAlt: "Photo d'infiltration d'eau dans un mur de VR",
     photoSectionTitle: "Photo du dommage observé",
     beforeSlotLabel: 'Mur touché',

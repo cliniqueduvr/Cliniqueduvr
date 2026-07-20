@@ -68,6 +68,7 @@ const hasGoogleAds = googleAdsId.length > 0;
     {hasGoogleAds && (
       <script async src={`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(googleAdsId)}`}></script>
     )}
+    <link rel="preload" as="image" href={siteSettings.brandImage} />
     {hasGoogleAds && (
       <script is:inline define:vars={{ googleAdsId, googleAdsConversions, squareBookingUrl: siteSettings.squareBookingUrl }}>
         (() => {
@@ -660,6 +661,7 @@ const hasGoogleAds = googleAdsId.length > 0;
         .interior-hero-card,
         .interior-card,
         .interior-side-card {
+          width: min(100%, 22rem);
           min-width: 0;
           max-width: 100%;
           overflow-wrap: anywhere;
@@ -717,7 +719,7 @@ const hasGoogleAds = googleAdsId.length > 0;
         .interior-hero-copy > p:last-child {
           font-size: 0.93rem;
           line-height: 1.5;
-          max-width: 100%;
+          max-width: min(100%, 22rem);
           overflow-wrap: anywhere;
         }
       }

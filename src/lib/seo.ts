@@ -80,7 +80,7 @@ export function buildLocalBusinessSchema({
     '@type': 'AutoRepair',
     '@id': `${SITE_URL}/#clinique-du-vr`,
     name: 'Clinique du VR',
-    description: 'Modification, aménagement, Van Life, solaire, lithium, autonomie, réparation et entretien de VR à Gatineau, Ottawa, Outaouais et Laurentides',
+    description: 'Modification, aménagement, Van Life, solaire, lithium, autonomie, réparation et entretien de VR depuis Gatineau, avec projets sélectionnés partout au Canada',
     telephone,
     email,
     url: SITE_URL,
@@ -88,6 +88,7 @@ export function buildLocalBusinessSchema({
     availableLanguage: ['fr-CA', 'en-CA'],
     foundingDate: '2013',
     areaServed: [
+      { '@type': 'Country', name: 'Canada' },
       { '@type': 'City', name: 'Gatineau' },
       { '@type': 'City', name: 'Ottawa' },
       { '@type': 'AdministrativeArea', name: 'Outaouais' },
@@ -118,7 +119,7 @@ export function buildLocalBusinessSchema({
         contactType: 'customer service',
         telephone,
         email,
-        areaServed: ['CA-QC', 'CA-ON'],
+        areaServed: ['CA', 'CA-QC', 'CA-ON'],
         availableLanguage: ['fr-CA', 'en-CA']
       }
     ],
@@ -213,6 +214,7 @@ export function buildServiceSchema({
     name,
     provider: { '@id': `${SITE_URL}/#clinique-du-vr` },
     areaServed: [
+      { '@type': 'Country', name: 'Canada' },
       { '@type': 'City', name: 'Gatineau' },
       { '@type': 'City', name: 'Ottawa' },
       { '@type': 'AdministrativeArea', name: 'Outaouais' },

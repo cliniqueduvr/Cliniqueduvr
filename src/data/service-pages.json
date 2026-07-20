@@ -8,27 +8,36 @@
       "navLabel": "Modification & aménagement",
       "icon": "fas fa-sliders",
       "serviceType": "Modification, amélioration, autonomie énergétique et aménagement de VR",
-      "seoTitle": "Modification et amélioration de VR à Gatineau | Solaire, lithium et aménagement",
-      "seoDescription": "Modification et aménagement de VR à Gatineau-Ottawa: solaire, lithium, Victron, chauffage, climatisation, plomberie, mobilier, rangement et projets sur mesure.",
+      "seoTitle": "Modification de VR au Canada | Solaire, lithium et aménagement",
+      "seoDescription": "Modification et aménagement de VR au Canada: projets sur mesure en atelier à Gatineau pour solaire, lithium, Victron, autonomie, confort et intérieur.",
       "eyebrow": "Solaire, lithium, autonomie et projets sur mesure",
-      "opening": "Clinique du VR réalise des projets de <strong>modification de VR</strong>, d'<strong>aménagement intérieur</strong> et d'<strong>autonomie énergétique</strong> pour adapter votre véhicule à votre façon de voyager.",
+      "opening": "Clinique du VR réalise des projets de <strong>modification de VR au Canada</strong>, d'<strong>aménagement intérieur</strong> et d'<strong>autonomie énergétique</strong>, avec cadrage à distance et travaux en atelier à Gatineau selon le mandat.",
       "lead": "Solaire, lithium, Victron Energy, MPPT, onduleurs, chargeurs, Shore Power, chauffage diesel, chauffe-eau, MaxxAir, climatisation, plomberie, mobilier, rangement, lits, cuisines et projets sur mesure.",
-      "intro": "Chaque projet commence par votre usage réel: camping autonome, longs voyages, confort 4 saisons, ajout d'équipements, meilleure organisation intérieure ou mise à niveau d'un système existant.",
+      "intro": "Chaque projet commence par votre usage réel: camping autonome, longs voyages au Canada, confort 4 saisons, ajout d'équipements, meilleure organisation intérieure ou mise à niveau d'un système existant.",
       "heroPromise": "Parlez-nous de votre projet pour obtenir une solution plus autonome, plus confortable et mieux adaptée à votre VR.",
-      "detailIntro": "Une bonne modification de VR doit respecter la structure, l'électricité, la plomberie, l'étanchéité, l'accès aux composantes, le poids et l'équilibre du véhicule. Nous pouvons intégrer des panneaux solaires, batteries lithium, produits Victron Energy, contrôleurs MPPT, onduleurs, chargeurs, Shore Power, recharge par alternateur, chauffage diesel, chauffe-eau, MaxxAir, climatisation, mobilier, rangement, lits, cuisines et autres améliorations selon le projet.",
+      "detailIntro": "Une bonne modification de VR doit respecter la structure, l'électricité, la plomberie, l'étanchéité, l'accès aux composantes, le poids et l'équilibre du véhicule. Nous pouvons cadrer des projets provenant de partout au Canada, puis intégrer en atelier des panneaux solaires, batteries lithium, produits Victron Energy, contrôleurs MPPT, onduleurs, chargeurs, Shore Power, recharge par alternateur, chauffage diesel, chauffe-eau, MaxxAir, climatisation, mobilier, rangement, lits, cuisines et autres améliorations selon le projet.",
       "highlights": [
+        "Projets Canada",
         "Solaire et lithium",
         "Produits Victron Energy",
         "Aménagement intérieur",
-        "Chauffage, eau et confort",
         "Projets sur mesure"
       ],
       "proofTitle": "Une modification utile commence par le bon cadrage",
       "proofIntro": "Le bon projet améliore l'autonomie, le confort et l'usage du véhicule sans créer de problèmes d'accès, de poids, d'électricité, de plomberie ou d'étanchéité. C'est ce cadrage qui distingue une vraie amélioration d'un simple ajout d'équipement.",
       "proofStats": [
-        { "value": "Solaire + lithium", "label": "Autonomie énergétique et recharge" },
-        { "value": "Victron", "label": "MPPT, onduleurs, chargeurs et monitoring" },
-        { "value": "Sur mesure", "label": "Plan adapté au véhicule et à l'usage" }
+        {
+          "value": "Solaire + lithium",
+          "label": "Autonomie énergétique et recharge"
+        },
+        {
+          "value": "Victron",
+          "label": "MPPT, onduleurs, chargeurs et monitoring"
+        },
+        {
+          "value": "Sur mesure",
+          "label": "Plan adapté au véhicule et à l'usage"
+        }
       ],
       "proofPoints": [
         {
@@ -79,10 +88,12 @@
         "Vous voulez ajouter du solaire, du lithium, un onduleur ou un système Victron Energy",
         "Votre intérieur manque de rangement, de confort ou de fonctionnalité",
         "Vous préparez un projet de voyage prolongé, autonome ou 4 saisons",
-        "Vous voulez améliorer un système existant plutôt que tout recommencer"
+        "Vous voulez améliorer un système existant plutôt que tout recommencer",
+        "Vous êtes ailleurs au Canada et pouvez planifier un projet en atelier à Gatineau"
       ],
       "processIntro": "Nous validons d'abord l'objectif, le véhicule, les contraintes techniques, les composantes existantes, le niveau d'autonomie souhaité et le budget approximatif avant de recommander une solution.",
       "process": [
+        "Premier cadrage à distance: ville, province, véhicule, objectifs, échéancier et possibilité d'amener le VR à Gatineau",
         "Discussion sur votre façon de voyager, vos appareils, votre confort attendu et vos priorités",
         "Validation du VR, de la toiture, des accès, des systèmes existants et des contraintes d'installation",
         "Choix des composantes: solaire, lithium, Victron, recharge, chauffage, eau, ventilation ou aménagement intérieur",
@@ -122,6 +133,10 @@
         {
           "question": "Est-ce que la modification doit être complète dès le départ?",
           "answer": "Non. Un projet peut être progressif. Nous pouvons prioriser les travaux les plus utiles d'abord, par exemple l'énergie, la recharge, le chauffage, la ventilation ou l'aménagement intérieur."
+        },
+        {
+          "question": "Acceptez-vous des projets de modification venant de partout au Canada?",
+          "answer": "Oui. Les projets de modification, solaire, lithium, autonomie ou aménagement peuvent être cadrés à distance pour des clients de partout au Canada. Les travaux sont ensuite planifiés selon la faisabilité, le véhicule, le calendrier et la possibilité d'amener le VR à notre atelier de Gatineau."
         }
       ]
     },
@@ -133,15 +148,16 @@
       "navLabel": "Van Life",
       "icon": "fas fa-van-shuttle",
       "serviceType": "Conversion complète et partielle de vans Van Life",
-      "seoTitle": "Conversion Van Life à Gatineau-Ottawa | Transit, ProMaster et Sprinter",
-      "seoDescription": "Conversion Van Life à Gatineau-Ottawa pour Ford Transit, Ram ProMaster et Mercedes-Benz Sprinter: isolation, mobilier, solaire, lithium, eau, chauffage et solutions 4 saisons.",
+      "seoTitle": "Conversion Van Life au Canada | Transit, ProMaster et Sprinter",
+      "seoDescription": "Conversion Van Life au Canada avec atelier à Gatineau: Ford Transit, Ram ProMaster, Sprinter, isolation, mobilier, solaire, lithium, eau et chauffage.",
       "eyebrow": "Conversions complètes ou partielles",
-      "opening": "Clinique du VR accompagne les projets de <strong>conversion Van Life</strong>, de l'aménagement partiel à la conversion complète de vans comme Ford Transit, Ram ProMaster et Mercedes-Benz Sprinter.",
+      "opening": "Clinique du VR accompagne les projets de <strong>conversion Van Life au Canada</strong>, de l'aménagement partiel à la conversion complète de vans comme Ford Transit, Ram ProMaster et Mercedes-Benz Sprinter.",
       "lead": "Isolation, plancher, mobilier, cuisine, eau, chauffage diesel, solaire, lithium, Victron, éclairage, ventilation et solutions 3 ou 4 saisons.",
-      "intro": "Vous pouvez apporter votre propre van ou être accompagné dans la définition du projet avant l'achat du véhicule.",
+      "intro": "Vous pouvez apporter votre propre van, venir d'une autre province ou être accompagné à distance dans la définition du projet avant l'achat du véhicule.",
       "heroPromise": "Démarrez un projet Van Life cohérent avec votre véhicule, votre budget et votre façon de voyager.",
-      "detailIntro": "Une conversion Van Life réussie doit équilibrer l'espace, le poids, l'électricité, l'eau, le chauffage, la ventilation, le rangement et la facilité d'entretien. Nous pouvons prendre en charge des conversions partielles ou complètes avec isolation, insonorisation, plancher, mobilier, cuisine, eau propre, eaux grises, douche, toilette, chauffage diesel, solaire, lithium, Victron, éclairage, ventilation, climatisation et solutions 4 saisons.",
+      "detailIntro": "Une conversion Van Life réussie doit équilibrer l'espace, le poids, l'électricité, l'eau, le chauffage, la ventilation, le rangement et la facilité d'entretien. Nous pouvons cadrer des projets provenant de partout au Canada, puis prendre en charge des conversions partielles ou complètes en atelier avec isolation, insonorisation, plancher, mobilier, cuisine, eau propre, eaux grises, douche, toilette, chauffage diesel, solaire, lithium, Victron, éclairage, ventilation, climatisation et solutions 4 saisons.",
       "highlights": [
+        "Projets Canada",
         "Conversion partielle",
         "Conversion complète",
         "Transit, ProMaster, Sprinter",
@@ -206,10 +222,12 @@
         "Vous magasinez un véhicule et voulez valider le potentiel avant achat",
         "Vous voulez une conversion partielle avec seulement les éléments essentiels",
         "Vous voulez une conversion complète orientée autonomie et confort",
-        "Vous voulez une solution 3 ou 4 saisons avec solaire, lithium et chauffage"
+        "Vous voulez une solution 3 ou 4 saisons avec solaire, lithium et chauffage",
+        "Vous êtes ailleurs au Canada et cherchez un atelier capable de cadrer un projet Van Life complet"
       ],
       "processIntro": "Le formulaire ou la première discussion doit clarifier le véhicule, l'année, la longueur, le nombre de voyageurs, l'usage 3 ou 4 saisons, les équipements souhaités, le budget approximatif et la date visée.",
       "process": [
+        "Premier cadrage à distance: province, ville, van, longueur, objectifs, budget et logistique vers Gatineau",
         "Validation du véhicule ou accompagnement avant choix du véhicule",
         "Discussion sur conversion partielle ou complète, voyageurs et usage prévu",
         "Choix des systèmes: solaire, lithium, eau, chauffage, douche, cuisine et rangement",
@@ -245,6 +263,10 @@
         {
           "question": "Affichez-vous des prix fixes?",
           "answer": "Les conversions sont généralement sur soumission, car le coût dépend du véhicule, des systèmes électriques, de l'eau, du chauffage, du mobilier et du niveau de finition."
+        },
+        {
+          "question": "Acceptez-vous des projets Van Life venant de partout au Canada?",
+          "answer": "Oui. Nous pouvons cadrer un projet Van Life à distance pour des clients de partout au Canada. Les travaux sont planifiés sur soumission selon le véhicule, la portée du projet, le budget, l'échéancier et la logistique pour amener le van à l'atelier de Gatineau."
         }
       ]
     },
@@ -256,12 +278,12 @@
       "navLabel": "Solaire & lithium",
       "icon": "fas fa-solar-panel",
       "serviceType": "Installation, fourniture et distribution de solutions solaires pour VR",
-      "seoTitle": "Installation solaire et batteries lithium pour VR à Gatineau | Victron",
-      "seoDescription": "Installation de panneaux solaires, batteries lithium, Victron, MPPT, onduleurs, DC-DC, Shore Power et monitoring pour VR et Van Life à Gatineau.",
+      "seoTitle": "Installation solaire VR au Canada | Batteries lithium et Victron",
+      "seoDescription": "Installation solaire et batteries lithium pour VR au Canada avec atelier à Gatineau: Victron, MPPT, onduleurs, DC-DC, Shore Power et monitoring.",
       "eyebrow": "Solaire VR, autonomie et énergie",
       "opening": "Installation et fourniture de systèmes solaires pour VR avec <strong>produits Victron Energy</strong>.",
       "lead": "Victron Energy, MPPT, batteries lithium, onduleurs, panneaux solaires, DC-DC, recharge par alternateur, Shore Power, monitoring et mise à niveau de systèmes existants.",
-      "intro": "Panneaux, contrôleurs, batteries, onduleurs et surveillance: une solution claire, adaptée à votre véhicule.",
+      "intro": "Panneaux, contrôleurs, batteries, onduleurs et surveillance: une solution claire, adaptée à votre véhicule et à vos voyages au Canada.",
       "heroPromise": "",
       "detailIntro": "Un bon système solaire de VR ne se limite pas à ajouter un panneau sur le toit. Il faut valider la surface disponible, les points d’étanchéité, le passage du câblage, la batterie, le contrôleur, l’onduleur et la façon de surveiller le système. Comme installateur et distributeur de produits Victron Energy, nous pouvons fournir les composantes et les intégrer dans une solution cohérente pour votre véhicule.",
       "highlights": [
@@ -285,7 +307,8 @@
         "Vous voulez alimenter des appareils sans dépendre uniquement du branchement au terrain",
         "Vous préparez une installation avec batteries, contrôleur de charge ou onduleur",
         "Votre système solaire actuel doit être amélioré ou corrigé",
-        "Vous voulez acheter des produits Victron Energy avec une installation adaptée au VR"
+        "Vous voulez acheter des produits Victron Energy avec une installation adaptée au VR",
+        "Vous préparez un voyage longue distance au Canada et voulez valider l'autonomie avant le départ"
       ],
       "processIntro": "Nous avançons par étapes pour éviter les systèmes mal dimensionnés: comprendre votre usage, choisir les composantes, protéger la toiture, installer proprement et valider le fonctionnement.",
       "process": [

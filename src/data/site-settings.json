@@ -22,12 +22,12 @@
     "mapQuery": "Clinique du VR, 11 rue de Granby, Unite 17, Gatineau, Quebec"
   },
   "serviceArea": {
-    "fr": "Gatineau, grande région d’Ottawa, Laurentides, Outaouais",
-    "en": "Gatineau, Ottawa area, Laurentides, Outaouais"
+    "fr": "Canada, Québec, Ontario, Gatineau, Ottawa, Outaouais, Laurentides",
+    "en": "Canada, Quebec, Ontario, Gatineau, Ottawa, Outaouais, Laurentides"
   },
   "sinceYear": "2013",
   "footerDescription": {
-    "fr": "Modification, aménagement, Van Life, solaire, lithium, autonomie, réparation et entretien de VR à Gatineau.",
-    "en": "RV modification, custom builds, Van Life, solar, lithium, off-grid power, repair and maintenance in Gatineau."
+    "fr": "Modification, aménagement, Van Life, solaire, lithium, autonomie, réparation et entretien de VR depuis Gatineau, avec projets sélectionnés partout au Canada.",
+    "en": "RV modification, custom builds, Van Life, solar, lithium, off-grid power, repair and maintenance from Gatineau, with selected projects across Canada."
   }
 }
