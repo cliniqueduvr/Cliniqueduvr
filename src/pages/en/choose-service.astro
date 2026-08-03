@@ -24,6 +24,12 @@ const symptomCards = [
     linkLabel: 'View repair service'
   },
   {
+    title: 'Damaged fiberglass or gelcoat',
+    copy: 'For a crack, chip, impact or gelcoat finish that needs work on an RV or boat, start with the fiberglass and gelcoat page.',
+    href: '/en/services/fiberglass-gelcoat-repair/',
+    linkLabel: 'View fiberglass & gelcoat'
+  },
+  {
     title: 'Before buying or selling',
     copy: 'To clarify an RV’s actual condition before a transaction, inspection is usually the best first step to identify strengths, risks, and useful corrections.',
     href: '/en/services/inspection/',
@@ -31,7 +37,7 @@ const symptomCards = [
   },
   {
     title: 'Custom modification or off-grid upgrade',
-    copy: 'For solar, lithium, Victron, heating, ventilation, storage, interior changes, or a more functional layout, start with the services overview and contact us about the project.',
+    copy: 'For solar, lithium, Victron, Bluetti, heating, ventilation, storage, interior changes, or a more functional layout, start with the services overview and contact us about the project.',
     href: '/en/services/',
     linkLabel: 'View services'
   },
@@ -73,7 +79,7 @@ const breadcrumbs = buildBreadcrumbSchema([
 
 <Layout
   title="Which RV service should you choose in Gatineau | Clinique du VR"
-  description="Choose the right RV service in Gatineau based on visible symptoms and needs: repair, maintenance, solar, lithium, modification, water leaks, or inspection before buying."
+  description="Choose the right RV service in Gatineau based on visible symptoms and needs: repair, fiberglass, gelcoat, maintenance, solar, lithium, modification, water leaks, or inspection before buying."
   lang="en-CA"
   canonicalPath="/en/choose-service/"
   frPath="/choisir-service/"
@@ -95,7 +101,7 @@ const breadcrumbs = buildBreadcrumbSchema([
       <div class="container">
         <div class="section-intro">
           <h2>Start with the right service</h2>
-          <p>When an RV shows more than one need at the same time, it is not always obvious whether you should begin with inspection, maintenance, repair, solar, lithium, or a custom modification. The cards below help point you to the most useful next step for an RV or motorhome.</p>
+          <p>When an RV shows more than one need at the same time, it is not always obvious whether you should begin with inspection, maintenance, repair, fiberglass and gelcoat repair, solar, lithium, or a custom modification. The cards below help point you to the most useful next step for an RV or motorhome.</p>
         </div>
 
         <div class="card-grid">
@@ -118,7 +124,7 @@ const breadcrumbs = buildBreadcrumbSchema([
           {serviceAreas.map((area) => (
             <a class="info-card choice-card" href={area.href}>
               <h3>{area.name}</h3>
-              <p>Common requests include inspection, maintenance, repair, solar, lithium, custom modification, and support before a transaction.</p>
+              <p>Common requests include inspection, maintenance, repair, fiberglass, gelcoat, solar, lithium, custom modification, and support before a transaction.</p>
               <span>View local page</span>
             </a>
           ))}

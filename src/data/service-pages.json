@@ -9,17 +9,17 @@
       "icon": "fas fa-sliders",
       "serviceType": "Modification, amélioration, autonomie énergétique et aménagement de VR",
       "seoTitle": "Modification de VR au Canada | Solaire, lithium et aménagement",
-      "seoDescription": "Modification et aménagement de VR au Canada: projets sur mesure en atelier à Gatineau pour solaire, lithium, Victron, autonomie, confort et intérieur.",
+      "seoDescription": "Modification et aménagement de VR au Canada: projets sur mesure en atelier à Gatineau pour solaire, lithium, Victron, Bluetti, autonomie, confort et intérieur.",
       "eyebrow": "Solaire, lithium, autonomie et projets sur mesure",
       "opening": "Clinique du VR réalise des projets de <strong>modification de VR au Canada</strong>, d'<strong>aménagement intérieur</strong> et d'<strong>autonomie énergétique</strong>, avec cadrage à distance et travaux en atelier à Gatineau selon le mandat.",
-      "lead": "Solaire, lithium, Victron Energy, MPPT, onduleurs, chargeurs, Shore Power, chauffage diesel, chauffe-eau, MaxxAir, climatisation, plomberie, mobilier, rangement, lits, cuisines et projets sur mesure.",
+      "lead": "Solaire, lithium, Victron Energy, Bluetti, MPPT, onduleurs, chargeurs, Shore Power, chauffage diesel, chauffe-eau, MaxxAir, climatisation, plomberie, mobilier, rangement, lits, cuisines et projets sur mesure.",
       "intro": "Chaque projet commence par votre usage réel: camping autonome, longs voyages au Canada, confort 4 saisons, ajout d'équipements, meilleure organisation intérieure ou mise à niveau d'un système existant.",
       "heroPromise": "Parlez-nous de votre projet pour obtenir une solution plus autonome, plus confortable et mieux adaptée à votre VR.",
-      "detailIntro": "Une bonne modification de VR doit respecter la structure, l'électricité, la plomberie, l'étanchéité, l'accès aux composantes, le poids et l'équilibre du véhicule. Nous pouvons cadrer des projets provenant de partout au Canada, puis intégrer en atelier des panneaux solaires, batteries lithium, produits Victron Energy, contrôleurs MPPT, onduleurs, chargeurs, Shore Power, recharge par alternateur, chauffage diesel, chauffe-eau, MaxxAir, climatisation, mobilier, rangement, lits, cuisines et autres améliorations selon le projet.",
+      "detailIntro": "Une bonne modification de VR doit respecter la structure, l'électricité, la plomberie, l'étanchéité, l'accès aux composantes, le poids et l'équilibre du véhicule. Nous pouvons cadrer des projets provenant de partout au Canada, puis intégrer en atelier des panneaux solaires, batteries lithium, produits Victron Energy et Bluetti, contrôleurs MPPT, onduleurs, chargeurs, Shore Power, recharge par alternateur, chauffage diesel, chauffe-eau, MaxxAir, climatisation, mobilier, rangement, lits, cuisines et autres améliorations selon le projet.",
       "highlights": [
         "Projets Canada",
         "Solaire et lithium",
-        "Produits Victron Energy",
+        "Produits Victron Energy et Bluetti",
         "Aménagement intérieur",
         "Projets sur mesure"
       ],
@@ -74,7 +74,7 @@
       ],
       "includedTitle": "Modifications possibles",
       "included": [
-        "Panneaux solaires, contrôleurs MPPT et produits <strong>Victron Energy</strong>",
+        "Panneaux solaires, contrôleurs MPPT et produits <strong>Victron Energy</strong> et <strong>Bluetti</strong>",
         "Batteries <strong>lithium</strong>, onduleurs, chargeurs, DC-DC, recharge par alternateur et Shore Power",
         "Chauffage diesel, chauffe-eau, ventilation MaxxAir, climatisation et confort 3 ou 4 saisons",
         "Plomberie, eau propre, rangement, mobilier, modification de lits, cuisines et aménagement intérieur",
@@ -85,7 +85,7 @@
       "situationsTitle": "Quand demander une modification",
       "situations": [
         "Vous voulez plus d'autonomie sans dépendre uniquement des terrains de camping",
-        "Vous voulez ajouter du solaire, du lithium, un onduleur ou un système Victron Energy",
+        "Vous voulez ajouter du solaire, du lithium, un onduleur ou un système Victron Energy ou Bluetti",
         "Votre intérieur manque de rangement, de confort ou de fonctionnalité",
         "Vous préparez un projet de voyage prolongé, autonome ou 4 saisons",
         "Vous voulez améliorer un système existant plutôt que tout recommencer",
@@ -109,7 +109,7 @@
         },
         {
           "title": "Autonomie énergétique",
-          "text": "Nous pouvons intégrer solaire, lithium, Victron Energy, recharge par alternateur, Shore Power, onduleurs et monitoring dans une solution cohérente."
+          "text": "Nous pouvons intégrer solaire, lithium, Victron Energy, Bluetti, recharge par alternateur, Shore Power, onduleurs et monitoring dans une solution cohérente."
         },
         {
           "title": "Projet évolutif",
@@ -120,7 +120,7 @@
       "faqs": [
         {
           "question": "Pouvez-vous installer un système solaire et lithium complet?",
-          "answer": "Oui. Nous pouvons évaluer le besoin, fournir les composantes et installer un système avec panneaux solaires, batteries lithium, contrôleurs MPPT, onduleurs, chargeurs, DC-DC, Shore Power, monitoring et produits Victron Energy selon le projet."
+          "answer": "Oui. Clinique du VR est distributeur de produits Victron Energy et Bluetti. Nous pouvons évaluer le besoin, fournir les composantes et installer un système avec panneaux solaires, batteries lithium, contrôleurs MPPT, onduleurs, chargeurs, DC-DC, Shore Power, monitoring et produits Victron Energy ou Bluetti selon le projet."
         },
         {
           "question": "Faites-vous des projets sur mesure?",
@@ -278,18 +278,18 @@
       "navLabel": "Solaire & lithium",
       "icon": "fas fa-solar-panel",
       "serviceType": "Installation, fourniture et distribution de solutions solaires pour VR",
-      "seoTitle": "Installation solaire VR au Canada | Batteries lithium et Victron",
-      "seoDescription": "Installation solaire et batteries lithium pour VR au Canada avec atelier à Gatineau: Victron, MPPT, onduleurs, DC-DC, Shore Power et monitoring.",
+      "seoTitle": "Installation solaire VR au Canada | Batteries lithium, Victron et Bluetti",
+      "seoDescription": "Installation solaire et batteries lithium pour VR au Canada avec atelier à Gatineau: Victron, Bluetti, MPPT, onduleurs, DC-DC, Shore Power et monitoring.",
       "eyebrow": "Solaire VR, autonomie et énergie",
-      "opening": "Installation et fourniture de systèmes solaires pour VR avec <strong>produits Victron Energy</strong>.",
-      "lead": "Victron Energy, MPPT, batteries lithium, onduleurs, panneaux solaires, DC-DC, recharge par alternateur, Shore Power, monitoring et mise à niveau de systèmes existants.",
+      "opening": "Installation et fourniture de systèmes solaires pour VR avec <strong>produits Victron Energy</strong> et <strong>Bluetti</strong>.",
+      "lead": "Victron Energy, Bluetti, MPPT, batteries lithium, onduleurs, panneaux solaires, DC-DC, recharge par alternateur, Shore Power, monitoring et mise à niveau de systèmes existants.",
       "intro": "Panneaux, contrôleurs, batteries, onduleurs et surveillance: une solution claire, adaptée à votre véhicule et à vos voyages au Canada.",
       "heroPromise": "",
-      "detailIntro": "Un bon système solaire de VR ne se limite pas à ajouter un panneau sur le toit. Il faut valider la surface disponible, les points d’étanchéité, le passage du câblage, la batterie, le contrôleur, l’onduleur et la façon de surveiller le système. Comme installateur et distributeur de produits Victron Energy, nous pouvons fournir les composantes et les intégrer dans une solution cohérente pour votre véhicule.",
+      "detailIntro": "Un bon système solaire de VR ne se limite pas à ajouter un panneau sur le toit. Il faut valider la surface disponible, les points d’étanchéité, le passage du câblage, la batterie, le contrôleur, l’onduleur et la façon de surveiller le système. Comme installateur et distributeur de produits Victron Energy et Bluetti, nous pouvons fournir les composantes et les intégrer dans une solution cohérente pour votre véhicule.",
       "highlights": [
         "Panneaux solaires",
         "Batteries lithium",
-        "Victron Energy",
+        "Victron Energy et Bluetti",
         "Mise à niveau existante"
       ],
       "includedTitle": "Ce que nous pouvons prendre en charge",
@@ -297,7 +297,7 @@
         "Analyse du besoin énergétique et du niveau d’autonomie souhaité",
         "Vérification de la toiture, des accès et des contraintes de montage",
         "Fourniture de panneaux solaires, contrôleurs, batteries, onduleurs et accessoires compatibles",
-        "Distribution et intégration de produits Victron Energy",
+        "Distribution et intégration de produits Victron Energy et Bluetti",
         "Installation des panneaux, passage du câblage et raccordement selon le projet",
         "Configuration de base, vérification du fonctionnement et explication de l’utilisation"
       ],
@@ -307,14 +307,14 @@
         "Vous voulez alimenter des appareils sans dépendre uniquement du branchement au terrain",
         "Vous préparez une installation avec batteries, contrôleur de charge ou onduleur",
         "Votre système solaire actuel doit être amélioré ou corrigé",
-        "Vous voulez acheter des produits Victron Energy avec une installation adaptée au VR",
+        "Vous voulez acheter des produits Victron Energy ou Bluetti avec une installation adaptée au VR",
         "Vous préparez un voyage longue distance au Canada et voulez valider l'autonomie avant le départ"
       ],
       "processIntro": "Nous avançons par étapes pour éviter les systèmes mal dimensionnés: comprendre votre usage, choisir les composantes, protéger la toiture, installer proprement et valider le fonctionnement.",
       "process": [
         "Discussion sur vos appareils, votre façon de voyager et l’autonomie souhaitée",
         "Évaluation du VR, de la toiture, des accès et des composantes existantes",
-        "Sélection des panneaux, contrôleurs, batteries, onduleurs et produits Victron Energy adaptés",
+        "Sélection des panneaux, contrôleurs, batteries, onduleurs et produits Victron Energy ou Bluetti adaptés",
         "Fourniture des équipements et planification de l’installation",
         "Installation, raccordement, configuration et vérification",
         "Explication du fonctionnement et des points d’entretien à surveiller"
@@ -327,8 +327,8 @@
           "text": "Nous pouvons fournir les équipements, installer les composantes et accompagner la mise en service du système."
         },
         {
-          "title": "Produits Victron Energy",
-          "text": "Nous travaillons avec des produits Victron Energy pour bâtir des systèmes robustes, configurables et faciles à surveiller."
+          "title": "Produits Victron Energy et Bluetti",
+          "text": "Nous travaillons avec des produits Victron Energy et Bluetti pour bâtir des systèmes robustes, configurables et faciles à surveiller."
         },
         {
           "title": "Pensé pour les VR",
@@ -342,8 +342,8 @@
       "faqTitle": "Questions fréquentes sur les panneaux solaires pour VR",
       "faqs": [
         {
-          "question": "Êtes-vous installateur et distributeur de produits Victron Energy?",
-          "answer": "Oui. Nous pouvons fournir des produits Victron Energy et les intégrer dans un système solaire adapté à votre VR."
+          "question": "Êtes-vous installateur et distributeur de produits Victron Energy et Bluetti?",
+          "answer": "Oui. Clinique du VR est distributeur de produits Victron Energy et Bluetti. Nous pouvons fournir les composantes et les intégrer dans un système solaire adapté à votre VR."
         },
         {
           "question": "Pouvez-vous fournir seulement les équipements?",
@@ -493,6 +493,85 @@
         {
           "question": "Faites-vous des réparations d'assurance ou privées?",
           "answer": "Oui. Nous prenons en charge autant les réparations d'<strong>assurance</strong> que les réparations privées, selon la nature du dommage et les besoins du dossier. Vous pouvez voir le détail sur notre page <a href=\"/services/reparation/\">réparation spécialisée de VR</a>."
+        }
+      ]
+    },
+    {
+      "slug": "reparation-fibre-verre-gelcoat",
+      "alternateSlug": "fiberglass-gelcoat-repair",
+      "title": "Réparation de fibre de verre et gelcoat",
+      "h1": "Réparation fibre de verre et gelcoat",
+      "navLabel": "Fibre de verre & gelcoat",
+      "icon": "fas fa-brush",
+      "serviceType": "Réparation de fibre de verre et gelcoat pour VR et bateaux",
+      "seoTitle": "Réparation fibre de verre et gelcoat | VR et bateaux à Gatineau",
+      "seoDescription": "Réparation de fibre de verre et gelcoat pour VR, roulottes, motorisés et bateaux: fissures, impacts, éclats, finition, remise en état et corrections esthétiques.",
+      "eyebrow": "Fibre de verre, gelcoat et finition",
+      "opening": "Clinique du VR offre la <strong>réparation de fibre de verre et gelcoat</strong> pour les <strong>VR</strong>, <strong>roulottes</strong>, <strong>motorisés</strong> et <strong>bateaux</strong> qui présentent des fissures, impacts, éclats ou dommages de finition.",
+      "lead": "Fissures, éclats, impacts, coins abîmés, panneaux endommagés ou finition gelcoat ternie: nous évaluons le dommage, préparons la surface et remettons la pièce en état selon la portée réelle du projet.",
+      "intro": "Le service vise les réparations de fibre de verre et gelcoat sur VR et bateaux, autant pour corriger un dommage visible que pour améliorer la présentation avant la saison, une vente ou une remise à l'eau.",
+      "heroPromise": "L'objectif est de réparer proprement la surface touchée, de protéger le support et d'obtenir une finition cohérente avec le véhicule ou le bateau.",
+      "detailIntro": "La fibre de verre et le gelcoat demandent une préparation sérieuse avant la finition. Une réparation durable commence par la lecture du dommage, le nettoyage, le sablage, la reprise de la zone touchée, puis l'application et la finition adaptées au type de surface.",
+      "highlights": [
+        "VR et bateaux",
+        "Fissures et impacts",
+        "Gelcoat et finition",
+        "Remise en état"
+      ],
+      "includedTitle": "Ce que nous pouvons réparer",
+      "included": [
+        "Fissures, éclats et impacts sur surfaces en <strong>fibre de verre</strong>",
+        "Réparation de panneaux, coins, moulures ou zones abîmées selon l'accès",
+        "Correction de dommages visibles sur VR, roulottes, motorisés et bateaux",
+        "Préparation, sablage, remplissage et finition de la zone touchée",
+        "Réparation ou retouche de <strong>gelcoat</strong> selon la couleur et l'état de la surface",
+        "Remise en état esthétique avant la saison, une vente ou une utilisation prolongée"
+      ],
+      "situationsTitle": "Quand demander ce service",
+      "situations": [
+        "Un panneau de VR, de roulotte ou de bateau est fissuré ou écaillé",
+        "Le gelcoat présente des éclats, rayures profondes ou dommages visibles",
+        "Une zone a été touchée par un impact ou un frottement",
+        "Vous voulez améliorer la présentation avant une vente ou une saison d'utilisation",
+        "Vous voulez faire évaluer si la réparation est locale ou plus étendue"
+      ],
+      "processIntro": "Nous commençons par comprendre le support, l'étendue du dommage et le résultat attendu. La méthode dépend ensuite de la profondeur de la fissure, de l'accès à la zone et de la finition recherchée.",
+      "process": [
+        "Lecture du dommage, photos ou inspection de la zone touchée",
+        "Validation du type de surface, de la profondeur et de l'accès",
+        "Préparation de la surface: nettoyage, sablage et protection des zones voisines",
+        "Réparation de la fibre de verre ou correction du gelcoat selon le cas",
+        "Finition, vérification visuelle et recommandations d'entretien"
+      ],
+      "whyChooseTitle": "Pourquoi choisir Clinique du VR pour la fibre de verre et le gelcoat?",
+      "whyChooseIntro": "Une bonne réparation doit tenir compte du support, de l'exposition aux intempéries, de la finition existante et de l'usage réel du véhicule ou du bateau.",
+      "whyChoose": [
+        {
+          "title": "Approche adaptée au support",
+          "text": "Nous évaluons la surface avant d'intervenir pour choisir une réparation proportionnée au dommage."
+        },
+        {
+          "title": "VR et bateaux",
+          "text": "Nous pouvons travailler sur les surfaces en fibre de verre de VR, roulottes, motorisés et bateaux selon la faisabilité du projet."
+        },
+        {
+          "title": "Finition cohérente",
+          "text": "La préparation et la finition sont pensées pour obtenir un résultat propre et durable, sans masquer un problème plus important."
+        }
+      ],
+      "faqTitle": "Questions fréquentes sur la réparation fibre de verre et gelcoat",
+      "faqs": [
+        {
+          "question": "Réparez-vous la fibre de verre sur les bateaux aussi?",
+          "answer": "Oui. Le service couvre la réparation de fibre de verre et gelcoat pour les VR, roulottes, motorisés et bateaux, selon l'état de la surface et l'accès à la zone."
+        },
+        {
+          "question": "Pouvez-vous réparer une fissure ou un impact local?",
+          "answer": "Oui. Nous pouvons évaluer la fissure, l'impact ou l'éclat pour déterminer si une réparation locale est suffisante ou si la zone demande une reprise plus large."
+        },
+        {
+          "question": "Le gelcoat peut-il être retouché?",
+          "answer": "Oui, selon la couleur, l'âge de la surface et le niveau de finition attendu. Nous validons ces éléments avant de confirmer la meilleure approche."
         }
       ]
     },

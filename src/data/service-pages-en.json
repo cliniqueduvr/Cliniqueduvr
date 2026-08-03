@@ -9,17 +9,17 @@
       "icon": "fas fa-sliders",
       "serviceType": "RV modification, custom interior upgrades and energy autonomy",
       "seoTitle": "RV Modification in Canada | Solar, Lithium and Custom Builds",
-      "seoDescription": "RV modification and custom builds in Canada with workshop planning in Gatineau: solar, lithium, Victron, heating, water, storage and interior upgrades.",
+      "seoDescription": "RV modification and custom builds in Canada with workshop planning in Gatineau: solar, lithium, Victron, Bluetti, heating, water, storage and interior upgrades.",
       "eyebrow": "Solar, lithium, autonomy and custom projects",
       "opening": "Clinique du VR handles <strong>RV modification in Canada</strong>, <strong>custom interior upgrades</strong> and <strong>energy autonomy</strong> projects, with remote project framing and workshop work in Gatineau depending on the assignment.",
-      "lead": "Solar, lithium, Victron Energy, MPPT, inverters, chargers, shore power, diesel heating, water heaters, MaxxAir ventilation, air conditioning, plumbing, storage, beds, kitchens and custom RV upgrades.",
+      "lead": "Solar, lithium, Victron Energy, Bluetti, MPPT, inverters, chargers, shore power, diesel heating, water heaters, MaxxAir ventilation, air conditioning, plumbing, storage, beds, kitchens and custom RV upgrades.",
       "intro": "Each project starts with real usage: off-grid camping, longer travel across Canada, 3- or 4-season comfort, added equipment, better interior organization or an upgrade to an existing system.",
       "heroPromise": "Tell us about your project so we can frame a more autonomous, more comfortable and better adapted RV setup.",
-      "detailIntro": "A good RV modification has to respect structure, electrical systems, plumbing, watertightness, component access, weight and vehicle balance. We can frame projects from across Canada, then integrate solar panels, lithium batteries, Victron Energy products, MPPT controllers, inverters, chargers, shore power, alternator charging, diesel heating, water heaters, MaxxAir ventilation, air conditioning, furniture, storage, beds, kitchens and other upgrades in the workshop depending on the project.",
+      "detailIntro": "A good RV modification has to respect structure, electrical systems, plumbing, watertightness, component access, weight and vehicle balance. We can frame projects from across Canada, then integrate solar panels, lithium batteries, Victron Energy and Bluetti products, MPPT controllers, inverters, chargers, shore power, alternator charging, diesel heating, water heaters, MaxxAir ventilation, air conditioning, furniture, storage, beds, kitchens and other upgrades in the workshop depending on the project.",
       "highlights": [
         "Canada-wide projects",
         "Solar and lithium",
-        "Victron Energy products",
+        "Victron Energy and Bluetti products",
         "Interior upgrades",
         "Custom projects"
       ],
@@ -74,7 +74,7 @@
       ],
       "includedTitle": "Possible modifications",
       "included": [
-        "Solar panels, MPPT controllers and <strong>Victron Energy</strong> products",
+        "Solar panels, MPPT controllers and <strong>Victron Energy</strong> and <strong>Bluetti</strong> products",
         "<strong>Lithium</strong> batteries, inverters, chargers, DC-DC, alternator charging and shore power",
         "Diesel heating, water heaters, MaxxAir ventilation, air conditioning and 3- or 4-season comfort",
         "Plumbing, fresh water, storage, furniture, bed changes, kitchens and interior upgrades",
@@ -84,7 +84,7 @@
       "situationsTitle": "When to ask for an RV modification",
       "situations": [
         "You want more autonomy without relying only on campgrounds",
-        "You want solar, lithium, an inverter or a Victron Energy system",
+        "You want solar, lithium, an inverter or a Victron Energy or Bluetti system",
         "Your interior lacks storage, comfort or functionality",
         "You are preparing for longer, off-grid or 4-season travel",
         "You want to improve an existing system instead of starting over",
@@ -108,7 +108,7 @@
         },
         {
           "title": "Energy autonomy",
-          "text": "We can integrate solar, lithium, Victron Energy, alternator charging, shore power, inverters and monitoring into one coherent setup."
+          "text": "We can integrate solar, lithium, Victron Energy, Bluetti, alternator charging, shore power, inverters and monitoring into one coherent setup."
         },
         {
           "title": "Scalable project",
@@ -119,7 +119,7 @@
       "faqs": [
         {
           "question": "Can you install a complete solar and lithium system?",
-          "answer": "Yes. We can evaluate the need, supply components and install a system with solar panels, lithium batteries, MPPT controllers, inverters, chargers, DC-DC, shore power, monitoring and Victron Energy products depending on the project."
+          "answer": "Yes. We are a distributor of Victron Energy and Bluetti products. We can evaluate the need, supply components and install a system with solar panels, lithium batteries, MPPT controllers, inverters, chargers, DC-DC, shore power, monitoring and Victron Energy or Bluetti products depending on the project."
         },
         {
           "question": "Do you handle custom projects?",
@@ -513,6 +513,85 @@
       ]
     },
     {
+      "slug": "fiberglass-gelcoat-repair",
+      "alternateSlug": "reparation-fibre-verre-gelcoat",
+      "title": "Fiberglass and Gelcoat Repair",
+      "h1": "Fiberglass and gelcoat repair",
+      "navLabel": "Fiberglass & gelcoat",
+      "icon": "fas fa-brush",
+      "serviceType": "Fiberglass and gelcoat repair for RVs and boats",
+      "seoTitle": "Fiberglass and Gelcoat Repair | RVs and Boats in Gatineau",
+      "seoDescription": "Fiberglass and gelcoat repair for RVs, travel trailers, motorhomes and boats: cracks, impacts, chips, finish repair, restoration and cosmetic corrections.",
+      "eyebrow": "Fiberglass, gelcoat and finish",
+      "opening": "Clinique du VR offers <strong>fiberglass and gelcoat repair</strong> for <strong>RVs</strong>, <strong>travel trailers</strong>, <strong>motorhomes</strong> and <strong>boats</strong> with cracks, impacts, chips or finish damage.",
+      "lead": "Cracks, chips, impacts, damaged corners, affected panels or tired gelcoat finish: we assess the damage, prepare the surface and restore the area based on the real scope of the project.",
+      "intro": "This service covers fiberglass and gelcoat repairs on RVs and boats, whether the goal is to correct visible damage or improve presentation before the season, a sale or launch.",
+      "heroPromise": "The goal is to repair the affected surface cleanly, protect the substrate and achieve a finish that fits the RV or boat.",
+      "detailIntro": "Fiberglass and gelcoat require serious preparation before finishing. A durable repair starts with reading the damage, cleaning, sanding, rebuilding the affected area, then applying and finishing the surface based on the material involved.",
+      "highlights": [
+        "RVs and boats",
+        "Cracks and impacts",
+        "Gelcoat and finish",
+        "Restoration"
+      ],
+      "includedTitle": "What we can repair",
+      "included": [
+        "Cracks, chips and impacts on <strong>fiberglass</strong> surfaces",
+        "Repair of panels, corners, mouldings or damaged areas depending on access",
+        "Visible damage correction on RVs, travel trailers, motorhomes and boats",
+        "Surface preparation, sanding, filling and finishing of the affected area",
+        "<strong>Gelcoat</strong> repair or touch-up depending on colour and surface condition",
+        "Cosmetic restoration before the season, a sale or extended use"
+      ],
+      "situationsTitle": "When to ask for this service",
+      "situations": [
+        "An RV, travel trailer or boat panel is cracked or chipped",
+        "The gelcoat has chips, deep scratches or visible damage",
+        "An area was affected by an impact or rubbing",
+        "You want to improve presentation before a sale or season of use",
+        "You want to know whether the repair can stay local or needs a wider restoration"
+      ],
+      "processIntro": "We start by understanding the substrate, the extent of the damage and the finish you expect. The method then depends on crack depth, access to the area and the finish required.",
+      "process": [
+        "Damage review using photos or inspection of the affected area",
+        "Validation of surface type, depth and access",
+        "Surface preparation: cleaning, sanding and protection of adjacent areas",
+        "Fiberglass repair or gelcoat correction depending on the case",
+        "Finishing, visual verification and maintenance recommendations"
+      ],
+      "whyChooseTitle": "Why choose Clinique du VR for fiberglass and gelcoat?",
+      "whyChooseIntro": "A good repair has to account for the substrate, weather exposure, existing finish and the real use of the vehicle or boat.",
+      "whyChoose": [
+        {
+          "title": "Surface-specific approach",
+          "text": "We assess the surface before repair so the work is proportional to the actual damage."
+        },
+        {
+          "title": "RVs and boats",
+          "text": "We can work on fiberglass surfaces for RVs, travel trailers, motorhomes and boats depending on project feasibility."
+        },
+        {
+          "title": "Coherent finish",
+          "text": "Preparation and finishing are handled to produce a clean, durable result without hiding a larger issue."
+        }
+      ],
+      "faqTitle": "Frequently asked questions about fiberglass and gelcoat repair",
+      "faqs": [
+        {
+          "question": "Do you repair fiberglass on boats too?",
+          "answer": "Yes. This service covers fiberglass and gelcoat repair for RVs, travel trailers, motorhomes and boats, depending on surface condition and access to the area."
+        },
+        {
+          "question": "Can you repair a local crack or impact?",
+          "answer": "Yes. We can assess the crack, impact or chip to determine whether a local repair is enough or whether the area needs broader restoration."
+        },
+        {
+          "question": "Can gelcoat be touched up?",
+          "answer": "Yes, depending on colour, surface age and expected finish level. We validate those points before confirming the best approach."
+        }
+      ]
+    },
+    {
       "slug": "solar-panel-installation",
       "alternateSlug": "installation-panneaux-solaires",
       "title": "RV Solar and Lithium Installation",
@@ -520,18 +599,18 @@
       "navLabel": "Solar and lithium",
       "icon": "fas fa-solar-panel",
       "serviceType": "RV solar system installation, supply and distribution",
-      "seoTitle": "RV Solar Installation in Canada | Lithium Batteries and Victron",
-      "seoDescription": "RV solar and lithium battery installation in Canada with workshop planning in Gatineau: Victron, MPPT, inverters, DC-DC, shore power and monitoring.",
+      "seoTitle": "RV Solar Installation in Canada | Lithium Batteries, Victron and Bluetti",
+      "seoDescription": "RV solar and lithium battery installation in Canada with workshop planning in Gatineau: Victron, Bluetti, MPPT, inverters, DC-DC, shore power and monitoring.",
       "eyebrow": "RV solar, autonomy and energy",
-      "opening": "Solar system installation and supply for RVs with <strong>Victron Energy products</strong>.",
-      "lead": "Victron Energy, MPPT, lithium batteries, inverters, solar panels, DC-DC, alternator charging, shore power, monitoring and upgrades to existing systems.",
+      "opening": "Solar system installation and supply for RVs with <strong>Victron Energy</strong> and <strong>Bluetti</strong> products.",
+      "lead": "Victron Energy, Bluetti, MPPT, lithium batteries, inverters, solar panels, DC-DC, alternator charging, shore power, monitoring and upgrades to existing systems.",
       "intro": "Panels, controllers, batteries, inverters and monitoring: a clear setup adapted to your vehicle and travel across Canada.",
       "heroPromise": "",
-      "detailIntro": "A good RV solar system is not just about adding a panel to the roof. Roof space, sealing points, cable routing, battery capacity, controller, inverter and monitoring all have to be considered. As an installer and distributor of Victron Energy products, we can supply the components and integrate them into a coherent system for your vehicle.",
+      "detailIntro": "A good RV solar system is not just about adding a panel to the roof. Roof space, sealing points, cable routing, battery capacity, controller, inverter and monitoring all have to be considered. As an installer and distributor of Victron Energy and Bluetti products, we can supply the components and integrate them into a coherent system for your vehicle.",
       "highlights": [
         "Solar panels",
         "Lithium batteries",
-        "Victron Energy products",
+        "Victron Energy and Bluetti products",
         "Existing system upgrades"
       ],
       "includedTitle": "What we can handle",
@@ -539,7 +618,7 @@
         "Review of the energy need and autonomy target",
         "Roof, access and mounting constraint verification",
         "Supply of solar panels, controllers, batteries, inverters and compatible accessories",
-        "Distribution and integration of Victron Energy products",
+        "Distribution and integration of Victron Energy and Bluetti products",
         "Panel installation, cable routing and connection based on the project",
         "Basic configuration, functional verification and user guidance"
       ],
@@ -549,14 +628,14 @@
         "You want to power equipment without relying only on campground hookup",
         "You are planning a system with batteries, charge controller or inverter",
         "Your existing solar system needs an upgrade or correction",
-        "You want to buy Victron Energy products with an RV-ready installation",
+        "You want to buy Victron Energy or Bluetti products with an RV-ready installation",
         "You are preparing long-distance travel across Canada and want to validate autonomy before departure"
       ],
       "processIntro": "We work step by step to avoid poorly sized systems: understand your usage, choose components, protect the roof, install cleanly and verify operation.",
       "process": [
         "Discussion about your equipment, travel habits and autonomy target",
         "Review of the RV, roof, access points and existing components",
-        "Selection of solar panels, controllers, batteries, inverters and Victron Energy products",
+        "Selection of solar panels, controllers, batteries, inverters and Victron Energy or Bluetti products",
         "Equipment supply and installation planning",
         "Installation, connection, configuration and verification",
         "Explanation of system operation and maintenance points to monitor"
@@ -569,8 +648,8 @@
           "text": "We can supply the equipment, install the components and support system commissioning."
         },
         {
-          "title": "Victron Energy products",
-          "text": "We work with Victron Energy products to build robust, configurable and easy-to-monitor systems."
+          "title": "Victron Energy and Bluetti products",
+          "text": "We work with Victron Energy and Bluetti products to build robust, configurable and easy-to-monitor systems."
         },
         {
           "title": "RV-specific thinking",
@@ -584,8 +663,8 @@
       "faqTitle": "Frequently asked questions about RV solar panels",
       "faqs": [
         {
-          "question": "Are you an installer and distributor of Victron Energy products?",
-          "answer": "Yes. We can supply Victron Energy products and integrate them into a solar system adapted to your RV."
+          "question": "Are you an installer and distributor of Victron Energy and Bluetti products?",
+          "answer": "Yes. We are a distributor of Victron Energy and Bluetti products. We can supply the components and integrate them into a solar system adapted to your RV."
         },
         {
           "question": "Can you supply only the equipment?",

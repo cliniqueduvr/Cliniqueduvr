@@ -35,6 +35,7 @@ function getAlternatePath(pathname: string, targetLang: 'fr' | 'en') {
     '/ressources/infiltration-eau-vr/': '/en/resources/rv-water-intrusion/',
     '/ressources/entretien-vr-deux-fois-par-an/': '/en/resources/twice-yearly-rv-maintenance/',
     '/ressources/installation-panneau-solaire-vr/': '/en/resources/rv-solar-panel-installation/',
+    '/ressources/victron-bluetti-autonomie-sans-propane/': '/en/resources/victron-bluetti-propane-free-rv/',
     '/services/': '/en/services/',
     '/services/rexoseal/': '/en/services/maintenance/',
     '/zones-desservies/': '/en/service-areas/',
@@ -51,6 +52,7 @@ function getAlternatePath(pathname: string, targetLang: 'fr' | 'en') {
     '/en/resources/rv-water-intrusion/': '/ressources/infiltration-eau-vr/',
     '/en/resources/twice-yearly-rv-maintenance/': '/ressources/entretien-vr-deux-fois-par-an/',
     '/en/resources/rv-solar-panel-installation/': '/ressources/installation-panneau-solaire-vr/',
+    '/en/resources/victron-bluetti-propane-free-rv/': '/ressources/victron-bluetti-autonomie-sans-propane/',
     '/en/site-map/': '/plan-du-site/',
     '/en/privacy/': '/privacy/',
     '/en/realisations/': '/realisations/',
@@ -102,6 +104,7 @@ const frenchServiceOrder = [
   'van-life',
   'installation-panneaux-solaires',
   'reparation',
+  'reparation-fibre-verre-gelcoat',
   'entretien',
   'inspection',
   'rexoseal'
@@ -111,6 +114,7 @@ const englishServiceOrder = [
   'van-life-conversion',
   'solar-panel-installation',
   'repair',
+  'fiberglass-gelcoat-repair',
   'maintenance',
   'inspection'
 ];
@@ -132,12 +136,14 @@ const resourceMenuItems = isEnglish
   ? [
       { label: 'Water intrusion', href: '/en/resources/rv-water-intrusion/', active: currentPath === '/en/resources/rv-water-intrusion/' },
       { label: 'Recommended maintenance', href: '/en/resources/twice-yearly-rv-maintenance/', active: currentPath === '/en/resources/twice-yearly-rv-maintenance/' },
-      { label: 'RV solar panels', href: '/en/resources/rv-solar-panel-installation/', active: currentPath === '/en/resources/rv-solar-panel-installation/' }
+      { label: 'RV solar panels', href: '/en/resources/rv-solar-panel-installation/', active: currentPath === '/en/resources/rv-solar-panel-installation/' },
+      { label: 'Propane-free RV', href: '/en/resources/victron-bluetti-propane-free-rv/', active: currentPath === '/en/resources/victron-bluetti-propane-free-rv/' }
     ]
   : [
       { label: "Infiltration d'eau", href: '/ressources/infiltration-eau-vr/', active: currentPath === '/ressources/infiltration-eau-vr/' },
       { label: 'Entretien recommandé', href: '/ressources/entretien-vr-deux-fois-par-an/', active: currentPath === '/ressources/entretien-vr-deux-fois-par-an/' },
-      { label: 'Panneau solaire VR', href: '/ressources/installation-panneau-solaire-vr/', active: currentPath === '/ressources/installation-panneau-solaire-vr/' }
+      { label: 'Panneau solaire VR', href: '/ressources/installation-panneau-solaire-vr/', active: currentPath === '/ressources/installation-panneau-solaire-vr/' },
+      { label: 'VR sans propane', href: '/ressources/victron-bluetti-autonomie-sans-propane/', active: currentPath === '/ressources/victron-bluetti-autonomie-sans-propane/' }
     ];
 const navItems = isEnglish
   ? [

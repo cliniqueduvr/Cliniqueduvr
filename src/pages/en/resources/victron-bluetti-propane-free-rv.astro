@@ -1,0 +1,197 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema, buildWebSiteSchema } from '../../../lib/seo';
+import siteSettings from '../../../data/site-settings.json';
+
+const title = 'Victron and Bluetti for a propane-free RV';
+const description = 'Practical guide to how Victron Energy and Bluetti can help reduce or eliminate propane in an RV with solar, lithium batteries, inverters, charging and energy monitoring.';
+const faqs = [
+  {
+    question: 'Can an RV be 100% autonomous without propane?',
+    answer: 'Yes, for some use cases, but the system has to be sized carefully. Cooking, heating, hot water, refrigeration, air conditioning and the season all change how much energy is required.'
+  },
+  {
+    question: 'How do Victron Energy and Bluetti help in a propane-free project?',
+    answer: 'Victron Energy is often used for an integrated, configurable RV power system. Bluetti can help with portable batteries, backup power or simpler energy stations depending on the project. Both can reduce propane dependence when the setup is properly selected.'
+  },
+  {
+    question: 'What components should be planned?',
+    answer: 'A project usually involves lithium batteries, solar panels, an MPPT controller, inverter, alternator or DC-DC charging, shore power charging, electrical protection, monitoring and appliances suited for electric use.'
+  }
+];
+const schemas = [
+  buildWebSiteSchema(),
+  buildArticleSchema({
+    headline: title,
+    description,
+    path: '/en/resources/victron-bluetti-propane-free-rv/'
+  }),
+  buildFAQSchema(faqs),
+  buildBreadcrumbSchema([
+    { name: 'Home', path: '/en/' },
+    { name: 'Resources' },
+    { name: 'Propane-free RV autonomy' }
+  ])
+];
+---
+
+<Layout
+  title={`${title} | Clinique du VR`}
+  description={description}
+  lang="en-CA"
+  canonicalPath="/en/resources/victron-bluetti-propane-free-rv/"
+  frPath="/ressources/victron-bluetti-autonomie-sans-propane/"
+  enPath="/en/resources/victron-bluetti-propane-free-rv/"
+  schemas={schemas}
+  ogType="article"
+>
+  <Header lang="en" />
+
+  <main>
+    <section class="interior-hero">
+      <div class="container interior-hero-grid">
+        <div class="interior-hero-copy">
+          <p class="interior-eyebrow">Practical resource</p>
+          <h1>Victron and Bluetti for a propane-free RV</h1>
+          <p class="interior-lead">A propane-free project can improve autonomy, usability and perceived safety, but it has to be sized around real power consumption.</p>
+          <div class="hero-badges">
+            <span>Solar and lithium</span>
+            <span>Electric cooking</span>
+            <span>Charging and monitoring</span>
+          </div>
+        </div>
+
+        <aside class="interior-hero-card">
+          <div class="interior-hero-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h2>This guide clarifies</h2>
+          <ul class="hero-checklist">
+            <li>How to replace some propane uses</li>
+            <li>The role of Victron Energy and Bluetti</li>
+            <li>The limits of 100% electric autonomy</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="interior-section">
+      <div class="container interior-body-grid">
+        <article class="interior-content-main">
+          <section class="interior-card">
+            <h2>Why aim for a propane-free RV</h2>
+            <p class="interior-copy">In an RV, propane is often used for cooking, heating, hot water and sometimes refrigeration. Replacing those uses with a well-planned electrical system can simplify what you need to manage, reduce propane refill stops and make the vehicle more consistent for off-grid travel.</p>
+            <p class="interior-copy">The goal is not just to add a large battery. Appliances, travel habits, season, cloudy days, driving recharge and comfort expectations all have to be considered.</p>
+          </section>
+
+          <section class="interior-card interior-card-alt">
+            <h2>How Victron Energy can help</h2>
+            <p class="interior-copy">Victron Energy is useful for building an integrated power system: lithium batteries, MPPT solar controller, inverter-charger, alternator charging, shore power, electrical distribution and monitoring. The advantage is a coherent system that can be monitored and adapted to how the RV is actually used.</p>
+            <ul>
+              <li>Convert battery power to run 120 V appliances.</li>
+              <li>Recharge batteries with solar, driving or shore power.</li>
+              <li>Monitor consumption, battery state and charging.</li>
+              <li>Plan a durable installation with proper protection and wiring.</li>
+            </ul>
+          </section>
+
+          <section class="interior-card">
+            <h2>How Bluetti can help</h2>
+            <p class="interior-copy">Bluetti can be relevant for projects using portable batteries, power stations, backup power or a simpler energy solution. Depending on the vehicle, this equipment can power targeted appliances, act as a mobile reserve or complement an existing solar setup.</p>
+            <p class="interior-copy">It is not always the right choice to replace everything in a larger RV, but it can work well for a clear need: remote work, small appliances, charging, backup or a progressive autonomy upgrade.</p>
+          </section>
+
+          <section class="interior-card interior-card-alt">
+            <h2>What has to replace propane</h2>
+            <ul>
+              <li><strong>Cooking:</strong> induction cooktop, electric oven or efficient small appliances.</li>
+              <li><strong>Refrigeration:</strong> 12 V fridge or suitable compressor appliance.</li>
+              <li><strong>Hot water:</strong> electric water heater or hybrid solution depending on the vehicle.</li>
+              <li><strong>Heating:</strong> electric, diesel or another approach based on season and insulation.</li>
+              <li><strong>Charging:</strong> solar, alternator, DC-DC, shore power and monitoring to avoid surprises.</li>
+            </ul>
+          </section>
+
+          <section class="interior-card">
+            <h2>The critical point: heating and air conditioning</h2>
+            <p class="interior-copy">Cooking and small appliances are often easier to electrify. Heating and air conditioning require far more energy. An RV can aim for very high autonomy without propane, but a 100% autonomous promise always has to be checked against insulation, weather, stay duration and charging capacity.</p>
+            <p class="interior-copy">For four-season use or long periods without hookups, sizing becomes essential. That is where a power-consumption review prevents buying components that are too small or poorly combined.</p>
+          </section>
+
+          <section class="interior-card interior-card-alt">
+            <h2>Questions to answer before buying</h2>
+            <ul>
+              <li>How many days do you want to stay without hookups?</li>
+              <li>Which appliances need to run every day?</li>
+              <li>Do you want cooking, hot water and cabin heat without propane?</li>
+              <li>Does the vehicle drive often enough to recharge from the alternator?</li>
+              <li>Does the roof allow enough solar panels?</li>
+              <li>Is the budget aimed at a complete or progressive solution?</li>
+            </ul>
+          </section>
+
+          <section class="interior-card">
+            <h2>Autonomy should be sized, not guessed</h2>
+            <p class="interior-copy">Clinique du VR can help evaluate consumption, choose between a Victron Energy, Bluetti or hybrid approach, supply components and plan the installation. The goal is to reduce or eliminate propane with a clear, realistic system adapted to the way you travel.</p>
+          </section>
+
+          <section class="interior-card interior-card-alt">
+            <h2>Frequently asked questions</h2>
+            <div class="interior-faq-list">
+              {faqs.map((item) => (
+                <details class="interior-faq-item">
+                  <summary><h3>{item.question}</h3></summary>
+                  <p set:html={item.answer} />
+                </details>
+              ))}
+            </div>
+          </section>
+        </article>
+
+        <aside class="interior-side-panel">
+          <div class="interior-side-card interior-side-card-primary">
+            <h3>Victron or Bluetti project</h3>
+            <p>We can help evaluate consumption, select components and plan a more autonomous installation.</p>
+            <a class="interior-side-button" href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>
+          </div>
+
+          <div class="interior-side-card">
+            <h3>Related services</h3>
+            <nav class="interior-service-nav" aria-label="Related services">
+              <a href="/en/services/solar-panel-installation/"><i class="fas fa-solar-panel"></i><span>Solar and lithium</span></a>
+              <a href="/en/services/rv-modification-custom-builds/"><i class="fas fa-sliders"></i><span>Custom modifications</span></a>
+              <a href="/en/store/"><i class="fas fa-store"></i><span>Store</span></a>
+              <a href="/en/contact/"><i class="fas fa-message"></i><span>Contact</span></a>
+            </nav>
+          </div>
+
+          <div class="interior-side-card">
+            <h3>Also read</h3>
+            <nav class="interior-service-nav" aria-label="Related resources">
+              <a href="/en/resources/rv-solar-panel-installation/"><i class="fas fa-solar-panel"></i><span>RV solar panels</span></a>
+              <a href="/en/resources/rv-water-intrusion/"><i class="fas fa-droplet"></i><span>Water intrusion</span></a>
+            </nav>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang="en" />
+</Layout>
+
+<style>
+  .interior-hero-copy h1 { max-width: 15ch; }
+  .interior-lead :global(strong) { color: #ffe98a !important; text-shadow: 0 1px 10px rgba(0, 0, 0, 0.18); }
+  .hero-badges { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1.5rem; }
+  .hero-badges span { display: inline-flex; align-items: center; min-height: 44px; padding: 0.75rem 1rem; border-radius: 14px; background: var(--brand-gold); color: var(--brand-navy-dark); font-weight: 700; box-shadow: 0 10px 18px rgba(14, 31, 49, 0.14); }
+  .hero-checklist { display: grid; gap: 0.65rem; padding-left: 1.2rem; color: var(--brand-muted); }
+  .interior-card ul { display: grid; gap: 0.85rem; padding-left: 1.2rem; color: var(--brand-ink); }
+  .interior-card li::marker, .hero-checklist li::marker { color: var(--brand-green); font-weight: 700; }
+  @media (max-width: 768px) {
+    .hero-badges { gap: 0.55rem; }
+    .hero-badges span { min-height: 38px; padding: 0.55rem 0.75rem; border-radius: 12px; font-size: 0.88rem; }
+  }
+</style>

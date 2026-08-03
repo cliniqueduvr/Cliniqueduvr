@@ -12,6 +12,7 @@ const serviceOrder = [
   'van-life',
   'installation-panneaux-solaires',
   'reparation',
+  'reparation-fibre-verre-gelcoat',
   'entretien',
   'inspection',
   'rexoseal'
@@ -49,7 +50,7 @@ const serviceAreas = [
 const serviceFaqs = [
   {
     question: 'Comment choisir le bon service pour mon VR?',
-    answer: "Le bon service dépend surtout de l'état réel du véhicule. Si vous voyez des signes d'infiltration, de joints fatigués, de dommages intérieurs, un besoin solaire ou si vous préparez un achat ou une vente, nous pouvons vous orienter vers l'<a href=\"/services/inspection/\">inspection</a>, l'<a href=\"/services/entretien/\">entretien</a>, la <a href=\"/services/reparation/\">réparation</a>, les <a href=\"/services/installation-panneaux-solaires/\">panneaux solaires</a> ou la <a href=\"/services/vente-achat/\">vente et achat</a> selon le besoin."
+    answer: "Le bon service dépend surtout de l'état réel du véhicule. Si vous voyez des signes d'infiltration, de joints fatigués, de dommages intérieurs, un besoin solaire, un dommage de fibre de verre ou de gelcoat, ou si vous préparez un achat ou une vente, nous pouvons vous orienter vers l'<a href=\"/services/inspection/\">inspection</a>, l'<a href=\"/services/entretien/\">entretien</a>, la <a href=\"/services/reparation/\">réparation</a>, la <a href=\"/services/reparation-fibre-verre-gelcoat/\">réparation fibre de verre et gelcoat</a>, les <a href=\"/services/installation-panneaux-solaires/\">panneaux solaires</a> ou la <a href=\"/services/vente-achat/\">vente et achat</a> selon le besoin."
   },
   {
     question: 'Travaillez-vous seulement à Gatineau?',
@@ -61,7 +62,7 @@ const serviceFaqs = [
   }
 ];
 const quickSteps = [
-  "Choisissez d'abord entre modification, Van Life, solaire ou réparation.",
+  "Choisissez d'abord entre modification, Van Life, solaire, fibre de verre ou réparation.",
   'Ouvrez ensuite seulement le service ou la zone qui correspond à votre situation.',
   "Utilisez l'inspection comme point de départ pour un achat, une vente ou un doute."
 ];
@@ -76,11 +77,15 @@ const priorityServiceSearches = [
   },
   {
     title: 'Installation solaire VR Canada',
-    body: "Panneaux solaires, batteries lithium, produits Victron Energy, MPPT, onduleurs et mise à niveau pour les voyages longue distance."
+    body: "Panneaux solaires, batteries lithium, produits Victron Energy et Bluetti, MPPT, onduleurs et mise à niveau pour les voyages longue distance."
   },
   {
     title: 'Réparation infiltration VR Laurentides',
     body: "Diagnostic de fuite, toiture, membrane, joints, murs, plancher et remise en état après dommage d'eau."
+  },
+  {
+    title: 'Réparation fibre de verre et gelcoat',
+    body: "Réparation de fissures, impacts, éclats et finition gelcoat pour VR, roulottes, motorisés et bateaux."
   }
 ];
 const breadcrumbs = buildBreadcrumbSchema([
@@ -89,7 +94,7 @@ const breadcrumbs = buildBreadcrumbSchema([
 ]);
 ---
 
-<Layout title="Services VR au Canada | Modification, Van Life, solaire et réparation" description="Services VR depuis Gatineau avec projets sélectionnés au Canada: modification, aménagement, Van Life, solaire, lithium, autonomie, toiture, infiltration, entretien et réparation." canonicalPath="/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs, buildFAQSchema(serviceFaqs)]}>
+<Layout title="Services VR au Canada | Modification, Van Life, solaire et réparation" description="Services VR depuis Gatineau avec projets sélectionnés au Canada: modification, aménagement, Van Life, solaire, lithium, autonomie, fibre de verre, gelcoat, toiture, infiltration, entretien et réparation." canonicalPath="/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs, buildFAQSchema(serviceFaqs)]}>
   <Header />
 
   <main>
@@ -97,7 +102,7 @@ const breadcrumbs = buildBreadcrumbSchema([
       <div class="container">
         <p class="eyebrow">Modification • Van Life • Réparation</p>
         <h1>Nos Services</h1>
-        <p>Modification, aménagement, solaire, lithium, conversion Van Life, toiture, infiltration, entretien et réparation selon votre véhicule, votre province et votre façon de voyager.</p>
+        <p>Modification, aménagement, solaire, lithium, conversion Van Life, fibre de verre, gelcoat, toiture, infiltration, entretien et réparation selon votre véhicule, votre province et votre façon de voyager.</p>
       </div>
     </section>
 
@@ -132,11 +137,11 @@ const breadcrumbs = buildBreadcrumbSchema([
             <div class="seo-columns">
               <div class="info-card">
                 <h2>Un service adapté à votre situation</h2>
-              <p>Que vous soyez en projet d'autonomie, d'aménagement Van Life, de mise à niveau solaire ou en pleine réparation, nous vous orientons vers le bon service selon l'état réel du véhicule, votre localisation et la logistique vers l'atelier.</p>
+              <p>Que vous soyez en projet d'autonomie, d'aménagement Van Life, de mise à niveau solaire, de réparation fibre de verre et gelcoat ou en pleine réparation, nous vous orientons vers le bon service selon l'état réel du véhicule, votre localisation et la logistique vers l'atelier.</p>
               </div>
               <div class="info-card">
                 <h2>Ce que nous couvrons</h2>
-              <p>Modification intérieure, solaire, lithium, Victron, chauffage, climatisation, plomberie, Van Life, projets longue distance au Canada, infiltrations d'eau, toiture, joints, composantes électriques, propane et inspections avant transaction.</p>
+              <p>Modification intérieure, solaire, lithium, Victron, Bluetti, fibre de verre, gelcoat, chauffage, climatisation, plomberie, Van Life, projets longue distance au Canada, infiltrations d'eau, toiture, joints, composantes électriques, propane et inspections avant transaction.</p>
               </div>
             </div>
           </section>
