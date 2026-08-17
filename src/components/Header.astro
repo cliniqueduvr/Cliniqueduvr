@@ -93,7 +93,7 @@ function getAlternatePath(pathname: string, targetLang: 'fr' | 'en') {
 const homeHref = isEnglish ? '/en/' : '/';
 const frHref = getAlternatePath(currentPath, 'fr');
 const enHref = getAlternatePath(currentPath, 'en');
-const smsHref = `sms:${siteSettings.phone.href}`;
+const smsHref = `sms:${siteSettings.sms.href}`;
 const isActivePath = (href: string) => {
   if (href === '/') return currentPath === '/';
   if (href === '/en/') return currentPath === '/en/';
