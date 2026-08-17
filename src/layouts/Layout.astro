@@ -619,7 +619,7 @@ const hasGoogleAds = googleAdsId.length > 0;
           bottom: 0;
           z-index: 120;
           display: grid;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: 1fr 1fr 1fr;
           background: rgba(255, 255, 255, 0.96);
           backdrop-filter: blur(10px);
           box-shadow: 0 -12px 30px rgba(18, 39, 61, 0.18);
@@ -641,6 +641,10 @@ const hasGoogleAds = googleAdsId.length > 0;
 
         .mobile-action-email {
           background: #cb5a46;
+        }
+
+        .mobile-action-sms {
+          background: var(--brand-green-dark);
         }
 
         .mobile-action-phone {
@@ -735,6 +739,13 @@ const hasGoogleAds = googleAdsId.length > 0;
         aria-label={isEnglish ? 'Send an email' : 'Envoyer un courriel'}
       >
         <i class="fas fa-envelope" aria-hidden="true"></i>
+      </a>
+      <a
+        class="mobile-action mobile-action-sms"
+        href={`sms:${siteSettings.sms.href}`}
+        aria-label={isEnglish ? 'Send a text message' : 'Envoyer un message texte'}
+      >
+        <i class="fas fa-comment-dots" aria-hidden="true"></i>
       </a>
       <a
         class="mobile-action mobile-action-phone"
