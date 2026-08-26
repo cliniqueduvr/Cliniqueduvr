@@ -283,6 +283,15 @@ const navItems = isEnglish
           ))}
         </ul>
         <div class="mobile-social-links">
+          <span>{isEnglish ? 'Language' : 'Langue'}</span>
+          <div class="mobile-social-row">
+            <a href={frHref}>
+              <span>FR</span>
+            </a>
+            <a href={enHref}>
+              <span>EN</span>
+            </a>
+          </div>
           <span>{isEnglish ? 'Follow us' : 'Nous suivre'}</span>
           <div class="mobile-social-row">
             <a href={siteSettings.facebookUrl} target="_blank" rel="noopener">

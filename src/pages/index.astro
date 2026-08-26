@@ -35,7 +35,7 @@ const heroPillLabels = homePage.hero.title.split(' • ');
       <div class="hero-content">
         <img class="hero-logo" src={siteSettings.brandImage} alt={homePage.hero.logoAlt} />
         <p class="hero-eyebrow">Clinique du VR</p>
-        <h1>Réparation, modification et aménagement</h1>
+        <h1>Tous vos services sous un même toit</h1>
         <div class="hero-pill-row" aria-label={homePage.hero.title}>
           {heroPillLabels.map((label) => (
             <span>{label}</span>
@@ -43,7 +43,7 @@ const heroPillLabels = homePage.hero.title.split(' • ');
         </div>
         <p class="hero-tagline">{homePage.hero.tagline}</p>
         <div class="hero-actions">
-          <a href="/contact/#formulaire-soumission">Discuter de mon projet</a>
+          <a href={`tel:${siteSettings.phone.href}`}>Appeler maintenant</a>
           <a href="/contact/#formulaire-soumission">Demander une soumission</a>
         </div>
       </div>

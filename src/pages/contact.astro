@@ -51,8 +51,8 @@ const schemas = [
       <div class="container interior-body-grid contact-layout">
         <div class="contact-form-section">
           <section class="interior-card">
-            <h2>Repère Canada pour votre demande</h2>
-            <p class="seo-keyline">Le point de départ réel est notre <strong>atelier de Gatineau</strong>. La demande devient plus facile à orienter si vous indiquez la ville et la province, par exemple <u>Québec</u>, <u>Ontario</u>, <u>Gatineau</u>, <u>Ottawa</u>, <u>Outaouais</u> ou <u>Laurentides</u>, ainsi que si le besoin touche une <strong>réparation</strong>, une <strong>modification</strong>, un <strong>aménagement</strong>, un projet <strong>Van Life</strong>, du <strong>solaire/lithium</strong> ou une <strong>infiltration d’eau</strong>.</p>
+            <h2>Atelier à Gatineau</h2>
+            <p class="seo-keyline">Les travaux sont effectués à notre <strong>atelier de Gatineau</strong>. Pour orienter votre demande rapidement, indiquez votre ville, votre province, le type de véhicule et le service recherché: <strong>réparation</strong>, <strong>diagnostic</strong>, <strong>aménagement</strong>, <strong>modification</strong>, <strong>fibre de verre</strong>, <strong>carrosserie</strong>, <strong>peinture</strong>, <strong>polissage</strong>, <strong>lavage</strong>, <strong>freins</strong> ou <strong>essieux</strong>.</p>
           </section>
 
           <section class="interior-card interior-card-alt quick-guide-card">
@@ -64,11 +64,11 @@ const schemas = [
               </article>
               <article class="guide-item">
                 <h3>Le problème</h3>
-                <p>Réparation, modification, aménagement, Van Life, solaire/lithium, infiltration ou entretien.</p>
+                <p>Réparation, diagnostic, aménagement, modification, fibre de verre, carrosserie, peinture, polissage, lavage, freins ou essieux.</p>
               </article>
               <article class="guide-item">
                 <h3>Le contexte</h3>
-                <p>Ville, province, atelier ou mobile, urgence réelle et quelques photos utiles.</p>
+                <p>Ville, province, urgence réelle et quelques photos utiles.</p>
               </article>
             </div>
           </section>
@@ -83,7 +83,6 @@ const schemas = [
               <input type="hidden" name="bot-field" />
               <input type="hidden" name="Page" value="Contact FR" />
               <input type="hidden" name="Services demandés" data-services-output />
-              <input type="hidden" name="Type d’intervention" data-worktype-output />
               <div class="form-group">
                 <label for="name">{contactPage.formSection.fields.name}</label>
                 <input type="text" id="name" name="Nom complet" required />
@@ -125,19 +124,6 @@ const schemas = [
                   ))}
                 </div>
               </fieldset>
-              <fieldset class="form-group form-fieldset">
-                <legend>{contactPage.formSection.fields.workType}</legend>
-                <div class="checkbox-grid checkbox-grid--two">
-                  <label class="check-option" for="workshop">
-                    <input type="radio" id="workshop" name="workTypeChoiceFr" value={contactPage.formSection.fields.workshopOption} data-worktype-option />
-                    <span>{contactPage.formSection.fields.workshopOption}</span>
-                  </label>
-                  <label class="check-option" for="mobile">
-                    <input type="radio" id="mobile" name="workTypeChoiceFr" value={contactPage.formSection.fields.mobileOption} data-worktype-option />
-                    <span>{contactPage.formSection.fields.mobileOption}</span>
-                  </label>
-                </div>
-              </fieldset>
               <div class="form-group">
                 <label for="work-address">{contactPage.formSection.fields.workAddress}</label>
                 <input type="text" id="work-address" name="Adresse des travaux" />
@@ -161,18 +147,8 @@ const schemas = [
                 <input type="text" id="vehicle-info" name="Type, marque, modèle et année du véhicule" />
               </div>
               <div class="form-group">
-                <label for="serial-number">{contactPage.formSection.fields.serialNumber}</label>
-                <input type="text" id="serial-number" name="Numéro de série" />
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="timeline">{contactPage.formSection.fields.timeline}</label>
-                  <input type="text" id="timeline" name="Date ou période souhaitée" />
-                </div>
-                <div class="form-group">
-                  <label for="budget">{contactPage.formSection.fields.budget}</label>
-                  <input type="text" id="budget" name="Budget approximatif" />
-                </div>
+                <label for="timeline">{contactPage.formSection.fields.timeline}</label>
+                <input type="text" id="timeline" name="Date ou période souhaitée" />
               </div>
               <div class="form-group">
                 <label for="attachments">{contactPage.formSection.fields.attachments}</label>
@@ -191,7 +167,7 @@ const schemas = [
         <aside class="interior-side-panel contact-info-section">
           <div class="interior-side-card interior-side-card-primary">
             <h3>Besoin d’un avis rapide?</h3>
-            <p>On peut vous orienter vers une réparation, une modification, un aménagement, une inspection ou une installation solaire/lithium selon votre besoin.</p>
+            <p>On peut vous orienter vers une réparation, un diagnostic, un aménagement, une modification, une intervention de carrosserie ou un entretien selon votre besoin.</p>
             <a class="interior-side-button" href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>
           </div>
 
@@ -234,8 +210,8 @@ const schemas = [
             <nav class="interior-service-nav" aria-label="Prochaines étapes">
               <a href="/services/inspection/"><i class="fas fa-clipboard-check"></i><span>Si la source n’est pas claire: inspection</span></a>
               <a href="/services/modification-amenagement/"><i class="fas fa-sliders"></i><span>Si vous voulez transformer le VR: modification</span></a>
-              <a href="/services/van-life/"><i class="fas fa-van-shuttle"></i><span>Si c’est un projet de van: Van Life</span></a>
-              <a href="/services/entretien/"><i class="fas fa-screwdriver-wrench"></i><span>Si c’est surtout préventif: entretien</span></a>
+              <a href="/services/reparation-fibre-verre-gelcoat/"><i class="fas fa-layer-group"></i><span>Si la fibre ou la carrosserie est touchée</span></a>
+              <a href="/services/entretien/"><i class="fas fa-screwdriver-wrench"></i><span>Si c’est mécanique ou préventif</span></a>
               <a href="/services/reparation/"><i class="fas fa-toolbox"></i><span>Si des dommages sont visibles: réparation</span></a>
             </nav>
           </div>
@@ -251,10 +227,6 @@ const schemas = [
             <p>{section.body}</p>
           </div>
         ))}
-        <div class="interior-card">
-          <h2>Signal Canada utile</h2>
-          <p class="seo-keyline">Cette page de contact soutient les recherches liées à <strong>Clinique du VR Gatineau</strong>, aux demandes venant du <u>Canada</u>, du <u>Québec</u>, de l’<u>Ontario</u>, d’<u>Ottawa</u>, de <u>l’Outaouais</u> et des <u>Laurentides</u>, ainsi qu’aux besoins de <strong>réparation VR</strong>, <strong>modification VR</strong>, <strong>aménagement Van Life</strong>, <strong>solaire/lithium</strong>, <strong>fuite d’eau</strong>, <strong>toiture</strong> et <strong>joints</strong>.</p>
-        </div>
       </div>
     </section>
 
@@ -272,18 +244,12 @@ const schemas = [
   if (form instanceof HTMLFormElement) {
     const syncFields = () => {
       const servicesOutput = form.querySelector('[data-services-output]');
-      const workTypeOutput = form.querySelector('[data-worktype-output]');
       const selectedServices = Array.from(form.querySelectorAll('[data-service-option]:checked'))
         .map((input) => input instanceof HTMLInputElement ? input.value : '')
         .filter(Boolean);
-      const selectedWorkType = form.querySelector('[data-worktype-option]:checked');
 
       if (servicesOutput instanceof HTMLInputElement) {
         servicesOutput.value = selectedServices.join(', ');
-      }
-
-      if (workTypeOutput instanceof HTMLInputElement && selectedWorkType instanceof HTMLInputElement) {
-        workTypeOutput.value = selectedWorkType.value;
       }
     };
 

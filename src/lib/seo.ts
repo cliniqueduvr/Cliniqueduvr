@@ -80,7 +80,7 @@ export function buildLocalBusinessSchema({
     '@type': 'AutoRepair',
     '@id': `${SITE_URL}/#clinique-du-vr`,
     name: 'Clinique du VR',
-    description: 'Modification, aménagement, Van Life, solaire, lithium, autonomie, réparation et entretien de VR depuis Gatineau, avec projets sélectionnés partout au Canada',
+    description: 'Service complet pour VR, roulotte, bateau et véhicules récréatifs à Gatineau: réparation, diagnostic, aménagement, modification, fibre de verre, carrosserie, peinture, polissage, lavage, freins et essieux',
     telephone,
     email,
     url: SITE_URL,
@@ -126,11 +126,14 @@ export function buildLocalBusinessSchema({
     knowsAbout: [
       'Modification de VR',
       'Aménagement de VR',
-      'Conversion Van Life',
-      'Installation solaire VR',
-      'Batteries lithium pour VR',
-      'Autonomie énergétique VR',
-      'Produits Victron Energy',
+      'Diagnostic de VR',
+      'Réparation de fibre de verre',
+      'Carrosserie de VR',
+      'Peinture de VR',
+      'Polissage de VR',
+      'Lavage de VR',
+      'Freins de roulotte',
+      'Essieux de roulotte',
       'Inspection de VR',
       'Entretien de VR',
       'Réparation de VR',
@@ -144,12 +147,13 @@ export function buildLocalBusinessSchema({
       name: 'Services VR',
       itemListElement: [
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Modification et aménagement de VR' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Conversion Van Life' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Solaire et batteries lithium pour VR' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Diagnostic de VR et roulotte' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Réparation de fibre de verre, carrosserie et peinture' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Polissage et lavage' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Freins et essieux' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Inspection de VR' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Entretien de VR' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Réparation de VR' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Vente et achat de VR' } }
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Réparation de VR' } }
       ]
     }
   };

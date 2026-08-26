@@ -1,48 +1,38 @@
 {
-  "metaTitle": "Clinique du VR | RV Modification, Van Life, Solar and Repair in Canada",
-  "metaDescription": "Clinique du VR modifies, upgrades and repairs RVs and vans: Canada-wide modification, Van Life, solar, lithium, autonomy, roof work and repair projects from Gatineau.",
+  "metaTitle": "Clinique du VR | Complete RV, Trailer and Boat Services in Gatineau",
+  "metaDescription": "Clinique du VR offers complete service under one roof: repair, diagnostics, custom work, fiberglass, bodywork, paint, polishing, washing, brakes and axles.",
   "hero": {
-    "logoAlt": "Clinique du VR logo - RV modification, Van Life, solar, maintenance and repair",
-    "title": "RV Modification, Van Life and Repair in Canada",
-    "tagline": ""
+    "logoAlt": "Clinique du VR logo - complete service for RVs, travel trailers and boats",
+    "title": "Complete RV, Trailer and Boat Services",
+    "tagline": "One workshop for repair, diagnostics, custom work, fiberglass, bodywork, paint, polishing, washing, brakes and axles."
   },
   "introCard": {
     "icon": "",
-    "heading": "Why choose Clinique du VR?",
-    "body": "<strong>Specialized and attentive service</strong> for RV modification, Van Life conversion, solar and lithium systems, maintenance and repair. Canada-wide modification, Van Life and solar projects can be framed remotely, then planned for workshop work in Gatineau depending on the assignment, timeline and vehicle logistics."
+    "heading": "All your recreational vehicle services under one roof",
+    "body": "<strong>Clinique du VR brings repair, diagnostics, custom work and finishing into one workshop.</strong> We service RVs, travel trailers, boats and other recreational vehicles for mechanical work, maintenance, fiberglass, bodywork, paint, polishing, washing, brakes, axles, roof work, water intrusion and custom projects."
   },
   "servicesOverview": {
-    "title": "Our Specialties",
+    "title": "Services under one roof",
     "items": [
-      {
-        "href": "/en/services/rv-modification-custom-builds/",
-        "icon": "fas fa-sliders",
-        "label": "Custom modifications"
-      },
-      {
-        "href": "/en/services/van-life-conversion/",
-        "icon": "fas fa-van-shuttle",
-        "label": "Van Life"
-      },
-      {
-        "href": "/en/services/solar-panel-installation/",
-        "icon": "fas fa-solar-panel",
-        "label": "Solar and lithium"
-      },
       {
         "href": "/en/services/repair/",
         "icon": "fas fa-toolbox",
-        "label": "Repair"
+        "label": "Repair & diagnostics"
+      },
+      {
+        "href": "/en/services/rv-modification-custom-builds/",
+        "icon": "fas fa-sliders",
+        "label": "Custom work & layout"
+      },
+      {
+        "href": "/en/services/fiberglass-gelcoat-repair/",
+        "icon": "fas fa-layer-group",
+        "label": "Fiberglass, bodywork & paint"
       },
       {
         "href": "/en/services/maintenance/",
-        "icon": "fas fa-screwdriver-wrench",
-        "label": "Maintenance"
-      },
-      {
-        "href": "/en/services/inspection/",
-        "icon": "fas fa-clipboard-check",
-        "label": "Inspection"
+        "icon": "fas fa-wand-magic-sparkles",
+        "label": "Maintenance, polishing, brakes & axles"
       }
     ]
   },
@@ -73,17 +63,17 @@
   },
   "seoSections": [
     {
-      "heading": "RV modification, Van Life and solar projects in Canada",
-      "body": "Clinique du VR supports owners of RVs, travel trailers, caravans and vans with modification, Van Life conversion, solar and lithium autonomy, Victron Energy and Bluetti products, pre-purchase inspection, preventive maintenance, water leak repair, roof work and restoration. The Gatineau workshop serves nearby regions and can frame selected modification, Van Life and solar projects for clients across Canada."
+      "heading": "Complete workshop in Gatineau",
+      "body": "Our workshop brings common and specialized work together: diagnostics, repair, maintenance, brakes, axles, roof work, water intrusion, layout changes, custom work and recreational vehicle preparation."
     },
     {
-      "heading": "A useful approach before any work begins",
-      "body": "When a vehicle needs more autonomy, a custom interior, Van Life equipment, solar and lithium upgrades, or repair after wear or water intrusion, the first step is to clarify the vehicle's actual condition, province, travel plan and logistics. We then help you choose the most useful next step."
+      "heading": "Fiberglass, bodywork and finishing",
+      "body": "We can work on fiberglass, gelcoat, cracks, impacts, panels, damaged corners and tired surfaces, with bodywork, paint, polishing and washing depending on the need."
     }
   ],
   "cta": {
     "heading": "Request your free estimate",
-    "subheading": "Inspection and estimate with no obligation",
+    "subheading": "Repair, diagnostics, custom work, fiberglass, bodywork, paint, polishing, washing, brakes and axles",
     "squareLabel": "Book online"
   },
   "contactForm": {
@@ -91,13 +81,13 @@
     "unconfiguredNote": "The contact form is not available at the moment. Please use the phone number or online booking in the meantime.",
     "namePlaceholder": "Your name",
     "emailPlaceholder": "Your email",
-    "subjectPlaceholder": "Subject",
-    "messagePlaceholder": "Your message",
+    "subjectPlaceholder": "Type of service",
+    "messagePlaceholder": "Describe your RV, trailer, boat or the work needed",
     "submitLabel": "Send"
   },
   "contactPanel": {
     "heading": "Contact Information",
     "squareLabel": "Book online",
-    "ctaText": "Free and confidential estimate. Call us or fill out the form."
+    "ctaText": "Tell us about your project: repair, diagnostics, custom work, fiberglass, bodywork, paint, polishing, washing, brakes or axles."
   }
 }

@@ -1,33 +1,38 @@
 {
-  "metaTitle": "Clinique du VR | Modification, Van Life, solaire et réparation au Canada",
-  "metaDescription": "Clinique du VR transforme, aménage et répare les VR et vans: projets Canada de modification, Van Life, solaire, lithium, autonomie, toiture et réparation depuis Gatineau.",
+  "metaTitle": "Clinique du VR | Services complets VR, roulotte et bateau à Gatineau",
+  "metaDescription": "Clinique du VR offre tous les services sous un même toit: réparation, diagnostic, aménagement, modification, fibre de verre, carrosserie, peinture, polissage, lavage, freins et essieux.",
   "hero": {
-    "logoAlt": "Logo Clinique du VR — Modification, aménagement, Van Life et réparation de VR",
-    "title": "Modification • Aménagement • Van Life • Réparation",
-    "tagline": "Transformez votre VR ou votre van selon votre façon de voyager. Solaire, lithium, autonomie énergétique, aménagement sur mesure, toiture, infiltration et réparation."
+    "logoAlt": "Logo Clinique du VR - services complets pour VR, roulotte et bateau",
+    "title": "Réparation • Diagnostic • Carrosserie • Aménagement • Entretien",
+    "tagline": "Un atelier complet pour VR, roulotte, bateau et plus: réparation, diagnostic, aménagement, modification, fibre de verre, carrosserie, peinture, polissage, lavage, freins et essieux."
   },
   "introCard": {
     "icon": "",
-    "heading": "Un centre spécialisé pour transformer votre VR ou votre van",
-    "body": "<strong>Clinique du VR fait beaucoup plus que de la réparation traditionnelle.</strong> Notre atelier accompagne les propriétaires de VR, roulottes et vans pour les projets de modification, d'autonomie énergétique, de solaire, de lithium, d'aménagement intérieur, de conversion Van Life, de toiture, d'infiltration et de réparation complète. Les projets de modification, Van Life et solaire peuvent être cadrés à distance pour des clients de partout au Canada, avec travaux planifiés en atelier à Gatineau selon le mandat."
+    "heading": "Tous les services pour votre véhicule récréatif sous un même toit",
+    "body": "<strong>Clinique du VR regroupe réparation, diagnostic, modification, aménagement et finition au même endroit.</strong> Notre atelier prend en charge les VR, roulottes, bateaux et autres véhicules récréatifs pour les travaux mécaniques, l'entretien, la fibre de verre, la carrosserie, la peinture, le polissage, le lavage, les freins, les essieux, la toiture, l'infiltration et les projets sur mesure."
   },
   "servicesOverview": {
-    "title": "Trois façons de vous accompagner",
+    "title": "Nos services sous un même toit",
     "items": [
-      {
-        "href": "/services/modification-amenagement/",
-        "icon": "fas fa-sliders",
-        "label": "Modification & autonomie"
-      },
-      {
-        "href": "/services/van-life/",
-        "icon": "fas fa-van-shuttle",
-        "label": "Van Life"
-      },
       {
         "href": "/services/reparation/",
         "icon": "fas fa-toolbox",
-        "label": "Réparation & entretien"
+        "label": "Réparation & diagnostic"
+      },
+      {
+        "href": "/services/modification-amenagement/",
+        "icon": "fas fa-sliders",
+        "label": "Aménagement & modification"
+      },
+      {
+        "href": "/services/reparation-fibre-verre-gelcoat/",
+        "icon": "fas fa-layer-group",
+        "label": "Fibre de verre, carrosserie & peinture"
+      },
+      {
+        "href": "/services/entretien/",
+        "icon": "fas fa-wand-magic-sparkles",
+        "label": "Entretien, polissage, freins & essieux"
       },
       {
         "href": "/magasin/",
@@ -43,16 +48,16 @@
     "items": [
       {
         "icon": "fas fa-droplet",
-        "label": "Scellants et Dicor"
+        "label": "Scellants et entretien"
       },
       {
         "icon": "fas fa-bolt",
-        "label": "Électricité 12 V / 120 V"
+        "label": "Pièces électriques"
       },
       {
-        "icon": "fas fa-solar-panel",
-        "label": "Solaire et accessoires",
-        "href": "/services/installation-panneaux-solaires/"
+        "icon": "fas fa-circle-dot",
+        "label": "Freins et essieux",
+        "href": "/services/entretien/"
       },
       {
         "icon": "fas fa-box-open",
@@ -63,21 +68,21 @@
   },
   "seoSections": [
     {
-      "heading": "Modification, autonomie et aménagement au Canada",
-      "body": "Nous accompagnons les projets de panneaux solaires, batteries lithium, produits Victron Energy et Bluetti, MPPT, onduleurs, chargeurs, recharge par alternateur, chauffage diesel, MaxxAir, climatisation, plomberie, rangement, mobilier, modification de lits, cuisine et autres améliorations intérieures pour VR, roulottes et vans venant de partout au Canada."
+      "heading": "Atelier complet à Gatineau",
+      "body": "Notre atelier réunit les travaux courants et spécialisés au même endroit: diagnostic, réparation, entretien, freins, essieux, toiture, infiltration, aménagement, modification et préparation de véhicules récréatifs."
     },
     {
-      "heading": "Conversion Van Life au Canada",
-      "body": "Clinique du VR peut aider pour une conversion partielle ou complète de Ford Transit, Ram ProMaster ou Mercedes-Benz Sprinter, avec cadrage à distance et travaux en atelier à Gatineau: isolation, plancher, mobilier, eau propre et eaux grises, chauffage, ventilation, solaire, lithium, éclairage et solutions 3 ou 4 saisons."
+      "heading": "Fibre de verre, carrosserie et finition",
+      "body": "Nous pouvons intervenir sur la fibre de verre, le gelcoat, les fissures, impacts, panneaux, coins endommagés et surfaces à remettre en état, avec travaux de carrosserie, peinture, polissage et lavage selon le besoin."
     },
     {
-      "heading": "Réparation VR, toiture et infiltration",
-      "body": "La réparation reste un service complet: diagnostic, toiture, infiltration d'eau, joints, membrane TPO ou EPDM, structure, électricité, plomberie, propane, réfrigérateurs, appareils, freins, auvents, climatisation et chauffage pour Gatineau, Ottawa, l'Outaouais et les Laurentides."
+      "heading": "Aménagement et modification sur mesure",
+      "body": "Pour adapter votre VR, roulotte, van ou bateau à votre façon de voyager, nous réalisons des modifications, aménagements, installations d'équipement, améliorations intérieures et projets sur mesure planifiés selon le véhicule."
     }
   ],
   "cta": {
     "heading": "Discutez de votre projet",
-    "subheading": "Modification, Van Life, solaire, lithium, toiture, infiltration ou réparation",
+    "subheading": "Réparation, diagnostic, aménagement, modification, fibre de verre, carrosserie, peinture, polissage, lavage, freins ou essieux",
     "squareLabel": "Demander une soumission"
   },
   "contactForm": {
@@ -85,13 +90,13 @@
     "unconfiguredNote": "Le formulaire de contact n'est pas disponible pour le moment. Utilisez le téléphone ou la réservation en ligne en attendant.",
     "namePlaceholder": "Votre nom",
     "emailPlaceholder": "Votre courriel",
-    "subjectPlaceholder": "Sujet ou type de projet",
-    "messagePlaceholder": "Décrivez votre VR, votre van ou les travaux souhaités",
+    "subjectPlaceholder": "Type de service souhaité",
+    "messagePlaceholder": "Décrivez votre VR, roulotte, bateau ou les travaux souhaités",
     "submitLabel": "Envoyer ma demande"
   },
   "contactPanel": {
     "heading": "Informations de contact",
     "squareLabel": "Réserver en ligne",
-    "ctaText": "Parlez-nous de votre projet: modification, Van Life, solaire, autonomie, réparation ou entretien."
+    "ctaText": "Parlez-nous de votre projet: réparation, diagnostic, aménagement, modification, fibre de verre, carrosserie, peinture, polissage, lavage, freins ou essieux."
   }
 }

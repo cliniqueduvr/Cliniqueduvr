@@ -303,7 +303,7 @@
       ],
       "situationsTitle": "Quand ce service solaire est utile",
       "situations": [
-        "Vous voulez plus d’autonomie en camping ou sur la route",
+        "Vous voulez plus d’autonomie en camping ou pendant vos voyages",
         "Vous voulez alimenter des appareils sans dépendre uniquement du branchement au terrain",
         "Vous préparez une installation avec batteries, contrôleur de charge ou onduleur",
         "Votre système solaire actuel doit être amélioré ou corrigé",
@@ -587,7 +587,7 @@
       "seoDescription": "Entretien de roulotte et de VR à Gatineau: diagnostic, réparation préventive, étanchéité, freins, essieux, climatisation, chauffage, électricité et électronique.",
       "eyebrow": "Entretien, diagnostic et prévention",
       "opening": "L'<strong>entretien de VR à Gatineau</strong> chez Clinique du VR couvre bien plus que les joints. Nous aidons à garder votre <strong>roulotte</strong> ou votre <strong>VR</strong> fiable avec l'entretien préventif, le <strong>diagnostic</strong>, l'<strong>étanchéité</strong>, les <strong>freins</strong>, les <strong>essieux</strong>, la <strong>climatisation</strong>, le <strong>chauffage</strong>, l'<strong>électricité</strong> et l'<strong>électronique</strong>.",
-      "lead": "Avant la saison, après l'entreposage ou dès qu'un système semble moins fiable, un entretien complet permet de vérifier les points importants et d'agir avant qu'une petite faiblesse devienne une réparation plus coûteuse. Le service est offert en <strong>atelier</strong> ou sur la route selon le type d'intervention.",
+      "lead": "Avant la saison, après l'entreposage ou dès qu'un système semble moins fiable, un entretien complet permet de vérifier les points importants et d'agir avant qu'une petite faiblesse devienne une réparation plus coûteuse. Le service est effectué à notre <strong>atelier de Gatineau</strong>.",
       "intro": "Nous prenons en charge l'entretien général de la <strong>roulotte</strong>, du <strong>VR</strong> ou de la <strong>caravane</strong>: joints, toiture, membrane, composantes de roulement, appareils, systèmes électriques et électroniques. Le but est de comprendre l'état réel du véhicule, corriger ce qui doit l'être et vous donner des prochaines étapes claires.",
       "heroPromise": "Un <strong>entretien fait au bon moment</strong> aide à prévenir les pannes, les infiltrations, les problèmes de confort et les réparations plus lourdes.",
       "detailIntro": "Un entretien efficace doit viser les composantes qui protègent le véhicule, mais aussi les systèmes qui rendent le VR fonctionnel et confortable. Nous vérifions les points sensibles à l'eau, les joints, la toiture et la membrane, tout en couvrant aussi les freins, les essieux, la climatisation, le chauffage, l'électricité, l'électronique et les diagnostics selon les symptômes observés.",
@@ -595,7 +595,7 @@
         "Diagnostic",
         "Climatisation et chauffage",
         "Électricité et électronique",
-        "Atelier ou mobile"
+        "Atelier de Gatineau"
       ],
       "proofTitle": "Ce que protège un bon entretien",
       "proofIntro": "L'entretien n'est pas une dépense cosmétique. C'est ce qui garde l'eau à l'extérieur et ce qui évite le plus souvent les dossiers de toiture, de murs et de plancher.",
@@ -609,8 +609,8 @@
           "label": "Joints et zones sensibles traités"
         },
         {
-          "value": "Atelier ou mobile",
-          "label": "Selon le type d'intervention"
+          "value": "En atelier",
+          "label": "Travaux à Gatineau"
         }
       ],
       "proofPoints": [
@@ -651,7 +651,7 @@
         "Entretien des freins et des essieux en atelier",
         "Vérification des systèmes de climatisation et de chauffage selon le problème rapporté",
         "Vérification électrique et électronique: alimentation 12 V, 110 V, batteries, lumières, panneaux, contrôles et accessoires",
-        "Service offert en atelier ou sur la route selon le type de travail"
+        "Service effectué à notre atelier de Gatineau"
       ],
       "situationsTitle": "Quand faire l'entretien",
       "situations": [
@@ -659,14 +659,14 @@
         "Quand un appareil, un système électrique, le chauffage ou la climatisation fonctionne mal",
         "Quand vous voulez vérifier les freins, les essieux, les batteries, les lumières ou les accessoires",
         "Quand les joints, la toiture ou les murs montrent des signes d'usure au scellement",
-        "Quand vous voulez faire l'entretien en atelier ou directement sur place"
+        "Quand vous voulez faire l'entretien à notre atelier de Gatineau"
       ],
       "processIntro": "Notre approche est simple: partir de l'état réel du véhicule et du problème observé, puis prioriser les travaux utiles. On distingue ce qui relève de l'entretien, du diagnostic ou de la réparation pour éviter de remplacer des pièces au hasard.",
       "process": [
         "Écoute du problème, du type de VR et de l'historique d'entretien",
         "Vérification des systèmes concernés: étanchéité, roulement, chauffage, climatisation, électricité, électronique ou accessoires",
         "Diagnostic ou entretien ciblé selon ce que les observations montrent réellement",
-        "Intervention en atelier ou sur la route selon le type de travail",
+        "Intervention à notre atelier de Gatineau",
         "Retour clair sur les zones traitées, les risques observés et les prochaines étapes"
       ],
       "whyChooseTitle": "Pourquoi choisir Clinique du VR pour l'entretien?",
@@ -681,8 +681,8 @@
           "text": "Quand un problème n'est pas clair, nous cherchons d'abord à comprendre la cause avant de recommander l'entretien ou la réparation appropriée."
         },
         {
-          "title": "Service flexible",
-          "text": "Le service peut être effectué à l'atelier ou sur la route selon le type de besoin, l'emplacement du véhicule et la nature de l'intervention."
+          "title": "Service en atelier",
+          "text": "Les travaux sont effectués à notre atelier de Gatineau, avec une orientation claire selon le type de besoin et la nature de l'intervention."
         }
       ],
       "faqTitle": "Questions fréquentes sur l'entretien de VR",
@@ -696,8 +696,8 @@
           "answer": "Oui. Quand le problème n'est pas évident, le diagnostic sert à confirmer l'origine du symptôme avant de décider si la bonne suite est un entretien, une réparation ou une vérification plus poussée."
         },
         {
-          "question": "Offrez-vous le service en atelier ou sur la route?",
-          "answer": "Oui. Plusieurs entretiens peuvent être faits en atelier ou sur la route, selon le type de travail. Certains travaux, comme l'entretien des freins et des essieux, se font à l'atelier."
+          "question": "Où faites-vous les entretiens?",
+          "answer": "Les entretiens sont effectués à notre atelier de Gatineau. Certains travaux, comme l'entretien des freins et des essieux, doivent être faits en atelier."
         }
       ]
     },
@@ -714,7 +714,7 @@
       "eyebrow": "Joints, toiture et infiltration d'eau",
       "opening": "Clinique du VR offre l'<strong>inspection visuelle gratuite et sans rendez-vous en atelier à Gatineau</strong>, avec humidimètre, en mettant l'accent sur les <strong>joints</strong>, l'état de la <strong>toiture</strong> et les signes d'<strong>infiltration d'eau</strong>. Notre objectif est de repérer rapidement les zones à risque, les traces d'humidité et les problèmes d'étanchéité avant qu'ils causent plus de dommages.",
       "lead": "Passez directement à notre <u>atelier de Gatineau</u>: l'<strong>inspection est toujours gratuite et sans rendez-vous en atelier</strong>. Nos inspections ciblent les problèmes de <strong>joints</strong>, de <strong>toiture</strong> et d'<strong>infiltration d'eau</strong>. Nous ne faisons pas d'inspection mécanique.",
-      "intro": "Nous réalisons gratuitement les inspections visuelles en <strong>atelier, sans rendez-vous</strong>. L'inspection sur la route est aussi offerte à un <strong>tarif variable selon le déplacement</strong>. L'humidimètre permet de mieux cibler les zones vulnérables à l'eau sur un <strong>VR</strong>, une <strong>roulotte</strong> ou une <strong>caravane</strong>.",
+      "intro": "Nous réalisons gratuitement les inspections visuelles en <strong>atelier, sans rendez-vous</strong>. L'humidimètre permet de mieux cibler les zones vulnérables à l'eau sur un <strong>VR</strong>, une <strong>roulotte</strong> ou une <strong>caravane</strong>.",
       "heroPromise": "Détectez les <strong>infiltrations d'eau</strong> avant qu'elles ne deviennent des réparations coûteuses sur votre <strong>toit</strong>, vos <strong>murs</strong> ou votre <strong>plancher</strong>.",
       "detailIntro": "Une inspection efficace ne consiste pas à tout vérifier sans priorité. Chez Clinique du VR, nous nous concentrons d'abord sur ce qui cause le plus souvent des dommages coûteux: les <strong>joints fatigués</strong>, les <strong>défauts de toiture</strong>, les <strong>ouvertures sensibles</strong> et les signes d'<strong>infiltration d'eau</strong>. L'humidimètre nous aide à confirmer les zones problématiques et à mieux orienter les prochaines étapes.",
       "highlights": [
@@ -731,8 +731,8 @@
           "label": "Sans rendez-vous en atelier"
         },
         {
-          "value": "Tarif variable",
-          "label": "Inspection sur la route selon le déplacement"
+          "value": "En atelier",
+          "label": "Inspection à Gatineau"
         },
         {
           "value": "Humidimètre",
@@ -804,14 +804,14 @@
         },
         {
           "title": "Gratuite en atelier",
-          "text": "L'<strong>inspection est toujours gratuite et sans rendez-vous en atelier</strong>. Pour une inspection sur la route, le <strong>tarif varie selon le déplacement</strong>."
+          "text": "L'<strong>inspection est toujours gratuite et sans rendez-vous en atelier</strong> à Gatineau."
         }
       ],
       "faqTitle": "Questions fréquentes sur l'inspection de VR",
       "faqs": [
         {
           "question": "Combien coûte une inspection de VR?",
-          "answer": "L'<strong>inspection est toujours gratuite et sans rendez-vous en atelier</strong>. Pour une inspection sur la route, le <strong>tarif est variable selon le déplacement</strong>. Contactez-nous pour obtenir les détails."
+          "answer": "L'<strong>inspection est toujours gratuite et sans rendez-vous en atelier</strong> à Gatineau. Contactez-nous pour obtenir les détails."
         },
         {
           "question": "Que vérifiez-vous principalement lors d'une inspection?",
@@ -819,7 +819,7 @@
         },
         {
           "question": "Faites-vous des inspections mécaniques?",
-          "answer": "Non. Nous ne faisons pas d'inspection mécanique. Si vous avez surtout un doute sur l'étanchéité, consultez notre page <a href=\"/services/inspection/\">inspection de VR</a>. Nous effectuons toutefois l'entretien des freins à notre atelier seulement, sans service sur la route."
+          "answer": "Non. Nous ne faisons pas d'inspection mécanique. Si vous avez surtout un doute sur l'étanchéité, consultez notre page <a href=\"/services/inspection/\">inspection de VR</a>. Nous effectuons toutefois l'entretien des freins à notre atelier."
         }
       ]
     },
