@@ -1,15 +1,15 @@
 {
-  "metaTitle": "Clinique du VR | Services complets VR, roulotte et bateau à Gatineau",
-  "metaDescription": "Clinique du VR offre tous les services sous un même toit: réparation, diagnostic, aménagement, modification, fibre de verre, carrosserie, peinture, polissage, lavage, freins et essieux.",
+  "metaTitle": "Clinique du VR | Services VR et finition à Gatineau",
+  "metaDescription": "Clinique du VR offre réparation, diagnostic, entretien et modification pour VR et roulottes, avec esthétique, fibre de verre et peinture aussi disponibles pour bateaux, autos et camions.",
   "hero": {
-    "logoAlt": "Logo Clinique du VR - services complets pour VR, roulotte et bateau",
+    "logoAlt": "Logo Clinique du VR - services VR, roulotte et finition",
     "title": "Réparation • Diagnostic • Carrosserie • Aménagement • Entretien",
-    "tagline": "Un atelier complet pour VR, roulotte, bateau et plus: réparation, diagnostic, aménagement, modification, fibre de verre, carrosserie, peinture, polissage, lavage, freins et essieux."
+    "tagline": "Un atelier complet pour VR et roulottes: réparation, diagnostic, entretien, aménagement et modification. Les services d'esthétique, fibre de verre, carrosserie et peinture sont aussi offerts pour bateaux, autos et camions."
   },
   "introCard": {
     "icon": "",
     "heading": "Tous les services pour votre véhicule récréatif sous un même toit",
-    "body": "<strong>Clinique du VR regroupe réparation, diagnostic, modification, aménagement et finition au même endroit.</strong> Notre atelier prend en charge les VR, roulottes, bateaux et autres véhicules récréatifs pour les travaux mécaniques, l'entretien, la fibre de verre, la carrosserie, la peinture, le polissage, le lavage, les freins, les essieux, la toiture, l'infiltration et les projets sur mesure."
+    "body": "<strong>Clinique du VR regroupe réparation, diagnostic, modification, aménagement et finition au même endroit.</strong> Nos services de réparation, entretien, toiture, infiltration, freins, essieux et projets sur mesure s'adressent aux VR et roulottes. Les services d'esthétique, de fibre de verre, de carrosserie, de peinture, de polissage et de lavage peuvent aussi être réalisés sur des bateaux, autos et camions selon le mandat. Nous travaillons avec tous les assureurs et sommes le seul atelier partenaire d'Intact Assurance en Outaouais."
   },
   "servicesOverview": {
     "title": "Nos services sous un même toit",
@@ -30,14 +30,15 @@
         "label": "Fibre de verre, carrosserie & peinture"
       },
       {
-        "href": "/services/entretien/",
+        "href": "/services/esthetique-polissage-cirage/",
         "icon": "fas fa-wand-magic-sparkles",
-        "label": "Entretien, polissage, freins & essieux"
+        "label": "Lavage & polissage",
+        "subLabel": "(VR, bateau, auto)"
       },
       {
-        "href": "/magasin/",
-        "icon": "fas fa-store",
-        "label": "Magasin de pièces"
+        "href": "/services/installation-panneaux-solaires/",
+        "icon": "fas fa-solar-panel",
+        "label": "Système solaire"
       }
     ]
   },
@@ -69,7 +70,7 @@
   "seoSections": [
     {
       "heading": "Atelier complet à Gatineau",
-      "body": "Notre atelier réunit les travaux courants et spécialisés au même endroit: diagnostic, réparation, entretien, freins, essieux, toiture, infiltration, aménagement, modification et préparation de véhicules récréatifs."
+      "body": "Notre atelier réunit les travaux courants et spécialisés pour VR et roulottes au même endroit: diagnostic, réparation, entretien, freins, essieux, toiture, infiltration, aménagement, modification et préparation."
     },
     {
       "heading": "Fibre de verre, carrosserie et finition",
@@ -77,12 +78,12 @@
     },
     {
       "heading": "Aménagement et modification sur mesure",
-      "body": "Pour adapter votre VR, roulotte, van ou bateau à votre façon de voyager, nous réalisons des modifications, aménagements, installations d'équipement, améliorations intérieures et projets sur mesure planifiés selon le véhicule."
+      "body": "Pour adapter votre VR, roulotte ou van à votre façon de voyager, nous réalisons des modifications, aménagements, installations d'équipement, améliorations intérieures et projets sur mesure planifiés selon le véhicule."
     }
   ],
   "cta": {
     "heading": "Discutez de votre projet",
-    "subheading": "Réparation, diagnostic, aménagement, modification, fibre de verre, carrosserie, peinture, polissage, lavage, freins ou essieux",
+    "subheading": "Réparation, diagnostic, aménagement et entretien pour VR et roulottes. Esthétique, fibre de verre, carrosserie et peinture aussi pour bateaux, autos et camions",
     "squareLabel": "Demander une soumission"
   },
   "contactForm": {
@@ -91,12 +92,13 @@
     "namePlaceholder": "Votre nom",
     "emailPlaceholder": "Votre courriel",
     "subjectPlaceholder": "Type de service souhaité",
-    "messagePlaceholder": "Décrivez votre VR, roulotte, bateau ou les travaux souhaités",
+    "messagePlaceholder": "Décrivez votre véhicule et les travaux souhaités",
     "submitLabel": "Envoyer ma demande"
   },
   "contactPanel": {
     "heading": "Informations de contact",
     "squareLabel": "Réserver en ligne",
-    "ctaText": "Parlez-nous de votre projet: réparation, diagnostic, aménagement, modification, fibre de verre, carrosserie, peinture, polissage, lavage, freins ou essieux."
+    "insuranceText": "Nous travaillons avec tous les assureurs. Clinique du VR est le seul atelier partenaire d'Intact Assurance en Outaouais.",
+    "ctaText": "Parlez-nous de votre projet: réparation, diagnostic, aménagement et entretien pour VR ou roulotte, ou travaux d'esthétique, fibre de verre, carrosserie, peinture, polissage et lavage."
   }
 }

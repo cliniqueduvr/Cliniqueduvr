@@ -19,12 +19,13 @@ const defaultLastmod = '2026-04-12';
 const refonteLastmod = '2026-07-20';
 
 const pageLastmods = new Map<string, string>([
-  ['/', refonteLastmod],
+  ['/', '2026-09-15'],
   ['/en/', refonteLastmod],
-  ['/services/', refonteLastmod],
+  ['/services/', '2026-09-15'],
   ['/services/modification-amenagement/', refonteLastmod],
   ['/services/van-life/', refonteLastmod],
   ['/services/installation-panneaux-solaires/', refonteLastmod],
+  ['/services/esthetique-polissage-cirage/', '2026-09-15'],
   ['/services/entretien/', refonteLastmod],
   ['/services/reparation/', refonteLastmod],
   ['/services/reparation-fibre-verre-gelcoat/', refonteLastmod],
@@ -114,7 +115,7 @@ const enToFrAreaSlug = new Map([
 const serviceEntries = servicePages.map((service) => ({
   path: `/services/${service.slug}/`,
   lastmod: pageLastmods.get(`/services/${service.slug}/`) ?? defaultLastmod,
-  alternatePaths: service.alternateSlug && service.slug !== 'rexoseal' && englishServiceSlugs.has(service.alternateSlug) ? [`/en/services/${service.alternateSlug}/`] : []
+  alternatePaths: service.alternateSlug && englishServiceSlugs.has(service.alternateSlug) ? [`/en/services/${service.alternateSlug}/`] : []
 }));
 
 const serviceEntriesEn = servicePagesEn.map((service) => ({

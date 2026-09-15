@@ -250,31 +250,6 @@ const resolvedProofIntro = service.proofIntro ?? fallbackProofContent?.intro;
 const resolvedProofStats = proofStats.length > 0 ? proofStats : fallbackProofContent?.stats ?? [];
 const resolvedProofPoints = proofPoints.length > 0 ? proofPoints : fallbackProofContent?.points ?? [];
 const showProofSection = isEnglish || !['entretien', 'reparation'].includes(service.slug);
-const rexosealPanel = isEnglish
-  ? service.slug === 'maintenance'
-    ? {
-        eyebrow: 'Roof protection service',
-        title: 'Rexoseal work offered through our maintenance service',
-        intro: 'For some roof and membrane files, we offer <strong>Rexoseal</strong> work directly through the workshop as part of an RV maintenance or roof-protection plan.',
-        points: [
-          'Used on selected roof or membrane files when the surface and support condition are a good fit.',
-          'Integrated into the maintenance plan when the goal is to protect, restore, or reinforce vulnerable roof areas.',
-          'Validated by us first so the solution matches the vehicle instead of applying the same approach to every roof.'
-        ]
-      }
-    : null
-  : service.slug === 'entretien'
-    ? {
-        eyebrow: 'Service de protection de toiture',
-        title: 'Travaux Rexoseal offerts dans notre service d’entretien',
-        intro: 'Pour certains dossiers de toiture et de membrane, nous offrons directement des travaux avec <strong>Rexoseal</strong> dans le cadre d’un entretien ou d’une remise en protection du VR.',
-        points: [
-          'Utilisé sur certains dossiers de toiture ou de membrane quand la surface et l’état du support s’y prêtent.',
-          'Intégré au plan d’entretien quand l’objectif est de protéger, restaurer ou renforcer des zones de toit plus vulnérables.',
-          'Validé par l’atelier avant recommandation pour choisir une solution cohérente avec le véhicule plutôt qu’une approche unique pour tous les toits.'
-        ]
-      }
-    : null;
 const localServiceFocus = isEnglish
   ? service.slug === 'rv-modification-custom-builds'
     ? `Clinique du VR delivers <strong>RV modification and custom builds</strong> from its <strong>Gatineau workshop</strong> and can frame selected projects for clients across <u>Canada</u>. This page is meant to clarify <strong>solar</strong>, <strong>lithium</strong>, <strong>Victron Energy</strong>, <strong>Bluetti</strong>, interior upgrades, storage, heating, water, ventilation and other <strong>custom RV projects</strong> before workshop planning.`
@@ -311,11 +286,7 @@ const localServiceFocus = isEnglish
     <div class="container hero-grid">
       <div class="hero-copy">
         <p class="eyebrow">{service.eyebrow}</p>
-        <h1 class:list={[
-          (service.slug === 'inspection' || service.slug === 'entretien' || service.slug === 'maintenance' || service.slug === 'rexoseal' || service.slug === 'reparation' || service.slug === 'repair' || service.slug === 'reparation-fibre-verre-gelcoat' || service.slug === 'fiberglass-gelcoat-repair' || service.slug === 'installation-panneaux-solaires' || service.slug === 'solar-panel-installation' || service.slug === 'modification-amenagement' || service.slug === 'van-life') && 'hero-title-wide',
-          (service.slug === 'modification-amenagement' || service.slug === 'van-life' || service.slug === 'reparation-fibre-verre-gelcoat' || service.slug === 'fiberglass-gelcoat-repair') && 'hero-title-balanced',
-          service.slug === 'inspection' && 'hero-title-wider'
-        ]}>{service.h1}</h1>
+        <h1>{service.h1}</h1>
         <p class="opening" set:html={service.opening} />
         <p class="lead" set:html={service.lead} />
         <p class="intro" set:html={service.intro} />
@@ -383,19 +354,6 @@ const localServiceFocus = isEnglish
             ))}
           </ul>
         </section>
-
-        {rexosealPanel && (
-          <section class="content-card rexoseal-panel">
-            <p class="section-eyebrow">{rexosealPanel.eyebrow}</p>
-            <h2>{rexosealPanel.title}</h2>
-            <p class="section-copy" set:html={rexosealPanel.intro} />
-            <ul>
-              {rexosealPanel.points.map((item) => (
-                <li>{item}</li>
-              ))}
-            </ul>
-          </section>
-        )}
 
         <section class="content-card alt">
           <h2>{service.situationsTitle}</h2>
@@ -538,24 +496,17 @@ const localServiceFocus = isEnglish
   }
 
   .hero-copy h1 {
-    max-width: 12ch;
+    display: -webkit-box;
+    max-width: 20ch;
     margin-bottom: 1rem;
+    overflow: hidden;
     color: white;
-    line-height: 1.05;
-  }
-
-  .hero-copy h1.hero-title-wide {
-    max-width: 17ch;
-  }
-
-  .hero-copy h1.hero-title-balanced {
-    max-width: 20ch;
-    font-size: clamp(2.55rem, 5vw, 4.2rem);
+    font-size: 3.3rem;
     line-height: 1.04;
-  }
-
-  .hero-copy h1.hero-title-wider {
-    max-width: 20ch;
+    letter-spacing: 1px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    text-wrap: balance;
   }
 
   .lead {
@@ -708,13 +659,6 @@ const localServiceFocus = isEnglish
 
   .content-card.alt {
     background: linear-gradient(180deg, #f8fbf5 0%, #ffffff 100%);
-  }
-
-  .rexoseal-panel {
-    background:
-      radial-gradient(circle at top right, rgba(58, 141, 47, 0.12), transparent 34%),
-      linear-gradient(180deg, #ffffff 0%, #f8fbfd 100%);
-    border: 1px solid rgba(31, 58, 95, 0.1);
   }
 
   .content-card h2,
@@ -976,10 +920,6 @@ const localServiceFocus = isEnglish
     .hero-copy h1 {
       max-width: 100%;
     }
-    
-    .hero-copy h1.hero-title-wide {
-      max-width: 100%;
-    }
 
     .sticky {
       position: static;
@@ -1020,12 +960,9 @@ const localServiceFocus = isEnglish
       text-align: left;
     }
 
-    .hero-copy h1,
-    .hero-copy h1.hero-title-wide,
-    .hero-copy h1.hero-title-balanced,
-    .hero-copy h1.hero-title-wider {
+    .hero-copy h1 {
       max-width: min(14ch, 100%);
-      font-size: clamp(1.38rem, 6.4vw, 1.72rem);
+      font-size: 1.58rem;
       line-height: 1.1;
       letter-spacing: 0;
       overflow-wrap: break-word;

@@ -37,7 +37,6 @@ function getAlternatePath(pathname: string, targetLang: 'fr' | 'en') {
     '/ressources/installation-panneau-solaire-vr/': '/en/resources/rv-solar-panel-installation/',
     '/ressources/victron-bluetti-autonomie-sans-propane/': '/en/resources/victron-bluetti-propane-free-rv/',
     '/services/': '/en/services/',
-    '/services/rexoseal/': '/en/services/maintenance/',
     '/zones-desservies/': '/en/service-areas/',
     '/services/vente-achat/': '/en/services/buying-selling/'
   };
@@ -100,14 +99,14 @@ const isActivePath = (href: string) => {
   return currentPath === href || currentPath.startsWith(href);
 };
 const frenchServiceOrder = [
-  'modification-amenagement',
-  'van-life',
-  'installation-panneaux-solaires',
   'reparation',
+  'installation-panneaux-solaires',
   'reparation-fibre-verre-gelcoat',
   'entretien',
+  'esthetique-polissage-cirage',
+  'modification-amenagement',
+  'van-life',
   'inspection',
-  'rexoseal'
 ];
 const englishServiceOrder = [
   'rv-modification-custom-builds',

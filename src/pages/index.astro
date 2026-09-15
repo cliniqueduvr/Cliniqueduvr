@@ -73,6 +73,7 @@ const heroPillLabels = homePage.hero.title.split(' • ');
             <a href={item.href} class:list={['service-item', !item.icon && 'service-item--no-icon']}>
               {item.icon && <i class={item.icon}></i>}
               <span>{item.label}</span>
+              {item.subLabel && <small>{item.subLabel}</small>}
             </a>
           ))}
         </div>
@@ -147,6 +148,7 @@ const heroPillLabels = homePage.hero.title.split(' • ');
           <p><strong>Adresse:</strong> {siteSettings.address.fr}</p>
           <p><strong>Territoire desservi:</strong> {siteSettings.serviceArea.fr}</p>
           <p><strong>Assurance:</strong> Garage et civile 2 millions | <strong>Depuis:</strong> {siteSettings.sinceYear}</p>
+          <p><strong>Assureurs:</strong> {homePage.contactPanel.insuranceText}</p>
           <p class="cta-text">{homePage.contactPanel.ctaText}</p>
         </div>
       </div>
@@ -463,6 +465,17 @@ const heroPillLabels = homePage.hero.title.split(' • ');
     color: var(--brand-navy);
   }
 
+  .service-item small {
+    display: block;
+    margin-top: -0.2rem;
+    color: inherit;
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: none;
+  }
+
   .service-item--no-icon {
     gap: 0;
   }
@@ -663,6 +676,12 @@ const heroPillLabels = homePage.hero.title.split(' • ');
       font-size: 0.78rem;
       text-align: center;
       line-height: 1.18;
+    }
+
+    .service-item small {
+      margin-top: -0.22rem;
+      font-size: 0.74rem;
+      line-height: 1.1;
     }
 
     .parts-store-card {

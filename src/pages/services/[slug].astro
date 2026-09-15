@@ -18,7 +18,7 @@ export function getStaticPaths() {
 
 const { service } = Astro.props as { service: ServicePage };
 const englishServiceSlugs = new Set(servicePagesEnData.items.map((item) => item.slug));
-const enPath = service.slug !== 'rexoseal' && englishServiceSlugs.has(service.alternateSlug)
+const enPath = englishServiceSlugs.has(service.alternateSlug)
   ? `/en/services/${service.alternateSlug}/`
   : undefined;
 const schemas = [
