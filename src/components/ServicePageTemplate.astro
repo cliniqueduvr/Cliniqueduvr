@@ -305,7 +305,7 @@ const defaultLocalServiceFocus = isEnglish
         </div>
         <h2>{service.contact?.title ?? (isEnglish ? 'Need a practical starting point?' : 'Besoin d’un point de départ clair?')}</h2>
         <p>{service.contact?.copy ?? serviceGuidanceCopy}</p>
-        <a class="hero-link" href={contactHref}>{service.contact?.label ?? (isEnglish ? 'Talk to us about your RV' : 'Parler de votre VR')}</a>
+        <a class="hero-link" href={service.contact ? `${contactHref}#formulaire-soumission` : contactHref}>{service.contact?.label ?? (isEnglish ? 'Talk to us about your RV' : 'Parler de votre VR')}</a>
       </aside>
     </div>
   </section>

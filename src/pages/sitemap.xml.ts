@@ -17,18 +17,21 @@ type ServiceSlug = {
 const baseUrl = 'https://cliniqueduvr.ca';
 const defaultLastmod = '2026-04-12';
 const refonteLastmod = '2026-07-20';
+const localSiteLastmod = '2026-11-24';
 
 const pageLastmods = new Map<string, string>([
-  ['/', '2026-09-15'],
-  ['/en/', refonteLastmod],
-  ['/services/', '2026-09-15'],
+  ['/', localSiteLastmod],
+  ['/en/', localSiteLastmod],
+  ['/services/', localSiteLastmod],
   ['/services/modification-amenagement/', refonteLastmod],
   ['/services/installation-panneaux-solaires/', refonteLastmod],
   ['/services/esthetique-polissage-cirage/', '2026-09-15'],
   ['/services/entretien/', refonteLastmod],
   ['/services/reparation/', refonteLastmod],
+  ['/services/carrosserie/', localSiteLastmod],
+  ['/en/services/auto-truck-bodywork/', localSiteLastmod],
   ['/services/reparation-fibre-verre-gelcoat/', refonteLastmod],
-  ['/en/services/', refonteLastmod],
+  ['/en/services/', localSiteLastmod],
   ['/en/services/rv-modification-custom-builds/', refonteLastmod],
   ['/en/services/solar-panel-installation/', refonteLastmod],
   ['/en/services/maintenance/', refonteLastmod],
@@ -36,8 +39,8 @@ const pageLastmods = new Map<string, string>([
   ['/en/services/fiberglass-gelcoat-repair/', refonteLastmod],
   ['/choisir-service/', refonteLastmod],
   ['/en/choose-service/', refonteLastmod],
-  ['/contact/', refonteLastmod],
-  ['/en/contact/', refonteLastmod],
+  ['/contact/', localSiteLastmod],
+  ['/en/contact/', localSiteLastmod],
   ['/privacy/', refonteLastmod],
   ['/faq/', refonteLastmod],
   ['/en/faq/', '2026-04-19'],
@@ -61,7 +64,7 @@ const pageLastmods = new Map<string, string>([
 
 const staticEntries: UrlEntry[] = [
   { path: '/', lastmod: pageLastmods.get('/') ?? defaultLastmod, alternatePaths: ['/en/'] },
-  { path: '/about/', lastmod: defaultLastmod, alternatePaths: ['/en/about/'] },
+  { path: '/about/', lastmod: localSiteLastmod, alternatePaths: ['/en/about/'] },
   { path: '/services/', lastmod: pageLastmods.get('/services/') ?? defaultLastmod, alternatePaths: ['/en/services/'] },
   { path: '/magasin/', lastmod: '2026-06-14', alternatePaths: ['/en/store/'] },
   { path: '/realisations/', lastmod: defaultLastmod, alternatePaths: ['/en/realisations/'] },
@@ -70,14 +73,14 @@ const staticEntries: UrlEntry[] = [
   { path: '/choisir-service/', lastmod: pageLastmods.get('/choisir-service/') ?? defaultLastmod, alternatePaths: ['/en/choose-service/'] },
   { path: '/faq/', lastmod: pageLastmods.get('/faq/') ?? defaultLastmod, alternatePaths: ['/en/faq/'] },
   { path: '/zones-desservies/', lastmod: pageLastmods.get('/zones-desservies/') ?? defaultLastmod, alternatePaths: ['/en/service-areas/'] },
-  { path: '/ressources/van-life/', lastmod: refonteLastmod, alternatePaths: ['/en/resources/van-life-conversion/'] },
+  { path: '/ressources/van-life/', lastmod: localSiteLastmod, alternatePaths: ['/en/resources/van-life-conversion/'] },
   { path: '/ressources/infiltration-eau-vr/', lastmod: pageLastmods.get('/ressources/infiltration-eau-vr/') ?? defaultLastmod, alternatePaths: ['/en/resources/rv-water-intrusion/'] },
   { path: '/ressources/entretien-vr-deux-fois-par-an/', lastmod: pageLastmods.get('/ressources/entretien-vr-deux-fois-par-an/') ?? defaultLastmod, alternatePaths: ['/en/resources/twice-yearly-rv-maintenance/'] },
   { path: '/ressources/installation-panneau-solaire-vr/', lastmod: '2026-04-22', alternatePaths: ['/en/resources/rv-solar-panel-installation/'] },
   { path: '/ressources/victron-bluetti-autonomie-sans-propane/', lastmod: pageLastmods.get('/ressources/victron-bluetti-autonomie-sans-propane/') ?? defaultLastmod, alternatePaths: ['/en/resources/victron-bluetti-propane-free-rv/'] },
   { path: '/plan-du-site/', lastmod: pageLastmods.get('/plan-du-site/') ?? defaultLastmod, alternatePaths: ['/en/site-map/'] },
   { path: '/en/', lastmod: pageLastmods.get('/en/') ?? defaultLastmod, alternatePaths: ['/'] },
-  { path: '/en/about/', lastmod: defaultLastmod, alternatePaths: ['/about/'] },
+  { path: '/en/about/', lastmod: localSiteLastmod, alternatePaths: ['/about/'] },
   { path: '/en/services/', lastmod: pageLastmods.get('/en/services/') ?? defaultLastmod, alternatePaths: ['/services/'] },
   { path: '/en/store/', lastmod: '2026-06-14', alternatePaths: ['/magasin/'] },
   { path: '/en/realisations/', lastmod: defaultLastmod, alternatePaths: ['/realisations/'] },
@@ -86,7 +89,7 @@ const staticEntries: UrlEntry[] = [
   { path: '/en/choose-service/', lastmod: pageLastmods.get('/en/choose-service/') ?? defaultLastmod, alternatePaths: ['/choisir-service/'] },
   { path: '/en/faq/', lastmod: '2026-04-19', alternatePaths: ['/faq/'] },
   { path: '/en/service-areas/', lastmod: pageLastmods.get('/en/service-areas/') ?? defaultLastmod, alternatePaths: ['/zones-desservies/'] },
-  { path: '/en/resources/van-life-conversion/', lastmod: refonteLastmod, alternatePaths: ['/ressources/van-life/'] },
+  { path: '/en/resources/van-life-conversion/', lastmod: localSiteLastmod, alternatePaths: ['/ressources/van-life/'] },
   { path: '/en/resources/rv-water-intrusion/', lastmod: '2026-04-19', alternatePaths: ['/ressources/infiltration-eau-vr/'] },
   { path: '/en/resources/twice-yearly-rv-maintenance/', lastmod: '2026-04-19', alternatePaths: ['/ressources/entretien-vr-deux-fois-par-an/'] },
   { path: '/en/resources/rv-solar-panel-installation/', lastmod: '2026-04-22', alternatePaths: ['/ressources/installation-panneau-solaire-vr/'] },
@@ -162,8 +165,10 @@ export function GET() {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${entries
   .map((entry) => {
-    const alternates = (entry.alternatePaths ?? [])
-      .filter((alternatePath) => alternatePath && alternatePath !== entry.path)
+    const languagePaths = entry.alternatePaths?.length
+      ? [entry.path, ...entry.alternatePaths]
+      : [];
+    const alternates = languagePaths
       .map(
         (alternatePath) =>
           `    <xhtml:link rel="alternate" hreflang="${alternatePath.startsWith('/en/') ? 'en-CA' : 'fr-CA'}" href="${escapeXml(absoluteUrl(alternatePath))}" />`

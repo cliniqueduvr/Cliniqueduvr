@@ -1,0 +1,62 @@
+---
+interface Props {
+  lang: 'fr' | 'en';
+}
+
+const { lang } = Astro.props;
+const isEnglish = lang === 'en';
+const services = isEnglish
+  ? [
+      { href: '/en/services/repair/', label: 'RV and trailer repair', icon: 'fas fa-toolbox' },
+      { href: '/en/services/auto-truck-bodywork/', label: 'Car, truck and heavy-duty truck bodywork', icon: 'fas fa-truck' }
+    ]
+  : [
+      { href: '/services/reparation/', label: 'Réparation de VR et de roulottes', icon: 'fas fa-toolbox' },
+      { href: '/services/carrosserie/', label: 'Carrosserie auto, camion et camion lourd', icon: 'fas fa-truck' }
+    ];
+---
+
+<nav class="container service-links" aria-label={isEnglish ? 'Main workshop services' : 'Services principaux de l’atelier'}>
+  {services.map(({ href, label, icon }) => (
+    <a {href}>
+      <i class={icon} aria-hidden="true"></i>
+      <span>{label}</span>
+      <i class="fas fa-arrow-right" aria-hidden="true"></i>
+    </a>
+  ))}
+</nav>
+
+<style>
+  .service-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  a {
+    display: grid;
+    grid-template-columns: 1.5rem minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem;
+    border: 1px solid #d0dbe5;
+    border-radius: 0.85rem;
+    background: var(--brand-surface);
+    color: var(--brand-navy-dark);
+    font-weight: 800;
+    line-height: 1.3;
+    overflow-wrap: normal;
+  }
+
+  a:hover,
+  a:focus-visible {
+    border-color: var(--brand-green);
+  }
+
+  @media (max-width: 560px) {
+    .service-links {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

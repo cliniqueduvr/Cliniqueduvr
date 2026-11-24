@@ -2,10 +2,12 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import HomeServiceLinks from '../../components/HomeServiceLinks.astro';
 import { buildLocalBusinessSchema, buildWebSiteSchema } from '../../lib/seo';
 import siteSettings from '../../data/site-settings.json';
 import homePage from '../../data/home-page-en.json';
 
+const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(siteSettings.address.mapQuery)}`;
 const isFormConfigured = Boolean(siteSettings.email?.trim());
 const successUrl = '/en/thank-you/';
 const formName = 'home-contact-en-v2';
@@ -36,6 +38,8 @@ const meta = {
         <p class="hero-tagline">{homePage.hero.tagline}</p>
       </div>
     </section>
+
+    <HomeServiceLinks lang="en" />
 
     <section class="intro-section">
       <div class="container intro-grid">
@@ -123,11 +127,11 @@ const meta = {
         </div>
 
         <div class="contact-info">
-          <h3>{homePage.contactPanel.heading}</h3>
+          <h3>Gatineau workshop</h3>
+          <p>{siteSettings.address.en}<br><a href={directionsUrl}>Get directions</a></p>
           <p><strong>Phone:</strong> <a href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a></p>
+          <p>Call us for opening hours.</p>
           <p><strong>Email:</strong> <a href={`mailto:${siteSettings.email}`}>{siteSettings.email}</a></p>
-          <p><strong>Gatineau workshop</strong><br><a href="/en/contact/">{siteSettings.address.en}</a></p>
-          <p><strong>Service area:</strong> {siteSettings.serviceArea.en}</p>
           <p><strong>Insurance:</strong> $2M garage and liability | <strong>Since:</strong> {siteSettings.sinceYear}</p>
           <p class="cta-text">{homePage.contactPanel.ctaText}</p>
         </div>

@@ -2,10 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import HomeServiceLinks from '../components/HomeServiceLinks.astro';
 import { buildLocalBusinessSchema, buildWebSiteSchema } from '../lib/seo';
 import siteSettings from '../data/site-settings.json';
 import homePage from '../data/home-page.json';
 
+const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(siteSettings.address.mapQuery)}`;
 const isFormConfigured = Boolean(siteSettings.email?.trim());
 const successUrl = '/merci/';
 const formName = 'home-contact-fr-v2';
@@ -48,6 +50,8 @@ const heroPillLabels = homePage.hero.title.split(' • ');
         </div>
       </div>
     </section>
+
+    <HomeServiceLinks lang="fr" />
 
     <!-- ABOUT & SERVICES INTRO -->
     <section class="intro-section">
@@ -142,11 +146,11 @@ const heroPillLabels = homePage.hero.title.split(' • ');
         </div>
 
         <div class="contact-info">
-          <h3>{homePage.contactPanel.heading}</h3>
+          <h3>Atelier de Gatineau</h3>
+          <p>{siteSettings.address.fr}<br><a href={directionsUrl}>Itinéraire</a></p>
           <p><strong>Téléphone:</strong> <a href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a></p>
+          <p>Appelez-nous pour connaître les heures d’ouverture.</p>
           <p><strong>Email:</strong> <a href={`mailto:${siteSettings.email}`}>{siteSettings.email}</a></p>
-          <p><strong>Atelier de Gatineau</strong><br><a href="/contact/">{siteSettings.address.fr}</a></p>
-          <p><strong>Territoire desservi:</strong> {siteSettings.serviceArea.fr}</p>
           <p><strong>Assurance:</strong> Garage et civile 2 millions | <strong>Depuis:</strong> {siteSettings.sinceYear}</p>
           <p><strong>Assureurs:</strong> {homePage.contactPanel.insuranceText}</p>
           <p class="cta-text">{homePage.contactPanel.ctaText}</p>
