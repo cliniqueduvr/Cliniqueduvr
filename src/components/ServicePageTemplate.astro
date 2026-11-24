@@ -250,7 +250,7 @@ const resolvedProofIntro = service.proofIntro ?? fallbackProofContent?.intro;
 const resolvedProofStats = proofStats.length > 0 ? proofStats : fallbackProofContent?.stats ?? [];
 const resolvedProofPoints = proofPoints.length > 0 ? proofPoints : fallbackProofContent?.points ?? [];
 const showProofSection = isEnglish || !['entretien', 'reparation'].includes(service.slug);
-const localServiceFocus = isEnglish
+const defaultLocalServiceFocus = isEnglish
   ? service.slug === 'rv-modification-custom-builds'
     ? `Clinique du VR delivers <strong>RV modification and custom builds</strong> from its <strong>Gatineau workshop</strong> and can frame selected projects for clients across <u>Canada</u>. This page is meant to clarify <strong>solar</strong>, <strong>lithium</strong>, <strong>Victron Energy</strong>, <strong>Bluetti</strong>, interior upgrades, storage, heating, water, ventilation and other <strong>custom RV projects</strong> before workshop planning.`
     : service.slug === 'van-life-conversion'
@@ -303,9 +303,9 @@ const localServiceFocus = isEnglish
         <div class="hero-icon">
           <i class={service.icon}></i>
         </div>
-        <h2>{isEnglish ? 'Need a practical starting point?' : 'Besoin d’un point de départ clair?'}</h2>
-        <p>{serviceGuidanceCopy}</p>
-        <a class="hero-link" href={contactHref}>{isEnglish ? 'Talk to us about your RV' : 'Parler de votre VR'}</a>
+        <h2>{service.contact?.title ?? (isEnglish ? 'Need a practical starting point?' : 'Besoin d’un point de départ clair?')}</h2>
+        <p>{service.contact?.copy ?? serviceGuidanceCopy}</p>
+        <a class="hero-link" href={contactHref}>{service.contact?.label ?? (isEnglish ? 'Talk to us about your RV' : 'Parler de votre VR')}</a>
       </aside>
     </div>
   </section>
@@ -342,7 +342,7 @@ const localServiceFocus = isEnglish
 
         <section class="content-card">
           <h2>{isEnglish ? 'Local marker for this service' : 'Repère local pour ce service'}</h2>
-          <p class="section-copy seo-keyline" set:html={localServiceFocus} />
+          <p class="section-copy seo-keyline" set:html={service.localServiceFocus ?? defaultLocalServiceFocus} />
         </section>
 
         <section class="content-card">
@@ -428,7 +428,7 @@ const localServiceFocus = isEnglish
       <aside class="service-side sticky">
         <div class="side-card side-card-primary">
           <h3>{isEnglish ? 'Need a quick opinion?' : "Besoin d'un avis rapide?"}</h3>
-          <p>{sideGuidanceCopy}</p>
+          <p>{service.contact ? (isEnglish ? 'Call the shop to discuss the vehicle and the damage.' : 'Appelez l’atelier pour nous parler du véhicule et des dommages.') : sideGuidanceCopy}</p>
           <a class="side-button" href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a>
         </div>
 

@@ -1,15 +1,15 @@
 {
-  "metaTitle": "Clinique du VR | Complete RV, Trailer and Boat Services in Gatineau",
-  "metaDescription": "Clinique du VR offers complete service under one roof: repair, diagnostics, custom work, fiberglass, bodywork, paint, polishing, washing, brakes and axles.",
+  "metaTitle": "Clinique du VR | RV Repair & Body Shop in Gatineau",
+  "metaDescription": "A local Gatineau business since 2013. RV and trailer repair, maintenance and custom builds, plus bodywork for cars, trucks and heavy-duty trucks.",
   "hero": {
     "logoAlt": "Clinique du VR logo - complete service for RVs, travel trailers and boats",
-    "title": "Complete RV, Trailer and Boat Services",
-    "tagline": "One workshop for repair, diagnostics, custom work, fiberglass, bodywork, paint, polishing, washing, brakes and axles."
+    "title": "Your local RV and body shop in Gatineau",
+    "tagline": "RV and trailer repair, maintenance and custom work, plus bodywork for cars, trucks and heavy-duty trucks."
   },
   "introCard": {
     "icon": "",
-    "heading": "All your recreational vehicle services under one roof",
-    "body": "<strong>Clinique du VR brings repair, diagnostics, custom work and finishing into one workshop.</strong> We service RVs, travel trailers, boats and other recreational vehicles for mechanical work, maintenance, fiberglass, bodywork, paint, polishing, washing, brakes, axles, roof work, water intrusion and custom projects."
+    "heading": "A local business serving the Outaouais",
+    "body": "<strong>Based in Gatineau since 2013, Clinique du VR welcomes customers from the Outaouais and Ottawa area to its workshop on rue de Granby.</strong> We repair, maintain and customize RVs and travel trailers. We also repair bodywork on cars, trucks and heavy-duty trucks, and take on fiberglass and finishing work for boats, depending on the job."
   },
   "servicesOverview": {
     "title": "Services under one roof",
@@ -27,7 +27,12 @@
       {
         "href": "/en/services/fiberglass-gelcoat-repair/",
         "icon": "fas fa-layer-group",
-        "label": "Fiberglass, bodywork & paint"
+        "label": "Fiberglass & gelcoat"
+      },
+      {
+        "href": "/en/services/auto-truck-bodywork/",
+        "icon": "fas fa-truck",
+        "label": "Car & truck bodywork"
       },
       {
         "href": "/en/services/maintenance/",

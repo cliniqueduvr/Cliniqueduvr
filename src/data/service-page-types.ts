@@ -32,6 +32,12 @@ export interface ServicePage {
   lead: string;
   intro: string;
   heroPromise?: string;
+  localServiceFocus?: string;
+  contact?: {
+    title: string;
+    copy: string;
+    label: string;
+  };
   detailIntro: string;
   highlights: string[];
   proofTitle?: string;

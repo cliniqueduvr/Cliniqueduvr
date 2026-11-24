@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import ServicePageTemplate from './ServicePageTemplate.astro';
+import vanLife from '../data/van-life-resource.json';
+import servicesFr from '../data/service-pages.json';
+import servicesEn from '../data/service-pages-en.json';
+import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema } from '../lib/seo';
+
+interface Props {
+  lang: 'fr' | 'en';
+}
+
+const { lang } = Astro.props;
+const isEnglish = lang === 'en';
+const service = vanLife[lang];
+const frPath = '/ressources/van-life/';
+const enPath = '/en/resources/van-life-conversion/';
+const canonicalPath = isEnglish ? enPath : frPath;
+const schemas = [
+  buildArticleSchema({ headline: service.h1, description: service.seoDescription, path: canonicalPath }),
+  buildFAQSchema(service.faqs),
+  buildBreadcrumbSchema([
+    { name: isEnglish ? 'Home' : 'Accueil', path: isEnglish ? '/en/' : '/' },
+    { name: isEnglish ? 'Resources' : 'Ressources' },
+    { name: 'Van Life' }
+  ])
+];
+---
+
+<Layout title={service.seoTitle} description={service.seoDescription} lang={isEnglish ? 'en-CA' : 'fr-CA'} {canonicalPath} {frPath} {enPath} {schemas}>
+  <Header {lang} />
+  <ServicePageTemplate {service} allServices={isEnglish ? servicesEn.items : servicesFr.items} {lang} />
+  <Footer {lang} />
+</Layout>

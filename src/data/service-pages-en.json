@@ -1,6 +1,79 @@
 {
   "items": [
     {
+      "slug": "auto-truck-bodywork",
+      "alternateSlug": "carrosserie",
+      "title": "Car, truck and heavy-duty truck bodywork",
+      "h1": "Bodywork for cars, trucks and heavy-duty trucks",
+      "navLabel": "Car & truck bodywork",
+      "icon": "fas fa-truck",
+      "serviceType": "Bodywork and paint for cars, trucks and heavy-duty trucks",
+      "seoTitle": "Car, truck and heavy-duty truck bodywork in Gatineau | Clinique du VR",
+      "seoDescription": "Gatineau bodywork for cars, pickups, trucks and heavy-duty trucks. Describe the damage and attach photos to request a quote.",
+      "eyebrow": "Gatineau body shop",
+      "opening": "Clinique du VR’s body shop works on <strong>cars, trucks and heavy-duty trucks</strong> at its Gatineau workshop.",
+      "lead": "Exterior damage repair and paint work based on the vehicle’s condition and the parts affected.",
+      "intro": "Whether you have a dented fender, a scuffed bumper or a damaged cab panel, describe the issue and attach photos so our team can assess your request.",
+      "highlights": [
+        "Cars",
+        "Pickups and trucks",
+        "Heavy-duty trucks"
+      ],
+      "localServiceFocus": "We carry out the work at our <strong>Gatineau workshop</strong>. For a heavy-duty truck, include its type and dimensions when you contact us so the team can confirm that the shop can accommodate it.",
+      "contact": {
+        "title": "Get a bodywork quote",
+        "copy": "Provide the vehicle type, make, model and year. Attach a wide photo of the vehicle and close-ups of the damage.",
+        "label": "Request a quote"
+      },
+      "detailIntro": "The scope of work depends on the condition and material of the part and how the damaged area can be accessed.",
+      "includedTitle": "Bodywork and paint services",
+      "included": [
+        "Repairs for dents, scrapes and visible damage, depending on the condition of the part.",
+        "Repairs to bumpers, fenders, doors and exterior panels, depending on the vehicle.",
+        "Work on heavy-duty truck bodywork and cab panels, depending on the job.",
+        "Surface preparation, paint touch-ups and refinishing of repaired areas."
+      ],
+      "situationsTitle": "When to get in touch",
+      "situations": [
+        "A scrape or impact has damaged part of the vehicle’s body.",
+        "Paint is scratched, chipped or damaged around an area that needs repair.",
+        "You need a bodywork assessment for a work truck or heavy-duty truck."
+      ],
+      "processIntro": "Start by describing the damage. Photos help the team prepare for an assessment.",
+      "process": [
+        "Send your vehicle details and photos of the affected areas.",
+        "Arrange a workshop assessment with the team based on the vehicle and the damage.",
+        "Review the proposed work and quote before scheduling the repair."
+      ],
+      "whyChooseTitle": "An assessment for your vehicle",
+      "whyChooseIntro": "The team considers the visible damage and how you use the vehicle when outlining the work.",
+      "whyChoose": [
+        {
+          "title": "Cars and pickups",
+          "text": "Tell us which parts were hit and whether a door, the hood or the trunk has been hard to close since the impact."
+        },
+        {
+          "title": "Work trucks and heavy-duty trucks",
+          "text": "Include the cab type, vehicle dimensions and any limits on how long the truck can be out of service."
+        }
+      ],
+      "faqTitle": "Bodywork FAQs",
+      "faqs": [
+        {
+          "question": "Can you assess body damage on a heavy-duty truck?",
+          "answer": "Yes. Tell us the type of truck, its dimensions and where it was damaged so we can confirm that our workshop can accommodate it."
+        },
+        {
+          "question": "Which photos should I attach?",
+          "answer": "Include a wide view of the vehicle showing the affected part, plus a few close-ups from different angles."
+        },
+        {
+          "question": "Can I get a price from photos?",
+          "answer": "Photos help us review your request. A workshop assessment may be needed to confirm the scope and price."
+        }
+      ]
+    },
+    {
       "slug": "rv-modification-custom-builds",
       "alternateSlug": "modification-amenagement",
       "title": "RV Modification and Custom Builds",
@@ -132,136 +205,6 @@
         {
           "question": "Do you accept RV modification projects from across Canada?",
           "answer": "Yes. RV modification, solar, lithium, autonomy and custom interior projects can be framed remotely for clients across Canada. Workshop work is then planned depending on feasibility, vehicle condition, schedule and the ability to bring the RV to our Gatineau workshop."
-        }
-      ]
-    },
-    {
-      "slug": "van-life-conversion",
-      "alternateSlug": "van-life",
-      "title": "Van Life Conversion",
-      "h1": "Van Life conversion",
-      "navLabel": "Van Life",
-      "icon": "fas fa-van-shuttle",
-      "serviceType": "Complete and partial Van Life conversion",
-      "seoTitle": "Van Life Conversion in Canada | Transit, ProMaster and Sprinter",
-      "seoDescription": "Van Life conversion in Canada with workshop planning in Gatineau: Ford Transit, Ram ProMaster, Sprinter, insulation, furniture, solar, lithium, water and heating.",
-      "eyebrow": "Complete or partial conversions",
-      "opening": "Clinique du VR supports <strong>Van Life conversion in Canada</strong>, from partial builds to complete conversions for vans such as Ford Transit, Ram ProMaster and Mercedes-Benz Sprinter.",
-      "lead": "Insulation, flooring, furniture, kitchen, water, diesel heating, solar, lithium, Victron, lighting, ventilation and 3- or 4-season solutions.",
-      "intro": "You can bring your own van, come from another province, or ask for remote guidance before choosing the vehicle.",
-      "heroPromise": "Start a Van Life project that fits your vehicle, your budget and the way you actually travel.",
-      "detailIntro": "A successful Van Life conversion has to balance space, weight, electricity, water, heating, ventilation, storage and service access. We can frame projects from across Canada, then handle partial or complete workshop conversions with insulation, sound deadening, flooring, furniture, kitchen, fresh water, grey water, shower, toilet, diesel heating, solar, lithium, Victron, lighting, ventilation, air conditioning and 4-season solutions.",
-      "highlights": [
-        "Canada-wide projects",
-        "Partial conversion",
-        "Complete conversion",
-        "Transit, ProMaster, Sprinter",
-        "4-season solutions"
-      ],
-      "proofTitle": "Three levels of Van Life projects",
-      "proofIntro": "The right build depends on the vehicle, number of travellers, 3- or 4-season use, autonomy target and approximate budget.",
-      "proofStats": [
-        {
-          "value": "Essential",
-          "label": "Insulation, flooring, basic electrical, ventilation and essential furniture"
-        },
-        {
-          "value": "Adventure",
-          "label": "Solar, lithium, heating, water, kitchen and extended autonomy"
-        },
-        {
-          "value": "Custom",
-          "label": "Complete design, advanced systems and premium equipment"
-        }
-      ],
-      "proofPoints": [
-        {
-          "title": "Essential conversion",
-          "text": "A functional base that structures the vehicle without aiming for full autonomy."
-        },
-        {
-          "title": "Adventure conversion",
-          "text": "A longer-travel build with energy, water, kitchen and extended comfort."
-        },
-        {
-          "title": "Custom conversion",
-          "text": "A personalized design with advanced electrical systems, shower, hot water and adapted furniture."
-        }
-      ],
-      "caseStudiesTitle": "Van Life project examples",
-      "caseStudiesIntro": "Projects can be presented by category: Van Life, solar and lithium, modifications, roof work, water intrusion and major repairs.",
-      "caseStudies": [
-        {
-          "title": "Partial van conversion",
-          "meta": "Van Life",
-          "text": "Functional build with furniture, ventilation and electrical preparation."
-        },
-        {
-          "title": "Solar autonomy for a van",
-          "meta": "Solar and lithium",
-          "text": "Integration of solar and lithium components to support off-grid travel."
-        }
-      ],
-      "includedTitle": "What a conversion can include",
-      "included": [
-        "Insulation, sound deadening, flooring, walls and interior finishing",
-        "Furniture, storage, bed, kitchen and living areas",
-        "Fresh water, grey water, shower, toilet and water heater depending on the project",
-        "Diesel heating, ventilation, air conditioning and 4-season solutions",
-        "Solar, lithium, Victron, lighting, outlets and monitoring",
-        "Complete or partial conversion of Ford Transit, Ram ProMaster or Mercedes-Benz Sprinter"
-      ],
-      "situationsTitle": "Which project this fits",
-      "situations": [
-        "You already have a Ford Transit, Ram ProMaster or Mercedes-Benz Sprinter",
-        "You are shopping for a vehicle and want to validate potential before buying",
-        "You want a partial conversion with only the essentials",
-        "You want a complete conversion built around autonomy and comfort",
-        "You want a 3- or 4-season setup with solar, lithium and heating",
-        "You are elsewhere in Canada and want a workshop that can frame a complete Van Life project"
-      ],
-      "processIntro": "The first discussion should clarify the vehicle, year, length, number of travellers, 3- or 4-season use, desired equipment, approximate budget and target date.",
-      "process": [
-        "Remote project framing: province, city, van, length, goals, budget and logistics toward Gatineau",
-        "Vehicle validation or support before choosing the vehicle",
-        "Discussion about partial or complete conversion, travellers and intended use",
-        "System choices: solar, lithium, water, heating, shower, kitchen and storage",
-        "Work plan and estimate by quote",
-        "Workshop installation, tests and final adjustments"
-      ],
-      "whyChooseTitle": "Why choose Clinique du VR for your Van Life project?",
-      "whyChooseIntro": "A converted van combines vehicle constraints with the realities of a small living space. The design has to stay practical, durable and easy to use.",
-      "whyChoose": [
-        {
-          "title": "Realistic approach",
-          "text": "We adapt the project to the vehicle, budget and way you actually travel."
-        },
-        {
-          "title": "Integrated autonomy",
-          "text": "Solar, lithium, water, heating, ventilation and lighting are planned as one system."
-        },
-        {
-          "title": "Quoted projects",
-          "text": "Conversions are priced by quote to reflect the level of customization and selected equipment."
-        }
-      ],
-      "faqTitle": "Frequently asked questions about Van Life conversion",
-      "faqs": [
-        {
-          "question": "Do you handle complete and partial conversions?",
-          "answer": "Yes. A project can be essential, adventure-oriented or fully custom depending on the vehicle, usage, desired equipment and budget."
-        },
-        {
-          "question": "Which vans can you convert?",
-          "answer": "We can work on vans such as Ford Transit, Ram ProMaster and Mercedes-Benz Sprinter depending on vehicle condition and project constraints."
-        },
-        {
-          "question": "Do you publish fixed prices?",
-          "answer": "Conversions are usually quoted because cost depends on the vehicle, electrical systems, water, heating, furniture and finish level."
-        },
-        {
-          "question": "Do you accept Van Life projects from across Canada?",
-          "answer": "Yes. We can frame a Van Life project remotely for clients across Canada. Workshop work is quoted and planned based on the vehicle, project scope, budget, timeline and logistics for bringing the van to the Gatineau workshop."
         }
       ]
     },

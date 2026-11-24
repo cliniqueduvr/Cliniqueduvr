@@ -21,7 +21,8 @@ const shouldShowCta = pathname !== '/contact/' && pathname !== '/en/contact/';
       <p>{isEnglish ? siteSettings.footerDescription.en : siteSettings.footerDescription.fr}</p>
     </div>
     <div class="footer-col">
-      <h4>{isEnglish ? 'Contact' : 'Contact'}</h4>
+      <h4>{isEnglish ? 'Gatineau workshop' : 'Atelier de Gatineau'}</h4>
+      <p><a href={isEnglish ? '/en/contact/' : '/contact/'}>{siteSettings.address[lang]}</a></p>
       <p>
         <strong>{isEnglish ? 'Phone:' : 'Téléphone:'}</strong> <a href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a><br>
         <strong>Email:</strong> <a href={`mailto:${siteSettings.email}`}>{siteSettings.email}</a><br>
@@ -32,7 +33,6 @@ const shouldShowCta = pathname !== '/contact/' && pathname !== '/en/contact/';
       <h4>{isEnglish ? 'Services' : 'Services'}</h4>
       <ul>
         <li><a href={isEnglish ? '/en/services/rv-modification-custom-builds/' : '/services/modification-amenagement/'}>{isEnglish ? 'Custom modifications' : 'Modification & aménagement'}</a></li>
-        <li><a href={isEnglish ? '/en/services/van-life-conversion/' : '/services/van-life/'}>{isEnglish ? 'Van Life' : 'Van Life'}</a></li>
         <li><a href={isEnglish ? '/en/services/solar-panel-installation/' : '/services/installation-panneaux-solaires/'}>{isEnglish ? 'Solar and lithium' : 'Solaire & lithium'}</a></li>
         <li><a href={isEnglish ? '/en/services/repair/' : '/services/reparation/'}>{isEnglish ? 'Repair' : 'Réparation'}</a></li>
         <li><a href={isEnglish ? '/en/services/maintenance/' : '/services/entretien/'}>{isEnglish ? 'Maintenance' : 'Entretien'}</a></li>
@@ -42,6 +42,7 @@ const shouldShowCta = pathname !== '/contact/' && pathname !== '/en/contact/';
     <div class="footer-col">
       <h4>{isEnglish ? 'Resources' : 'Ressources'}</h4>
       <ul>
+        <li><a href={isEnglish ? '/en/resources/van-life-conversion/' : '/ressources/van-life/'}>Van Life</a></li>
         <li><a href={isEnglish ? '/en/resources/rv-water-intrusion/' : '/ressources/infiltration-eau-vr/'}>{isEnglish ? 'Water intrusion' : "Infiltration d'eau"}</a></li>
         <li><a href={isEnglish ? '/en/resources/twice-yearly-rv-maintenance/' : '/ressources/entretien-vr-deux-fois-par-an/'}>{isEnglish ? 'Recommended maintenance' : "Entretien recommandé"}</a></li>
         <li><a href={isEnglish ? '/en/resources/rv-solar-panel-installation/' : '/ressources/installation-panneau-solaire-vr/'}>{isEnglish ? 'RV solar panels' : 'Panneau solaire VR'}</a></li>

@@ -9,9 +9,9 @@ import { buildBreadcrumbSchema, buildFAQSchema } from '../../lib/seo';
 const servicePagesEn = servicePagesData.items as ServicePage[];
 const serviceOrderEn = [
   'rv-modification-custom-builds',
-  'van-life-conversion',
   'solar-panel-installation',
   'repair',
+  'auto-truck-bodywork',
   'fiberglass-gelcoat-repair',
   'maintenance',
   'inspection'
@@ -49,11 +49,11 @@ const serviceAreas = [
 const serviceFaqs = [
   {
     question: 'How do I choose the right service for my RV?',
-    answer: 'The right service mainly depends on the vehicle’s actual condition and your project goal. If you need a custom upgrade, Van Life conversion, solar and lithium system, fiberglass or gelcoat repair, water-intrusion repair, preventive maintenance or inspection, we can guide you toward <a href="/en/services/rv-modification-custom-builds/">custom modifications</a>, <a href="/en/services/van-life-conversion/">Van Life</a>, <a href="/en/services/solar-panel-installation/">solar and lithium</a>, <a href="/en/services/fiberglass-gelcoat-repair/">fiberglass and gelcoat repair</a>, <a href="/en/services/repair/">repair</a>, <a href="/en/services/maintenance/">maintenance</a> or <a href="/en/services/inspection/">inspection</a>.'
+    answer: 'The right service mainly depends on the vehicle’s actual condition and your project goal. If you need a custom upgrade, solar and lithium system, fiberglass or gelcoat repair, water-intrusion repair, preventive maintenance or inspection, we can guide you toward <a href="/en/services/rv-modification-custom-builds/">custom modifications</a>, <a href="/en/services/solar-panel-installation/">solar and lithium</a>, <a href="/en/services/fiberglass-gelcoat-repair/">fiberglass and gelcoat repair</a>, <a href="/en/services/repair/">repair</a>, <a href="/en/services/maintenance/">maintenance</a> or <a href="/en/services/inspection/">inspection</a>.'
   },
   {
     question: 'Do you only work in Gatineau?',
-    answer: 'No. The workshop is in Gatineau. Inspection, maintenance and repair remain mostly regional. For custom modification, Van Life, solar and lithium projects, we can also frame requests from across Canada when the vehicle can be planned for workshop work.'
+    answer: 'No. The workshop is in Gatineau. Inspection, maintenance and repair remain mostly regional. For custom modification, solar and lithium projects, we can also frame requests from across Canada when the vehicle can be planned for workshop work.'
   },
   {
     question: 'Where is the work completed?',
@@ -61,7 +61,7 @@ const serviceFaqs = [
   }
 ];
 const quickSteps = [
-  'Choose first between modification, Van Life, solar, fiberglass or repair.',
+  'Choose first between modification, solar, fiberglass or repair.',
   'Open only the service or area that matches your situation.',
   'Use inspection as the starting point for buying, selling, or uncertainty.'
 ];
@@ -69,10 +69,6 @@ const priorityServiceSearches = [
   {
     title: 'RV modification in Canada',
     body: 'Interior upgrades, off-grid power, solar, lithium, heating, ventilation and custom projects framed remotely and planned for workshop work.'
-  },
-  {
-    title: 'Van Life conversion in Canada',
-    body: 'Partial or complete van conversions for vehicles coming from Quebec, Ontario or elsewhere in Canada, with furniture, insulation, water, heating and energy.'
   },
   {
     title: 'RV solar installation in Canada',
@@ -93,15 +89,15 @@ const breadcrumbs = buildBreadcrumbSchema([
 ]);
 ---
 
-<Layout title="RV Services in Canada | Modification, Van Life, Solar and Repair" description="RV services from Gatineau with selected projects across Canada: custom modification, Van Life conversion, solar, lithium, Victron, fiberglass, gelcoat, water leaks, roof work, maintenance, inspection and repair." lang="en-CA" canonicalPath="/en/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs, buildFAQSchema(serviceFaqs)]}>
+<Layout title="Gatineau Services | RV Repair and Bodywork" description="Our Gatineau workshop offers RV and trailer repair, maintenance and custom builds, plus bodywork for cars, trucks and heavy-duty trucks." lang="en-CA" canonicalPath="/en/services/" frPath="/services/" enPath="/en/services/" schemas={[breadcrumbs, buildFAQSchema(serviceFaqs)]}>
   <Header lang="en" />
 
   <main>
     <section class="page-header">
       <div class="container">
-        <p class="eyebrow">Modification • Van Life • Repair</p>
-        <h1>Our Services</h1>
-        <p>Custom modification, Van Life conversion, solar, lithium, fiberglass, gelcoat, roof work, water intrusion, maintenance, inspection and repair based on the vehicle, province and the way you travel.</p>
+        <p class="eyebrow">Modification • Bodywork • Repair</p>
+        <h1>Our services in Gatineau</h1>
+        <p>Custom modification, solar, lithium, fiberglass, gelcoat, roof work, water intrusion, maintenance, inspection and repair based on the vehicle, province and the way you travel.</p>
       </div>
     </section>
 
@@ -122,11 +118,11 @@ const breadcrumbs = buildBreadcrumbSchema([
       <div class="container seo-columns">
         <div>
           <h2>A service adapted to your situation</h2>
-          <p>Whether you are planning energy autonomy, a Van Life build, a solar and lithium upgrade, fiberglass and gelcoat repair or another repair, we can direct you to the right service based on the vehicle’s condition and the urgency of the situation.</p>
+          <p>Whether you are planning energy autonomy, a solar and lithium upgrade, fiberglass and gelcoat repair or another repair, we can direct you to the right service based on the vehicle’s condition and the urgency of the situation.</p>
         </div>
         <div>
           <h2>What we cover</h2>
-          <p>Custom interiors, solar, lithium, Victron, Bluetti, fiberglass, gelcoat, heating, air conditioning, plumbing, Van Life, water intrusion, roof work, seals, electrical components, propane and inspections before a transaction.</p>
+          <p>Custom interiors, solar, lithium, Victron, Bluetti, fiberglass, gelcoat, heating, air conditioning, plumbing, water intrusion, roof work, seals, electrical components, propane and inspections before a transaction.</p>
         </div>
       </div>
     </section>

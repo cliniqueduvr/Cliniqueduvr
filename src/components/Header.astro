@@ -32,6 +32,7 @@ function getAlternatePath(pathname: string, targetLang: 'fr' | 'en') {
     '/plan-du-site/': '/en/site-map/',
     '/privacy/': '/en/privacy/',
     '/realisations/': '/en/realisations/',
+    '/ressources/van-life/': '/en/resources/van-life-conversion/',
     '/ressources/infiltration-eau-vr/': '/en/resources/rv-water-intrusion/',
     '/ressources/entretien-vr-deux-fois-par-an/': '/en/resources/twice-yearly-rv-maintenance/',
     '/ressources/installation-panneau-solaire-vr/': '/en/resources/rv-solar-panel-installation/',
@@ -48,6 +49,7 @@ function getAlternatePath(pathname: string, targetLang: 'fr' | 'en') {
     '/en/contact/': '/contact/',
     '/en/thank-you/': '/merci/',
     '/en/store/': '/magasin/',
+    '/en/resources/van-life-conversion/': '/ressources/van-life/',
     '/en/resources/rv-water-intrusion/': '/ressources/infiltration-eau-vr/',
     '/en/resources/twice-yearly-rv-maintenance/': '/ressources/entretien-vr-deux-fois-par-an/',
     '/en/resources/rv-solar-panel-installation/': '/ressources/installation-panneau-solaire-vr/',
@@ -101,18 +103,18 @@ const isActivePath = (href: string) => {
 const frenchServiceOrder = [
   'reparation',
   'installation-panneaux-solaires',
+  'carrosserie',
   'reparation-fibre-verre-gelcoat',
   'entretien',
   'esthetique-polissage-cirage',
   'modification-amenagement',
-  'van-life',
   'inspection',
 ];
 const englishServiceOrder = [
   'rv-modification-custom-builds',
-  'van-life-conversion',
   'solar-panel-installation',
   'repair',
+  'auto-truck-bodywork',
   'fiberglass-gelcoat-repair',
   'maintenance',
   'inspection'
@@ -133,12 +135,14 @@ const serviceMenuItems = orderedServicePages
   }));
 const resourceMenuItems = isEnglish
   ? [
+      { label: 'Van Life', href: '/en/resources/van-life-conversion/', active: currentPath === '/en/resources/van-life-conversion/' },
       { label: 'Water intrusion', href: '/en/resources/rv-water-intrusion/', active: currentPath === '/en/resources/rv-water-intrusion/' },
       { label: 'Recommended maintenance', href: '/en/resources/twice-yearly-rv-maintenance/', active: currentPath === '/en/resources/twice-yearly-rv-maintenance/' },
       { label: 'RV solar panels', href: '/en/resources/rv-solar-panel-installation/', active: currentPath === '/en/resources/rv-solar-panel-installation/' },
       { label: 'Propane-free RV', href: '/en/resources/victron-bluetti-propane-free-rv/', active: currentPath === '/en/resources/victron-bluetti-propane-free-rv/' }
     ]
   : [
+      { label: 'Van Life', href: '/ressources/van-life/', active: currentPath === '/ressources/van-life/' },
       { label: "Infiltration d'eau", href: '/ressources/infiltration-eau-vr/', active: currentPath === '/ressources/infiltration-eau-vr/' },
       { label: 'Entretien recommandé', href: '/ressources/entretien-vr-deux-fois-par-an/', active: currentPath === '/ressources/entretien-vr-deux-fois-par-an/' },
       { label: 'Panneau solaire VR', href: '/ressources/installation-panneau-solaire-vr/', active: currentPath === '/ressources/installation-panneau-solaire-vr/' },

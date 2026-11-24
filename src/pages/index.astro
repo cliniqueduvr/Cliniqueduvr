@@ -35,7 +35,7 @@ const heroPillLabels = homePage.hero.title.split(' • ');
       <div class="hero-content">
         <img class="hero-logo" src={siteSettings.brandImage} alt={homePage.hero.logoAlt} />
         <p class="hero-eyebrow">Clinique du VR</p>
-        <h1>Tous vos services sous un même toit</h1>
+        <h1>Votre atelier local de VR et de carrosserie à Gatineau</h1>
         <div class="hero-pill-row" aria-label={homePage.hero.title}>
           {heroPillLabels.map((label) => (
             <span>{label}</span>
@@ -145,7 +145,7 @@ const heroPillLabels = homePage.hero.title.split(' • ');
           <h3>{homePage.contactPanel.heading}</h3>
           <p><strong>Téléphone:</strong> <a href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a></p>
           <p><strong>Email:</strong> <a href={`mailto:${siteSettings.email}`}>{siteSettings.email}</a></p>
-          <p><strong>Adresse:</strong> {siteSettings.address.fr}</p>
+          <p><strong>Atelier de Gatineau</strong><br><a href="/contact/">{siteSettings.address.fr}</a></p>
           <p><strong>Territoire desservi:</strong> {siteSettings.serviceArea.fr}</p>
           <p><strong>Assurance:</strong> Garage et civile 2 millions | <strong>Depuis:</strong> {siteSettings.sinceYear}</p>
           <p><strong>Assureurs:</strong> {homePage.contactPanel.insuranceText}</p>
@@ -436,8 +436,9 @@ const heroPillLabels = homePage.hero.title.split(' • ');
 
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 1rem;
     margin-top: 2rem;
   }
 
@@ -446,9 +447,11 @@ const heroPillLabels = homePage.hero.title.split(' • ');
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    padding: 2rem;
+    padding: 1.45rem 0.7rem;
     background: white;
     border-radius: 22px;
+    text-align: center;
+    overflow-wrap: normal;
     transition: all 0.3s;
     border: 2px solid transparent;
     box-shadow: 0 16px 34px rgba(24, 40, 61, 0.08);
@@ -465,9 +468,17 @@ const heroPillLabels = homePage.hero.title.split(' • ');
     color: var(--brand-navy);
   }
 
+  .service-item span {
+    width: 100%;
+    min-height: 2.5em;
+    line-height: 1.25;
+    text-wrap: balance;
+  }
+
   .service-item small {
     display: block;
-    margin-top: -0.2rem;
+    width: 100%;
+    text-wrap: balance;
     color: inherit;
     font-size: 0.92rem;
     font-weight: 700;
@@ -551,6 +562,18 @@ const heroPillLabels = homePage.hero.title.split(' • ');
     margin-top: 1.5rem;
     font-style: italic;
     color: #d9e6d1;
+  }
+
+  @media (max-width: 1050px) {
+    .services-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 560px) {
+    .services-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
   }
 
   @media (max-width: 768px) {
@@ -656,7 +679,6 @@ const heroPillLabels = homePage.hero.title.split(' • ');
     }
 
     .services-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 0.55rem;
       margin-top: 0.7rem;
     }
@@ -674,12 +696,9 @@ const heroPillLabels = homePage.hero.title.split(' • ');
 
     .service-item span {
       font-size: 0.78rem;
-      text-align: center;
-      line-height: 1.18;
     }
 
     .service-item small {
-      margin-top: -0.22rem;
       font-size: 0.74rem;
       line-height: 1.1;
     }

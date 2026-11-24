@@ -1,6 +1,6 @@
 {
-  "metaTitle": "Clinique du VR | Services VR et finition à Gatineau",
-  "metaDescription": "Clinique du VR offre réparation, diagnostic, entretien et modification pour VR et roulottes, avec esthétique, fibre de verre et peinture aussi disponibles pour bateaux, autos et camions.",
+  "metaTitle": "Clinique du VR | Atelier de réparation de VR et de carrosserie à Gatineau",
+  "metaDescription": "Entreprise locale à Gatineau depuis 2013. Réparation, entretien et aménagement de VR et roulottes, et carrosserie pour autos, camions et camions lourds.",
   "hero": {
     "logoAlt": "Logo Clinique du VR - services VR, roulotte et finition",
     "title": "Réparation • Diagnostic • Carrosserie • Aménagement • Entretien",
@@ -8,8 +8,8 @@
   },
   "introCard": {
     "icon": "",
-    "heading": "Tous les services pour votre véhicule récréatif sous un même toit",
-    "body": "<strong>Clinique du VR regroupe réparation, diagnostic, modification, aménagement et finition au même endroit.</strong> Nos services de réparation, entretien, toiture, infiltration, freins, essieux et projets sur mesure s'adressent aux VR et roulottes. Les services d'esthétique, de fibre de verre, de carrosserie, de peinture, de polissage et de lavage peuvent aussi être réalisés sur des bateaux, autos et camions selon le mandat. Nous travaillons avec tous les assureurs et sommes le seul atelier partenaire d'Intact Assurance en Outaouais."
+    "heading": "Une entreprise locale au service de l’Outaouais",
+    "body": "<strong>Installée à Gatineau depuis 2013, la Clinique du VR accueille les clients de l’Outaouais et de la région d’Ottawa à son atelier de la rue de Granby.</strong> Nos services de réparation, entretien, toiture, infiltration, freins, essieux et projets sur mesure s’adressent aux VR et roulottes. Nous réalisons aussi des travaux de carrosserie pour autos, camions et camions lourds, ainsi que de finition pour les bateaux selon le mandat. Nous travaillons avec tous les assureurs et sommes le seul atelier partenaire d’Intact Assurance en Outaouais."
   },
   "servicesOverview": {
     "title": "Nos services sous un même toit",
@@ -27,7 +27,13 @@
       {
         "href": "/services/reparation-fibre-verre-gelcoat/",
         "icon": "fas fa-layer-group",
-        "label": "Fibre de verre, carrosserie & peinture"
+        "label": "Fibre de verre & gelcoat"
+      },
+      {
+        "href": "/services/carrosserie/",
+        "icon": "fas fa-truck",
+        "label": "Carrosserie",
+        "subLabel": "Autos, camions et camions lourds"
       },
       {
         "href": "/services/esthetique-polissage-cirage/",
