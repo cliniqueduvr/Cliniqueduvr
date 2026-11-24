@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import WorkshopHours from '../../components/WorkshopHours.astro';
 import HomeServiceLinks from '../../components/HomeServiceLinks.astro';
 import { buildLocalBusinessSchema, buildWebSiteSchema } from '../../lib/seo';
 import siteSettings from '../../data/site-settings.json';
@@ -130,7 +131,7 @@ const meta = {
           <h3>Gatineau workshop</h3>
           <p>{siteSettings.address.en}<br><a href={directionsUrl}>Get directions</a></p>
           <p><strong>Phone:</strong> <a href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a></p>
-          <p>Call us for opening hours.</p>
+          <WorkshopHours lang="en" />
           <p><strong>Email:</strong> <a href={`mailto:${siteSettings.email}`}>{siteSettings.email}</a></p>
           <p><strong>Insurance:</strong> $2M garage and liability | <strong>Since:</strong> {siteSettings.sinceYear}</p>
           <p class="cta-text">{homePage.contactPanel.ctaText}</p>

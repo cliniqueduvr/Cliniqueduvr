@@ -1,0 +1,14 @@
+---
+interface Props {
+  lang: 'fr' | 'en';
+}
+
+const { lang } = Astro.props;
+const isEnglish = lang === 'en';
+---
+
+<p>
+  <strong>{isEnglish ? 'Opening hours · October 1 to May 1' : 'Heures d’ouverture du 1er octobre au 1er mai'}</strong><br>
+  {isEnglish ? 'Monday to Thursday, 8:30 a.m. to 5 p.m.' : 'Du lundi au jeudi, de 8 h 30 à 17 h'}<br>
+  {isEnglish ? 'Friday, 8:30 a.m. to 3 p.m.' : 'Le vendredi, de 8 h 30 à 15 h'}
+</p>

@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import WorkshopHours from '../components/WorkshopHours.astro';
 import HomeServiceLinks from '../components/HomeServiceLinks.astro';
 import { buildLocalBusinessSchema, buildWebSiteSchema } from '../lib/seo';
 import siteSettings from '../data/site-settings.json';
@@ -149,7 +150,7 @@ const heroPillLabels = homePage.hero.title.split(' • ');
           <h3>Atelier de Gatineau</h3>
           <p>{siteSettings.address.fr}<br><a href={directionsUrl}>Itinéraire</a></p>
           <p><strong>Téléphone:</strong> <a href={`tel:${siteSettings.phone.href}`}>{siteSettings.phone.display}</a></p>
-          <p>Appelez-nous pour connaître les heures d’ouverture.</p>
+          <WorkshopHours lang="fr" />
           <p><strong>Email:</strong> <a href={`mailto:${siteSettings.email}`}>{siteSettings.email}</a></p>
           <p><strong>Assurance:</strong> Garage et civile 2 millions | <strong>Depuis:</strong> {siteSettings.sinceYear}</p>
           <p><strong>Assureurs:</strong> {homePage.contactPanel.insuranceText}</p>
